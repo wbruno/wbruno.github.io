@@ -1,0 +1,107 @@
+---
+id: 2178
+title: 'Mascara campo de telefone em javascript com regex &#8211; Nono dígito &#8211; Telefones São Paulo'
+date: 2012-08-02T22:25:03+00:00
+author: William Bruno
+layout: post
+guid: http://wbruno.com.br/?p=2178
+permalink: /expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/
+dsq_thread_id:
+  - "2100743227"
+categories:
+  - Expressão Regular
+tags:
+  - máscara
+---
+Boas!
+
+Fiz uma rápida adaptação da **expressão regular**, usada na função **mtel()**. Que eu já havia postado aqui:
+  
+[http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/](http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/ "Mascaras em javascript com regex")
+
+Aumentei o maxlenght de 14 para 15.
+
+<pre name="code" class="html">&lt;html>
+&lt;head>
+    &lt;title>Mascara Telefone&lt;/title>
+    &lt;script type="text/javascript" src="mtel.js">&lt;/script>
+
+&lt;/head>
+&lt;body>
+
+    &lt;input type="text" name="telefone" onkeyup="mascara( this, mtel );" maxlength="15" />
+
+&lt;/body>
+&lt;/html>
+</pre>
+
+E o mtel.js
+
+<pre name="code" class="javascript">/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+</pre>
+
+Alterei a segunda expressão regular, para funcionar de forma invertida. De trás para frente.
+  
+Contar os 4 últimos dígitos finais, e colocar o hífen antes deles. Deixando assim, o DD quatro ou cinco dígitos, depois o hífen, e os próximos quatro dígitos.
+
+Usou ? gostou ?
+  
+Comente!! 
+
+## &#8212; update &#8212;
+
+Apenas para alertar que a forma acima, não é a melhor maneira de implementar.
+  
+Devemos separar as camadas, e deixar a chamada do script do lado do js. Dessa forma aqui:
+
+<pre name="code" class="javascript">&lt;html>
+&lt;head>
+    &lt;title>Mascara Telefone&lt;/title>
+&lt;script type="text/javascript">
+/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
+&lt;/script>
+
+&lt;/head>
+&lt;body>
+
+    &lt;input type="text" name="telefone" id="telefone" maxlength="15" />
+
+&lt;/body>
+&lt;/html>
+</pre>

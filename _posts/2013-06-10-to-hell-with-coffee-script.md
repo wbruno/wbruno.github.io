@@ -15,11 +15,11 @@ tags:
   - programação
 ---
 Ótimo <a href="http://zenorocha.com/entendendo-coffeescript/" rel="nofollow">post do Zeno Rocha</a> sobre o <a href="http://coffeescript.org/" rel="nofollow">Coffee Script</a>. E isso foi a quase 2 anos atrás.
-  
+
 Então por que, eu, estou nos dias de hoje falando sobre isso ?
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/06/CoffeeScript.png" alt="CoffeeScript" width="290" height="190" class="aligncenter size-full wp-image-3015" />](http://wbruno.com.br/wp-content/uploads/2013/06/CoffeeScript.png)
-  
+[<img src="/wp-content/uploads/2013/06/CoffeeScript.png" alt="CoffeeScript" width="290" height="190" class="aligncenter size-full wp-image-3015" />](/wp-content/uploads/2013/06/CoffeeScript.png)
+
 <!--more-->
 
 Antes de vir me xingar e dizer que eu sou um idiota, olha a categoria em que escrevi esse post: <a href="http://wbruno.com.br/category/opiniao/" rel="nofollow">Opinião</a>. Então vc pode concordar, discordar mas não sem ter argumentos. Diga a sua opinião, mas argumente sobre ela.
@@ -37,9 +37,9 @@ Existem autocompletes para todas as linguagens, então por que nos preocupar em 
 ## Manutenção
 
 E ai ? como fica ?
-  
+
 Ninguém parou para pensar ? eu estudei C e Assembly no curso técnico, tive Java na faculdade e escolhi php para iniciar uma vida profissional de programador.
-  
+
 A sintaxe parecida do c, java e php me ajudaram a migrar de linguagens mais rapidamente. E como fica a sintaxe do coffee script ? pra quê ela serve ? na minha opinião: para nada.
 
 Ruby e Python possuem propostas interessantes, e não estou falando deles aqui, ok ?
@@ -49,7 +49,7 @@ Ruby e Python possuem propostas interessantes, e não estou falando deles aqui, 
 E ai começam a aparecer DEVs que só sabem jQuery (que é uma biblioteca) e nunca viram uma linha de javascript raw. Já já teremos relatos daqueles que só sabem CoffeeScript, e que terão um longo caminho reverso para aprender a base.
 
 Essa é a geração fw. Aquela que só conhece um certo fw. Que sem ele fica perdida.
-  
+
 Eu já <a href="http://wbruno.com.br/opiniao/nao-jquery-nao-aprenda-qualquer-framework-antes-de/" rel="nofollow">discorri sobre isso</a>.
 
 Tenham em mente que o que fica é a linguagem base, o javascript. E não os frameworks, não os pre compiladores. Estes, vem e vão todos os anos.. morrem, nascem, mas as linguagens bases continuam evoluindo, mudando e ganhando mais força.

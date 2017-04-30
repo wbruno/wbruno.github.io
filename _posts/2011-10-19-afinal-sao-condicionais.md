@@ -10,17 +10,17 @@ categories:
   - PHP
 ---
 Recebi uma sugestão de post, no mínimo curiosa..
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png" alt="" title="Screen shot 2011-10-19 at 3.56.26 PM" width="573" height="377" class="aligncenter size-full wp-image-1516" srcset="http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png 573w, http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM-300x197.png 300w" sizes="(max-width: 573px) 100vw, 573px" />](http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png)
-  
+
+[<img src="/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png" alt="" title="Screen shot 2011-10-19 at 3.56.26 PM" width="573" height="377" class="aligncenter size-full wp-image-1516" srcset="/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png 573w, /wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM-300x197.png 300w" sizes="(max-width: 573px) 100vw, 573px" />](/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-3.56.26-PM.png)
+
 Caramba.. como assim ?
-  
+
 <!--more-->
 
 ## O que realmente são
 
 Condicionais são **estruturas de controle** do <u>fluxo</u> dos nossos programas.
-  
+
 A grosso modo, se uma certa **condição** for satisfeita, então o bloco de código relativo e encadeado a essa condição deve ser executado.
 
 <pre name="code" class="php">&lt;?php
@@ -52,9 +52,9 @@ Mas não é tão simples assim.. por mais que estejamos acostumados a programar,
 ## DRY! DIE!
 
 A primeira forma incorreta de usar condicionais, na verdade não é ditada apenas no uso dessas estruturas, mas sim <a href="http://wbruno.com.br/2011/08/18/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">como um todo nessa ciência</a>.
-  
+
 Não se repita!
-  
+
 Vale para tudo no desenvolvimento, porém com condicionais é ainda um pouco mais gritante:
 
 <pre name="code" class="php">&lt;?php
@@ -74,11 +74,11 @@ Vale para tudo no desenvolvimento, porém com condicionais é ainda um pouco mai
 </pre>
 
 Assim que batermos o olho no código, nossos olhos de programadores devem ser capazes de fazer mais ou menos isso aqui:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg" alt="" title="Screen-shot-2011-10-19-at-4.35.43-PM" width="624" height="230" class="aligncenter size-full wp-image-1531" srcset="http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg 624w, http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM-300x110.jpg 300w" sizes="(max-width: 624px) 100vw, 624px" />](http://wbruno.com.br/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg)
-  
+
+[<img src="/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg" alt="" title="Screen-shot-2011-10-19-at-4.35.43-PM" width="624" height="230" class="aligncenter size-full wp-image-1531" srcset="/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg 624w, /wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM-300x110.jpg 300w" sizes="(max-width: 624px) 100vw, 624px" />](/wp-content/uploads/2011/10/Screen-shot-2011-10-19-at-4.35.43-PM.jpg)
+
 Ou seja, &#8220;borrei mentalmente&#8221; o que variava alí, e encherguei uma duplicação de código, uma repetição de um teste.
-  
+
 A resposta, para evitar essa repetição, é reagrupar logicamente os testes. Estou demonstrando esse caso simples, para exemplificar, e também ser mais fácil de mostrar aqui no post. O <del datetime="2011-10-19T18:44:03+00:00">correto</del>melhor seria:
 
 <pre name="code" class="php">&lt;?php
@@ -101,20 +101,20 @@ A resposta, para evitar essa repetição, é reagrupar logicamente os testes. Es
 </pre>
 
 bem mais legível ne?!
-  
+
 Rapidamente conseguimos dizer que todas as ações, dependem da existência do parâmetro user na superglobal $_GET.
-  
+
 O resultado é o mesmo do primeiro código, só que agora está muito melhor em performance e legibilidade.
 
 ## Não ser capaz de pensar no inverso
 
 As estruturas de testes estão diretamente ligadas a lógica. As vezes é muito difícil testarmos uma coisa, e passamos horas e horas tentando.
-  
+
 Mais fácil seria inverter, e testar primeiro o contrário.
-  
+
 As minhas entradas possíveis são: bla, ble, bli, blo e blu.
-  
-O meu programa precisa fazer algo se entrar bla, ble, bli OU blo. E outra coisa se entrar blu. 
+
+O meu programa precisa fazer algo se entrar bla, ble, bli OU blo. E outra coisa se entrar blu.
 
 O primeiro rascunho seria:
 
@@ -137,9 +137,9 @@ else { //bla, ble, bli ou blo
 }</pre>
 
 O código ficou bem mais simples ne?!
-  
+
 Primeiro resolvi a excessão e depois apliquei ao restante. Esse tipo de situação é mais frequente do que imaginamos.
-  
+
 O indicativo que podemos resolver pensando o contrário, é qndo estivermos nos diante de uma condicional absurdo e complexo. Quase sempre, existe uma forma mais simples de resolver.
 
 ## Não enchergar os padrões
@@ -154,9 +154,9 @@ if( $q=='Localweb' || $q=='Loucaweb' || $q=='Lokaweb' || $q=='LokaWeb' ){
 </pre>
 
 Existem as mais diversas e loucas variações para as tentativas, porém todos concordam que começa com L, e termina com web.
-  
+
 Além disso, case insensitive não deve importar, pois seria absurdo testarmos todas as possibilidades.
-  
+
 Uma expressão regular tira isso de letra:
 
 <pre name="code" class="javascript">/l[a-z]+web/i</pre>

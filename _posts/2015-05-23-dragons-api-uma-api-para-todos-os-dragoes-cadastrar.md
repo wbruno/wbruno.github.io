@@ -11,19 +11,19 @@ videourl:
 categories:
   - NodeJS
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2015/05/dragons-api-1024x332.png" alt="dragons-api" width="788" height="255" class="aligncenter size-large wp-image-3385" srcset="http://wbruno.com.br/wp-content/uploads/2015/05/dragons-api-1024x332.png 1024w, http://wbruno.com.br/wp-content/uploads/2015/05/dragons-api-300x97.png 300w, http://wbruno.com.br/wp-content/uploads/2015/05/dragons-api-788x255.png 788w, http://wbruno.com.br/wp-content/uploads/2015/05/dragons-api.png 1458w" sizes="(max-width: 788px) 100vw, 788px" />](https://dragons-api.herokuapp.com)
+[<img src="/wp-content/uploads/2015/05/dragons-api-1024x332.png" alt="dragons-api" width="788" height="255" class="aligncenter size-large wp-image-3385" srcset="/wp-content/uploads/2015/05/dragons-api-1024x332.png 1024w, /wp-content/uploads/2015/05/dragons-api-300x97.png 300w, /wp-content/uploads/2015/05/dragons-api-788x255.png 788w, /wp-content/uploads/2015/05/dragons-api.png 1458w" sizes="(max-width: 788px) 100vw, 788px" />](https://dragons-api.herokuapp.com)
 
 O Express (<http://expressjs.com>) é um framework web, okay? Não seja &#8220;criativo&#8221; para inventar a sua própria estrutura maluca. Siga o que o framework diz, entenda a estrutura dele.
-  
+
 Se você quer fazer &#8220;do seu modo&#8221;, você está deixando de aproveitar as boas coisas do framework. Não reinvente a roda, quando ela já foi projetada e padronizada!
-  
+
 <!--more-->
 
 O express generator (<http://expressjs.com/starter/generator.html>) é um pacote npm que cria uma estrutura inicial para um projeto express. Use.
 
 Vou explicar cada um dos diretórios ou arquivos importantes para que você entenda como organizar uma aplicação NodeJS com Express.
 
-<img src="http://wbruno.com.br/wp-content/uploads/2015/05/express-folder-1024x514.png" alt="express-folder" width="788" height="396" class="aligncenter size-large wp-image-3391" srcset="http://wbruno.com.br/wp-content/uploads/2015/05/express-folder-1024x514.png 1024w, http://wbruno.com.br/wp-content/uploads/2015/05/express-folder-300x151.png 300w, http://wbruno.com.br/wp-content/uploads/2015/05/express-folder-788x395.png 788w, http://wbruno.com.br/wp-content/uploads/2015/05/express-folder.png 1594w" sizes="(max-width: 788px) 100vw, 788px" />
+<img src="/wp-content/uploads/2015/05/express-folder-1024x514.png" alt="express-folder" width="788" height="396" class="aligncenter size-large wp-image-3391" srcset="/wp-content/uploads/2015/05/express-folder-1024x514.png 1024w, /wp-content/uploads/2015/05/express-folder-300x151.png 300w, /wp-content/uploads/2015/05/express-folder-788x395.png 788w, /wp-content/uploads/2015/05/express-folder.png 1594w" sizes="(max-width: 788px) 100vw, 788px" />
 
 ## bin/www
 
@@ -55,7 +55,7 @@ Na pasta routes ficam a definição dos endpoints. Uma rota está associada a um
 
 ## src
 
-Aqui eu coloco os arquivos fonte do css e js que irei servir. Eu desenvolvo neles, o gulp roda e cria os arquivos \*.min.\* para mim. 
+Aqui eu coloco os arquivos fonte do css e js que irei servir. Eu desenvolvo neles, o gulp roda e cria os arquivos \*.min.\* para mim.
 
 ## tests/unit
 
@@ -74,7 +74,7 @@ São os arquivos html do template. A camada de visualização que iremos apresen
 O arquivo app.js é onde fica a configuração do Express. É assim que o express generator faz e é uma boa escolha continuarmos fazendo assim. Esse arquivo exporta o app, assim os testes podem utilizar o app sem o side effect do listener do servidor, por isso o separamos na bin/www.
 
 Desenvolver com NodeJS não é só legal, é extremamente prazeroso. Veja os scripts que criei:
-  
+
 **package.json**
 
 <pre>"scripts": {
@@ -93,33 +93,33 @@ $ npm run test-api
 $ npm run nodemon</pre>
 
 A API tem:
-  
+
 * documentação em html.
-  
+
 * healthcheck.
-  
+
 * mongoose.
-  
+
 * promise.
-  
+
 * crud completo.
-  
+
 * testes unitários (mock).
-  
+
 * testes funcionais (com banco).
 
 Roadmap:
-  
+
 * melhorar o tratamento de erro.
-  
+
 * criar rotas para filtrar.
-  
+
 * cadastrar todos os dragões.
-  
+
 * terminar de modelar a entidade Dragão.
 
 Pretendo cadastrar nessa API **todos** os dragões que existem por ai, me ajuda ?
-  
+
 Ainda não terminei a modelagem da entidade Dragão, então podemos discutir o que é legal de adicionar.
 
 ## API no Heroku

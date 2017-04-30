@@ -14,7 +14,7 @@ tags:
   - oo
   - slideshow
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/slideshow.png" alt="slideshow" width="800" height="456" class="alignleft size-full wp-image-3000" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/slideshow.png 800w, http://wbruno.com.br/wp-content/uploads/2013/05/slideshow-300x171.png 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/slideshow.png)
+[<img src="/wp-content/uploads/2013/05/slideshow.png" alt="slideshow" width="800" height="456" class="alignleft size-full wp-image-3000" srcset="/wp-content/uploads/2013/05/slideshow.png 800w, /wp-content/uploads/2013/05/slideshow-300x171.png 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/slideshow.png)
 
 <!--more-->
 
@@ -27,7 +27,7 @@ Estou escrevendo alguns posts sobre Orientação a Objetos em JavaScript:
 
 ## Exemplo JavaScript Orientado a Objetos
 
-Para mostrar oo em js nada melhor do que codificarmos componentes do nosso dia-a-dia. 
+Para mostrar oo em js nada melhor do que codificarmos componentes do nosso dia-a-dia.
 
 O projeto de hoje é um **slideshow** daqueles usados em adcasts de sites. Onde uma lista de imagens vai passando com efeito fade, e uma paginação controla o total de fotos, além de pausar a rotação automática, caso o usuário coloque o mouse sob um dos itens.
 

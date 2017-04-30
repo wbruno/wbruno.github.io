@@ -11,10 +11,10 @@ categories:
 tags:
   - review
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2014/02/capa-livro-padroes-javascript.jpg" alt="capa-livro-padroes-javascript" width="292" height="404" class="aligncenter size-full wp-image-3213" />
+<img src="/wp-content/uploads/2014/02/capa-livro-padroes-javascript.jpg" alt="capa-livro-padroes-javascript" width="292" height="404" class="aligncenter size-full wp-image-3213" />
 
 Livro publicado pela Novatec, escrito por Stoyan Stefanov.
-  
+
 <!--more-->
 
 ## Opinião Geral
@@ -24,7 +24,7 @@ Livro publicado pela Novatec, escrito por Stoyan Stefanov.
 ## Capítulo 1 – Introdução
 
 Explica o que são padrões de projeto e de programação, apresenta como é a linguagem javascript OO, diz que não temos classes, que temos prototypes, mostra o jsLint e o console.
-  
+
 Bem curto, não vale a pena pular.
 
 ## Capítulo 2 – Conceitos básicos
@@ -46,13 +46,13 @@ Passa por namespace, até module pattern, revelation, sandbox, chain.. capítulo
 ## Capítulo 6 – Padrões de reutilização de código
 
 Explica bem a fundo prototype, e compara com herança clássica. Aqui vc deve se livrar do conceito de herança que aprendeu, e começar a trabalhar com javascript, na maneira javascript de ser.
-  
+
 Imagine que prototype é um pattern que as outras linguagens tentam emular, e no javascript isso é nativo!
 
 ## Capítulo 7 – Padrões de projeto
 
 Singleton, Factory, Iterator, Decorator, Strategy, Facade, Proxy, Mediator e Observer. Ufa! Só esse capítulo sozinho já compensa a compra do livro.
-  
+
 Todos com ótima explicação e exemplos de código em javascript. Quer mais o quê ?
 
 ## Capítulo 8 – DOM e padrões de navegador

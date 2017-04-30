@@ -9,8 +9,8 @@ permalink: /wordpress/importar-emails-dos-comentarios-do-wordpress-para-csv/
 categories:
   - WordPress
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2013/05/wp.png" alt="wp" width="504" height="279" class="aligncenter size-full wp-image-3003" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/wp.png 504w, http://wbruno.com.br/wp-content/uploads/2013/05/wp-300x166.png 300w" sizes="(max-width: 504px) 100vw, 504px" />
-  
+<img src="/wp-content/uploads/2013/05/wp.png" alt="wp" width="504" height="279" class="aligncenter size-full wp-image-3003" srcset="/wp-content/uploads/2013/05/wp.png 504w, /wp-content/uploads/2013/05/wp-300x166.png 300w" sizes="(max-width: 504px) 100vw, 504px" />
+
 <!--more-->
 
 Depois de [capturar a lista dos emails de quem comentou no teu wordpress](http://wbruno.com.br/wordpress/capturar-lista-de-email-dos-comentarios-seu-wordpress-outras-queries-uteis/), chega a hora de disparar um email para essa gente toda.
@@ -22,7 +22,7 @@ Caso o seu tenha, use o comando abaixo:
 ## Direto no SQL
 
 <pre class="sql">SELECT comment_author_email, comment_author
-FROM  `wp_comments` 
+FROM  `wp_comments`
 WHERE comment_author_email &lt;>  ''
 GROUP BY comment_author_email
 ORDER BY (
@@ -45,7 +45,7 @@ No meu caso, eu tive que conectar no banco e gerar o .csv com programação serv
 $db = new mysqli('host', 'user', 'pass', 'bd');
 
 $sql = "SELECT comment_author_email, comment_author
-	FROM  `wp_comments` 
+	FROM  `wp_comments`
 	WHERE comment_author_email &lt;>  ''
 	GROUP BY comment_author_email
 	ORDER BY (
@@ -61,5 +61,5 @@ echo implode($arr, "\n");
 </pre>
 
 Prontinho! feito. Dai foi só disparar um email para todo mundo, logicamente com o link de remover.
-  
+
 Se você frequenta meu blog, ou já comentou por aqui, provavelmente você recebeu também.

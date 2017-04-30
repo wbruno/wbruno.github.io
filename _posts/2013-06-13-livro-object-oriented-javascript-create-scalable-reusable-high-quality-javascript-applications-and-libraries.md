@@ -11,19 +11,19 @@ categories:
 tags:
   - review
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/06/object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500.jpg" alt="object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500" width="243" height="300" class="aligncenter size-full wp-image-3022" />](http://wbruno.com.br/wp-content/uploads/2013/06/object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500.jpg)
+[<img src="/wp-content/uploads/2013/06/object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500.jpg" alt="object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500" width="243" height="300" class="aligncenter size-full wp-image-3022" />](/wp-content/uploads/2013/06/object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries_2640_500.jpg)
 
 **Object-Oriented JavaScript** é com certeza o assunto que mais divide e confunde os desenvolvedores iniciantes nos dias de hoje. Sim, javascript é orientado a objetos. Não possui classes pq não precisa, e prototype é mais simples do que parece.
 
 Livro do Stoyan Stefanov publicado pela packt publishing.
-  
+
 <!--more-->
 
 ## Opinião Geral
 
 Esse é daqueles livros que vc terá que ler diversas vezes até entendê-lo completamente. Mas isso pq o livro abre a nossa cabeça, estendendo nossa visão sobre javascript.
 
-O autor é desenvolvedor no yahoo e os revisores do livro são só os caras mais fodas do mundo nessa linguagem. A minha edição é a original em inglês, portanto não posso opiniar sobre a tradução, se é que existe. 
+O autor é desenvolvedor no yahoo e os revisores do livro são só os caras mais fodas do mundo nessa linguagem. A minha edição é a original em inglês, portanto não posso opiniar sobre a tradução, se é que existe.
 
 Por falar muito bem dos conceitos esse livro é ótimo para quem quer iniciar no javascript, ou precisa melhorar suas skills, fundamentando conhecimento.
 
@@ -35,7 +35,7 @@ O foco do livro é a linguagem javascript, mas explica conceitos de programaçã
 
 ## Capítulo 2 &#8211; Tipos primitivos
 
-Eu sempre leio os meus livros sem pular nada, mesmo que algumas páginas falem sobre coisas que já sei. Sempre há algo para aprender ou relembrar. Mas se você já estiver realmente seguro sobre variáveis, operações e tipos, pode pular sem culpa. 
+Eu sempre leio os meus livros sem pular nada, mesmo que algumas páginas falem sobre coisas que já sei. Sempre há algo para aprender ou relembrar. Mas se você já estiver realmente seguro sobre variáveis, operações e tipos, pode pular sem culpa.
 
 O capítulo termina com exercícios. Então se vc não conseguir respondê-los volte e leia o capítulo. =)
 
@@ -72,11 +72,11 @@ A explicação de herança aqui é específica da linguagem, e exatamente por is
 ## Capítulo 7 &#8211; O ambiente do navegador
 
 Eu trabalho com web, então o ambiente do meu js são os browsers. Este capítulo fala sobre o objeto window e DOM, como inserção e os métodos getElement(s)?By&#8230;
-  
+
 Não é um capítulo de leitura obrigatória se vc tiver sem paciência, mas ele é curto, então vale a pena ler para relembrar algumas coisas.
 
 ## Capítulo 8 &#8211; Código e padrões de projeto
 
 Esse último aqui fala sobre como melhorar seu código com namespace, chaining, métodos privados e privilegiados (visibilidade). E ai começam os padrões Singleton, Factory, Decorator e Observer.
-  
+
 Esse capítulo tem cerca de 25 páginas. Depois dele é só apêndice e índice.

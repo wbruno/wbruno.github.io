@@ -13,14 +13,14 @@ tags:
   - oo
   - tableless
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/css.jpg" alt="css" width="800" height="312" class="aligncenter size-full wp-image-3006" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/css.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/css-300x117.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/css.jpg)
+[<img src="/wp-content/uploads/2013/05/css.jpg" alt="css" width="800" height="312" class="aligncenter size-full wp-image-3006" srcset="/wp-content/uploads/2013/05/css.jpg 800w, /wp-content/uploads/2013/05/css-300x117.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/css.jpg)
 
 ## Por quê ?
 
 A base da teoria oocss é algo que todos nós depois de alguns layouts recortados já devemos ou deveríamos nos ter deparado e notado: **duplicação de estilos**.
 
 Uma sensação de _dejavu_, onde elementos diferentes e não relacionados, começam a declarar alguns **estilos semelhantes**, como cor de fundo, estilo de borda, família ou cor da fonte.. coisas desse tipo.
-  
+
 <!--more-->
 
 O Diego Eis escreveu um ótimo post sobre isso: [OOCSS ou CSS do jeito certo](http://tableless.com.br/oocss-ou-css-do-jeito-certo/#.UaVp-2TwIyA). Então não vou gastar muitas linhas com o motivacional.
@@ -76,8 +76,8 @@ Mas não é legal para a manutenção do sistema. Se algum outro elemento for ut
 
 Crie suas classes utilitárias conforme você for precisando delas, não infle o seu projeto com coisas que &#8220;talvez&#8221; vc precise, que &#8220;talvez&#8221; vc vá usar algum dia. Modularize os estilos que realmente forem ser reutilizados.
 
-Sei que incomoda criar &#8220;classes funcionais&#8221;, aquelas como <var>.link-gray</var>, ou <var>.font16</var>, mas vamos usar o bom senso galera. Pense bem e só some classes que valem a pena serem somadas. 
+Sei que incomoda criar &#8220;classes funcionais&#8221;, aquelas como <var>.link-gray</var>, ou <var>.font16</var>, mas vamos usar o bom senso galera. Pense bem e só some classes que valem a pena serem somadas.
 
 Não é nada inovador, e como eu disse no começo do post, já sabemos fazer isso faz tempo.
-  
+
 Ainda assim, é bacana relembrarmos e revermos alguns conceitos, pois devemos sempre buscar melhorar e aperfeiçoar nossas técnicas. Só assim produziremos códigos com mais qualidade e com melhor manutenção.

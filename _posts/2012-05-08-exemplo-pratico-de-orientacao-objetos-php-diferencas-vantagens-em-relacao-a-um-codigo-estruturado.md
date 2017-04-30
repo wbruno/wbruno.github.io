@@ -14,19 +14,19 @@ tags:
   - oo
 ---
 #SouDev, focado em #FrontEnd &#8220;atualmente&#8221;.
-  
+
 Já trabalhei com backend também, desde a modelagem das Entidades, até as interfaces e controllers com ajax.
 
 Uma das minhas maiores dificuldades enquanto estava estudando sobre **Orientação a Objetos**, era entender de fato o que é _um objeto_.
-  
+
 E o que a palavra _orientação_ tem a ver com eles. [Afinal, o que é Orientação a Objetos?](http://wbruno.com.br/2011/04/29/afinal-e-orientacao-objetos/ "Afinal, o que é Orientação a Objetos?")
-  
+
 <!--more-->
 
 
-  
+
 Não basta sair criando classes, instanciando coisas, ou colocando todo o nosso código estruturado dentro de métodos <var>public function foo()</var>!
-  
+
 Isso não é Orientação a Objetos.
 
 Precisamos ter em mente <a href="http://wbruno.com.br/2011/08/18/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">diversos conceitos de programação</a>, e entender que a granulidade de nossos objetos(SRP), nos guiará a um código melhor, enxuto e menos custoso.
@@ -34,26 +34,26 @@ Precisamos ter em mente <a href="http://wbruno.com.br/2011/08/18/boas-praticas-d
 ## Exemplo Prático
 
 Precisei recentemente, ler diversos feeds de redes sociais, e mostrar os 4~5~7 últimas atividades da timeline/posts/vídeos/fotos&#8230;
-  
+
 Eu já tinha cada código isolado mais ou menos pronto:
-  
+
 -> <a href="http://wbruno.com.br/2011/06/01/ler-rss-wordpress-php/" target="_blank">Ler rss do WordPress com php</a>
-  
+
 -> <a href="http://wbruno.com.br/2011/07/07/timeline-twitter-php/" target="_blank">Timeline Twitter com php</a>
-  
+
 ..
 
 Ainda precisava ler do Flickr, do Facebook, e do Youtube.
-  
+
 Simplesmente, pegar cada rotina dessa e jogar na aplicação, me levaria a ter um código macarrônico/redundante:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/05/LeitorRss2-571x1024.jpg" alt="" title="LeitorRss2" width="571" height="1024" class="aligncenter size-large wp-image-1980" srcset="http://wbruno.com.br/wp-content/uploads/2012/05/LeitorRss2-571x1024.jpg 571w, http://wbruno.com.br/wp-content/uploads/2012/05/LeitorRss2-167x300.jpg 167w, http://wbruno.com.br/wp-content/uploads/2012/05/LeitorRss2.jpg 1009w" sizes="(max-width: 571px) 100vw, 571px" />](http://wbruno.com.br/wp-content/uploads/2012/05/LeitorRss2.jpg)
+
+[<img src="/wp-content/uploads/2012/05/LeitorRss2-571x1024.jpg" alt="" title="LeitorRss2" width="571" height="1024" class="aligncenter size-large wp-image-1980" srcset="/wp-content/uploads/2012/05/LeitorRss2-571x1024.jpg 571w, /wp-content/uploads/2012/05/LeitorRss2-167x300.jpg 167w, /wp-content/uploads/2012/05/LeitorRss2.jpg 1009w" sizes="(max-width: 571px) 100vw, 571px" />](/wp-content/uploads/2012/05/LeitorRss2.jpg)
 
 Ok, a classe acima &#8220;faz&#8221; oque eu precisava, mas está incorreta. De uma forma visual e bem simples, note as áreas que circulei.
 
 Uma &#8220;god class&#8221;, precisa ser urgentemente refatorada!
-  
-E ainda faltam o Facebook, o Flickr, o Youtube&#8230; 
+
+E ainda faltam o Facebook, o Flickr, o Youtube&#8230;
 
 ## Refatorando
 
@@ -66,20 +66,20 @@ As repetições e inconsistências estão concentradas no loop que itera o objet
  * @date 2012-05-04
  * @author William Moraes
  */
-class View 
+class View
 {
 
-	
+
 	public function draw( iSource $source, $limit=5 )
 	{
 		$data = $source->getData();
-		
+
 		$i = 0;
 		$html = '';
 		foreach( $data AS $item ){
 			if( $i==$limit ) break;
-		
-			
+
+
 			if( $source->criteria( $item ) ){
 				$html .= $source->html( $item );
 				$i++;
@@ -87,7 +87,7 @@ class View
 		}
 		return $html;
 	}
-	
+
 }//View
 </pre>
 
@@ -104,34 +104,34 @@ class Cache
 {
 	private $path = '../cache/';
 	private $view;
-	
+
 	public function setPath( $path )
 	{
 		$this->path = $path;
 	}
-	
+
 	public function __construct( iSource $source, View $view )
 	{
 		$this->source = $source;
 		$this->view = $view;
 	}
-	
+
 	public function isCached( $url, $file, $limit=5 )
 	{
 		$this->source->setURL( $url );
-		$cached_file = $this->path.$file;		
-		
-		
+		$cached_file = $this->path.$file;
+
+
 		if( is_file( $cached_file ) )
 			return file_get_contents( $cached_file );
-		
+
 		$contents = $this->view->draw( $this->source, $limit );
-		
+
 		file_put_contents( $cached_file, trim( $contents ) );
-		return $contents;			
+		return $contents;
 	}
 
-	
+
 }//Cache
 </pre>
 
@@ -148,7 +148,7 @@ interface iSource
 {
 	public function setURL( $url );
 	public function html( $data );
-	
+
 	public function getData();
 	public function criteria( $item );
 }
@@ -166,11 +166,11 @@ include_once 'iSource.class.php';
  * @date 2012-05-04
  * @author William Moraes
  * @usage
- 	
+
 	$twitter = new Twitter( $reader );
 	$twitter->setURL( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=5' );
 	echo $view->draw( $twitter );
-	
+
  */
 class Twitter implements iSource
 {
@@ -193,38 +193,38 @@ class Twitter implements iSource
 	 * @function html
 	 */
 	public function html( $item )
-	{	
+	{
 		$html = "\t".'&lt;li>&lt;img src="'.$item->user->profile_image_url.'" alt="'.$item->user->screen_name.'" title="'.$item->user->screen_name.'" /> ';
-			    
+
 		$html .= $this->makeLinks( $item->text );
 		$html .= '&lt;/li>'.PHP_EOL;
-		
-		
+
+
 		return $html;
 	}
-	
-	
+
+
 	/**
 	 * @function getData
-	 */		
+	 */
 	public function getData()
 	{
 		return $this->reader->getJSON( $this->url );
 	}
-	
-	
+
+
 	/**
 	 * @function criteria
-	 */	
+	 */
 	public function criteria( $item )
 	{
 		return true;
 	}
-	
-	
+
+
 	/**
 	 * @function makeLinks
-	 */		
+	 */
 	private function makeLinks( $text )
 	{
 		return preg_replace(
@@ -239,15 +239,15 @@ class Twitter implements iSource
 				'&lt;a href="http://twitter.com/#!/search/$1" title="$1" rel="external">$1&lt;/a>'
 			),
 			$text
-		);		
+		);
 	}
-	
-	
+
+
 }//Twitter
 </pre>
 
 Note a simplicidade do método Twitter:html();
-  
+
 Diferente do método LeitorRss:twitter(), agora só oque &#8220;realmente&#8221; interessa está ali. Afinal, oque mudava entre: LeitorRss:twitter() e LeitorRss:wordpress(), era a forma com que eu montava cada LI, e não o loop em si.
 
 ## Timeline do Facebook
@@ -262,11 +262,11 @@ include_once 'iSource.class.php';
  * @date 2012-05-04
  * @author William Moraes
  * @usage
- 
+
  	$facebook = new Facebook( $reader );
 	$facebook->setURL( 'https://graph.facebook.com/locaweb/posts&access_token=SEU_ACCESS_TOKEN&method=get' );
 	echo $view->draw( $facebook );
-	
+
  */
 class Facebook implements iSource
 {
@@ -283,38 +283,38 @@ class Facebook implements iSource
 	{
 		$this->url = $url;
 	}
-	
-	
+
+
 	/**
 	 * @function html
 	 */
 	public function html( $item )
 	{
-	
+
 		$ts = strtotime( $item->created_time );
 		$date = date( 'd/m/Y à\s H:m', $ts );
-		$pieces = explode('_', $item->id );	
-		
-	
-		
-		return '&lt;li>'.substr( $item->message, 0, 140 ).'.. 
+		$pieces = explode('_', $item->id );
+
+
+
+		return '&lt;li>'.substr( $item->message, 0, 140 ).'..
 			postado dia &lt;a href="https://www.facebook.com/locaweb/posts/'.$pieces[1].'" rel="external">'.$date.'&lt;/a>&lt;/li>';
 	}
-	
-	
+
+
 	/**
 	 * @function getData
-	 */		
+	 */
 	public function getData()
 	{
-		$data = $this->reader->getJSON( $this->url );		
+		$data = $this->reader->getJSON( $this->url );
 		return $data->data;
 	}
-	
-	
+
+
 	/**
 	 * @function criteria
-	 */	
+	 */
 	public function criteria( $item )
 	{
 		return isset( $item->message );
@@ -326,39 +326,39 @@ class Facebook implements iSource
 Usando:
 
 <pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=utf-8');	
-	
+	header ('Content-type: text/html; charset=utf-8');
+
 	date_default_timezone_set('America/Sao_Paulo');
-	
+
 	include 'class/Reader.class.php';
-	
+
 	include 'class/Twitter.class.php';
 	include 'class/Facebook.class.php';
 	include 'class/Wordpress.class.php';
 	include 'class/Statusblog.class.php';
-	include 'class/Flickr.class.php';	
+	include 'class/Flickr.class.php';
 	include 'class/View.class.php';
 	include 'class/Cache.class.php';
-	
+
 
 	$reader = new Reader();
 	$view = new View();
-	
-	
+
+
 	$twitter = new Twitter( $reader );
 	$cache = new Cache( $twitter, $view );
 	echo $cache->isCached( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=10', 'twitter-timeline.txt' );
-	
-	
+
+
 	$facebook = new Facebook( $reader );
 	$cache = new Cache( $facebook, $view );
 	echo $cache->isCached( 'https://graph.facebook.com/locaweb/posts&access_token=XXX&method=get', 'facebook-timeline.txt' );
-	
-	
+
+
 	$wordpress = new WordPress( $reader );
 	$cache = new Cache( $wordpress, $view );
 	echo $cache->isCached( 'http://feeds.feedburner.com/bloglocaweb', 'rss_blog.txt' );
-	
+
 
 	/* cache status blog */
 	$statusblog = new Statusblog( $reader );
@@ -371,7 +371,7 @@ E enfim, o último participante:
 ### Class Reader
 
 Eu não vi sentido em colocar o cURL, o json\_decode(), o file\_get_contents()&#8230; dentro de cada uma das classes que representam as Mídias Sociais.
-  
+
 Por esse motivo, criei um outro objeto, especializado em &#8220;ler&#8221;, seja da forma que for, e retornar dados em forma de StandardClass.
 
 <pre name="code" class="php">&lt;?php
@@ -395,12 +395,12 @@ class Reader
 		$result = $this->curlFile( $url );
 		return json_decode( $result );
 	}
-	
+
 	private function getContents( $url )
 	{
 		return file_get_contents( $url );
 	}
-	
+
 	private function curlFile($url, $timeout=0)
 	{
 		$ch = curl_init();
@@ -419,11 +419,11 @@ class Reader
 ### Eu disse não à herança
 
 Geralmente, temos uma certa tendência a querer colocar esses métodos em uma class Abstrata, e então Twitter, Facebook, WordPress, extenderem essa class.
-  
+
 Porém, do ponto de vista da Orientação a Objetos, isso não é bacana. Afinal, nossos objetos **usam** pq precisam os métodos curlFile, getJSON, mas **não são** isso.
 
 O objeto Twitter não deve ter a responsabilidade de ir buscar o jSON, nem de fazer o cache, nem de interar um loop.
-  
+
 Apenas deve saber oque fazer com os dados já mastigados, e assim por diante.
 
 #### Vantagem
@@ -442,34 +442,34 @@ include_once 'iSource.class.php';
  * @date 2012-05-04
  * @author William Moraes
  * @usage
- 
+
  	$Statusblog = new Statusblog( $reader );
 	$Statusblog->setURL( 'http://feeds.feedburner.com/BlogLocaweb14elwSalvador' );
 	echo $view->draw( $Statusblog );
-	
-	
+
+
  */
 class Statusblog extends WordPress
 {
-	
+
 	/**
 	 * @overwrite parent::html()
 	 * @function html
-	 */	
+	 */
 	public function html( $item )
-	{	
+	{
 		return '&lt;li>
 			&lt;a href="'.$item->link.'">'.$item->title.'&lt;/a>
 			&lt;div class="category">Categoria: '.$item->category.'&lt;/div>
 			&lt;/li>'.PHP_EOL;
 	}
-	
+
 }//Facebook</pre>
 
 ## Concluindo
 
 Agora sim, eu tenho um projeto Orientado a Objetos. Um objeto conversando com outro, poucas dependências sólidas e bem resolvidas.
-  
-É isso. O que acham ? 
+
+É isso. O que acham ?
 
 criticas? sugestões? dúvidas?

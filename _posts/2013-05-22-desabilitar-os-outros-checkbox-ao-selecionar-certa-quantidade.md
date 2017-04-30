@@ -15,7 +15,7 @@ tags:
 ---
 **Problema:** Desabilitar os outros checkboxes ao selecionar uma certa quantidade deles.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/a.png" alt="a" width="88" height="109" class="aligncenter size-full wp-image-2992" />](http://wbruno.com.br/wp-content/uploads/2013/05/a.png)
+[<img src="/wp-content/uploads/2013/05/a.png" alt="a" width="88" height="109" class="aligncenter size-full wp-image-2992" />](/wp-content/uploads/2013/05/a.png)
 
 Passos:
 
@@ -112,7 +112,7 @@ A interface de uso é esta:
 ### A função verifyCheckeds
 
 Se já tiverem sido marcados 2 ou mais checkboxes, ela desabilita os outros checks.
-  
+
 Se não, habilita todos eles. Isso serve para o caso do cara marcar dois e depois desmarcar um, assim a função tira o disabled de todos e o usuário pode selecionar outro checkbox.
 
 ### VanillaJS

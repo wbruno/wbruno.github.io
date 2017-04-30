@@ -11,7 +11,7 @@ categories:
 tags:
   - boas práticas
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2013/05/css.jpg" alt="css" width="800" height="312" class="aligncenter size-full wp-image-3006" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/css.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/css-300x117.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />
+<img src="/wp-content/uploads/2013/05/css.jpg" alt="css" width="800" height="312" class="aligncenter size-full wp-image-3006" srcset="/wp-content/uploads/2013/05/css.jpg 800w, /wp-content/uploads/2013/05/css-300x117.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />
 
 Eu uso. #prontofalei. Lógico que uso, e vou continuar usando.
 
@@ -47,7 +47,7 @@ Então usar IDs **com moderação**, com o propósito para o qual foi inventado,
 Encontrei esses 2 links &#8220;famosos&#8221; sobre por que vc não deveria usar seletores ID no teu css.
 
 <http://oli.jp/2011/ids/>
-  
+
 <http://screwlewse.com/2010/07/dont-use-id-selectors-in-css/>
 
 ## Referências a favor

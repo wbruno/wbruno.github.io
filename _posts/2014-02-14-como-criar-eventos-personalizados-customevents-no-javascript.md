@@ -9,11 +9,11 @@ permalink: /javascript-puro/como-criar-eventos-personalizados-customevents-no-ja
 categories:
   - Javascript
 ---
-JavaScript é uma linguagem **orientada a eventos**. JavaScript é uma linguagem **orientada a eventos**. JavaScript.. 
-  
+JavaScript é uma linguagem **orientada a eventos**. JavaScript é uma linguagem **orientada a eventos**. JavaScript..
+
 Ok.. acho que já deu para entender.
 
-<img src="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg" alt="js-logo" width="800" height="341" class="aligncenter size-full wp-image-2978" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />
+<img src="/wp-content/uploads/2013/05/js-logo.jpg" alt="js-logo" width="800" height="341" class="aligncenter size-full wp-image-2978" srcset="/wp-content/uploads/2013/05/js-logo.jpg 800w, /wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />
 
 <!--more-->
 
@@ -24,7 +24,7 @@ JavaScript é um dialeto ECMAScript, orientado a objetos, com suporte a programa
 Afinal de contas, o browser nos avisa qndo: o dom termina de carregar, qndo uma imagem está pronta, qndo o usuário clica em algo, qndo passa o mouse em algum elemento, qndo sai de algum campo, pressiona uma tecla&#8230;
 
 Todos esses **quandos** são eventos. E no js, lemos como:
-  
+
 <var>onload, onkeypress, onkeyup, onkeydown, onclick, onchange, onblur, onfocus, onmouseover, onmouseout&#8230;</var>
 
 Mas esse lado &#8220;orientado a eventos&#8221; do javascript, ainda é mal compreendido. Não adianta programarmos JS como se fosse Java. Existem particularidades da linguagem que a fazem ser muito versátil, e é isso que devemos aprender a usar.

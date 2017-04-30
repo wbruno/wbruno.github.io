@@ -9,12 +9,12 @@ permalink: /nodejs/servidor-nodejs-para-sites-estaticos-com-suporte-a-history-pu
 categories:
   - NodeJS
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2014/02/nodejs-wallpaper-nsfw.jpg" alt="nodejs-wallpaper-nsfw" width="800" height="271" class="aligncenter size-full wp-image-3268" />
-  
+<img src="/wp-content/uploads/2014/02/nodejs-wallpaper-nsfw.jpg" alt="nodejs-wallpaper-nsfw" width="800" height="271" class="aligncenter size-full wp-image-3268" />
+
 <!--more-->
 
 
-  
+
 Já vimos diversas vezes como fazer um servidorzinho básico em NodeJS, usando o Express
 
 ## Hello World
@@ -44,7 +44,7 @@ Ficando assim, bem mais legal de se trabalhar com <var>history.pushState</var>. 
 <pre>$content.innerHTML = json.content;
 
 history.pushState(href, json.title, href);
-            
+
 document.title = json.title;
 document.querySelector("meta[name='description']").setAttribute("content", json.description);</pre>
 
@@ -57,7 +57,7 @@ Foi exatamente isso que eu fiz nesse projeto no meu github. Dá uma olhada lá: 
 ## Exemplo online
 
 Hospedei no meu cloud, para vocês poderem verificar as requisições e o pushState
-  
+
 <a href="http://node.wbruno.com.br/" rel="nofollow">http://node.wbruno.com.br/</a>.
 
 ## Palestra de graça na Eventials

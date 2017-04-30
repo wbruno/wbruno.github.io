@@ -13,10 +13,10 @@ categories:
 tags:
   - review
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/06/livro-html5-217x300.jpg" alt="livro-html5" width="217" height="300" class="aligncenter size-medium wp-image-3019" srcset="http://wbruno.com.br/wp-content/uploads/2013/06/livro-html5-217x300.jpg 217w, http://wbruno.com.br/wp-content/uploads/2013/06/livro-html5.jpg 292w" sizes="(max-width: 217px) 100vw, 217px" />](http://wbruno.com.br/wp-content/uploads/2013/06/livro-html5.jpg)
+[<img src="/wp-content/uploads/2013/06/livro-html5-217x300.jpg" alt="livro-html5" width="217" height="300" class="aligncenter size-medium wp-image-3019" srcset="/wp-content/uploads/2013/06/livro-html5-217x300.jpg 217w, /wp-content/uploads/2013/06/livro-html5.jpg 292w" sizes="(max-width: 217px) 100vw, 217px" />](/wp-content/uploads/2013/06/livro-html5.jpg)
 
 Mais um dos livros do Dinossauro das CSS: Maujor aka Maurício Samy Silva. Publicado pela Novatec.
-  
+
 <!--more-->
 
 ## Opinião Geral

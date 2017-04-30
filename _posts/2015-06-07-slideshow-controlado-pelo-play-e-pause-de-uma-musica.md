@@ -11,8 +11,8 @@ videourl:
 categories:
   - Javascript
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2015/06/music-slide.png" alt="music-slide" width="870" height="358" class="aligncenter size-full wp-image-3423" srcset="http://wbruno.com.br/wp-content/uploads/2015/06/music-slide.png 870w, http://wbruno.com.br/wp-content/uploads/2015/06/music-slide-300x123.png 300w, http://wbruno.com.br/wp-content/uploads/2015/06/music-slide-788x324.png 788w" sizes="(max-width: 870px) 100vw, 870px" />
-  
+<img src="/wp-content/uploads/2015/06/music-slide.png" alt="music-slide" width="870" height="358" class="aligncenter size-full wp-image-3423" srcset="/wp-content/uploads/2015/06/music-slide.png 870w, /wp-content/uploads/2015/06/music-slide-300x123.png 300w, /wp-content/uploads/2015/06/music-slide-788x324.png 788w" sizes="(max-width: 870px) 100vw, 870px" />
+
 <!--more-->
 
 Com a tag <audio> do html5, temos uma API JavaScript para manipular e ouvir os eventos dos controles do player. Quando a música inicia, as cores trocam. No pause, elas param, e no play elas tocam novamente, até o fim da música, quando tudo para. Bem simples, não ?

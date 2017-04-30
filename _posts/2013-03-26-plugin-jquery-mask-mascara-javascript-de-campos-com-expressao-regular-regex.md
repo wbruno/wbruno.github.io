@@ -16,8 +16,8 @@ tags:
 Opa,
 
 Esse post é para divulgar um novo repositório que criei no github.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/03/url.png" alt="url" width="580" height="230" class="aligncenter size-full wp-image-2933" srcset="http://wbruno.com.br/wp-content/uploads/2013/03/url.png 580w, http://wbruno.com.br/wp-content/uploads/2013/03/url-300x118.png 300w" sizes="(max-width: 580px) 100vw, 580px" />](http://wbruno.com.br/wp-content/uploads/2013/03/url.png)
+
+[<img src="/wp-content/uploads/2013/03/url.png" alt="url" width="580" height="230" class="aligncenter size-full wp-image-2933" srcset="/wp-content/uploads/2013/03/url.png 580w, /wp-content/uploads/2013/03/url-300x118.png 300w" sizes="(max-width: 580px) 100vw, 580px" />](/wp-content/uploads/2013/03/url.png)
 
 <a href="https://github.com/wbruno/jquery.mask" rel="external nofollow" target="_blank">https://github.com/wbruno/jquery.mask</a>.
 

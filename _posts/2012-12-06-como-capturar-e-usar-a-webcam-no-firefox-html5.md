@@ -17,8 +17,8 @@ Procurei, encontrei.. e só consegui depois de ter a luz de ir atrás da documen
 
 E então no about:config, notei que preciso liberar as seguintes coisas:
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png" alt="" title="Captura de Tela 2012-12-06 às 10.51.09" width="944" height="262" class="aligncenter size-full wp-image-2883" srcset="http://wbruno.com.br/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png 944w, http://wbruno.com.br/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09-300x83.png 300w" sizes="(max-width: 944px) 100vw, 944px" />](http://wbruno.com.br/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png)
+[<img src="/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png" alt="" title="Captura de Tela 2012-12-06 às 10.51.09" width="944" height="262" class="aligncenter size-full wp-image-2883" srcset="/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png 944w, /wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09-300x83.png 300w" sizes="(max-width: 944px) 100vw, 944px" />](/wp-content/uploads/2012/12/Captura-de-Tela-2012-12-06-às-10.51.09.png)
 
 Só consegui rodar isso no Firefix Nightly.
-  
+
 Mas enfim, ativem ai!!

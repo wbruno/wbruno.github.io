@@ -12,24 +12,24 @@ categories:
   - WordPress
 ---
 Refiz recentemente o novo tema do blog da Locaweb:
-  
+
 <http://wbruno.com.br/2012/02/24/novo-tema-wordpress-em-html5-blog-da-locaweb/>
 
 Acabei deixando passar em branco, a funcionalidade dos comentários Reply, aparecerem logo abaixo do comentário pai deles. Em cadeia mesmo.
-  
+
 Ficando assim:
-  
+
 <!--more-->
 
 
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM-300x266.png" alt="" title="Screen shot 2012-03-08 at 7.58.31 PM" width="300" height="266" class="aligncenter size-medium wp-image-1864" srcset="http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM-300x266.png 300w, http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM.png 902w" sizes="(max-width: 300px) 100vw, 300px" />](http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM.png)
+
+[<img src="/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM-300x266.png" alt="" title="Screen shot 2012-03-08 at 7.58.31 PM" width="300" height="266" class="aligncenter size-medium wp-image-1864" srcset="/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM-300x266.png 300w, /wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM.png 902w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.31-PM.png)
 
 O que é bem ruim para organização, e confunde bastante a discussão. Eu não queria ter que instalar plugins de comentário apenas para isso.
-  
+
 Estudei um pouquinho o tema TwentyTeen, com a dica do @ThiagoCruz, e então:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM-300x261.png" alt="" title="Screen shot 2012-03-08 at 7.58.54 PM" width="300" height="261" class="aligncenter size-medium wp-image-1865" srcset="http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM-300x261.png 300w, http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM.png 919w" sizes="(max-width: 300px) 100vw, 300px" />](http://wbruno.com.br/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM.png)
+
+[<img src="/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM-300x261.png" alt="" title="Screen shot 2012-03-08 at 7.58.54 PM" width="300" height="261" class="aligncenter size-medium wp-image-1865" srcset="/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM-300x261.png 300w, /wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM.png 919w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2012/03/Screen-shot-2012-03-08-at-7.58.54-PM.png)
 
 É isso. Os códigos que adicionei estão abaixo:
 
@@ -52,14 +52,14 @@ function parent_comment( $comment, $args, $depth ) {
 		case '' :
 	?>
 		&lt;li &lt;?php comment_class(); ?> id="comment-&lt;?php comment_ID() ?>"> &lt;?php echo get_avatar( $comment, 32 ); ?>
-		
+
 			&lt;cite>&lt;?php comment_text() ?>&lt;/cite>
-			
+
 			&lt;?php comment_type(_x('Coment&aacute;rio', 'noun'), __('Trackback'), __('Pingback')); ?>
 			&lt;?php _e('por'); ?>
 			&lt;?php comment_author_link() ?>
 			&#8212;
-			
+
 			&lt;time datetime="&lt;?php echo $comment->comment_date; ?>">
 				&lt;?php comment_date() ?>
 				@ &lt;a href="#comment-&lt;?php comment_ID() ?>">
@@ -67,13 +67,13 @@ function parent_comment( $comment, $args, $depth ) {
 				&lt;/a>
 			&lt;/time>
 			&lt;?php edit_comment_link(__("Editar"), ' | '); ?>
-			
+
 			&lt;?php if ( $comment->comment_approved == '0' ) : ?>
 				&lt;em class="comment-awaiting-moderation">&lt;?php _e( 'Your comment is awaiting moderation.' ); ?>&lt;/em>
 			&lt;?php endif; ?>
-		
-		
-			&lt;?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>			
+
+
+			&lt;?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 		&lt;/li>
 
 	&lt;?php

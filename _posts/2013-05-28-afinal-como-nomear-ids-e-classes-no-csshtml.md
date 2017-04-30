@@ -16,27 +16,27 @@ tags:
 ---
 Somos incentivados a usar <var>UpperCamelCase</var> para nomear classes em OOP, usamos <var>lowerCamelCase</var> nos nomes dos métodos, não podemos usar <var>dash-case</var> em nomes de variáveis (erro de sintaxe), por isso usamos <var>underscore_case</var>.. mas saindo do mundo backend, e voltando para o frontend, afinal, **como nomear ids e classes no css/html** ?
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/a1.png" alt="a" width="800" height="324" class="aligncenter size-full wp-image-2995" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/a1.png 800w, http://wbruno.com.br/wp-content/uploads/2013/05/a1-300x121.png 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/a1.png)
-  
+[<img src="/wp-content/uploads/2013/05/a1.png" alt="a" width="800" height="324" class="aligncenter size-full wp-image-2995" srcset="/wp-content/uploads/2013/05/a1.png 800w, /wp-content/uploads/2013/05/a1-300x121.png 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/a1.png)
+
 <!--more-->
 
 ## Escolha um e somente um, e use
 
 <var>lowerCamelCase</var>, onde a primeira letra da palavra é minúscula e as inicias das demais palavras são escritas em letra maiúscula.
-  
+
 <var>UpperCamelCase</var>, o mesmo de cima, mas a primeira letra da palavra é escrita em maiúscula.
-  
+
 <var>dash-case</var>, onde as palavras são separadas por um hífen, e tudo é sempre escrito em minúsculo.
-  
+
 <var>underscore_case</var>, onde as palavras são separadas por underlines.
-  
+
 <var>AlGoMuito_louco-eEsquisito</var>, nem preciso falar nada ne?! não faça isso.
 
 Mas o problema começa não só quando vc está nomeando uma variavel, objeto, id ou class. O problema existe quando um mesmo projeto possui estilos diferentes de codificação nele mesmo, portanto, padronize. Entre em um acordo com a sua equipe.
 
 ## SMACSS &#8211; Scalable and Modular Arquiteture fore CSS
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/book-covers.png" alt="book-covers" width="247" height="328" class="alignleft size-full wp-image-2996" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/book-covers.png 247w, http://wbruno.com.br/wp-content/uploads/2013/05/book-covers-225x300.png 225w" sizes="(max-width: 247px) 100vw, 247px" />](http://wbruno.com.br/wp-content/uploads/2013/05/book-covers.png) O <a href="http://smacss.com/" rel="nofollow">http://smacss.com/</a> não é um framework css, é um guia de estilo. 
+[<img src="/wp-content/uploads/2013/05/book-covers.png" alt="book-covers" width="247" height="328" class="alignleft size-full wp-image-2996" srcset="/wp-content/uploads/2013/05/book-covers.png 247w, /wp-content/uploads/2013/05/book-covers-225x300.png 225w" sizes="(max-width: 247px) 100vw, 247px" />](/wp-content/uploads/2013/05/book-covers.png) O <a href="http://smacss.com/" rel="nofollow">http://smacss.com/</a> não é um framework css, é um guia de estilo.
 
 Toda a teoria dele é muito interessante e eu recomendo a leitura. O foco deste post é apenas como eu venho nomeando meus ids e classes.
 
@@ -67,7 +67,7 @@ O ideal é escrevermos um código html/css que possa ser copiado/movido de um lu
 </pre>
 
 Só possuo um bloco de comentários por document, então uso ID para identificar esse bloco.
-  
+
 Cada LI é um <var>.comment</var>, e os filhos desse comentário, como o texto e o autor carregam o nome do pai neles: <var>.comment-text</var> e <var>.comment-author</var>.
 
 ### Namespaces isolados
@@ -148,7 +148,7 @@ Não escolha nomes que estejam vinculados aos estilos de um seletor. Estilos mud
 Por exemplo, <var>.btn-green</var> e <var>.btn-orange</var> são nomes ruins, pois carregam cores que podem ser alteradas. Melhor seria se esses nomes de classes descrevessem o que aquilo faz, como: <var>.btn-hire</var> e <var>.btn-submit</var>. Assim sabemos que possuimos uma classe que cuida de todos os botões de contratar do site e outra para cuidar dos botões de enviar formulários.
 
 Dessa forma, podemos altera a vontade os estilos sem que o nome do seletor deixe de fazer sentido.
-  
+
 Vale a pena dar uma lida sobre a teoria **OOCSS**.
 
 ### O que é ?
@@ -162,7 +162,7 @@ Devemos conseguir distinguir o que um elemento é, sem ler ou ver o conteúdo de
 ## Google Style Guide
 
 Uma indicação de leitura complementar:
-  
+
 [CSS Style Rules](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules)
 
 ## Conclusão

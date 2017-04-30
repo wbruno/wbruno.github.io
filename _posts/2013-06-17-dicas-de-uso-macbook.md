@@ -13,8 +13,8 @@ categories:
 ---
 Não sou heavy user, e nem tenho tanta experiência, mas existem algumas coisas que me ajudaram bastante ao migrar do Windows para o MAC e algumas que hoje em dia me fazem não querer voltar.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/06/a.jpg" alt="a" width="800" height="500" class="aligncenter size-full wp-image-3025" srcset="http://wbruno.com.br/wp-content/uploads/2013/06/a.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/06/a-300x187.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/06/a.jpg)
-  
+[<img src="/wp-content/uploads/2013/06/a.jpg" alt="a" width="800" height="500" class="aligncenter size-full wp-image-3025" srcset="/wp-content/uploads/2013/06/a.jpg 800w, /wp-content/uploads/2013/06/a-300x187.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/06/a.jpg)
+
 <!--more-->
 
 Use o seu mac da forma que achar melhor. Eu só vou contar a forma com que eu uso, se algo for útil para você, experimente também. Eu já tinha escrito alguns [atalhos do macbook](http://wbruno.com.br/mac/alguns-atalhos-interessantes-macbook-pro/ "atalhos do macbook") dá uma olhada lá também.
@@ -28,21 +28,21 @@ Enquanto ainda estamos fazendo sites com no máximo 1100px, o menu ali na esquer
 ## Trackpad
 
 Se acostume com ele. Existem diversos gestos que são super úteis e muito rápidos.
-  
+
 Você não precisa de um mouse.
 
 ## Teclado
 
 Não é nenhum bixo de 7 cabeças usar o <var>option</var> para usar os acentos. Tente se acostumar, afinal se for para usar um MAC como se fosse Windows, volte logo pro Windows!
-  
+
 Dê uma chance ao OS, se algo existe de tal forma, há um motivo para terem planejado assim.
 
 ## Luminosidade
 
 F5 dimunui o brilho das teclas e F6 aumenta.
-  
+
 F1 diminui o brilho da tela e F2 aumenta.
-  
+
 F11 diminui o volume e F12 aumenta.
 
 Segurando <var>option</var> + <var>shift</var> + F(1|2|5|6), é possível diminuir ou aumentar em escalas menores do que o quadradinho. Para controlar o volume isso é bem legal.
@@ -50,13 +50,13 @@ Segurando <var>option</var> + <var>shift</var> + F(1|2|5|6), é possível diminu
 ## Mail
 
 Sem medo, use! É um ótimo app. Configure todas as suas contas de email nele.
-  
+
 Fiz isso no iPhone também e nunca mais abri um navegador para ler emails.
 
 ## iMessage
 
 Use também! Esqueça adium, trillian.. configure tudo no iMessage.
-  
+
 O meu está configurado com o iCloud, Facebook Chat, Jabber da empresa e GMail.
 
 Só o skype/msn que não consegui configurar nele.
@@ -64,15 +64,15 @@ Só o skype/msn que não consegui configurar nele.
 ## KeyChains
 
 Conseguimos bloquear a tela com <var>Ctrl + Shift + Eject</var> (ou power no caso do meu modelo).
-  
+
 Mas ter também o bloqueio de tela perto do relógio agiliza as coisas. Basta ativar em preferências.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/06/b.jpg" alt="b" width="600" height="294" class="aligncenter size-full wp-image-3026" srcset="http://wbruno.com.br/wp-content/uploads/2013/06/b.jpg 600w, http://wbruno.com.br/wp-content/uploads/2013/06/b-300x147.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />](http://wbruno.com.br/wp-content/uploads/2013/06/b.jpg)
+[<img src="/wp-content/uploads/2013/06/b.jpg" alt="b" width="600" height="294" class="aligncenter size-full wp-image-3026" srcset="/wp-content/uploads/2013/06/b.jpg 600w, /wp-content/uploads/2013/06/b-300x147.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />](/wp-content/uploads/2013/06/b.jpg)
 
 ## Terminal
 
 Novamente&#8230; vc está em um MAC. Por baixo dele roda um kernel UNIX.
-  
+
 Aproveite-se disso. Aprenda a usar o terminal, instale os seus programas na mão. Ative o apache nativo em vez de instalar um wamp.
 
 ### sudo !!

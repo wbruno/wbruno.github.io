@@ -13,7 +13,7 @@ categories:
 tags:
   - formulário
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/09/a1.png" alt="a" width="420" height="263" class="aligncenter size-full wp-image-3089" />](http://wbruno.com.br/wp-content/uploads/2013/09/a1.png)
+[<img src="/wp-content/uploads/2013/09/a1.png" alt="a" width="420" height="263" class="aligncenter size-full wp-image-3089" />](/wp-content/uploads/2013/09/a1.png)
 
 Imagine uma lista de checkboxes. Cada um possui um valor. Ao clicar em cima deles, vai somando em um outro input text todos os checks que estiverem marcados. E ao desmarcar o valor é subtraido.
 

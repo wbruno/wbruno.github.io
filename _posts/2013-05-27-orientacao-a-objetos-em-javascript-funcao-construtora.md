@@ -15,7 +15,7 @@ tags:
 ---
 Javascript é uma linguagem muito flexível.
 
-[<img class="aligncenter size-full wp-image-2978" alt="js-logo" src="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg" width="800" height="341" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg)
+[<img class="aligncenter size-full wp-image-2978" alt="js-logo" src="/wp-content/uploads/2013/05/js-logo.jpg" width="800" height="341" srcset="/wp-content/uploads/2013/05/js-logo.jpg 800w, /wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/js-logo.jpg)
 
 E apesar de muitos desenvolvedores não terem conhecimento, javascript é muito orientada a objetos. Tanto que só existem 5 tipos primitivos que não são objetos na linguagem: numérico, string, booleano, null e undefined. Sendo que os 3 primeiros ainda podem ser convertidos em objetos pela própria linguagem internamente, ou por nós mesmos.
 

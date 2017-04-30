@@ -14,17 +14,17 @@ categories:
 Boas,
 
 A idéia aqui, foi chegar próximo do efeito de &#8220;Exibir mais&#8221; do youtube:
-  
+
 Escondido:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/01/more-300x103.png" alt="" title="more" width="300" height="103" class="aligncenter size-medium wp-image-1755" srcset="http://wbruno.com.br/wp-content/uploads/2012/01/more-300x103.png 300w, http://wbruno.com.br/wp-content/uploads/2012/01/more.png 656w" sizes="(max-width: 300px) 100vw, 300px" />](http://wbruno.com.br/wp-content/uploads/2012/01/more.png)
+
+[<img src="/wp-content/uploads/2012/01/more-300x103.png" alt="" title="more" width="300" height="103" class="aligncenter size-medium wp-image-1755" srcset="/wp-content/uploads/2012/01/more-300x103.png 300w, /wp-content/uploads/2012/01/more.png 656w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2012/01/more.png)
 
 A mostra:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/01/less-300x135.png" alt="" title="less" width="300" height="135" class="aligncenter size-medium wp-image-1756" srcset="http://wbruno.com.br/wp-content/uploads/2012/01/less-300x135.png 300w, http://wbruno.com.br/wp-content/uploads/2012/01/less.png 642w" sizes="(max-width: 300px) 100vw, 300px" />](http://wbruno.com.br/wp-content/uploads/2012/01/less.png)
+
+[<img src="/wp-content/uploads/2012/01/less-300x135.png" alt="" title="less" width="300" height="135" class="aligncenter size-medium wp-image-1756" srcset="/wp-content/uploads/2012/01/less-300x135.png 300w, /wp-content/uploads/2012/01/less.png 642w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2012/01/less.png)
 
 Ok ?
-  
+
 Uma parte do conteúdo fica a mostra, e clicando no botão aparece o restante.
 
 O primeiro passo é resolver o efeito no **css**. Todos os efeitos são apenas css. O javascript manipulando css. jQuery só entra para facilitar essa manipulação, porém é importante ressaltar, que toda a lógica e o efeito em si, ficou no css.
@@ -49,23 +49,23 @@ p { margin-bottom: 10px; }
 &lt;script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('#toggle').click(function(){
-		jQuery('#panel').toggleClass('hidden');							  
-	});	
+		jQuery('#panel').toggleClass('hidden');
+	});
 });
 &lt;/script>
 &lt;/head>
 &lt;body>
 	&lt;div id="panel" class="hidden content">
 		&lt;div id="content">
-			&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet 
-            luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
+			&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet
+            luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt
             eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.&lt;/p>
-            
-			&lt;p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
+
+			&lt;p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu
+            ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo.
             Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
              sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.&lt;/p>
-             
+
 			&lt;p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. &lt;/p>
          &lt;/div>&lt;!-- /content -->
 	&lt;/div>&lt;!-- /panel -->

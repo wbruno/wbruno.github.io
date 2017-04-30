@@ -12,7 +12,7 @@ tags:
   - programação
   - review
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2014/02/javascript-de-alto-desempenho_MLB-O-226180730_6939.jpg" alt="javascript-de-alto-desempenho_MLB-O-226180730_6939" width="292" height="405" class="aligncenter size-full wp-image-3162" />
+<img src="/wp-content/uploads/2014/02/javascript-de-alto-desempenho_MLB-O-226180730_6939.jpg" alt="javascript-de-alto-desempenho_MLB-O-226180730_6939" width="292" height="405" class="aligncenter size-full wp-image-3162" />
 
 Livro publicado pela Novatec, escrito por Nicholas C Zakas, com participações de diversos outros autores.
 
@@ -23,7 +23,7 @@ O livro aborda de maneira bem fundamentada e profunda tópicos importantíssimos
 O livro diz que é dirigido a desenvolvedores que procuram uma compreensão intermediária e avançada de javascript e que procuram formas de melhorar o desempenho, ou seja, todos nós. **Leitura obrigatória para desenvolvedores web**.
 
 Ainda no prefácio, conta a evolução ao longo da história, além de falar um pouco sobre garbage collector (conceito que todos os programadores deveriam conhecer).
-  
+
 <!--more-->
 
 ## Capítulo 1 &#8211; Carregamento e execução
@@ -32,10 +32,10 @@ Curto, explica como funciona o carregamento de recursos javascript, e como a nat
 
 ## Capítulo 2 &#8211; Acesso aos dados
 
-Explica sobre gerenciamento de escopo e como o acesso aos dados produz um impacto na performance. 
+Explica sobre gerenciamento de escopo e como o acesso aos dados produz um impacto na performance.
 
 Um ponto muito bacana desse livro, é que no final de cada capítulo, existe uma sessão chamada **Resumo**, onde através de uma lista de tópicos, é apresentado de forma rápida e resumida tudo o que foi visto.
-  
+
 Funciona como link mental, e posterior remember para consulta, após você terminar a primeira leitura do livro.
 
 ## Capítulo 3 &#8211; Criação de scrips DOM

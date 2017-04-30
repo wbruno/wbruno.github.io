@@ -5,3 +5,8 @@ disqus:
   shortname: wbruno
 theme: minima
 google_analytics: UA-7671312-2
+sass:
+  sass_dir: _sass
+  style: compressed
+markdown: kramdown
+highlighter: rouge

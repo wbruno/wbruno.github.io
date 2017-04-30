@@ -12,7 +12,7 @@ tags:
   - ssh
   - terminal
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2014/02/debian-1440x900.jpg" alt="debian-1440x900" width="800" height="300" class="aligncenter size-full wp-image-3240" />
+<img src="/wp-content/uploads/2014/02/debian-1440x900.jpg" alt="debian-1440x900" width="800" height="300" class="aligncenter size-full wp-image-3240" />
 
 <!--more-->
 
@@ -30,7 +30,7 @@ Pois no meu caso, era a imagem que eu tinha disponível:
 Os passos abaixo apenas são necessários se mesmo após a atualização do kernel, a distro ainda não está indo para a 7. Caso seja, vamos forçar informando de onde queremos que o sistema busque os pacotes.
 
 Se vc tiver problemas para rodar o upgrade, leia esse cara:
-  
+
 <a href="http://unkmonik.wordpress.com/2012/10/10/pv1-check-your-device-map/" rel="nofollow">FIxed : grub-probe: error: Couldn’t find PV pv1. Check your device.map.</a>
 
 E ai:
@@ -40,7 +40,7 @@ E ai:
 </pre>
 
 Estou na última versão do debian squeezze
-  
+
 <http://www.debian.org/releases/squeeze/>
 
 Se eu quiser ir para o wheezy <var>vim /etc/apt/sources.list</var>
@@ -49,10 +49,10 @@ Se eu quiser ir para o wheezy <var>vim /etc/apt/sources.list</var>
 
 <pre>deb http://mirrors.kernel.org/debian/ wheezy main
 deb-src http://mirrors.kernel.org/debian/ wheezy main
- 
+
 deb http://security.debian.org/ wheezy/updates main
 deb-src http://security.debian.org/ wheezy/updates main
- 
+
 # wheezy-updates, previously known as 'volatile'
 deb http://mirrors.kernel.org/debian/ wheezy-updates main
 deb-src http://mirrors.kernel.org/debian/ wheezy-updates main</pre>

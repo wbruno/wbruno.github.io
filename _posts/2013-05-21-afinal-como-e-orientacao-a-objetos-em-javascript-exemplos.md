@@ -15,16 +15,16 @@ tags:
 ---
 Como será que é a orientação a objetos no javascript ?
 
-[<img class="aligncenter size-full wp-image-2978" alt="js-logo" src="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg" width="800" height="341" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg?a=a)
+[<img class="aligncenter size-full wp-image-2978" alt="js-logo" src="/wp-content/uploads/2013/05/js-logo.jpg" width="800" height="341" srcset="/wp-content/uploads/2013/05/js-logo.jpg 800w, /wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/js-logo.jpg?a=a)
 
 Essa linguagem mal compreendida, não possui classes, nem interfaces, não tem operadores de visibilidade e ainda por cima é baseada em prototype. Primeiro de tudo, comece se esquecendo de todos os exemplos que vc leu com <var>new Pessoa();</var>, <var>obj.prototype.carro</var>, <var>Cachorro.latir</var> ou <var>.morder</var>. Esqueça!
 
 Eu pelo menos nunca projetei nenhum sistema web com carros, cachorros ou pessoas falantes no meu javascript.
-  
+
 <!--more-->
 
 
-  
+
 Então vamos para o nosso mundo real: sistemas web. Lá nós fazemos validações de formulários, lightboxs, tooltips, slideshows, adcasts, carouseis, requisições ajax, manipulações do dom.. entre outras coisas.
 
 ## Javascript não possui classes
@@ -44,7 +44,7 @@ console.log( tweet.user );//tiu_uiLL
 console.log( tweet.message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos</pre>
 
 A variavel <var>tweet</var> é um objeto javascript. Possui 3 atributos: user, message e date.
-  
+
 Para acessa-los, uso o operador **ponto**. (igual a linguagem Java)
 
 ### Array de jSONs

@@ -12,9 +12,9 @@ tags:
   - boas práticas
 ---
 Eu já havia dado algumas dicas de [como sentir mau cheiro em código css](http://wbruno.com.br/2012/03/16/mau-cheiro-em-codigo-css-como-sentir/ "Mau cheiro em código css - Como sentir"). Veja mais alguns outros pontos importantes em que vc deve ficar de olho.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/08/css.jpg" alt="Linguagem CSS" title="css" width="600" height="346" class="aligncenter size-full wp-image-2638" srcset="http://wbruno.com.br/wp-content/uploads/2012/08/css.jpg 600w, http://wbruno.com.br/wp-content/uploads/2012/08/css-300x173.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />](http://wbruno.com.br/wp-content/uploads/2012/08/css.jpg)
-  
+
+[<img src="/wp-content/uploads/2012/08/css.jpg" alt="Linguagem CSS" title="css" width="600" height="346" class="aligncenter size-full wp-image-2638" srcset="/wp-content/uploads/2012/08/css.jpg 600w, /wp-content/uploads/2012/08/css-300x173.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />](/wp-content/uploads/2012/08/css.jpg)
+
 <!--more-->
 
 ## Mau cheiro em código css
@@ -26,20 +26,20 @@ Não são regras, e nem sempre lhe causarão problemas. Mesmo assim, vale a pena
 ## Não economize declaração de seletores
 
 As vezes uma preguiça de colocar mais uma classe num elemento ou até mesmo um ID se for o caso, pode nos levar a usar erradamente seletores descendentes.
-  
+
 Na maioria das vezes, é melhor declarar uma class extra, do que usar:
 
 <pre name="code" class="css">#content h3 {}</pre>
 
 por exemplo.
-  
+
 Basta imaginar que agora o que era um h3, será alterado para um h2, com o mesmo estilo.
 
 Ou então que eu tenha algum outro h3 que deva receber uma estilização diferente dos demais.
-  
+
 Essa excessão terá que sobrescrever diversas propriedades herdadas desnecessariamente da regra anterior.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2012/08/css-300x300.png" alt="" title="css" width="300" height="300" class="alignright size-medium wp-image-2652" srcset="http://wbruno.com.br/wp-content/uploads/2012/08/css-300x300.png 300w, http://wbruno.com.br/wp-content/uploads/2012/08/css-150x150.png 150w, http://wbruno.com.br/wp-content/uploads/2012/08/css.png 400w" sizes="(max-width: 300px) 100vw, 300px" />](http://wbruno.com.br/wp-content/uploads/2012/08/css.png)
+[<img src="/wp-content/uploads/2012/08/css-300x300.png" alt="" title="css" width="300" height="300" class="alignright size-medium wp-image-2652" srcset="/wp-content/uploads/2012/08/css-300x300.png 300w, /wp-content/uploads/2012/08/css-150x150.png 150w, /wp-content/uploads/2012/08/css.png 400w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2012/08/css.png)
 
 ## Como usar float
 
@@ -54,7 +54,7 @@ Um <var>display: table</var> ou uma altura fixa no container, ou até mesmo um e
 ## De quem é a margem?
 
 Margens em css são &#8220;espaçamentos&#8221; externos aos elementos. Tente enxergar dessa forma.
-  
+
 Que elemento está empurrando quem ? Geralmente é o da esquerda. Então este é quem deve ter uma <var>margin-right</var> para que o elemento da direita se afaste dele.
 
 Se forem apenas 2 colunas, mais fácil colocar float: left em um, e float: right no outro, do que usar left nos 2, e usar margin-right no primeiro.
@@ -62,7 +62,7 @@ Se forem apenas 2 colunas, mais fácil colocar float: left em um, e float: right
 ## O que é padding?
 
 Os paddings são espaçamentos internos ao elemento.
-  
+
 Uma boa dica, é quando todo um conjunto de elementos de um box precisar se afastar uma mesma medida da borda do seu container. Ai temos um caso para usar padding e não margin.
 
 ## Valores gigantes?
@@ -70,7 +70,7 @@ Uma boa dica, é quando todo um conjunto de elementos de um box precisar se afas
 Se você tem uma área útil de 960px de largura, e algum elemento com 300px ou mais de margin ou padding laterais, ou um left dessa magnitude&#8230; tome cuidado.
 
 Pense bem.. se você desloca um bloco 300px para a esquerda, então ele está na verdade, na direita?
-  
+
 Logo, não era mais simples colocar ele na direita com um float: right; ou right: 0; do que ficar empurrando até chegar lá ?
 
 Pense nisso. Revise suas implementações.
@@ -78,7 +78,7 @@ Pense nisso. Revise suas implementações.
 ## Tome cuidado com seletores genéricos
 
 <acronym title="Cascate Style Sheet">CSS</acronym> é o acronimo para Cascate Style Sheet. Mas nem sempre nos damos conta do que realmente é a cascata.
-  
+
 Um seletor do tipo: <var>p{}</var>, é genérico por demais.
 
 Tome cuidado com declarações do tipo:

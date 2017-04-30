@@ -13,7 +13,7 @@ Eu tenho um Macbook Pro retina, com hd 128GB SSD. Pouco HD. Mas nem por isso, n�
 
 Nesse post vou listar algumas maneiras de limpar o teu HD, para sobrar mais espaço no disco de boot, assim não prejudicando a performance da máquina.
 
-<img src="http://wbruno.com.br/wp-content/uploads/2015/10/startup-disk-full-free-space.jpg" alt="startup-disk-full-free-space" width="443" height="198" class="aligncenter size-full wp-image-3470" srcset="http://wbruno.com.br/wp-content/uploads/2015/10/startup-disk-full-free-space.jpg 443w, http://wbruno.com.br/wp-content/uploads/2015/10/startup-disk-full-free-space-300x134.jpg 300w" sizes="(max-width: 443px) 100vw, 443px" />
+<img src="/wp-content/uploads/2015/10/startup-disk-full-free-space.jpg" alt="startup-disk-full-free-space" width="443" height="198" class="aligncenter size-full wp-image-3470" srcset="/wp-content/uploads/2015/10/startup-disk-full-free-space.jpg 443w, /wp-content/uploads/2015/10/startup-disk-full-free-space-300x134.jpg 300w" sizes="(max-width: 443px) 100vw, 443px" />
 
 **Apesar da maioria das dicas que vou dar serem seguras, e eu mesmo ter feito na minha máquina, NÃO ME RESPONSABILIZO por eventuais danos.** Seja cuidadoso e entenda o que está fazendo. Se tiver dúvidas, não prossiga!!
 
@@ -24,9 +24,9 @@ Lembre-se **sempre** de versionar os teus projetos no GIT.
 ## Identifique
 
 Uma forma bem simples e eficaz de encontrar onde estão os teus maiores diretórios, é através do Time Machine. Dê um <var>Command + Space</var> -> Time Machine, e depois <var>Command + ,</var>.
-  
+
 Assim que eu descobri que tenho agora 16GB no Applications e 10GB na Music.
-  
+
 O comando **du** (disk usage), também é bem útil para encontrar grandes diretórios.
 
 <pre>$ sudo du -ah ~ | sort -rn | head -20</pre>
@@ -36,7 +36,7 @@ O comando **du** (disk usage), também é bem útil para encontrar grandes dire
 ## Remova programas não utilizados
 
 Como o **Postgres, Vagrant** por exemplo.. remove aqueles softwares que você nunca mais usou.. (básico).
-  
+
 Aqui ainda vale a dica de remover o iMove, o GarageBand, etc. (aqueles apps que vem instalados e ninguém usa..)
 
 ## Instale o CleanMyMac 2/3
@@ -53,15 +53,15 @@ cat log</pre>
 ## Apague os backups do iPhone
 
 Se você tem costume de conectar teu iPhone no Mac, pode ser que esteja gerando gigas e gigas de backups na tua máquina. Dentro do iTunes, aperte <var>Command + ,</var>. Vá em **Devices**, e apague os backups.
-  
+
 É muito melhor deixar eles no **iCloud** do que no disco local. Outra vantagem de deixar no iCloud é que o backup na nuvem é compatível com qualquer versão de iOS que você instalar. Então, não terá dores de cabeça para testar Betas, GMs ou Novas versões, e o backup não puder ser restaurado por incompatibilidade.
-  
+
 Deixe os backups na nuvem!!
 
 ## Backup da máquina em HD externo
 
 O ponto acima me lembra de dizer: faça backup da tua máquina em um HD externo! Nem preciso explicar muito isso ne?! configure o Time Machine para apontar para um HD externo.
-  
+
 Feito isso, é interessante que caso queira baixar algum torrent, ele também vá direto para o HD, não tem porque passar pela tua máquina&#8230;
 
 ## Apague /~Library/MobileDevice/Software\ Images/
@@ -117,9 +117,9 @@ Verifique em /usr/local/n/versions se existem mais instalações:
 ## Use o iMatch
 
 o iMatch é um serviço no Cloud da Apple que mantém as tuas músicas na nuvem. Você pode ouvi-las via streaming ou via arquivos locais. Deixe aquelas músicas que você não ouve sempre, fora da máquina local. Aqui eu consegui reduzir de 20GB para 7GB de Músicas.
-  
+
 Assim como as fotos, também é interessante guardá-las naquele HD externo.
-  
+
 Filmes..
 
 ## Apagar bancos de dados antigos do MongoDB
@@ -152,7 +152,18 @@ $ brew upgrade</pre>
 Uma ótima ferramenta para listar e ver quais as maiores pastas do seu sistema.
 
 No fim das contas, não é nenhum sofrimento tão grande assim.. e 128GB são bem suficientes.. =)
-  
+
 [Conforme eu lembrar de mais alguma coisa, eu volto aqui e adiciono].
 
-<img src="http://wbruno.com.br/wp-content/uploads/2015/10/disk-1024x621.png" alt="disk" width="788" height="478" class="aligncenter size-large wp-image-3503" srcset="http://wbruno.com.br/wp-content/uploads/2015/10/disk-1024x621.png 1024w, http://wbruno.com.br/wp-content/uploads/2015/10/disk-300x182.png 300w, http://wbruno.com.br/wp-content/uploads/2015/10/disk-788x478.png 788w, http://wbruno.com.br/wp-content/uploads/2015/10/disk.png 1264w" sizes="(max-width: 788px) 100vw, 788px" />
+<img src="/wp-content/uploads/2015/10/disk-1024x621.png" alt="disk" width="788" height="478" class="aligncenter size-large wp-image-3503" srcset="/wp-content/uploads/2015/10/disk-1024x621.png 1024w, /wp-content/uploads/2015/10/disk-300x182.png 300w, /wp-content/uploads/2015/10/disk-788x478.png 788w, /wp-content/uploads/2015/10/disk.png 1264w" sizes="(max-width: 788px) 100vw, 788px" />
+
+
+Update:
+
+Atualizei meu macOS para 10.13, e achei um menu que mostra o seguinte:
+
+<img src="/wp-content/uploads/2017/06/storage-mac.png" alt="" class="aligncenter size-large wp-image-3503" />
+
+podendo até deletar alguns arquivos diretamente por aqui.
+
+

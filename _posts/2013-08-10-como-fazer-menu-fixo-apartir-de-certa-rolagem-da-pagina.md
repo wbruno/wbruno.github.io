@@ -13,12 +13,12 @@ categories:
 ---
 Dois caras perguntaram isso no fórum essa semana, e eu mesmo precisei fazer em um trabalho meu.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg" alt="js-logo" width="800" height="341" class="aligncenter size-full wp-image-2978" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg 800w, http://wbruno.com.br/wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](http://wbruno.com.br/wp-content/uploads/2013/05/js-logo.jpg)
-  
+[<img src="/wp-content/uploads/2013/05/js-logo.jpg" alt="js-logo" width="800" height="341" class="aligncenter size-full wp-image-2978" srcset="/wp-content/uploads/2013/05/js-logo.jpg 800w, /wp-content/uploads/2013/05/js-logo-300x127.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" />](/wp-content/uploads/2013/05/js-logo.jpg)
+
 <!-- more -->
 
 Então lá vai.
-  
+
 O evento é o **window.onscroll**, pois até que o **position: sticky;** saia do rascunho da w3c, não temos nada &#8220;de graça&#8221; e pronto para fazer isso.
 
 Então escutamos no evento onscroll, a posição atual da página, e ai, se chegar a ser maior que tal valor, podemos aplicar oque precisamos.

@@ -12,16 +12,16 @@ tags:
   - formulário
   - html5
 ---
-<img src="http://wbruno.com.br/wp-content/uploads/2014/02/html5.jpg" alt="html5" width="800" height="354" class="aligncenter size-full wp-image-3262" />
+<img src="/wp-content/uploads/2014/02/html5.jpg" alt="html5" width="800" height="354" class="aligncenter size-full wp-image-3262" />
 
 Validar formulários é chato, tedioso e trabalhoso. Felizmente alguém olhou isso e resolveu incluir dentro da especificação do html, alguns atributos e valores novos muito interessantes.
 
 Se usarmos corretamente, e estudarmos Expressões Regulares, é possível fazer uma validação simples sem escrever nenhuma linha de javascript. Vou deixar abaixo alguns snippets da tag input, utilizando o type correto (veja aqui todos os <a href="http://html5doctor.com/html5-forms-input-types/" rel="nofollow">types novos da html5</a>) e um uso do atributo **pattern** para os qual eu escrevi algunms ERs.
-  
+
 <!--more-->
 
 
-  
+
 **Apenas letras**
 
 <pre>&lt;input type="text" required="required" name="text" pattern="[a-z\s]+$" /></pre>

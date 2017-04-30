@@ -18,14 +18,14 @@ Chamem como preferirem. Vamos lá! Mãos a massa.
 
 Primeiro post desse tipo, de muitos que virão(tomara).
 
-No final deste post, chegaremos neste resultado:[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/slide.png" alt="" title="slideshow jquery cycle " width="640" height="271" class="aligncenter size-full wp-image-230" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/slide.png 640w, http://wbruno.com.br/wp-content/uploads/2011/03/slide-300x127.png 300w" sizes="(max-width: 640px) 100vw, 640px" />](http://wbruno.com.br/wp-content/uploads/2011/03/slide.png)
+No final deste post, chegaremos neste resultado:[<img src="/wp-content/uploads/2011/03/slide.png" alt="" title="slideshow jquery cycle " width="640" height="271" class="aligncenter size-full wp-image-230" srcset="/wp-content/uploads/2011/03/slide.png 640w, /wp-content/uploads/2011/03/slide-300x127.png 300w" sizes="(max-width: 640px) 100vw, 640px" />](/wp-content/uploads/2011/03/slide.png)
 
 Para não termos sempre &#8216;Mais do Mesmo&#8217;, em todos os posts que eu fizer, juro que logo mais faço um Bê a Bá, de como &#8216;baixar o jQuery, instalar, e começar a usar&#8217;.
-  
+
 <!--more-->
 
 
-  
+
 Site do Cycle: <a href="http://jquery.malsup.com/cycle/download.html" target="_blank">http://jquery.malsup.com/cycle/download.html</a>.
 
 Só clicar no Download.
@@ -121,7 +121,7 @@ a:hover { text-decoration: underline; }
 </pre>
 
 Mais uma vez, o &#8216;grande truque&#8217;, é o CSS.
-  
+
 Veja que o javascript é mínimo.
 
 <pre name="code" class="javascript:firstline[6]">$(document).ready(function(){

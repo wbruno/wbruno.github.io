@@ -18,17 +18,17 @@ tags:
 Salve! mais uma vez aqui para mostrar, mais um pouco do poder do **plugin Cycle do jQuery**.
 
 Sei que existem &#8216;plugins especificos&#8217;, bem robustos.. porém imagine a situação em que vc tem um **slideshow** e um **carousel** no mesmo site. Chamar 2 plugins, um para cada coisa, qndo na verdade, apenas o cycle resolveria.. não parece legal ne?!
-  
+
 Além de que _a forma de pensar_ é diferente. Aqui temos a iniciativa do **começar a fazer**. Criar o HTML, pensar no CSS necessário.. essa iniciativa faz a diferença.
 
 O efeito que vou criar, é o mesmo do primeiro exemplo <a href="http://www.egrappler.com/contents/jscarouselv2/demo/jscarousel-2.0.0.htm" target="_blank">deste plugin de carousel</a>. Acredito que vai ajudar a abrir a mente, desmistificando algumas coisas, e entendendo o motivo de outras.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png" alt="" title="Screen-shot-2011-04-15-at-2.39.36-PM" width="650" height="133" class="aligncenter size-full wp-image-774" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png 650w, http://wbruno.com.br/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1-300x61.png 300w" sizes="(max-width: 650px) 100vw, 650px" />](http://wbruno.com.br/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png)
-  
+
+[<img src="/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png" alt="" title="Screen-shot-2011-04-15-at-2.39.36-PM" width="650" height="133" class="aligncenter size-full wp-image-774" srcset="/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png 650w, /wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1-300x61.png 300w" sizes="(max-width: 650px) 100vw, 650px" />](/wp-content/uploads/2011/04/Screen-shot-2011-04-15-at-2.39.36-PM1.png)
+
 <!--more-->
 
 
-  
+
 Posso dividir em 4 partes, o HTML que precisamos:
 
 ## Container
@@ -67,7 +67,7 @@ Esta é a segunda parte mais importante do nosso html. Com ela, escondemos as pr
 </pre>
 
 Como são exibidas de 5 em 5 imagens, cada bloco de conteudo nosso, possui exatamente essas 5 imagens.
-  
+
 Quando o **cycle**, fizer a transição, ele irá rolar esse bloco para escondê-lo, e trazer o próximo para ser exibido.
 
 Se quisessemos mostrar de 3 em 3 fotos, cada bloco nosso, deveria ter 3 <li>, com as respectivas imagens. E assim por diante.

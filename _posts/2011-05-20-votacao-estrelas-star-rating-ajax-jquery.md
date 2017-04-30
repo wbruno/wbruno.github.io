@@ -12,15 +12,15 @@ categories:
   - AJAX
 ---
 Não vou explicar muito detalhadamente o HTML e CSS, pois está tudo bem simples.
-  
+
 Apenas para dar um contexto, usei alguns produtos, e embaixo de cada um deles, existem 5 estrelas cinza.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/05/votacao.jpg" alt="" title="votacao" width="433" height="373" class="aligncenter size-full wp-image-975" srcset="http://wbruno.com.br/wp-content/uploads/2011/05/votacao.jpg 433w, http://wbruno.com.br/wp-content/uploads/2011/05/votacao-300x258.jpg 300w" sizes="(max-width: 433px) 100vw, 433px" />](http://wbruno.com.br/wp-content/uploads/2011/05/votacao.jpg)
+[<img src="/wp-content/uploads/2011/05/votacao.jpg" alt="" title="votacao" width="433" height="373" class="aligncenter size-full wp-image-975" srcset="/wp-content/uploads/2011/05/votacao.jpg 433w, /wp-content/uploads/2011/05/votacao-300x258.jpg 300w" sizes="(max-width: 433px) 100vw, 433px" />](/wp-content/uploads/2011/05/votacao.jpg)
 
 <!--more-->
 
 
-  
+
 O comportamento será o seguinte:
 
 > _Ao clicar em alguma estrela, ela e as anteriores a ela, deverão &#8216;acender'(ficar de outra cor). Clicando novamente, na última estrela escolhida, a pontuação será zerada, tornando todas as estrelas cinzas._
@@ -122,7 +122,7 @@ Okay, conforme prometi, o HTML+CSS, é mínimo e simples:
 </pre>
 
 Optei por deixar cada estrela como um LI, filho da Lista Ordenada **.stars**, pela simplicidade da marcação, e do javascript que vamos desenvolver.
-  
+
 Além disso, usei um input hidden dentro do container de cada produto, para sabermos qual o ID daquele produto no nosso banco de dados.
 
 <pre name="code" class="javascript">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js">&lt;/script>
@@ -181,7 +181,7 @@ function filter( $str ){
 </pre>
 
 Veja que faço o INSERT na tabela \`voto\` a cada requisição que recebo.
-  
+
 Nesse ponto, as tuas regras de negócio devem ditar o tratamento que deve ser feito. Se cada cliente só pode votar uma vez em cada produto, se ele pode mudar o voto dele..
 
 ## <a href="http://www.wbruno.com.br/scripts/votacao-estrelas.php" target="_blank">Demonstração Online</a>

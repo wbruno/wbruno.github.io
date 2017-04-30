@@ -16,16 +16,16 @@ tags:
 **antes de..** conhecer um **mínimo da linguagem base** em que esse FW foi escrito.
 
 É por isso que existem tantos desenvolvedores se enrolando hoje em dia. Tentam usar bibliotecas, frameworks e ajax, antes de aprender o básico.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/elephpant-elephant-php-logo_big.png" alt="" title="elephpant-elephant-php-logo_big" width="150" height="96" class="alignright size-full wp-image-496" />](http://wbruno.com.br/wp-content/uploads/2011/04/elephpant-elephant-php-logo_big.png)
-  
+
+[<img src="/wp-content/uploads/2011/04/elephpant-elephant-php-logo_big.png" alt="" title="elephpant-elephant-php-logo_big" width="150" height="96" class="alignright size-full wp-image-496" />](/wp-content/uploads/2011/04/elephpant-elephant-php-logo_big.png)
+
 Aprender CodeIgniter, Kohana, CakePHP, Smarty&#8230;antes de aprender php é loucura, certo? Ninguém faz curso de ZendFW, sem **nunca**, ter programado php. Primeiro aprende php, e depois vai para um FW. Então por que inverter os papeis com JavaScript ?
-  
+
 <!--more-->
 
 Okay, a curva de aprendizado do jQuery[assim como dos demais fws] é menor, porém e quando aparece um problema ?
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/JQuery_logo_color_onwhite.png" alt="" title="JQuery_logo_color_onwhite" width="229" height="200" class="alignleft size-full wp-image-505" />](http://wbruno.com.br/wp-content/uploads/2011/04/JQuery_logo_color_onwhite.png)
+[<img src="/wp-content/uploads/2011/04/JQuery_logo_color_onwhite.png" alt="" title="JQuery_logo_color_onwhite" width="229" height="200" class="alignleft size-full wp-image-505" />](/wp-content/uploads/2011/04/JQuery_logo_color_onwhite.png)
 
 Aí, aquele desenvolvedor, que optou por começar com o framwork, sem antes passar pela linguagem base, começa a ter dúvidas básicas de programação. O FW não resolve tudo para ele.
 
@@ -40,9 +40,9 @@ Outro caso: eu respondi a dúvida dele, que era super simples, usando apenas js,
 > **JavaScript**, estava <u>ultrapassado</u>, e ele pretendia fazer _da forma moderna_.
 
 O mesmo ocorreu com AJAX. A dúvida estava resolvida, aí o cara pediu para _ver como ficaria em AJAX_! E era tudo apenas javascript puro, não havia o menor motivo para _ir no servidor e voltar_.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/ajax-logo2.jpg" alt="" title="ajax-logo" width="200" height="98" class="alignright size-full wp-image-513" />](http://wbruno.com.br/wp-content/uploads/2011/04/ajax-logo2.jpg)
-  
+
+[<img src="/wp-content/uploads/2011/04/ajax-logo2.jpg" alt="" title="ajax-logo" width="200" height="98" class="alignright size-full wp-image-513" />](/wp-content/uploads/2011/04/ajax-logo2.jpg)
+
 Nesse momento começa a sugir uma confusão de papeis. Gente achando que AJAX é uma linguagem, que precisa enfiar jQuery em tudo&#8230;
 
 Já vi tópico começar &#8216;sobre AJAX&#8217;, e terminar apenas com php puro! O cara queria meter uma requisição assincrona onde não precisava. Completa inversão de valores, e pura falta de conhecimento.
@@ -56,8 +56,8 @@ Em agências pequenas, ou como freelancer, muitas vezes o mesmo profissional faz
 Alguns passos são importantes, e devem ser respeitados. Comece do básico, evolua, e aí sim vá para o além.
 
 Antes de tudo, você recebe aulas de **Lógica de Programação** e **Programação Básica**, certo ? Deveria ser assim, mas me assusta a quantidade de programadores que vejo no mercado, que não possuem essa base na formação.
-  
-Pra mim: 
+
+Pra mim:
 
 > **todo programador**, deveria, **obrigatoriamente**, estudar alguma linguagem de programação de **baixo nível**.
 
@@ -67,10 +67,10 @@ Não, não estou sendo arcaico. Estou sendo realista. O conhecimento adquirido a
 
 Mas coisas como tipagem, declaração de variáveis, coletor de lixo, escopo.. faltam a vários programadores php e js que conheço. Vejo pessoas no fórum **declarando** uma function, _achando_ que ela será executada, só com isso. Sem ele fazer uma chamada a ela.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/frameworks.jpg" alt="" title="frameworks" width="300" height="230" class="alignright size-full wp-image-521" />](http://wbruno.com.br/wp-content/uploads/2011/04/frameworks.jpg)
-  
+[<img src="/wp-content/uploads/2011/04/frameworks.jpg" alt="" title="frameworks" width="300" height="230" class="alignright size-full wp-image-521" />](/wp-content/uploads/2011/04/frameworks.jpg)
+
 Ponto importante é **não ser dependente** do Framework. Okay, vc sabe fazer com ele. Mas e sem ?
-  
+
 E se a sua empresa resolver mudar de paradigma, ou você mudar de trabalho, e lá usarem outros, ou nenhum? como fica?
 
 Você novamente, vai gastar um bom tempo, reaprendendo outra ferramenta, que poderia ser muito menor se você, tivesse alguma idéia, do **como**, essas ferramentas fazem o que fazem.

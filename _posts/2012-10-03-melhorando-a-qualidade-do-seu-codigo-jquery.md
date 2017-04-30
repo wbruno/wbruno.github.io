@@ -16,7 +16,7 @@ tags:
 jQuery é bacana. Escreva menos, faça mais.
 
 <p style="text-align: center;">
-  <a href="http://wbruno.com.br/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png"><img class="size-full wp-image-2799 aligncenter" title="OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview" alt="" src="http://wbruno.com.br/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png" width="700" height="172" srcset="http://wbruno.com.br/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png 700w, http://wbruno.com.br/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview-300x73.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
+  <a href="/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png"><img class="size-full wp-image-2799 aligncenter" title="OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview" alt="" src="/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png" width="700" height="172" srcset="/wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview.png 700w, /wp-content/uploads/2012/10/OQAAAI1PPrJY0nBALB7mkvju3mkQXqLmzMhxEjeb4gp8aujEUQcLfLyy-Sn4gZdkAas6-k8eYbQlGDE-GCjKfF5gIrUA15jOjFfLRv77VBd5t-WfZURdP9V3PdmT.preview-300x73.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
 </p>
 
 &nbsp;
@@ -24,13 +24,13 @@ jQuery é bacana. Escreva menos, faça mais.
 Porém muitos dos desenvolvedores de hoje em dia, não levaram a sério a parte do _&#8220;escreva menos&#8221;_, e continuam escrevendo **muito** e de forma desordenada.
 
 Tudo bem, então aqui vai algumas dicas para melhorar a qualidade dos códigos jQuery.
-  
+
 <!--more-->
 
 ## jsHint
 
 jQuery é apenas uma lib javascript. Logo, todas as boas práticas que existem para javascript, também existem para jQuery. Começe passando o teu código pelo jsHint:
-  
+
 <a href="http://www.jshint.com/" rel="external">http://www.jshint.com/</a>
 
 Dentre outras coisas, o jshint, vai verificar se vc usou um switch na hora errada, se declarou uma variavel que não está sendo usada..
@@ -73,7 +73,7 @@ Isso também vai melhorar a performance do teu script.
 ## Convencione os nomes das variaveis
 
 É bacana olhar para uma variavel e entender logo de cara de onde ela veio, e qual o valor dela.
-  
+
 Eu estou adotando usar $ antes de começar uma variavel que aponte para um objeto jQuery. Assim como o **$this**. E deixo para as variaveis &#8220;normais&#8221;(arrays, inteiros e strings), uma notação sem o símbolo $.
 
 Dessa forma, qndo bato o olho no meu código jQuery, sei que todas as variaveis com $ no nome, são objetos jQuery.
@@ -86,7 +86,7 @@ str = '';</pre>
 ## Faça bom uso dos arrays e objetos
 
 Uma cadeia de if/elses ou switchs podem ser evitados se vc souber usar arrays e objetos javascript corretamente.
-  
+
 Como por exemplo essa lista de valores:
 
 <pre class="javascript">var values = [];
@@ -111,5 +111,5 @@ E para terminar:
 ## Faça bem o básico
 
 É básico indentar corretamente, comentar qndo necessário, e documentar.
-  
+
 Estas são algumas pequenas boas práticas que vão fazer uma boa diferença nos teus scripts.

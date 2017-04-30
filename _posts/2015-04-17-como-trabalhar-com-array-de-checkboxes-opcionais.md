@@ -9,10 +9,10 @@ permalink: /sql/como-trabalhar-com-array-de-checkboxes-opcionais/
 categories:
   - SQL
 ---
-Imagine a seguinte situação: você precisa fazer um sistema de cadastro de veículos para uma vitrine virtual. 
+Imagine a seguinte situação: você precisa fazer um sistema de cadastro de veículos para uma vitrine virtual.
 
-<img src="http://wbruno.com.br/wp-content/uploads/2015/04/Screen-Shot-2015-04-17-at-13.49.12.png" alt="Screen Shot 2015-04-17 at 13.49.12" width="956" height="340" class="aligncenter size-full wp-image-3334" />
-  
+<img src="/wp-content/uploads/2015/04/Screen-Shot-2015-04-17-at-13.49.12.png" alt="Screen Shot 2015-04-17 at 13.49.12" width="956" height="340" class="aligncenter size-full wp-image-3334" />
+
 <!--more-->
 
 O nosso sistema venderá _&#8220;carros famosos&#8221;_, por isso cada carro possui um nome (Batmóvel 1941, Tumbler, Herbie, Dick Vigarista, Penélope Charmosa).. um ano de fabricação (1941, 2008..), e um modelo (esporte, clássico, corrida, tanque de guerra)..
@@ -31,9 +31,9 @@ Um das primeiras coisas que vem a nossa mente, é [modelar os atributos dessa en
 4 rows in set (0.00 sec)</pre>
 
 Tranquilo, certo ?
-  
+
 Um id para identificarmos cada veículo como único, o nome, ano e modelo.
-  
+
 Mas, o Batmóvel de 1941 tem acessórios diferentes do Tumbler de 2008 (o tanque de guerra do filme Batman Begins), certo ?
 
 E precisamos mostrar isso para nossos usuários, dizendo se o veículo possui ou não: **ar condicionado, travas elétricas, tiro de canhão, moto acoplada para fuga**.. no caso do carro do Dick Vigarista: **turbinas propulsoras**!
@@ -81,7 +81,7 @@ Só que ai precisamos ainda colocar:
 6 rows in set (0.00 sec)</pre>
 
 E para cada opcional extra que precisamos cadastrar iríamos adicionando uma nova coluna na tabela veículos, mesmo que o Motor de Propulsão seja um item específico do carro do Dick Vigarista, e os demais carros irão sempre deixar essa coluna em branco (como false).
-  
+
 Isso por si só, já mostra um grave problema de modelagem: não está escalável!
 
 Ter que alterar o modelo e possuir diversas colunas sem valores no banco de dados é um exemplo de **modelagem desnormalizada** que devemos evitar.
@@ -118,13 +118,13 @@ Em vez de ficarmos criando novas colunas a cada opcional novo que precisamos lis
 3 rows in set (0.00 sec)</pre>
 
 Ficando assim, a cargo de uma terceira tabela de relacionamento o cruzamento da informação, sobre quais opcionais cada carro tem.
-  
+
 E para cada novo opcional extra que tivermos que cadastrar no sistema, apenas adicionamos um **linha** (registro) na tabela _optional_, em vez de uma **coluna** na tabela _veículos_. Entendeu a diferença ?
 
 -> **Não precisamos** alterar nada no banco de dados para disponibilizar um novo opcional.
-  
+
 -> Não precisamos mexer nos nossos códigos backend;
-  
+
 -> Nem na nossa query SQL!
 
 O impacto de adicionar opcionais (mostrar mais checkboxes) é apenas cadastrar um novo registro na tabela.

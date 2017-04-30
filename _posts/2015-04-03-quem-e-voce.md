@@ -15,8 +15,8 @@ Você, eu, ele, quem nós somos ?
 
 Na web nós somos o que encontrarem sobre nós online. Trabalhamos com tecnologias que nos mantém conectados. Possuímos uma _&#8220;vida online&#8221;_ e esta é a porta de entrada para nos encontrarem, seja um amigo, familiar ou uma oportunidade de trabalho.
 
-<img class="aligncenter size-full wp-image-3305" src="http://wbruno.com.br/wp-content/uploads/2015/04/quemsomos1.jpg" alt="quemsomos1" width="800" height="407" />
-  
+<img class="aligncenter size-full wp-image-3305" src="/wp-content/uploads/2015/04/quemsomos1.jpg" alt="quemsomos1" width="800" height="407" />
+
 <!--more-->
 
 Já parou para pensar em quantos perfis, redes sociais, contas em diferentes sites ou plataformas você tem ? e como elas estão dessincronizadas entre si ?
@@ -160,6 +160,9 @@ Resolvi começar um levantamento dos meus perfis e formas de contato que tenho e
   </li>
   <li>
     <a href="https://www.crunchbase.com/person/william-moraes#/entity">https://www.crunchbase.com/person/william-moraes#/entity</a>
+  </li>
+  <li>
+    <a href="https://stackshare.io/wbruno">https://stackshare.io/wbruno</a>
   </li>
 </ul>
 

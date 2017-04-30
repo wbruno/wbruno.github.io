@@ -20,17 +20,17 @@ Sempre que vamos desenvolver um script, precisamos ter em mente, que qualquer sc
 **Problema:**
 
 > _&#8220;Possuo campos input em um formulário, onde dentro deles existe uma descrição do que o usuario deve digitar ali.
-  
+
 > Gostaria que quando o usuário entrasse nesse campo(clicasse, tentasse preencher..), esse valor default fosse apagado.
-  
+
 > Porém, se o usuário sair deste campo, sem escrever nada, esse valor &#8216;default&#8217;, deve voltar a aparecer. Sendo que se ele preencher, fique lá o que ele digitou.&#8221;
-  
->_ 
+
+>_
 
 <!--more-->
 
 Okay, problema bem definido podemos rascunhar.
-  
+
 Primeiro passo, é identificar os pontos importantes da mensagem. [Interpretação de Texto] !!
 
 > _&#8220;Possuo campos input em um formulário&#8221;_
@@ -40,7 +40,7 @@ Primeiro passo, é identificar os pontos importantes da mensagem. [Interpretaç�
 </pre>
 
 Muito importante essa iniciativa! Faça um passo de cada vez, e não tenha medo de começar.
-  
+
 É lógico que se vc não tentar, não vai conseguir fazer, ou empacar, e nem produzir nada. É importante ter a iniciativa.
 
 > _&#8220;onde dentro deles existe uma descrição do que o usuario deve digitar ali.&#8221;_
@@ -51,10 +51,10 @@ Isso significa, nada mais do que:
 	&lt;input type="text" name="email" value="Digite seu e-mail" />
 </pre>
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png" alt="" title="Screen shot 2011-03-23 at 2.28.35 PM" width="330" height="35" class="aligncenter size-full wp-image-335" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png 330w, http://wbruno.com.br/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM-300x31.png 300w" sizes="(max-width: 330px) 100vw, 330px" />](http://wbruno.com.br/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png)
+[<img src="/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png" alt="" title="Screen shot 2011-03-23 at 2.28.35 PM" width="330" height="35" class="aligncenter size-full wp-image-335" srcset="/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png 330w, /wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM-300x31.png 300w" sizes="(max-width: 330px) 100vw, 330px" />](/wp-content/uploads/2011/03/Screen-shot-2011-03-23-at-2.28.35-PM.png)
 
 Bacana. Começamos.
-  
+
 Eu poderia resolver isso sem jQuery (depois faço um post resolvendo essa situação só com js puro), porém como quero mostrar a evolução do pensamento(e não como desenvolver o código em si), vamos usar jQuery:
 
 <pre name="code" class="javascript">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">&lt;/script>
@@ -66,13 +66,13 @@ $(document).ready(function(){
 </pre>
 
 Básico ne!? porém vejo muita gente, que nem faz isso, e já está se descabelando que &#8216;não sabe começar&#8217;.
-  
+
 Poxa, <u>começar</u>, é isso ai. Fiz o html, preparei a estrutura do jQuery.. pronto, comecei.
 
 Não resolvi o problema ainda, mas já dei um belo passo para chegar lá.
-  
+
 Para não ficar muito extenso o texto, vou dividir esse meu pensamento em uma série pequena de posts.
 
 [Parte 2](http://www.wbruno.com.br/2011/03/25/criando-um-plugin-jquery-parte-2-codificando/)
-  
+
 [Parte 3](http://www.wbruno.com.br/2011/03/26/criando-um-plugin-jquery-parte-3-otimizando/)

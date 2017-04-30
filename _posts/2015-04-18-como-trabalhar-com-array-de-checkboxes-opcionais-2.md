@@ -13,14 +13,14 @@ Dando continuidade ao artigo anterior:
 
 <http://wbruno.com.br/sql/como-trabalhar-com-array-de-checkboxes-opcionais/>
 
-<img src="http://wbruno.com.br/wp-content/uploads/2015/04/Screen-Shot-2015-04-18-at-20.10.45.png" alt="Screen Shot 2015-04-18 at 20.10.45" width="1392" height="668" class="aligncenter size-full wp-image-3346" />
+<img src="/wp-content/uploads/2015/04/Screen-Shot-2015-04-18-at-20.10.45.png" alt="Screen Shot 2015-04-18 at 20.10.45" width="1392" height="668" class="aligncenter size-full wp-image-3346" />
 
 Iremos escrever enfim, os códigos para fazer esse CRUD com checkboxes.
-  
+
 <!--more-->
 
 
-  
+
 Lembrando que o intuito do artigo não é ensinar programação orientada a objetos. Então irei deixar o script php o mais simples possível, para que você possa extrair e então montar o seu dentro da sua estrutura/framework.
 
 ## Listando os opcionais do banco
@@ -44,7 +44,7 @@ Apenas conecto no MySQL com a lib **mysqli** e imprimo um checkbox para cada reg
 ## DESCRIBE TABLE optional_vehicle
 
 Ainda não estamos preocupados com trazer os checkboxes marcados, pois precisamos entender como utilizar a tabela optional_vehicle.
-  
+
 Ela faz um relacionamento N:N (um veículo para N opcionais, e 1 opcional para N veículos).
 
 Para inserir nessa tabela, precisamos mais ou menos da seguinte string sql:
@@ -52,13 +52,13 @@ Para inserir nessa tabela, precisamos mais ou menos da seguinte string sql:
 <pre>INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42 2)</pre>
 
 Nessa query acima, estamos inserindo o opcional 1 e 2 para o veículo 42.
-  
+
 Se quisessemos inserir mais o opcional 5, bastaria:
 
 <pre>INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5)</pre>
 
 Okay ?
-  
+
 Fazer essa string é uma simples maniplação de array. Lembra que o name do checkbox é <var>name=&#8221;optional[]&#8221;</var> então, no php irá chegar um array:
 
 <pre>$_POST['optional'][0], $_POST['optional'][1], $_POST['optional'][2]</pre>
@@ -77,7 +77,7 @@ Visto isso, vamos montar o INSERT:
   $query = $mysqli->query($sql)or die($mysqli->error);</pre>
 
 Simples, não ? a saída do echo $sql, será a string que escrevi acima.
-  
+
 Comecei pelos opcionais para matar logo a sua curiosidade, mas para deixar registrado o INSERT simples do veículo tem apenas as colunas que são atributos da entidade veículo:
 
 <pre>$sql = "INSERT INTO vehicles (id, name, year, model) VALUES(NULL, '{$name}', '{$year}', '{$model}')";
@@ -89,7 +89,7 @@ Comecei pelos opcionais para matar logo a sua curiosidade, mas para deixar regis
 ## Os truques
 
 As duas queries acima são bem triviais e você já está mais do que acostumado com elas no seu dia a dia. Só existem 2 truques no server-side para essa modelagem.
-  
+
 O primeiro é:
 
 ### Delete tudo, depois insira novamente
@@ -106,19 +106,19 @@ INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(4
 ### Marque os checkboxes
 
 Agora precisamos marcar os checkboxes na listagem durante a edição de um registro.
-  
+
 O truque aqui é puramente SQL e se baseia em uma subquery.
 
 <pre>SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;</pre>
 
 Pense no seguinte:
-  
+
 -> Temos que listar **todos os opcionais**
-  
+
 Fácil, já tinhamos feito isso.
-  
+
 -> E dizer quem está marcado ou não.
-  
+
 Aqui que entra a subquery.
 
 <pre>(SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id)</pre>

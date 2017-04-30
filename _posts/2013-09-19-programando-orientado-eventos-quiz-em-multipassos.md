@@ -19,8 +19,8 @@ Apesar de programarmos javascript a muito tempo, parece que às vezes nos esquec
 
 A minha proposta aqui, é sugerir uma organização de como tratamos os comportamentos.
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/09/a2.png" alt="a" width="785" height="404" class="aligncenter size-full wp-image-3092" />](http://wbruno.com.br/scripts/quiz/)
-  
+[<img src="/wp-content/uploads/2013/09/a2.png" alt="a" width="785" height="404" class="aligncenter size-full wp-image-3092" />](http://wbruno.com.br/scripts/quiz/)
+
 <!--more-->
 
 ## JavaScript é &#8220;orientado a eventos&#8221;
@@ -85,13 +85,13 @@ Simples assim.
 ## Continue adicionando outros comportamentos
 
 O sétimo passo, possui:
-  
+
 -> uma validação para que não deixem vazio,
-  
+
 -> uma regra para verificar se foi preenchido,
-  
+
 -> decide qual resposta mostrar,
-  
+
 -> envia um ajax
 
 Ou seja, esse último passo possui **quatro comportamentos**, e eu separei isso em 4 chamadas de listeners do evento submit. Sério, dá uma olhada no código.

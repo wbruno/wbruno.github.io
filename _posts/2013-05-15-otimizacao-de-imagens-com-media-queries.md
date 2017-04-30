@@ -39,16 +39,16 @@ Já sabemos que:
 
 
 
-Mas hoje em dia, temos que nos preocupar **também com os diversos tamanhos** de tela, por isso, não faz sentido deixar nosso visitante fazer download de uma imagem gigante que não apareça na tela dele. 
+Mas hoje em dia, temos que nos preocupar **também com os diversos tamanhos** de tela, por isso, não faz sentido deixar nosso visitante fazer download de uma imagem gigante que não apareça na tela dele.
 
 ## Servindo imagens específicas
 
 As nossas novas amigas **media queries** podem nos ajudar nessa otimização de imagens. E para isso, me apoio num comportamento inteligente dos browsers modernos.
-  
+
 <!--more-->
 
 
-  
+
 Note o código abaixo:
 
 <pre class="css">body { background: url('image-1.jpg'); }
@@ -57,7 +57,7 @@ body { background: url('image-2.jpg'); }
 
 Mesmo declarando dois backgrounds image diferentes para um mesmo elemento, o browser não faz download dos dois arquivos. Ele trás apenas aquele que realmente irá ser usado.
 
-<img src="http://wbruno.com.br/wp-content/uploads/2013/05/download-img.jpg" alt="download-img" width="600" height="151" class="aligncenter size-full wp-image-2960" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/download-img.jpg 600w, http://wbruno.com.br/wp-content/uploads/2013/05/download-img-300x75.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />
+<img src="/wp-content/uploads/2013/05/download-img.jpg" alt="download-img" width="600" height="151" class="aligncenter size-full wp-image-2960" srcset="/wp-content/uploads/2013/05/download-img.jpg 600w, /wp-content/uploads/2013/05/download-img-300x75.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />
 
 ## Media Queries
 

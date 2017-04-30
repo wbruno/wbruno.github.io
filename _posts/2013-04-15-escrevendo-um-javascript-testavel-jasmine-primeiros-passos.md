@@ -23,14 +23,14 @@ Os testes devem ser capazes de reproduzir todas as entradas e saídas esperadas.
 
 Estamos acostumados a programar assim:
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png" alt="Código javascript não testável" width="288" height="300" class="aligncenter size-medium wp-image-2941" srcset="http://wbruno.com.br/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png 288w, http://wbruno.com.br/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-984x1024.png 984w, http://wbruno.com.br/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png 990w" sizes="(max-width: 288px) 100vw, 288px" />](http://wbruno.com.br/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png)
+[<img src="/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png" alt="Código javascript não testável" width="288" height="300" class="aligncenter size-medium wp-image-2941" srcset="/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png 288w, /wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-984x1024.png 984w, /wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png 990w" sizes="(max-width: 288px) 100vw, 288px" />](/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png)
 
 Esse código acima, [formata um input em javascript com uma máscara assim: 000,0000](http://wbruno.com.br/2013/04/11/mascara-javascript-para-peso-com-preenchimento-ao-contrario/).
-  
+
 Ao preencher o primeiro número, o script formata para <var>0,0001</var>, e assim por diante, apagando os demais zeros.
 
 Só que esse código não é testável, ou seja, escrever uma rotina que &#8220;use&#8221;, dando uma entrada e comparando se foi igual a uma saída esperada, não é algo trivial. Primeiro passo, é reescrever para conseguirmos chamar assim:
-  
+
 `formatWeight('123'); //0,0123`
 
 ## Evita duplicação de código
@@ -85,7 +85,7 @@ Esse foi o primeiro ganho em ter me preocupado em escrever um código testável.
 ## Verificando a saída manualmente
 
 Ainda não vou dizer como fazer com o Jasmine os testes, pois precisamos saber o que é um teste.
-  
+
 O script que propus aqui é super simples. São poucas possibilidades de entrada, e cada entrada gera um tipo de saída.
 
 Fazendo na mão, eu escrevi todas as entradas possíveis, e olho na tela se o retorno foi o que eu queria.
@@ -110,8 +110,8 @@ Fazendo na mão, eu escrevi todas as entradas possíveis, e olho na tela se o re
 
 Isso já é &#8220;melhor&#8221; do que nada, e não preciso digitar mais 7 entradas diferentes no input, para ver se o resultado foi o certo. Testes durante o desenvolvimento são necessários. E fazer algo assim:
 
-<pre class="javascript">id('resultado').innerHTML += 'Entrou: 1234567 e saiu: ' 
-		+ formatWeight('1234567') + ', ' 
+<pre class="javascript">id('resultado').innerHTML += 'Entrou: 1234567 e saiu: '
+		+ formatWeight('1234567') + ', '
 		+ (formatWeight('1234567') == '123,4567') + '&lt;br/>';
 </pre>
 
@@ -119,7 +119,7 @@ Isso já é &#8220;melhor&#8221; do que nada, e não preciso digitar mais 7 entr
 
 ## Jasmine
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/04/jasmine_logo.png" alt="jasmine_logo" width="282" height="90" class="aligncenter size-full wp-image-2942" />](http://wbruno.com.br/wp-content/uploads/2013/04/jasmine_logo.png)
+[<img src="/wp-content/uploads/2013/04/jasmine_logo.png" alt="jasmine_logo" width="282" height="90" class="aligncenter size-full wp-image-2942" />](/wp-content/uploads/2013/04/jasmine_logo.png)
 
 1. Baixe o <a href="https://github.com/pivotal/jasmine/downloads" rel="nofollow"><strong>jasmine standalone</strong></a>.
 
@@ -144,7 +144,7 @@ No meu caso ficaram assim:
   &lt;script type="text/javascript" src="spec/formatWeightSpec.js">&lt;/script></pre>
 
 O arquivo **formatWeigth.js**, contém apenas a função formatWeight(), e a função id().
-  
+
 A chamada do window.onload, está lá no meu projeto. E o arquivo **formatWeigtSpec.js** é o teste em si. A entrada e a saída esperada.
 
 4. Vamos ver o formatWeigtSpec.js:
@@ -219,7 +219,7 @@ function formatWeight(v){
 }</pre>
 
 Agora vc é capaz de usar o Jasmine como framework para testes. Comente com a sua experiência.
-  
+
 Ficou em dúvida ? Quer ver como ficou tudo junto ? Baixa lá no meu git:
 
 <a href="https://github.com/wbruno/formatWeight" rel="nofollow">https://github.com/wbruno/formatWeight</a>

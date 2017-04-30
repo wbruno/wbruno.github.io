@@ -12,9 +12,9 @@ categories:
 Sempre achei &#8216;bonito&#8217;, o input onde adicionamos os destinatários no hotmail.
 
 Um dia, estava &#8216;sem fazer muita coisa&#8217;, e resolvi reproduzir o efeito daquele input.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/05/input.jpg" alt="" title="input" width="767" height="135" class="aligncenter size-full wp-image-969" srcset="http://wbruno.com.br/wp-content/uploads/2011/05/input.jpg 767w, http://wbruno.com.br/wp-content/uploads/2011/05/input-300x52.jpg 300w" sizes="(max-width: 767px) 100vw, 767px" />](http://wbruno.com.br/wp-content/uploads/2011/05/input.jpg)
-  
+
+[<img src="/wp-content/uploads/2011/05/input.jpg" alt="" title="input" width="767" height="135" class="aligncenter size-full wp-image-969" srcset="/wp-content/uploads/2011/05/input.jpg 767w, /wp-content/uploads/2011/05/input-300x52.jpg 300w" sizes="(max-width: 767px) 100vw, 767px" />](/wp-content/uploads/2011/05/input.jpg)
+
 <!--more-->
 
 **index.html**

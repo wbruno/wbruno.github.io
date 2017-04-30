@@ -14,9 +14,9 @@ tags:
   - dom
 ---
 Nós já entendemos [o que é o this ? – javascript](http://wbruno.com.br/javascript-puro/afinal-e-javascript/), e agora vou explicar melhor como **navegar no DOM**.
-  
+
 Bom nada melhor do que começar com <a href="http://api.jquery.com/category/traversing/tree-traversal/" rel="nofollow">a documentação oficial</a> sobre os métodos jQuery.
-  
+
 <!--more-->
 
 Vou me focar em apenas alguns mais importantes e mais usados, pois entendendo o conceito fica fácil usar qualquer um deles.
@@ -25,10 +25,10 @@ Vou me focar em apenas alguns mais importantes e mais usados, pois entendendo o 
 
 Para entendermos como navegar no DOM, temos que nós lembrar da <a href="http://tableless.com.br/tenha-o-dom/" rel="nofollow">árvore</a>:
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/DOMTree.gif" alt="DOMTree" width="800" height="354" class="aligncenter size-full wp-image-2974" />](http://wbruno.com.br/wp-content/uploads/2013/05/DOMTree.gif)
+[<img src="/wp-content/uploads/2013/05/DOMTree.gif" alt="DOMTree" width="800" height="354" class="aligncenter size-full wp-image-2974" />](/wp-content/uploads/2013/05/DOMTree.gif)
 
 Fazendo uma leitura rápida, da direita para a esquerda:
-  
+
 O elemento <var>em</var>(em roxo), é filho do parágrafo <var>p</var>, que é irmão do <var>h1</var> e do outro <var>p</var>, que são filhos diretos do <var>body</var> que por sua vez é filho do <var>html</var>.
 
 Simples assim. Da esquerda para a direita, vemos que o <var>head</var> e o <var>body</var>, são irmãos entre si e filhos do <var>html</var>. Tranquilo, ne?!
@@ -36,7 +36,7 @@ Simples assim. Da esquerda para a direita, vemos que o <var>head</var> e o <var>
 ## $(seletor).find()
 
 Esse método procura **elementos filhos** apartir do elemento <var>$(seletor)</var>.
-  
+
 Imagine o seguinte html:
 
 <pre class="html">&lt;p>&lt;span>clique aqui&lt;/span> para ler: &lt;em>em 1&lt;/em>&lt;/p>
@@ -46,7 +46,7 @@ Imagine o seguinte html:
 </pre>
 
 Quero clicar na palavra &#8220;clique aqui&#8221;, e mostrar em um alert o valor da tag em.
-  
+
 Como o <var>em</var> é **filho** da tag <var>p</var>, posso usar o método <var>.find()</var>, apartir do this(o próprio parágrafo, pois o evento foi disparado nele).
 
 <pre class="html">&lt;!doctype html>
@@ -85,13 +85,13 @@ Irá aparecer na tela um alert com o texto de cada em. Note o código:
 <pre class="javascript">$this.find('em').text()</pre>
 
 Da direita para a esquerda novamente:
-  
+
 <var>.text()</var> retorna o texto dentro uma tag html.
-  
+
 <var>(&#8216;em&#8217;)</var> é a tag <em> em si.
-  
+
 <var>.find</var> é a função que estamos falando nesse tópico. Ela procura **filhos**.
-  
+
 <var>$this</var> é o elemento parágrafo, pois o click foi disparado nele: <var>jQuery(&#8216;p&#8217;).on(&#8216;click&#8217;, function(){</var>
 
 ## $(seletor).next()
@@ -125,14 +125,14 @@ A solução é **voltar para o pai**, e apartir dele achar o que está precisand
 </pre>
 
 Continuo disparando o click no span, então o this é o span.
-  
+
 Mas primeiro eu volto para o parágrafo pai do span, e apartir do parágrafo eu procuro o em que é filho dele.
 
-Note que as 3 versões do código produzem a mesma saida. Ao clicar em &#8220;clique aqui&#8221;, aparece no alert o texto do elemento em. 
+Note que as 3 versões do código produzem a mesma saida. Ao clicar em &#8220;clique aqui&#8221;, aparece no alert o texto do elemento em.
 
 ## $(seletor).parents()
 
-O método <var>.parents()</var> volta **mais de um pai**, ou seja, sobe vários níveis na árvore DOM. 
+O método <var>.parents()</var> volta **mais de um pai**, ou seja, sobe vários níveis na árvore DOM.
 
 O html do meu exemplo era bem simples, sendo o span filho direto do parágrafo, então só o .parent() já resolvia. Mas se eu tivesse que subir vários níveis, procurando tags avós, bisavós então é o método .parents() que resolve a questão.
 

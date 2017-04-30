@@ -20,15 +20,15 @@ O resultado, são sistemas <a href="http://pt.wikipedia.org/wiki/Modelagem_de_da
 <!--more-->
 
 
-  
 
-  
+
+
 Um exercício rápido:
 
 > _Volante, Pára-choque, Retrovisores, Câmbio, Chassis, Rodas, Motor, Portas&#8230;_
 
 E ai, o que lhe veio a mente ? Qual objeto do nosso mundo, agrega essas partes que citei ?
-  
+
 Espero que a sua resposta seja &#8216;um carro&#8217;. Faz parte do senso comum.
 
 Mais uma vez:
@@ -42,9 +42,9 @@ Uma árvore certo ? só as &#8216;Calotas&#8217; que parecem não estar no lugar
 Melhor mover as Calotas para o Carro ali de cima, no senso comum, para se encaixar melhor em uma normalidade aceitável.
 
 Ao iniciar o levantamento de informações, o processo é mais ou menos parecido com esse.
-  
+
 O Carro, e a Árvore são as nossas **entidades** e cada um dos itens que citei, são os **atributos** particulares dessas entidades.
-  
+
 A idéia é saber a quem deve pertencer cada atributo, e sermos capazes de definirmos as entidades do nosso sistema.
 
 
@@ -58,7 +58,7 @@ A idéia é saber a quem deve pertencer cada atributo, e sermos capazes de defin
 Talvez esteja confuso até aqui, mas trazendo de forma livre para a nossa realidade, cada Entidade é uma tabela, e cada Atributo é cada uma das colunas dessas tabelas.
 
 O ponto que quero levantar, é a compreensão do conceito.
-  
+
 Se tenho que fazer um cadastro de usuário, preciso pensar o que a <u>entidade usuário</u> significa para o meu sistema, e o que preciso saber dela ou não.
 
 <pre name="code" class="sql">CREATE TABLE `test`.`usuario` (
@@ -70,9 +70,9 @@ Se tenho que fazer um cadastro de usuário, preciso pensar o que a <u>entidade u
 Até aqui bem simples. A nossa entidade usuario possui um _\`nome\`_, e um _\`id\`_, que é um identificador único desse objeto no nosso modelo.
 
 Agora o cliente nos informa que ele precisa saber dos usuarios dele, pelo menos:
-  
+
 -> um telefone residencial, e
-  
+
 -> um celular.
 
 Num primeiro momento, a nossa reação é adicionarmos essas informações à entidade usuario, pois o telefone e o celular pertencem respectivamente, a cada usuário nosso.
@@ -80,7 +80,7 @@ Num primeiro momento, a nossa reação é adicionarmos essas informações à en
 <pre name="code" class="sql">ALTER TABLE `usuario` ADD `telefone` VARCHAR( 14 ) NOT NULL ,
 ADD `celular` VARCHAR( 14 ) NOT NULL </pre>
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/tab.png" alt="" title="tab" width="609" height="120" class="aligncenter size-full wp-image-394" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/tab.png 609w, http://wbruno.com.br/wp-content/uploads/2011/03/tab-300x59.png 300w" sizes="(max-width: 609px) 100vw, 609px" />](http://wbruno.com.br/wp-content/uploads/2011/03/tab.png)
+[<img src="/wp-content/uploads/2011/03/tab.png" alt="" title="tab" width="609" height="120" class="aligncenter size-full wp-image-394" srcset="/wp-content/uploads/2011/03/tab.png 609w, /wp-content/uploads/2011/03/tab-300x59.png 300w" sizes="(max-width: 609px) 100vw, 609px" />](/wp-content/uploads/2011/03/tab.png)
 
 Porém, nosso chefe, vem e nos informa que agora ele precisa também do Telefone Comercial do nosso usuário, e quem sabe talvez um Telefone de Contato.. é nesse momento, que o nosso modelo pode naufragar ou não.
 
@@ -92,12 +92,12 @@ Nesta hora, deveria começar a ficar claro que essa expansão, clama por uma nov
 </pre>
 
 Estrutura da nova entidade:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/tab2.png" alt="" title="tab2" width="603" height="122" class="aligncenter size-full wp-image-396" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/tab2.png 603w, http://wbruno.com.br/wp-content/uploads/2011/03/tab2-300x60.png 300w" sizes="(max-width: 603px) 100vw, 603px" />](http://wbruno.com.br/wp-content/uploads/2011/03/tab2.png)
-  
+
+[<img src="/wp-content/uploads/2011/03/tab2.png" alt="" title="tab2" width="603" height="122" class="aligncenter size-full wp-image-396" srcset="/wp-content/uploads/2011/03/tab2.png 603w, /wp-content/uploads/2011/03/tab2-300x60.png 300w" sizes="(max-width: 603px) 100vw, 603px" />](/wp-content/uploads/2011/03/tab2.png)
+
 Dados cadastrados:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/reg.png" alt="" title="reg" width="269" height="194" class="aligncenter size-full wp-image-395" />](http://wbruno.com.br/wp-content/uploads/2011/03/reg.png)
+
+[<img src="/wp-content/uploads/2011/03/reg.png" alt="" title="reg" width="269" height="194" class="aligncenter size-full wp-image-395" />](/wp-content/uploads/2011/03/reg.png)
 
 Portanto, se precisamos de mais formas de contato, como o Nextel, basta adicionarmos um registro a essa tabela, e isso pode ser facilmente feito na nossa aplicação, sem a necessidade de alterarmos a estrutura do modelo.
 
@@ -113,8 +113,8 @@ A única questão não respondida ainda, é como vincular os dados do usuário a
 </pre>
 
 Essa nossa nova tabela, será responsável por fazer a ligação entre as nossas entidades.
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/reg2.png" alt="" title="reg2" width="360" height="143" class="aligncenter size-full wp-image-397" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/reg2.png 360w, http://wbruno.com.br/wp-content/uploads/2011/03/reg2-300x119.png 300w" sizes="(max-width: 360px) 100vw, 360px" />](http://wbruno.com.br/wp-content/uploads/2011/03/reg2.png)
+
+[<img src="/wp-content/uploads/2011/03/reg2.png" alt="" title="reg2" width="360" height="143" class="aligncenter size-full wp-image-397" srcset="/wp-content/uploads/2011/03/reg2.png 360w, /wp-content/uploads/2011/03/reg2-300x119.png 300w" sizes="(max-width: 360px) 100vw, 360px" />](/wp-content/uploads/2011/03/reg2.png)
 
 A relação entre as tabelas é evidente, e o nosso JOIN, para resgatar esses dados fica:
 
@@ -126,23 +126,23 @@ A relação entre as tabelas é evidente, e o nosso JOIN, para resgatar esses da
 </pre>
 
 Saída:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/03/reg3.png" alt="" title="reg3" width="426" height="134" class="aligncenter size-full wp-image-404" srcset="http://wbruno.com.br/wp-content/uploads/2011/03/reg3.png 426w, http://wbruno.com.br/wp-content/uploads/2011/03/reg3-300x94.png 300w" sizes="(max-width: 426px) 100vw, 426px" />](http://wbruno.com.br/wp-content/uploads/2011/03/reg3.png)
+
+[<img src="/wp-content/uploads/2011/03/reg3.png" alt="" title="reg3" width="426" height="134" class="aligncenter size-full wp-image-404" srcset="/wp-content/uploads/2011/03/reg3.png 426w, /wp-content/uploads/2011/03/reg3-300x94.png 300w" sizes="(max-width: 426px) 100vw, 426px" />](/wp-content/uploads/2011/03/reg3.png)
 
 Continuando, surgem novos atributos:
 
 > _data de nascimento, cidade natal, email, estado civil.._
 
 Precisamos dividir esses atributos nas nossas entidades.
-  
+
 data de nascimento, cidade natal e estado civil, cabem muito bem na entidade usuario.
-  
+
 Já o email, podemos colocar na entidade contato, concorda ?
 
 Se lá pra frente, precisarmos de um &#8216;email_secundario&#8217;, para proteção do sistema, onde o usuário poderá resgatar a senha dele na nossa aplicação, bastará novamente, inserirmos um registro na entidade contato, sem a menor alteração do modelo que criamos.
 
 Esse particionamento que fizemos tem o seu custo. Maior complexidade do modelo, queda de performance(afinal, agora consultamos 3 tabelas, e não apenas uma), em contrapartida com os ganhos que essa modelagem trouxe a estrutura da nossa aplicação.
-  
+
 Analise bem os requisitos do seu sistema antes de implementá-lo. Não tome todo e qualquer tutorial como lei, ou verdade absoluta.
 
 Dump completo do SQL usado:

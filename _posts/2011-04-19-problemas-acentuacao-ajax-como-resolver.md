@@ -14,23 +14,23 @@ tags:
   - firefox
 ---
 Depois do [primeiro post](http://www.wbruno.com.br/2011/04/14/como-debugar-ajax-firebug/), agora, nosso retorno é:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/req.jpg" alt="" title="req" width="692" height="267" class="aligncenter size-full wp-image-788" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/req.jpg 692w, http://wbruno.com.br/wp-content/uploads/2011/04/req-300x115.jpg 300w" sizes="(max-width: 692px) 100vw, 692px" />](http://wbruno.com.br/wp-content/uploads/2011/04/req.jpg)
+
+[<img src="/wp-content/uploads/2011/04/req.jpg" alt="" title="req" width="692" height="267" class="aligncenter size-full wp-image-788" srcset="/wp-content/uploads/2011/04/req.jpg 692w, /wp-content/uploads/2011/04/req-300x115.jpg 300w" sizes="(max-width: 692px) 100vw, 692px" />](/wp-content/uploads/2011/04/req.jpg)
 
 ## Problemas com acentos ����
 
 Necessário aqui, é entender como funcionam as coisas. No browser, está sendo exibido � no lugar do acento.
 
 Porém no console do **Firebug**, tá certinho.
-  
+
 Voltando para a primeira aba:
-  
+
 <small><br /> Cabeçalhos de Resposta<br /> <strong>Content-Type</strong> text/html; charset=iso-8859-1</small>
-  
+
 <!--more-->
 
 
-  
+
 Vamos _forçar_ esse charset:
 
 <pre name="code" class="php">&lt;?php
@@ -38,15 +38,15 @@ Vamos _forçar_ esse charset:
 	echo 'Beleza, chegou até aqui!';</pre>
 
 Okay, funciona.. basta mantermos o padrão. Se definirmos usar ISO, então usemos ISO em tudo.
-  
+
 Na codificação do arquivo, nos headers que vamos enviar ao navegador, na tabela do banco de dados, na meta tag do documento html..
 
 ## Problemas com acentos [ 2 ] &#8211; Ã Ã£..
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/erro23.jpg" alt="" title="erro2" width="546" height="242" class="aligncenter size-full wp-image-807" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/erro23.jpg 546w, http://wbruno.com.br/wp-content/uploads/2011/04/erro23-300x132.jpg 300w" sizes="(max-width: 546px) 100vw, 546px" />](http://wbruno.com.br/wp-content/uploads/2011/04/erro23.jpg)
+[<img src="/wp-content/uploads/2011/04/erro23.jpg" alt="" title="erro2" width="546" height="242" class="aligncenter size-full wp-image-807" srcset="/wp-content/uploads/2011/04/erro23.jpg 546w, /wp-content/uploads/2011/04/erro23-300x132.jpg 300w" sizes="(max-width: 546px) 100vw, 546px" />](/wp-content/uploads/2011/04/erro23.jpg)
 
 Nesse momento é que a galera costuma se enrolar. E fica procurando fazer milagres com os **utf8_encode|decode()**. Só &#8216;precisamos&#8217; disso, qndo temos algo &#8216;realmente&#8217; em uma codificação diferente. Como é o caso de estarmos trabalhando com banco de dados.
-  
+
 Aqui, não era necessário:
 
 <pre name="code" class="php:firstLine[3]">$arr = Array('nome'=>utf8_encode('Jéssicão'), 'blog'=>'wbruno.com.br');</pre>
@@ -78,20 +78,20 @@ Está em ISO.
 	echo 'Beleza, chegou até aqui!';</pre>
 
 Se o arquivo estiver em UTF com assinatura BOM:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/req2.jpg" alt="" title="req2" width="252" height="107" class="aligncenter size-full wp-image-789" />](http://wbruno.com.br/wp-content/uploads/2011/04/req2.jpg)
-  
+
+[<img src="/wp-content/uploads/2011/04/req2.jpg" alt="" title="req2" width="252" height="107" class="aligncenter size-full wp-image-789" />](/wp-content/uploads/2011/04/req2.jpg)
+
 Se quisermos usar UTF8 mesmo, precisamos codificar os arquivos nesse content type.
 
 ### No Notepad++
 
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/notepadutf.jpg" alt="" title="notepadutf" width="360" height="179" class="aligncenter size-full wp-image-794" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/notepadutf.jpg 360w, http://wbruno.com.br/wp-content/uploads/2011/04/notepadutf-300x149.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />](http://wbruno.com.br/wp-content/uploads/2011/04/notepadutf.jpg)
+[<img src="/wp-content/uploads/2011/04/notepadutf.jpg" alt="" title="notepadutf" width="360" height="179" class="aligncenter size-full wp-image-794" srcset="/wp-content/uploads/2011/04/notepadutf.jpg 360w, /wp-content/uploads/2011/04/notepadutf-300x149.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />](/wp-content/uploads/2011/04/notepadutf.jpg)
 
 ### No Dreamweaver
 
 <small>apesar de eu não gostar desse programa, pode ajudar algumas pessoas, deixar aqui como resolver nele</small>
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/dreamut.png" alt="" title="dreamut" width="637" height="383" class="aligncenter size-full wp-image-793" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/dreamut.png 637w, http://wbruno.com.br/wp-content/uploads/2011/04/dreamut-300x180.png 300w" sizes="(max-width: 637px) 100vw, 637px" />](http://wbruno.com.br/wp-content/uploads/2011/04/dreamut.png)Basta salvar o arquivo, desmarcando esta opção.
+
+[<img src="/wp-content/uploads/2011/04/dreamut.png" alt="" title="dreamut" width="637" height="383" class="aligncenter size-full wp-image-793" srcset="/wp-content/uploads/2011/04/dreamut.png 637w, /wp-content/uploads/2011/04/dreamut-300x180.png 300w" sizes="(max-width: 637px) 100vw, 637px" />](/wp-content/uploads/2011/04/dreamut.png)Basta salvar o arquivo, desmarcando esta opção.
 
 ## jSON é UTF8 por definição
 
@@ -111,7 +111,7 @@ Vale lembrar disso. Então se vamos trabalhar todo o documento html em ISO, e pr
 		}</pre>
 
 De novo, sem nenhum erro no console, tudo aparentemente correto no xhr, porém &#8216;não funciona&#8217;!!
-  
+
 É aquilo que eu já disse, javascript tem erros silenciosos. Nesse caso, como <a href="http://json.org/json-pt.html" target="_blank">jSON é utf-8 por definição</a>, e mandamos ele com um cabeçalho ISO, não temos uma &#8216;saída válida&#8217;.
 
 O correto, é forçarmos a saída do json em utf. Note que estamos trabalhando apenas em cima, dos dados recebidos. Para os dados enviados, é outra história.
@@ -139,13 +139,13 @@ Deselegante, porém lógico que funciona!
 <pre name="code" class="php:firstLine[8]">echo htmlentities( $query->fetch_object()->nome );</pre>
 
 Nesse caso, estamos transportanto apenas texto puro:
-  
-[<img src="http://wbruno.com.br/wp-content/uploads/2011/04/erro32.jpg" alt="" title="erro3" width="460" height="76" class="aligncenter size-full wp-image-810" srcset="http://wbruno.com.br/wp-content/uploads/2011/04/erro32.jpg 460w, http://wbruno.com.br/wp-content/uploads/2011/04/erro32-300x49.jpg 300w" sizes="(max-width: 460px) 100vw, 460px" />](http://wbruno.com.br/wp-content/uploads/2011/04/erro32.jpg)Não importa como vamos trazer a string, não importam os cabeçalhos que o servidor está nos devolvendo, oque está vindo, é texto puro, <u>sem nenhum caracter especial</u>.
+
+[<img src="/wp-content/uploads/2011/04/erro32.jpg" alt="" title="erro3" width="460" height="76" class="aligncenter size-full wp-image-810" srcset="/wp-content/uploads/2011/04/erro32.jpg 460w, /wp-content/uploads/2011/04/erro32-300x49.jpg 300w" sizes="(max-width: 460px) 100vw, 460px" />](/wp-content/uploads/2011/04/erro32.jpg)Não importa como vamos trazer a string, não importam os cabeçalhos que o servidor está nos devolvendo, oque está vindo, é texto puro, <u>sem nenhum caracter especial</u>.
 
 Porém, vamos trafegar mais informações do que das outras formas [strings maiores].
 
 Consulta rápida:
-  
+
 **ASP:**
 
 <pre name="code" class="php">&lt;% Response.Charset="ISO-8859-1" %></pre>

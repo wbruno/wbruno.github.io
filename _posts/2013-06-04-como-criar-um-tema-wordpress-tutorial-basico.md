@@ -13,10 +13,10 @@ categories:
 tags:
   - tableless
 ---
-[<img src="http://wbruno.com.br/wp-content/uploads/2013/05/wp.png" alt="wp" width="504" height="279" class="aligncenter size-full wp-image-3003" srcset="http://wbruno.com.br/wp-content/uploads/2013/05/wp.png 504w, http://wbruno.com.br/wp-content/uploads/2013/05/wp-300x166.png 300w" sizes="(max-width: 504px) 100vw, 504px" />](http://wbruno.com.br/wp-content/uploads/2013/05/wp.png)
-  
+[<img src="/wp-content/uploads/2013/05/wp.png" alt="wp" width="504" height="279" class="aligncenter size-full wp-image-3003" srcset="/wp-content/uploads/2013/05/wp.png 504w, /wp-content/uploads/2013/05/wp-300x166.png 300w" sizes="(max-width: 504px) 100vw, 504px" />](/wp-content/uploads/2013/05/wp.png)
+
 Se você chegou até esse post pela busca, provavelmente este não é o primeiro tutorial sobre criar temas no wordpress que vc está lendo. Então, vou pular algumas coisas que sei que já falaram nos outros links.
-  
+
 <!--more-->
 
 ## É apenas um site
@@ -24,7 +24,7 @@ Se você chegou até esse post pela busca, provavelmente este não é o primeiro
 WordPress é apenas uma camada do site. Só o CMS que vai ser colocado para seu cliente administrar via painel os posts e páginas.
 
 Se você sabe fazer sites, então vc está muito perto de conseguir fazer um tema wordpress.
-  
+
 Comece como vc começaria qualquer outro site: do recorte html.
 
 Sim, estou falando para você fazer isoladamente. Se esquecendo que no final, usará o wordpress. Faça o seu recorte css tableless da melhor forma possível, como vc faria normalmente.
@@ -81,25 +81,25 @@ Onde vemos claramente os includes do topo, sidebar e rodapé.
 ## Codex
 
 O WP é bem documentado. Tendo alguma dúvida: pesquise no codex.
-  
+
 Por exemplo, não faz sentido eu explicar o que é e o que faz cada um dos arquivos básicos de um tema, se o codex já tem um link falando tudo isso: <a href="http://codex.wordpress.org/pt-br:Hierarquia_de_Modelos_Wordpress" rel="nofollow">http://codex.wordpress.org/pt-br:Hierarquia_de_Modelos_Wordpress</a>. Dá uma lida lá.
 
 ## Theme Check
 
 Esse plugin é essencial para desenvolver um tema de qualidade. Ele vai te apontar alguns erros como encoding, funções deprecated e algumas boas práticas.
-  
+
 Use: <a href="http://wordpress.org/plugins/theme-check/" rel="nofollow">http://wordpress.org/plugins/theme-check/</a>.
 
 ### Validador w3c
 
 Eu não disse que um wordpress é apenas um site ?
-  
+
 Então todas as boas práticas de um site também valem para um tema wordpress. Portanto, valide sempre o html e css do seu tema: <a href="http://validator.w3.org/" rel="nofollow">http://validator.w3.org/</a>.
 
 ## functions.php
 
 É nesse arquivos que vc fará todas as intervenções que quiser no core do wordpress, como por exemplo mudar a forma com que o cms lista as categorias.
-  
+
 É importante saber que a única pasta que te pertence quando vc está desenvolvendo um tema, é a própria pasta do tema, localizada em: <var>wp-content/themes/nome_do_seu_tema/</var>, e nada mais.
 
 Não edite de forma nenhuma os outros arquivos do wordpress, afinal uma atualização do core acabaria quebrando as suas modificações.
@@ -111,7 +111,7 @@ Mas ele não é obrigatório, e vc pode ter um functions.php em branco e mesmo a
 Você sempre vai precisar ter esses, na raiz do seu tema:
 
   * **screenshot.png** &#8211; screenshot em 600&#215;450 de como o tema ficará, para vc visualizar no painel de escolha de temas um &#8220;preview&#8221;
-  * **style.css** &#8211; independente se vc usará outros arquivos .css externos, o css base do tema, deve ser esse arquivo na raiz do tema. Os comentários iniciais dele, é que informarão ao painel do wp o que o seu tema é. 
+  * **style.css** &#8211; independente se vc usará outros arquivos .css externos, o css base do tema, deve ser esse arquivo na raiz do tema. Os comentários iniciais dele, é que informarão ao painel do wp o que o seu tema é.
     <pre>/*
 	Theme Name: wbruno
 	Theme URI: http://wbruno.com.br

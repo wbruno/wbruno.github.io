@@ -12,7 +12,7 @@ categories:
   - Livro
 ---
 
-Hoje (26/04/2021), lança a <a href="https://novatec.com.br/livros/nodejs-3ed/">terceira edição do meu livro de nodejs</a>.
+Amanhã (27/04/2021), lança a <a href="https://novatec.com.br/livros/nodejs-3ed/">terceira edição do meu livro de nodejs</a>.
 
 <img src="/wp-content/uploads/2021/04/nodejs-terceira.png" alt="Capa terceira edição - livro nodejs" width="585" height="402" class="aligncenter size-large" />
 

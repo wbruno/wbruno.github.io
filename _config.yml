@@ -1,9 +1,9 @@
-url: http://wbruno.com.br
+url: https://wbruno.com.br
 name: 'Desenvolvedor NodeJS - William Bruno'
 description: 'Bem Vindo ao meu blog. Me chamo William Bruno (aka wbruno) e trabalho como Desenvolvedor NodeJS  nos horários em que não estou estudando Matemática ou escrevendo posts.'
 disqus:
   shortname: wbruno
-theme: jekyll-theme-minimal
+theme: minima
 google_analytics: UA-7671312-2
 sass:
   sass_dir: _sass

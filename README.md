@@ -2,6 +2,7 @@
 
 
 ```
+$ gem install bundler jekyll
 $ jekyll s --incremental
 ```
 

@@ -23,10 +23,10 @@ O meu github <a href="https://github.com/wbruno/livro-nodejs">wbruno/livro-nodej
 
 Onde comprar:
 
-- Novatec: https://novatec.com.br/livros/nodejs-3ed/
-- Amazon: https://www.amazon.com.br/gp/product/6586057531/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=6586057531&linkCode=as2&tag=novatec03-20
-- Apple: https://play.google.com/store/books/details?id=_mwrEAAAQBAJ&gl=br
-- Google: https://books.apple.com/br/book/id1564750600
+- [Novatec](https://novatec.com.br/livros/nodejs-3ed/)
+- [https://www.amazon.com.br/gp/product/6586057531/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&cr[Amazon](ativeASIN=6586057531&linkCode=as2&tag=novatec03-20)
+- [Apple](https://play.google.com/store/books/details?id=_mwrEAAAQBAJ&gl=br)
+- [Google](https://books.apple.com/br/book/id1564750600)
 
 ## Novidades
 

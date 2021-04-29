@@ -2,6 +2,7 @@
 
 
 ```
+$ sudo gem update --system -n /usr/local/bin/gem
 $ gem install bundler jekyll
 $ jekyll s --incremental
 ```

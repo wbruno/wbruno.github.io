@@ -21,6 +21,12 @@ Já fazem quase 6 anos desde a <a href="https://wbruno.com.br/livro/construindo-
 Esse post é para mostrar as diferenças e novidades, do livro **Construindo Aplicações com NodeJS**.
 O meu github <a href="https://github.com/wbruno/livro-nodejs">wbruno/livro-nodejs</a>, contém os releases de cada edição do livro, e os códigos capítulo a capítulo para acompanhamento.
 
+Onde comprar:
+
+- Novatec: https://novatec.com.br/livros/nodejs-3ed/
+- Amazon: https://www.amazon.com.br/gp/product/6586057531/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=6586057531&linkCode=as2&tag=novatec03-20
+- Apple: https://play.google.com/store/books/details?id=_mwrEAAAQBAJ&gl=br
+- Google: https://books.apple.com/br/book/id1564750600
 
 ## Novidades
 

@@ -26,7 +26,7 @@ Podemos dividir uma entrevista técnica em três etapas:
 E depois pede para a pessoa contar sobre ela, legal aqui pedir um resumo dos pontos altos da carreira, pedir para focar nas tecnologias usadas nas empresas, pedir para falar apenas sobre as 2 últimas (visto que você já terá visto o cv ou linkedin), etc.
 
 ---
-- Conversa: aqui deve ser uma troca, onde avaliamos o conhecimento, a capacidade de resolução de problemas e a linha de raciocínio. Através de pergunta direcionadas, que deixem margem para interpretação, mas da mesma forma dêem liberdada na resposta.
+- Conversa: aqui deve ser uma troca, onde avaliamos o conhecimento, a capacidade de resolução de problemas e a linha de raciocínio. Através de pergunta direcionadas, que deixem margem para interpretação, mas da mesma forma dêem liberdade na resposta.
 Não devemos dar a resposta na pergunta, queremos saber quais problemas a pessoa já enfrentou antes e o que ela já estudou. E dai então, podemos reforçar a pergunta perguntando os porquês, criticando as escolhas, complicando os cenários propostos, colocando mais dificuldades técnicas, até entendermos em qual nível o candidato está.
 Um padrão que já observei aqui, é que alguns candidatos anotam os assuntos que não souberam responder para estudar depois, o que é super positivo e mostra bastante sobre essa soft skill.
 

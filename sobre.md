@@ -6,7 +6,7 @@ author: William Bruno
 layout: page
 guid: http://www.wbruno.com.br/blog/?page_id=2
 ---
-William Bruno é desenvolvedor web apaixonado por boas práticas e design patterns. Iniciou com programação web em 2008 com PHP e JavaScript. Participante ativo do Fórum iMasters, escreve artigos para seu blog pessoal e alguns outros canais. Atualmente trabalha na BelezaNaWeb.com.br com NodeJS.
+William Bruno é desenvolvedor web apaixonado por boas práticas e design patterns. Iniciou com programação web em 2008 com PHP e JavaScript. Participante ativo do Fórum iMasters, escreve artigos para seu blog pessoal e alguns outros canais. Trabalhou com Java, infraestrutura, bancos de dados e arquitetura ao longo da carreira. Publicou um livro de NodeJS. Atualmente trabalha no Grupo Boticário como Principal Engineer.
 
 Suas primeiras linguagens de programação foram C e Assembly que viu no curso técnico em Eletrônica, enquanto ainda estava no Ensino Médio, onde também começou seus estudos de HTML. Anos mais tarde, após um curso de PHP no Senac, se aprofundou em tableless aprendendo CSS da forma correta.
 

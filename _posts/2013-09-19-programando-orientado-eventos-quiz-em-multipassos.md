@@ -63,7 +63,8 @@ Feita a validação inicial, que era um comportamento comum a todos os formulár
 
 ### Verificando se o passo 1 foi respondido
 
-```$formUser.addEventListener("submit", function () {
+``` bash
+formUser.addEventListener("submit", function () {
         answers.user = [];
 
         if ($name.value !== '' && $email.value !== '') {

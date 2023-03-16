@@ -166,8 +166,9 @@ Consulta rápida:
 
 **ASP:**
 
-<pre name="code" class="php"><% Response.Charset="ISO-8859-1" %>```
-
+``` php
+<% Response.Charset="ISO-8859-1" %>
+```
 **PHP:**
 
 ``` php
@@ -176,13 +177,14 @@ Consulta rápida:
 
 **JSP:**
 
-<pre name="code" class="php"><%@ page contentType="text/html; charset=ISO-8859-1" %>```
-
+``` php
+<%@ page contentType="text/html; charset=ISO-8859-1" %>
+```
 **HTML**
 
 ``` html
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />```
-
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+```
 Bom, acho que é isso. Quis escrever sobre, para dar embasamento para os meus demais posts, e porque eu já passei por essas situações, e já bati muito a cabeça para conseguir resolver.
 
 Vamos estudando e entendendo como funcionam as coisas ! Bons estudos a todos nós.

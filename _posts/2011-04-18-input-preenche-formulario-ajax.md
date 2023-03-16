@@ -18,16 +18,17 @@ Boas galera!
 Este aqui, é complementar do <a href="http://www.wbruno.com.br/2009/08/26/combobox-preenche-input-ajax/" target="_blank">Combobox preenche input ajax</a>.
 
 Muita gente já perguntou, e já vi muitos outros usando esse meu script por ai. Para facilitar, fica aqui o script modificado, para que no lugar do <var><select></var>, seja um <var><input></var>, que no evento **onblur**, vai preencher o restante do formulário.
-  
+
 <!--more-->
 
 
-  
+
 Para deixar simples, e análogo ao outro, estou usando o &#8216;nome&#8217; como campo a ser pesquisado. Porém, convém lembrar, que o ideal, é trabalharmos com algo mais consistente, para esse tipo de consulta, como o CPF, ou RG.
 
 **index.html**
 
-<pre class="html"><html>
+``` html
+<html>
 <head>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <script type="text/javascript">
@@ -64,7 +65,8 @@ Para deixar simples, e análogo ao outro, estou usando o &#8216;nome&#8217; como
 
 **function.php**
 
-<pre class="php"><?php
+``` php
+<?php
   /**
    * função que devolve em formato JSON os dados do cliente
    */
@@ -104,7 +106,8 @@ function filter( $var ){
 
 **dump.sql**
 
-<pre class="sql">--
+``` sql
+--
 -- Estrutura da tabela `cliente`
 --
 

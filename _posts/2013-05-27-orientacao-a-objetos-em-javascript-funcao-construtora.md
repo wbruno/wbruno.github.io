@@ -31,13 +31,15 @@ Vale a pena repetir: javascript não possui classes. E não possui por que não 
 
 Você pode criar objetos usando funções construtoras:
 
-<pre class="javascript">var tt = new Tooltip();
+``` js
+var tt = new Tooltip();
 tt.init();
 ```
 
 Uma maneira de chegar a este código em javascript, é definindo a nossa função construtora:
 
-<pre class="javascript">function Tooltip() {
+``` js
+function Tooltip() {
     this.init = function() {
         //..
     }
@@ -46,14 +48,16 @@ Uma maneira de chegar a este código em javascript, é definindo a nossa funçã
 
 O problema disso, é que sempre que instanciarmos um novo objeto, a função init será novamente criada na memória, e nem sempre isso é bom ao nosso projeto.
 
-<pre class="javascript">var tt = new Tooltip();//aloca o objeto tt, criando a função init
+``` js
+var tt = new Tooltip();//aloca o objeto tt, criando a função init
 var tt2 = new Tooltip();//aloca o objeto tt2, criando novamente init para este objeto agora```
 
 ## .prototype
 
 Se adicionarmos o método init ao prototipo do objeto, todos as instâncias herdarão esse método e não estaremos enchendo a memória com declarações repetidas.
 
-<pre class="javascript">function Tooltip() {}
+``` js
+function Tooltip() {}
 Tooltip.prototype.init = function() {}
 ```
 
@@ -61,7 +65,8 @@ No github: <a href="https://github.com/wbruno/examples/tree/gh-pages/tt" rel="ex
 
 Esse tooltip funciona basicamente só com css, através do pseudo seletor <var>:hover</var>. O papel do javascript, é procurar o conteúdo do tooltip apartir do atributo data-rel, e reescrever a marcação html do elemento que disparou o tooltip.
 
-<pre class="javascript">var Tooltip =(function(){
+``` js
+var Tooltip =(function(){
   "use strict";
 
   function Tooltip() {}
@@ -104,7 +109,8 @@ window.addEventListener("load", function() {
 
 Também usei o pattern de revelação nesta versão do código, mas diferente do código com objeto literal, onde apenas a função tt.init(), estava acessível ao mundo externo, aqui, todo o objeto Tooltip é público, através das suas instâncias.
 
-<pre class="javascript">for(var prop in tt) {
+``` js
+for(var prop in tt) {
     console.log(prop);//init, createWrap, getContent
   }
   console.log(tt.init);//function()
@@ -116,7 +122,8 @@ Também usei o pattern de revelação nesta versão do código, mas diferente do
 
 Quando adicionamos um método ao prototype de um objeto todas as instâncias herdarão esse método. Mas o objeto em si não. Veja a saída:
 
-<pre class="javascript">console.log(Tooltip.init);//undefined
+``` js
+console.log(Tooltip.init);//undefined
   console.log(Tooltip.prototype.init);//function()
   console.log(tt.init);//function()
 ```
@@ -125,7 +132,8 @@ Isso por que criamos inicialmente um objeto Tooltip vazio com uma função const
 
 E, se não tivéssemos usado o prototype:
 
-<pre class="javascript">var Tooltip =(function(){
+``` js
+var Tooltip =(function(){
   "use strict";
 
   function Tooltip() {}
@@ -156,7 +164,8 @@ window.addEventListener("load", function() {
 
 As funções existiriam somente no objeto Tooltip, e não nas instâncias dele. A menos que copiássemos explicitamente os métodos de Tooltip, para dentro da instância tt:
 
-<pre class="javascript">tt.init = Tooltip.init;
+``` js
+tt.init = Tooltip.init;
   console.log(tt.init);//function()
 ```
 

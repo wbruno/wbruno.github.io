@@ -13,7 +13,8 @@ categories:
 ---
 Fiz uma ER rápida aqui. Procuro uma url dentro de um texto, e então substituo pelo HTML da âncora.
 
-<pre name="code" class="php">$description = preg_replace( '/(http:\/\/[\w\.\/-]+)/', '<a href="$1" rel="external">$1</a>', $li->description );
+``` php
+$description = preg_replace( '/(http:\/\/[\w\.\/-]+)/', '<a href="$1" rel="external">$1</a>', $li->description );
 ```
 
 <!--more-->

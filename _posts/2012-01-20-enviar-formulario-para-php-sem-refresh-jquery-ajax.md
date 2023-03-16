@@ -59,8 +59,8 @@ Porém, se vc não estiver usando esse plugin, e quiser apenas usar o ajax do jQ
 Primeiro eu importo a lib jQuery:
 
 ``` html
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>```
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+```
 Nada de novo até aqui.
 
 Faço corretamente, e disparo a minha função no evento onsubmit do formulário:

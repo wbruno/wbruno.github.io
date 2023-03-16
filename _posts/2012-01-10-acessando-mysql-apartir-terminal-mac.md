@@ -13,10 +13,11 @@ categories:
 tags:
   - terminal
 ---
-<pre name="code" class="bash">Mac:~ william$ alias mysql=/usr/local/mysql/bin/mysql
-Mac:~ william$ alias mysqladmin=/usr/local/mysql/bin/mysqladmin 
+``` js
+Mac:~ william$ alias mysql=/usr/local/mysql/bin/mysql
+Mac:~ william$ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 Mac:~ william$ mysql -u root -p wordpress
-Enter password: 
+Enter password:
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
@@ -50,7 +51,7 @@ mysql> show tables;
 +-----------------------+
 11 rows in set (0.00 sec)
 
-mysql> 
+mysql>
 ```
 
 Reiniciando:

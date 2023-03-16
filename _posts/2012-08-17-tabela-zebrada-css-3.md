@@ -16,7 +16,7 @@ tags:
 Muito comum, ne?! Todos nós já tivemos um dia que fazer uma tabela zebrada. Mas você ja tinha feito tabela zebrada css 3 ?
 
 Eu por exemplo, já fiz diversas vezes isso do lado server-side, durante a listagem de dados, calculando um contador dentro do loop de registros. Algo parecido com isso aqui:
-  
+
 <!--more-->
 
 ## Tabela Zebrada em php
@@ -81,7 +81,8 @@ Podemos por exemplo, fazer tabela zebrada com javascript:
 
 ## Tabela Zebrada em javascript
 
-<pre name="code" class="php"><script type="text/javascript">
+``` php
+<script type="text/javascript">
 window.onload = function(){
   var trs = id('tabela-zebrada').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
 
@@ -95,7 +96,7 @@ var id = function( el ){
 </script>
 ```
 
-Entretanto, ainda assim não é muito mais natural esses cálculos tecnicamente simples, ficarem a cargo de linguagens como esstas. Podemos usar seletores css para zebrar tabelas, selecionar primeiros ou últimos elementos, ímpares, pares.. 
+Entretanto, ainda assim não é muito mais natural esses cálculos tecnicamente simples, ficarem a cargo de linguagens como esstas. Podemos usar seletores css para zebrar tabelas, selecionar primeiros ou últimos elementos, ímpares, pares..
 
 ## Tabela Zebrada CSS 3
 
@@ -104,8 +105,8 @@ Hoje em dia, podemos usar o poderoso seletor css nth-child das css 3, assim como
 ``` css
 <style type="text/css">
 #tabela-zebrada tbody tr:nth-child(2n+1) { background: #ccc; }
-</style>```
-
+</style>
+```
 Simples, não ?
-  
+
 E muito mais intuitivo. Já que estilização é dever da linguagem css, então, o seletor nth-child veio para nos ajudar a não misturar as camadas de desenvolvimento.

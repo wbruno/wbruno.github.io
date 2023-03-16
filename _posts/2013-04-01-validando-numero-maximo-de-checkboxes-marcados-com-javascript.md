@@ -17,7 +17,7 @@ Note que ao dar um f5 no browser, o mesmo mantém os valores já respondidos em 
 
 ## Código HTML
 
-``` hml
+``` html
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -34,7 +34,7 @@ Note que ao dar um f5 no browser, o mesmo mantém os valores já respondidos em 
     <h1>Perguntas</h1>
 
     <form action="app.php" method="post" id="form-app">
- 
+
         <fieldset id="field1">
             <legend class="question">Quais?</legend>
 
@@ -105,7 +105,7 @@ Note que ao dar um f5 no browser, o mesmo mantém os valores já respondidos em 
             return false;
         };
         $btn.className = 'btn is-disabled';
-        
+
         if (field1.state && field2.state) {
             $btn.className = 'btn';
             cb = function() {

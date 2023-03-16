@@ -12,7 +12,7 @@ tags:
   - design
 ---
 Esses dias eu li 4 críticas aos layouts responsivos.
-  
+
 O cara dizia que o visitante pode &#8220;gostar&#8221; da versão full, e em sites responsivos não existe o botão &#8220;[voltar a versão desktop](http://www.themarketingagents.com/responsive-design-problems)&#8220;.
 
 Bom, por mais que seja discutível esse ponto de vista do cara, eu pensei e há sim uma forma de fazer o botão &#8220;voltar a versão desktop&#8221;, mesmo quando estamos usando media queries, para fazer nosso layout responsivo.
@@ -38,7 +38,8 @@ E segue uma versão completa do código, que identifica se o visitante está em 
 
 Tem uma chamada ao .innerHTML do elemento #t apenas para debug. Remova quando for usar em produção.
 
-<pre class="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

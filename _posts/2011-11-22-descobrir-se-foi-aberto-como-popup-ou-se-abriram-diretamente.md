@@ -12,9 +12,9 @@ categories:
   - Javascript
 ---
 Dúvida rápida no fórum..
-  
+
 Será que é possível saber, se um documento foi aberto diretamente ? ou se ele foi aberto &#8216;como popup&#8217; ?
-  
+
 <!--more-->
 
 **b.html**
@@ -22,21 +22,21 @@ Será que é possível saber, se um documento foi aberto diretamente ? ou se ele
 ``` html
 <script type="text/javascript"> type="text/javascript">
 alert( window.opener );
-</script>```
-
+</script>
+```
 Qndo acessarmos diretamente esse arquivo, o alert irá mostrar: **null** (digitando na url, ou copiando e colando daqui)
-  
+
 <u>http://wbruno.com.br/scripts/b.html</u>
 
 e agora:
-  
+
 **a.html**
 
 ``` html
 <script type="text/javascript"> type="text/javascript">
 window.open( 'b.html', '', 'width=300, height=200;')
-</script>```
-
+</script>
+```
 ao acessarmos o arquivo <u>a.html</u>, o alert do nosso <u>b.html</u>, **que foi aberto como popup**, irá mostrar: **[Object Window]**
 
 ## <a href="http://wbruno.com.br/scripts/a.html" target="_blank">a.html</a>

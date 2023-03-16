@@ -25,7 +25,8 @@ Veja no meu github a demonstração do código abaixo: <http://wbruno.github.io/
 
 ## Código
 
-<pre class="javascript"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -51,7 +51,8 @@ As nossas novas amigas **media queries** podem nos ajudar nessa otimização de 
 
 Note o código abaixo:
 
-<pre class="css">body { background: url('image-1.jpg'); }
+``` css
+body { background: url('image-1.jpg'); }
 body { background: url('image-2.jpg'); }
 ```
 
@@ -67,7 +68,8 @@ Podemos usar media queries para trocar backgrounds, colocando arquivos menores e
 
 Podemos servir um background mais largo que 480px de largura para as telas que tiverem essa largura ou mais, e podemos servir outro background menor para as telas em que essa imagem não seria completamente visualizada.
 
-<pre class="css">body { background: url('image-1.jpg'); }
+``` css
+body { background: url('image-1.jpg'); }
 @media screen and (max-width: 480px) {
   body { background: url('image-2.jpg'); }
 }
@@ -77,7 +79,8 @@ Podemos servir um background mais largo que 480px de largura para as telas que t
 
 Assim como podemos fazer o contrário também, e só mostrar um background grande se a tela for grande:
 
-<pre class="css">@media screen and (min-width: 1280px) {
+``` css
+@media screen and (min-width: 1280px) {
   body { background: url('image-1.jpg'); }
 }
 ```

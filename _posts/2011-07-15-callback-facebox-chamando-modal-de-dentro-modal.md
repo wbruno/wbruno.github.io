@@ -63,8 +63,8 @@ Note que clicando no link do segundo modal, oque acontece é que a URL muda para
 Por causa do que eu disse, do conteúdo do modal ter sido reescrito com js, então o link:
 
 ``` html
-<a href="#modal2" rel="facebox">Abrir outro modal</a>```
-
+<a href="#modal2" rel="facebox">Abrir outro modal</a>
+```
 não teve o comportamento atrelado.
 
 Precisamos, logo depois de abrir o primeiro modal, colocar esse comportamento nos links lá.

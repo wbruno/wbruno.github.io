@@ -79,7 +79,8 @@ Aproveite-se disso. Aprenda a usar o terminal, instale os seus programas na mão
 
 Executando <var>sudo !!</var> o terminal vai executar a linha de comando de cima com super usuário, sem que vc precise digitar novamente a linha de comando. Por exemplo reiniciar o apache da tua máquina:
 
-```$ apachectl restart
+``` bash
+ apachectl restart
 This operation requires root.
 $ sudo !!
 sudo apachectl restart

@@ -60,8 +60,8 @@ Apenas temos que lembrar de uma regra básica do xHTML: **Todas as tags devem ob
 Logo, deve ficar:
 
 ``` html
-<br />```
-
+<br />
+```
 Costumo colocar um espaço entre a tag e o fechamento, pois em algum browser antigo, isso pode gerar problemas, além do que fica mais bonito ver a tag assim.
 
 <br /> é uma tag vazia, assim como <meta />, <img />&#8230; então o fechamento é apenas /> (barra sinal de maior)
@@ -72,8 +72,8 @@ Costumo colocar um espaço entre a tag e o fechamento, pois em algum browser ant
 
 ``` html
 <p>Texto..
-</body>```
-
+</body>
+```
 nesse caso, estamos trabalhando com uma tag que possui fechamento </p>. Pois possui conteúdo, porém não colocamos, ai o validador nos indica erro:
 
 [<img src="/wp-content/uploads/2011/04/erro21.jpg" alt="" title="erro2" width="583" height="146" class="aligncenter size-full wp-image-665" srcset="/wp-content/uploads/2011/04/erro21.jpg 583w, /wp-content/uploads/2011/04/erro21-300x75.jpg 300w" sizes="(max-width: 583px) 100vw, 583px" />](/wp-content/uploads/2011/04/erro21.jpg)
@@ -85,8 +85,8 @@ A info <img src="/wp-content/uploads/2011/04/infos1.jpg" alt="" title="infos" wi
 Corrigindo:
 
 ``` html
-<p>Texto..</p>```
-
+<p>Texto..</p>
+```
 Fica tudo certo.
 
 <h2 style="margin-top: 30px;">
@@ -101,8 +101,8 @@ Esse erro pode acontecer tanto quando fechamos algo que realmente não abrimos:
 <body>
 <SPAN>Texto</sPan>
 </p>
-</body>```
-
+</body>
+```
 Como também, no Erro 2a que mostrei. Tentando fechar uma tag que não existe, por causa do case-sensitive da linguagem.
 
 <h2 style="margin-top: 30px;">
@@ -112,8 +112,8 @@ Como também, no Erro 2a que mostrei. Tentando fechar uma tag que não existe, p
 ##### end tag for &#8220;blablabla&#8221; omitted, but OMITTAG NO was specified, end tag for element &#8220;blablabla&#8221; which is not open
 
 ``` html
-<p><span>Texto</p></span>```
-
+<p><span>Texto</p></span>
+```
 O aninhamento deve ser correto. Respeitando a ordem.
 
 Abri um p, depois abri um span, então primeiro preciso fechar o span, para depois fechar o p.
@@ -123,15 +123,15 @@ Estou dando exemplos com estas tags, porém o conceito se aplica para quaisquer 
 Correto:
 
 ``` html
-<p><span>Texto</span></p>```
-
+<p><span>Texto</span></p>
+```
 <h2 style="margin-top: 30px;">
   Erro 3a: element &#8220;blablabla&#8221; undefined
 </h2>
 
 ``` html
-<SPAN>Texto</sPan>```
-
+<SPAN>Texto</sPan>
+```
 Outros erros &#8216;absurdos&#8217;: [<img src="/wp-content/uploads/2011/04/erro31.jpg" alt="" title="erro3" width="412" height="99" class="aligncenter size-full wp-image-663" srcset="/wp-content/uploads/2011/04/erro31.jpg 412w, /wp-content/uploads/2011/04/erro31-300x72.jpg 300w" sizes="(max-width: 412px) 100vw, 412px" />](/wp-content/uploads/2011/04/erro31.jpg)
 
 Outra regra básica do xHTML, por esse ser baseado em XML: **Todas as tags devem ser escritas em minúsculo**.
@@ -163,17 +163,16 @@ Basta escrever as tags todas em minúsculo, sempre.
 <p>
   <a href="/wp-content/uploads/2011/04/erro5.jpg"><img src="/wp-content/uploads/2011/04/erro5.jpg" alt="" title="erro5" width="502" height="31" class="aligncenter size-full wp-image-671" srcset="/wp-content/uploads/2011/04/erro5.jpg 502w, /wp-content/uploads/2011/04/erro5-300x18.jpg 300w" sizes="(max-width: 502px) 100vw, 502px" /></a><br />
   Um elemento <strong>inline</strong>, não deve conter um elemento <strong>nível de bloco</strong>.<br />
-  <p> é nivel de bloco.<br />
+  é nivel de bloco.<br />
   <span> é inline.<br />
   Nas possíveis causas, o próprio validador nos informa o motivo real:
 </p>
 
 
-<blockquote>
-  <p>
-    <em>&#8220;One possible cause for this message is that you have attempted to put a block-level element (such as &#8220;<p>&#8221; or &#8220;<table>&#8221;) inside an inline element (such as &#8220;<a>&#8221;, &#8220;<span>&#8221;, or &#8220;<font>&#8221;)&#8221;</em>
-  </p>
-</blockquote>
+
+<p>
+  <em>&#8220;One possible cause for this message is that you have attempted to put a block-level element (such as &#8220;&#8221; or &#8220;<table>&#8221;) inside an inline element (such as &#8220;<a&gt;&#8221;, &#8220;<span>&#8221;, or &#8220;&#8221;)&#8221;</em>
+</p>
 
 
 <p>
@@ -192,7 +191,9 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 
 ``` html
-<a href=""><h1>Texto</h1></a>```
+<a href=""><h1>Texto</h1></a>
+
+```
 
 
 <p>
@@ -213,8 +214,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 ``` html
 <body>
-<span>Texto...</span>```
-
+<span>Texto...</span>
+```
 
 <p>
   Não faz sentido jogarmos assim, um elemento inline no meio do nada. Como filho direto do BODY.
@@ -252,8 +253,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 
 ``` html
-<p onclick="alert( this.innerHTML );">Texto...</p>```
-
+<p onclick="alert( this.innerHTML );">Texto...</p>
+```
 
 <h2 style="margin-top: 30px;">
   Erro 6b: there is no attribute &#8220;blablabla&#8221;
@@ -261,8 +262,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 
 ``` html
-<p checked="checked">Texto...</p>```
-
+<p checked="checked">Texto...</p>
+```
 
 <p>
   Esse atributo existe para inputs, mas não para parágrafos por exemplo. O erro é claro, mas nem sempre a galera se dá ao trabalho de ler:
@@ -282,7 +283,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 
 ``` html
-<p meuatributo="true">Texto...</p>```
+<p meuatributo="true">Texto...</p>
+```
 
 
 <p>
@@ -297,8 +299,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 
 
 ``` html
-<a href="" target="">Link</a>```
-
+<a href="" target="">Link</a>
+```
 
 <p>
   No caso, o atributo <strong>target</strong>, foi <u>banido</u> nos DTDs Strict. Ele &#8216;fere&#8217; a escolha do usuário.<br />

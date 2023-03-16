@@ -40,8 +40,8 @@ Como vc pode ver na tabela do link acima, background-image, não funciona nos cl
 background-color funciona bem, e vamos usar a moda antiga:
 
 ``` html
-<td bgcolor="#000">```
-
+<td bgcolor="#000">
+```
 ### No início do recorte:
 
 Use a ferramenta **slice** do Photoshop. Pense em recortes <u>horizontais</u>.
@@ -90,8 +90,8 @@ CSS inline novamente. Declare display: block; nessas imagens.
 Eu nem lembrava mais dessa tag.. mas para recorte de EMM, é melhor garantir que vai funcionar na maioria dos clients, e o mais perfeito possível.
 
 ``` html
-<font></font>```
-
+<font></font>
+```
 Não vamos cair na tentação de usar um <p>, <span>.. ou tags do tipo. Dificil prevermos quais serão as definições padrão do box model dessas tags. A tag <font> funciona bem. Façamos todos os nossos textos com ela.
 
 ## CSS inline
@@ -118,8 +118,8 @@ Para links em textos, devemos usar livremente a tag de âncora <a></a>, porém n
 Isso mesmo. Use #map. Se você tentar usar algo como:
 
 ``` html
-<a href=""><img src="..." /></a>```
-
+<a href=""><img src="..." /></a>
+```
 Você terá problemas com isso.
 
 ## Será que isso é tudo?

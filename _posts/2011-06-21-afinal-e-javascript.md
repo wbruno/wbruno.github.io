@@ -67,8 +67,8 @@ O script apresentado resolve a questão. Faz oque foi escrito para fazer, mas, e
 <p class="paragrafo">
   <input type="button" name="botao" value="Click Me" class="botao" />
   <span>Lero Lero</span>
-</p>```
-
+</p>
+```
 Então, a ação em 1 deles, dispararia o efeito em todos os outros.
 
 Não é oque queremos. E precisamos entender o motivo disso acontecer.

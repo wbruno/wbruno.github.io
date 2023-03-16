@@ -47,7 +47,8 @@ O erro mais comum, é deixar <var>www.site.com.br</var>, e <var>site.com.br</var
 
 Escolha um (eu prefiro sem o www), e mande um 301 da outra url.
 
-<pre name="code" class="php">RewriteCond %{HTTP_HOST} ^www\.wbruno\.com\.br$
+``` php
+RewriteCond %{HTTP_HOST} ^www\.wbruno\.com\.br$
 RewriteRule (.*) http://wbruno.com.br/$1 [R=301,L]```
 
 ## Otimize o seu tema

@@ -15,7 +15,8 @@ tags:
 ---
 Ler arquivo xml com ajax.. bem simples. Vamos lá
 
-<pre class="xml"><?xml version="1.0" encoding="UTF-8"?>
+``` xml
+<?xml version="1.0" encoding="UTF-8"?>
 <text>
   <p>Lorem ipsum dolor sit amet</p>
   <p>Nihil cumque vero</p>
@@ -28,10 +29,11 @@ Ler arquivo xml com ajax.. bem simples. Vamos lá
 <!--more-->
 
 
-  
+
 E o código ajax necessário para abrir esse xml, e mostrar a segunda tag <p> dele
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 var ajax = new XMLHttpRequest();
 
 ajax.open("GET","test.xml",true);

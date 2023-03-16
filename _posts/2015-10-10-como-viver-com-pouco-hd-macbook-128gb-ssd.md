@@ -29,9 +29,13 @@ Assim que eu descobri que tenho agora 16GB no Applications e 10GB na Music.
 
 O comando **du** (disk usage), também é bem útil para encontrar grandes diretórios.
 
-```$ sudo du -ah ~ | sort -rn | head -20```
+```
+$ sudo du -ah ~ | sort -rn | head -20
+```
 
-```$ find / -size +100M -ls```
+```
+$ find / -size +100M -ls
+```
 
 ## Remova programas não utilizados
 
@@ -47,8 +51,10 @@ Já uso esse programa a alguns anos, ele é muito bom. Deixe ele fazer o trabalh
 
 Uma vez baixado e instalado, você não precisa mais do dmg ou de algo que fique na Downloads. Costumo manter a minha Lixeira e a Downloads vazias.
 
-```$ sudo find / -name "*.dmg" > log
-cat log```
+```
+$ sudo find / -name "*.dmg" > log
+cat log
+```
 
 ## Apague os backups do iPhone
 
@@ -68,30 +74,39 @@ Feito isso, é interessante que caso queira baixar algum torrent, ele também v�
 
 Facilmente terá alguns arquivos de alguns gigas nessa pasta. Delete.
 
-```rm ~/Library/MobileDevice/Software\ Images/iPhone5,1_7.0_11A4372q_Restore.ipsw
+```
+rm ~/Library/MobileDevice/Software\ Images/iPhone5,1_7.0_11A4372q_Restore.ipsw
 rm -r ~/Library/Developer/Xcode/Archives/*
 rm -r ~/Library/Developer/Xcode/DerivedData/*
 ```
 
 Veja os caches:
 
-```$ ls -lh ~/Library/Caches/```
+```
+$ ls -lh ~/Library/Caches/
+```
 
 Podem existir alguns backups *.ipa, também:
 
-```$ rm -r ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/*```
+```
+$ rm -r ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/*
+```
 
 ## Mail Downloads
 
 Apague o conteúdo da pasta Mail Downloads. Conforme você for lendo emails, recebendo anexos, abrindo, fazendo downloads, essa pasta vai guardando um &#8220;cache&#8221; deles. Pode limpar tranquilamente.
 
-```$ ll ~/Library/Containers/com.apple.mail/Data/Library/Mail\ Downloads/```
+```
+$ ll ~/Library/Containers/com.apple.mail/Data/Library/Mail\ Downloads/
+```
 
 ## Archive do iChat/iMessage
 
 Esse eu nem sabia que existia.. por ser apenas texto é relativamente leve, apenas alguns MegaBytes.
 
-```$ rm -r /Users/wbruno/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/*```
+```
+$ rm -r /Users/wbruno/Library/Containers/com.apple.iChat/Data/Library/Messages/Archive/*
+```
 
 ## Remova versões antigas de linguagens
 
@@ -99,20 +114,28 @@ Seja do Ruby, NodeJS, Java.. você pode acabar com várias versões antigas que 
 
 NodeJS
 
-```$ sudo n rm io 3.2.0
-$ sudo n rm 4.0.0```
+```
+$ sudo n rm io 3.2.0
+$ sudo n rm 4.0.0
+```
 
 Java
 
-```ll ~/Library/Application\ Support/Java/```
+```
+ll ~/Library/Application\ Support/Java/
+```
 
 Ahh!! e se você está usando algum gerenciador de versões como o N ou o NVM, apague a instalação default do teu NodeJS:
 
-```$ yes | rm -r /usr/local/include/node/```
+```
+$ yes | rm -r /usr/local/include/node/
+```
 
 Verifique em /usr/local/n/versions se existem mais instalações:
 
-```rm -r /usr/local/n/versions/0.10.3*```
+```
+rm -r /usr/local/n/versions/0.10.3*
+```
 
 ## Use o iMatch
 
@@ -124,8 +147,10 @@ Filmes..
 
 ## Apagar bancos de dados antigos do MongoDB
 
-```$ cd /usr/local/var/mongodb # ou cd /data/db
-$ ls -la```
+```
+$ cd /usr/local/var/mongodb # ou cd /data/db
+$ ls -la
+```
 
 Veja se há algum &#8220;muito antigo&#8221; ou que não faz mais sentido para você, e apague com <var>rm -r</var>.
 
@@ -133,15 +158,18 @@ Veja se há algum &#8220;muito antigo&#8221; ou que não faz mais sentido para v
 
 O OSx guarda pedaços do sistema anterior após você atualizar para uma nova versão. Se está tudo ok com o update, e você não sentiu falta de nada, apague esse diretório de alguns GBs:
 
-```sudo rm -rf /Previous\ System/
+```
+sudo rm -rf /Previous\ System/
 ```
 
 ## Mantenha o brew atualizado
 
 Não é bem uma dica para economizar espaço, mas sempre bom lembrar:
 
-```$ brew update
-$ brew upgrade```
+```
+$ brew update
+$ brew upgrade
+```
 
 ## Use o Disk Utility
 

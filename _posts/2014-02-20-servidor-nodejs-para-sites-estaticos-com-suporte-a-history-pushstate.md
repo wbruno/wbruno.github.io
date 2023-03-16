@@ -19,7 +19,8 @@ Já vimos diversas vezes como fazer um servidorzinho básico em NodeJS, usando o
 
 ## Hello World
 
-```var express = require('express'),
+``` js
+var express = require('express'),
     app = express();
 
 app.get('/', function(req, res) {
@@ -31,7 +32,8 @@ app.listen(3003);
 
 Além disso, podemos pedir para que uma view seja renderizada:
 
-```app.get('/', function(req, res) {
+``` js
+app.get('/', function(req, res) {
     res.render('index', { title: "My Site" });
 });
 ```
@@ -42,7 +44,8 @@ Ai otimizaríamos essas requisições, pois o json já parseado do servidor, vir
 
 Ficando assim, bem mais legal de se trabalhar com <var>history.pushState</var>. Veja:
 
-```$content.innerHTML = json.content;
+``` bash
+content.innerHTML = json.content;
 
 history.pushState(href, json.title, href);
 

@@ -24,43 +24,52 @@ Se usarmos corretamente, e estudarmos Expressões Regulares, é possível fazer 
 
 **Apenas letras**
 
-```<input type="text" required="required" name="text" pattern="[a-z\s]+$" />```
-
+``` html
+<input type="text" required="required" name="text" pattern="[a-z\s]+$" />
+```
 **Apenas números**
 
-```<input type="text" required="required" name="numbers" pattern="[0-9]+$" />```
-
+``` html
+<input type="text" required="required" name="numbers" pattern="[0-9]+$" />
+```
 **Data**
 
-```<input type="date" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2014-02-18" />```
-
+``` html
+<input type="date" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2014-02-18" />
+```
 **Hora**
 
-```<input type="time" required="required" maxlength="8" name="hour" pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$" />```
-
+``` html
+<input type="time" required="required" maxlength="8" name="hour" pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$" />
+```
 **Campos genéricos de texto**
 
-```<input type="text" required="required" name="name" />```
-
+``` html
+<input type="text" required="required" name="name" />
+```
 **Telefone**
 
-```<input type="tel" required="required" maxlength="15" name="phone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />```
-
+``` html
+<input type="tel" required="required" maxlength="15" name="phone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
+```
 **Email**
 
-```<input type="email" required="required" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />```
-
+``` html
+<input type="email" required="required" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+```
 **Moeda**
 
-```<input type="tel" required="required" maxlength="15" name="valor" pattern="([0-9]{1,3}\.)?[0-9]{1,3},[0-9]{2}$" />
+``` html
+<input type="tel" required="required" maxlength="15" name="valor" pattern="([0-9]{1,3}\.)?[0-9]{1,3},[0-9]{2}$" />
 ```
 
 Utilizei o type=&#8221;tel&#8221;, pq em celulares renderiza melhor o teclado.
 
 **Input file**
 
-```<input type="file" name="file" accept="image/*" required="required" />```
-
+``` html
+<input type="file" name="file" accept="image/*" required="required" />
+```
 ## placeholder
 
 Lembre-se de usar o placeholder nos seus campos em que você precise _&#8220;dar alguma dica&#8221;_ para o usuário de como ele deve preenchê-lo
@@ -69,7 +78,8 @@ Lembre-se de usar o placeholder nos seus campos em que você precise _&#8220;dar
 
 Faça testes utilizando as pseudo classes
 
-```input:required:invalid {}
+``` css
+input:required:invalid {}
 input:required:valid {}
 ```
 
@@ -79,7 +89,8 @@ Encontrei este artigo bem completo e interessante: <a href="http://blog.popupdes
 
 E para webkit, o css:
 
-```::-webkit-validation-bubble {/*Insira aqui seu CSS.*/}
+``` css
+::-webkit-validation-bubble {/*Insira aqui seu CSS.*/}
 ::-webkit-validation-bubble-message {}
 ::-webkit-validation-bubble-arrow {}
 ::-webkit-validation-bubble-arrow-clipper {}

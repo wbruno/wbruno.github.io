@@ -47,7 +47,8 @@ Para quem sabe Design Patterns, creio que vc pode pensar que é um Observer nati
 
 ## Código
 
-```<div id="t"></div>
+``` html
+<div id="t"></div>
 <script>
 var myElement = document.getElementById("t");
 myElement.addEventListener("userLogin", function(e) {

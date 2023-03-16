@@ -37,7 +37,8 @@ Só que esse código não é testável, ou seja, escrever uma rotina que &#8220;
 
 Note que não é preciso muito:
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 function id(el){
     return document.getElementById(el);
 }
@@ -71,7 +72,8 @@ window.onload = function(){
 
 E agora eu tenho um código isolado. E se eu precisar desse mesmo comportamento em outro input, posso apenas invocar:
 
-<pre class="javascript">id('peso').onkeyup = function(){
+``` js
+id('peso').onkeyup = function(){
     this.value = formatWeight(this.value);
   }
   id('peso2').onkeyup = function(){
@@ -91,7 +93,8 @@ O script que propus aqui é super simples. São poucas possibilidades de entrada
 
 Fazendo na mão, eu escrevi todas as entradas possíveis, e olho na tela se o retorno foi o que eu queria.
 
-<pre class="javascript">window.onload = function(){
+``` js
+window.onload = function(){
   var $resultado = id('resultado'),
     p = '';
 
@@ -107,11 +110,12 @@ Fazendo na mão, eu escrevi todas as entradas possíveis, e olho na tela se o re
 };
 </script>
 
-<p id="resultado"></p>```
-
+<p id="resultado"></p>
+```
 Isso já é &#8220;melhor&#8221; do que nada, e não preciso digitar mais 7 entradas diferentes no input, para ver se o resultado foi o certo. Testes durante o desenvolvimento são necessários. E fazer algo assim:
 
-<pre class="javascript">id('resultado').innerHTML += 'Entrou: 1234567 e saiu: '
+``` js
+id('resultado').innerHTML += 'Entrou: 1234567 e saiu: '
     + formatWeight('1234567') + ', '
     + (formatWeight('1234567') == '123,4567') + '<br/>';
 ```
@@ -128,29 +132,32 @@ Isso já é &#8220;melhor&#8221; do que nada, e não preciso digitar mais 7 entr
 
 3. Edite as seguintes linhas do SpecRunner:
 
-<pre class="javascript"><!-- include source files here... -->
+``` js
+<!-- include source files here... -->
   <script type="text/javascript" src="src/Player.js"></script>
   <script type="text/javascript" src="src/Song.js"></script>
 
   <!-- include spec files here... -->
   <script type="text/javascript" src="spec/SpecHelper.js"></script>
-  <script type="text/javascript" src="spec/PlayerSpec.js"></script>```
-
+  <script type="text/javascript" src="spec/PlayerSpec.js"></script>
+```
 No meu caso ficaram assim:
 
-<pre class="javascript"><!-- include source files here... -->
+``` js
+<!-- include source files here... -->
   <script type="text/javascript" src="formatWeight.js"></script>
 
   <!-- include spec files here... -->
-  <script type="text/javascript" src="spec/formatWeightSpec.js"></script>```
-
+  <script type="text/javascript" src="spec/formatWeightSpec.js"></script>
+```
 O arquivo **formatWeigth.js**, contém apenas a função formatWeight(), e a função id().
 
 A chamada do window.onload, está lá no meu projeto. E o arquivo **formatWeigtSpec.js** é o teste em si. A entrada e a saída esperada.
 
 4. Vamos ver o formatWeigtSpec.js:
 
-<pre class="javascript">describe("formatWeight", function() {
+``` js
+describe("formatWeight", function() {
 
 
   it("should be equal", function() {
@@ -164,7 +171,8 @@ A chamada do window.onload, está lá no meu projeto. E o arquivo **formatWeigtS
 
 Meu código final de testes ficou assim:
 
-<pre class="javascript">describe("formatWeight", function() {
+``` js
+describe("formatWeight", function() {
 
   var arrIn = [
     '1', '12', '123', '1234', '12345', '123456', '1234567', 'abc', 'a1b2c3'
@@ -194,7 +202,8 @@ Com segurança, posso refatorar a parte do código que me incomodava.
 
 Chegando assim ao meu código final:
 
-<pre class="javascript">function id(el){
+``` js
+function id(el){
     return document.getElementById(el);
 }
 function formatWeight(v){

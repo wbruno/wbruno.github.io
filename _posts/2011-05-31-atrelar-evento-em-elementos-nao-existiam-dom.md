@@ -18,7 +18,7 @@ Salve salve galera !!
 Bom, eu já havia postado como carregar [conteudo com ajax, apenas com javascript puro](http://www.wbruno.com.br/2011/03/11/carregando-conteudo-com-ajax-trocando-url/).
 
 Porém, se junto com o **xmlHttp.responseText**, vierem alguns links, eles não terão o evento onclick, atrelados. Pois nós fizemos o &#8216;bind&#8217; da function no window.onload, e nossos novos elementos foram trazidos muito depois desse instante.
-  
+
 <!--more-->
 
 Para entendimento, rode esse script isoladamente:
@@ -54,12 +54,13 @@ Para entendimento, rode esse script isoladamente:
 ```
 
 Entendeu oque fizemos ?
-  
+
 Criamos uma tag <a> dentro da div#teste com javascript. E logo depois de criar, nos fizemos o bind do evento.
 
 Precisaremos do mesmo para &#8216;dar vida&#8217; aos nossos novos elementos que trouxemos com ajax.
 
-<pre name="code" class="js:firstLine[31]">var as = id('content').getElementsByTagName('a');
+``` js
+var as = id('content').getElementsByTagName('a');
       for( var i=0; i<as.length; i++ ){
         var arq = pega_arq( as[i].href );
         if( window.addEventListener )
@@ -70,10 +71,11 @@ Precisaremos do mesmo para &#8216;dar vida&#8217; aos nossos novos elementos que
 ```
 
 Note que primeiro guardamos apenas os nossos &#8216;novos links&#8217; (os que estiverem dentro da div#content), na variavel as.
-  
+
 depois com um loop for(), iteramos por essas tags <a>, e vamos uma a uma, adicionando no evento **onclick** a function **abre()**, responsável pela requisição ajax.
 
-<pre name="code" class="js">as[i].addEventListener( 'click', function(){ abre( arq ); }, false );
+``` js
+as[i].addEventListener( 'click', function(){ abre( arq ); }, false );
 ```
 
 Aqui, usamos uma function anônima, pois queremos que a **arq()** só seja executada, no evento onclick.

@@ -54,7 +54,8 @@ Afinal não podemos mesmo usar acentos, algumas palavras são menores e queremos
 
 O ideal é escrevermos um código html/css que possa ser copiado/movido de um lugar para o outro, sem que nada se perca e continue funcionando.
 
-<pre class="html"><ul id="comments">
+``` html
+<ul id="comments">
     <li class="comment">
         <q class="comment-text">"lorem ipsum dolor sit amet..."</q>
         <cite class="comment-author">Desconhecido</cite>
@@ -74,14 +75,16 @@ Cada LI é um <var>.comment</var>, e os filhos desse comentário, como o texto e
 
 Ao batermos o olho no nosso css:
 
-<pre class="css">.comment {}
+``` css
+.comment {}
 .comment-text {}
 .comment-author {}
 ```
 
 Sabemos rapida e exatamente quais classes se referem a esse módulo de comentários. O mesmo não seria possível se tivéssemos nomeado assim:
 
-<pre class="css">.comment {}
+``` css
+.comment {}
 .text {}
 .author {}
 ```
@@ -92,20 +95,23 @@ Afinal, podemos gerar um conflito de namespaces, pois se for uma página com CDs
 
 Uma alternativa seria usar classes filhas:
 
-<pre class="css">.comment {}
+``` css
+.comment {}
 .comment .text {}
 .comment .author {}
 ```
 
 O problema dessa abordagem é que estamos aumentando a especificidade do seletor, e se precisamos sobrescrever alguma propriedade, tudo começa a ficar muito verboso:
 
-<pre class="css">body.home .comment .author {}
+``` css
+body.home .comment .author {}
 body.price .comment .author {}
 ```
 
 Além do que, se o .author for uma classe com poucas responsabilidades, podemos usá-la em diversos contextos, apenas somando classes:
 
-<pre class="html"><cite class="comment-author author"></cite>
+``` html
+<cite class="comment-author author"></cite>
 <p class="music-author author"></p>
 ```
 
@@ -113,14 +119,16 @@ Além do que, se o .author for uma classe com poucas responsabilidades, podemos 
 
 É comum termos preguiça de declarar classes no HTML, e sair fazendo coisas assim:
 
-<pre class="css">#comments li {}
+``` css
+#comments li {}
 #comments p {}
 #comments cite {}
 ```
 
 ou então:
 
-<pre class="css">.comment {}
+``` css
+.comment {}
 .comment p {}
 .comment cite {}
 ```
@@ -135,8 +143,9 @@ Identifique um elemento com ID quando ele for único em uma página, e não exis
 
 Identifique um ou mais elementos com CLASSes quando estiver pensando em módulos reaproveitáveis, em estilos que podem ser somados, como por exemplo:
 
-<pre class="html"><a href="" class="btn btn-hire btn-big">Contratar</a>```
-
+``` html
+<a href="" class="btn btn-hire btn-big">Contratar</a>
+```
 Estou somando classes para compor o meu elemento. Se eu precisar desse botão em um tamanho menor, apenas troco uma classe no html, ou se eu quiser ele em outra cor, eu apenas adiciono outra class <var>class=&#8221;btn btn-submit btn-medium&#8221;</var>.
 
 ## Nomeie pela função

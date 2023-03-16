@@ -34,27 +34,27 @@ Posso dividir em 4 partes, o HTML que precisamos:
 ## Container
 
 ``` html
-<div id="wrap_carousel">```
-
+<div id="wrap_carousel">
+```
 Engloba o resto, e dá o contexto de posicionamento, que precisamos.
 
 ## Setas
 
 ``` html
-<img src="left_arrow.jpg" alt="" id="prev" />```
-
+<img src="left_arrow.jpg" alt="" id="prev" />
+```
 e
 
 ``` html
-<img src="right_arrow.jpg" alt="" id="next" />```
-
+<img src="right_arrow.jpg" alt="" id="next" />
+```
 Voltar e Avançar no carousel. Controles manuais da exibição.
 
 ## Caixa para overflow
 
 ``` html
-<div id="carousel">```
-
+<div id="carousel">
+```
 Esta é a segunda parte mais importante do nosso html. Com ela, escondemos as próximas fotos(para conseguirmos o efeito de &#8216;rolar passando&#8217;).
 
 ## Blocos de Conteúdo

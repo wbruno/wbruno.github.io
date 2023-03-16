@@ -15,7 +15,8 @@ tags:
 ---
 Um comando para listar pelo terminal, o encoding dos arquivos de determinada pasta.
 
-<pre name="code" class="bash">Mac-mini:lw_html5 william$ for file in *.php; do file --mime $file; done
+``` js
+Mac-mini:lw_html5 william$ for file in *.php; do file --mime $file; done
 404.php: text/x-php; charset=us-ascii
 archive.php: text/x-php; charset=utf-8
 comments.php: text/x-php; charset=us-ascii
@@ -30,5 +31,5 @@ sidebar.php: text/plain; charset=us-ascii
 single.php: text/x-php; charset=utf-8```
 
 É isso.
-  
+
 =)

@@ -16,18 +16,19 @@ tags:
 Eu já havia postado essa solução: <http://wbruno.com.br/ajax/navegacao-sem-refresh-carregando-conteudo-ajax-em-div/>.
 
 Porém, ai a galera começa a querer um &#8216;efeito de fade&#8217;, &#8216;um gif de carregando..&#8217;.
-  
+
 E para resolve isso, é melhor que descartemos a função **.load()** do jQuery, para usarmos uma em que temos mais controle do que está ocorrendo.
-  
+
 <!--more-->
 
 
-  
+
 Nesse caso, vou optar pelo **$.ajax**, já que **$.get** e **$.post**, são apenas atalhos para ela.
-  
+
 A maior alteração, será nesse trecho do script anterior:
 
-<pre name="code" class="js:firstLine[11]">$("#content").load( href +" #content");
+``` js
+$("#content").load( href +" #content");
 ```
 
 Vamos fazer algo mais sofisticado.
@@ -97,7 +98,7 @@ Apenas lembrando que as páginas internas, devem continuar com o código HTML co
   </ul><!-- /menu -->
   <div id="content">
     <h1>Fotos</h1>
-    
+
 
     Fotos fotos fotos
   </div><!-- /content -->
@@ -111,10 +112,10 @@ Apenas lembrando que as páginas internas, devem continuar com o código HTML co
 
 E **teve problemas** com os outros scripts do seu site, veja estes links:
 
-[Usando lightbox em página carregada com ajax](http://wbruno.com.br/2011/08/22/usando-lightbox-em-pagina-carregada-ajax/) 
-  
-[Carregando conteudo com ajax, trocando a URL com jQuery](http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/) 
-  
-[O método .live() do jQuery](http://wbruno.com.br/2011/03/18/metodo-live-jquery/) 
-  
+[Usando lightbox em página carregada com ajax](http://wbruno.com.br/2011/08/22/usando-lightbox-em-pagina-carregada-ajax/)
+
+[Carregando conteudo com ajax, trocando a URL com jQuery](http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/)
+
+[O método .live() do jQuery](http://wbruno.com.br/2011/03/18/metodo-live-jquery/)
+
 [Como debugar JavaScript com o Firefox ? – erros comuns](http://wbruno.com.br/2011/03/31/como-debugar-javascript-firefox-erros-comuns/)

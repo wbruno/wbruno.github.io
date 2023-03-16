@@ -59,7 +59,8 @@ Boa Sorte!
 
 ## Minha solução com 2 loops encaixados:
 
-<pre name="code" class="php"><style type="text/css">
+``` php
+<style type="text/css">
 #grid td {
   width: 25px;
   height: 25px;
@@ -86,8 +87,8 @@ Boa Sorte!
   }
 
 ?>
-</table>```
-
+</table>
+```
 ## Agora, resolvam com um único loop!
 
 **Com 2 encaixados é fácil ne?!**
@@ -96,7 +97,8 @@ Mesma imagem, mesmas regras. **Consegue ?**
 
 ## Minha solução com apenas um único loop
 
-<pre name="code" class="php"><style type="text/css">
+``` php
+<style type="text/css">
 #grid td {
   width: 25px;
   height: 25px;

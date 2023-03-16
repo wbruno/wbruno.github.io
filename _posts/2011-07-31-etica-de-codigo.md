@@ -44,7 +44,8 @@ Use echo.
 
 ## Métodos devem retornar coisas
 
-<pre name="code" class="php">public function exemplo(){
+``` php
+public function exemplo(){
   echo '....';
 }
 ```
@@ -72,15 +73,15 @@ Não é &#8216;por que existe&#8217;, que deve ser usado. Existem coisas ruins, 
 Ufa! Isso é arbitrário, e eu decidi usar assim. Escolha minha, e repasso a vocês.
 
 ``` html
-<a href="link.html" class="link preto" id="link">Clique aqui</a>```
-
+<a href="link.html" class="link preto" id="link">Clique aqui</a>
+```
 Hum.. e por que <u>eu escolhi</u> as duplas ?
 
 Vamos ver, os controles de formulários por exemplo:
 
 ``` html
-<input type="text" name="nome" value="Joana D'arc" />```
-
+<input type="text" name="nome" value="Joana D'arc" />
+```
 Notou &#8216;a aspa simples&#8217; ali ? [tenho uma amiga com esse nome]
 
 Por outro lado, não existe nenhuma pessoa que tenha uma aspas duplas no nome dela. Mas _apóstrofes_ sim.
@@ -115,13 +116,15 @@ Com o costume, indentar fará parte de você, e será tão natural, que não pre
 
 Terminou um &#8216;comando&#8217;? pule linha:
 
-<pre name="code" class="php">echo 'Oi';
+``` php
+echo 'Oi';
 var_dump( $_POST );
 ```
 
 Melhor de ler do que:
 
-<pre name="code" class="php">echo 'Oi';var_dump( $_POST );
+``` php
+echo 'Oi';var_dump( $_POST );
 ```
 
 certo ?
@@ -164,8 +167,8 @@ Existem comentários para todas as linguagens. Use.
 ``` html
 <div id="main">
 
-</div><!-- /main -->```
-
+</div><!-- /main -->
+```
 Identificando o &#8216;término&#8217; do elemento assim, ganho tempo quando preciso procurar algo.
 
 Não precisa comentar toda a marcação. Eu adoto isso apena em trechos importantes e apenas quando fecho eles.
@@ -177,15 +180,16 @@ Assim, quando vc olhar para algo como isso:
 ``` html
 </div>
 </div>
-</div>```
-
+</div>
+```
 Será muito mais simples de saber &#8216;quem fecha quem&#8217;.
 
 ### Use o bom senso
 
 Não precisa comentar tudo, por exemplo, não vou comentar isso:
 
-<pre name="code" class="php">echo 'Oi';//comando de saída da string Oi```
+``` php
+echo 'Oi';//comando de saída da string Oi```
 
 E nem vou comentar e indentar isso:
 
@@ -198,15 +202,15 @@ E nem vou comentar e indentar isso:
       <a href="link1.html">Link 1</a>
     </li>
 
-<!-- /fechando segundo list item -->```
-
+<!-- /fechando segundo list item -->
+```
 certo ? era muito simples, posso deixar apenas:
 
 ``` html
 <ul>
     <li><a href="link1.html">Link 1</a></li>
-    <li><a href="link1.html">Link 1</a></li>```
-
+    <li><a href="link1.html">Link 1</a></li>
+```
 Afinal, não prejudiquei a visibilidade.
 
 Já que a estrutura era ridicularmente simples. Poupei linhas, sem tornar meu código menos legível.

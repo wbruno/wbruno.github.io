@@ -35,7 +35,8 @@ Porém, eu ainda não havia falado nada sobre **ler namespace do xml, usando php
 
 É necessário &#8220;registrar&#8221; aquele namespace, para que o php consiga ler corretamente. Se não, a única coisa que vai chegar será um objeto SimpleXML vazio:
 
-<pre name="code" class="php">object(SimpleXMLElement)#N (0) {}
+``` php
+object(SimpleXMLElement)#N (0) {}
 ```
 
 Ou então, um nulo, não aparecendo absolutamente nada no <var>var_dump()</var> do objeto.
@@ -52,14 +53,15 @@ Note que a URL que passei para o children, é específica do meu namespace (&#82
 
 Fiz toda essa volta, para conseguir ler a &#8220;Imagem Destacada&#8221;, que podemos vincular a cada um de nossos posts, depois de setar este filtro, no functions.php do tema:
 
-<pre name="code" class="php">add_filter('the_content_feed', 'featured_image_feed');
+``` php
+add_filter('the_content_feed', 'featured_image_feed');
 ```
 
 A imagem aparece lá no feed, porém dentro da tag:
 
 ``` html
-<content:encoded>..</content:encoded>```
-
+<content:encoded>..</content:encoded>
+```
 E por isso, eu precisava ler o namespace <var>content</var> do xml do feed do wordpress, para extrair a featured image de lá.
 
 Sem mais, o código completo fica assim:

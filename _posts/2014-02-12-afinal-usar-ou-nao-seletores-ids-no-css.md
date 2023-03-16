@@ -31,7 +31,8 @@ Outro argumento que não faz sentido é dizer que usar seletores IDs faz com que
 
 Eu não uso declarações do tipo <var>#menu li</var>, no meu css, mas sim: <var>.menu-item</var>, e ai fica:
 
-```<ul id="menu">
+``` html
+<ul id="menu">
     <li class="menu-item">Item 1</li>
     <li class="menu-item">Item 2</li>
     <li class="menu-item">Item 3</li>

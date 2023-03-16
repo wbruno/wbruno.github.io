@@ -76,8 +76,8 @@ Se eu tiver 2 colunas iguais, então tenho:
 
 ``` html
 <div class="column-half fleft"></div>
-<div class="column-half fright"></div>```
-
+<div class="column-half fright"></div>
+```
 E o respiro entre elas eu &#8220;ganho&#8221; de graça, ao jogar uma para a esquerda e outra para a direita.
 
 Se forem 3 colunas:
@@ -85,8 +85,8 @@ Se forem 3 colunas:
 ``` html
 <div class="column-third space-right fleft"></div>
 <div class="column-third space-right fleft"></div>
-<div class="column-third fright"></div>```
-
+<div class="column-third fright"></div>
+```
 E pronto! resolvido!
 
 ## .fleft e .fright

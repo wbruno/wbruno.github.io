@@ -35,13 +35,15 @@ E isso é ótimo para o javascript, mas também é o maior motivo das dúvidas d
 
 Um objeto literal em javascript é denotado por chaves <var>var tweet = {};</var>.
 
-<pre class="javascript">var tweet = {
+``` js
+var tweet = {
     'user': 'tiu_uiLL',
     'message': 'Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos',
     'date': '2013-05-17'
 };
 console.log( tweet.user );//tiu_uiLL
-console.log( tweet.message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos```
+console.log( tweet.message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos
+```
 
 A variavel <var>tweet</var> é um objeto javascript. Possui 3 atributos: user, message e date.
 
@@ -51,7 +53,8 @@ Para acessa-los, uso o operador **ponto**. (igual a linguagem Java)
 
 Arrays em javascript são denotados por colchetes <var>var tweets = [];</var>.
 
-<pre class="javascript">var tweets = [
+``` js
+var tweets = [
     {
         'user': 'tiu_uiLL',
         'message': 'Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos',
@@ -64,7 +67,8 @@ Arrays em javascript são denotados por colchetes <var>var tweets = [];</var>.
     }
 ];
 console.log( tweets[0].message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos
-console.log( tweets[1].message );//Plugin jQuery em elemento criado dinamicamente com javascript – append jQuery```
+console.log( tweets[1].message );//Plugin jQuery em elemento criado dinamicamente com javascript – append jQuery
+```
 
 Arrays em javascript também começam no índice zero. Veja que bastou indicar dentro dos colchetes a posição, e depois acessei normalmente a propriedade message apenas colocando o ponto.
 
@@ -80,7 +84,8 @@ Um objeto é algo que possui propriedades e faz coisas. E as boas práticas que 
 
 Criei para ilustrar um simples tooltip. Toda a base desse tooltip é feita com css, pois ele trabalha diretamente com o pseudo seletor <var>:hover</var>. O único papel do javascript é varrer todos os elementos para qual o plugin tenha sido chamado, e então criar um wrap e inserir o conteúdo do tooltip nessa tag.
 
-<pre class="javascript">;(function(){
+``` js
+;(function(){
   "use strict";
   var tt = {};
   tt.init = function(objs) {
@@ -120,7 +125,8 @@ Fork lá no github <https://github.com/wbruno/examples/tree/gh-pages/tt>.
 
 Um dos maiores motivos para usarmos orientação a objetos e clousures no javascript, é não sujar o namespace global. Note que poderíamos chegar ao mesmo resultado se as funções fossem criadas diretamente:
 
-```var init = function(objs) {
+``` js
+var init = function(objs) {
 ```
 
 Mas assim estaríamos colocando todos esses métodos direto no objeto window, o que poderia causar sobrescritas de comportamentos de scripts isolados dentro da nossa aplicação.
@@ -137,7 +143,8 @@ Por isso que isolamos os comportamentos em objetos diferentes, e cada método po
 
 Uma clousure define um escopo de execução. Veja por exemplo:
 
-```function init(){
+``` js
+function init(){
   console.log('window scope');
 }
 (function(){
@@ -155,7 +162,8 @@ Tudo o que for declarado no escopo window é acessível de qualquer escopo, pois
 
 Mas o que for declarado dentro da clousure só é acessível de dentro dela, se não for usado nenhum padrão de revelação.
 
-<pre class="javascript">(function(){
+``` js
+(function(){
   var tt = {
     init : function() {
       console.log('namespace tt');
@@ -163,7 +171,8 @@ Mas o que for declarado dentro da clousure só é acessível de dentro dela, se 
   };
   tt.init();//namespace tt
 }());
-tt.init();//ReferenceError: tt is not defined```
+tt.init();//ReferenceError: tt is not defined
+```
 
 Isso é importante para entendermos como podemos criar módulos independentes e com visibilidades privadas para usarmos em nossos sistemas.
 
@@ -173,7 +182,8 @@ O problema da minha primeira implementação é que a invocação tem que ficar 
 
 A implementação ficaria assim:
 
-<pre class="javascript">var tt = (function(){
+``` js
+var tt = (function(){
   "use strict";
   var tt = {};
 

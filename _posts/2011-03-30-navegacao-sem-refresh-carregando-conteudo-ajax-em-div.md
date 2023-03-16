@@ -62,8 +62,8 @@ Nossa index, contém todo o código jQuery que vamos precisar para carregar o co
 Para usar a lib jQuery, preciso obrigatoriamente linkar no meu documento a declaração e definição dela, por isso a linha:
 
 ``` js
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>```
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+```
 Logo depois, aguardo o DOM carregar, pois preciso que os meus elementos existam, para conseguir atrelar eventos e rotinas neles.
 
 ``` js

@@ -45,25 +45,29 @@ Eu pessoalmente, considero mais legível. Mas além disso, também estamos evita
 
 Seria:
 
-<pre class="javascript">jQuery(document).ready(function() {});
+``` js
+jQuery(document).ready(function() {});
 ```
 
 no lugar de
 
-<pre class="javascript">$(document).ready(function() {});
+``` js
+$(document).ready(function() {});
 ```
 
 ## Não procure um mesmo elemento várias vezes no DOM
 
 Coisas como:
 
-<pre class="javascript">jQuery(this).parent('dl').find('dd').eq(0).addClass('active');
+``` js
+jQuery(this).parent('dl').find('dd').eq(0).addClass('active');
 jQuery(this).parent('dl').find('dt').text('Ativo');
 ```
 
 Poderiam ser simplificadas para:
 
-<pre class="javascript">var $this = jQuery(this),
+``` js
+var $this = jQuery(this),
 $dl = $this.parent('dl');
 
 $dl.find('dd').eq(0).addClass('active');
@@ -82,7 +86,8 @@ Eu estou adotando usar $ antes de começar uma variavel que aponte para um objet
 
 Dessa forma, qndo bato o olho no meu código jQuery, sei que todas as variaveis com $ no nome, são objetos jQuery.
 
-<pre class="javascript">var $this = jQuery(this),
+``` js
+var $this = jQuery(this),
 $dl = $this.parent('dl'),
 i = 0,
 str = '';
@@ -94,7 +99,8 @@ Uma cadeia de if/elses ou switchs podem ser evitados se vc souber usar arrays e 
 
 Como por exemplo essa lista de valores:
 
-<pre class="javascript">var values = [];
+``` js
+var values = [];
 
   values[1] = { '1': '1,90', '6': '1,41', '12': '1,01' };
   values[2] = { '1': '2,90', '6': '2,91', '12': '2,01' };

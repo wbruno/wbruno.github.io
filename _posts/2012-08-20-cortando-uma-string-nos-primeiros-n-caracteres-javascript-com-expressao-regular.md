@@ -14,13 +14,13 @@ categories:
 Vou usar expressão regular com javascript, para mostrar como cortar uma string nos &#8220;N&#8221; primeiros caracteres.
 
 Eu poderia usar a função .substr(), mas ai não teria graça.. hehe
-  
+
 <!--more-->
 
 
-  
+
 Fiz aqui rapidinho uma brincadeira para cortar uma frase nos primeiros 9 caracteres.
-  
+
 Fazendo a string:
 
 ``` html
@@ -30,8 +30,8 @@ Fazendo a string:
 Ser mostrada apenas como:
 
 ``` html
-<h1 id="title">Um titulo...</h1>```
-
+<h1 id="title">Um titulo...</h1>
+```
 E ao clicar, mostra a frase completa. Alternando cada clique, mostrando truncado e mostrando completo.
 
 ``` html
@@ -74,11 +74,11 @@ E ao clicar, mostra a frase completa. Alternando cada clique, mostrando truncado
 Note que fiz 2 grupos na expressão regular. O primeiro grupo casa os &#8220;N&#8221; primeiros caracteres(letras simbolos e espaços <var>\w\s</var>), e o segundo grupo casa tudo oque vier depois(<var>.*</var>), em qualquer quantidade.
 
 O replace troca tudo, pelo o que foi casado no primeiro grupo.
-  
+
 Dessa forma consigo o &#8220;efeito&#8221; de cortar depois dos &#8220;N&#8221; primeiros caracteres.
 
 Caso tudo e coloco de novo os &#8220;N&#8221; primeiros.
-  
+
 Este post, é o primeiro exemplo prático do [Expressões Regulares – REGEX para iniciantes](http://wbruno.com.br/2012/08/15/expressoes-regulares-regex-para-iniciantes/).
 
 ## O método substr()

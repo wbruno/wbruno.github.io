@@ -21,7 +21,8 @@ Caso o seu tenha, use o comando abaixo:
 
 ## Direto no SQL
 
-<pre class="sql">SELECT comment_author_email, comment_author
+``` sql
+SELECT comment_author_email, comment_author
 FROM  `wp_comments`
 WHERE comment_author_email <>  ''
 GROUP BY comment_author_email
@@ -34,14 +35,16 @@ LINES TERMINATED BY '\n';
 
 E se quiser apenas os comentários após uma certa data:
 
-```SELECT comment_author_email, comment_author FROM  `wp_comments`  WHERE comment_author_email <>  '' AND comment_date > '2013-04-13' GROUP BY comment_author_email ORDER BY ( comment_author_email ) INTO OUTFILE '/tmp/comments-2013-04-13.csv' FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n';
+``` sql
+SELECT comment_author_email, comment_author FROM  `wp_comments`  WHERE comment_author_email <>  '' AND comment_date > '2013-04-13' GROUP BY comment_author_email ORDER BY ( comment_author_email ) INTO OUTFILE '/tmp/comments-2013-04-13.csv' FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n';
 ```
 
 No meu caso, eu tive que conectar no banco e gerar o .csv com programação server-side.
 
 ## Usando PHP
 
-<pre class="php"><?php
+``` php
+<?php
 
 $db = new mysqli('host', 'user', 'pass', 'bd');
 

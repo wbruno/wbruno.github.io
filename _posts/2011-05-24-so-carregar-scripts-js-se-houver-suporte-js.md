@@ -12,10 +12,11 @@ categories:
   - Javascript
 ---
 Uma aplicação interessante de uma função anônima e auto executável
-  
+
 <!--more-->
 
-<pre name="code" class="js"></head>
+``` html
+</head>
 <body>
 <script type="text/javascript">
   function load_script( head, path ){
@@ -32,7 +33,7 @@ Uma aplicação interessante de uma função anônima e auto executável
 Note que faço 2 chamadas à função **load_script**, logo primeiro crio a tag script para o jQuery, e depois crio uma tag script para um arquivo scripts.js local.
 
 Se o visitante estiver com suporte a javascript desabilitado no navegador, ele não irá baixar o script desnecessariamente, pois usamos a própria linguagem para chamar os demais scripts.
-  
+
 Pontos importantes a notar, é que essa tag script deve ser posicionada após o fechamento da tag </head>, assim esse elemento já existe no DOM, e a nossa function anônima pode usá-lo.
 
 Passo como argumento para a function autoexecutável, o objeto head, então, não importa qntos scripts eu tenha que incluir, só procuro o objeto **head** uma única vez no DOM.

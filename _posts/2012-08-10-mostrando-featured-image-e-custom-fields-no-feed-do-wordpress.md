@@ -16,21 +16,22 @@ Sabendo ler o namespace **<content:encoded>**, do feed do wordpress, conforme eu
 [Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress](http://wbruno.com.br/2012/08/08/ler-namespace-xml-php-usando-a-simplexml/ "Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress")
 
 Podemos adicionar mais coisas interessantes nesse nosso feed, como os **Custom Fields**.
-  
+
 <!--more-->
 
 
-  
+
 Eu já havia feito um add_filter para o featured image:
 
-<pre name="code" class="php">/**
- * 
+``` php
+/**
+ *
  */
 function featured_image_feed($content) {
   global $post;
 
   if ( has_post_thumbnail( $post->ID ) ){
-    $content = '' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '' . $content;  
+    $content = '' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '' . $content;
   }
   return $content;
 }
@@ -39,8 +40,9 @@ add_filter('the_content_feed', 'featured_image_feed');
 
 E agora, fiz mais um para os custom fields:
 
-<pre name="code" class="php">/**
- * 
+``` php
+/**
+ *
  */
 function custom_fields_feed($content) {
     if (is_feed()) {

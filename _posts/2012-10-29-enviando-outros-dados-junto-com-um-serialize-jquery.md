@@ -14,7 +14,7 @@ categories:
 Opa! Apareceu essa dúvida no fórum hoje.
 
 Note que o retorno do serialize() é apenas uma string. Uma simples string.
-  
+
 Descobri isso assim:
 
 ``` html
@@ -42,6 +42,6 @@ jQuery(document).ready(function(){
     <input type="text" name="a2" value="v2" />
     <input type="text" name="a3" value="v3" />
     <input type="text" name="a4" value="v4" />
-</form>```
-
+</form>
+```
 Simples ne?! nada de desespero.. só entender oque temos em mãos e fazer.

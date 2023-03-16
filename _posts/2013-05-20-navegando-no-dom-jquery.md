@@ -39,7 +39,8 @@ Esse método procura **elementos filhos** apartir do elemento <var>$(seletor)</v
 
 Imagine o seguinte html:
 
-<pre class="html"><p><span>clique aqui</span> para ler: <em>em 1</em></p>
+``` html
+<p><span>clique aqui</span> para ler: <em>em 1</em></p>
 <p><span>clique aqui</span> para ler: <em>em 2</em></p>
 <p><span>clique aqui</span> para ler: <em>em 3</em></p>
 <p><span>clique aqui</span> para ler: <em>em 4</em></p>
@@ -49,7 +50,8 @@ Quero clicar na palavra &#8220;clique aqui&#8221;, e mostrar em um alert o valor
 
 Como o <var>em</var> é **filho** da tag <var>p</var>, posso usar o método <var>.find()</var>, apartir do this(o próprio parágrafo, pois o evento foi disparado nele).
 
-<pre class="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -82,7 +84,9 @@ em { border: 1px solid #000; padding: 0 5px; }
 
 Irá aparecer na tela um alert com o texto de cada em. Note o código:
 
-<pre class="javascript">$this.find('em').text()```
+``` js
+$this.find('em').text()
+```
 
 Da direita para a esquerda novamente:
 
@@ -98,11 +102,13 @@ Da direita para a esquerda novamente:
 
 Esse método pega o **próximo** elemento na árvore do DOM. Ou seja o irmão da direita, levando em consideração a ordem em que escrevemos o nosso html.
 
-<pre class="html"><p><span>clique aqui</span> para ler: <em>em 1</em></p>```
-
+``` html
+<p><span>clique aqui</span> para ler: <em>em 1</em></p>
+```
 Nesse html acima, o <var>span</var> é irmão do <var>em</var>. Então apartir do span, o em é o _next_ dele.
 
-<pre class="javascript">jQuery('span').on('click', function(){
+``` js
+jQuery('span').on('click', function(){
   var $this = $(this);
 
   alert( $this.next('em').text() );
@@ -117,7 +123,8 @@ Bem simples até aqui. Nos códigos acima eu busquei o elemento em diretamente a
 
 A solução é **voltar para o pai**, e apartir dele achar o que está precisando.
 
-<pre class="javascript">jQuery('span').on('click', function(){
+``` js
+jQuery('span').on('click', function(){
   var $this = $(this);
 
   alert( $this.parent('p').find('em').text() );
@@ -142,7 +149,8 @@ Vale lembrar que o .find() acha filhos, netos, bisnetos sem problema. Então par
 
 O método .siblings() retorna os elementos **irmãos** do elemento $(seletor).
 
-<pre name="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -175,12 +183,14 @@ jQuery(document).ready(function(){
 
 Note que eu adiciono a classe red no elemento clicado:
 
-<pre class="javascript">$this.addClass('red');
+``` js
+$this.addClass('red');
 ```
 
 e removo a classe red de todos os irmãos dele:
 
-<pre class="javascript">$this.siblings('p').removeClass('red');
+``` js
+$this.siblings('p').removeClass('red');
 ```
 
 Assim apenas o clicado fica com a cor vermelha.

@@ -12,12 +12,13 @@ categories:
   - WordPress
 ---
 Registrando um widget do WordPress, para listar ultimos posts, com data.
-  
+
 O widget padrão, não tem essa opção, então criei um novo bem simples.
 
 <!--more-->
 
-<pre name="code" class="php">function ultimos_posts_display() {
+``` php
+function ultimos_posts_display() {
   // print some HTML for the widget to display here
   echo '<div class="sidebar-box ultimos-posts"><strong>&Uacute;ltimos posts</strong>
   <ul>';

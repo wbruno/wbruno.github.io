@@ -31,7 +31,8 @@ Essa é a rotina inclusive para fazer a ida e volta do script. Verificar somando
 
 ## Solução
 
-<pre class="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -94,7 +95,8 @@ Essa função é a chave do funcionamento do script. Criei ela para interar sob 
 
 Ela recebe a coleção de elementos e um callback para executar em cada um desses elementos.
 
-<pre class="javascript">var loop = function($elements, cb) {
+``` js
+var loop = function($elements, cb) {
     var max = $elements.length;
     while(max--) {
       cb($elements[max]);
@@ -104,7 +106,8 @@ Ela recebe a coleção de elementos e um callback para executar em cada um desse
 
 A interface de uso é esta:
 
-<pre class="javascript">loop($elements, function($element) {
+``` js
+loop($elements, function($element) {
   //funcao executada para cada $element
 });
 ```

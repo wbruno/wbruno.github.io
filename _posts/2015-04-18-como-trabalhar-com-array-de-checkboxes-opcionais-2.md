@@ -50,23 +50,30 @@ Ela faz um relacionamento N:N (um veículo para N opcionais, e 1 opcional para N
 
 Para inserir nessa tabela, precisamos mais ou menos da seguinte string sql:
 
-```INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42 2)```
+``` sql
+INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42 2)
+```
 
 Nessa query acima, estamos inserindo o opcional 1 e 2 para o veículo 42.
 
 Se quisessemos inserir mais o opcional 5, bastaria:
 
-```INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5)```
+``` sql
+INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5)
+```
 
 Okay ?
 
 Fazer essa string é uma simples maniplação de array. Lembra que o name do checkbox é <var>name=&#8221;optional[]&#8221;</var> então, no php irá chegar um array:
 
-```$_POST['optional'][0], $_POST['optional'][1], $_POST['optional'][2]```
+``` bash
+_POST['optional'][0], $_POST['optional'][1], $_POST['optional'][2]
+```
 
 Visto isso, vamos montar o INSERT:
 
-```//optional insert
+``` php
+//optional insert
   $values = [];
   foreach($optionals AS $id_optional) {
     $values[] = "({$id}, {$id_optional})";
@@ -82,11 +89,13 @@ Simples, não ? a saída do echo $sql, será a string que escrevi acima.
 
 Comecei pelos opcionais para matar logo a sua curiosidade, mas para deixar registrado o INSERT simples do veículo tem apenas as colunas que são atributos da entidade veículo:
 
-```$sql = "INSERT INTO vehicles (id, name, year, model) VALUES(NULL, '{$name}', '{$year}', '{$model}')";
+``` bash
+sql = "INSERT INTO vehicles (id, name, year, model) VALUES(NULL, '{$name}', '{$year}', '{$model}')";
   echo $sql, '<br /><br />';
   $query = $mysqli->query($sql)or die($mysqli->error);
 
-  $id = $mysqli->insert_id;//ultimo id inserido no banco```
+  $id = $mysqli->insert_id;//ultimo id inserido no banco
+```
 
 ## Os truques
 
@@ -102,7 +111,8 @@ Tente imaginar a lógica de atualizar os opcionais de um carro. Ele já possui a
 
 Um truque muito mais simples é remover tudo e depois inserir tudo o que vier.
 
-```DELETE FROM vehicle_optional WHERE id_vehicle = 42;
+``` sql
+DELETE FROM vehicle_optional WHERE id_vehicle = 42;
 INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5);
 ```
 
@@ -112,7 +122,8 @@ Agora precisamos marcar os checkboxes na listagem durante a edição de um regis
 
 O truque aqui é puramente SQL e se baseia em uma subquery.
 
-```SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
+``` sql
+SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
 ```
 
 Pense no seguinte:
@@ -125,11 +136,14 @@ Fácil, já tinhamos feito isso.
 
 Aqui que entra a subquery.
 
-```(SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id)```
+``` sql
+(SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id)
+```
 
 ela vai trazer a string &#8216;checked&#8217; apelidada como a coluna \`checked\` <var>AS `checked`</var> apenas nos registros do veiculo id = 1 que tiverem marcados. o/
 
-```mysql> SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
+``` sql
+mysql>SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
 +----+------------------+---------+
 | id | name             | checked |
 +----+------------------+---------+
@@ -151,8 +165,9 @@ ela vai trazer a string &#8216;checked&#8217; apelidada como a coluna \`checked\
 
 E então vamos simplesmente imprimir isso no nosso input:
 
-```<input type="checkbox" name="optional[]" value="<?php echo $row->id; ?>" <?php echo $row->checked; ?>/>```
-
+``` html
+<input type="checkbox" name="optional[]" value="<?php echo $row->id; ?>" <?php echo $row->checked; ?>/>
+```
 Mágica.
 
 ## Código no GitHub

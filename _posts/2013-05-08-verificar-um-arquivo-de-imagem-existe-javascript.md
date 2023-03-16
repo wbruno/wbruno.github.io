@@ -14,12 +14,13 @@ categories:
 Dado um arquivo de imagem, como verificar se ele existe usando apenas javascript ?
 
 Eu consegui pensar em pelo menos três formas de fazer isso.
-  
+
 <!--more-->
 
 ## Verificando com AJAX
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 function is_img(file) {
   var ajax = new XMLHttpRequest();
 
@@ -47,7 +48,8 @@ A propriedade <var>status</var> do objeto ajax existe exatamente para isso. Caso
 
 ## Verificando com new Image();
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 function is_img(file) {
   var img = new Image();
   img.src = file;
@@ -71,7 +73,8 @@ Aqui é bem simples, se a imagem responder no evento <var>onload()</var>, então
 
 Aqui o truque para saber se o arquivo de imagem existe ou não, é o mesmo do método acima. Usando os eventos <var>onload</var>, e <var>onerror</var>. Porém o resource agora é criado com um elemento imagem, e não com o objeto.
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 function is_img(file) {
   var img = document.createElement('img');
   img.src = file;

@@ -87,7 +87,8 @@ Desenvolver com NodeJS não é só legal, é extremamente prazeroso. Veja os scr
 
 Você executa eles com:
 
-```$ npm start
+``` bash
+ npm start
 $ npm test # o pretest é executado antes do test. O npm sempre procura pelo sufixo pre antes de executar algum script.
 $ npm run test-api
 $ npm run nodemon```

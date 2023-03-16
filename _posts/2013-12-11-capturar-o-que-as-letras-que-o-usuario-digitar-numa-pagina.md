@@ -11,7 +11,8 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-```<div id="t"></div>
+``` html
+<div id="t"></div>
 <script>
 var keyTable = {
     '65': 'a',

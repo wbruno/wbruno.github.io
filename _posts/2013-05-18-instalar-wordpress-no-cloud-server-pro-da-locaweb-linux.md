@@ -30,201 +30,226 @@ A senha padrão do usuário root ssh do teu servidor é a mesma do painel de con
 
 Abra o seu terminal e digite:
 
-```$ ssh root@cpro9999.publiccloud.com.br```
+``` bash
+ ssh root@cpro9999.publiccloud.com.br
+```
 
 Sendo o <var>9999</var>, o número da sua máquina que vc encontra no painel do seu cloud.
 
 Coloque a senha e pronto, vc está logado na máquina.
 
-<div class="tab-left">
-  <h3>
-    Alias de comando no terminal
-  </h3>
+<h3>
+  Alias de comando no terminal
+</h3>
 
-  ```vim ~/.bash_profile```
+``` bash
+vim ~/.bash_profile
+```
 
-  <p>
-    Eu uso sempre:
-  </p>
+<p>
+  Eu uso sempre:
+</p>
 
-  ```alias la="ls -la"```
+``` bash
+alias la="ls -la"
+```
 
-  <p>
-    depois basta recarregar
-  </p>
+<p>
+  depois basta recarregar
+</p>
 
-  ```source ~/.bash_profile ```
-</div>
+``` bash
+source ~/.bash_profile
+```
 
-<!-- .tab-left -->
+<h3>
+  Instalando dependências
+</h3>
 
-<div class="tab-left">
-  <h3>
-    Instalando dependências
-  </h3>
+<p>
+  Essa parte é bem simples.
+</p>
 
-  <p>
-    Essa parte é bem simples.
-  </p>
-
-  ```$ apt-get update
+``` bash
+ apt-get update
 $ apt-get dist-upgrade
 $ apt-get install apache2 mysql-server mysql-client php5 php5-mysql php5-cli libapache2-mod-php5 vim
 ```
 
-  <div class="tab-left">
-    <h4>
-      Ativando o php
-    </h4>
+<h4>
+  Ativando o php
+</h4>
 
-    <p>
-      Se por algum motivo o php não subir automaticamente após a instalação dos pacotes, entre no apache e ative:
-    </p>
+<p>
+  Se por algum motivo o php não subir automaticamente após a instalação dos pacotes, entre no apache e ative:
+</p>
 
-    ```$ cd /etc/apache2/mods-enabled
-$ a2enmod php5```
-  </div>
+``` bash
+ cd /etc/apache2/mods-enabled
+$ a2enmod php5
+```
 
-  <p>
-    <!-- .tab-left --></div>
+<p>
+  <!-- .tab-left -->
+</p>
 
-    <p>
-      <!-- .tab-left -->
-    </p>
+<h2>
+  Instalando o WordPress
+</h2>
 
-    <h2>
-      Instalando o WordPress
-    </h2>
+<p>
+  Quanto mais coisas pudermos fazer direto no cloud melhor, pois a conexão lá é violenta de rápida.<br /> Para baixar o wp direto no servidor, basta fazer um <var>wget</var>
+</p>
 
-    <p>
-      Quanto mais coisas pudermos fazer direto no cloud melhor, pois a conexão lá é violenta de rápida.<br /> Para baixar o wp direto no servidor, basta fazer um <var>wget</var>
-    </p>
+<p>
+  Direto na pasta <var>/usr/share</var> faça o download da última versão:
+</p>
 
-    <p>
-      Direto na pasta <var>/usr/share</var> faça o download da última versão:
-    </p>
+``` bash
+ wget http://wordpress.org/latest.zip
+```
 
-    ```$ wget http://wordpress.org/latest.zip```
+<p>
+  Se não tiver instalado, instale o <var>unzip</var>
+</p>
 
-    <p>
-      Se não tiver instalado, instale o <var>unzip</var>
-    </p>
+``` bash
+apt-get install unzip
+```
 
-    ```$ apt-get install unzip```
+<p>
+  E ai abra o zip:
+</p>
 
-    <p>
-      E ai abra o zip:
-    </p>
+``` bash
+unzip latest.zip
+```
 
-    ```$ unzip latest.zip```
+<p>
+  Ao extrair, a pasta <var>wordpress/</var> será criada. Agora aponte o root do servidor para ela:
+</p>
 
-    <p>
-      Ao extrair, a pasta <var>wordpress/</var> será criada. Agora aponte o root do servidor para ela:
-    </p>
+``` bash
+vim /etc/apache2/sites-available/default
+```
 
-    ```$ vim /etc/apache2/sites-available/default```
+<p>
+  Edite o DocumentRoot para
+</p>
 
-    <p>
-      Edite o DocumentRoot para
-    </p>
+``` bash
+DocumentRoot /usr/share/wordpress
+```
 
-    ```DocumentRoot /usr/share/wordpress```
+<h3>
+  Criando o banco
+</h3>
 
-    <h3>
-      Criando o banco
-    </h3>
+<p>
+  Crie o banco no terminal:
+</p>
 
-    <p>
-      Crie o banco no terminal:
-    </p>
-
-    ```$ mysql -u root -pSENHAROOT
+``` bash
+mysql -u root -pSENHAROOT
 mysql> create database wordpress;
 ```
 
-    <p>
-      Acesse no seu browser o IP do seu servidor(vc encontra ele pelo painel do cloud).<br /> Basta rodar normalmente a instalação do wp. Caso o instalador automático não consiga criar o arquivo wp-config.php, volte lá via terminal e crie, dentro de <var>usr/share/wordpress</var>
-    </p>
+<p>
+  Acesse no seu browser o IP do seu servidor(vc encontra ele pelo painel do cloud).<br /> Basta rodar normalmente a instalação do wp. Caso o instalador automático não consiga criar o arquivo wp-config.php, volte lá via terminal e crie, dentro de <var>usr/share/wordpress</var>
+</p>
 
-    ```$ vim wp-config.php```
+``` bash
+vim wp-config.php
+```
 
-    <p>
-      Pronto, tudo instalado e rodando. Falta apenas fazer upload do seu tema.
-    </p>
+<p>
+  Pronto, tudo instalado e rodando. Falta apenas fazer upload do seu tema.
+</p>
 
-    <div class="tab-left">
-      <h3>
-        Instalando um servidor ftp
-      </h3>
+<h3>
+  Instalando um servidor ftp
+</h3>
 
-      <p>
-        Este artigo é bastante bom:<br /> <a href="http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/" rel="nofollow">http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/</a>
-      </p>
+<p>
+  Este artigo é bastante bom:<br /> <a href="http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/" rel="nofollow">http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/</a>
+</p>
 
-      ```$ apt-get install proftpd```
+``` bash
+apt-get install proftpd
+```
 
-      <p>
-        Eu confirei o name server do ftp como o endereço do cloud: <var>cpro9999.publiccloud.com.br</var>
-      </p>
+<p>
+  Eu confirei o name server do ftp como o endereço do cloud: <var>cpro9999.publiccloud.com.br</var>
+</p>
 
-      <p>
-        Assim que terminar de instalar, crie um usuário
-      </p>
+<p>
+  Assim que terminar de instalar, crie um usuário
+</p>
 
-      ```$ adduser wp```
+``` bash
+adduser wp
+```
 
-      <p>
-        Basta seguir as instruções.
-      </p>
+<p>
+  Basta seguir as instruções.
+</p>
 
-      <p>
-        Altere o usuário da pasta themes, que fica dentro de wp-content/
-      </p>
+<p>
+  Altere o usuário da pasta themes, que fica dentro de wp-content/
+</p>
 
-      ```chown wp:wp themes```
-    </div>
+``` bash
+chown wp:wp themes
+```
 
-    <p>
-      <!-- .tab-left -->
-    </p>
 
-    <h4>
-      Enviando o tema via ftp
-    </h4>
+<p>
+  <!-- .tab-left -->
+</p>
 
-    <p>
-      Terminado isso, abra outra aba do seu terminal e permaneça local na sua máquina.<br /> Navegue até encontrar a pasta em que está o seu tema <strong>zipado</strong>, pois ficará mais simples enviar tudo em um só comando.
-    </p>
+<h4>
+  Enviando o tema via ftp
+</h4>
 
-    <p>
-      Localmente digite:
-    </p>
+<p>
+  Terminado isso, abra outra aba do seu terminal e permaneça local na sua máquina.<br /> Navegue até encontrar a pasta em que está o seu tema <strong>zipado</strong>, pois ficará mais simples enviar tudo em um só comando.
+</p>
 
-    ```$ ftp wp@cpro9999.publiccloud.com.br
+<p>
+  Localmente digite:
+</p>
+
+``` bash
+ftp wp@cpro9999.publiccloud.com.br
 ftp> ls
-ftp> cd /usr/share/wordpress/wp-content/themes```
+ftp> cd /usr/share/wordpress/wp-content/themes
+```
 
-    <p>
-      Assim que eu conecto em algum ftp via terminal, eu sempre mando um <var>ls</var>, apenas para o servidor aceitar minha conexão e ficar rápido.
-    </p>
+<p>
+  Assim que eu conecto em algum ftp via terminal, eu sempre mando um <var>ls</var>, apenas para o servidor aceitar minha conexão e ficar rápido.
+</p>
 
-    <p>
-      Para verificar em qual diretório vc está local, basta usar <var>lcd</var>, com 2 tabs, será listado o diretório atual local em que vc está.
-    </p>
+<p>
+  Para verificar em qual diretório vc está local, basta usar <var>lcd</var>, com 2 tabs, será listado o diretório atual local em que vc está.
+</p>
 
-    <p>
-      Envie o tema:
-    </p>
+<p>
+  Envie o tema:
+</p>
 
-    ```ftp> put seu_tema.zip seu_tema.zip```
+``` bash
+ftp> put seu_tema.zip seu_tema.zip
+```
 
-    <p>
-      Volte para a aba ssh, extraia o tema do zip e apague o zip
-    </p>
+<p>
+  Volte para a aba ssh, extraia o tema do zip e apague o zip
+</p>
 
-    ```$ unzip seu_tema.zip
-$ rm seu_tema.zip```
+``` bash
+unzip seu_tema.zip
+$ rm seu_tema.zip
+```
 
-    <p>
-      Ative seu tema no painel do WordPress, e parabéns!! está no ar.
-    </p>
+<p>
+  Ative seu tema no painel do WordPress, e parabéns!! está no ar.
+</p>

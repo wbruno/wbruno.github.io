@@ -137,8 +137,8 @@ function filter( $str ){
 Os inputs hidden que serão adicionados, são do tipo:
 
 ``` html
-<input type="hidden" name="email[]" value="valor" />```
-
+<input type="hidden" name="email[]" value="valor" />
+```
 Logo, receberemos um **array**: $\_POST\[&#8216;email&#8217;], com as posições: $\_POST[&#8216;email&#8217;\]\[0\], $_POST\[&#8216;email&#8217;\]\[1\]&#8230;
 
 O código completo, então:

@@ -17,7 +17,8 @@ categories:
 
 Com a tag <audio> do html5, temos uma API JavaScript para manipular e ouvir os eventos dos controles do player. Quando a música inicia, as cores trocam. No pause, elas param, e no play elas tocam novamente, até o fim da música, quando tudo para. Bem simples, não ?
 
-```<script>
+``` html
+<script>
 (function(){
   'use strict';
 
@@ -49,8 +50,8 @@ Com a tag <audio> do html5, temos uma API JavaScript para manipular e ouvir os e
   });
 
 }());
-</script>```
-
+</script>
+```
 Veja como implementei isso:
 
 ## Código

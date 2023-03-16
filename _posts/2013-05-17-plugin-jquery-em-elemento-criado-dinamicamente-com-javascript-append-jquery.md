@@ -17,12 +17,13 @@ tags:
 Eu já postei como utilizar a função [.live() do jQuery](http://wbruno.com.br/ajax/metodo-live-jquery/), que inclusive foi removida na nova versão da biblioteca(para usarmos o método <var>.on()</var> no estilo delegate), já mostrei [como instanciar plugins depois de carregar um elemento com ajax](http://wbruno.com.br/ajax/usando-lightbox-em-pagina-carregada-ajax/).
 
 Mas e como podemos fazer para chamar/ativar um plugin, em elementos criados dinamicamente, com o append ?
-  
+
 <!--more-->
 
 ## O problema &#8211; não funciona em elementos criados com append
 
-<pre class="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -55,14 +56,15 @@ jQuery(document).ready(function(){
 ```
 
 O motivo do colorbox só funcionar na tag <var><a></var> que já existe no documento, é pq nós atrelamos o plugin **apenas no carregamento** da página.
-  
+
 Logo, só funciona nos elementos **que já existiam** no instante em que a página terminou de carregar(evento disparado pelo dom.ready).
 
 ## A solução &#8211; instanciar o plugin novamente cada vez que inserir um elemento
 
 Então, para que o colorbox funcione nos demais elementos, precisamos atrelar o plugin nestes elementos, assim que eles forem inseridos na página, ou seja, após o append.
 
-<pre class="javascript">$add.on('click', function(){
+``` js
+$add.on('click', function(){
   $insert.append('<a href="images/1.jpg">colorbox</a><br />');
   $insert.find('a').colorbox();
 });
@@ -74,7 +76,8 @@ Ai sim, tudo funciona perfeitamente. O princípio é o mesmo para qualquer plugi
 
 ### Código da Solução
 
-<pre class="html"><!doctype html>
+``` html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

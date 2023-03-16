@@ -21,11 +21,11 @@ Mostram como o delegate funciona por baixo dos planos, mostrando códigos.
 ## Artigos em português
 
 Apenas comparam as funções .bind(), .live(), .delegate() e .on(). Teve só um que só citou como funciona.
-  
+
 <!--more-->
 
 
-  
+
 A idéia é **delegar** a responsabilidade de escutar eventos a um ou mais elementos, ao elemento pai daquele elemento.
 
 Isso é muito útil por diversos motivos.
@@ -48,13 +48,14 @@ Aproveitando o eventBubble do javascript, em que um click em um elemento filho, 
 
 A função .live() fazia um delegate diretamente no objeto <var>document</var>, pois o click de todos os elementos da nossa página, propaga até chegar no root. Dessa forma era super simples de usar (não era necessário indicar qual o pai do elemento).
 
-Não é uma boa prática esperar tantos eventos em um só manipulador, e o live foi depreciado do core do jQuery. 
+Não é uma boa prática esperar tantos eventos em um só manipulador, e o live foi depreciado do core do jQuery.
 
 ## Nativamente
 
 Eu estendi o prototype do objeto Element para criar nativamente suporte ao delegate, deixando uma sintaxe prática, com apenas as linhas de código abaixo:
 
-```Element.prototype.is = function(elementSelector) {
+``` js
+Element.prototype.is = function(elementSelector) {
     switch(elementSelector[0]) {
         case ".":
             var er = new RegExp(elementSelector.replace(".", ""));
@@ -86,7 +87,8 @@ Element.prototype.delegate = function(eventName, elementSelector, cb) {
 
 A forma de uso é simplesmente:
 
-```document.getElementById('menu').delegate('click', 'li', function(event){
+``` js
+document.getElementById('menu').delegate('click', 'li', function(event){
     console.log(this.innerHTML);
 });
 ```

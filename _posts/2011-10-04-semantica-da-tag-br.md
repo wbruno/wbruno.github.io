@@ -56,8 +56,8 @@ Então vamos falar sobre quando **não usar**, e sobre quando **usar**:
 Sou capaz de apostar que nem 20% dos Desenvolvedores FrontEnd, conhecem o
 
 ``` html
-&shy;<br />```
-
+&shy;<br />
+```
 Muito bem apresentado pelo Evandro, <a href="http://forum.imasters.com.br/topic/406694-manual-do-html-tag-br/" target="_blank">aqui</a>.
 
 Então bacana, acabamos de encontrar um uso <del datetime="2011-10-04T23:27:17+00:00">incomum</del> bem desconhecido para a nossa famigerada tag! Porém, e as diferenças entre Sistema Operacional ? Entre browsers ?
@@ -88,8 +88,8 @@ Como já definido, é uma quebra de linha. Então não devemos usar como separad
 
 ``` html
 <h1>Titulo</h1><br /><br />
-<p>Texto, texto mais texto.</p>```
-
+<p>Texto, texto mais texto.</p>
+```
 Bem absurdo, pois se quisermos espaço entre um h1 e um p, devemos fazê-lo com css.
 
 ## Tag vazia
@@ -124,8 +124,8 @@ para as algas e os corais.</p>
 
 <p>Fim ditoso, hora feliz:<br />
 guardai meu amor sem preço,<br />
-que só quis quem não me quis.</p>```
-
+que só quis quem não me quis.</p>
+```
 Cecília Meireles
 
 ## Prefira ser semântico, do que preguiçoso
@@ -134,8 +134,8 @@ Cecília Meireles
 
 ``` html
 <p><strong>Um pequeno titulo</strong><br /><br />
-  E aqui continua o texto</p>```
-
+  E aqui continua o texto</p>
+```
 Sinceramente, isso fere meus princípios. Um parágrafo é um parágrafo.
 
 Não faz nenhum sentido um parágrafo que dentro dele mesmo possui um &#8216;título&#8217;. Não estamos falando de headers do documento (tags hx), e nem de uma palavra que mereceu um destaque maior no decorrer de uma idéia.
@@ -144,11 +144,12 @@ Mas de um leve título ali, isso deve nos levar a criar um elemento separado:
 
 ``` html
 <strong class="titulo">Um pequeno titulo</strong>
-  <p>E aqui continua o texto</p>```
-
+  <p>E aqui continua o texto</p>
+```
 E então por css, controlo o espaçamento, economizando 2 tags br que não deveriam ter sido utilizadas.
 
-<pre name="code" class="css:firstLine[7]">.titulo {
+``` js
+.titulo {
   display: block;
   margin-bottom: 17px;
 }
@@ -181,8 +182,8 @@ Aqui a tag br faz todo sentido:
 
 ``` html
 <h2>Isso é:<br />
-Semântica.</h2>```
-
+Semântica.</h2>
+```
 Não estamos no contexto de subtítulo, mas sim do mesmo título, da mesma idéia que mereceu uma quebra ali.
 
 ## Em conjunto com a tag <address>
@@ -192,8 +193,8 @@ Um endereço é renderizado e planejado para passar informações em várias lin
 ``` html
 <address>Rua dos bobos, 0<br />
 01234-567
-</address>```
-
+</address>
+```
 Cabe uma análise do seu contexto, lembrando que existem as listas de definição <dd> que também poderiam resolver muito bem a semântica que buscamos aqui.
 
 ## Entendeu ?

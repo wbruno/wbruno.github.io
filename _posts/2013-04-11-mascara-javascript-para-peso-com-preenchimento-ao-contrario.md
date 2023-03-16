@@ -16,24 +16,25 @@ tags:
 Fiz esse código pq nenhuma das minhas outras máscaras em javascript resolvia.
 
 O comportamento é:
-  
+
 digitar: <var>1</var> aparecer <var>0,0001</var>
-  
+
 digitar: <var>12</var> aparecer <var>0,0012</var>
-  
+
 digitar: <var>123</var> aparecer <var>0,0123</var>
-  
+
 digitar: <var>1234</var> aparecer <var>0,1234</var>
-  
+
 digitar: <var>12345</var> aparecer <var>1,2345</var>
-  
+
 digitar: <var>123456</var> aparecer <var>12,3456</var>
-  
+
 digitar: <var>1234567</var> aparecer <var>123,4567</var>
 
 O bloco do if pode ser refatorado para ficar mais &#8220;bonito&#8221; e menos manual. Mas já é uma idéia de como fazer essa máscara para &#8220;peso&#8221;, usando javascript e um pouquinho de expressão regular.
 
-<pre class="javascript"><script type="text/javascript">
+``` js
+<script type="text/javascript">
 function id(el){
     return document.getElementById(el);
 }

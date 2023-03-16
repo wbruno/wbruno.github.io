@@ -36,8 +36,8 @@ Servir o documento com headers de XML, é bem interessante, já que qualquer err
 O meu crime foi não ter fechado a tag <img />.
 
 ``` html
-<img src="images/wbruno-logo.png" alt="" id="logo">```
-
+<img src="images/wbruno-logo.png" alt="" id="logo">
+```
 Antecessora mais próxima do do <u></div><!&#8211; /main &#8211;></u>, daí o erro foi disparado nele. Para mim:
 
 > _Conhecer bem xHTML, te faz ser melhor em HTML_
@@ -85,8 +85,8 @@ Esta é a <a href="http://validator.w3.org/check?verbose=1&#038;uri=http%3A%2F%2
 a tag <title> e a tag <meta /> de charset, são obrigatórias. Tomemos como base o documento que apresentei.
 
 ``` html
-<br>```
-
+<br>
+```
 Passando no validador: [<img src="/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-1024x338.png" alt="" title="Screen shot 2011-04-04 at 2.21.36 PM" width="695" height="229" class="aligncenter size-large wp-image-614" srcset="/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-1024x338.png 1024w, /wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-300x99.png 300w, /wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM.png 1432w" sizes="(max-width: 695px) 100vw, 695px" />](/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM.png)
 
 Para não ficar muito extenso, vou dividir em mais uma parte esse post.

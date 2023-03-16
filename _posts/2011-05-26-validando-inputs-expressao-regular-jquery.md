@@ -14,24 +14,25 @@ tags:
   - validador
 ---
 Talvez me odeiem por isso, talvez me crucifiquem.. sei lá..
-  
+
 Acabei de ver <a href="http://www.jquerymagazine.com.br/artigo.php?id=239" target="_blank">este artigo</a>, pelo Twitter.
 
 Okay, a idéia é bacana, porém existem _falhas_ nesse código apresentado.
-  
+
 <!--more-->
 
 
-  
+
 **Expressões Regulares** são bem úteis, e o método **.replace()** da linguagem javascript, é muito simples de usar.
 
 Vamos&#8230; melhorar a proposta.
-  
+
 Afinal de contas, toda vez que critico algo, aparece alguém dizendo &#8216;então faça você&#8217;, lá vai:
-  
+
 Não sei se era a intenção do criador, porém o script aceita **espaço**, apesar dele não ter citado isso no comentário.
 
-<pre name="code" class="js">// Somente letras maiúsculas e minúsculas e numeros
+``` js
+// Somente letras maiúsculas e minúsculas e numeros
   $("#campo4").keyup(function() {
     var valor = $("#campo4").val().replace(/[^a-zA-Z 0-9]+/g,'');
     $("#campo4").val(valor);
@@ -40,7 +41,8 @@ Não sei se era a intenção do criador, porém o script aceita **espaço**, ape
 
 Nesse outro, aceita **vírgulas**&#8230; achei estranho..
 
-<pre name="code" class="js">// Somente valores definidos
+``` js
+// Somente valores definidos
   $("#campo5").keyup(function() {
     var valor = $("#campo5").val().replace(/[^2,4,6,8]+/g,'');
     $("#campo5").val(valor);
@@ -49,7 +51,8 @@ Nesse outro, aceita **vírgulas**&#8230; achei estranho..
 
 alguém fora eu, percebeu uma repetição de código ?
 
-<pre name="code" class="js">// Descrição
+``` js
+// Descrição
   $( blablabla ).keyup(function() {
     var valor = $( blablabla ).val().replace(ER,'');
     $( blablabla ).val(valor);
@@ -57,12 +60,13 @@ alguém fora eu, percebeu uma repetição de código ?
 ```
 
 certo ?
-  
+
 Primeiro passo para melhorar, tornando reaproveitável, é encapsular numa function, e usar a palavra chave **this**, afinal ir no DOM, selecionar 3 vezes o mesmo elemento, é lento.. já que o js nos oferece um ponteiro de graça e muito bom para isso.
 
 Primeiro, corrigindo o problema de performance, e a expressão regular:
 
-<pre name="code" class="js">// Somente valores definidos
+``` js
+// Somente valores definidos
   $("#campo5").keyup(function() {
     var $this = $( this ); //armazeno o ponteiro em uma variavel
     var valor = $this.val().replace(/[^2468]+/g,'');
@@ -74,15 +78,19 @@ veja que uso uma variavel criada por mim **var $this**, para representar <u>o ob
 
 Isso aqui:
 
-<pre name="code" class="js">// Somente letras maiúsculas e minúsculas e numeros```
+``` js
+// Somente letras maiúsculas e minúsculas e numeros```
 
 conseguimos mais facilmente com o modificador **\i**
 
-<pre name="code" class="js">/[^a-z0-9]+/gi```
+``` js
+/[^a-z0-9]+/gi
+```
 
 Okay, hora de dar &#8216;o meu toque&#8217;, no script:
 
-<pre name="code" class="js"><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+``` js
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript">
 //inspirada na http://php.net/preg_replace
 function er_replace( pattern, replacement, subject ){
@@ -135,7 +143,8 @@ label { display: block; }
 
 hum&#8230; ainda estou incomodado.. que tal:
 
-<pre name="code" class="js">jQuery.fn.removeNot = function( settings ){
+``` js
+jQuery.fn.removeNot = function( settings ){
   var $this = jQuery( this );
   var defaults = {
     pattern: /[^0-9]/,

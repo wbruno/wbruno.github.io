@@ -35,7 +35,8 @@ Estudei um pouquinho o tema TwentyTeen, com a dica do @ThiagoCruz, e então:
 
 **function.php**
 
-<pre name="code" class="php">if ( ! function_exists( 'parent_comment' ) ) :
+``` php
+if ( ! function_exists( 'parent_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
@@ -114,6 +115,6 @@ Ahh, e sem se esquecer do novo input hidden, para o comentário reply saber quem
 **comments.php** ou comment_form() [caso vc não tenha personalizado o form]
 
 ``` html
-<input type="hidden" name="comment_parent" id="comment_parent" value="<?php if( isset( $_GET['replytocom'] ) ) echo $_GET['replytocom']; ?>" />```
-
+<input type="hidden" name="comment_parent" id="comment_parent" value="<?php if( isset( $_GET['replytocom'] ) ) echo $_GET['replytocom']; ?>" />
+```
 =)

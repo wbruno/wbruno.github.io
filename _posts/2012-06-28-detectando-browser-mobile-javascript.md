@@ -15,7 +15,8 @@ Boas!!
 
 Eu previsava de uma função que detectasse se o visitante estava utilizando um browser mobile, <a href="http://www.justindocanto.com/scripts/detect-a-user-on-a-mobile-browser-or-device" rel="external nofollow">achei esta aqui na internet</a>:
 
-<pre name="code" class="php">function isMobile() {
+``` php
+function isMobile() {
     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER['HTTP_USER_AGENT']);
 }
 ```
@@ -38,9 +39,9 @@ function isMobile()
 ```
 
 Ambas se baseiam no cabeçalho **user agent** que cada browser envia junto com a requisição http.
-  
+
 O funcionamento é o mesmo nas duas, logicamente não tenho todos esses aparelhos, consegui testar num tablet samsung, no iphone, e em outros 2 androids.
 
 É isso, conseguiu testar com mais algum dispositivo ?
-  
+
 Caso não tenha &#8220;funcionado&#8221;, me envie o user agent dele, para que eu inclua na expressão regular.

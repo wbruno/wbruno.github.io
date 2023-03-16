@@ -10,19 +10,20 @@ categories:
   - CSS
 ---
 Site com fundo preto é cansativo, ainda mais se for um site com bastante conteúdo para lermos.
-  
+
 Porém, por diversas razões há quem goste.
 
 Pensando nessa linha, implementei um botão ali no header do meu blog: &#8220;black theme&#8221;.
-  
+
 Estou em fase de testes. Não travei com cookie ainda.
 
 Adicionei as seguintes linhas no meu css, para &#8220;mudar&#8221; a cor do meu tema.
-  
+
 <!--more-->
 
-<pre name="code" class="css:firstLine[199]">/* black style */
-#switch { cursor: pointer; border: 1px solid #ccc; 
+``` js
+/* black style */
+#switch { cursor: pointer; border: 1px solid #ccc;
 display: inline-block; padding: 5px 20px; }
 body.black { background: #090909; }
 
@@ -53,5 +54,5 @@ body.black { background: #090909; }
 Como podem ver, o javascript apenas adiciona uma class ao body e pronto. O css cuida do restante.
 
 Tendo ficado bom, eu termino a implementação e travo com cookie a sua opção de ver meu blog _in black_.
-  
+
 Me digam oque acharam. =)

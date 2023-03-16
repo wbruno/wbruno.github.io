@@ -64,13 +64,14 @@ bem parecidos, porém diferentes nas implementações.
 
 Nosso &#8216;controlador&#8217;, que usará os objetos instanciados apartir de Galeria, ou Agenda, sabe que precisa usar:
 
-<pre name="code" class="php">$galeria = new Galeria();
+``` php
+$galeria = new Galeria();
 $galeria->insere_galeria();
 ```
 
 ou
-
-<pre name="code" class="php">$agenda = new Agenda();
+``` php
+$agenda = new Agenda();
 $agenda->insere_agenda();
 ```
 

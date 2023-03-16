@@ -16,20 +16,20 @@ tags:
 Boas galera!!
 
 Respondendo uma dúvida no iMasters, vi que não é possível usarmos âncoras HTML com iframes(pelo menos eu não consegui) .
-  
+
 O menu tá lá em cima, e o iframe no meio do conteudo, escondido pela rolagem.
-  
+
 <!--more-->
 
 
-  
+
 isso aqui:
 
 ``` html
 <a href="http://www.google.com.br/#externo" target="externo" id="google">google</a>
-        
-        <iframe src="" name="externo" id="externo" width="1000px"></iframe>```
 
+        <iframe src="" name="externo" id="externo" width="1000px"></iframe>
+```
 infelizmente não funciona.
 
 Logo, a próxima solução que pensei, foi usar javascript para tal:
@@ -40,11 +40,11 @@ Logo, a próxima solução que pensei, foi usar javascript para tal:
 <script type="text/javascript">
 window.onload = function(){
         document.getElementById('google').onclick = function(){
-        
+
                 window.document.body.scrollTop = document.getElementById('externo').offsetTop;
-        
+
         }
-}       
+}
 </script>
 </head>
 <body>
@@ -59,7 +59,7 @@ window.onload = function(){
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
-        
+
         <iframe src="" name="externo" id="externo" width="1000px"></iframe>
 </body>
 </html>

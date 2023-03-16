@@ -20,9 +20,11 @@
 
 title: Principal Engineer - William Bruno
 email: wbrunom@gmail.com
+disqus:
+   shortname: wbruno
 description: >- # this means to ignore newlines until "baseurl:"
-  Bem Vindo ao meu blog. Me chamo William Bruno (aka wbruno) 
-  e trabalho como Desenvolvedor NodeJS 
+  Bem Vindo ao meu blog. Me chamo William Bruno (aka wbruno)
+  e trabalho como Desenvolvedor NodeJS
   nos horários em que não estou estudando Matemática ou escrevendo posts.
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://wbruno.com.br"

@@ -20,7 +20,8 @@ resolvi colocar algumas queries úteis aqui. Coisa bem simples mesmo.
 ``` sql
 SELECT DISTINCT(comment_author_email), comment_author
 FROM `wp_comments`
-WHERE comment_author_email<>''```
+WHERE comment_author_email<>''
+```
 
 Nessa query eu peço apenas o nome e o email do autor do comentário.
 
@@ -43,7 +44,8 @@ Basta trocar o SELECT * por um DELETE, e teremos excluido as revisões. Aqui, co
 Um pouco menos &#8220;problemático&#8221;, que as revisões, mas mesmo assim, não deixam de ser &#8220;sujeiras&#8221; no banco.
 
 ``` sql
-SELECT * FROM `wp_posts` WHERE `post_status` = 'auto-draft'```
+SELECT * FROM `wp_posts` WHERE `post_status` = 'auto-draft'
+```
 
 No instante em que rodei essa query, só peguei um único registro.
 

@@ -55,7 +55,8 @@ Use e abuse dos **colspans**, mas o row nunca!
 ## Nem pense em margin e padding
 
 ``` html
-style="margin: yypx; padding: yypx;"```
+style="margin: yypx; padding: yypx;"
+```
 
 Vai funcionar nos teus navegadores enqnto vc estiver testando, porém nos clients de email não.
 
@@ -99,7 +100,8 @@ Não vamos cair na tentação de usar um <p>, <span>.. ou tags do tipo. Dificil 
 Isso! Não temos &#8216;reaproveitamento&#8217; de código fazendo email marketing. Note que a tag link e style, não funcionam no hotmail e gmail respectivamente. Portanto,
 
 ``` html
-style=""```
+style=""
+```
 
 neles !
 

@@ -66,7 +66,8 @@ Uma técnica que tenho gostado bastante de utilizar é a seguinte:
 <div style="clear: both;">
 </div>
 
-<pre class="html" name="code"><div id="header">
+``` html
+<div id="header">
     <div class="content">
         aqui dentro o conteudo do topo
     </div><!-- /content -->
@@ -100,7 +101,8 @@ ok ? repetimos o mesmo processo anterior para definir o filete de bg do rodapé,
 
 aqui, tem aquela sidebar laranja, que pede obviamente um float : left; e o restante na direita.
 
-<pre class="html" name="code"><div id="content" clas="content">
+``` html
+<div id="content" clas="content">
     <div id="sidebar">
         conteudo da sidebar laranja
     </div><!-- /sidebar -->

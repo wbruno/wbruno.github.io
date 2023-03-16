@@ -38,12 +38,14 @@ noConflict: function( deep ) {
     }
 
     return jQuery;
-  },```
+  },
+```
 
 Note que a única coisa que esse método faz, é **retornar**, um objeto jQuery existente(já registrado no documento). Por isso, que a forma de usar, nos induz a _&#8216;trocar o nome&#8217;_ do apelido:
 
 ``` js
-var $a = jQuery.noConflict()```
+var $a = jQuery.noConflict()
+```
 
 E então, em vez de usar **$**, agora passo a usar **$a**
 
@@ -91,7 +93,8 @@ ready: function( fn ) {
     readyList.done( fn );
 
     return this;
-  },```
+  },
+```
 
 Esse é o trecho de código da lib, responsável pelo método .ready() que usamos, para aguardar o DOM carregar.
 

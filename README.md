@@ -7,4 +7,5 @@ gem install bundler jekyll
 bundle exec jekyll serve --incremental
 ```
 
-http://localhost:4000/
+go to:
+<http://localhost:4000/>

@@ -33,7 +33,7 @@ github_username:  wbruno
 
 # Build settings
 theme: minima
-google_analytics: UA-7671312-2
+google_analytics: G-84WVQBP8L4
 markdown: kramdown
 highlighter: rouge
 plugins:

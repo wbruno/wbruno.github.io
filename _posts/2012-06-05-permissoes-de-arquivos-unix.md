@@ -13,7 +13,8 @@ tags:
 ---
 Tabelinha de permissões:
 
-```Permissão  Binário   Octal
+``` bash
+Permissão  Binário   Octal
 ---    000    0
 --x    001    1
 -w-    010    2
@@ -21,10 +22,11 @@ Tabelinha de permissões:
 r--    100    4
 r-x    101    5
 rw-    110    6
-rwx    111    7```
+rwx    111    7
+```
 
 x -> execução
-  
+
 w -> escrita
-  
+
 r -> leitura

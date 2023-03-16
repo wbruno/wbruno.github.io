@@ -48,11 +48,14 @@ var_dump( $matches );
 
 A saída será:
 
-`array(1) {<br />
+``` bash
+array(1) {<br />
   [0]=><br />
   string(26) "O rato roeu a roupa do rei de Roma"<br />
 }<br />
-` ou seja, _casamos_(encontramos) perfeitamente todo o padrão(<var>$pattern</var>), dentro do conteúdo(<var>$subject</var>). Óbvio, pois o meu pattern é exatamente igual ao meu subject.
+```
+
+ou seja, _casamos_(encontramos) perfeitamente todo o padrão(<var>$pattern</var>), dentro do conteúdo(<var>$subject</var>). Óbvio, pois o meu pattern é exatamente igual ao meu subject.
 
 ### Casando rato ou gato
 

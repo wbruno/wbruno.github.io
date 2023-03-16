@@ -20,12 +20,14 @@ Só que o ponto no php é uma estrutura da linguagem. Variaveis com ponto no nom
 Isso me impossibilitou de receber o GET, da forma convencional:
 
 ``` php
-echo $_GET['login.sys'];//```
+echo $_GET['login.sys'];//
+```
 
 Com um var_dump(), percebi que neste caso, o php faz a troca automaticamente, do ponto por um underline:
 
 ``` php
-echo $_GET['login_sys'];//wbruno```
+echo $_GET['login_sys'];//wbruno
+```
 
 Rascunhei rapidamente o seguinte script para &#8220;desfazer&#8221; essa troca do php, e então usar no restante do projeto, o array $_GET, exatamente como está lá na URL.
 

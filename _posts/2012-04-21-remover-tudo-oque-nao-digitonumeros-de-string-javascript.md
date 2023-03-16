@@ -17,4 +17,5 @@ Uma simples expressão regular, e o método .replace() do javascript.
 <script type="text/javascript"> type="text/javascript">
 var str = 'capa1';
 alert( str.replace(/[^\d]+/g,'') )
-</script>```
+</script>
+```

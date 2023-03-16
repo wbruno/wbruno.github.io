@@ -25,7 +25,8 @@ Aceita as entradas:
 
 **money-blur.js**
 
-```'use strict';
+``` js
+'use strict';
 function _signalFirst(v) {
   return /^(,|\.)/.test(v);
 }

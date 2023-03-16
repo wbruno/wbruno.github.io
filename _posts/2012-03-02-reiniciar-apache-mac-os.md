@@ -15,4 +15,6 @@ tags:
 ---
 Opa, só para deixar aqui a linha de comando que reinicia o apache.
 
-<pre name="code">sudo /usr/sbin/apachectl restart```
+``` bash
+sudo /usr/sbin/apachectl restart
+```

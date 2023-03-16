@@ -472,7 +472,8 @@ class Statusblog extends WordPress
       </li>'.PHP_EOL;
   }
 
-}//Facebook```
+}//Facebook
+```
 
 ## Concluindo
 

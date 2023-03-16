@@ -17,60 +17,62 @@ Note que ao dar um f5 no browser, o mesmo mantém os valores já respondidos em 
 
 ## Código HTML
 
-<pre name="code" class="javascript">&lt;!DOCTYPE HTML>
-&lt;html lang="en-US">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>Validando número maximo de checkboxes marcados&lt;/title>
-    &lt;style type="text/css">
-	label { display: block; }
-	.error { color: #f00; }
-    &lt;/style>
-&lt;/head>
-&lt;body>
-&lt;article>
+``` hml
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Validando número maximo de checkboxes marcados</title>
+    <style type="text/css">
+  label { display: block; }
+  .error { color: #f00; }
+    </style>
+</head>
+<body>
+<article>
 
-    &lt;h1>Perguntas&lt;/h1>
+    <h1>Perguntas</h1>
 
-    &lt;form action="app.php" method="post" id="form-app">
+    <form action="app.php" method="post" id="form-app">
  
-        &lt;fieldset id="field1">
-            &lt;legend class="question">Quais?&lt;/legend>
+        <fieldset id="field1">
+            <legend class="question">Quais?</legend>
 
-            &lt;label>&lt;input type="checkbox" value="a" name="question[4][]"> a&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="b" name="question[4][]"> b&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="c" name="question[4][]"> c&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="d" name="question[4][]"> d&lt;/label>
+            <label><input type="checkbox" value="a" name="question[4][]"> a</label>
+            <label><input type="checkbox" value="b" name="question[4][]"> b</label>
+            <label><input type="checkbox" value="c" name="question[4][]"> c</label>
+            <label><input type="checkbox" value="d" name="question[4][]"> d</label>
 
-            &lt;p class="error is-hidden" id="error1">Escolha no máximo 2 opções&lt;/p>
-        &lt;/fieldset>
+            <p class="error is-hidden" id="error1">Escolha no máximo 2 opções</p>
+        </fieldset>
 
-        &lt;fieldset id="field2">
-            &lt;legend class="question">Quais?&lt;/legend>
+        <fieldset id="field2">
+            <legend class="question">Quais?</legend>
 
-            &lt;label>&lt;input type="checkbox" value="a" name="question[5][]"> a&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="b" name="question[5][]"> b&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="c" name="question[5][]"> c&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="d" name="question[5][]"> d&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="e" name="question[5][]"> e&lt;/label>
-            &lt;label>&lt;input type="checkbox" value="f" name="question[5][]"> f&lt;/label>
+            <label><input type="checkbox" value="a" name="question[5][]"> a</label>
+            <label><input type="checkbox" value="b" name="question[5][]"> b</label>
+            <label><input type="checkbox" value="c" name="question[5][]"> c</label>
+            <label><input type="checkbox" value="d" name="question[5][]"> d</label>
+            <label><input type="checkbox" value="e" name="question[5][]"> e</label>
+            <label><input type="checkbox" value="f" name="question[5][]"> f</label>
 
 
-            &lt;p class="error is-hidden" id="error2">Escolha no máximo 3 opções&lt;/p>
-        &lt;/fieldset>
+            <p class="error is-hidden" id="error2">Escolha no máximo 3 opções</p>
+        </fieldset>
 
-        &lt;input class="btn" id="btn" type="submit" value="Enviar" name="enviar">
-    &lt;/form>
-&lt;/article>
+        <input class="btn" id="btn" type="submit" value="Enviar" name="enviar">
+    </form>
+</article>
 
-&lt;script type="text/javascript" src="all.js">&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+<script type="text/javascript" src="all.js"></script>
+</body>
+</html>
+```
 
 ## Código JavaScript
 
-<pre name="code" class="javascript">(function () {
+``` js
+(function () {
     'use strict';
     /*global document:false*/
 
@@ -151,4 +153,5 @@ Note que ao dar um f5 no browser, o mesmo mantém os valores já respondidos em 
     maxChoice(field1);
     maxChoice(field2);
 
-}());</pre>
+}());
+```

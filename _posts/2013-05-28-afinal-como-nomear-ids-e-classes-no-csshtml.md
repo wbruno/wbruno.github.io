@@ -54,17 +54,17 @@ Afinal não podemos mesmo usar acentos, algumas palavras são menores e queremos
 
 O ideal é escrevermos um código html/css que possa ser copiado/movido de um lugar para o outro, sem que nada se perca e continue funcionando.
 
-<pre class="html">&lt;ul id="comments">
-    &lt;li class="comment">
-        &lt;q class="comment-text">"lorem ipsum dolor sit amet..."&lt;/q>
-        &lt;cite class="comment-author">Desconhecido&lt;/cite>
-    &lt;/li>&lt;!-- .comment -->
-    &lt;li class="comment">
-        &lt;q class="comment-text">"lorem ipsum dolor sit amet..."&lt;/q>
-        &lt;cite class="comment-author">Desconhecido&lt;/cite>
-    &lt;/li>&lt;!-- .comment -->
-&lt;/ul>&lt;!-- #comments -->
-</pre>
+<pre class="html"><ul id="comments">
+    <li class="comment">
+        <q class="comment-text">"lorem ipsum dolor sit amet..."</q>
+        <cite class="comment-author">Desconhecido</cite>
+    </li><!-- .comment -->
+    <li class="comment">
+        <q class="comment-text">"lorem ipsum dolor sit amet..."</q>
+        <cite class="comment-author">Desconhecido</cite>
+    </li><!-- .comment -->
+</ul><!-- #comments -->
+```
 
 Só possuo um bloco de comentários por document, então uso ID para identificar esse bloco.
 
@@ -77,14 +77,14 @@ Ao batermos o olho no nosso css:
 <pre class="css">.comment {}
 .comment-text {}
 .comment-author {}
-</pre>
+```
 
 Sabemos rapida e exatamente quais classes se referem a esse módulo de comentários. O mesmo não seria possível se tivéssemos nomeado assim:
 
 <pre class="css">.comment {}
 .text {}
 .author {}
-</pre>
+```
 
 Afinal, podemos gerar um conflito de namespaces, pois se for uma página com CDs, a classe text poderia também estar identificando qualquer texto na página, e o author poderia ser o compositor.
 
@@ -95,19 +95,19 @@ Uma alternativa seria usar classes filhas:
 <pre class="css">.comment {}
 .comment .text {}
 .comment .author {}
-</pre>
+```
 
 O problema dessa abordagem é que estamos aumentando a especificidade do seletor, e se precisamos sobrescrever alguma propriedade, tudo começa a ficar muito verboso:
 
 <pre class="css">body.home .comment .author {}
 body.price .comment .author {}
-</pre>
+```
 
 Além do que, se o .author for uma classe com poucas responsabilidades, podemos usá-la em diversos contextos, apenas somando classes:
 
-<pre class="html">&lt;cite class="comment-author author">&lt;/cite>
-&lt;p class="music-author author">&lt;/p>
-</pre>
+<pre class="html"><cite class="comment-author author"></cite>
+<p class="music-author author"></p>
+```
 
 ### Não estilize pelo nome da tag
 
@@ -116,14 +116,14 @@ Além do que, se o .author for uma classe com poucas responsabilidades, podemos 
 <pre class="css">#comments li {}
 #comments p {}
 #comments cite {}
-</pre>
+```
 
 ou então:
 
 <pre class="css">.comment {}
 .comment p {}
 .comment cite {}
-</pre>
+```
 
 O grande problema, é que estamos vinculando o nosso css a um único html, e quando fazermos isso, estamos travando a implementação, o que é ruim, já que se formos apresentar um único comentário, não vamos usar uma LISTA para isso, mas sim uma DIV ou algo do tipo. Além de lento, pois devemos lembrar que os browsers lêem os seletores da direita para a esquerda.
 
@@ -135,7 +135,7 @@ Identifique um elemento com ID quando ele for único em uma página, e não exis
 
 Identifique um ou mais elementos com CLASSes quando estiver pensando em módulos reaproveitáveis, em estilos que podem ser somados, como por exemplo:
 
-<pre class="html">&lt;a href="" class="btn btn-hire btn-big">Contratar&lt;/a></pre>
+<pre class="html"><a href="" class="btn btn-hire btn-big">Contratar</a>```
 
 Estou somando classes para compor o meu elemento. Se eu precisar desse botão em um tamanho menor, apenas troco uma classe no html, ou se eu quiser ele em outra cor, eu apenas adiciono outra class <var>class=&#8221;btn btn-submit btn-medium&#8221;</var>.
 

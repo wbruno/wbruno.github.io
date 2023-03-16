@@ -19,9 +19,10 @@ porém fica de exemplo, para quem precisar.
   
 <!--more-->
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
         return document.getElementById( el );
 }
@@ -38,19 +39,19 @@ window.onload = function(){
                 id('total').value = 20*id('format').value;
         }
 }       
-&lt;/script>
-&lt;/head>
-&lt;body>
-        &lt;input type="button" name="mais" id="mais" value="+" />
-        &lt;input type="button" name="menos" id="menos" value="-" />
+</script>
+</head>
+<body>
+        <input type="button" name="mais" id="mais" value="+" />
+        <input type="button" name="menos" id="menos" value="-" />
         
-        &lt;br />
-        Formatacao &lt;input type="text" name="format" value="0" id="format" size="2" /> x 20,00
+        <br />
+        Formatacao <input type="text" name="format" value="0" id="format" size="2" /> x 20,00
         
-        &lt;br />&lt;br />
-        Total: &lt;input type="text" name="total" id="total" value="" />
-&lt;/body>
-&lt;/html>
-</pre>
+        <br /><br />
+        Total: <input type="text" name="total" id="total" value="" />
+</body>
+</html>
+```
 
 É isso ai, só mais um script rápido que criei para responder uma dúvida no fórum.

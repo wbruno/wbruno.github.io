@@ -21,15 +21,17 @@ Temos um projeto desenvolvido em php. Porém queremos que na URL a extensão a s
 
 Uma forma de fazer isto, seria adicionando a extensão .html para ser interpretada pelo servidor como um script dinâmico, e assim todo e qualquer arquivo .html passaria pelo interpretador, a procura de código php.
 
-<pre name="code" class="html">AddType application/x-httpd-php html </pre>
+``` html
+AddType application/x-httpd-php html ```
 
 Uma outra forma, consiste em somente reescrever a URL, mascarando a extensão .php, e fazendo o servidor devolver a requisição, para o respectivo arquivo .php.
 
 Dessa forma aqui:
 
-<pre name="code" class="html">RewriteEngine On
+``` html
+RewriteEngine On
 RewriteRule ^([a-z]+)\.html$ $1.php [L]
-</pre>
+```
 
 ## Note:
 
@@ -47,12 +49,14 @@ Se realmente tivermos um arquivo: **teste.html**, com apenas a regra acima, o se
   
 Para corrigir isso, precisamos dizer para ele, que se existir o tal arquivo, deixa o mesmo responder oque foi pedido.
 
-<pre name="code" class="html">RewriteEngine On
+``` html
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([a-z]+)\.html$ $1.php [L]</pre>
+RewriteRule ^([a-z]+)\.html$ $1.php [L]```
 
 ou seja, só vai aplicar a Regra, a condição for satisfeita:
 
-<pre name="code" class="html">RewriteCond %{REQUEST_FILENAME} !-f</pre>
+``` html
+RewriteCond %{REQUEST_FILENAME} !-f```
 
 E ela diz que o nome requisitado **não** pode ser um arquivo.

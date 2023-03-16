@@ -17,33 +17,34 @@ Script pra formulário de contato, enviando email com php.
   
 Compatível com as novas diretrizes da Locaweb.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 if( $_SERVER['REQUEST_METHOD']=='POST' ){
         $to                     = 'email@provedor.com'; //para quem vai o email
         $subject        = $_POST['assunto'];
 
                 /* Mensagem */
         $message =
-        '&lt;html>
-        &lt;head>
-        &lt;title>Titulo da página&lt;/title>
-        &lt;style>
-        &lt;/style>
-        &lt;/head>
-        &lt;body>'.
-        '&lt;img src="" alt="" />'.'<br />'.
-        '&lt;div id="opiniao">'.
+        '<html>
+        <head>
+        <title>Titulo da página</title>
+        <style>
+        </style>
+        </head>
+        <body>'.
+        '<img src="" alt="" />'.'<br />'.
+        '<div id="opiniao">'.
         $_POST['nome'].'<br />'.
         ' , mandou a seguinte mensagem pela seção "Fale Conosco" do site:'.
         $_POST['mensagem'].'<br />'.
         'Deixou o seguinte telefone para contato:'.$_POST['tel'].' ,'.$_POST['cel'].
-        '&lt;br />'.
-        '&lt;/div>';
+        '<br />'.
+        '</div>';
 
         $message .=
-        '&lt;div id="rodape">Obrigado pelo contato, aguardamos a sua visita.&lt;/div>'.
-        '&lt;/body>
-        &lt;/html>';
+        '<div id="rodape">Obrigado pelo contato, aguardamos a sua visita.</div>'.
+        '</body>
+        </html>';
 
         $headers = "MIME-Version: 1.1".PHP_EOL;
         $headers .= "Content-type: text/html; charset=iso-8859-1".PHP_EOL;
@@ -56,32 +57,32 @@ if( $_SERVER['REQUEST_METHOD']=='POST' ){
                 $msg = 'Obrigado pelo contato, aguardamos a sua visita.';
         }
 ?>
-                &lt;h1>Formulário de exemplo&lt;/h1>
-&lt;?php
+                <h1>Formulário de exemplo</h1>
+<?php
         if( isSet($msg) )
-                echo '&lt;span class="msg">'.$msg.'&lt;/span>';
+                echo '<span class="msg">'.$msg.'</span>';
 
         else { // só mostra o form se não existir a mensagem de obrigado
 ?>
-                &lt;form action="" method="post">
-                &lt;fieldset>
-                        &lt;label>*Nome Completo:
-                                        &lt;input type="text" name="nome" title="* Nome Completo" />&lt;/label>
-                        &lt;label>*Tel:
-                                &lt;input type="text" name="tel" onkeypress="mascara(this,mtel)" maxlength="14" size="14" title="*Telefone" />&lt;/label>
-                        &lt;label>*Cel:
-                                &lt;input type="text" name="cel" onkeypress="mascara(this,mtel)" maxlength="14" size="14" title="*Celular" />&lt;/label>
-                        &lt;label>*E-mail:
-                                &lt;input type="text" name="email" title="*E-mail" />&lt;/label>
-                        &lt;label>*Assunto:
-                                &lt;input type="text" name="assunto" title="* Assunto" />&lt;/label>
-                        &lt;label>*Mensagem:
-                                &lt;textarea name="mensagem" rows="4" cols="25" title="* Mensagem">&lt;/textarea>&lt;/label>
-                        &lt;label>&lt;input type="submit" name="enviar" value="Enviar" />&lt;/label>
-                &lt;/fieldset>
-                &lt;/form>
-&lt;?php
+                <form action="" method="post">
+                <fieldset>
+                        <label>*Nome Completo:
+                                        <input type="text" name="nome" title="* Nome Completo" /></label>
+                        <label>*Tel:
+                                <input type="text" name="tel" onkeypress="mascara(this,mtel)" maxlength="14" size="14" title="*Telefone" /></label>
+                        <label>*Cel:
+                                <input type="text" name="cel" onkeypress="mascara(this,mtel)" maxlength="14" size="14" title="*Celular" /></label>
+                        <label>*E-mail:
+                                <input type="text" name="email" title="*E-mail" /></label>
+                        <label>*Assunto:
+                                <input type="text" name="assunto" title="* Assunto" /></label>
+                        <label>*Mensagem:
+                                <textarea name="mensagem" rows="4" cols="25" title="* Mensagem"></textarea></label>
+                        <label><input type="submit" name="enviar" value="Enviar" /></label>
+                </fieldset>
+                </form>
+<?php
         } // fecha else
 ?>
 
-</pre>
+```

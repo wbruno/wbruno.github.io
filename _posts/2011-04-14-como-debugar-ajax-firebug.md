@@ -29,59 +29,63 @@ Comecemos do simples. O meu foco será ajax, por isso farei tudo com javascript 
 
 **index.html**
 
-<pre name="code" class="javascript">&lt;html>
-&lt;head>
-	&lt;title>teste&lt;/title>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+  <title>teste</title>
+<script type="text/javascript">
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 function getHTTPObject(){
-	if(window.XMLHttpRequest){
-		return new XMLHttpRequest();
-	}else if(window.ActiveXObject){
-		var prefixes = ["MSXML2", "Microsoft", "MSXML", "MSXML3"];
-		for(var i = 0; i &lt; prefixes.length; i++){
-			try {
-				return new ActiveXObject(prefixes[i] + ".XMLHTTP");
-			} catch (e) {}
-		}
-	}
+  if(window.XMLHttpRequest){
+    return new XMLHttpRequest();
+  }else if(window.ActiveXObject){
+    var prefixes = ["MSXML2", "Microsoft", "MSXML", "MSXML3"];
+    for(var i = 0; i < prefixes.length; i++){
+      try {
+        return new ActiveXObject(prefixes[i] + ".XMLHTTP");
+      } catch (e) {}
+    }
+  }
 }
 var xmlHttp = getHTTPObject();
 function envia( file ){
-	xmlHttp.open( "GET", file, true );
-	xmlHttp.onreadystatechange = function(){
-		if (xmlHttp.readyState == 4){
-			id('response').innerHTML = xmlHttp.responseText;
-		}
-	}
-	xmlHttp.send( null );
+  xmlHttp.open( "GET", file, true );
+  xmlHttp.onreadystatechange = function(){
+    if (xmlHttp.readyState == 4){
+      id('response').innerHTML = xmlHttp.responseText;
+    }
+  }
+  xmlHttp.send( null );
 }
 window.onload = function(){
-	id('enviar').onclick = function(){
-		envia( 'process.php' );
-	}
+  id('enviar').onclick = function(){
+    envia( 'process.php' );
+  }
 }
-&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;input type="button" name="enviar" id="enviar" value="Enviar xhr" />
+</script>
+</head>
+<body>
+  <input type="button" name="enviar" id="enviar" value="Enviar xhr" />
 
-	&lt;p id="response">&lt;/p>
-&lt;/body>
-&lt;/html>
-</pre>
+  <p id="response"></p>
+</body>
+</html>
+```
 
 **processa.php**
 
-<pre name="code" class="php">&lt;?php
-	echo 'Beleza, chegou até aqui!';
-</pre>
+``` php
+<?php
+  echo 'Beleza, chegou até aqui!';
+```
 
 De proprósito, &#8216;errei&#8217;, o nome do arquivo, coloquei <u>process.php</u>, mas na verdade se chama <u>processa.php</u> [terminando com a letra A].
 
-<pre name="code" class="javascript:firstLine[32]">envia( 'process.php' );</pre>
+``` js
+envia( 'process.php' );
+```
 
 Abro o projeto no servidor, clico no botão, e:
 
@@ -97,7 +101,9 @@ Não encontrou o arquivo. Dentre os possíveis motivos, eu poderia ter errado o 
 
 Só apareceu dessa forma, porque eu pedi:
 
-<pre name="code" class="javascript:firstLine[25]">id('response').innerHTML = xmlHttp.responseText;</pre>
+``` js
+id('response').innerHTML = xmlHttp.responseText;
+```
 
 Mas nem sempre, é tão simples. Se eu não tivesse colocado o retorno completo dentro dessa DIV, teria sido muito mais _silencioso_. Só nos resta debugar o código.
 
@@ -115,11 +121,12 @@ Mas não é tão prático assim, e ficar acessando várias URLs, pode nos deixar
 
 Nessas horas o **alert()**, é o &#8216;canino fiel'(melhor amigo), dos programadores js.
 
-<pre name="code" class="javascript:firstLine[24]">if (xmlHttp.readyState == 4){
-			alert( xmlHttp.responseText );
-			//id('response').innerHTML = xmlHttp.responseText;
-		}
-</pre>
+``` js
+if (xmlHttp.readyState == 4){
+      alert( xmlHttp.responseText );
+      //id('response').innerHTML = xmlHttp.responseText;
+    }
+```
 
 No alert, vemos:
 
@@ -139,7 +146,9 @@ Apertemos F12, aba Rede, depois xhr:
 
 Corrigimos o nome do arquivo
 
-<pre name="code" class="javascript:firstLine[32]">envia( 'processa.php' );</pre>
+``` js
+envia( 'processa.php' );
+```
 
 No próximo post, vou mostrar mais algumas situações, e a ajuda que o Firebug nos dá.
 

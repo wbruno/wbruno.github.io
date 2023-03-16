@@ -23,52 +23,54 @@ Na verdade, eu só preciso &#8216;fingir&#8217; isso. Mostrar no input, o .text(
   
 Foi oq eu fiz. Bem simples.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript" src="jquery.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
 jQuery(document).ready(function(){
-	var active = -1;
-	jQuery("input[name='autocomplete']").keypress(function( event ){		
-		var suggest_a = jQuery('#suggest a');
-		var qnts_a = suggest_a.length;
-			
-		if( 40==event.keyCode )//seta baixo
-			active = active>=(qnts_a-1) ? 0 : active+1;
-		else if( 38==event.keyCode )//seta cima
-			active = ( active&lt;=0 ) ? qnts_a-1 : active-1;
-		
-		
-		
-		var a = suggest_a.removeClass('active').eq( active ).addClass('active');	
-		jQuery( this ).val( a.text() );
-	});
+  var active = -1;
+  jQuery("input[name='autocomplete']").keypress(function( event ){    
+    var suggest_a = jQuery('#suggest a');
+    var qnts_a = suggest_a.length;
+      
+    if( 40==event.keyCode )//seta baixo
+      active = active>=(qnts_a-1) ? 0 : active+1;
+    else if( 38==event.keyCode )//seta cima
+      active = ( active<=0 ) ? qnts_a-1 : active-1;
+    
+    
+    
+    var a = suggest_a.removeClass('active').eq( active ).addClass('active');  
+    jQuery( this ).val( a.text() );
+  });
 });
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 label { position: relative; }
 #suggest {
-	position: absolute;
-	top: 20px;
-	left: 0;
+  position: absolute;
+  top: 20px;
+  left: 0;
 }
 .active {
-	background: #ccc;
+  background: #ccc;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;label>
-		&lt;input type="text" name="autocomplete" />
-		&lt;ul id="suggest">
-			&lt;li>&lt;a href="">Item 1&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="">Item 2&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="">Item 3&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="">Item 4&lt;/a>&lt;/li>
-		&lt;/ul>&lt;!-- /suggest -->
-	&lt;/label>
-&lt;/body>
-&lt;/html></pre>
+</style>
+</head>
+<body>
+  <label>
+    <input type="text" name="autocomplete" />
+    <ul id="suggest">
+      <li><a href="">Item 1</a></li>
+      <li><a href="">Item 2</a></li>
+      <li><a href="">Item 3</a></li>
+      <li><a href="">Item 4</a></li>
+    </ul><!-- /suggest -->
+  </label>
+</body>
+</html>
+```
 
 </html>
   

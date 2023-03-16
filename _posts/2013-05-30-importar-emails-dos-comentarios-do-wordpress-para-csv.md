@@ -23,42 +23,43 @@ Caso o seu tenha, use o comando abaixo:
 
 <pre class="sql">SELECT comment_author_email, comment_author
 FROM  `wp_comments`
-WHERE comment_author_email &lt;>  ''
+WHERE comment_author_email <>  ''
 GROUP BY comment_author_email
 ORDER BY (
 comment_author_email )
 INTO OUTFILE '/tmp/meuarquivo.csv'
 FIELDS TERMINATED BY ';'
 LINES TERMINATED BY '\n';
-</pre>
+```
 
 E se quiser apenas os comentários após uma certa data:
 
-<pre>SELECT comment_author_email, comment_author FROM  `wp_comments`  WHERE comment_author_email &lt;>  '' AND comment_date > '2013-04-13' GROUP BY comment_author_email ORDER BY ( comment_author_email ) INTO OUTFILE '/tmp/comments-2013-04-13.csv' FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n';</pre>
+```SELECT comment_author_email, comment_author FROM  `wp_comments`  WHERE comment_author_email <>  '' AND comment_date > '2013-04-13' GROUP BY comment_author_email ORDER BY ( comment_author_email ) INTO OUTFILE '/tmp/comments-2013-04-13.csv' FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n';
+```
 
 No meu caso, eu tive que conectar no banco e gerar o .csv com programação server-side.
 
 ## Usando PHP
 
-<pre class="php">&lt;?php
+<pre class="php"><?php
 
 $db = new mysqli('host', 'user', 'pass', 'bd');
 
 $sql = "SELECT comment_author_email, comment_author
-	FROM  `wp_comments`
-	WHERE comment_author_email &lt;>  ''
-	GROUP BY comment_author_email
-	ORDER BY (
-		comment_author_email
-	)";
+  FROM  `wp_comments`
+  WHERE comment_author_email <>  ''
+  GROUP BY comment_author_email
+  ORDER BY (
+    comment_author_email
+  )";
 
 $query = $db->query( $sql );
 while( $dados = $query->fetch_object() ){
-	$arr[] = "\"{$dados->comment_author}\", \"{$dados->comment_author_email}\"";
+  $arr[] = "\"{$dados->comment_author}\", \"{$dados->comment_author_email}\"";
 }
 
 echo implode($arr, "\n");
-</pre>
+```
 
 Prontinho! feito. Dai foi só disparar um email para todo mundo, logicamente com o link de remover.
 

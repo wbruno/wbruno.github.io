@@ -19,7 +19,7 @@ Já vimos diversas vezes como fazer um servidorzinho básico em NodeJS, usando o
 
 ## Hello World
 
-<pre>var express = require('express'),
+```var express = require('express'),
     app = express();
 
 app.get('/', function(req, res) {
@@ -27,13 +27,14 @@ app.get('/', function(req, res) {
 });
 
 app.listen(3003);
-</pre>
+```
 
 Além disso, podemos pedir para que uma view seja renderizada:
 
-<pre>app.get('/', function(req, res) {
+```app.get('/', function(req, res) {
     res.render('index', { title: "My Site" });
-});</pre>
+});
+```
 
 Mas e se **quando o servidor recebesse uma requisição ajax**, o Node retornasse um **jSON**, no lugar do HTML completo da página, que está cheio de coisas que não queremos (template, tag head, &#8230;) ?
 
@@ -41,12 +42,13 @@ Ai otimizaríamos essas requisições, pois o json já parseado do servidor, vir
 
 Ficando assim, bem mais legal de se trabalhar com <var>history.pushState</var>. Veja:
 
-<pre>$content.innerHTML = json.content;
+```$content.innerHTML = json.content;
 
 history.pushState(href, json.title, href);
 
 document.title = json.title;
-document.querySelector("meta[name='description']").setAttribute("content", json.description);</pre>
+document.querySelector("meta[name='description']").setAttribute("content", json.description);
+```
 
 Que tal ?
 

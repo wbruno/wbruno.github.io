@@ -25,11 +25,12 @@ Esse post é para divulgar um novo repositório que criei no github.
 
 ## Exemplo de uso
 
-<pre name="code" class="javascript">jQuery.fn.maskx.user_defined = function(v){
-	v = v.replace(/\D/g, "");
-	v = v.replace(/(\d{3})(\d)/, "$1/$2");
-	v = v.replace(/(\d+)(\d{2})$/, "$1-$2");
-	return v;
+``` js
+jQuery.fn.maskx.user_defined = function(v){
+  v = v.replace(/\D/g, "");
+  v = v.replace(/(\d{3})(\d)/, "$1/$2");
+  v = v.replace(/(\d+)(\d{2})$/, "$1-$2");
+  return v;
 };
 jQuery(document).ready(function(){
     jQuery('input[name^="NumeroCC"]').maskx({maskx: 'cc'});
@@ -40,6 +41,6 @@ jQuery(document).ready(function(){
 
     jQuery('input[name="other"]').maskx({maskx: 'user_defined'});
 });
-</pre>
+```
 
 É isso galera, usem lá. E me digam o que acharam. Além de abrirem suas issues e pull requests.

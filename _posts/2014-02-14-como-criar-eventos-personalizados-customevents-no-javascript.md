@@ -47,8 +47,8 @@ Para quem sabe Design Patterns, creio que vc pode pensar que é um Observer nati
 
 ## Código
 
-<pre>&lt;div id="t">&lt;/div>
-&lt;script>
+```<div id="t"></div>
+<script>
 var myElement = document.getElementById("t");
 myElement.addEventListener("userLogin", function(e) {
     console.info("Event is: ", e);
@@ -64,8 +64,8 @@ var myEvent = new CustomEvent("userLogin", {
 
 // Trigger it!
 myElement.dispatchEvent(myEvent);
-&lt;/script>
-</pre>
+</script>
+```
 
 Retirei o trecho de código acima daqui: [JavaScript CustomEvent](http://davidwalsh.name/customevent)
 

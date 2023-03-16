@@ -27,40 +27,42 @@ Do documento pai, acessar uma function no iframe.
 
 **index.html**
 
-<pre name="code" class="html">&lt;input type="text" name="tal" id="tal" value="TalTal" />
+``` html
+<input type="text" name="tal" id="tal" value="TalTal" />
 
-&lt;input type="button" name="ok" id="ok" value="Ok" />
+<input type="button" name="ok" id="ok" value="Ok" />
 
-&lt;br />&lt;br />
-&lt;iframe id="grid" src="grid.html">&lt;/iframe>
+<br /><br />
+<iframe id="grid" src="grid.html"></iframe>
 
 
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 window.onload = function()
 {
-	var grid = id('grid').contentWindow;
-	grid.escreve( id('tal').value );
+  var grid = id('grid').contentWindow;
+  grid.escreve( id('tal').value );
 
 
-	id('ok').onclick = function(){
-		grid.escreve( id('tal').value );
-	}
+  id('ok').onclick = function(){
+    grid.escreve( id('tal').value );
+  }
 }
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
-&lt;/script>
-</pre>
+</script>
+```
 
 e o iframe: **grid.html**
 
-<pre name="code" class="html">&lt;div id="ae">&lt;/div>
+``` html
+<div id="ae"></div>
 
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 function escreve( str ){
         document.getElementById('ae').innerHTML = str;
 }
-&lt;/script>
-</pre>
+</script>
+```

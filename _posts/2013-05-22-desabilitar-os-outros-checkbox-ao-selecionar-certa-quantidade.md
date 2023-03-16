@@ -31,62 +31,62 @@ Essa é a rotina inclusive para fazer a ida e volta do script. Verificar somando
 
 ## Solução
 
-<pre class="html">&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-	&lt;meta charset="UTF-8">
-	&lt;title>&lt;/title>
+<pre class="html"><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
 
-&lt;style>label { display: block; }&lt;/style>
-&lt;script type="text/javascript">
+<style>label { display: block; }</style>
+<script type="text/javascript">
 (function(){
-	"use strict";
+  "use strict";
 
-	var marcados = 0;
-	var verifyCheckeds = function($checks) {
-		if( marcados>=2 ) {
-			loop($checks, function($element) {
-				$element.disabled = $element.checked ? '' : 'disabled';
-			});
-		} else {
-			loop($checks, function($element) {
-				$element.disabled = '';
-			});
-		}
-	};
-	var loop = function($elements, cb) {
-		var max = $elements.length;
-		while(max--) {
-			cb($elements[max]);
-		}
-	}
-	var count = function($element) {
-		return $element.checked ? marcados + 1 : marcados - 1;
-	}
-	window.onload = function(){
-		var $checks = document.querySelectorAll('input[type="checkbox"]');
-		loop($checks, function($element) {
-			$element.onclick = function(){
-				marcados = count(this);
-				verifyCheckeds($checks);
-			}
-			if($element.checked) marcados = marcados + 1;
-		});
-		verifyCheckeds($checks);
-	}
+  var marcados = 0;
+  var verifyCheckeds = function($checks) {
+    if( marcados>=2 ) {
+      loop($checks, function($element) {
+        $element.disabled = $element.checked ? '' : 'disabled';
+      });
+    } else {
+      loop($checks, function($element) {
+        $element.disabled = '';
+      });
+    }
+  };
+  var loop = function($elements, cb) {
+    var max = $elements.length;
+    while(max--) {
+      cb($elements[max]);
+    }
+  }
+  var count = function($element) {
+    return $element.checked ? marcados + 1 : marcados - 1;
+  }
+  window.onload = function(){
+    var $checks = document.querySelectorAll('input[type="checkbox"]');
+    loop($checks, function($element) {
+      $element.onclick = function(){
+        marcados = count(this);
+        verifyCheckeds($checks);
+      }
+      if($element.checked) marcados = marcados + 1;
+    });
+    verifyCheckeds($checks);
+  }
 }());
-&lt;/script>
-&lt;/head>
-&lt;body>
+</script>
+</head>
+<body>
 
-	&lt;label>&lt;input type="checkbox" value="1" />Item 1&lt;/label>
-	&lt;label>&lt;input type="checkbox" value="2" />Item 2&lt;/label>
-	&lt;label>&lt;input type="checkbox" value="3" />Item 3&lt;/label>
-	&lt;label>&lt;input type="checkbox" value="4" />Item 4&lt;/label>
-	&lt;label>&lt;input type="checkbox" value="5" />Item 5&lt;/label>
-&lt;/body>
-&lt;/html>
-</pre>
+  <label><input type="checkbox" value="1" />Item 1</label>
+  <label><input type="checkbox" value="2" />Item 2</label>
+  <label><input type="checkbox" value="3" />Item 3</label>
+  <label><input type="checkbox" value="4" />Item 4</label>
+  <label><input type="checkbox" value="5" />Item 5</label>
+</body>
+</html>
+```
 
 ### A função loop
 
@@ -95,19 +95,19 @@ Essa função é a chave do funcionamento do script. Criei ela para interar sob 
 Ela recebe a coleção de elementos e um callback para executar em cada um desses elementos.
 
 <pre class="javascript">var loop = function($elements, cb) {
-		var max = $elements.length;
-		while(max--) {
-			cb($elements[max]);
-		}
-	}
-</pre>
+    var max = $elements.length;
+    while(max--) {
+      cb($elements[max]);
+    }
+  }
+```
 
 A interface de uso é esta:
 
 <pre class="javascript">loop($elements, function($element) {
-	//funcao executada para cada $element
+  //funcao executada para cada $element
 });
-</pre>
+```
 
 ### A função verifyCheckeds
 

@@ -45,9 +45,9 @@ JavaScript faz muita mágica com as funções, então é preciso entendê-las be
 
 Na página 72 da minha edição há o subcapítulo **Functions are Data**. Comece a prestar mais atenção a partir daqui.
 
-<pre>function f(){return 1;}
+```function f(){return 1;}
 var f = function(){return 1;}
-</pre>
+```
 
 Função que retorna função e clousures são tópicos que vou escrever posts sobre, pois fazem parte da parte boa do javascript.
 

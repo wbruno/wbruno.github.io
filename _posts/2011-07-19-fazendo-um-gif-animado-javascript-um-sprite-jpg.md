@@ -35,20 +35,21 @@ Mas ai resolvi brincar, e fazer um &#8216;gif animado&#8217;, só que sem o .gif
   
 Okay, preciso começar:
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;div id="mozilla">&lt;/div>
-&lt;/body>
-&lt;/html>
-</pre>
+</style>
+</head>
+<body>
+  <div id="mozilla"></div>
+</body>
+</html>
+```
 
 Bom, eu sabia que precisava de um documento .html, de javascript e algum css.
   
@@ -58,11 +59,13 @@ E como vou usar o sprite, preciso fazer o sprite:
 
 Beleza, tive a iniciativa. Comecei a fazer. Sabendo usar sprites, sei que o meu container ali **#mozilla**, deve ter uma altura e largura tal, para mostrar apenas &#8216;um frame&#8217; do sprite.
 
-<pre name="code" class="css">#mozilla {
-	background: url('sprite_mozilla.jpg') no-repeat;
-	height: 64px;
-	width: 64px;
-}</pre>
+``` css
+#mozilla {
+  background: url('sprite_mozilla.jpg') no-repeat;
+  height: 64px;
+  width: 64px;
+}
+```
 
 Tranquilo ne?!
   
@@ -74,18 +77,21 @@ Então, sei apartir disso, que preciso de um script js capaz de alterar essa pro
 
 Hum..**background-position**, em javascript quer dizer: 
 
-<pre name="code" class="javascript">obj.style.backgroundPosition</pre>
+``` js
+obj.style.backgroundPosition```
 
 e &#8216;a cada x tempo&#8217;, deve me lembrar ou <a href="http://wbruno.com.br/2011/03/11/principio-de-slideshow-settimeout-recursivo/" target="_blank">setTimeout()</a> [nesse caso recursivo], ou <a href="http://wbruno.com.br/2009/08/26/demonstracao-funcao-setinterval-javascript/" target="_blank">setInterval()</a>;
 
 Blz, escolho o setInterval(); preciso criar uma função que altere o position.
 
-<pre name="code" class="javascript">var anima = function(){
-	var left = 64*i+i;
-	
-	id('mozilla').style.backgroundPosition = '-'+left+' top';
-	i++;
-}</pre>
+``` js
+var anima = function(){
+  var left = 64*i+i;
+  
+  id('mozilla').style.backgroundPosition = '-'+left+' top';
+  i++;
+}
+```
 
 A _&#8216;fórmula&#8217;_ é simples. Deixei 1pixel de espaço entre cada frame do sprite. Então somo a minha variavel $i, para representar esse espaço. 64 é a largura de cada frame. $i é um contador que aumenta de 1 em 1. Multiplico o contador pela largura de cada frame, e faço o backgroundPosition se mexer de frame em frame.
 
@@ -99,7 +105,9 @@ Dai então, só vejo tela em branco. Pois lembrem-se do meu &#8216;no-repeat&#82
 
 Se eu tivesse deixado o css assim:
 
-<pre name="code" class="css">background: url('sprite_mozilla.jpg');</pre>
+``` css
+background: url('sprite_mozilla.jpg');
+```
 
 Acontece oque vc imaginou (ou pelo menos deveria ter imaginado). A animação se repete do começo.
   

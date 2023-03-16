@@ -21,23 +21,25 @@ Fiz uma rápida adaptação da **expressão regular**, usada na função **mtel(
 
 Aumentei o maxlenght de 14 para 15.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-    &lt;title>Mascara Telefone&lt;/title>
-    &lt;script type="text/javascript" src="mtel.js">&lt;/script>
+``` html
+<html>
+<head>
+    <title>Mascara Telefone</title>
+    <script type="text/javascript" src="mtel.js"></script>
 
-&lt;/head>
-&lt;body>
+</head>
+<body>
 
-    &lt;input type="text" name="telefone" onkeyup="mascara( this, mtel );" maxlength="15" />
+    <input type="text" name="telefone" onkeyup="mascara( this, mtel );" maxlength="15" />
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 E o mtel.js
 
-<pre name="code" class="javascript">/* Máscaras ER */
+``` js
+/* Máscaras ER */
 function mascara(o,f){
     v_obj=o
     v_fun=f
@@ -52,7 +54,7 @@ function mtel(v){
     v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
     return v;
 }
-</pre>
+```
 
 Alterei a segunda expressão regular, para funcionar de forma invertida. De trás para frente.
   
@@ -68,10 +70,11 @@ Apenas para alertar que a forma acima, não é a melhor maneira de implementar.
   
 Devemos separar as camadas, e deixar a chamada do script do lado do js. Dessa forma aqui:
 
-<pre name="code" class="javascript">&lt;html>
-&lt;head>
-    &lt;title>Mascara Telefone&lt;/title>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+    <title>Mascara Telefone</title>
+<script type="text/javascript">
 /* Máscaras ER */
 function mascara(o,f){
     v_obj=o
@@ -88,20 +91,20 @@ function mtel(v){
     return v;
 }
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 window.onload = function(){
-	id('telefone').onkeyup = function(){
-		mascara( this, mtel );
-	}
+  id('telefone').onkeyup = function(){
+    mascara( this, mtel );
+  }
 }
-&lt;/script>
+</script>
 
-&lt;/head>
-&lt;body>
+</head>
+<body>
 
-    &lt;input type="text" name="telefone" id="telefone" maxlength="15" />
+    <input type="text" name="telefone" id="telefone" maxlength="15" />
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```

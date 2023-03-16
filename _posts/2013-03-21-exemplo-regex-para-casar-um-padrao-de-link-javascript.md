@@ -13,32 +13,33 @@ Exemplo básico de uso do método [b].test()[/b] do objeto Regex.
 
 Vou casar todos os links, que terminem em 32 caracteres(letras ou números).
 
-<pre name="code" class="javascript">&lt;a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim&lt;/a>
-&lt;a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim&lt;/a>
-&lt;a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625aa">nao&lt;/a>
-&lt;a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim&lt;/a>
+``` js
+<a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim</a>
+<a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim</a>
+<a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625aa">nao</a>
+<a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625">sim</a>
 
-&lt;a href="http://www.site.com.br">nao&lt;/a>
+<a href="http://www.site.com.br">nao</a>
 
-&lt;a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625aa">nao&lt;/a>
-&lt;a href="http://www.site.com.br/caminho/pasta/123412341234aaaabbbbccccddddeeee">sim&lt;/a>
+<a href="http://www.site.com.br/caminho/pasta/c8f388d1917311e2a180000c29d05625aa">nao</a>
+<a href="http://www.site.com.br/caminho/pasta/123412341234aaaabbbbccccddddeeee">sim</a>
 
 
-&lt;style>
+<style>
 .t { color: #f00; }
-&lt;/style>
-&lt;script>
-	var as = document.getElementsByTagName('a'),
-		max = as.length;
+</style>
+<script>
+  var as = document.getElementsByTagName('a'),
+    max = as.length;
 
-	while(max--){
-		var er = /\/[a-z0-9]{32}$/gi;
+  while(max--){
+    var er = /\/[a-z0-9]{32}$/gi;
 
-		if(er.test(as[max].href)){
-			as[max].className = 't';
-		}
-	}
-&lt;/script>
-</pre>
+    if(er.test(as[max].href)){
+      as[max].className = 't';
+    }
+  }
+</script>
+```
 
 Mais um código que fiz para o iMasters, e resolvi postar aqui. =)

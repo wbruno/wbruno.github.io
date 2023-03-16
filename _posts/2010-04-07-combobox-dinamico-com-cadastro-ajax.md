@@ -17,7 +17,8 @@ Em funcionamento:
 
 **config.inc.php**
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
         header("Content-Type: text/html; charset=ISO-8859-1");
 
@@ -38,11 +39,13 @@ Em funcionamento:
         define('USUARIO', 'root');
         define('SENHA', '123');
         define('BANCO', 'ajax');
-//*/</pre>
+//*/
+```
 
 **init.inc.php**
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
         define('BASE_PATH', realpath(dirname(__FILE__)).'/');
 
         if( !file_exists(BASE_PATH.'config.inc.php') )
@@ -71,7 +74,7 @@ Em funcionamento:
                 $mysqli = Db::pegaConexao();//pegando uma instância da conexão
                 $sql = "SELECT `id` AS `value`, `nome` AS `label` FROM `cidade` {$where}";
 
-                return $mysqli-&gt;query( $sql );
+                return $mysqli->query( $sql );
         }
         function comboCidade( $where=null )
         {
@@ -81,11 +84,11 @@ Em funcionamento:
         }
         function montaSelect( $query )
         {
-                if( $query-&gt;num_rows )
-                        while( $dados = $query-&gt;fetch_object() )
-                                $opt .= '&lt;option value="'.$dados-&gt;value.'"&gt;'.$dados-&gt;label.'&lt;/option&gt;'."\n";
+                if( $query->num_rows )
+                        while( $dados = $query->fetch_object() )
+                                $opt .= '<option value="'.$dados->value.'">'.$dados->label.'</option>'."\n";
                 else
-                        $opt = '&lt;option value="0"&gt;Nenhum registro&lt;/option&gt;';
+                        $opt = '<option value="0">Nenhum registro</option>';
 
                 return $opt;
         }
@@ -97,7 +100,7 @@ Em funcionamento:
                         (`id`, `nome`)
                         VALUES (NULL, '{$nome}')";
 
-                return $mysqli-&gt;query( $sql );
+                return $mysqli->query( $sql );
         }
         function isPost()
         {
@@ -129,9 +132,9 @@ Em funcionamento:
                 $query = queryCidade( $where );
 
                 $json = ' [';
-                if( $query-&gt;num_rows &gt; 0 )
-                        while( $dados = $query-&gt;fetch_object() )
-                                $json .= '{"nome":"'.$dados-&gt;label.'","id":"'.$dados-&gt;value.'"}, ';
+                if( $query->num_rows > 0 )
+                        while( $dados = $query->fetch_object() )
+                                $json .= '{"nome":"'.$dados->label.'","id":"'.$dados->value.'"}, ';
                 else
                         $json .= '{"nome": "Não Encontrado"}';
 
@@ -143,16 +146,17 @@ Em funcionamento:
         {
                 $city = utf8_decode( $cidade );
                 $query = queryCidade( " WHERE nome = '{$city}'" );
-                if( $query-&gt;num_rows )
+                if( $query->num_rows )
                         return $city.' já existe!';
                 else
                         return cadastraCidade( $cidade );
         }
-</pre>
+```
 
 **retorno.php**
 
-<pre name="code" class="javascript">&lt;?php
+``` php
+<?php
         include 'init.inc.php';
 
         if( isset($_GET['param']) )
@@ -162,20 +166,22 @@ Em funcionamento:
         if( getPost('cidade') )
         {
                 echo existeCidade( getPost('cidade') );
-        }</pre>
+        }
+```
 
 **form-cidade.php**
 
-<pre name="code" class="html">&lt;?php include 'init.inc.php'; ?&gt;
-&lt;html&gt;
-&lt;head&gt;
-        &lt;title&gt;Formulário de Cadastro&lt;/title&gt;
-        &lt;meta name="author" content="William Bruno" /&gt;
+``` php
+<?php include 'init.inc.php'; ?>
+<html>
+<head>
+        <title>Formulário de Cadastro</title>
+        <meta name="author" content="William Bruno" />
 
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-        &lt;script type="text/javascript" src="jquery-1.4.2.min.js"&gt;&lt;/script&gt;
-        &lt;script type="text/javascript"&gt;
+        <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+        <script type="text/javascript">
         $(document).ready(function(){
                 $("a[rel*='popup']").click(function( e ){
                         e.preventDefault();
@@ -213,38 +219,40 @@ Em funcionamento:
                 $( option ).append( '' );
                 $("select[name='"+el+"']").append( option );
         }
-        &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-        &lt;form action="" method="post"&gt;
-                &lt;label&gt;Cidade: &lt;select name="cidade"&gt;
-                        &lt;option value=""&gt;&lt;/option&gt;
-&lt;?php echo comboCidade(); ?&gt;
-                &lt;/select&gt;&lt;/label&gt;
-                &lt;a href="cadastrar-cidade.php" rel="popup; width=300px, height=150px, top=150px, left=300px;"&gt;Cadastrar Cidade&lt;/a&gt;
+        </script>
+</head>
+<body>
+        <form action="" method="post">
+                <label>Cidade: <select name="cidade">
+                        <option value=""></option>
+<?php echo comboCidade(); ?>
+                </select></label>
+                <a href="cadastrar-cidade.php" rel="popup; width=300px, height=150px, top=150px, left=300px;">Cadastrar Cidade</a>
 
-                &lt;img src="ico-loading.gif" alt="" style="display: none;" /&gt;
-        &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+                <img src="ico-loading.gif" alt="" style="display: none;" />
+        </form>
+</body>
+</html>
+```
 
 **cadastrar-cidade.php**
 
-<pre name="code" class="javascript">&lt;?php
+``` php
+<?php
         include 'init.inc.php';
         $msg = null;
         if( isPost() )
                 $msg = existeCidade( getPost('cidade') ) ? 'Cadastro efetuado' : 'Ocorreu um erro';
-?&gt;
-&lt;html&gt;
-&lt;head&gt;
-        &lt;title&gt;Formulário de Cadastro&lt;/title&gt;
-        &lt;meta name="author" content="William Bruno" /&gt;
+?>
+<html>
+<head>
+        <title>Formulário de Cadastro</title>
+        <meta name="author" content="William Bruno" />
 
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-        &lt;script type="text/javascript" src="jquery-1.4.2.min.js"&gt;&lt;/script&gt;
-        &lt;script type="text/javascript"&gt;
+        <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+        <script type="text/javascript">
         $(document).ready(function(){
                 $("a.voltar").hide();
                 $("input[name='fechar']").click(function(){
@@ -284,20 +292,21 @@ Em funcionamento:
                         window.opener.carregarCombo( '', 'cidade' );
         }
         window.onbeforeunload = fechar_pop;
-        &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;?php if( !$msg ){ ?&gt;
-        &lt;form action="" method="post"&gt;
-                &lt;label&gt;Cidade: &lt;input type="text" name="cidade" /&gt;&lt;/label&gt;
-                &lt;label&gt;&lt;input type="submit" name="enviar" value="Enviar" /&gt;&lt;/label&gt;
-                &lt;img src="ico-loading.gif" alt="" style="display: none;" /&gt;
-                &lt;p id="retorno"&gt;&lt;/p&gt;
-        &lt;/form&gt;
-&lt;?php } else echo $msg; ?&gt;
-        &lt;a href="form-cidade.php" class="voltar"&gt;voltar&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        </script>
+</head>
+<body>
+<?php if( !$msg ){ ?>
+        <form action="" method="post">
+                <label>Cidade: <input type="text" name="cidade" /></label>
+                <label><input type="submit" name="enviar" value="Enviar" /></label>
+                <img src="ico-loading.gif" alt="" style="display: none;" />
+                <p id="retorno"></p>
+        </form>
+<?php } else echo $msg; ?>
+        <a href="form-cidade.php" class="voltar">voltar</a>
+</body>
+</html>
+```
 
 **ico-loading.gif**
   

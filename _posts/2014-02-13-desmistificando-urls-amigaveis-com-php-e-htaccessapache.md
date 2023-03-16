@@ -26,15 +26,15 @@ A quantidade de pessoas que perguntam como fazer URLs amigáveis no forum.imaste
 
 As suas tags de link e a forma com que vc abrirá os seus conteúdos, você mesmo terá que alterar. Então onde você usava:
 
-<pre>&lt;a href="?page=contato">Contato&lt;/a></pre>
+```<a href="?page=contato">Contato</a>```
 
 Agora passará a escrever:
 
-<pre>&lt;a href="/contato">Contato&lt;/a></pre>
+```<a href="/contato">Contato</a>```
 
 E se precisar de mais parâmetros, indique-os:
 
-<pre>&lt;a href="/edit/user/1">Editar usuário&lt;/a></pre>
+```<a href="/edit/user/1">Editar usuário</a>```
 
 Isso significa, que o servidor irá receber a requisição em <var>/contato</var>, ou <var>/edit/user/1</var>, e com a RewriteEngine, irá traduzir para o que vc realmente queria dizer, que era <var>?page=contato</var>, ou <var>?action=edit&model=user&id=1</var>.
 
@@ -54,16 +54,18 @@ Não é necessário re-startar o servidor após escrever suas regras, mas cuidad
 
 Comece, e para isso vc precisa &#8220;ligar&#8221; a engine de reescrita:
 
-<pre>RewriteEngine On</pre>
+```RewriteEngine On```
 
 Lembrando que ela já deve estar instalada no apache, a linha acima, apenas &#8220;avisa&#8221; que vc irá utilizá-la. O meu arquivo para saber se está funcionando e receber a requisição será o **teste.php**, com o seguinte conteúdo:
 
-<pre>&lt;?php 
-var_dump($_GET);</pre>
+``` php
+<?php 
+var_dump($_GET);
+```
 
 O que eu quero é acessar a url <u>/edit/user/1</u>, e receber o seguinte no GET:
 
-<pre>array(3) {
+```array(3) {
   ["action"]=>
   string(4) "edit"
   ["model"]=>
@@ -71,7 +73,7 @@ O que eu quero é acessar a url <u>/edit/user/1</u>, e receber o seguinte no GET
   ["id"]=>
   string(1) "1"
 }
-</pre>
+```
 
 Ok, vamos lá.
 
@@ -89,11 +91,11 @@ O que eu quero realmente receber na aplicação é `teste.php?action=$1&model=$2
 
 Bem simples, é composta por 3 partes:
 
-<pre>RewriteRule &lt;regular expression> &lt;url to translate> [FLAGs]</pre>
+```RewriteRule <regular expression> <url to translate> [FLAGs]```
 
 Aplicando ao caso acima, fica:
 
-<pre>RewriteRule ^([a-z]+)\/([a-z]+)\/([0-9]+)$ teste.php?action=$1&model=$2&id=$3 [NC,L]</pre>
+```RewriteRule ^([a-z]+)\/([a-z]+)\/([0-9]+)$ teste.php?action=$1&model=$2&id=$3 [NC,L]```
 
 Adicionei ^ no início da ER, para indicar que a requisição deve **começar** com aquele padrão, e **$** para indicar que ali a ER **acaba**, e não deve casar nada mais diferente disso.
   
@@ -101,7 +103,7 @@ Utilizei as flags [NC] para ignorar sensitive case, então se a url for: <u>http
 
 E para <u>/contato</u>, a minha ER fica simplesmente:
 
-<pre>RewriteRule ^([a-z]+)\/?$ teste.php?page=$1 [NC,L]</pre>
+```RewriteRule ^([a-z]+)\/?$ teste.php?page=$1 [NC,L]```
 
 note que os padrões não são conflitantes, então podem coexistir no mesmo htaccess.
 
@@ -115,7 +117,7 @@ Funcionando:
 
 Alguns frameworks e alguns preguiçosos têm a mania de fazer coisas parecidas com isso:
 
-<pre>RewriteRule . /index.php [L] #retirei esse do wordpress :p</pre>
+```RewriteRule . /index.php [L] #retirei esse do wordpress :p```
 
 e ai parsear toda a URL do lado da aplicação.
   

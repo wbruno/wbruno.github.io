@@ -59,34 +59,34 @@ Boa Sorte!
 
 ## Minha solução com 2 loops encaixados:
 
-<pre name="code" class="php">&lt;style type="text/css">
+<pre name="code" class="php"><style type="text/css">
 #grid td {
-	width: 25px;
-	height: 25px;
-	text-align: center;
+  width: 25px;
+  height: 25px;
+  text-align: center;
 }
 #grid td.diagonal {
-	background: #000;
-	color: #f00;
+  background: #000;
+  color: #f00;
 }
-&lt;/style>
-&lt;table id="grid">
-&lt;?php
-	for( $i=1; $i&lt;10; $i++ )
-	{
-		echo '&lt;tr>';
-		for( $j=1; $j&lt;10; $j++ )
-		{
-			$class = $i==$j || $i+$j==10 ? ' class="diagonal"' : '';
-			$text = $i==5 || $j==5 ? '+' : '-';
+</style>
+<table id="grid">
+<?php
+  for( $i=1; $i<10; $i++ )
+  {
+    echo '<tr>';
+    for( $j=1; $j<10; $j++ )
+    {
+      $class = $i==$j || $i+$j==10 ? ' class="diagonal"' : '';
+      $text = $i==5 || $j==5 ? '+' : '-';
 
-			echo '&lt;td'.$class.'>'.$text.'&lt;/td>';
-		}
-		echo '&lt;/tr>';
-	}
+      echo '<td'.$class.'>'.$text.'</td>';
+    }
+    echo '</tr>';
+  }
 
 ?>
-&lt;/table></pre>
+</table>```
 
 ## Agora, resolvam com um único loop!
 
@@ -96,36 +96,36 @@ Mesma imagem, mesmas regras. **Consegue ?**
 
 ## Minha solução com apenas um único loop
 
-<pre name="code" class="php">&lt;style type="text/css">
+<pre name="code" class="php"><style type="text/css">
 #grid td {
-	width: 25px;
-	height: 25px;
-	text-align: center;
+  width: 25px;
+  height: 25px;
+  text-align: center;
 }
 #grid td.diagonal {
-	background: #000;
-	color: #f00;
+  background: #000;
+  color: #f00;
 }
-&lt;/style>
-&lt;table id="grid">
-&lt;tr>
-&lt;?php
-	$j = 1;
-	$k = 1;
-	for( $i=0; $i&lt;81; $i++ )
-	{
-		$ctrl = $i!=0 && $i%9==0;
-		if( $ctrl ) echo '&lt;/tr>'.PHP_EOL.'&lt;tr>'.PHP_EOL;
+</style>
+<table id="grid">
+<tr>
+<?php
+  $j = 1;
+  $k = 1;
+  for( $i=0; $i<81; $i++ )
+  {
+    $ctrl = $i!=0 && $i%9==0;
+    if( $ctrl ) echo '</tr>'.PHP_EOL.'<tr>'.PHP_EOL;
 
-		$class = $j==$k || $j+$k==10 ? ' class="diagonal"' : '';
-		$text = $j==5 || $k==5 ? '+' : '-';
+    $class = $j==$k || $j+$k==10 ? ' class="diagonal"' : '';
+    $text = $j==5 || $k==5 ? '+' : '-';
 
-		echo "\t".'&lt;td'.$class.'>'.$text.'&lt;/td>'.PHP_EOL;
+    echo "\t".'<td'.$class.'>'.$text.'</td>'.PHP_EOL;
 
-		$j = $j>=9 ? 1 : $j+1;
-		$k = $j==1 ? $k+1 : $k;
-	}
+    $j = $j>=9 ? 1 : $j+1;
+    $k = $j==1 ? $k+1 : $k;
+  }
 ?>
-&lt;/tr>
-&lt;/table>
-</pre>
+</tr>
+</table>
+```

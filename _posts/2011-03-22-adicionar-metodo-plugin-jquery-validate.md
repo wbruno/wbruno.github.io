@@ -19,12 +19,13 @@ Passando por aqui apenas para compartilhar, um método adicional que desenvolvi 
 
 <!--more-->
 
-<pre name="code" class="javascript">$(document).ready(function(){
-	jQuery.validator.addMethod("notEquals", function(value, element, config){
-		return value!=config;
-	}, 'Digite um valor');
+``` js
+$(document).ready(function(){
+  jQuery.validator.addMethod("notEquals", function(value, element, config){
+    return value!=config;
+  }, 'Digite um valor');
 });
-</pre>
+```
 
 Bom.. olhando assim, para até complicado, mas com calma, dá para perceber que ele não faz nada além de retornar um booleano.
 
@@ -36,16 +37,19 @@ Lendo direitinho, e até vendo métodos de outras pessoas para exemplo e guia, v
 
 Voltando, agora que adicionamos um método de validação ao plugin, basta usá-lo…
 
-<pre name="code" class="javascript">rules:{
-		empresa: {
-		required: true, notEquals: 'Empresa'},</pre>
+``` js
+rules:{
+    empresa: {
+    required: true, notEquals: 'Empresa'},
+```
 
 E então a mensagem, caso o usuário não digite:
 
-<pre name="code" class="javascript">empresa: {
-		required: "Digite o nome da sua empresa",
-		notEquals: "Digite o nome da sua empresa!" },
-</pre>
+``` js
+empresa: {
+    required: "Digite o nome da sua empresa",
+    notEquals: "Digite o nome da sua empresa!" },
+```
 
 Note o **notEquals**.
 

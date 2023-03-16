@@ -29,11 +29,13 @@ Isso e nada mais. Se fizeram com a lib, dá para fazer sem. E o mesmo se aplica,
   
 Vamos olhar por partes:
 
-<pre name="code" class="javascript">$(document)</pre>
+``` js
+$(document)```
 
 Estamos invocando **uma função**, chamada $, passando o objeto global <u>document</u> para ela. Nada de mais.
 
-<pre name="code" class="javascript">.ready()</pre>
+``` js
+.ready()```
 
 Agora conseguimos usar um método apartir da função anterior, pq jQuery, foi escrito com base em no pattern **Fluent Interface**. O método ready(), aguarda que o DOM esteja pronto. E isso acontece **antes** do evento window.onload, pois o window.onload espera também que as imagens estejam todas carregadas. Enqnto o .ready() aguarda apenas a marcação html.
 
@@ -41,15 +43,19 @@ Agora conseguimos usar um método apartir da função anterior, pq jQuery, foi e
 
 Okay, continuando temos sempre um:
 
-<pre name="code" class="javascript">function(){
+``` js
+function(){
 
-}</pre>
+}
+```
 
 Poxa! e oque é isso ? é apenas uma function, só que _sem nome_ certo ?
   
 estamos acostumados com funções assim:
 
-<pre name="code" class="javascript">function a(){}</pre>
+``` js
+function a(){}
+```
 
 , sendo então **a**, o _nome_ da nossa função.
 
@@ -59,28 +65,34 @@ caramba! qnta coisa que fazíamos sem notar, ne?!
 
 Hum.. e qual o ponto interessante disso ? é que devemos poder fazer:
 
-<pre name="code" class="javascript">var a = function(){
-		alert( 'ae' );
-	};
-	$(document).ready( a );</pre>
+``` js
+var a = function(){
+    alert( 'ae' );
+  };
+  $(document).ready( a );
+```
 
 que pelo menos tecnicamente, deve funcionar, certo ?
 
 Certíssimo! e funciona. Deu na mesma, se tivessemos feito:
 
-<pre name="code" class="javascript">$(document).ready(function(){
-		alert( 'ae' );
-	});</pre>
+``` js
+$(document).ready(function(){
+    alert( 'ae' );
+  });
+```
 
 Não estou roubando, se fosse um plugin:
 
-<pre name="code" class="javascript">var a = function(){
-		$('a[rel*=facebox]').facebox({
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		});
-	};
-	$(document).ready( a );</pre>
+``` js
+var a = function(){
+    $('a[rel*=facebox]').facebox({
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    });
+  };
+  $(document).ready( a );
+```
 
 também continuaria funcionando. Tudo normal.
 
@@ -90,14 +102,16 @@ Mas olha que interessante agora, o plugin recebe como parâmetro um objeto javas
   
 Só que estamos jogando esse objeto diretamente ali. Se por algum motivo tivermos que instanciar novamente o mesmo plugin, já vi códigos assim:
 
-<pre name="code" class="javascript">$('a[rel*=facebox]').facebox({
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		});
-		$('a#tal').facebox({
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		});</pre>
+``` js
+$('a[rel*=facebox]').facebox({
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    });
+    $('a#tal').facebox({
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    });
+```
 
 hum&#8230; deve ser evidente a duplicação de instruções.
   
@@ -107,32 +121,37 @@ Juntar em uma só!
   
 se não pudermos fazer:
 
-<pre name="code" class="javascript">$('a[rel*=facebox], a#tal').facebox(</pre>
+``` js
+$('a[rel*=facebox], a#tal').facebox(```
 
 por qq motivo, seja falta de suporte a arrays de objetos do plugin, ou escopos diferentes, sei lá&#8230; podemos dar um nome para esse nosso jSON de configuração, e então enviar ele:
 
-<pre name="code" class="javascript">var configs = {
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		};
-	$(document).ready(function(){
-		$('a[rel*=facebox]').facebox( configs );
-		$('a#tal').facebox( configs );
-	});</pre>
+``` js
+var configs = {
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    };
+  $(document).ready(function(){
+    $('a[rel*=facebox]').facebox( configs );
+    $('a#tal').facebox( configs );
+  });
+```
 
 a beleza disso, é que tudo funciona como deveria, afinal estamos falando de javascript, e a estrutura da linguagem permite essas coisas.
 
 Agora colocando tudode uma vez:
 
-<pre name="code" class="javascript">var configs = {
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		};
-	var a = function(){
-		$('a[rel*=facebox]').facebox( configs );
-		$('a#tal').facebox( configs );
-	};
-	$(document).ready( a );</pre>
+``` js
+var configs = {
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    };
+  var a = function(){
+    $('a[rel*=facebox]').facebox( configs );
+    $('a#tal').facebox( configs );
+  };
+  $(document).ready( a );
+```
 
 deve estar meio estranho, ou até ilegível, já que não estamos acostumados com isso, porém, é normal a forma com que escrevi, e é exatamente isso que fazemos todos os dias.
 
@@ -142,12 +161,13 @@ Só que sem notar. E esse é o problema. Somos mais fortes e programaremos melho
 
 Hum&#8230; essa é interessante:
 
-<pre name="code" class="javascript">(function( $ ){
-		$(document).ready(function(){
-			alert('ae');
-		});
-	})(jQuery);
-</pre>
+``` js
+(function( $ ){
+    $(document).ready(function(){
+      alert('ae');
+    });
+  })(jQuery);
+```
 
 E ai? que diabos é isso ?
   

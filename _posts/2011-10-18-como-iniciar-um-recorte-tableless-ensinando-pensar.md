@@ -66,29 +66,31 @@ Uma técnica que tenho gostado bastante de utilizar é a seguinte:
 <div style="clear: both;">
 </div>
 
-<pre class="html" name="code">&lt;div id="header">
-    &lt;div class="content">
+<pre class="html" name="code"><div id="header">
+    <div class="content">
         aqui dentro o conteudo do topo
-    &lt;/div><!-- /content -->
-&lt;/div>&lt;!-- /header -->
+    </div><!-- /content -->
+</div><!-- /header -->
 ...
 
 
-&lt;div id="footer">
-    &lt;div class="content">
+<div id="footer">
+    <div class="content">
         aqui dentro o conteudo do topo
-    &lt;/div>
+    </div>
 
 <!-- /content -->
-&lt;/div>&lt;!-- /footer -->
-</pre>
+</div><!-- /footer -->
+```
 
 sendo a class **.content**, a nossa div responsável por centralizar o conteudo, e as externas **#header**, e **#footer**, os elementos que vão ter o nosso background 100% de largura.
 
-<pre name="code" class="css">.content {
+``` css
+.content {
     width: 960px;
     margin: 0 auto;
-}</pre>
+}
+```
 
 [<img src="/wp-content/uploads/2011/10/bgtopo-300x25.jpg" alt="" title="bgtopo" width="300" height="25" class="aligncenter size-medium wp-image-1507" srcset="/wp-content/uploads/2011/10/bgtopo-300x25.jpg 300w, /wp-content/uploads/2011/10/bgtopo.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2011/10/bgtopo.jpg)
 
@@ -98,15 +100,15 @@ ok ? repetimos o mesmo processo anterior para definir o filete de bg do rodapé,
 
 aqui, tem aquela sidebar laranja, que pede obviamente um float : left; e o restante na direita.
 
-<pre class="html" name="code">&lt;div id="content" clas="content">
-    &lt;div id="sidebar">
+<pre class="html" name="code"><div id="content" clas="content">
+    <div id="sidebar">
         conteudo da sidebar laranja
-    &lt;/div>&lt;!-- /sidebar -->
-    &lt;div id="main">
+    </div><!-- /sidebar -->
+    <div id="main">
         aquelas 3 caixinhas, o produto em destaque(slideshow)..
-    &lt;/div>&lt;!-- /main -->
-&lt;/div>&lt;!-- /content -->
-</pre>
+    </div><!-- /main -->
+</div><!-- /content -->
+```
 
 Note que idento corretamente meu HTML, e uso um comentário para marcar o final de cada bloco.
 

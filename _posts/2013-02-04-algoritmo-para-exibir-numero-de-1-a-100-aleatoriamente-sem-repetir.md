@@ -18,22 +18,24 @@ Ele queria saber como exibir aleatoriamente números de 1 a 100, sem repeti-los.
 Bom, primeiro precisamos dos tais números de 1 a 100
 
 <pre name="code" class="php">$arr = range(1,100);
-</pre>
+```
 
 Ok, então preciso exibir cada um desses números aleatoriamente, sem repeti-los.
   
 O primeiro código que me veio na cabeça, foi o seguinte:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 $arr = range(1,100);
 
 while( sizeof( $arr )>0 )
 {
-	shuffle( $arr );
-	echo $arr[0], '&lt;br />';
-	unset( $arr[0] );
-}</pre>
+  shuffle( $arr );
+  echo $arr[0], '<br />';
+  unset( $arr[0] );
+}
+```
 
 Não é o &#8220;melhor&#8221; código, nem o mais performático. Mas não é isso que me fez escrevê-lo.
   
@@ -47,15 +49,17 @@ Se desordenei o array uma vez, não preciso ficar fazendo isso a cada elemento q
 
 Então, esse &#8220;incomodo&#8221; que estava atrapalhando a performance, e tornava o algoritmo mais complicado do que preciso, podemos jogar para fora do loop, e apenas exibir o array:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 $arr = range(1,100);
 
 shuffle( $arr );
 foreach( $arr AS $each )
 {
-	echo $each, '&lt;br />';
-}</pre>
+  echo $each, '<br />';
+}
+```
 
 Bem melhor.
   

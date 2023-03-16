@@ -1,6 +1,6 @@
 ---
 id: 895
-title: 'Nem só de &lt;div&gt; vive um desenvolvedor FrontEnd'
+title: 'Nem só de <div> vive um desenvolvedor FrontEnd'
 date: 2011-05-17T07:00:07+00:00
 author: William Bruno
 layout: post
@@ -37,20 +37,23 @@ Repita estes questionamentos com a tag <span>.
 
 Alguns códigos que vejo, me dão vontade de clamar por um movimento **DivLess**.
 
-<pre name="code" class="html">&lt;div id="menu">
-    &lt;ul>
-         &lt;li>..</pre>
+``` html
+<div id="menu">
+    <ul>
+         <li>..```
 
 Tirando raros casos, e efeitos &#8216;complicados&#8217;, precisava da div ? Não poderia ter feito simplesmente e apenas:
 
-<pre name="code" class="html">&lt;ul id="menu">
-     &lt;li>..</pre>
+``` html
+<ul id="menu">
+     <li>..```
 
 hein?!
 
 Ou então 
 
-<pre name="code" class="html">&lt;div id="logo">&lt;img src="....</pre>
+``` html
+<div id="logo"><img src="....```
 
 > _Quase tão feio quanto fazer um website inteiro com table, é desperdiçar marcação HTML vazia de semântica._
 
@@ -58,7 +61,9 @@ A tag <img /> aceita e muito bem o atributo ID.
 
 Para alguns pode parecer absurdo, porém já vi:
 
-<pre name="code" class="css">span.bold { font-weight: bold; }</pre>
+``` css
+span.bold { font-weight: bold; }
+```
 
 Para os que não entenderam o que eu quis dizer, ou não acham isso um soco no próprio estômago, lhes digo: é absurdo ! Esse tipo de declaração deve soar absurda.
 

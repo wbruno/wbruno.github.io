@@ -23,25 +23,28 @@ Condicionais são **estruturas de controle** do <u>fluxo</u> dos nossos programa
 
 A grosso modo, se uma certa **condição** for satisfeita, então o bloco de código relativo e encadeado a essa condição deve ser executado.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 date_default_timezone_set('America/Sao_Paulo');
 
-if( date('G')>6 && date('G')&lt;=12 )
+if( date('G')>6 && date('G')<=12 )
    echo 'Olá, ainda está de dia !';
-else if( date('G')>12 && date('G')&lt;=18 )
+else if( date('G')>12 && date('G')<=18 )
     echo 'Caramba! Olha que horas são! já devo lhe dizer Boa Tarde!';
-else if( date('G')>18 && date('G')&lt;=23 )
+else if( date('G')>18 && date('G')<=23 )
     echo 'Tá de noite!';
 else if( date('G')>23 && date('G')>=6 )
     echo 'Ta de "madrugada" ainda.. vai dormir!';
-</pre>
+```
 
 Dependendo da hora do dia(no servidor), será exibida uma mensagem ao visitante.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 while( true ){
     echo 'Eu gosto de SODA Limonada!';
-}</pre>
+}
+```
 
 hehe, famoso loop infinito.. sim, eu realmente adoro Soda.
 
@@ -57,7 +60,8 @@ Não se repita!
 
 Vale para tudo no desenvolvimento, porém com condicionais é ainda um pouco mais gritante:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
     if( isset( $_GET['user'] ) && $_GET['action']=='editar' )
     {
         //faz outra coisa
@@ -71,7 +75,7 @@ Vale para tudo no desenvolvimento, porém com condicionais é ainda um pouco mai
         //faz algo
     }
     //.. continua..
-</pre>
+```
 
 Assim que batermos o olho no código, nossos olhos de programadores devem ser capazes de fazer mais ou menos isso aqui:
 
@@ -81,7 +85,8 @@ Ou seja, &#8220;borrei mentalmente&#8221; o que variava alí, e encherguei uma d
 
 A resposta, para evitar essa repetição, é reagrupar logicamente os testes. Estou demonstrando esse caso simples, para exemplificar, e também ser mais fácil de mostrar aqui no post. O <del datetime="2011-10-19T18:44:03+00:00">correto</del>melhor seria:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
     if( isset( $_GET['user'] )
     {
         if( $_GET['action']=='editar' )
@@ -98,7 +103,7 @@ A resposta, para evitar essa repetição, é reagrupar logicamente os testes. Es
         }
     }//fecha if get user
     //.. continua..
-</pre>
+```
 
 bem mais legível ne?!
 
@@ -118,23 +123,27 @@ O meu programa precisa fazer algo se entrar bla, ble, bli OU blo. E outra coisa 
 
 O primeiro rascunho seria:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 if( $ext=='bla' || $ext=='ble' || $ext=='bli' || $ext=='blo'  ){
     //tal coisa
 }
 else { //blu
     //outra coisa
-}</pre>
+}
+```
 
 O seguinte resulta na mesma coisa:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 if( $ext=='blu'  ){
     //outra coisa
 }
 else { //bla, ble, bli ou blo
     //tal coisa
-}</pre>
+}
+```
 
 O código ficou bem mais simples ne?!
 
@@ -146,12 +155,13 @@ O indicativo que podemos resolver pensando o contrário, é qndo estivermos nos 
 
 Podemos patinar e ficar horas tentando escrever complexos testes, se não formos capazes de identificar padrões nos testes, e até quem sabe, utilizarmos uma Expressão Regular para simplificar as coisas.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 if( $q=='Localweb' || $q=='Loucaweb' || $q=='Lokaweb' || $q=='LokaWeb' ){
     //se o visitante queria digitar Locaweb, mas errou algum pedaço..
     echo 'Você tentou digitar Locaweb, mas digitou: '.$q;
 }
-</pre>
+```
 
 Existem as mais diversas e loucas variações para as tentativas, porém todos concordam que começa com L, e termina com web.
 
@@ -159,7 +169,8 @@ Além disso, case insensitive não deve importar, pois seria absurdo testarmos t
 
 Uma expressão regular tira isso de letra:
 
-<pre name="code" class="javascript">/l[a-z]+web/i</pre>
+``` js
+/l[a-z]+web/i```
 
 Depois vá refinando.
 

@@ -37,12 +37,14 @@ O Doctype já é bem mais simples e possível de decorar, do que do xhtml que es
 
 ## DOCTYPE html5
 
-<pre name="code" class="html">&lt;!DOCTYPE html></pre>
+``` html
+<!DOCTYPE html>```
 
 Isto no lugar do nosso velho amigo:
 
-<pre name="code" class="html">&lt;!!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"></pre>
+``` html
+<!!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">```
 
 ## Semântica html5
 
@@ -50,19 +52,23 @@ Existem as tags <var>header</var> e <var>footer</var>. Intuitivas, não ?
 
 Chega de:
 
-<pre name="code" class="html">&lt;div id="header"></pre>
+``` html
+<div id="header">```
 
 e
 
-<pre name="code" class="html">&lt;div id="footer"></pre>
+``` html
+<div id="footer">```
 
 agora podemos informar para os diversos meios de acesso que consomem as informações das nossas páginas, com essas 2 tags:
 
-<pre name="code" class="html">&lt;header id="header"></pre>
+``` html
+<header id="header">```
 
 e
 
-<pre name="code" class="html">&lt;footer id="footer"></pre>
+``` html
+<footer id="footer">```
 
 Podemos ter várias tags <var><header</var> num mesmo documento.
 

@@ -19,11 +19,12 @@ Temos um formulário, que será submetido para **mesma página**, em que ele se 
   
 <!--more-->
 
-<pre name="code" class="html">&lt;form action="" method="post">
-		&lt;input type="text" name="ae" value="ae" />
-		&lt;input type="submit" name="enviar" value="enviar" />
-	&lt;/form>
-</pre>
+``` html
+<form action="" method="post">
+    <input type="text" name="ae" value="ae" />
+    <input type="submit" name="enviar" value="enviar" />
+  </form>
+```
 
 Até ai tudo bem. Se pudessemos redirecionar o usuário para outra página, não teríamos o &#8216;problema do F5&#8217;.
   
@@ -31,7 +32,8 @@ Mas se não pudermos fazer isso, o form está na **index.php**, essa mesma proce
 
 Logo, precisamos notar que <u>não adianta</u> apenas tentar apagar o post enviado:
 
-<pre name="code" class="php">unset( $_POST );</pre>
+<pre name="code" class="php">unset( $_POST );
+```
 
 O unset(), apenas vai liberar memória do servidor, pois quando o usuário apertar F5, quem vai enviar o POST novamente, é o navegador.
 
@@ -43,29 +45,30 @@ Mas, numa situação em que o usuário pode querer realmente enviar novamente o 
 
 Então, precisamos criar essa diferença, ou seja, distinguir, se a requisição atual, é a mesma da vez passada ou não.
 
-<pre name="code" class="php">&lt;?php
-	session_start();
-	
-	if( $_SERVER['REQUEST_METHOD']=='POST' )
-	{
-		$request = md5( implode( $_POST ) );
-		
-		if( isset( $_SESSION['last_request'] ) && $_SESSION['last_request']== $request )
-		{
-			echo 'refresh';
-		}
-		else
-		{
-			$_SESSION['last_request']  = $request;
-			echo 'post';
-		}
-	}
+``` php
+<?php
+  session_start();
+  
+  if( $_SERVER['REQUEST_METHOD']=='POST' )
+  {
+    $request = md5( implode( $_POST ) );
+    
+    if( isset( $_SESSION['last_request'] ) && $_SESSION['last_request']== $request )
+    {
+      echo 'refresh';
+    }
+    else
+    {
+      $_SESSION['last_request']  = $request;
+      echo 'post';
+    }
+  }
 ?>
-	&lt;form action="" method="post">
-		&lt;input type="text" name="ae" value="ae" />
-		&lt;input type="submit" name="enviar" value="enviar" />
-	&lt;/form>
-</pre>
+  <form action="" method="post">
+    <input type="text" name="ae" value="ae" />
+    <input type="submit" name="enviar" value="enviar" />
+  </form>
+```
 
 =) Feito.
   

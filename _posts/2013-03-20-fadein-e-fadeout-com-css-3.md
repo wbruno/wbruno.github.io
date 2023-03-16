@@ -23,35 +23,36 @@ A especificação css3, trouxe uma nova propriedade chamada **transition**. E el
 
 ## Exemplo
 
-<pre name="code" class="javascript">&lt;img src="http://www.clipartsegifs.com.br/cliparts/variados/garfield/garfield_02.jpg" id="img-fade" />
-&lt;button id="btn-fade">FadeOut&lt;/button>
+``` js
+<img src="http://www.clipartsegifs.com.br/cliparts/variados/garfield/garfield_02.jpg" id="img-fade" />
+<button id="btn-fade">FadeOut</button>
 
-&lt;style>
+<style>
 #img-fade { transition: 2s; }
 .fade-out { opacity: 0; }
 .fade-in { opacity: 1; }
-&lt;/style>
+</style>
 
-&lt;script>
+<script>
 var id = function(el) {
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 var $btn = id('btn-fade'),
-	$img = id('img-fade');
+  $img = id('img-fade');
 
 $btn.onclick = function(){
-	var $this = this;
+  var $this = this;
 
 
-	if( $img.className ==='fade-out' ){
-		$img.className = 'fade-in';
-		$this.innerHTML = 'FadeOut';
-	} else {
-		$img.className = 'fade-out';
-		$this.innerHTML = 'FadeIn';
-	}
+  if( $img.className ==='fade-out' ){
+    $img.className = 'fade-in';
+    $this.innerHTML = 'FadeOut';
+  } else {
+    $img.className = 'fade-out';
+    $this.innerHTML = 'FadeIn';
+  }
 }
-&lt;/script>
-</pre>
+</script>
+```
 
 É isso, já usou ? comente.

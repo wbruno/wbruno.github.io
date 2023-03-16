@@ -27,17 +27,18 @@ Lembrando que o intuito do artigo não é ensinar programação orientada a obje
 
 A listagem dos itens é super trivial:
 
-<pre>&lt;?php
+``` php
+<?php
   $query = $mysqli->query('SELECT id, name FROM optional');
   while($row = $query->fetch_object()) {
 ?>
-    &lt;label>
-      &lt;input type="checkbox" name="optional[]" value="&lt;?php echo $row->id; ?>" />
-    &lt;?php echo $row->name; ?>&lt;/label>
-&lt;?php
+    <label>
+      <input type="checkbox" name="optional[]" value="<?php echo $row->id; ?>" />
+    <?php echo $row->name; ?></label>
+<?php
   }
 ?>
-</pre>
+```
 
 Apenas conecto no MySQL com a lib **mysqli** e imprimo um checkbox para cada registro da tabela.
 
@@ -49,23 +50,23 @@ Ela faz um relacionamento N:N (um veículo para N opcionais, e 1 opcional para N
 
 Para inserir nessa tabela, precisamos mais ou menos da seguinte string sql:
 
-<pre>INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42 2)</pre>
+```INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42 2)```
 
 Nessa query acima, estamos inserindo o opcional 1 e 2 para o veículo 42.
 
 Se quisessemos inserir mais o opcional 5, bastaria:
 
-<pre>INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5)</pre>
+```INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5)```
 
 Okay ?
 
 Fazer essa string é uma simples maniplação de array. Lembra que o name do checkbox é <var>name=&#8221;optional[]&#8221;</var> então, no php irá chegar um array:
 
-<pre>$_POST['optional'][0], $_POST['optional'][1], $_POST['optional'][2]</pre>
+```$_POST['optional'][0], $_POST['optional'][1], $_POST['optional'][2]```
 
 Visto isso, vamos montar o INSERT:
 
-<pre>//optional insert
+```//optional insert
   $values = [];
   foreach($optionals AS $id_optional) {
     $values[] = "({$id}, {$id_optional})";
@@ -74,17 +75,18 @@ Visto isso, vamos montar o INSERT:
 
   $sql = "INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES {$values}";
   echo $sql;
-  $query = $mysqli->query($sql)or die($mysqli->error);</pre>
+  $query = $mysqli->query($sql)or die($mysqli->error);
+```
 
 Simples, não ? a saída do echo $sql, será a string que escrevi acima.
 
 Comecei pelos opcionais para matar logo a sua curiosidade, mas para deixar registrado o INSERT simples do veículo tem apenas as colunas que são atributos da entidade veículo:
 
-<pre>$sql = "INSERT INTO vehicles (id, name, year, model) VALUES(NULL, '{$name}', '{$year}', '{$model}')";
-  echo $sql, '&lt;br />&lt;br />';
+```$sql = "INSERT INTO vehicles (id, name, year, model) VALUES(NULL, '{$name}', '{$year}', '{$model}')";
+  echo $sql, '<br /><br />';
   $query = $mysqli->query($sql)or die($mysqli->error);
 
-  $id = $mysqli->insert_id;//ultimo id inserido no banco</pre>
+  $id = $mysqli->insert_id;//ultimo id inserido no banco```
 
 ## Os truques
 
@@ -100,8 +102,9 @@ Tente imaginar a lógica de atualizar os opcionais de um carro. Ele já possui a
 
 Um truque muito mais simples é remover tudo e depois inserir tudo o que vier.
 
-<pre>DELETE FROM vehicle_optional WHERE id_vehicle = 42;
-INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5);</pre>
+```DELETE FROM vehicle_optional WHERE id_vehicle = 42;
+INSERT INTO vehicle_optional (id_vehicle, id_optional) VALUES (42, 1),(42, 2),(42, 5);
+```
 
 ### Marque os checkboxes
 
@@ -109,7 +112,8 @@ Agora precisamos marcar os checkboxes na listagem durante a edição de um regis
 
 O truque aqui é puramente SQL e se baseia em uma subquery.
 
-<pre>SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;</pre>
+```SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
+```
 
 Pense no seguinte:
 
@@ -121,11 +125,11 @@ Fácil, já tinhamos feito isso.
 
 Aqui que entra a subquery.
 
-<pre>(SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id)</pre>
+```(SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id)```
 
 ela vai trazer a string &#8216;checked&#8217; apelidada como a coluna \`checked\` <var>AS `checked`</var> apenas nos registros do veiculo id = 1 que tiverem marcados. o/
 
-<pre>mysql> SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
+```mysql> SELECT `id`, `name`, (SELECT 'checked' FROM vehicle_optional WHERE id_vehicle = 1 AND id_optional = optional.id) AS `checked` FROM `optional`;
 +----+------------------+---------+
 | id | name             | checked |
 +----+------------------+---------+
@@ -143,11 +147,11 @@ ela vai trazer a string &#8216;checked&#8217; apelidada como a coluna \`checked\
 | 12 | wings            | NULL    |
 +----+------------------+---------+
 12 rows in set (0.00 sec)
-</pre>
+```
 
 E então vamos simplesmente imprimir isso no nosso input:
 
-<pre>&lt;input type="checkbox" name="optional[]" value="&lt;?php echo $row->id; ?>" &lt;?php echo $row->checked; ?>/></pre>
+```<input type="checkbox" name="optional[]" value="<?php echo $row->id; ?>" <?php echo $row->checked; ?>/>```
 
 Mágica.
 

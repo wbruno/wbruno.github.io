@@ -27,20 +27,20 @@ Então, vou deixar aqui como fiz:
 
 ## Primeiro: adicione um usuário no linux
 
-<pre># adduser wp --home /usr/share/wordpress/</pre>
+```# adduser wp --home /usr/share/wordpress/```
 
 A sintaxe desse comando é **adduser** <seu_usuario> **&#8211;home** <path\_desse\_usuario>
 
 ### Depois: Recupere o uid e gid desse usuário
 
-<pre># id wp
-uid=1000(wp) gid=1000(wp) groups=1000(wp)</pre>
+```# id wp
+uid=1000(wp) gid=1000(wp) groups=1000(wp)```
 
 A sintaxe é bem simples: **id** <seu_usuario>
 
 ## E ai: adicione o seu usuário no pure-ftpd
 
-<pre># pure-pw useradd wp -u 1000 -g 1000 -d /usr/share/wordpress/</pre>
+```# pure-pw useradd wp -u 1000 -g 1000 -d /usr/share/wordpress/```
 
 E a sintaxe desse aqui é:
 

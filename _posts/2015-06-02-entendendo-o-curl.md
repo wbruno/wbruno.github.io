@@ -23,10 +23,11 @@ Muito útil por exemplo para fazer proxy de algum servidor que não suporte CORs
 
 Para isso temos que entender como usá-lo. Crie um arquivo chamado **endpoint.php**, com o seguinte conteúdo:
 
-<pre>&lt;?php
+``` php
+<?php
 
 var_dump($_SERVER['REQUEST_METHOD'], $_REQUEST);
-</pre>
+```
 
 ## GET
 
@@ -36,55 +37,59 @@ Iniciaremos com apenas 3 funções, que são as mínimas necessárias para fazer
 
 Vou executar os exemplos pelo terminal, com o comando **php**
 
-<pre>$ php get.php</pre>
+```$ php get.php```
 
 Se eu fizer uma requisição inválida, o retorno do curl_exec() será um false.
 
-<pre>&lt;?php
+``` php
+<?php
 $ch = curl_init("http://foo");
 $ret = curl_exec($ch);
 curl_close($ch);
 
 var_dump($ret); //false
-</pre>
+```
 
 E se quisermos mais informações sobre o erro, elas estarão disponíveis na função <var>curl_error($ch);</var>.
 
-<pre>&lt;?php
+``` php
+<?php
 $ch = curl_init("http://foo");
 $ret = curl_exec($ch);
 $err = curl_error($ch);
 curl_close($ch);
 
 var_dump($ret, $err);
-</pre>
+```
 
 O retorno seria:
 
-<pre>$ php get.php 
+```$ php get.php 
 bool(false)
-string(27) "Could not resolve host: foo"</pre>
+string(27) "Could not resolve host: foo"```
 
 Importante setarmos tudo o que quisermos **antes** de chamar a função <var>curl_close()</var>, pois ela irá realmente &#8220;fechar&#8221; a conexão, invalidando o resource que criamos com a função <var>curl_init()</var>.
 
 E se eu fizer uma requisição válida:
 
-<pre>$ch = curl_init("http://localhost/~wbruno/curl/endpoint.php");</pre>
+```$ch = curl_init("http://localhost/~wbruno/curl/endpoint.php");
+```
 
 O cURL irá retornar os dados que achar lá:
 
-<pre>$ php get.php 
+```$ php get.php 
 string(3) "GET"
 array(0) {
 }
 bool(true)
-</pre>
+```
 
 O true ali, é o resultado do var\_dump() da variavel $ret, que é o retorno do curl\_exec() me informando que tudo ocorreu bem, e a requisição foi feita. O problema desse método que estamos utilizando, é que o **retorno** está sempre sendo &#8220;printado&#8221;, sem que possamos atribui-lo a uma variável.
 
 Para ter esse controle, usaremos uma outra função da lib, chamada **curl_setopt**. 
 
-<pre>&lt;?php
+``` php
+<?php
 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, "http://localhost/~wbruno/curl/endpoint.php" );
@@ -93,15 +98,16 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
 $ret = curl_exec($ch);
 curl_close($ch);
 
-var_dump($ret);</pre>
+var_dump($ret);
+```
 
 Executando:
 
-<pre>$ php get.php
+```$ php get.php
 string(29) "string(3) "GET"
 array(0) {
 }
-"</pre>
+"```
 
 Agora, vemos que o retorno do curl_exec() foi o conteúdo que o cURL buscou, e não mais um booleano dizendo &#8220;se deu ou não&#8221;. Isso porque utilizamos o **CURLOPT_RETURNTRANSFER**, okay ?
 
@@ -117,7 +123,8 @@ No terceiro argumento você pode ver tanto true,false ou 1,0.. depende da mania 
 
 Bom, mas nem sempre estamos interessados apenas no retorno (no body do response), mas podemos também querer as meta informações. Para isso, utilizaremos o <var>$info = curl_getinfo($ch);</var>. 
 
-<pre>&lt;?php
+``` php
+<?php
 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, "http://localhost/~wbruno/curl/endpoint.php" );
@@ -128,11 +135,11 @@ $info = curl_getinfo($ch);
 curl_close($ch);
 
 var_dump($info);
-</pre>
+```
 
 O retorno do <var>curl_getinfo</var> é um array com informações sobre a resposta, e não o corpo da resposta em si:
 
-<pre>$ php get.php 
+```$ php get.php 
 array(26) {
   ["url"]=>
   string(42) "http://localhost/~wbruno/curl/endpoint.php"
@@ -147,7 +154,8 @@ array(26) {
   string(9) "127.0.0.1"
   ["local_port"]=>
   int(54098)
-}</pre>
+}
+```
 
 Precisamos disso para por exemplo saber [se um site está ou não no ar](http://wbruno.com.br/php/verificar-com-php-se-o-site-esta-online-no-ar/).
 
@@ -157,20 +165,21 @@ As vezes, ao fazer uma requisição para um site, o site pode ter um redirect, q
   
 Então, se fizéssemos uma requisição GET a http://locaweb.com.br, teríamos como resultado o 301 (redirecionamento permanente)
 
-<pre>$ php get.php 
-string(246) "&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-&lt;html>&lt;head>
-&lt;title>301 Moved Permanently&lt;/title>
-&lt;/head>&lt;body>
-&lt;h1>Moved Permanently&lt;/h1>
-&lt;p>The document has moved &lt;a href="http://www.locaweb.com.br/default.html">here&lt;/a>.&lt;/p>
-&lt;/body>&lt;/html>
+```$ php get.php 
+string(246) "<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.locaweb.com.br/default.html">here</a>.</p>
+</body></html>
 "
-</pre>
+```
 
 Felizmente a lib do php possui uma opção para isso <var>curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );</var> que nos permite receber o resultado mesmo que a requisição sofra um redirect, logo, fazendo assim a requisição:
 
-<pre>&lt;?php
+``` php
+<?php
 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, "http://locaweb.com.br" );
@@ -182,15 +191,15 @@ $info = curl_getinfo($ch);
 curl_close($ch);
 
 var_dump($ret);
-</pre>
+```
 
 O retorno agora será o html da homepage da Locaweb.
 
-<pre>$ php get.php 
-string(78775) "&lt;!DOCTYPE html>
-&lt;html dir="ltr" lang="pt-BR">
-...&lt;/html>
-</pre>
+```$ php get.php 
+string(78775) "<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+...</html>
+```
 
 Beleza?
 

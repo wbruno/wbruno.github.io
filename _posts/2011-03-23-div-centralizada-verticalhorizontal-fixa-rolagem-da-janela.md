@@ -29,22 +29,24 @@ Pequena alteração no outro script:
 
 Onde era somente:
 
-<pre name="code" class="javascript">window.onload = function(){
-	calcMarginTop();
+``` js
+window.onload = function(){
+  calcMarginTop();
 }
-</pre>
+```
 
 Agora deve ficar assim:
 
-<pre name="code" class="javascript">var marginTopoInicial;//criando variavel de escopo global
+``` js
+var marginTopoInicial;//criando variavel de escopo global
 window.onload = function(){
-	calcMarginTop();
-	marginTopoInicial = parseInt( getMarginTop( id('main') ) );//recuperando o marginTop inicial
+  calcMarginTop();
+  marginTopoInicial = parseInt( getMarginTop( id('main') ) );//recuperando o marginTop inicial
 }
 window.onscroll = function(){
-	id('main').style.marginTop = marginTopoInicial+window.pageYOffset+'px';//levando em conta o scroll
+  id('main').style.marginTop = marginTopoInicial+window.pageYOffset+'px';//levando em conta o scroll
 }
-</pre>
+```
 
 =) por enqnto é isso.
 

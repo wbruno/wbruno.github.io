@@ -15,40 +15,41 @@ Vi dois caras no fórum perguntando sobre isso, então resolvi fazer um post.
 
 Um simples código com a lib cURL do php, para verificar se um site está ou não no ar.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
-	function curl_info($url){
-		$ch = curl_init();
-		curl_setopt( $ch, CURLOPT_URL, $url );
-		curl_setopt( $ch, CURLOPT_HEADER, 1);
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
-		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+  function curl_info($url){
+    $ch = curl_init();
+    curl_setopt( $ch, CURLOPT_URL, $url );
+    curl_setopt( $ch, CURLOPT_HEADER, 1);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
+    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
         
-		$content = curl_exec( $ch );
-		$info = curl_getinfo( $ch );
+    $content = curl_exec( $ch );
+    $info = curl_getinfo( $ch );
 
-		return $info;
-	}
+    return $info;
+  }
 
-	$site = 'http://www.locaweb.com.br';
-	$info = curl_info( $site );
-	if( $info['http_code']==200 ) {
-		echo '&lt;u>'.$site . '&lt;/u> - &lt;strong>está no ar!!&lt;/strong>&lt;br />';
-	} else {
-		echo '&lt;u>'.$site . '&lt;/u> - está fora do ar&lt;br />';
-	}
+  $site = 'http://www.locaweb.com.br';
+  $info = curl_info( $site );
+  if( $info['http_code']==200 ) {
+    echo '<u>'.$site . '</u> - <strong>está no ar!!</strong><br />';
+  } else {
+    echo '<u>'.$site . '</u> - está fora do ar<br />';
+  }
 
 
-	$site = 'http://www.locaweba.com.br';
-	$info = curl_info( $site );
-	if( $info['http_code']==200 ) {
-		echo '&lt;u>'.$site . '&lt;/u> - &lt;strong>está no ar!!&lt;/strong>&lt;br />';
-	} else {
-		echo '&lt;u>'.$site . '&lt;/u> - está fora do ar&lt;br />';
-	}
+  $site = 'http://www.locaweba.com.br';
+  $info = curl_info( $site );
+  if( $info['http_code']==200 ) {
+    echo '<u>'.$site . '</u> - <strong>está no ar!!</strong><br />';
+  } else {
+    echo '<u>'.$site . '</u> - está fora do ar<br />';
+  }
 
-</pre>
+```
 
 Capturo os cabeçalhos da requisição e verifico se o http_status é igual a 200.
   

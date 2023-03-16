@@ -23,40 +23,41 @@ A &#8220;manha&#8221;, para funcionar, é processar toda a requisição, antes d
 
 Dessa forma, consigo alterar a tag title, para cada página.
 
-<pre name="code" class="html">&lt;?php
-	function getGet( $key ){
-		return isset( $_GET[ $key ] ) ? $_GET[ $key ] : null;
-	}
-	
-	
-	$pg = getGet('pg');
-	$file = is_file( 'view/'.$pg.'.php' ) ? 'view/'.$pg.'.php' : 'view/home.php';
-	
-	switch( $pg )
-	{
-		case 'contato':
-			$title = 'Contato - ';
-			break;
-		case 'gostei':
-			$title = 'Gostei muito disso! - ';
-			break;
-		default:
-			$title = '';
-	}
+``` php
+<?php
+  function getGet( $key ){
+    return isset( $_GET[ $key ] ) ? $_GET[ $key ] : null;
+  }
+  
+  
+  $pg = getGet('pg');
+  $file = is_file( 'view/'.$pg.'.php' ) ? 'view/'.$pg.'.php' : 'view/home.php';
+  
+  switch( $pg )
+  {
+    case 'contato':
+      $title = 'Contato - ';
+      break;
+    case 'gostei':
+      $title = 'Gostei muito disso! - ';
+      break;
+    default:
+      $title = '';
+  }
 
-?>&lt;html>
-&lt;head>
-	&lt;title>&lt;?php echo $title; ?>Nome Site&lt;/title>
-&lt;/head>
-&lt;body>
-	&lt;a href="?pg=home">Home&lt;/a>
-	&lt;a href="?pg=contato">Contato&lt;/a>
-	&lt;a href="?pg=gostei">Gostei&lt;/a>
-&lt;?php
-	include $file;
+?><html>
+<head>
+  <title><?php echo $title; ?>Nome Site</title>
+</head>
+<body>
+  <a href="?pg=home">Home</a>
+  <a href="?pg=contato">Contato</a>
+  <a href="?pg=gostei">Gostei</a>
+<?php
+  include $file;
 ?>
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 Simples não ?

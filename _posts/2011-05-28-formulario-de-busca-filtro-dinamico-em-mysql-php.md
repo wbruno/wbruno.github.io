@@ -25,43 +25,44 @@ Abaixo está a &#8216;minha solução&#8217; para o problema.
   
 Usando 1 array, e alguns ifs, fica tudo bem prático.
 
-<pre name="code" class="html">&lt;?php
-	if( $_SERVER['REQUEST_METHOD']=='POST' )
-	{
-		$where = Array();
+``` php
+<?php
+  if( $_SERVER['REQUEST_METHOD']=='POST' )
+  {
+    $where = Array();
 
-		$nome = getPost('n');
-		$cidade = getPost('c');
-		$bairro = getPost('b');
+    $nome = getPost('n');
+    $cidade = getPost('c');
+    $bairro = getPost('b');
 
 
-		if( $nome ){ $where[] = " `nome` = '{$nome}'"; }
-		if( $cidade ){ $where[] = " `cidade` = '{$cidade}'"; }
-		if( $bairro ){ $where[] = " `bairro` = '{$bairro}'"; }
+    if( $nome ){ $where[] = " `nome` = '{$nome}'"; }
+    if( $cidade ){ $where[] = " `cidade` = '{$cidade}'"; }
+    if( $bairro ){ $where[] = " `bairro` = '{$bairro}'"; }
 
-		$sql = "SELECT nome, cidade, bairro FROM local ";
-		if( sizeof( $where ) )
-			$sql .= ' WHERE '.implode( ' AND ',$where );
+    $sql = "SELECT nome, cidade, bairro FROM local ";
+    if( sizeof( $where ) )
+      $sql .= ' WHERE '.implode( ' AND ',$where );
 
-		echo $sql;//execute a query aqui
-	}
-	//a cargo do leitor melhorar o filtro anti injection
-	function filter( $str ){
-		return addslashes( $str );
-	}
-	function getPost( $key ){
-		return isset( $_POST[ $key ] ) ? filter( $_POST[ $key ] ) : null;
-	}
-?&gt;
-&lt;style type="text/css">
+    echo $sql;//execute a query aqui
+  }
+  //a cargo do leitor melhorar o filtro anti injection
+  function filter( $str ){
+    return addslashes( $str );
+  }
+  function getPost( $key ){
+    return isset( $_POST[ $key ] ) ? filter( $_POST[ $key ] ) : null;
+  }
+?>
+<style type="text/css">
 label { display: block; }
-&lt;/style>
-&lt;form action="" method="post">
-	&lt;label>Nome: &lt;input type="text" name="n" />&lt;/label>
-	&lt;label>Cidade: &lt;input type="text" name="c" />&lt;/label>
-	&lt;label>Bairro: &lt;input type="text" name="b" />&lt;/label>
+</style>
+<form action="" method="post">
+  <label>Nome: <input type="text" name="n" /></label>
+  <label>Cidade: <input type="text" name="c" /></label>
+  <label>Bairro: <input type="text" name="b" /></label>
 
 
-	&lt;label>&lt;input type="submit" name="ok" value="Ok" />&lt;/label>
-&lt;/form>
-</pre>
+  <label><input type="submit" name="ok" value="Ok" /></label>
+</form>
+```

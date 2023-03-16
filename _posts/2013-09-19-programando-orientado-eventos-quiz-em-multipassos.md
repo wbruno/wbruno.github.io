@@ -39,7 +39,7 @@ Todos os passos possuem uma &#8220;validação&#8221; se foi ou não preenchido.
 
 Aqui eu abstrai esse comportamento de &#8220;validar&#8221; se já foi respondido, e adicionei um eventListener para todos os forms que mostra um erro caso não esteja preenchido, ou deixa prosseguir mostrando o próximo passo, caso esteja tudo Ok.
 
-<pre>loop($quizForm, function ($form) {
+```loop($quizForm, function ($form) {
     $form.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -51,7 +51,7 @@ Aqui eu abstrai esse comportamento de &#8220;validar&#8221; se já foi respondid
 
     });
 });
-</pre>
+```
 
 Acima eu faço um loop por cada uma tags <form> e adiciono um listener no evento submit de cada um deles para apenas validar a resposta do usuário.
 
@@ -63,14 +63,14 @@ Feita a validação inicial, que era um comportamento comum a todos os formulár
 
 ### Verificando se o passo 1 foi respondido
 
-<pre>$formUser.addEventListener("submit", function () {
+```$formUser.addEventListener("submit", function () {
         answers.user = [];
 
         if ($name.value !== '' && $email.value !== '') {
             this.setAttribute('data-answer', 'answered');
         }
     });
-</pre>
+```
 
 Lembram do IF da validação ? O meu listener anterior considera como &#8220;respondido&#8221;, se o atributo &#8220;data-answer&#8221;, estiver como &#8220;answered&#8221;. Para o passo 1, verifico se os 2 inputs foram preenchidos.
 
@@ -78,7 +78,8 @@ Lembram do IF da validação ? O meu listener anterior considera como &#8220;res
 
 E para os outros passos, que são formulários com tags rádio, eu verifico se algum dos radios daquele form está marcado
 
-<pre>var $radio = $form.querySelector('input[type="radio"]:checked');</pre>
+```var $radio = $form.querySelector('input[type="radio"]:checked');
+```
 
 Simples assim.
 

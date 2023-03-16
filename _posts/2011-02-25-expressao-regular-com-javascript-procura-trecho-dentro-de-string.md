@@ -11,26 +11,27 @@ dsq_thread_id:
 categories:
   - Expressão Regular
 ---
-<pre name="code" class="html">&lt;script type="text/javascript"&gt;
-	function id( el ){
-		return document.getElementById( el );
-	}
-	function busca( q )
-	{
-		var seek = new RegExp( '\\b'+q );
-		id('debug').innerHTML = seek;
+``` html
+<script type="text/javascript">
+  function id( el ){
+    return document.getElementById( el );
+  }
+  function busca( q )
+  {
+    var seek = new RegExp( '\\b'+q );
+    id('debug').innerHTML = seek;
 
-		var texto = "Expressões regulares em Javascript para iniciantes!";
+    var texto = "Expressões regulares em Javascript para iniciantes!";
 
-		if (texto.search( seek ) != -1)
-			id('result').innerHTML = 'Encontrado na posição: '+ texto.search( seek );
-		else
-			id('result').innerHTML = 'Não encontrado!';
-	}
-	&lt;/script&gt;
-	&lt;input type="text" name="q" onkeypress="busca( this.value );" /&gt;
+    if (texto.search( seek ) != -1)
+      id('result').innerHTML = 'Encontrado na posição: '+ texto.search( seek );
+    else
+      id('result').innerHTML = 'Não encontrado!';
+  }
+  </script>
+  <input type="text" name="q" onkeypress="busca( this.value );" />
 
-	&lt;div id="result"&gt;&lt;/div&gt;
-	&lt;div id="debug"&gt;&lt;/div&gt;
+  <div id="result"></div>
+  <div id="debug"></div>
 
-</pre>
+```

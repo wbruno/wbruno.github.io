@@ -29,58 +29,63 @@ Por exemplo, se a URL for:
   
 a classe do elemento body, deve ser:
 
-<pre name="code" class="html">&lt;body class="home"></pre>
+``` html
+<body class="home">```
 
 E para cada nível, a class deve refletir:
   
 <u>site.com.br/frutas.html</u>
 
-<pre name="code" class="html">&lt;body class="frutas"></pre>
+``` html
+<body class="frutas">```
 
 Mas se começar a &#8220;complicar&#8221;, e mais níveis surgirem..
 
 <u>site.com.br/frutas/banana.html</u>
 
-<pre name="code" class="html">&lt;body class="frutas banana"></pre>
+``` html
+<body class="frutas banana">```
 
 Ou:
   
 <u>site.com.br/frutas/banana/nanica.html</u>
 
-<pre name="code" class="html">&lt;body class="frutas banana nanica"></pre>
+``` html
+<body class="frutas banana nanica">```
 
 Para ser eficiente, a class do nosso body, deve refletir essa &#8220;realidade&#8221;.
   
 Criei um conjunto de funções em php, que fazem isso. Analisam a URL requisitada (REQUEST_URI), e devolvem essa estrutura:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 /**
  * @return boolean, true caso a URI seja a home do site
  */
 function is_home(){
-	return stripos( $_SERVER['REQUEST_URI'], 'index.html' ) 
-		|| !stripos( $_SERVER['REQUEST_URI'], '.html' );
+  return stripos( $_SERVER['REQUEST_URI'], 'index.html' ) 
+    || !stripos( $_SERVER['REQUEST_URI'], '.html' );
 }
 /**
  * @return string, class=""(html) de acordo com o URI atual
  */
 function get_body_class(){
-	if( is_home() ) return 'class="home"';
-	
-	$pieces = explode( '/', $_SERVER['REQUEST_URI'] );
-	$class = Array();
-	foreach( $pieces AS $part ){
-		$class[] = str_replace( '.html', '', $part );
-	}
-	
-	return 'class="'.implode( ' ', $class ).'"';	
+  if( is_home() ) return 'class="home"';
+  
+  $pieces = explode( '/', $_SERVER['REQUEST_URI'] );
+  $class = Array();
+  foreach( $pieces AS $part ){
+    $class[] = str_replace( '.html', '', $part );
+  }
+  
+  return 'class="'.implode( ' ', $class ).'"';  
 }
 /**
  * @see get_body_class()
  */
 function body_class(){ echo get_body_class(); }
-</pre>
+```
 
 Agora que terminei de escrever, percebi que você pode usar também para um **bread crumb**, ne?!
   

@@ -25,7 +25,7 @@ Aceita as entradas:
 
 **money-blur.js**
 
-<pre>'use strict';
+```'use strict';
 function _signalFirst(v) {
   return /^(,|\.)/.test(v);
 }
@@ -77,11 +77,12 @@ if (typeof exports !== 'undefined') {
   exports._format = _format;
 }
 
-</pre>
+```
 
 usando no teu html..
 
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 function id(el){
   return document.getElementById(el);
 }
@@ -96,10 +97,10 @@ window.onload = function(){
     this.value = _format(v);
   }
 };
-&lt;/script>
-&lt;input type="text" name="moeda" id="moeda" />
+</script>
+<input type="text" name="moeda" id="moeda" />
 
-</pre>
+```
 
 É isso galera. Comente caso usem =)
 

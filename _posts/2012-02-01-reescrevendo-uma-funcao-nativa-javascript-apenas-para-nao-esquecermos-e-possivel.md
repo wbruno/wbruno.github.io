@@ -11,7 +11,8 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 var _write = document.write;
 document.write('<br />1');//vai funcionar normal
 
@@ -27,5 +28,5 @@ document.write('<br />2');//não vai funcionar
 
 document.write = _write;
 document.write('<br />3');//voltou a funcionar
-&lt;/script>
-</pre>
+</script>
+```

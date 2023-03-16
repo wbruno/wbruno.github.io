@@ -13,20 +13,22 @@ categories:
 tags:
   - cálculo
 ---
-<pre name="code" class="javascript">&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8">
-  &lt;title>Document&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;form action="" method="post">
-    Valor Unitário: &lt;input type="text" name="valor_unitario" id="valor_unitario" />
-    Quantidade: &lt;input type="text" name="qnt" id="qnt" value="0" />
-    Total: &lt;input type="text" name="total" id="total" readonly="readonly" />
-  &lt;/form>
 
-&lt;script type="text/javascript">
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="post">
+    Valor Unitário: <input type="text" name="valor_unitario" id="valor_unitario" />
+    Quantidade: <input type="text" name="qnt" id="qnt" value="0" />
+    Total: <input type="text" name="total" id="total" readonly="readonly" />
+  </form>
+
+<script type="text/javascript">
 function id(el) {
   return document.getElementById( el );
 }
@@ -58,12 +60,12 @@ String.prototype.formatMoney = function() {
 
   return v;
 };
-&lt;/script>
+</script>
 
-&lt;/body>
-&lt;/html>
+</body>
+</html>
 
-</pre>
+```
 
 ## Em funcionamento
 

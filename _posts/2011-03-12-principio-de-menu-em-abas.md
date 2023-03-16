@@ -11,55 +11,58 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-<pre class="javascript">&lt;html&gt;
-&lt;head&gt;
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
-&lt;script type="text/javascript"&gt;
+
+``` html
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript">
 function id( el ){
-        return document.getElementById( el );
+        return document.getElementById( el );
 }
 function hide_all(){
-        var divs = id('content').getElementsByTagName('div');
-        for( var i=0; i&lt;divs.length; i++ )
-        {
-                divs[i].style.display = 'none';
-        }
+        var divs = id('content').getElementsByTagName('div');
+        for( var i=0; i<divs.length; i++ )
+        {
+                divs[i].style.display = 'none';
+        }
 }
 /* http://www.javascriptkit.com/jsref/event.shtml */
 function disablelink( e ){
-        var evt = window.event || e
-        if (evt.preventDefault) //supports preventDefault?
-                evt.preventDefault()
-        else //IE browser
-                return false
+        var evt = window.event || e
+        if (evt.preventDefault) //supports preventDefault?
+                evt.preventDefault()
+        else //IE browser
+                return false
 }
 window.onload = function(){
-        hide_all();
-        var as = id('content').getElementsByTagName('a');
-        for( var i=0; i&lt;as.length; i++ )
-        {
-                as[i].onclick = function( e ){
-                        hide_all();
-                        var id_el = this.href.split('#')
-                       
-                        id( id_el[1] ).style.display = 'block';                
-                        return disablelink( e );
-                }
-        }
+        hide_all();
+        var as = id('content').getElementsByTagName('a');
+        for( var i=0; i<as.length; i++ )
+        {
+                as[i].onclick = function( e ){
+                        hide_all();
+                        var id_el = this.href.split('#')
+                       
+                        id( id_el[1] ).style.display = 'block';                
+                        return disablelink( e );
+                }
+        }
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-        &lt;div id="content"&gt;
-                &lt;a href="#historia"&gt;História&lt;/a&gt;&lt;br /&gt;
-                &lt;div id="historia"&gt;Conteudo da História&lt;/div&gt;
-               
-                &lt;a href="#geografia"&gt;Geografia&lt;/a&gt;&lt;br /&gt;
-                &lt;div id="geografia"&gt;Conteudo da Geografia&lt;/div&gt;
-               
-                &lt;a href="#matematica"&gt;Matemática&lt;/a&gt;&lt;br /&gt;
-                &lt;div id="matematica"&gt;Conteudo da Matemática&lt;/div&gt;
+</script>
+</head>
+<body>
+        <div id="content">
+                <a href="#historia">História</a><br />
+                <div id="historia">Conteudo da História</div>
+               
+                <a href="#geografia">Geografia</a><br />
+                <div id="geografia">Conteudo da Geografia</div>
+               
+                <a href="#matematica">Matemática</a><br />
+                <div id="matematica">Conteudo da Matemática</div>
 
-        &lt;/div&gt;&lt;!-- /content --&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        </div><!-- /content -->
+</body>
+</html>
+```

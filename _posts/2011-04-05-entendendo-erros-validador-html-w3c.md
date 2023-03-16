@@ -35,7 +35,8 @@ Servir o documento com headers de XML, é bem interessante, já que qualquer err
 
 O meu crime foi não ter fechado a tag <img />.
 
-<pre name="code" class="html">&lt;img src="images/wbruno-logo.png" alt="" id="logo"></pre>
+``` html
+<img src="images/wbruno-logo.png" alt="" id="logo">```
 
 Antecessora mais próxima do do <u></div><!&#8211; /main &#8211;></u>, daí o erro foi disparado nele. Para mim:
 
@@ -43,43 +44,48 @@ Antecessora mais próxima do do <u></div><!&#8211; /main &#8211;></u>, daí o er
 
 ### HTML4
 
-<pre name="code" class="html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+``` html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
-</pre>
+```
 
 ### xHTML 1.0
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-</pre>
+```
 
 ### xHTML 1.1
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-</pre>
+```
 
 Vou fazer via <a href="http://validator.w3.org/#validate_by_input" target="_blank">Direct Input</a>.
 
 Esta é a <a href="http://validator.w3.org/check?verbose=1&#038;uri=http%3A%2F%2Fwww.wbruno.com.br%2Fscripts%2Fxhtml-minimo.html" target="_blank">marcação mínima de um documento</a>:
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-	&lt;title>wbruno&lt;/title>
-	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-&lt;/head>
-&lt;body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>wbruno</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
 
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 a tag <title> e a tag <meta /> de charset, são obrigatórias. Tomemos como base o documento que apresentei.
 
-<pre name="code" class="html:firstLine[9]">&lt;br></pre>
+``` html
+<br>```
 
 Passando no validador: [<img src="/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-1024x338.png" alt="" title="Screen shot 2011-04-04 at 2.21.36 PM" width="695" height="229" class="aligncenter size-large wp-image-614" srcset="/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-1024x338.png 1024w, /wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM-300x99.png 300w, /wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM.png 1432w" sizes="(max-width: 695px) 100vw, 695px" />](/wp-content/uploads/2011/04/Screen-shot-2011-04-04-at-2.21.36-PM.png)
 

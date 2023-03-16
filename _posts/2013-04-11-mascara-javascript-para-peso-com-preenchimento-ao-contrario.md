@@ -33,33 +33,33 @@ digitar: <var>1234567</var> aparecer <var>123,4567</var>
 
 O bloco do if pode ser refatorado para ficar mais &#8220;bonito&#8221; e menos manual. Mas já é uma idéia de como fazer essa máscara para &#8220;peso&#8221;, usando javascript e um pouquinho de expressão regular.
 
-<pre class="javascript">&lt;script type="text/javascript">
+<pre class="javascript"><script type="text/javascript">
 function id(el){
     return document.getElementById(el);
 }
 window.onload = function(){
-	id('peso').onkeyup = function(){
-		var v = this.value,
-			integer = v.split(',')[0];
+  id('peso').onkeyup = function(){
+    var v = this.value,
+      integer = v.split(',')[0];
 
 
-		v = v.replace(/\D/, "");
-		v = v.replace(/^[0]+/, "");
+    v = v.replace(/\D/, "");
+    v = v.replace(/^[0]+/, "");
 
-		if(v.length &lt;= 4 || !integer)
-		{
-			if(v.length === 1) v = '0,000' + v;
-			if(v.length === 2) v = '0,00' + v;
-			if(v.length === 3) v = '0,0' + v;
-			if(v.length === 4) v = '0,' + v;
-		} else {
-			v = v.replace(/^(\d{1,})(\d{4})$/, "$1,$2");
-		}
+    if(v.length <= 4 || !integer)
+    {
+      if(v.length === 1) v = '0,000' + v;
+      if(v.length === 2) v = '0,00' + v;
+      if(v.length === 3) v = '0,0' + v;
+      if(v.length === 4) v = '0,' + v;
+    } else {
+      v = v.replace(/^(\d{1,})(\d{4})$/, "$1,$2");
+    }
 
-		this.value = v;
-	}
+    this.value = v;
+  }
 };
-&lt;/script>
-&lt;input type="text" name="peso" id="peso" maxlength="8" />
+</script>
+<input type="text" name="peso" id="peso" maxlength="8" />
 
-</pre>
+```

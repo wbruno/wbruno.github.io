@@ -23,65 +23,66 @@ Para resolver essa questão, disparei no evento onresize da janela, uma rotina j
 
 <!--more-->
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 window.onload = function(){
-	calcMarginTop();
+  calcMarginTop();
 }
 window.onresize = function(){
-	calcMarginTop();
+  calcMarginTop();
 }
 function calcMarginTop()
 {
-	var main = id('main');
-	var marginTopo = parseInt( getMarginTop( main ) );
-	var marginBaixo = parseInt( getMarginBottom( main ) );
+  var main = id('main');
+  var marginTopo = parseInt( getMarginTop( main ) );
+  var marginBaixo = parseInt( getMarginBottom( main ) );
 
 
-	if( main.offsetTop &lt; -1 )
-		main.style.marginTop = '-'+( parseInt( main.offsetTop ) - marginTopo )+'px';
-	else if( marginTopo!=marginBaixo )
-	main.style.marginTop = '-248px';
+  if( main.offsetTop < -1 )
+    main.style.marginTop = '-'+( parseInt( main.offsetTop ) - marginTopo )+'px';
+  else if( marginTopo!=marginBaixo )
+  main.style.marginTop = '-248px';
 }
 function getMarginTop( el )
 {
-	if( window.getComputedStyle )
-		return document.defaultView.getComputedStyle(el, null).marginTop;
-	else if( el.currentStyle )
-		return el.currentStyle['marginTop'];
+  if( window.getComputedStyle )
+    return document.defaultView.getComputedStyle(el, null).marginTop;
+  else if( el.currentStyle )
+    return el.currentStyle['marginTop'];
 }
 function getMarginBottom( el )
 {
-	if( window.getComputedStyle )
-		return document.defaultView.getComputedStyle(el, null).marginBottom;
-	else if( el.currentStyle )
-		return el.currentStyle['marginBottom'];
+  if( window.getComputedStyle )
+    return document.defaultView.getComputedStyle(el, null).marginBottom;
+  else if( el.currentStyle )
+    return el.currentStyle['marginBottom'];
 }
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 * { margin: 0; padding: 0; }
 #main {
-	border: 1px solid #000;
-	height: 500px;
-	width: 500px;
-	top: 50%;
-	left: 50%;
-	margin-top: -250px;
-	margin-left: -250px;
-	position: absolute;
+  border: 1px solid #000;
+  height: 500px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  position: absolute;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;div id="main">
+</style>
+</head>
+<body>
+  <div id="main">
 
-	&lt;/div>&lt;!-- /main -->
-&lt;/body>
-&lt;/html>
-</pre>
+  </div><!-- /main -->
+</body>
+</html>
+```
 
 Bom, é isso. Comentem! Gostaria de ouvir sugestões.

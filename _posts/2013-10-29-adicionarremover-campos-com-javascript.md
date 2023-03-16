@@ -15,68 +15,69 @@ tags:
 ---
 Rotina bem conhecida e muito usada. Mas implementei de uma forma que ao remover campos já adicionados, os demais não sejam apagados.
 
-<pre>&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-	&lt;meta charset="UTF-8">
-	&lt;title>Document&lt;/title>
-&lt;style>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
 label { display: block; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-&lt;select name="children-qnt" id="children-qnt">
-	&lt;option value="0">0&lt;/option>
-	&lt;option value="1">1&lt;/option>
-	&lt;option value="2">2&lt;/option>
-	&lt;option value="3">3&lt;/option>
-	&lt;option value="4">4&lt;/option>
-	&lt;option value="5">5&lt;/option>
-	&lt;option value="6">6&lt;/option>
-&lt;/select>
-&lt;fieldset id="children">
+<select name="children-qnt" id="children-qnt">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
+<fieldset id="children">
 
-&lt;/fieldset>&lt;!-- #children -->
+</fieldset><!-- #children -->
 
-&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js">&lt;/script>
-&lt;script type="text/javascript">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
 var $chidrenQnt = jQuery('#children-qnt'),
-	$children = jQuery('#children');
+  $children = jQuery('#children');
 
 
 
 var Children = {};
 Children.container = $children;
 Children.add = function(i) {
-	while (i--) {
-		Children.container.append('&lt;label>idade: &lt;input type="text" name="" />&lt;/label>');
-	}
+  while (i--) {
+    Children.container.append('<label>idade: <input type="text" name="" /></label>');
+  }
 }
 Children.remove = function(i) {
-	while (i--) {
-		Children.container.find('label:last').remove();
-	}
+  while (i--) {
+    Children.container.find('label:last').remove();
+  }
 }
 
 
 $chidrenQnt.on('change', function(){
-	var $this = jQuery(this),
-		i = $this.val(),
-		qnt = $children.find('label').length;
+  var $this = jQuery(this),
+    i = $this.val(),
+    qnt = $children.find('label').length;
 
 
-	if (qnt > i) {
-		Children.remove(qnt - i);
-	}
-	if (qnt &lt; i) {
-		Children.add(i - qnt);
-	}
+  if (qnt > i) {
+    Children.remove(qnt - i);
+  }
+  if (qnt < i) {
+    Children.add(i - qnt);
+  }
 });
 
 
-&lt;/script>
+</script>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```

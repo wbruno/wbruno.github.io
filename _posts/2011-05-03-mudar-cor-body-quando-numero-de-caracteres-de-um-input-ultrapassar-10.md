@@ -15,19 +15,20 @@ Dessa vez, era &#8216;fácil&#8217; fazer com javascript puro.. mas como o camar
 
 De novo, vamos estudar js puro galera !!
 
-<pre name="code" class="html">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 window.onload = function(){
-	document.getElementById('nome').onkeypress = function(){
-		var bgcolor = this.value.length>=10 ? '#003' : '#fff';
-		document.body.style.backgroundColor = bgcolor;
-	}
+  document.getElementById('nome').onkeypress = function(){
+    var bgcolor = this.value.length>=10 ? '#003' : '#fff';
+    document.body.style.backgroundColor = bgcolor;
+  }
 }
-&lt;/script>
+</script>
 
-&lt;form action="" method="post">
-	&lt;input type="text" name="nome" id="nome" />
-	&lt;input type="button" value="Botão"  />
-&lt;/form>
-</pre>
+<form action="" method="post">
+  <input type="text" name="nome" id="nome" />
+  <input type="button" value="Botão"  />
+</form>
+```
 
 =)

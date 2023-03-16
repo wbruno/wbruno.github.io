@@ -18,12 +18,12 @@ tags:
 
 ## Atualizando o kernel
 
-<pre># rm -f /boot/grub/device.map
-# apt-get install linux-image-3.2.0-0.bpo.4-amd64 --reinstall</pre>
+```# rm -f /boot/grub/device.map
+# apt-get install linux-image-3.2.0-0.bpo.4-amd64 --reinstall```
 
 Pois no meu caso, era a imagem que eu tinha disponível:
 
-<pre># dpkg -l | grep linux</pre>
+```# dpkg -l | grep linux```
 
 ## Atualizando o debian
 
@@ -35,9 +35,9 @@ Se vc tiver problemas para rodar o upgrade, leia esse cara:
 
 E ai:
 
-<pre># cat /etc/debian_version
+```# cat /etc/debian_version
 6.0.8
-</pre>
+```
 
 Estou na última versão do debian squeezze
 
@@ -47,7 +47,7 @@ Se eu quiser ir para o wheezy <var>vim /etc/apt/sources.list</var>
 
 [Debian Linux: Upgrade v6.0.x Squeeze to v7.0.0 Wheezy](http://www.cyberciti.biz/faq/howto-debian-linux-upgrade-6-squeeze-to-7-wheezy/)
 
-<pre>deb http://mirrors.kernel.org/debian/ wheezy main
+```deb http://mirrors.kernel.org/debian/ wheezy main
 deb-src http://mirrors.kernel.org/debian/ wheezy main
 
 deb http://security.debian.org/ wheezy/updates main
@@ -55,18 +55,18 @@ deb-src http://security.debian.org/ wheezy/updates main
 
 # wheezy-updates, previously known as 'volatile'
 deb http://mirrors.kernel.org/debian/ wheezy-updates main
-deb-src http://mirrors.kernel.org/debian/ wheezy-updates main</pre>
+deb-src http://mirrors.kernel.org/debian/ wheezy-updates main```
 
 E ai rodo a atualização
 
-<pre>apt-get update
+```apt-get update
 apt-get upgrade
-apt-get dist-upgrade</pre>
+apt-get dist-upgrade```
 
 E se quiser:
 
-<pre>apt-get autoremove</pre>
+```apt-get autoremove```
 
 Uma coisa bacana para usar, caso vc tenha problemas com algum pacote, ou ele não esteja instalando corretamente é:
 
-<pre>apt-get purge pacote-tal</pre>
+```apt-get purge pacote-tal```

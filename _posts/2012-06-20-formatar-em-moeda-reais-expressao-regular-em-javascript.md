@@ -21,29 +21,32 @@ Depois uma outra função <var>formatReal()</var> que recebe um inteiro e devolv
 
 Entrada:
 
-<pre name="code" class="javascript">console.log( formatReal( 1000 ) );
+``` js
+console.log( formatReal( 1000 ) );
 console.log( formatReal( 19990020 ) );
 console.log( formatReal( 12006 ) );
 console.log( formatReal( 111090 ) );
 console.log( formatReal( 1111 ) );
 console.log( formatReal( 120090 ) );
-</pre>
+```
 
 Saida:
 
-<pre name="code" class="javascript">10,00
+``` js
+10,00
 199.900,20
 120,06
 1.110,90
 11,11
 1.200,90
-</pre>
+```
 
 Utilizei a função str.replace() nativa da linguagem javascript, e algumas expressões regulares.
   
 Atualmente só formata até 999mil reais, não fiz a ER para colocar o ponto dos milhões.
 
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 
 var test = 'R$ 1.700,90';
 
@@ -76,5 +79,5 @@ console.log( formatReal( 120090 ) );
 console.log( formatReal( int ) );
 
 
-&lt;/script>
-</pre>
+</script>
+```

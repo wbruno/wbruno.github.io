@@ -49,7 +49,8 @@ Afinal é necessário identificar que algo está errado para poder corrigir
 
 Por exemplo, você possui uma área parecida com isto:
 
-<pre name="code" class="css">#box_telefone {
+``` css
+#box_telefone {
    background: #fff; border-radius: 10px;
    float: left;
    width: 100px; height: 50px;
@@ -60,11 +61,13 @@ Por exemplo, você possui uma área parecida com isto:
    width: 200px; height: 75px;
    margin: 20px;
    color: #ddd;
-}</pre>
+}
+```
 
 Ambos são &#8220;caixas&#8221; no layout, e possui estilos(formatações básicas) semelhantes. Eu sugiro fazer algo assim:
 
-<pre name="code" class="css">.box { background: #fff; border-radius: 10px; }
+``` css
+.box { background: #fff; border-radius: 10px; }
 .fleft { float: left; }
 #box_telefone {
    width: 100px; height: 50px;
@@ -73,7 +76,8 @@ Ambos são &#8220;caixas&#8221; no layout, e possui estilos(formatações básic
    width: 200px; height: 75px;
    margin: 20px;
    color: #ddd;
-}</pre>
+}
+```
 
 Note que também retirei o float dos seletores, e fiz uma &#8220;classe utilitária&#8221; para ele.
   
@@ -85,8 +89,10 @@ Existem técnicas e &#8220;boas horas&#8221; para separar, vá com cuidado.
 
 Algo assim:
 
-<pre name="code" class="css">#box_telefone,
-#box_email { /* .. */ }</pre>
+``` css
+#box_telefone,
+#box_email { /* .. */ }
+```
 
 Isso &#8220;tende&#8221; a crescer. Tende a sair do controle. Então se você precisar de mais uma caixa com estilos parecidos, vai lá e adiciona outro seletor com vírgula ai.
   

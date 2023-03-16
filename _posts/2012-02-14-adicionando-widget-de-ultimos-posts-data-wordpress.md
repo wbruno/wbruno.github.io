@@ -18,24 +18,25 @@ O widget padrão, não tem essa opção, então criei um novo bem simples.
 <!--more-->
 
 <pre name="code" class="php">function ultimos_posts_display() {
-	// print some HTML for the widget to display here
-	echo '&lt;div class="sidebar-box ultimos-posts">&lt;strong>&Uacute;ltimos posts&lt;/strong>
-	&lt;ul>';
+  // print some HTML for the widget to display here
+  echo '<div class="sidebar-box ultimos-posts"><strong>&Uacute;ltimos posts</strong>
+  <ul>';
 
-	$recent_posts = wp_get_recent_posts();
-	foreach( $recent_posts as $recent ){
-		echo '&lt;li>&lt;span>'.preg_replace( '/([0-9]{4})-([0-9]{2})-([0-9]{2})([\s0-9:]+)?/', '$3-$2-$1', $recent['post_date'] ).'&lt;/span>
-		&lt;a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'&lt;/a>&lt;/li> ';
-	}
+  $recent_posts = wp_get_recent_posts();
+  foreach( $recent_posts as $recent ){
+    echo '<li><span>'.preg_replace( '/([0-9]{4})-([0-9]{2})-([0-9]{2})([\s0-9:]+)?/', '$3-$2-$1', $recent['post_date'] ).'</span>
+    <a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a></li> ';
+  }
 
-	echo '&lt;/ul>&lt;/div>';
+  echo '</ul></div>';
 }
 
 wp_register_sidebar_widget(
-	'ultimos_posts_1',        // your unique widget id
-	'Ultimos posts',          // widget name
-	'ultimos_posts_display',  // callback function
-	array(                  // options
-		'description' => 'Widget dos ultimos posts com data'
-	)
-);</pre>
+  'ultimos_posts_1',        // your unique widget id
+  'Ultimos posts',          // widget name
+  'ultimos_posts_display',  // callback function
+  array(                  // options
+    'description' => 'Widget dos ultimos posts com data'
+  )
+);
+```

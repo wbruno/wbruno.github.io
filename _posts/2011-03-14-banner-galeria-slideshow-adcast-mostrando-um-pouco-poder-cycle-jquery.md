@@ -32,105 +32,107 @@ Só clicar no Download.
 
 Uma busca rápida por wallpapers no Google Images, e:
 
-<pre name="code" class="html">&lt;html&gt;
-&lt;head&gt;
-&lt;script type="text/javascript" src="js/jquery-1.5.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="js/jquery.cycle.all.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+``` html
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript">
 $(document).ready(function(){
-	$('#slide_fotos').cycle({
-		fx: 'fade',
-		pager: '#pager'
-	});
+  $('#slide_fotos').cycle({
+    fx: 'fade',
+    pager: '#pager'
+  });
 });
-&lt;/script&gt;
-&lt;style type="text/css"&gt;
+</script>
+<style type="text/css">
 * {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 body {
-	font: 12px Verdana, sans-serif;
-	color: #000;
+  font: 12px Verdana, sans-serif;
+  color: #000;
 }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 #slideshow {
-	width: 640px;
-	height: 270px;
-	position: relative;
+  width: 640px;
+  height: 270px;
+  position: relative;
 }
 #slide_fotos p {
-	position: absolute;
-	right: 0;
-	top: 210px;
-	z-index: 3;
-	padding: 10px 20px;
-	background: url('../images/over_white.png');
+  position: absolute;
+  right: 0;
+  top: 210px;
+  z-index: 3;
+  padding: 10px 20px;
+  background: url('../images/over_white.png');
 }
 #slide_fotos {
-	height: 100%;
-	overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #pager {
-	position: absolute;
-	z-index: 10;
-	top: 20px;
-	right: 20px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  right: 20px;
 }
 #pager a {
-	color: #000;
-	width: 17px;
-	height: 17px;
-	line-height: 15px;
-	text-align: center;
-	display: inline-block;
-	font-size: 10px;
-	margin: 2px;
-	color: #fff;
+  color: #000;
+  width: 17px;
+  height: 17px;
+  line-height: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px;
+  color: #fff;
 }
 #pager a.activeSlide {
-	color: #000;
-	background: url('../images/over_white.png');
+  color: #000;
+  background: url('../images/over_white.png');
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;div id="slideshow"&gt;
-		&lt;ul id="slide_fotos"&gt;
-			&lt;li&gt;&lt;img src="images/medium/01.jpg" alt="" title="Foto 01" /&gt;
-				&lt;p&gt;Primeira Imagem, céu azul!&lt;/p&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="images/medium/02.jpg" alt="" title="Foto 02" /&gt;
-				&lt;p&gt;Segunda Imagem, queda d'agua&lt;/p&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="images/medium/03.jpg" alt="" title="Foto 03" /&gt;
-				&lt;p&gt;Terceira Imagem, universo, negro&lt;/p&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="images/medium/04.jpg" alt="" title="Foto 04" /&gt;
-				&lt;p&gt;Quarta Imagem, praia calmaria&lt;/p&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="images/medium/05.jpg" alt="" title="Foto 05" /&gt;
-				&lt;p&gt;Quinta Imagem, montanhas, lago&lt;/p&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="images/medium/06.jpg" alt="" title="Foto 06" /&gt;
-				&lt;p&gt;Sexta Imagem, mais verde natureza&lt;/p&gt;&lt;/li&gt;
-		&lt;/ul&gt;&lt;!-- /fotos --&gt;
-		&lt;p id="pager"&gt;
+</style>
+</head>
+<body>
+  <div id="slideshow">
+    <ul id="slide_fotos">
+      <li><img src="images/medium/01.jpg" alt="" title="Foto 01" />
+        <p>Primeira Imagem, céu azul!</p></li>
+      <li><img src="images/medium/02.jpg" alt="" title="Foto 02" />
+        <p>Segunda Imagem, queda d'agua</p></li>
+      <li><img src="images/medium/03.jpg" alt="" title="Foto 03" />
+        <p>Terceira Imagem, universo, negro</p></li>
+      <li><img src="images/medium/04.jpg" alt="" title="Foto 04" />
+        <p>Quarta Imagem, praia calmaria</p></li>
+      <li><img src="images/medium/05.jpg" alt="" title="Foto 05" />
+        <p>Quinta Imagem, montanhas, lago</p></li>
+      <li><img src="images/medium/06.jpg" alt="" title="Foto 06" />
+        <p>Sexta Imagem, mais verde natureza</p></li>
+    </ul><!-- /fotos -->
+    <p id="pager">
 
-		&lt;/p&gt;&lt;!-- /pager --&gt;
-	&lt;/div&gt;&lt;!-- /slideshow --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </p><!-- /pager -->
+  </div><!-- /slideshow -->
+</body>
+</html>
+```
 
 Mais uma vez, o &#8216;grande truque&#8217;, é o CSS.
 
 Veja que o javascript é mínimo.
 
-<pre name="code" class="javascript:firstline[6]">$(document).ready(function(){
+``` js
+$(document).ready(function(){
     $('#slide_fotos').cycle({
         fx: 'fade',
         pager: '#pager'
     });
 });
-</pre>
+```
 
 Existem muitas opções na documentação do Cycle, mas a beleza do slideshow, depende da sua criatividade, e de muito css.
 

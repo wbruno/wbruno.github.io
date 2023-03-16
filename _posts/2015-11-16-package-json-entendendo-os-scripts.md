@@ -45,7 +45,7 @@ e irá executar o que tiver definido no json:
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "William Bruno &lt;wbrunom @gmail.com> (http://wbruno.com.br)",
+  "author": "William Bruno <wbrunom @gmail.com> (http://wbruno.com.br)",
   "license": "ISC"
 }
 ```

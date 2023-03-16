@@ -27,15 +27,15 @@ Eu já havia feito um add_filter para o featured image:
  * 
  */
 function featured_image_feed($content) {
-	global $post;
+  global $post;
 
-	if ( has_post_thumbnail( $post->ID ) ){
-		$content = '' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '' . $content;	
-	}
-	return $content;
+  if ( has_post_thumbnail( $post->ID ) ){
+    $content = '' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '' . $content;  
+  }
+  return $content;
 }
 add_filter('the_content_feed', 'featured_image_feed');
-</pre>
+```
 
 E agora, fiz mais um para os custom fields:
 
@@ -49,7 +49,8 @@ function custom_fields_feed($content) {
     }
     return $content;
 }
-add_filter('the_content_feed', 'custom_fields_feed');</pre>
+add_filter('the_content_feed', 'custom_fields_feed');
+```
 
 Com esses dois hooks no arquivo **functions.php** do nosso tema, chegarão no name espace :encoded, o featured image e os custom fields(key: publico).
 

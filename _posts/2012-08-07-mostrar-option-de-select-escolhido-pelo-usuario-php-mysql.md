@@ -21,20 +21,22 @@ Deixar <var>selected</var>, um dos options de uma tag select, apartir do que o u
 
 Primeiro declaro uma função, para evitar duplicação de código.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 function selected( $value, $selected ){
     return $value==$selected ? ' selected="selected"' : '';
 }
-</pre>
+```
 
 E então uso ela em cada um dos meus options:
 
-<pre name="code" class="html">&lt;select name="te">
-    &lt;option value="">Escolha&lt;/option>
-    &lt;option value="masculino"&lt;?php echo selected( 'masculino', $sexo ); ?>>Masculino&lt;/option>
-    &lt;option value="feminino"&lt;?php echo selected( 'feminino', $sexo ); ?>>Feminino&lt;/option>
-&lt;/select>
-</pre>
+``` html
+<select name="te">
+    <option value="">Escolha</option>
+    <option value="masculino"<?php echo selected( 'masculino', $sexo ); ?>>Masculino</option>
+    <option value="feminino"<?php echo selected( 'feminino', $sexo ); ?>>Feminino</option>
+</select>
+```
 
 É isso galera.
   

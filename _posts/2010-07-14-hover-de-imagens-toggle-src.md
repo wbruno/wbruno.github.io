@@ -9,7 +9,8 @@ permalink: /javascript-puro/hover-de-imagens-toggle-src/
 categories:
   - Javascript
 ---
-<pre name="code" class="html"><html>
+``` html
+<html>
 <head>
 <script type="text/javascript">
 window.onload = function()
@@ -38,4 +39,4 @@ function toggle_src( el )
         <a href="#"><img src="normal-contato.jpg" width="75" id="a2" height="58" alt="Botão para a Página Inicial" lowsrc="hover-contato.jpg" /></a>
 </body>
 </html>
-</pre>
+```

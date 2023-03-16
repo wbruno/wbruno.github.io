@@ -47,68 +47,73 @@ Estudei um pouquinho o tema TwentyTeen, com a dica do @ThiagoCruz, e então:
  * @since Twenty Ten 1.0
  */
 function parent_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case '' :
-	?>
-		&lt;li &lt;?php comment_class(); ?> id="comment-&lt;?php comment_ID() ?>"> &lt;?php echo get_avatar( $comment, 32 ); ?>
+  $GLOBALS['comment'] = $comment;
+  switch ( $comment->comment_type ) :
+    case '' :
+  ?>
+    <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>"> <?php echo get_avatar( $comment, 32 ); ?>
 
-			&lt;cite>&lt;?php comment_text() ?>&lt;/cite>
+      <cite><?php comment_text() ?></cite>
 
-			&lt;?php comment_type(_x('Coment&aacute;rio', 'noun'), __('Trackback'), __('Pingback')); ?>
-			&lt;?php _e('por'); ?>
-			&lt;?php comment_author_link() ?>
-			&#8212;
+      <?php comment_type(_x('Coment&aacute;rio', 'noun'), __('Trackback'), __('Pingback')); ?>
+      <?php _e('por'); ?>
+      <?php comment_author_link() ?>
+      &#8212;
 
-			&lt;time datetime="&lt;?php echo $comment->comment_date; ?>">
-				&lt;?php comment_date() ?>
-				@ &lt;a href="#comment-&lt;?php comment_ID() ?>">
-				&lt;?php comment_time() ?>
-				&lt;/a>
-			&lt;/time>
-			&lt;?php edit_comment_link(__("Editar"), ' | '); ?>
+      <time datetime="<?php echo $comment->comment_date; ?>">
+        <?php comment_date() ?>
+        @ <a href="#comment-<?php comment_ID() ?>">
+        <?php comment_time() ?>
+        </a>
+      </time>
+      <?php edit_comment_link(__("Editar"), ' | '); ?>
 
-			&lt;?php if ( $comment->comment_approved == '0' ) : ?>
-				&lt;em class="comment-awaiting-moderation">&lt;?php _e( 'Your comment is awaiting moderation.' ); ?>&lt;/em>
-			&lt;?php endif; ?>
+      <?php if ( $comment->comment_approved == '0' ) : ?>
+        <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+      <?php endif; ?>
 
 
-			&lt;?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-		&lt;/li>
+      <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+    </li>
 
-	&lt;?php
-			break;
-		case 'pingback'  :
-		case 'trackback' :
-	?>
-	&lt;li class="post pingback">
-		&lt;p>&lt;?php _e( 'Pingback:' ); ?> &lt;?php comment_author_link(); ?>&lt;?php edit_comment_link( __( '(Edit)' ), ' ' ); ?>&lt;/p>
-	&lt;?php
-			break;
-	endswitch;
+  <?php
+      break;
+    case 'pingback'  :
+    case 'trackback' :
+  ?>
+  <li class="post pingback">
+    <p><?php _e( 'Pingback:' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)' ), ' ' ); ?></p>
+  <?php
+      break;
+  endswitch;
 }
 endif;
-?></pre>
+?>
+```
 
 **comments.php**
 
-<pre name="code" class="php">&lt;?php if ( have_comments() ) : ?>
-	&lt;ol id="commentlist">
-		&lt;?php wp_list_comments( array( 'callback' => 'parent_comment' ) ); ?>
-	&lt;/ol>
-&lt;?php else : // If there are no comments yet ?>
-	&lt;p>&lt;?php _e('Nenhum coment&aacute;rio ainda.'); ?>&lt;/p>
-&lt;?php endif; ?>
-</pre>
+``` php
+<?php if ( have_comments() ) : ?>
+  <ol id="commentlist">
+    <?php wp_list_comments( array( 'callback' => 'parent_comment' ) ); ?>
+  </ol>
+<?php else : // If there are no comments yet ?>
+  <p><?php _e('Nenhum coment&aacute;rio ainda.'); ?></p>
+<?php endif; ?>
+```
 
 **style.css**
 
-<pre name="code" class="css">#commentlist .children { margin-left: 25px; }</pre>
+``` css
+#commentlist .children { margin-left: 25px; }
+```
 
 Ahh, e sem se esquecer do novo input hidden, para o comentário reply saber quem é o pai dele:
 
 **comments.php** ou comment_form() [caso vc não tenha personalizado o form]
 
-<pre name="code" class="html">&lt;input type="hidden" name="comment_parent" id="comment_parent" value="&lt;?php if( isset( $_GET['replytocom'] ) ) echo $_GET['replytocom']; ?>" /></pre>
+``` html
+<input type="hidden" name="comment_parent" id="comment_parent" value="<?php if( isset( $_GET['replytocom'] ) ) echo $_GET['replytocom']; ?>" />```
 
 =)

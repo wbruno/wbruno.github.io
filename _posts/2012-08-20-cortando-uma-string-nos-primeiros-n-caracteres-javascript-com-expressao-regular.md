@@ -23,50 +23,53 @@ Fiz aqui rapidinho uma brincadeira para cortar uma frase nos primeiros 9 caracte
   
 Fazendo a string:
 
-<pre name="code" class="html">&lt;h1 id="title">Um titulo bem grande cheio de palavras esquisitas&lt;/h1>
-</pre>
+``` html
+<h1 id="title">Um titulo bem grande cheio de palavras esquisitas</h1>
+```
 
 Ser mostrada apenas como:
 
-<pre name="code" class="html">&lt;h1 id="title">Um titulo...&lt;/h1></pre>
+``` html
+<h1 id="title">Um titulo...</h1>```
 
 E ao clicar, mostra a frase completa. Alternando cada clique, mostrando truncado e mostrando completo.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-	&lt;meta charset="utf8" />
+``` html
+<html>
+<head>
+  <meta charset="utf8" />
 
-	&lt;script type="text/javascript">
-	function id( el ){
-		return document.getElementById( el );
-	}
-	String.prototype.truncate = function( max ){
-		var er = new RegExp( "(^[\\w\\s]{"+max+"})(.*)$" );
-		return this.replace( er,'$1' );
-	}
-	window.onload = function(){
-		var $t = id('title');
-		var strtitle = $t.innerHTML;
+  <script type="text/javascript">
+  function id( el ){
+    return document.getElementById( el );
+  }
+  String.prototype.truncate = function( max ){
+    var er = new RegExp( "(^[\\w\\s]{"+max+"})(.*)$" );
+    return this.replace( er,'$1' );
+  }
+  window.onload = function(){
+    var $t = id('title');
+    var strtitle = $t.innerHTML;
 
-		$t.title = strtitle;
-		$t.innerHTML = strtitle.truncate( 9 )+'...';
+    $t.title = strtitle;
+    $t.innerHTML = strtitle.truncate( 9 )+'...';
 
-		$t.onclick = function(){
-			this.innerHTML = this.innerHTML.length==12 ? this.title : this.title.truncate( 9 )+'...';
+    $t.onclick = function(){
+      this.innerHTML = this.innerHTML.length==12 ? this.title : this.title.truncate( 9 )+'...';
 
-		}
-	}
-	&lt;/script>
-	&lt;style type="text/css">
-	#title { cursor: pointer; }
-	&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;h1 id="title">Um titulo bem grande cheio de palavras esquisitas&lt;/h1>
+    }
+  }
+  </script>
+  <style type="text/css">
+  #title { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Um titulo bem grande cheio de palavras esquisitas</h1>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 Note que fiz 2 grupos na expressão regular. O primeiro grupo casa os &#8220;N&#8221; primeiros caracteres(letras simbolos e espaços <var>\w\s</var>), e o segundo grupo casa tudo oque vier depois(<var>.*</var>), em qualquer quantidade.
 
@@ -82,6 +85,8 @@ Este post, é o primeiro exemplo prático do [Expressões Regulares – REGEX pa
 
 Fiz com ReGex, o mesmo que eu conseguiria com o **substr()**:
 
-<pre name="code" class="javascript">return this.substr( 0, max );</pre>
+``` js
+return this.substr( 0, max );
+```
 
 É isso galera. Por enquanto bem básico, mas me digam se está sendo fácil entender o que são, o tão temido mundo da expressão regular.

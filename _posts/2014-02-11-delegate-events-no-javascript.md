@@ -54,7 +54,7 @@ Não é uma boa prática esperar tantos eventos em um só manipulador, e o live 
 
 Eu estendi o prototype do objeto Element para criar nativamente suporte ao delegate, deixando uma sintaxe prática, com apenas as linhas de código abaixo:
 
-<pre>Element.prototype.is = function(elementSelector) {
+```Element.prototype.is = function(elementSelector) {
     switch(elementSelector[0]) {
         case ".":
             var er = new RegExp(elementSelector.replace(".", ""));
@@ -81,12 +81,14 @@ Element.prototype.delegate = function(eventName, elementSelector, cb) {
             cb.call($this.parentNode, evt);
         }
     });
-};</pre>
+};
+```
 
 A forma de uso é simplesmente:
 
-<pre>document.getElementById('menu').delegate('click', 'li', function(event){
+```document.getElementById('menu').delegate('click', 'li', function(event){
     console.log(this.innerHTML);
-});</pre>
+});
+```
 
 =)

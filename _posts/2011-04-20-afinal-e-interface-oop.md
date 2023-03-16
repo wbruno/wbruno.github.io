@@ -29,44 +29,50 @@ Estou falando &#8216;por cima&#8217;, para simplificar e me focar no conceito qu
 
 Imaginemos que nosso sistema faz um CRUD, e possui um módulo de Agenda, razoável, termos um model que seja parecido com isso:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 class Agenda
 {
-	public function insere_agenda(){
-		//implementação
-	}
-	public function atualiza_agenda(){
-		//implementação
-	}
-	public function excluir_agenda(){
-		//implementação
-	}
-}</pre>
+  public function insere_agenda(){
+    //implementação
+  }
+  public function atualiza_agenda(){
+    //implementação
+  }
+  public function excluir_agenda(){
+    //implementação
+  }
+}
+```
 
 Bacana.. Recebemos então uma solicitação que nos pede para criarmos outro &#8216;módulo&#8217;, para galerias de fotos. Novamente, vamos lá e fazemos:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 class Galeria
 {
-	public function insere_galeria(){
-		//implementação
-	}
-	//...
-}</pre>
+  public function insere_galeria(){
+    //implementação
+  }
+  //...
+}
+```
 
 bem parecidos, porém diferentes nas implementações.
 
 Nosso &#8216;controlador&#8217;, que usará os objetos instanciados apartir de Galeria, ou Agenda, sabe que precisa usar:
 
 <pre name="code" class="php">$galeria = new Galeria();
-$galeria->insere_galeria();</pre>
+$galeria->insere_galeria();
+```
 
 ou
 
 <pre name="code" class="php">$agenda = new Agenda();
-$agenda->insere_agenda();</pre>
+$agenda->insere_agenda();
+```
 
 Mas e se um outro programador, for dar continuidade nesse trabalho, é complicado ele ter a paciência de[<img src="/wp-content/uploads/2011/04/E_Agora_Blog7-300x269.jpg" alt="" title="E_Agora_(Blog)[7]" width="300" height="269" class="alignleft size-medium wp-image-828" srcset="/wp-content/uploads/2011/04/E_Agora_Blog7-300x269.jpg 300w, /wp-content/uploads/2011/04/E_Agora_Blog7.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" />](/wp-content/uploads/2011/04/E_Agora_Blog7.jpg) estudar todas as nossas classes, identificar o &#8216;padrão&#8217; que usamos, e então implementar agora o módulo de &#8216;Notícias&#8217;&#8230; esse &#8216;outro programador&#8217;, pode até ser nós mesmos, daqui um tempo.
 
@@ -78,13 +84,15 @@ Assim que esse &#8216;novo programador&#8217;, for implementar o módulo de Not�
 
 Aqui é onde mora o perigo. Ele pode detonar &#8216;o nosso padrão'(que já estava errado), e fazer algo completamente bizzarro:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 class Noticia
 {
-	public function cadastra(){}
-	public function Muda(){}
-	public function manda_pRo_liXo(){}
-}</pre>
+  public function cadastra(){}
+  public function Muda(){}
+  public function manda_pRo_liXo(){}
+}
+```
 
 e ai ? a culpa não é só dele.
 
@@ -96,12 +104,14 @@ Afinal, **Galeria::insere_galeria();**, **Agenda::insere_agenda()**, e **Noticia
 
 Queremos que os próximos a programarem no nosso sistema, saibam o que devem fazer, e &#8216;como devem fazer&#8217;. Podemos então, obrigar que os próximos depois da gente, sejam mais consistentes.
 
-<pre name="code" class="php:firstLine[7]">interface iModel
-	{
-		public function insert();
-		public function update();
-		public function delete();
-	}</pre>
+``` php
+interface iModel
+  {
+    public function insert();
+    public function update();
+    public function delete();
+  }
+```
 
 A nomenclatura já está bem melhor também.
 
@@ -119,14 +129,16 @@ Não raramente fazemos isso. Posso dizer que toda vez que você usa uma função
 
 Nossas classes agora são assim:
 
-<pre name="code" class="php:firstLine[13]">class Agenda implements iModel
-	{
+``` php
+class Agenda implements iModel
+  {
 
-	}
-	class Galeria implements iModel
-	{
+  }
+  class Galeria implements iModel
+  {
 
-	}</pre>
+  }
+```
 
 Todas irão implementar a nossa interface, e por isso, precisam obrigatoriamente fazer isso corretamente, se não, alguns erros serão lançados:
 
@@ -134,18 +146,20 @@ Todas irão implementar a nossa interface, e por isso, precisam obrigatoriamente
 
 Somos obrigados a:
 
-<pre name="code" class="php:firstLine[13]">class Agenda implements iModel
-	{
-		public function insert(){
-			//implementação
-		}
-		public function update(){
-			//implementação
-		}
-		public function delete(){
-			//implementação
-		}
-	}</pre>
+``` php
+class Agenda implements iModel
+  {
+    public function insert(){
+      //implementação
+    }
+    public function update(){
+      //implementação
+    }
+    public function delete(){
+      //implementação
+    }
+  }
+```
 
 E o **mesmo** para todas as classes que implementarem essa interface.
 
@@ -159,12 +173,14 @@ Por isso que não faz sentido, que nossas models, herdem coisas de uma class Db.
 
 Se é para usar, vamos usar:
 
-<pre name="code" class="php:firstLine[7]">interface iModel
-	{
-		public function insert( iDb $db );
-		public function update( iDb $db );
-		public function delete( iDb $db );
-	}</pre>
+``` php
+interface iModel
+  {
+    public function insert( iDb $db );
+    public function update( iDb $db );
+    public function delete( iDb $db );
+  }
+```
 
 Agora, outro erro foi disparado:
 
@@ -172,7 +188,9 @@ Agora, outro erro foi disparado:
 
 Basta adequarmos nossas classes, a essa nova realidade.
 
-<pre name="code" class="php:firstLine[15]">public function insert( iDb $db ){}</pre>
+``` php
+public function insert( iDb $db ){}
+```
 
 Okay, mas e oque isso quer dizer?
 
@@ -180,29 +198,35 @@ Que os nossos métodos: <u>esperam receber</u> um objeto &#8216;iDb&#8217;. E qu
 
 [conheço pdo, tente por favor extrair o conceito, e não apenas a implementação que estou expondo].
 
-<pre name="code" class="php:firstLine[1]">interface iDb
-	{
-		public function query();
-	}
-	class MySql implements iDb
-	{
-		public function query();
-	}
-	class PostGre implements iDb()
-	{
-		public function query();
-	}</pre>
+``` php
+interface iDb
+  {
+    public function query();
+  }
+  class MySql implements iDb
+  {
+    public function query();
+  }
+  class PostGre implements iDb()
+  {
+    public function query();
+  }
+```
 
 Usamos para o banco MySQL dessa forma:
 
-<pre name="code" class="php:firstLine[44]">$db = new MySql();
-	$galeria = new Galeria();
+``` php
+$db = new MySql();
+  $galeria = new Galeria();
 
-	$galeria->insert( $db );</pre>
+  $galeria->insert( $db );
+```
 
 Como também poderiamos usar com a nossa class para o banco de dados Postgre:
 
-<pre name="code" class="php:firstLine[44]">$db = new PostGre();</pre>
+``` php
+$db = new PostGre();
+```
 
 Ou seja, ganhamos uma flexibilidade aqui.
 
@@ -210,13 +234,14 @@ Ambos, tanto postgre, qnto mysql, possuem em comum a interface iDb. Por isso, qu
 
 Mas não podemos, fazer:
 
-<pre name="code" class="php:firstLine[1]">class Storage
-	{
-		public function query(){}
-	}
-	$db = new Storage();
-	$galeria = new Galeria();
-	$galeria->insert( $db );//mandando um objeto Storage, que não implementa iDb</pre>
+``` php
+class Storage
+  {
+    public function query(){}
+  }
+  $db = new Storage();
+  $galeria = new Galeria();
+  $galeria->insert( $db );//mandando um objeto Storage, que não implementa iDb```
 
 Será lançado um erro. Afinal, o método iModel::insert() espera receber um iDb, e não foi isso que mandamos para ele.
 
@@ -224,11 +249,13 @@ Nossas classes especificas, assinaram os contratos com as interfaces.
 
 Na prática, temos a garantia de que podemos usar os métodos **insert(), update()** e **delete**, com exatamente esses nomes, e passando um objeto **iDb**, que sabemos que podemos usar o método **query()**;
 
-<pre name="code" class="php:firstLine[27]">public function insert( iDb $db )
-		{
-			$sql = "INSERT INTO ...";
-			return $db->query( $sql );
-		}</pre>
+``` php
+public function insert( iDb $db )
+    {
+      $sql = "INSERT INTO ...";
+      return $db->query( $sql );
+    }
+```
 
 Essa consistência é importante. Não importa se é MySQL, Postgre, SQL Server.. todos implementando **iDb**, temos a garantia de que o método **query()** existe, e pode ser usado.
 

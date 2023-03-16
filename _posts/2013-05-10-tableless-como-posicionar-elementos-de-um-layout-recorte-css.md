@@ -29,7 +29,8 @@ Depende de cada projeto, a variação do design faz que tenhamos que analisar ca
 
 Só comece a escrever o teu css, depois te ter algum css reset declarado. Nem que seja um:
 
-<pre class="css">* { margin: 0; padding: 0; border: none; }</pre>
+<pre class="css">* { margin: 0; padding: 0; border: none; }
+```
 
 ## DOCTYPE
 

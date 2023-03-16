@@ -25,51 +25,52 @@ Para que o visitante possa dar F5, e o conteudo &#8220;continuar lá&#8221;(sem 
   
 Bom, o código javascript ficou assim:
 
-<pre name="code" class="javascript">$(document).ready(function(){
-		var content = $('#content');
+``` js
+$(document).ready(function(){
+    var content = $('#content');
 
-		//pre carregando o gif
-		loading = new Image(); loading.src = 'ico-loading.gif';
-		
-		
-		
-		$('#menu a').click(function( e ){
-			var arq = pega_arq( $( this ).attr('href') );
-			abre( arq, content );
-		});
-		
-		
-		/* iniciando com a home */
-		abre( pega_arq( document.location.href ), content ); 
-	});
-	function abre( href, content ){
-		content.html( '&lt;img src="ico-loading.gif" />' );
-		
+    //pre carregando o gif
+    loading = new Image(); loading.src = 'ico-loading.gif';
+    
+    
+    
+    $('#menu a').click(function( e ){
+      var arq = pega_arq( $( this ).attr('href') );
+      abre( arq, content );
+    });
+    
+    
+    /* iniciando com a home */
+    abre( pega_arq( document.location.href ), content ); 
+  });
+  function abre( href, content ){
+    content.html( '<img src="ico-loading.gif" />' );
+    
 
-		$.ajax({
-			url: href,
-			success: function( response ){		
-				content.delay(1000).hide().html( response ).fadeIn();
-				
-				init_plugins( href );
-			}
-		});
-	}
-	function pega_arq( url ){
-		var file = url.split('#');
-		return ( file[1] ) ? file[1]+'.html' : 'home.html';
-	}
-	function init_plugins( href )
-	{
-		if( href=='lightbox.html' )
-		{
-			$('#gallery a').click(function( e ){
-				e.preventDefault();
-			})
-			$('#gallery').lightBox();
-		}
-	}
-</pre>
+    $.ajax({
+      url: href,
+      success: function( response ){    
+        content.delay(1000).hide().html( response ).fadeIn();
+        
+        init_plugins( href );
+      }
+    });
+  }
+  function pega_arq( url ){
+    var file = url.split('#');
+    return ( file[1] ) ? file[1]+'.html' : 'home.html';
+  }
+  function init_plugins( href )
+  {
+    if( href=='lightbox.html' )
+    {
+      $('#gallery a').click(function( e ){
+        e.preventDefault();
+      })
+      $('#gallery').lightBox();
+    }
+  }
+```
 
 ## <a href="http://www.wbruno.com.br/scripts/ajax-url.html#lightbox" target="_blank">Usando lightbox em página que foi carregada com ajax</a>
 

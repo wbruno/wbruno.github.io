@@ -23,77 +23,78 @@ Por isso, que uso ali, o método **.stopPropagation()**, pois qndo eu clicar no 
 
 Bom, é isso, o código está simples e é auto explicativo.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript" src="jquery.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
 jQuery(document).ready(function( $ ){
-	var uls = $('#menu ul');
-	uls.hide();
+  var uls = $('#menu ul');
+  uls.hide();
 
-	$('#menu > li').click(function( e ){
-		e.stopPropagation();
-		uls.hide();
-		$( this ).find('ul').show();
-	});
-	$('#menu ul').click(function( e ){
-		e.stopPropagation();
-	});
-	$('body').click(function(){
-		uls.hide();
-	});
+  $('#menu > li').click(function( e ){
+    e.stopPropagation();
+    uls.hide();
+    $( this ).find('ul').show();
+  });
+  $('#menu ul').click(function( e ){
+    e.stopPropagation();
+  });
+  $('body').click(function(){
+    uls.hide();
+  });
 });
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 * { list-style: none; }
 html, body { height: 100%; }
 body { font: 12px/12px Tahoma, sans-serif; color: #666; }
 #main { min-height: 100%; }
 #menu { height: 30px; }
 #menu li {
-	position: relative;
-	float: left;
-	padding: 0 10px;
-	height: 30px;
-	line-height: 30px;
-	border: 1px solid #666;
+  position: relative;
+  float: left;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #666;
 }
 #menu ul {
-	position: absolute;
-	top: 30px;
-	left: -1px;
-	border: 1px solid #666;
-	background: #fff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  border: 1px solid #666;
+  background: #fff;
 }
 #menu li li {
-	width: 200px;
-	border: none;
+  width: 200px;
+  border: none;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-&lt;div id="main">
-	&lt;ul id="menu">
-		&lt;li>Abrir sub 1
-			&lt;ul>
-				&lt;li>Item 1&lt;/li>
-				&lt;li>Item 2&lt;/li>
-				&lt;li>Item 3&lt;/li>
-				&lt;li>Item 4&lt;/li>
-			&lt;/ul>
-		&lt;/li>
-		&lt;li>Abrir sub 2
-			&lt;ul>
-				&lt;li>Item 1&lt;/li>
-				&lt;li>Item 2&lt;/li>
-				&lt;li>Item 3&lt;/li>
-			&lt;/ul>
-		&lt;/li>	
-	&lt;/ul>&lt;!-- /menu -->
-&lt;/div>&lt;!-- /main -->
-&lt;/body>
-&lt;/html>
-</pre>
+</style>
+</head>
+<body>
+<div id="main">
+  <ul id="menu">
+    <li>Abrir sub 1
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </li>
+    <li>Abrir sub 2
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </li>  
+  </ul><!-- /menu -->
+</div><!-- /main -->
+</body>
+</html>
+```
 
 ## [Demonstração](/scripts/menu-click.html)
 

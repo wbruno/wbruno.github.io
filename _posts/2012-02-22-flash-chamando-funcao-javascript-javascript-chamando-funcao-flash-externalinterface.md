@@ -21,7 +21,8 @@ No blog dele, ele já postou ótimos exemplos, de <a href="http://berseck.wordpr
   
 O **javascript** fica assim:
 
-<pre name="code" class="javascript">function onFlashReady() {
+``` js
+function onFlashReady() {
     sendToAS("another test message");
 }
 
@@ -41,11 +42,12 @@ function thisMovie(movieName) {
 function sendToAS(value) {
     thisMovie("externalclass").callAS(value);
 }
-</pre>
+```
 
 e o **action script**:
 
-<pre name="code" class="javascript">import flash.external.*;
+``` js
+import flash.external.*;
 
 play();
 
@@ -57,7 +59,7 @@ ExternalInterface.call("callJS", 1);
 function func(n:Number) {
     gotoAndStop(n);
 }
-</pre>
+```
 
 ## <a href="http://wbruno.com.br/scripts/externalclass.zip" target="_blank">Download ExternalClass.zip</a>
 

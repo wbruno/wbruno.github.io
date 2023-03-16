@@ -22,7 +22,9 @@ Já escrevi sobre os [erros do validador w3c](http://www.wbruno.com.br/2011/04/0
 
 Digitamos errado. CSS não é uma linguagem CaSE SeNSiTiVe, porém nomes de propriedades inválidos são ignorados, e não validam.
 
-<pre name="code" class="css">inPUT{ heiGHtt: 22px; }</pre>
+``` css
+inPUT{ heiGHtt: 22px; }
+```
 
 Para ficar mais bonito e organizado, seletores, e valores sempre em minúsculo, okay ?
 
@@ -34,8 +36,10 @@ Uso de código proprietário, como os prefixos: **-moz, -khtml, -webkit-&#8230;*
 
 De novo, mais um erro ao tentar usar **css3**. O validador foi projetado para css2.1 ainda. Portanto, os valores &#8216;liberados&#8217; de css3, que não existiam em css2.1 não validam.
 
-<pre name="code" class="css">box-shadow:rgba(200,200,200,1) 0 4px 18px;
-text-shadow:#fff 0 1px 0;</pre>
+``` css
+box-shadow:rgba(200,200,200,1) 0 4px 18px;
+text-shadow:#fff 0 1px 0;
+```
 
 ## Erro 1d: A propriedade _blablabla não existe : valor
 
@@ -43,13 +47,16 @@ Famigerados hacks para ie. Adição do underline na frente da propriedade.
   
 Não use esse tipo de hack! Antes de pensar em fazer regras especificas para &#8216;tal navegador&#8217;, veja se não é o teu código que está confuso, ou gerando essa diferença.
 
-<pre name="code" class="css">_background: ...</pre>
+``` css
+_background: ...```
 
 ## Erro 2a: Pseudo-elemento ou pseudo classe :blablabla desconhecido 
 
 **css3** novamente.. seletores poderosos.. mas ainda não podemos usá-los de forma simples e crossbrowser.
 
-<pre name="code" class="css">.elemento:disabled {}</pre>
+``` css
+.elemento:disabled {}
+```
 
 ## Erro 3a: Erro de parseamento blablabla
 
@@ -57,13 +64,16 @@ Escrito de forma incorreta, ou regra proprietária. Aqui vale ressaltar, que é 
 
 ## Erro 3b: Erro de parseamento blablabla
 
-<pre name="code" class="css">#meuid.umclass {}}</pre>
+``` css
+#meuid.umclass {}}
+```
 
 Sobrou um fecha chaves ali. Só resta usar o validador para nos indicar a linha, e corrigirmos o problema.
 
 ## Erro 3c: Erro de parseamento *blablabla
 
-<pre name="code" class="css">*padding-top: 0; </pre>
+``` css
+*padding-top: 0; ```
 
 Outro hack para IE. Se for a última alternativa, uma folha externa dentro de um comentário condicional, é muito mais elegante e simples de dar manutenção do que esse tipo de hack.
 
@@ -71,25 +81,33 @@ Outro hack para IE. Se for a última alternativa, uma folha externa dentro de um
 
 &#8216;Esqueci&#8217;, de colocar a unidade de medida:
 
-<pre name="code" class="css">input{ height: 22; }</pre>
+``` css
+input{ height: 22; }
+```
 
 ## Erro 4b: Erro de valor : blablabla é uma cor inválida 3 ou 6 números hexadecimais são requeridos valor
 
 &#8216;Posso&#8217;, declarar meus elementos como quiser, pois vale lembrar que css também podem ser atrelados a documentos XML. No entanto, os valores devem ser escritos corretamente.
 
-<pre name="code" class="css">wb { color: #ff; }</pre>
+``` css
+wb { color: #ff; }
+```
 
 ## Erro 4c: Erro de valor : blablabla Erro de parseamento valor
 
 &#8216;Esqueci&#8217; os dois pontos, entre o seletor e o valor nessa regra.
 
-<pre name="code" class="css">input { height 22px; }</pre>
+``` css
+input { height 22px; }
+```
 
 ## Erro 5a: Erro de parseamento blablabla
 
 Eu costumo fazer isso. Quando quero testar como ficará o elemento &#8216;sem uma propriedade&#8217;, eu quebro a sintaxe dela, colocando um espaço no meio do seletor, invalidando assim aquela linha, já que se restringirá até o ponto e virgula declarado.
 
-<pre name="code" class="css">input { hei ght: 22px; }</pre>
+``` css
+input { hei ght: 22px; }
+```
 
 Eu sei que eu poderia usar a sintaxe de comentário do css, para anular dada regra, ou ainda editar em &#8216;tempo real&#8217; com o Firebug, porém as vezes é mais simples e direto esse tipo de intervenção.
 
@@ -99,29 +117,36 @@ Ainda assim, fica a dica de algo que pode ser digitado &#8216;errado&#8217;, e c
 
 Se estivermos na ultima regra de um dado seletor, o ponto e vírgula é optativo, porém não vejo o menor sentido em escolher não declará-lo. A &#8216;economia&#8217; de digitação, é tão ínfima, que na minha opinião, vale mais apena, sermos rígidos com a sintaxe, e depois não precisarmos quebrar a cabeça, caso tenhamos que adicionar novas regras embaixo, e alguma delas não funcionar.
 
-<pre name="code" class="css">input {
+``` css
+input {
    height: 22px
    color: #fff;
-}</pre>
+}
+```
 
 ## Erro 7a: Seletor ID inválido [#blablabla]
 
-<pre name="code" class="css">#12id {}</pre>
+``` css
+#12id {}
+```
 
 os valores dos atributos HTML, como class e IDs, não devem começar com números por exemplo, ou outro caracter inválido.
 
 ## Erro 7b: Em CSS1, um nome de classe pode começar com um dígito (&#8220;.55ft&#8221;), a menos que seja uma dimensão (&#8220;.55in&#8221;). Em CSS2, tais ids são parseadas como dimensões desconhecidas (com a finalidade de permitir adições futuras de novas unidades). Para que &#8220;.blablabla&#8221; seja uma classe válida, CSS2 requer que o primeiro dígito seja escapado &#8220;blablabla&#8221; [blablabla] 
 
-<pre name="code" class="css">.12class {}</pre>
+``` css
+.12class {}
+```
 
 Mesma coisa do anterior, porém a mensagem agora é mais completa. Comecemos os valores de IDs e classes, com letras.
 
 ## Erro 8a: Alerta Algumas cores background-color e color
 
-<pre name="code" class="css">input {
+``` css
+input {
 background : #000;
 color : #000;
-} </pre>
+} ```
 
 Mesma cor para fonte, e para fundo, ou seja invisível e ilegível. Gera um alert do validador.
   

@@ -15,7 +15,8 @@ tags:
 ---
 slideshow simples, apenas trocando o src de uma tag img com javascript puro.
 
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript">
         var x = new Array('images/1.jpg','images/2.jpg');
         var total = x.length-1;
 
@@ -32,8 +33,8 @@ slideshow simples, apenas trocando o src de uma tag img com javascript puro.
         window.onload = function(){
                 mudar();
         }
-&lt;/script>
-&lt;img src="images/2.jpg" alt="" id="fig1" />
-</pre>
+</script>
+<img src="images/2.jpg" alt="" id="fig1" />
+```
 
 Veja a <a href="http://www.wbruno.com.br/scripts/principio-slideshow.html" target="_blank">demo em funcionamento</a>

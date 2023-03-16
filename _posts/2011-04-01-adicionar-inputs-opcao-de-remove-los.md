@@ -21,43 +21,44 @@ Sobre esse mesmo assunto, eu já tinha feito [esse post aqui meu](http://www.wbr
 
 <!--more-->
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
 $(document).ready(function(){
 
-	var input = '&lt;label>Nome: &lt;input type="text" name="foto[]" /> &lt;a href="#" class="remove">X&lt;/a>&lt;/label>';
+  var input = '<label>Nome: <input type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
 
-	$("input[name='add']").click(function( e ){
-		$('#inputs_adicionais').append( input );
-	});
+  $("input[name='add']").click(function( e ){
+    $('#inputs_adicionais').append( input );
+  });
 
-	$('#inputs_adicionais').delegate('a','click',function( e ){
-		e.preventDefault();
-		$( this ).parent('label').remove();
-	});
+  $('#inputs_adicionais').delegate('a','click',function( e ){
+    e.preventDefault();
+    $( this ).parent('label').remove();
+  });
 
 });
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 fieldset { border: none; }
 label { display: block; }
 .remove { color:black;font-weight:bold;text-decoration:none; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-	&lt;form action="" method="post">
-		&lt;label>&lt;input type="button" name="add" value="Add" />&lt;/label>
-			&lt;label>Nome: <input type="text" name="foto[]" />&lt;/label>
+  <form action="" method="post">
+    <label><input type="button" name="add" value="Add" /></label>
+      <label>Nome: <input type="text" name="foto[]" /></label>
 
-		&lt;fieldset id="inputs_adicionais">
-		&lt;/fieldset>
-	&lt;/form>
-&lt;/body>
-&lt;/html>
-</pre>
+    <fieldset id="inputs_adicionais">
+    </fieldset>
+  </form>
+</body>
+</html>
+```
 
 Alguns pontos importantes
   

@@ -41,23 +41,26 @@ Com este sim, precisamos nos preocupar. Nesse primeiro momento vamos olhar apena
 
 Gerado por:
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-	&lt;title>wbruno&lt;/title>
-	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-&lt;/head>
-&lt;body>
-&lt;br>
-&lt;/body>
-&lt;/html></pre>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>wbruno</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<br>
+</body>
+</html>
+```
 
 Apenas temos que lembrar de uma regra básica do xHTML: **Todas as tags devem obrigatoriamente ser fechadas**.
 
 Logo, deve ficar:
 
-<pre name="code" class="html:firstLine[9]">&lt;br /></pre>
+``` html
+<br />```
 
 Costumo colocar um espaço entre a tag e o fechamento, pois em algum browser antigo, isso pode gerar problemas, além do que fica mais bonito ver a tag assim.
 
@@ -67,8 +70,9 @@ Costumo colocar um espaço entre a tag e o fechamento, pois em algum browser ant
   Erro 1b: end tag for &#8220;blablabla&#8221; omitted, but OMITTAG NO was specified
 </h2>
 
-<pre name="code" class="html:firstLine[9]">&lt;p>Texto..
-&lt;/body></pre>
+``` html
+<p>Texto..
+</body>```
 
 nesse caso, estamos trabalhando com uma tag que possui fechamento </p>. Pois possui conteúdo, porém não colocamos, ai o validador nos indica erro:
 
@@ -80,7 +84,8 @@ A info <img src="/wp-content/uploads/2011/04/infos1.jpg" alt="" title="infos" wi
 
 Corrigindo:
 
-<pre name="code" class="html:firstLine[9]">&lt;p>Texto..&lt;/p></pre>
+``` html
+<p>Texto..</p>```
 
 Fica tudo certo.
 
@@ -92,10 +97,11 @@ Fica tudo certo.
 
 Esse erro pode acontecer tanto quando fechamos algo que realmente não abrimos:
 
-<pre name="code" class="html:firstLine[8]">&lt;body>
-&lt;SPAN>Texto&lt;/sPan>
-&lt;/p>
-&lt;/body></pre>
+``` html
+<body>
+<SPAN>Texto</sPan>
+</p>
+</body>```
 
 Como também, no Erro 2a que mostrei. Tentando fechar uma tag que não existe, por causa do case-sensitive da linguagem.
 
@@ -105,7 +111,8 @@ Como também, no Erro 2a que mostrei. Tentando fechar uma tag que não existe, p
 
 ##### end tag for &#8220;blablabla&#8221; omitted, but OMITTAG NO was specified, end tag for element &#8220;blablabla&#8221; which is not open
 
-<pre name="code" class="html:firstLine[9]">&lt;p>&lt;span>Texto&lt;/p>&lt;/span></pre>
+``` html
+<p><span>Texto</p></span>```
 
 O aninhamento deve ser correto. Respeitando a ordem.
 
@@ -115,13 +122,15 @@ Estou dando exemplos com estas tags, porém o conceito se aplica para quaisquer 
 
 Correto:
 
-<pre name="code" class="html:firstLine[9]">&lt;p>&lt;span>Texto&lt;/span>&lt;/p></pre>
+``` html
+<p><span>Texto</span></p>```
 
 <h2 style="margin-top: 30px;">
   Erro 3a: element &#8220;blablabla&#8221; undefined
 </h2>
 
-<pre name="code" class="html:firstLine[9]">&lt;SPAN>Texto&lt;/sPan></pre>
+``` html
+<SPAN>Texto</sPan>```
 
 Outros erros &#8216;absurdos&#8217;: [<img src="/wp-content/uploads/2011/04/erro31.jpg" alt="" title="erro3" width="412" height="99" class="aligncenter size-full wp-image-663" srcset="/wp-content/uploads/2011/04/erro31.jpg 412w, /wp-content/uploads/2011/04/erro31-300x72.jpg 300w" sizes="(max-width: 412px) 100vw, 412px" />](/wp-content/uploads/2011/04/erro31.jpg)
 
@@ -135,9 +144,10 @@ Basta escrever as tags todas em minúsculo, sempre.
   Erro 3b: element &#8220;blablabla&#8221; undefined
 </h2>
 
-<pre name="code" class="html:firstLine[8]">
+``` html
+
 <wb></wb>
-</pre>
+```
 
 
 <p>
@@ -181,7 +191,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 </p>
 
 
-<pre name="code" class="html:firstLine[9]">&lt;a href="">&lt;h1>Texto&lt;/h1>&lt;/a></pre>
+``` html
+<a href=""><h1>Texto</h1></a>```
 
 
 <p>
@@ -200,8 +211,9 @@ Basta escrever as tags todas em minúsculo, sempre.
 </p>
 
 
-<pre name="code" class="html:firstLine[8]">&lt;body>
-&lt;span>Texto...&lt;/span></pre>
+``` html
+<body>
+<span>Texto...</span>```
 
 
 <p>
@@ -220,11 +232,12 @@ Basta escrever as tags todas em minúsculo, sempre.
 </p>
 
 
-<pre name="code" class="html:firstLine[7]">
-&lt;/head>
-&lt;body>
-&lt;link />
-</pre>
+``` html
+
+</head>
+<body>
+<link />
+```
 
 
 <h2 style="margin-top: 30px;">
@@ -238,7 +251,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 </p>
 
 
-<pre name="code" class="html:firstLine[9]">&lt;p onclick="alert( this.innerHTML );">Texto...&lt;/p></pre>
+``` html
+<p onclick="alert( this.innerHTML );">Texto...</p>```
 
 
 <h2 style="margin-top: 30px;">
@@ -246,7 +260,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 </h2>
 
 
-<pre name="code" class="html:firstLine[9]">&lt;p checked="checked">Texto...&lt;/p></pre>
+``` html
+<p checked="checked">Texto...</p>```
 
 
 <p>
@@ -266,7 +281,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 </h2>
 
 
-<pre name="code" class="html:firstLine[9]">&lt;p meuatributo="true">Texto...&lt;/p></pre>
+``` html
+<p meuatributo="true">Texto...</p>```
 
 
 <p>
@@ -280,7 +296,8 @@ Basta escrever as tags todas em minúsculo, sempre.
 </h2>
 
 
-<pre name="code" class="html:firstLine[9]">&lt;a href="" target="">Link&lt;/a></pre>
+``` html
+<a href="" target="">Link</a>```
 
 
 <p>
@@ -310,11 +327,12 @@ Basta escrever as tags todas em minúsculo, sempre.
 </p>
 
 
-<pre name="code" class="html:firstLine[8]">
-&lt;body>
-&lt;p id="texto">Texto...&lt;/p>
-&lt;p id="texto">Texto...&lt;/p>
-</pre>
+``` html
+
+<body>
+<p id="texto">Texto...</p>
+<p id="texto">Texto...</p>
+```
 
 
 <p>

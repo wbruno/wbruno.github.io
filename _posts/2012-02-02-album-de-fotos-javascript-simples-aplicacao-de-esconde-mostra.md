@@ -27,50 +27,51 @@ Enfim, online:
 
 script usado:
 
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 function hide_all(){
-	var els = id('content').getElementsByTagName('ul');
-	
-	for( var i=0; i&lt;els.length; i++ )
-	{		
-		els[i].style.display = 'none';
-	}
+  var els = id('content').getElementsByTagName('ul');
+  
+  for( var i=0; i<els.length; i++ )
+  {    
+    els[i].style.display = 'none';
+  }
 }
 /* http://www.javascriptkit.com/jsref/event.shtml */
 function disablelink( e ){
-	var evt = window.event || e
-	if (evt.preventDefault) //supports preventDefault?
-		evt.preventDefault()
-	else //IE browser
-		return false
+  var evt = window.event || e
+  if (evt.preventDefault) //supports preventDefault?
+    evt.preventDefault()
+  else //IE browser
+    return false
 }
 function palco( src ){
-	id('palco').innerHTML = '&lt;img src="'+src+'" alt="" />';
+  id('palco').innerHTML = '<img src="'+src+'" alt="" />';
 }
 window.onload = function(){
-	hide_all();
-	var as = id('lista').getElementsByTagName('a');
-	for( var i=0; i&lt;as.length; i++ )
-	{
-		as[i].onclick = function( e ){
-			hide_all();
-			var id_el = this.href.split('#')
-       		
-			id( id_el[1] ).style.display = 'block';		
-			return disablelink( e );
-		}
-	}
-	var as = id('content').getElementsByTagName('a');
-	for( var i=0; i&lt;as.length; i++ )
-	{
-		as[i].onclick = function( e ){
-			palco( this.href )	
-			return disablelink( e );
-		}
-	}
+  hide_all();
+  var as = id('lista').getElementsByTagName('a');
+  for( var i=0; i<as.length; i++ )
+  {
+    as[i].onclick = function( e ){
+      hide_all();
+      var id_el = this.href.split('#')
+           
+      id( id_el[1] ).style.display = 'block';    
+      return disablelink( e );
+    }
+  }
+  var as = id('content').getElementsByTagName('a');
+  for( var i=0; i<as.length; i++ )
+  {
+    as[i].onclick = function( e ){
+      palco( this.href )  
+      return disablelink( e );
+    }
+  }
 }
-&lt;/script>
-</pre>
+</script>
+```

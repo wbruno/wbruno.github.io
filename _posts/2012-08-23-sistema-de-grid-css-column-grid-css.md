@@ -33,10 +33,11 @@ Pois conseguiremos num projeto grande, manter um padrão de estrutura entre dive
 
 Só não sou muito fãn, pois me incomoda esse tipo de coisa:
 
-<pre name="code" class="html">&lt;div class="container_12">..
-    &lt;div class="grid_xx">..
-        &lt;div class="grid_x push_x">
-</pre>
+``` html
+<div class="container_12">..
+    <div class="grid_xx">..
+        <div class="grid_x push_x">
+```
 
 Tenho a impressão que criaram o <a href="http://960.gs/" rel="external" title="Sistema de GRID CSS - 906gs">960gs</a> para que desenvolvedores _&#8220;Não FrontEnds&#8221;_ pudessem utilizar. Ok, existe um mérito nisso.. mas eu sou frontend, e exatamente por isso, me incomoda posicionar colunas com paddings? e position..
 
@@ -56,31 +57,35 @@ Sei que existem diversos sistemas de grid css por ai, alguns até já preparados
 
 Tenho implementado da seguinte forma:
 
-<pre name="code" class="css">.column-full { width: 940px; }
+``` css
+.column-full { width: 940px; }
 .column-half { width: 460px; }
 .column-third { width: 300px; }
-	.column-two-thirds { width: 620px; }
+  .column-two-thirds { width: 620px; }
 .column-quarter { width: 220px; }
-	.column-three-quarters { width: 700px; }
+  .column-three-quarters { width: 700px; }
 .column-sixth { width: 140px; }
 
 .space-left { margin-left: 20px; }
-.space-right { margin-right: 20px; }</pre>
+.space-right { margin-right: 20px; }
+```
 
 ou seja, nomeio os meus elementos de acordo com a fração que eles ocupam no documento.
 
 Se eu tiver 2 colunas iguais, então tenho:
 
-<pre name="code" class="html">&lt;div class="column-half fleft">&lt;/div>
-&lt;div class="column-half fright">&lt;/div></pre>
+``` html
+<div class="column-half fleft"></div>
+<div class="column-half fright"></div>```
 
 E o respiro entre elas eu &#8220;ganho&#8221; de graça, ao jogar uma para a esquerda e outra para a direita.
 
 Se forem 3 colunas:
 
-<pre name="code" class="html">&lt;div class="column-third space-right fleft">&lt;/div>
-&lt;div class="column-third space-right fleft">&lt;/div>
-&lt;div class="column-third fright">&lt;/div></pre>
+``` html
+<div class="column-third space-right fleft"></div>
+<div class="column-third space-right fleft"></div>
+<div class="column-third fright"></div>```
 
 E pronto! resolvido!
 

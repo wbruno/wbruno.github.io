@@ -29,13 +29,13 @@ O Diego Eis escreveu um ótimo post sobre isso: [OOCSS ou CSS do jeito certo](ht
 
 Tente pensar em pequenas funcionalidades úteis para seus elementos. A forma de uso é adicionar classes que definam poucos estilos, e assim formar um todo.
 
-<pre class="html">&lt;a href="" class="btn btn-hire btn-big">Contratar&lt;/a></pre>
+<pre class="html"><a href="" class="btn btn-hire btn-big">Contratar</a>```
 
 Apenas trocando e combinando as classes dos elementos conseguimos montar um botão com os estilos padrões da classe <var>.btn</var>, da cor que foi padronizada para todos os botões de contrate na classe <var>.btn-hire</var>, e grande, pois é apenas isso que a classe <var>.btn-big</var> faz.
 
 Note que não devemos usar seletores com nomes de tag no nosso css, pois isso trava a implementação, e nos impossibilitaria de por exemplo, fazer isso:
 
-<pre class="html">&lt;input type="submit" class="btn btn-hire btn-big" value="Contratar" /></pre>
+<pre class="html"><input type="submit" class="btn btn-hire btn-big" value="Contratar" />```
 
 E do ponto de vista conceitual não é nada absurdo termos um <var>input[type=&#8221;submit&#8221;]</var> com os mesmos estilos de uma tag <var><a></var>, pois o importante é a função do elemento. Os 2 levam o visitante a contratar nossos produtos, então precisam ter estilos iguais. E se conseguirmos usar o mesmo css para tal, melhor ainda para nós.
 
@@ -45,15 +45,16 @@ Falar de botões é simples, é um dos exemplos mais básicos quando estamos fal
 
 Se o designer fizer o site com varias caixinhas de 10px de border-radius, e depois pedir para diminuirmos todas as caixas para 7px, sair editando varios elementos é muito chato e nada prático. Para resolver isso, podemos fazer:
 
-<pre class="css">.radius { border-radius: 10px; }</pre>
+<pre class="css">.radius { border-radius: 10px; }
+```
 
 E ai, sair usando nos elementos que tiverem esse estilo:
 
-<pre class="html">&lt;section id="comments" class="radius">&lt;/section>
-&lt;div id="box-call" class="radius">&lt;/div>
+<pre class="html"><section id="comments" class="radius"></section>
+<div id="box-call" class="radius"></div>
 
-&lt;span class="text radius">&lt;/span>
-</pre>
+<span class="text radius"></span>
+```
 
 Isso realmente facilita a manutenção do projeto como um todo.
 
@@ -61,12 +62,12 @@ Isso realmente facilita a manutenção do projeto como um todo.
 
 Sair colocando vírgulas nos seletores, é uma forma de não duplicar linhas do css:
 
-<pre>#comments,
+```#comments,
 #box-call,
 .text {
     /**/
 }
-</pre>
+```
 
 Mas não é legal para a manutenção do sistema. Se algum outro elemento for utilizar esses estilos desse bloco acima, teríamos que sair procurando onde do nosso css fizemos esses seletores com vírgula, para incluir mais uma vírgula e o novo seletor.
 

@@ -11,8 +11,8 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-<pre>&lt;div id="t">&lt;/div>
-&lt;script>
+```<div id="t"></div>
+<script>
 var keyTable = {
     '65': 'a',
     '66': 'b',
@@ -49,7 +49,7 @@ document.addEventListener("keyup", function(e){
 
     document.getElementById("t").innerHTML = userTyped;
 });
-&lt;/script>
-</pre>
+</script>
+```
 
 Bem simples, só ouvi o evento **onkeyup**, e fiz uma tabela para &#8220;traduzir&#8221; o <var>keyCode</var> para a letra correspondente.

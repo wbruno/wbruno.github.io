@@ -53,7 +53,7 @@ Note o código abaixo:
 
 <pre class="css">body { background: url('image-1.jpg'); }
 body { background: url('image-2.jpg'); }
-</pre>
+```
 
 Mesmo declarando dois backgrounds image diferentes para um mesmo elemento, o browser não faz download dos dois arquivos. Ele trás apenas aquele que realmente irá ser usado.
 
@@ -69,18 +69,18 @@ Podemos servir um background mais largo que 480px de largura para as telas que t
 
 <pre class="css">body { background: url('image-1.jpg'); }
 @media screen and (max-width: 480px) {
-	body { background: url('image-2.jpg'); }
+  body { background: url('image-2.jpg'); }
 }
-</pre>
+```
 
 ### Para telas grandes
 
 Assim como podemos fazer o contrário também, e só mostrar um background grande se a tela for grande:
 
 <pre class="css">@media screen and (min-width: 1280px) {
-	body { background: url('image-1.jpg'); }
+  body { background: url('image-1.jpg'); }
 }
-</pre>
+```
 
 Nesse caso, se a tela tiver no mínimo 1280px, ai apresento esse background, caso ela for menor, não coloco nada.
 

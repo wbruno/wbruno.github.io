@@ -27,10 +27,10 @@ Para deixar simples, e análogo ao outro, estou usando o &#8216;nome&#8217; como
 
 **index.html**
 
-<pre class="html">&lt;html&gt;
-&lt;head&gt;
-  &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"&gt;&lt;/script&gt;
-  &lt;script type="text/javascript"&gt;
+<pre class="html"><html>
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script type="text/javascript">
   $(document).ready(function(){
     $("input[name='nome']").blur(function(){
       var $endereco = $("input[name='endereco']");
@@ -50,20 +50,21 @@ Para deixar simples, e análogo ao outro, estou usando o &#8216;nome&#8217; como
         );
     });
   });
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;form action="" method="post"&gt;
-    &lt;label&gt;Nome: &lt;input type="text" name="nome" /&gt;&lt;/label&gt;
-    &lt;label&gt;Endereço: &lt;input name="endereco" type="text" disabled="disabled" value="" /&gt;&lt;/label&gt;
-    &lt;label&gt;Telefone: &lt;input type="text" name="telefone" value="" /&gt;&lt;/label&gt;
-  &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </script>
+</head>
+<body>
+  <form action="" method="post">
+    <label>Nome: <input type="text" name="nome" /></label>
+    <label>Endereço: <input name="endereco" type="text" disabled="disabled" value="" /></label>
+    <label>Telefone: <input type="text" name="telefone" value="" /></label>
+  </form>
+</body>
+</html>
+```
 
 **function.php**
 
-<pre class="php">&lt;?php
+<pre class="php"><?php
   /**
    * função que devolve em formato JSON os dados do cliente
    */
@@ -72,15 +73,15 @@ Para deixar simples, e análogo ao outro, estou usando o &#8216;nome&#8217; como
     $sql = "SELECT `id`, `nome`, `telefone`, `endereco`
       FROM `cliente` WHERE `nome` = '{$nome}' ";
 
-    $query = $db-&gt;query( $sql );
+    $query = $db->query( $sql );
 
     $arr = Array();
-    if( $query-&gt;num_rows )
+    if( $query->num_rows )
     {
-      while( $dados = $query-&gt;fetch_object() )
+      while( $dados = $query->fetch_object() )
       {
-        $arr['endereco'] = $dados-&gt;endereco;
-        $arr['telefone'] = $dados-&gt;telefone;
+        $arr['endereco'] = $dados->endereco;
+        $arr['telefone'] = $dados->telefone;
       }
     }
     else
@@ -98,7 +99,8 @@ if( isset($_GET['nome']) )
 
 function filter( $var ){
   return $var;//a implementação desta, fica a cargo do leitor
-}</pre>
+}
+```
 
 **dump.sql**
 
@@ -120,6 +122,7 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 
 INSERT INTO `cliente` (`id`, `nome`, `telefone`, `endereco`) VALUES
 (1, 'Bruno', '(11) 1234-5678', 'Rua dos Bobos, 0'),
-(2, 'William', '(22) 2345-6789', 'Avenida blablabla, 14');</pre>
+(2, 'William', '(22) 2345-6789', 'Avenida blablabla, 14');
+```
 
 Prontinho.

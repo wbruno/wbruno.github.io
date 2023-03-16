@@ -21,43 +21,44 @@ Deseja-se, [selecionar vários checkboxs](http://www.wbruno.com.br/2011/03/20/se
   
 <!--more-->
 
-<pre name="code" class="php">&lt;?php
-	if( $_SERVER['REQUEST_METHOD']=='POST' ){
-		$arr = filter( $_POST['excluir'] );
+``` php
+<?php
+  if( $_SERVER['REQUEST_METHOD']=='POST' ){
+    $arr = filter( $_POST['excluir'] );
 
-		$sql = 'DELETE FROM registro WHERE id IN('.implode( ',', $arr ).')';
-		echo $sql;
-	}
-	function filter( $dados ){
-		$arr = Array();
-		foreach( $dados AS $dado ) $arr[] = (int)$dado;
-		return $arr;
-	}
+    $sql = 'DELETE FROM registro WHERE id IN('.implode( ',', $arr ).')';
+    echo $sql;
+  }
+  function filter( $dados ){
+    $arr = Array();
+    foreach( $dados AS $dado ) $arr[] = (int)$dado;
+    return $arr;
+  }
 ?>
 
 
-&lt;form action="" method="post">
-	&lt;table>
-		&lt;tr>
-			&lt;td>&lt;input type="checkbox" name="excluir[]" value="13" />&lt;/td>
-			&lt;td>Registro 13&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;td>&lt;input type="checkbox" name="excluir[]" value="9" />&lt;/td>
-			&lt;td>Registro 9&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;td>&lt;input type="checkbox" name="excluir[]" value="26" />&lt;/td>
-			&lt;td>Registro 26&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;td>&lt;input type="checkbox" name="excluir[]" value="14" />&lt;/td>
-			&lt;td>Registro 14&lt;/td>
-		&lt;/tr>
-	&lt;/table>
-	&lt;input type="submit" name="submit" value="Excluir Selecionados" />
-&lt;/form>
-</pre>
+<form action="" method="post">
+  <table>
+    <tr>
+      <td><input type="checkbox" name="excluir[]" value="13" /></td>
+      <td>Registro 13</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="excluir[]" value="9" /></td>
+      <td>Registro 9</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="excluir[]" value="26" /></td>
+      <td>Registro 26</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="excluir[]" value="14" /></td>
+      <td>Registro 14</td>
+    </tr>
+  </table>
+  <input type="submit" name="submit" value="Excluir Selecionados" />
+</form>
+```
 
 Bom, é isso. Simples, prático e direto.
 

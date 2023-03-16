@@ -23,23 +23,31 @@ Sendo cada x, um número 1,2,3,4,5,6,7,8 ou 9.
 
 Eu posso escrever uma ER que case com os telefones assim:
 
-<pre name="code" class="javascript">([0-9]{2}) 9?[0-9]{4}-[0-9]{4}</pre>
+``` js
+([0-9]{2}) 9?[0-9]{4}-[0-9]{4}
+```
 
 Sendo o 9 ali &#8220;opcional&#8221;. Para remover a máscara de números de telefone, posso procurar quais são os caracteres que não quero, e tirá-los:
 
-<pre name="code" class="javascript">str.replace('(','').replace(')', '').replace(' ','').replace('-','');</pre>
+``` js
+str.replace('(','').replace(')', '').replace(' ','').replace('-','');
+```
 
 Mas isso é deveras trabalhoso.
 
 Eu poderia fazer uma Expressão Regular para pegar todos esses caracteres e remover eles:
 
-<pre name="code" class="javascript">str.replace(/[\(\)\.\s-]+/g,'');</pre>
+``` js
+str.replace(/[\(\)\.\s-]+/g,'');
+```
 
 Mas ai, tb ainda não tá bacana.
 
 Posso pensar ao contrário: remover tudo, menos oque eu quero:
 
-<pre name="code" class="javascript">str.replace(/[^0-9]+/g,'');</pre>
+``` js
+str.replace(/[^0-9]+/g,'');
+```
 
 Ou seja, removo tudo oque não for números de 0 até 9. Ou se preferir: <var>/[\D]+/g</var> == <var>/[^\d]+/g</var>
 

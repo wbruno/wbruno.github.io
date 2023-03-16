@@ -19,7 +19,8 @@ Criando um pequeno e simples script em AJAX com jQuery, para verificar a existê
 
 **dump.sql**
 
-<pre>--
+``` sql
+--
 -- Estrutura da tabela `usuario`
 --
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -33,11 +34,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`idUsuario`, `nomeUsuario`) VALUES
 (1, 'William'),
 (2, 'Bruno');
-</pre>
+```
 
 Arquivo **usuario.php**
 
-<pre>&lt;?php
+``` php
+<?php
   //envio o charset para evitar problemas com acentos
   header("Content-Type: text/html; charset=UTF-8");
 
@@ -55,28 +57,29 @@ Arquivo **usuario.php**
   } else {
     echo 'Não existe ainda!';
   }
-</pre>
+```
 
 **index.php**
 
-<pre>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8" />
-  &lt;title>Document&lt;/title>
-&lt;/head>
-&lt;body>
+``` php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+</head>
+<body>
 
-&lt;form action="usuario.php" method="GET">
-  &lt;label>Nome Usuário: &lt;input type="text" name="nomeUsuario" />&lt;/label>
-  &lt;input type="button" name="verificar" id="verificar" value="verificar" />
-&lt;/form>
+<form action="usuario.php" method="GET">
+  <label>Nome Usuário: <input type="text" name="nomeUsuario" /></label>
+  <input type="button" name="verificar" id="verificar" value="verificar" />
+</form>
 
-&lt;div id="resultado">&lt;/div>
+<div id="resultado"></div>
 
 
-&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js">&lt;/script>
-&lt;script type="text/javascript">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
 $(function(){ // declaro o início do jquery
   $("input[name='verificar']").on('click', function(){//botão para disparar a ação
     var nomeUsuario = $("input[name='nomeUsuario']").val();
@@ -86,17 +89,15 @@ $(function(){ // declaro o início do jquery
     });
   });
 });// fim do jquery
-&lt;/script>
+</script>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 Basta fazer download do <a title="Link externo" rel="nofollow external" href="http://jquery.com/download/">jQuery</a>.
 
-Criar a base com a tabela que postei a estrutura, e rodar os códigos.
-
-<span style="font-family: Consolas; color: #000088; font-size: small;"><span style="line-height: 12px; white-space: pre;"></p> 
+Criar a base com a tabela que postei a estrutura, e rodar os códigos. 
 
 <h2>
   Validando usuário ao sair do input, sem clicar no botão
@@ -106,16 +107,14 @@ Criar a base com a tabela que postei a estrutura, e rodar os códigos.
   Para fazer essa verificação apenas ao &#8220;sair do campo&#8221;, sem precisar apertar o botão, use o evento onblur:
 </p>
 
-<pre>$("input[name='nomeUsuario']").on('blur', function(){
+``` js
+$("input[name='nomeUsuario']").on('blur', function(){
   var nomeUsuario = $(this).val();
   $.get('usuario.php?nomeUsuario=' + nomeUsuario, function(data){
     $('#resultado').html(data);
   });
-});</pre>
-
-<p>
-  </span></span>
-</p>
+});
+```
 
 <h2>
   Código no Github

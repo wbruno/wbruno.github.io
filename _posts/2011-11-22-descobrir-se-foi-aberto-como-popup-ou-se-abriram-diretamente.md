@@ -19,9 +19,10 @@ Será que é possível saber, se um documento foi aberto diretamente ? ou se ele
 
 **b.html**
 
-<pre name="code" class="html">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 alert( window.opener );
-&lt;/script></pre>
+</script>```
 
 Qndo acessarmos diretamente esse arquivo, o alert irá mostrar: **null** (digitando na url, ou copiando e colando daqui)
   
@@ -31,9 +32,10 @@ e agora:
   
 **a.html**
 
-<pre name="code" class="html">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 window.open( 'b.html', '', 'width=300, height=200;')
-&lt;/script></pre>
+</script>```
 
 ao acessarmos o arquivo <u>a.html</u>, o alert do nosso <u>b.html</u>, **que foi aberto como popup**, irá mostrar: **[Object Window]**
 

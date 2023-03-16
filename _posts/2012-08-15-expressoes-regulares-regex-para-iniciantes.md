@@ -23,7 +23,9 @@ A maioria das linguagens de programação atuais possuem um interpretador de reg
 
 Todos nós já precisamos usar ou já vimos em algum lugar coisas como:
 
-<pre name="code" class="javascript">var er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;</pre>
+``` js
+var er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
+```
 
 Porém, não é legal usarmos essas letrinhas mágicas sem realmente entender o que são.
 
@@ -33,14 +35,16 @@ Esta regex acima, por exemplo, eu uso para [verificar se o usuário digitou um e
 
 Vamos começar com algo bem básico:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 $pattern = '/O rato roeu a roupa do rei de Roma/';
 $subject = 'O rato roeu a roupa do rei de Roma';
 preg_match( $pattern, $subject, $matches );
 
-echo '&lt;pre>';
-var_dump( $matches );</pre>
+echo '<pre>';
+var_dump( $matches );
+```
 
 A saída será:
 
@@ -56,7 +60,8 @@ Vou começar a &#8220;complicar&#8221; um pouquinho.. digamos que eu queira &#82
 
 Agora a minha expressão regular, é assim:
 
-<pre name="code" class="php">$pattern = '/O (gato|rato) roeu a roupa do rei de Roma/';</pre>
+<pre name="code" class="php">$pattern = '/O (gato|rato) roeu a roupa do rei de Roma/';
+```
 
 O caracter _pipe_ &#8220;|&#8221;, representa o operador lógico OU.
 
@@ -68,7 +73,8 @@ Essas duas palavras são bem próximas uma da outra, a única diferença é a pr
 
 Então podemos melhorar a nossa ER, para o seguinte:
 
-<pre name="code" class="php">$pattern = '/O (g|r)(ato) roeu a roupa do rei de Roma/';</pre>
+<pre name="code" class="php">$pattern = '/O (g|r)(ato) roeu a roupa do rei de Roma/';
+```
 
 O interpretador ao ler esta regex, faz o seguinte:
 
@@ -92,7 +98,8 @@ Não sei ao certo, se o nosso gato ou rato, comeu ou roeu a roupa do pobre coita
 
 Mas posso adequar a expressão regular para encontrar o meliante, de acordo com o crime dele, seguindo a mesma regra do OU que usei para casar rato ou gato.
 
-<pre name="code" class="php">$pattern = '/O (g|r)(ato) (roeu|comeu) a roupa do rei de Roma/';</pre>
+<pre name="code" class="php">$pattern = '/O (g|r)(ato) (roeu|comeu) a roupa do rei de Roma/';
+```
 
 Com esta modificação na ER, agora consigo casar as frases:
 
@@ -110,22 +117,23 @@ Não tente logo de cara fazer a ER mais complexa do mundo. Comece do simples.
 
 Vá entendendo aos poucos e melhorando a sua regex conforme for precisando.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 $pattern = '/O (g|r)(ato) (r|c)om?eu a roupa d(o rei|a rainha) d(e Roma|a Belgica)/';
 $subject = 'O rato roeu a roupa do rei de Roma';
 preg_match( $pattern, $subject, $matches );
 
-echo '&lt;pre>';
+echo '<pre>';
 var_dump( $matches );
 
 
 $subject = 'O gato comeu a roupa da rainha da Belgica';
 preg_match( $pattern, $subject, $matches );
 
-echo '&lt;pre>';
+echo '<pre>';
 var_dump( $matches );
-</pre>
+```
 
 Ah, é&#8230; eu queria falar sobre a rainha da Belgica, mesmo sem saber se a Bélgica tem rainha..
 

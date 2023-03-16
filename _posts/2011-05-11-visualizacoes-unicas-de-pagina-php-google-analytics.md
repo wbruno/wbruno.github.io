@@ -25,31 +25,32 @@ Existe uma <a href="http://code.google.com/p/gapi-google-analytics-php-interface
   
 Se você dedicar um tempinho para ler a <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">API do Google Analytics</a>, dá para customizar bem os relatórios..
 
-<pre name="code" class="php">&lt;?php
-	include 'gapi.class.php';
+``` php
+<?php
+  include 'gapi.class.php';
 
-	define('ga_profile_id', '123456789');
-	$ga = new gapi( 'seu_email@provedor.com', 'sua_senha' );
+  define('ga_profile_id', '123456789');
+  $ga = new gapi( 'seu_email@provedor.com', 'sua_senha' );
 
 
-	$ga->requestReportData(ga_profile_id, 'pagePath', array('uniquePageviews','pageviews'),'-uniquePageviews', null, null, null, null, 300);
+  $ga->requestReportData(ga_profile_id, 'pagePath', array('uniquePageviews','pageviews'),'-uniquePageviews', null, null, null, null, 300);
 
-	echo '&lt;table>&lt;tr>&lt;th>URL&lt;/th>&lt;th>Visitas Únicas&lt;/th>&lt;th>Visualizações&lt;/th>&lt;/tr>&lt;tbody>';
-	foreach($ga->getResults() as $result)
-	{
-			echo '&lt;tr>&lt;td>&lt;u>',$result->getPagePath(), '&lt;/u>&lt;/td>&lt;td>',$result->getUniquePageviews(),
-									'&lt;/td>&lt;td> ',$result->getPageviews(), '&lt;/td>';
-	}
-	echo '&lt;/tbody>&lt;/table>';
-</pre>
+  echo '<table><tr><th>URL</th><th>Visitas Únicas</th><th>Visualizações</th></tr><tbody>';
+  foreach($ga->getResults() as $result)
+  {
+      echo '<tr><td><u>',$result->getPagePath(), '</u></td><td>',$result->getUniquePageviews(),
+                  '</td><td> ',$result->getPageviews(), '</td>';
+  }
+  echo '</tbody></table>';
+```
 
 A saída é algo do tipo:
 
-<pre>URL						Visitas Únicas	Visualizações
-&lt;u>/blog/&lt;/u>						635			973
-&lt;u>/blog/2011/04/29/afinal-e-orientacao-objetos/&lt;/u>	303			325
-&lt;u>/blog/2011/04/15/carousel-jquery-usando-cycle/&lt;/u>	239			373
-</pre>
+```URL            Visitas Únicas  Visualizações
+<u>/blog/</u>            635      973
+<u>/blog/2011/04/29/afinal-e-orientacao-objetos/</u>  303      325
+<u>/blog/2011/04/15/carousel-jquery-usando-cycle/</u>  239      373
+```
 
 No caso, abrindo o teu google analytics, você notará, que a resposta se refere aos dados dos últimos 30 dias.
   

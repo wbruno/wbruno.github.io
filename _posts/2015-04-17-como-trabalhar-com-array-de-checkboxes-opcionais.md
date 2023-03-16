@@ -19,7 +19,7 @@ O nosso sistema venderá _&#8220;carros famosos&#8221;_, por isso cada carro pos
 
 Um das primeiras coisas que vem a nossa mente, é [modelar os atributos dessa entidade](http://wbruno.com.br/sql/afinal-o-que-e-entidade/) **veículo**.
 
-<pre>mysql> DESCRIBE vehicles_wrong;
+```mysql> DESCRIBE vehicles_wrong;
 +-------+-------------+------+-----+---------+----------------+
 | Field | Type        | Null | Key | Default | Extra          |
 +-------+-------------+------+-----+---------+----------------+
@@ -28,7 +28,7 @@ Um das primeiras coisas que vem a nossa mente, é [modelar os atributos dessa en
 | year  | char(4)     | YES  |     | NULL    |                |
 | model | varchar(30) | YES  |     | NULL    |                |
 +-------+-------------+------+-----+---------+----------------+
-4 rows in set (0.00 sec)</pre>
+4 rows in set (0.00 sec)```
 
 Tranquilo, certo ?
 
@@ -42,7 +42,7 @@ E precisamos mostrar isso para nossos usuários, dizendo se o veículo possui ou
 
 Poderíamos adicionar esses itens na entidade veículos:
 
-<pre>mysql> DESCRIBE vehicles_wrong;
+```mysql> DESCRIBE vehicles_wrong;
 +-----------+-------------+------+-----+---------+----------------+
 | Field     | Type        | Null | Key | Default | Extra          |
 +-----------+-------------+------+-----+---------+----------------+
@@ -53,11 +53,11 @@ Poderíamos adicionar esses itens na entidade veículos:
 | air_con   | bit(1)      | YES  |     | NULL    |                |
 | bluetooth | bit(1)      | YES  |     | NULL    |                |
 +-----------+-------------+------+-----+---------+----------------+
-6 rows in set (0.00 sec)</pre>
+6 rows in set (0.00 sec)```
 
 Só que ai precisamos ainda colocar:
 
-<pre>mysql> DESCRIBE vehicles_wrong;
+```mysql> DESCRIBE vehicles_wrong;
 +------------------+-------------+------+-----+---------+----------------+
 | Field            | Type        | Null | Key | Default | Extra          |
 +------------------+-------------+------+-----+---------+----------------+
@@ -78,7 +78,7 @@ Só que ai precisamos ainda colocar:
 | nitro            | bit(1)      | YES  |     | NULL    |                |
 | wings            | bit(1)      | YES  |     | NULL    |                |
 +------------------+-------------+------+-----+---------+----------------+
-6 rows in set (0.00 sec)</pre>
+6 rows in set (0.00 sec)```
 
 E para cada opcional extra que precisamos cadastrar iríamos adicionando uma nova coluna na tabela veículos, mesmo que o Motor de Propulsão seja um item específico do carro do Dick Vigarista, e os demais carros irão sempre deixar essa coluna em branco (como false).
 
@@ -90,7 +90,7 @@ Ter que alterar o modelo e possuir diversas colunas sem valores no banco de dado
 
 Em vez de ficarmos criando novas colunas a cada opcional novo que precisamos listar, temos que modelar melhor nossa entidade e dividir a entidade veículos em duas: veículos e opcionais, veja:
 
-<pre>mysql> DESCRIBE optional; DESCRIBE vehicle_optional; DESCRIBE vehicles;
+```mysql> DESCRIBE optional; DESCRIBE vehicle_optional; DESCRIBE vehicles;
 +-------+-------------+------+-----+---------+----------------+
 | Field | Type        | Null | Key | Default | Extra          |
 +-------+-------------+------+-----+---------+----------------+
@@ -115,7 +115,7 @@ Em vez de ficarmos criando novas colunas a cada opcional novo que precisamos lis
 | year  | char(4)     | YES  |     | NULL    |                |
 | model | varchar(30) | YES  |     | NULL    |                |
 +-------+-------------+------+-----+---------+----------------+
-3 rows in set (0.00 sec)</pre>
+3 rows in set (0.00 sec)```
 
 Ficando assim, a cargo de uma terceira tabela de relacionamento o cruzamento da informação, sobre quais opcionais cada carro tem.
 
@@ -129,7 +129,7 @@ E para cada novo opcional extra que tivermos que cadastrar no sistema, apenas ad
 
 O impacto de adicionar opcionais (mostrar mais checkboxes) é apenas cadastrar um novo registro na tabela.
 
-<pre>mysql> SELECT * FROM optional;
+```mysql> SELECT * FROM optional;
 +----+------------------+
 | id | name             |
 +----+------------------+
@@ -147,7 +147,7 @@ O impacto de adicionar opcionais (mostrar mais checkboxes) é apenas cadastrar u
 | 12 | wings            |
 +----+------------------+
 12 rows in set (0.00 sec)
-</pre>
+```
 
 No próximo artigo irei mostrar como listar dessas entidades e fazer o CRUD dos opcionais como checkboxes. Também colocarei todos os códigos, inclusive o DUMP de criação das tabelas no github: <https://github.com/wbruno/examples/tree/gh-pages/checkboxes-opcionais>.
 

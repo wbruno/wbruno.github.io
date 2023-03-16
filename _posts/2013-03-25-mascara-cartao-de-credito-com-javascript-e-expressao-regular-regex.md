@@ -21,10 +21,11 @@ Eu odeio os plugins de máscaras, pois eles sempre dão algum tipo de problema, 
 
 Então eu sempre uso essas máscaras com expressões regulares. Funcionam muito bem, são super crossbrowsers, e tem ótima performance.
 
-<pre name="code" class="javascript">&lt;html>
-&lt;head>
-    &lt;title>Mascara Cartão de Crédito&lt;/title>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+    <title>Mascara Cartão de Crédito</title>
+<script type="text/javascript">
 /* Máscaras ER */
 function mascara(o,f){
     v_obj=o
@@ -42,22 +43,22 @@ function mcc(v){
     return v;
 }
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 window.onload = function(){
-	id('cc').onkeypress = function(){
-		mascara( this, mcc );
-	}
+  id('cc').onkeypress = function(){
+    mascara( this, mcc );
+  }
 }
-&lt;/script>
+</script>
 
-&lt;/head>
-&lt;body>
+</head>
+<body>
 
-    &lt;input type="tel" name="cc" id="cc" maxlength="19" />
+    <input type="tel" name="cc" id="cc" maxlength="19" />
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 Comente se vc usar também.

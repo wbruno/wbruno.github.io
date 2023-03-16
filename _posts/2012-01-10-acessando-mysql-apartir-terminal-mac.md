@@ -51,13 +51,13 @@ mysql> show tables;
 11 rows in set (0.00 sec)
 
 mysql> 
-</pre>
+```
 
 Reiniciando:
 
-<pre>/usr/local/mysql/bin/mysqladmin -uroot -p shutdown</pre>
+```/usr/local/mysql/bin/mysqladmin -uroot -p shutdown```
 
 start
 
-<pre>sudo /usr/local/mysql/bin/mysqld_safe &
-</pre>
+```sudo /usr/local/mysql/bin/mysqld_safe &
+```

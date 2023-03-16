@@ -18,23 +18,24 @@ Eu previsava de uma função que detectasse se o visitante estava utilizando um 
 <pre name="code" class="php">function isMobile() {
     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER['HTTP_USER_AGENT']);
 }
-</pre>
+```
 
 funciona bem, está tecnicamente bem escrita, e resolvia a questão.
 
 Fiz uma versão em javascript, ficou assim:
 
-<pre name="code" class="javascript">/**
+``` js
+/**
  * @function isMobile
  * detecta se o useragent e um dispositivo mobile
  */
 function isMobile()
 {
-	var userAgent = navigator.userAgent.toLowerCase();
-	if( userAgent.search(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)!= -1 )
-		return true;
+  var userAgent = navigator.userAgent.toLowerCase();
+  if( userAgent.search(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)!= -1 )
+    return true;
 }
-</pre>
+```
 
 Ambas se baseiam no cabeçalho **user agent** que cada browser envia junto com a requisição http.
   

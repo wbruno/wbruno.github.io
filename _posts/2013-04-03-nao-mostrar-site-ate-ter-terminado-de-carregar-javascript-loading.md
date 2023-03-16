@@ -19,50 +19,51 @@ Note que usei 5 wallpapers grandes, para demorar um pouco para carregar, e o efe
   
 Não é obstrutivo, pois escondo com js.
 
-<pre name="code" class="javascript">&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-	&lt;meta charset="UTF-8">
-	&lt;title>Teste&lt;/title>
+``` html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste</title>
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 function id(el) {
-	return document.getElementById(el);
+  return document.getElementById(el);
 }
 function hide(el) {
-	id(el).style.display = 'none';//escondendo tudo
+  id(el).style.display = 'none';//escondendo tudo
 }
 window.onload = function() {
-	id('all').style.display = 'block';//liberando qndo terminar
-	hide('loading');
+  id('all').style.display = 'block';//liberando qndo terminar
+  hide('loading');
 }
-&lt;/script>
-&lt;style>
+</script>
+<style>
 #loading { 
-	display: block;
-	width: 200px;
+  display: block;
+  width: 200px;
 }
 .content { margin: 0 auto; }
 #all {
-	width: 1280px; overflow: hidden;
+  width: 1280px; overflow: hidden;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;section id="all" class="content">
-		&lt;img src="http://fc03.deviantart.net/fs25/f/2009/250/e/5/Within_Temptation___Utopia_by_KigaMistriver.jpg" alt="">
-		&lt;img src="http://images.fanpop.com/images/image_uploads/within-temptation-within-temptation-595989_1672_1417.jpg" alt="">
-		&lt;img src="http://images4.alphacoders.com/247/247868.gif" alt="">
-		&lt;img src="http://www.withinforever.xpg.com.br/within_temptation_wallpaper_3_1024x768.jpg" alt="">
-	&lt;/section>&lt;!-- #all -->
+</style>
+</head>
+<body>
+  <section id="all" class="content">
+    <img src="http://fc03.deviantart.net/fs25/f/2009/250/e/5/Within_Temptation___Utopia_by_KigaMistriver.jpg" alt="">
+    <img src="http://images.fanpop.com/images/image_uploads/within-temptation-within-temptation-595989_1672_1417.jpg" alt="">
+    <img src="http://images4.alphacoders.com/247/247868.gif" alt="">
+    <img src="http://www.withinforever.xpg.com.br/within_temptation_wallpaper_3_1024x768.jpg" alt="">
+  </section><!-- #all -->
 
-	&lt;img src="http://3.bp.blogspot.com/-Bo2GNAVNb90/URkAlN-0V_I/AAAAAAAACfs/VHFT6oP1ZTk/s1600/Loading+-+Carregando+%252826%2529.gif" alt="" id="loading" class="content"/>
+  <img src="http://3.bp.blogspot.com/-Bo2GNAVNb90/URkAlN-0V_I/AAAAAAAACfs/VHFT6oP1ZTk/s1600/Loading+-+Carregando+%252826%2529.gif" alt="" id="loading" class="content"/>
 
 
-&lt;script type="text/javascript">
-	hide('all');
-&lt;/script>
+<script type="text/javascript">
+  hide('all');
+</script>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```

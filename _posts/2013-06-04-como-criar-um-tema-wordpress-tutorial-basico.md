@@ -35,7 +35,8 @@ Creio que as 3 funções mais básicas são: <var>get_header()</var>, <var>get_f
 
 Então os seus arquivos: <var>index.php</var>, <var>404.php</var>, <var>page.php</var>, <var>single.php</var>, <var>archive.php</var> e <var>search.php</var>, terão uma anatomia muito próxima disso:
 
-<pre>&lt;?php
+``` php
+<?php
 /**
  * The main template file.
  *
@@ -53,28 +54,28 @@ Então os seus arquivos: <var>index.php</var>, <var>404.php</var>, <var>page.php
 
 get_header(); ?>
 
-	&lt;main id="content" class="fleft" role="main">
-		&lt;?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <main id="content" class="fleft" role="main">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			&lt;?php get_template_part( 'content' ); ?>
+      <?php get_template_part( 'content' ); ?>
 
-		&lt;?php endwhile; else: ?>
+    <?php endwhile; else: ?>
 
-			&lt;article class="not-found">
-				&lt;p>&lt;?php _e('Desculpe, nenhum post corresponde aos seus crit&eacute;rios.', 'wbruno'); ?>&lt;/p>
-			&lt;/article>
+      <article class="not-found">
+        <p><?php _e('Desculpe, nenhum post corresponde aos seus crit&eacute;rios.', 'wbruno'); ?></p>
+      </article>
 
-		&lt;?php endif; ?>
+    <?php endif; ?>
 
-		&lt;div class="fright">
-			&lt;?php posts_nav_link(' &#8212; ', __('&laquo; Anterior', 'wbruno'), __('Pr&oacute;xima &raquo;', 'wbruno')); ?>
-		&lt;/div>
+    <div class="fright">
+      <?php posts_nav_link(' &#8212; ', __('&laquo; Anterior', 'wbruno'), __('Pr&oacute;xima &raquo;', 'wbruno')); ?>
+    </div>
 
-	&lt;/main>&lt;!-- /content -->
+  </main><!-- /content -->
 
-&lt;?php get_sidebar(); ?>
-&lt;?php get_footer(); ?>
-</pre>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+```
 
 Onde vemos claramente os includes do topo, sidebar e rodapé.
 
@@ -112,18 +113,18 @@ Você sempre vai precisar ter esses, na raiz do seu tema:
 
   * **screenshot.png** &#8211; screenshot em 600&#215;450 de como o tema ficará, para vc visualizar no painel de escolha de temas um &#8220;preview&#8221;
   * **style.css** &#8211; independente se vc usará outros arquivos .css externos, o css base do tema, deve ser esse arquivo na raiz do tema. Os comentários iniciais dele, é que informarão ao painel do wp o que o seu tema é.
-    <pre>/*
-	Theme Name: wbruno
-	Theme URI: http://wbruno.com.br
-	Description: Tema do blog wbruno
-	Author: William Bruno
-	Author URI: http://wbruno.com.br
-	Version: 0.0.3
-	Tags: light, two-columns, fixed-width, left-sidebar, flexible-width, sticky-post
-	License: GNU General Public License v2 or later
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    ```/*
+  Theme Name: wbruno
+  Theme URI: http://wbruno.com.br
+  Description: Tema do blog wbruno
+  Author: William Bruno
+  Author URI: http://wbruno.com.br
+  Version: 0.0.3
+  Tags: light, two-columns, fixed-width, left-sidebar, flexible-width, sticky-post
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-</pre>
+```
 
   * **editor-style.css** &#8211; é um arquivos .css opcional que vc pode criar, que se existir será usado para formatar o editor dentro do painel do wordpress.
   * **single.php** &#8211; Quando vc estiver visualizando um post aberto, é esse arquivo que está sendo mostrado.

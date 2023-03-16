@@ -15,44 +15,46 @@ Referência do autor da base deste script:
   
 <a href="http://elcio.com.br/ajax/mascara/" target="_blank">http://elcio.com.br/ajax/mascara/</a>
 
-<pre name="code" class="javascript">&lt;html&gt;
-&lt;head&gt;
-&lt;script type="text/javascript"&gt;
+``` html
+<html>
+<head>
+<script type="text/javascript">
 /* Máscaras ER */
 function mascara(o,f){
-        v_obj=o;
-        v_fun=f;
-        setTimeout("execmascara()",1);
+        v_obj=o;
+        v_fun=f;
+        setTimeout("execmascara()",1);
 }
 function execmascara(){
-        v_obj.value=v_fun(v_obj.value);
+        v_obj.value=v_fun(v_obj.value);
 }
 function id( el ){
-        return document.getElementById( el );
+        return document.getElementById( el );
 }
 function mnum(v){
-    v=v.replace(/\D/g,"");//Remove tudo o que não é dígito
-    return v;
+    v=v.replace(/\D/g,"");//Remove tudo o que não é dígito
+    return v;
 }
 window.onload = function()
 {
-        id('hash').onkeypress = function(){
-                mascara( this, mnum );
-        }
-        id('hash').onblur = function(){
-                var dig = this.value.length;
+        id('hash').onkeypress = function(){
+                mascara( this, mnum );
+        }
+        id('hash').onblur = function(){
+                var dig = this.value.length;
 
-                while( dig&lt;3 ){
-                        this.value = '0'+this.value;
-                        dig++;
-                }
-        }
+                while( dig<3 ){
+                        this.value = '0'+this.value;
+                        dig++;
+                }
+        }
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-        &lt;form action="" method="post"&gt;
-                &lt;input type="text" name="hash" id="hash" maxlength="3" /&gt;
-        &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+        <form action="" method="post">
+                <input type="text" name="hash" id="hash" maxlength="3" />
+        </form>
+</body>
+</html>
+```

@@ -25,17 +25,19 @@ O menu tá lá em cima, e o iframe no meio do conteudo, escondido pela rolagem.
   
 isso aqui:
 
-<pre name="code" class="html">&lt;a href="http://www.google.com.br/#externo" target="externo" id="google">google&lt;/a>
+``` html
+<a href="http://www.google.com.br/#externo" target="externo" id="google">google</a>
         
-        &lt;iframe src="" name="externo" id="externo" width="1000px">&lt;/iframe></pre>
+        <iframe src="" name="externo" id="externo" width="1000px"></iframe>```
 
 infelizmente não funciona.
 
 Logo, a próxima solução que pensei, foi usar javascript para tal:
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 window.onload = function(){
         document.getElementById('google').onclick = function(){
         
@@ -43,24 +45,24 @@ window.onload = function(){
         
         }
 }       
-&lt;/script>
-&lt;/head>
-&lt;body>
-        &lt;a href="http://www.google.com.br/" target="externo" id="google">google&lt;/a>
-        &lt;div id="espaco">
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-                &lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />&lt;br />
-        &lt;/div>
+</script>
+</head>
+<body>
+        <a href="http://www.google.com.br/" target="externo" id="google">google</a>
+        <div id="espaco">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
         
-        &lt;iframe src="" name="externo" id="externo" width="1000px">&lt;/iframe>
-&lt;/body>
-&lt;/html>
-</pre>
+        <iframe src="" name="externo" id="externo" width="1000px"></iframe>
+</body>
+</html>
+```
 
 =) é isso ai.

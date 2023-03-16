@@ -12,9 +12,9 @@ categories:
   - jQuery
 ---
 A maioria das bibliotecas javascript usam o símbolo $ como apelido das suas funções básicas.
-  
+
 O jQuery, disponibiliza naturalmente 2 formas de uso, com o $ e com a palavra jQuery.
-  
+
 <!--more-->
 
 ## Não existe conflito de jQuery + jQuery!
@@ -27,25 +27,29 @@ O método [.noConflict()](#noConflict), existe para conflitos **entre biblioteca
 
 ## Como funciona o jQuery.noConflict() ? {##noConflict}
 
-<pre name="code" class="javascript:firstLine[390]">noConflict: function( deep ) {
-		if ( window.$ === jQuery ) {
-			window.$ = _$;
-		}
+``` js
+noConflict: function( deep ) {
+    if ( window.$ === jQuery ) {
+      window.$ = _$;
+    }
 
-		if ( deep && window.jQuery === jQuery ) {
-			window.jQuery = _jQuery;
-		}
+    if ( deep && window.jQuery === jQuery ) {
+      window.jQuery = _jQuery;
+    }
 
-		return jQuery;
-	},</pre>
+    return jQuery;
+  },```
 
 Note que a única coisa que esse método faz, é **retornar**, um objeto jQuery existente(já registrado no documento). Por isso, que a forma de usar, nos induz a _&#8216;trocar o nome&#8217;_ do apelido:
 
-<pre name="code" class="javascript">var $a = jQuery.noConflict()</pre>
+``` js
+var $a = jQuery.noConflict()```
 
-E então, em vez de usar **$**, agora passo a usar **$a** 
+E então, em vez de usar **$**, agora passo a usar **$a**
 
-<pre name="code" class="javascript:firstLine[2]">$a(document).ready(function(){</pre>
+``` js
+$a(document).ready(function(){
+```
 
 ## $(&#8220;bla bla bla&#8221;) is null
 
@@ -55,10 +59,12 @@ Esse é o erro que aparecerá, caso vc tente primeiro usar jQuery, e depois prot
 
 Basta atribuir o novo objeto jQuery a um outro apelido, e usar ele então:
 
-<pre name="code" class="javascript:firstLine[9]">$a = jQuery.noConflict();
- 	$a(document).ready(function() {
-		$a('#gallery a').lightBox();
-	});</pre>
+``` js
+$a = jQuery.noConflict();
+   $a(document).ready(function() {
+    $a('#gallery a').lightBox();
+  });
+```
 
 não sou muito fãn dessa forma de resolver, pois daria o trabalho de reescrever todo o script que dependesse de jQuery.. fora que não ficou &#8216;intuitivo&#8217; esse uso.
 
@@ -66,34 +72,38 @@ não sou muito fãn dessa forma de resolver, pois daria o trabalho de reescrever
 
 No início deste post, eu disse que a lib disponibiliza também, a variável jQuery para ser usada.
 
-<pre name="code" class="javascript:firstLine[9]">jQuery(document).ready(function() {
-	jQuery('#gallery a').lightBox();
-});</pre>
+``` js
+jQuery(document).ready(function() {
+  jQuery('#gallery a').lightBox();
+});
+```
 
 Portanto, se sempre que eu tiver que fazer algo com jQuery, não usar o símbolo $, mas sim a variavel jQuery, não preciso me preocupar com conflito, pois apenas a outra lib, usaria o alias $.
 
 ## Resolvendo apenas passando um argumento
 
-<pre name="code" class="javascript:firstLine[276]">ready: function( fn ) {
-		// Attach the listeners
-		jQuery.bindReady();
+``` js
+ready: function( fn ) {
+    // Attach the listeners
+    jQuery.bindReady();
 
-		// Add the callback
-		readyList.done( fn );
+    // Add the callback
+    readyList.done( fn );
 
-		return this;
-	},</pre>
+    return this;
+  },```
 
 Esse é o trecho de código da lib, responsável pelo método .ready() que usamos, para aguardar o DOM carregar.
-  
+
 Note que o parâmetro do método é a nossa function anônima, que expliquei no post &#8216;<a href="http://wbruno.com.br/2011/07/18/vixi-aprendi-jquery-mas-agora/" target="_blank">Aprendi jQuery, e agora?</a>&#8216;.
-  
+
 Oque posso fazer, é forçar um argumento $, e então me aproveitar da clousure, limitando o escopo do nosso alias:
 
-<pre name="code" class="javascript:firstLine[9]">jQuery(document).ready(function( $ ) {
-	$('#gallery a').lightBox();
+``` js
+jQuery(document).ready(function( $ ) {
+  $('#gallery a').lightBox();
 });
-</pre>
+```
 
 Bacana ne?! não precisei mecher em nada dentro do método .ready(), apenas iniciei ele com a variavel jQuery, e forcei a lib a me devolver o argumento $, como um objeto jQuery exclusivo desse escopo.
 
@@ -101,12 +111,13 @@ Bacana ne?! não precisei mecher em nada dentro do método .ready(), apenas inic
 
 Da mesma forma que a solução acima, eu poderia ter feito uma clousure, e:
 
-<pre name="code" class="javascript:firstLine[9]">(function( $ ){
-	 	$(document).ready(function( $ ) {
-			$('#gallery a').lightBox();
-		});
-	})(jQuery);
-</pre>
+``` js
+(function( $ ){
+     $(document).ready(function( $ ) {
+      $('#gallery a').lightBox();
+    });
+  })(jQuery);
+```
 
 O parâmetro &#8216;para o mundo externo&#8217; a essa anônima, é **jQuery**, mas dentro dela, o argumento que recebo é um **$**. lindo não?
 

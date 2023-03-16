@@ -31,15 +31,17 @@ Provavelmente, você vai encontrar no arquivo **comments.php**, ou no **function
 
 Parecido com isso aqui:
 
-<pre name="code" class="php">&lt;?php comment_type(_x('Coment&aacute;rio', 'noun'), __('Trackback'), __('Pingback')); ?&gt;
-&lt;?php _e('por'); ?>
-&lt;?php comment_author_link() ?>
-</pre>
+``` php
+<?php comment_type(_x('Coment&aacute;rio', 'noun'), __('Trackback'), __('Pingback')); ?>
+<?php _e('por'); ?>
+<?php comment_author_link() ?>
+```
 
 Sugiro remover.. hehe =)
 
-<pre name="code" class="php">&lt;?php _e('por'); ?>
-&lt;?php comment_author_link() ?>
-</pre>
+``` php
+<?php _e('por'); ?>
+<?php comment_author_link() ?>
+```
 
 E ai ? ainda tinha isso no teu blog ? corre lá e tira. =)

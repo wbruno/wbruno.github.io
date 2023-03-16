@@ -17,20 +17,21 @@ Colocando o atributo checked=&#8221;checked&#8221; em uma lista de checkboxs, de
   
 Para usar algum outro array, como um vindo do banco, basta trocar o getPost(&#8216;arr&#8217;), pelo teu array.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 $_POST['var'][0] = 'r';
 $_POST['var'][1] = 'tx';
 
 
 function getPost( $key ){
-	return isset( $_POST[ $key ] ) ? $_POST[ $key ] : null;
+  return isset( $_POST[ $key ] ) ? $_POST[ $key ] : null;
 }
 function is_checked( $value, $arr ){
-	if( in_array( $value, $arr ) ) echo 'checked="checked"';
+  if( in_array( $value, $arr ) ) echo 'checked="checked"';
 }
 ?>
-&lt;input type="checkbox" value="r" name="var[]" &lt;?php is_checked( 'r', getPost('var') ); ?>/>Precipitação&lt;br/>
-&lt;input type="checkbox" value="tn" name="var[]" &lt;?php is_checked( 'tn', getPost('var') ); ?>/> Temperatura Mínima&lt;br/>
-&lt;input type="checkbox" value="tx" name="var[]" &lt;?php is_checked( 'tx', getPost('var') ); ?>/> Temperatura Máxima
-</pre>
+<input type="checkbox" value="r" name="var[]" <?php is_checked( 'r', getPost('var') ); ?>/>Precipitação<br/>
+<input type="checkbox" value="tn" name="var[]" <?php is_checked( 'tn', getPost('var') ); ?>/> Temperatura Mínima<br/>
+<input type="checkbox" value="tx" name="var[]" <?php is_checked( 'tx', getPost('var') ); ?>/> Temperatura Máxima
+```

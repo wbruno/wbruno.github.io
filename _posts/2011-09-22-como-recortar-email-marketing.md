@@ -39,7 +39,8 @@ Como vc pode ver na tabela do link acima, background-image, não funciona nos cl
 
 background-color funciona bem, e vamos usar a moda antiga:
 
-<pre name="code" class="html">&lt;td bgcolor="#000"></pre>
+``` html
+<td bgcolor="#000">```
 
 ### No início do recorte:
 
@@ -53,7 +54,8 @@ Use e abuse dos **colspans**, mas o row nunca!
 
 ## Nem pense em margin e padding
 
-<pre name="code" class="html">style="margin: yypx; padding: yypx;"</pre>
+``` html
+style="margin: yypx; padding: yypx;"```
 
 Vai funcionar nos teus navegadores enqnto vc estiver testando, porém nos clients de email não.
 
@@ -87,7 +89,8 @@ CSS inline novamente. Declare display: block; nessas imagens.
 
 Eu nem lembrava mais dessa tag.. mas para recorte de EMM, é melhor garantir que vai funcionar na maioria dos clients, e o mais perfeito possível.
 
-<pre name="code" class="html">&lt;font>&lt;/font></pre>
+``` html
+<font></font>```
 
 Não vamos cair na tentação de usar um <p>, <span>.. ou tags do tipo. Dificil prevermos quais serão as definições padrão do box model dessas tags. A tag <font> funciona bem. Façamos todos os nossos textos com ela.
 
@@ -95,7 +98,8 @@ Não vamos cair na tentação de usar um <p>, <span>.. ou tags do tipo. Dificil 
 
 Isso! Não temos &#8216;reaproveitamento&#8217; de código fazendo email marketing. Note que a tag link e style, não funcionam no hotmail e gmail respectivamente. Portanto,
 
-<pre name="code" class="html">style=""</pre>
+``` html
+style=""```
 
 neles !
 
@@ -113,7 +117,8 @@ Para links em textos, devemos usar livremente a tag de âncora <a></a>, porém n
 
 Isso mesmo. Use #map. Se você tentar usar algo como:
 
-<pre name="code" class="html">&lt;a href="">&lt;img src="..." />&lt;/a></pre>
+``` html
+<a href=""><img src="..." /></a>```
 
 Você terá problemas com isso.
 
@@ -129,19 +134,21 @@ Realmente é. E o ínicio do recorte, em que temos que colocar largura, altura, 
 
 Por isso, desenvolvi essa <a href="http://wbruno.com.br/scripts/gerador_emm.php" target="_blank">ferramenta para recorte de Email Marketing</a>. Lógico que não faz milagre, mas com umas Expressões Regulares e php, faço essa parte braçal, de entrar com o HTML:
 
-<pre name="code" class="html">&lt;tr>
-    	&lt;td>&lt;img src="images/img1.jpg" width="40" height="20" alt="">&lt;/td>
-    	&lt;td>&lt;img src="images/img2.jpg" width="56" height="13" alt="">&lt;/td>
-&lt;/tr>
-</pre>
+``` html
+<tr>
+      <td><img src="images/img1.jpg" width="40" height="20" alt=""></td>
+      <td><img src="images/img2.jpg" width="56" height="13" alt=""></td>
+</tr>
+```
 
 E sair:
 
-<pre name="code" class="html">&lt;tr>
-    	&lt;td width="40" height="20" valign="top">&lt;img src="http://wbruno.com.br/images/img1.jpg" width="40" height="20" alt="" align="top">&lt;/td>
-    	&lt;td width="56" height="13" valign="top">&lt;img src="http://wbruno.com.br/images/img2.jpg" width="56" height="13" alt="" align="top">&lt;/td>
-	&lt;/tr>
-</pre>
+``` html
+<tr>
+      <td width="40" height="20" valign="top"><img src="http://wbruno.com.br/images/img1.jpg" width="40" height="20" alt="" align="top"></td>
+      <td width="56" height="13" valign="top"><img src="http://wbruno.com.br/images/img2.jpg" width="56" height="13" alt="" align="top"></td>
+  </tr>
+```
 
 Ou seja, a parte chata resolvida.
 

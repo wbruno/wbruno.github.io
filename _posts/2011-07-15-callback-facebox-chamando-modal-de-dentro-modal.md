@@ -15,7 +15,7 @@ tags:
 ---
 Galera está tendo bastante dificuldade com isso hoje em dia.
 
-> Tenho um modal, que abre pegando um conteúdo com ajax ou não. 
+> Tenho um modal, que abre pegando um conteúdo com ajax ou não.
 
 O ponto é que os plugins de modal(ou a maioria deles), e também o facebox que é o caso que vou demonstrar agora, reescrevem o conteúdo com js, então perdemos qualquer função atrelada que tínhamos.
 
@@ -25,56 +25,60 @@ O ponto é que os plugins de modal(ou a maioria deles), e também o facebox que 
 
 <a href="/scripts/facebox1.html" target="_blank">Janela Modal FaceBox</a>
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-	&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">&lt;/script>
-	&lt;script type="text/javascript" src="src/facebox.js">&lt;/script>
+``` html
+<html>
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="src/facebox.js"></script>
 
-	&lt;link href="src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
 
-	&lt;script type="text/javascript">
-	$(document).ready(function(){
-		$('a[rel*=facebox]').facebox({
-			loadingImage : 'src/loading.gif',
-			closeImage   : 'src/closelabel.png'
-		});
-	});
-	&lt;/script>
-	&lt;style type="text/css">
-	.modal { display: none; }
-	&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;a href="#modal" rel="facebox">Abrir Modal&lt;/a> 
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('a[rel*=facebox]').facebox({
+      loadingImage : 'src/loading.gif',
+      closeImage   : 'src/closelabel.png'
+    });
+  });
+  </script>
+  <style type="text/css">
+  .modal { display: none; }
+  </style>
+</head>
+<body>
+  <a href="#modal" rel="facebox">Abrir Modal</a>
 
-	&lt;div id="modal" class="modal">
-		Modal &lt;a href="#modal2" rel="facebox">Abrir outro modal&lt;/a>
-	&lt;/div>&lt;!-- /modal -->
-	&lt;div id="modal2" class="modal">
-		Segundo Modal.
-	&lt;/div>&lt;!-- /modal -->
-&lt;/body>
-&lt;/html>
-</pre>
+  <div id="modal" class="modal">
+    Modal <a href="#modal2" rel="facebox">Abrir outro modal</a>
+  </div><!-- /modal -->
+  <div id="modal2" class="modal">
+    Segundo Modal.
+  </div><!-- /modal -->
+</body>
+</html>
+```
 
 Note que clicando no link do segundo modal, oque acontece é que a URL muda para **#modal2**, e o comportamento de abrir outro modal não é feito.
 
-Por causa do que eu disse, do conteúdo do modal ter sido reescrito com js, então o link: 
+Por causa do que eu disse, do conteúdo do modal ter sido reescrito com js, então o link:
 
-<pre name="code" class="html:firstLine[24]">&lt;a href="#modal2" rel="facebox">Abrir outro modal&lt;/a></pre>
+``` html
+<a href="#modal2" rel="facebox">Abrir outro modal</a>```
 
 não teve o comportamento atrelado.
 
 Precisamos, logo depois de abrir o primeiro modal, colocar esse comportamento nos links lá.
-  
+
 Uma forma elegante de fazer isso, é no callback do próprio modal, rodarmos a rotina:
 
-<pre name="code" class="javascript:firstLine[14]">$(document).bind('afterReveal.facebox', function(){
-			$('#facebox .content a').facebox({
-				loadingImage : 'src/loading.gif',
-				closeImage   : 'src/closelabel.png'
-			});
-		});</pre>
+``` js
+$(document).bind('afterReveal.facebox', function(){
+      $('#facebox .content a').facebox({
+        loadingImage : 'src/loading.gif',
+        closeImage   : 'src/closelabel.png'
+      });
+    });
+```
 
 Não fiz nada de anormal, ou super.
 

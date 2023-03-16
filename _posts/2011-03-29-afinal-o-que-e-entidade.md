@@ -61,11 +61,12 @@ O ponto que quero levantar, é a compreensão do conceito.
 
 Se tenho que fazer um cadastro de usuário, preciso pensar o que a <u>entidade usuário</u> significa para o meu sistema, e o que preciso saber dela ou não.
 
-<pre name="code" class="sql">CREATE TABLE `test`.`usuario` (
+``` sql
+CREATE TABLE `test`.`usuario` (
    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
    `nome` VARCHAR( 50 ) NOT NULL
 ) ENGINE = InnoDB;
-</pre>
+```
 
 Até aqui bem simples. A nossa entidade usuario possui um _\`nome\`_, e um _\`id\`_, que é um identificador único desse objeto no nosso modelo.
 
@@ -77,8 +78,9 @@ Agora o cliente nos informa que ele precisa saber dos usuarios dele, pelo menos:
 
 Num primeiro momento, a nossa reação é adicionarmos essas informações à entidade usuario, pois o telefone e o celular pertencem respectivamente, a cada usuário nosso.
 
-<pre name="code" class="sql">ALTER TABLE `usuario` ADD `telefone` VARCHAR( 14 ) NOT NULL ,
-ADD `celular` VARCHAR( 14 ) NOT NULL </pre>
+``` sql
+ALTER TABLE `usuario` ADD `telefone` VARCHAR( 14 ) NOT NULL ,
+ADD `celular` VARCHAR( 14 ) NOT NULL ```
 
 [<img src="/wp-content/uploads/2011/03/tab.png" alt="" title="tab" width="609" height="120" class="aligncenter size-full wp-image-394" srcset="/wp-content/uploads/2011/03/tab.png 609w, /wp-content/uploads/2011/03/tab-300x59.png 300w" sizes="(max-width: 609px) 100vw, 609px" />](/wp-content/uploads/2011/03/tab.png)
 
@@ -88,8 +90,9 @@ Adicionar mais essas 2 colunas a tabela, seria um erro, no ponto de vista da mod
 
 Nesta hora, deveria começar a ficar claro que essa expansão, clama por uma nova entidade na nossa modelagem.
 
-<pre name="code" class="sql">ALTER TABLE `usuario` DROP `telefone` , DROP `celular` ;
-</pre>
+``` sql
+ALTER TABLE `usuario` DROP `telefone` , DROP `celular` ;
+```
 
 Estrutura da nova entidade:
 
@@ -101,16 +104,19 @@ Dados cadastrados:
 
 Portanto, se precisamos de mais formas de contato, como o Nextel, basta adicionarmos um registro a essa tabela, e isso pode ser facilmente feito na nossa aplicação, sem a necessidade de alterarmos a estrutura do modelo.
 
-<pre name="code" class="sql">INSERT INTO `test`.`contato` (`id`, `nome`) VALUES (NULL, 'Nextel');</pre>
+``` sql
+INSERT INTO `test`.`contato` (`id`, `nome`) VALUES (NULL, 'Nextel');
+```
 
 A única questão não respondida ainda, é como vincular os dados do usuário a esta nossa nova entidade. Fazemos então, outra tabela, já bem normalizada, da seguinte forma:
 
-<pre name="code" class="sql">CREATE TABLE `test`.`contato_usuario` (
+``` sql
+CREATE TABLE `test`.`contato_usuario` (
     `id_usuario` INT NOT NULL ,
     `id_contato` INT NOT NULL ,
     `descricao` VARCHAR( 70 ) NOT NULL
 ) ENGINE = InnoDB;
-</pre>
+```
 
 Essa nossa nova tabela, será responsável por fazer a ligação entre as nossas entidades.
 
@@ -118,12 +124,13 @@ Essa nossa nova tabela, será responsável por fazer a ligação entre as nossas
 
 A relação entre as tabelas é evidente, e o nosso JOIN, para resgatar esses dados fica:
 
-<pre name="code" class="sql">SELECT `usuario`.`id` AS `id_usuario` , `usuario`.`nome` AS `nome_usuario` ,
+``` sql
+SELECT `usuario`.`id` AS `id_usuario` , `usuario`.`nome` AS `nome_usuario` ,
   `contato`.`nome` AS `nome_contato` , `contato_usuario`.`descricao`
     FROM `usuario`
         INNER JOIN `contato_usuario` ON `usuario`.`id` = `contato_usuario`.`id_usuario`
         INNER JOIN `contato` ON `contato`.`id` = `contato_usuario`.`id_contato`
-</pre>
+```
 
 Saída:
 
@@ -147,8 +154,9 @@ Analise bem os requisitos do seu sistema antes de implementá-lo. Não tome todo
 
 Dump completo do SQL usado:
 
-<div class="spoler">
-  <pre name="code" class="sql">
+
+``` sql
+
 -- phpMyAdmin SQL Dump
 -- version 3.3.8.1
 -- http://www.phpmyadmin.net
@@ -234,5 +242,4 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id`, `nome`) VALUES
 (1, 'Bruno'),
 (2, 'Silveira');
-</pre>
-</div>
+```

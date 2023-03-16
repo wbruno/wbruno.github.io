@@ -27,31 +27,33 @@ O callback, nos possibilita fazer mágica. Desenvolvi um script rápido, aprovei
   
 Usei o **titleFormat**: <a href="http://fancybox.net/blog" target="_blank">http://fancybox.net/blog</a>.
 
-<pre name="code" class="javascript">function formatTitle(title, currentArray, currentIndex, currentOpts) {
-    return '&lt;div id="tip7-title">&lt;span class="fb_pager">'+pager( currentArray, currentIndex )+'Imagem ' + (currentIndex + 1) + ' de ' + currentArray.length + '&lt;/span>&lt;span>&lt;a href="javascript:;" onclick="$.fancybox.close();">&lt;img src="/data/closelabel.gif" />&lt;/a>&lt;/span>' + (title && title.length ? '&lt;p>' + title + '&lt;/p>' : '' ) + '&lt;/div>';
+``` js
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+    return '<div id="tip7-title"><span class="fb_pager">'+pager( currentArray, currentIndex )+'Imagem ' + (currentIndex + 1) + ' de ' + currentArray.length + '</span><span><a href="javascript:;" onclick="$.fancybox.close();"><img src="/data/closelabel.gif" /></a></span>' + (title && title.length ? '<p>' + title + '</p>' : '' ) + '</div>';
 }
 function pager( currentArray, currentIndex ){
-	var p = '&lt;p class="pageItem">';
-	for( var i=1; i&lt;=currentArray.length; i++ )
-	{
-		var active = ( currentIndex==(i-1) ) ? 'class="active"' : ''
-		p += '&lt;a href="#" rel="'+(i-1)+'"'+active+'>'+i+'&lt;/a>';
-	}
-	return p+'&lt;/p>';
+  var p = '<p class="pageItem">';
+  for( var i=1; i<=currentArray.length; i++ )
+  {
+    var active = ( currentIndex==(i-1) ) ? 'class="active"' : ''
+    p += '<a href="#" rel="'+(i-1)+'"'+active+'>'+i+'</a>';
+  }
+  return p+'</p>';
 }
 jQuery(document).ready(function(){
-	jQuery('.pageItem a').live('click', function( e ){
-		e.preventDefault();
-		jQuery.fancybox.pos( jQuery( this ).attr('rel') );
-	});
+  jQuery('.pageItem a').live('click', function( e ){
+    e.preventDefault();
+    jQuery.fancybox.pos( jQuery( this ).attr('rel') );
+  });
 });
-</pre>
+```
 
 Esse é o código adicional, e então no momento de instanciar o plugin, basta declarar que vamos usar o callback, e a function que deverá ser chamada:
 
-<pre name="code" class="javascript">jQuery('.gallery').fancybox({
-		titleFormat     :       formatTitle
-	});
-</pre>
+``` js
+jQuery('.gallery').fancybox({
+    titleFormat     :       formatTitle
+  });
+```
 
 é isso. =)

@@ -26,9 +26,9 @@ Encontrei a resposta nesse link:
 
 <var>vim ~/.vim/filetype.vim </var>
 
-<pre>augroup filetypedetect
+```augroup filetypedetect
 au BufNewFile,BufRead *.hbs setf html
-augroup END</pre>
+augroup END```
 
 É isso! =)
   

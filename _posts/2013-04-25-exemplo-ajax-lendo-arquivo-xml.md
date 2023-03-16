@@ -15,15 +15,15 @@ tags:
 ---
 Ler arquivo xml com ajax.. bem simples. Vamos lá
 
-<pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?>
-&lt;text>
-	&lt;p>Lorem ipsum dolor sit amet&lt;/p>
-	&lt;p>Nihil cumque vero&lt;/p>
-	&lt;p>Impedit quibusdam fuga&lt;/p>
-	&lt;p>Magnam ad maiores omnis&lt;/p>
-	&lt;p>Aliqua omnis laborum&lt;/p>
-&lt;/text>
-</pre>
+<pre class="xml"><?xml version="1.0" encoding="UTF-8"?>
+<text>
+  <p>Lorem ipsum dolor sit amet</p>
+  <p>Nihil cumque vero</p>
+  <p>Impedit quibusdam fuga</p>
+  <p>Magnam ad maiores omnis</p>
+  <p>Aliqua omnis laborum</p>
+</text>
+```
 
 <!--more-->
 
@@ -31,18 +31,18 @@ Ler arquivo xml com ajax.. bem simples. Vamos lá
   
 E o código ajax necessário para abrir esse xml, e mostrar a segunda tag <p> dele
 
-<pre class="javascript">&lt;script type="text/javascript">
+<pre class="javascript"><script type="text/javascript">
 var ajax = new XMLHttpRequest();
 
 ajax.open("GET","test.xml",true);
 ajax.send();
 
 ajax.onreadystatechange = function(){
-	if (ajax.readyState == 4){
-		var xml = ajax.responseXML;
+  if (ajax.readyState == 4){
+    var xml = ajax.responseXML;
 
-		console.log(xml.getElementsByTagName('p')[1].innerHTML);
-	}
+    console.log(xml.getElementsByTagName('p')[1].innerHTML);
+  }
 }
-&lt;/script>
-</pre>
+</script>
+```

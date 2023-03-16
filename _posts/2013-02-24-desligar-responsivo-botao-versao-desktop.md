@@ -21,11 +21,12 @@ Basta atacar a base dessa técnica, a primeira coisa que a faz funcionar. A meta
 
 Criei um elemento, que no click dele, altera o valor da minha meta viewport.
 
-<pre name="code" class="javascript">d.getElementById('no-responsive').onclick = function(){
-			var vps = d.querySelectorAll("meta[name='viewport']");
-			vps[0].content = 'width=960px,initial-scale=0.3,user-scalable=yes';
-		}
-</pre>
+``` js
+d.getElementById('no-responsive').onclick = function(){
+      var vps = d.querySelectorAll("meta[name='viewport']");
+      vps[0].content = 'width=960px,initial-scale=0.3,user-scalable=yes';
+    }
+```
 
 Prontinho, feito o botão para ver a versão full. Derrubando o argumento do cara.
 
@@ -37,56 +38,56 @@ E segue uma versão completa do código, que identifica se o visitante está em 
 
 Tem uma chamada ao .innerHTML do elemento #t apenas para debug. Remova quando for usar em produção.
 
-<pre class="html">&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-	&lt;meta charset="UTF-8">
-	&lt;title>Desligar Responsivo&lt;/title>
+<pre class="html"><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desligar Responsivo</title>
 
-	&lt;meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
-&lt;style>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+<style>
 body { margin: 0; padding: 0; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-	&lt;main id="main">
-		&lt;h1>Desligar responsivo&lt;/h1>
+  <main id="main">
+    <h1>Desligar responsivo</h1>
 
-		&lt;span id="no-responsive">desligar&lt;/span>
-		&lt;p id="t">&lt;/p>
+    <span id="no-responsive">desligar</span>
+    <p id="t"></p>
 
-	&lt;/main>&lt;!-- #main -->
-&lt;script>
+  </main><!-- #main -->
+<script>
 (function(w, d, undefined) {
-	var viewport = {
-		meta : d.querySelectorAll("meta[name='viewport']")[0],
-		landscape : function() {
-			viewport.meta.content = 'width=960px,initial-scale=1,user-scalable=yes';
-			alert('landscape');
-		},
-		portrait : function() {
-			viewport.meta.content = 'width=960px,initial-scale=1,user-scalable=yes';
-			alert('portrait');
-		},
-		orientation : function() {
-			if(Math.abs(window.orientation) === 90) {
-				viewport.landscape();
-			} else {
-				viewport.portrait();
-			}
-			d.getElementById('t').innerHTML = '&lt;strong>viewport:&lt;/strong> ' + viewport.meta.content;
-			d.getElementById('t').innerHTML += '&lt;br/>&lt;strong>body.offsetWidth:&lt;/strong> ' + d.querySelector('body').offsetWidth;
-		}
-	};
+  var viewport = {
+    meta : d.querySelectorAll("meta[name='viewport']")[0],
+    landscape : function() {
+      viewport.meta.content = 'width=960px,initial-scale=1,user-scalable=yes';
+      alert('landscape');
+    },
+    portrait : function() {
+      viewport.meta.content = 'width=960px,initial-scale=1,user-scalable=yes';
+      alert('portrait');
+    },
+    orientation : function() {
+      if(Math.abs(window.orientation) === 90) {
+        viewport.landscape();
+      } else {
+        viewport.portrait();
+      }
+      d.getElementById('t').innerHTML = '<strong>viewport:</strong> ' + viewport.meta.content;
+      d.getElementById('t').innerHTML += '<br/><strong>body.offsetWidth:</strong> ' + d.querySelector('body').offsetWidth;
+    }
+  };
 
 
-	w.onorientationchange = viewport.orientation;
-	d.getElementById('no-responsive').onclick = viewport.orientation;
+  w.onorientationchange = viewport.orientation;
+  d.getElementById('no-responsive').onclick = viewport.orientation;
 
 
 }(window, document));
-&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</body>
+</html>
+```

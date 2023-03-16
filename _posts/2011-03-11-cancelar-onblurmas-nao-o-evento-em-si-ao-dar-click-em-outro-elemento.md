@@ -19,7 +19,8 @@ Veja, não dá para &#8216;cancelar o evento&#8217;. Quando vc tirar o foco do i
 
 Rodem este script, para entenderem a situação:
 
-<pre name="code" class="javascript">&lt;script type="text/javascript"&gt;
+``` html
+<script type="text/javascript"> type="text/javascript">
 function id( el ){
         return document.getElementById( el );
 }
@@ -39,23 +40,26 @@ window.onload = function(){
                 window.clearInterval( itv );
         }
 }
-&lt;/script&gt;
+</script>
 
-&lt;input type="text" name="q" id="q" /&gt;
-&lt;input type="button" name="ok" value="Ok" id="ok" /&gt;
+<input type="text" name="q" id="q" />
+<input type="button" name="ok" value="Ok" id="ok" />
 
-&lt;div id="result"&gt;&lt;/div&gt;
-</pre>
+<div id="result"></div>
+```
 
 basta comentar esta linha:
 
-<pre name="code" class="javascript">window.clearInterval( itv );</pre>
+``` js
+window.clearInterval( itv );
+```
 
 para entender oque acontece.
 
 script final, então, para &#8216;cancelar o evento&#8217;:
 
-<pre name="code" class="javascript">window.onload = function(){
+``` js
+window.onload = function(){
 
         id('q').focus();
 
@@ -66,4 +70,5 @@ script final, então, para &#8216;cancelar o evento&#8217;:
                 id('result').innerHTML += 'cancelar ação<br />';
                 window.clearTimeout( tot );
         }
-}</pre>
+}
+```

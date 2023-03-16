@@ -19,12 +19,13 @@ Não raramente fazemos sistemas em que precisamos embedar vídeos do youtube no 
 
 Até para deixar registrado aqui, nesse meu repositório, esta foi a ER que utilizei recentemente:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
-		preg_match( '/(v=)([^&]+)/', 'http://www.youtube.com/watch?v=K0e1DbvE0bg&feature=topvideos_music', $matches ); 
-		
-		var_dump( $matches[2] );
-		return $matches;
-</pre>
+    preg_match( '/(v=)([^&]+)/', 'http://www.youtube.com/watch?v=K0e1DbvE0bg&feature=topvideos_music', $matches ); 
+    
+    var_dump( $matches[2] );
+    return $matches;
+```
 
 é isso, post rápido.

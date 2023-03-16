@@ -48,7 +48,7 @@ body.black { background: #090909; }
 
 .black .dp-highlighter .tools,
 .black .dp-highlighter ol li, .black .dp-highlighter .columns div { border-color: #00aaff; }
-</pre>
+```
 
 Como podem ver, o javascript apenas adiciona uma class ao body e pronto. O css cuida do restante.
 

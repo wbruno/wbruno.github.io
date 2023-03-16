@@ -13,13 +13,14 @@ categories:
 ---
 Poste rápido. Apenas o código mesmo.
 
-<pre>&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>Document&lt;/title>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
 
-&lt;style>
+<style>
 p { margin: 0; }
 .spoiler-area {
     border: 1px solid #000;
@@ -27,16 +28,16 @@ p { margin: 0; }
     height: auto;
 }
 .spoiler-area.is-closed { height: 0; overflow: hidden; padding: 10px 0 0; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-&lt;strong>Spoiler&lt;/strong> &lt;button data-target="spoiler1" class="btn-spoiler">Show&lt;/button>
-&lt;div id="spoiler1" class="spoiler-area is-closed">
-    &lt;p>Mensagem aqui&lt;/p>
-&lt;/div>&lt;!-- .spoiler-area -->
+<strong>Spoiler</strong> <button data-target="spoiler1" class="btn-spoiler">Show</button>
+<div id="spoiler1" class="spoiler-area is-closed">
+    <p>Mensagem aqui</p>
+</div><!-- .spoiler-area -->
 
-&lt;script>
+<script>
 (function(){
     "use strict";
     var $btns = document.querySelectorAll('.btn-spoiler');
@@ -61,7 +62,7 @@ p { margin: 0; }
     });
 
 }());
-&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</body>
+</html>
+```

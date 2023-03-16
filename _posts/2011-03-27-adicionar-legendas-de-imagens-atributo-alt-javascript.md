@@ -11,18 +11,18 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-Comentem galera! 
+Comentem galera!
 
 Vi que a série de posts &#8220;Criando um plugin jQuery&#8221; <a href="http://plugins.jquery.com/project/simpleplaceholder" target="_blank">SimplePlaceHolder</a>, foi bem aceita. Gostaria de opiniões, sobre o que devo escrever, ou onde é a dificuldade de vcs.
 
 Vamos lá.
 
 **Problema:**
-  
-_</p> 
+
+_</p>
 
 > Possuo um conjunto de miniatura de imagens no HTML.
-  
+
 > Gostaria de uma rotina que adicionasse automaticamente uma legenda, para cada uma dessas imagens, baseada no atributo alt da tag img.
 
 </em>
@@ -30,141 +30,155 @@ _</p>
 <!--more-->
 
 
-  
+
 Por partes novamente:
-  
-_</p> 
+
+_</p>
 
 > Possuo um conjunto de miniatura de imagens no HTML.
 
 </em>
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-	&lt;style type="text/css">
-	* { margin: 0; padding: 0; list-style: none; }
-	body { font: 12px Arial, Verdana, sans-serif; }
-	#fotos {
-		width: 630px;
-		margin: 0 auto;
-	}
-	#fotos li {
-		float: left;
-		margin: 0 10px 10px 0;
-		background: #efefef;
-		padding-bottom: 25px;
-		position: relative;
-	}
-	#fotos a {
-		width: 200px;
-		height: 150px;
-		overflow: hidden;
-		display: block;
-	}
-	#fotos img {
-		border: none;
-	}
-	#fotos p {
-		position: absolute;
-		bottom: 5px;
-		left: 10px;
-	}
-	&lt;/style>
-	&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+  <style type="text/css">
+  * { margin: 0; padding: 0; list-style: none; }
+  body { font: 12px Arial, Verdana, sans-serif; }
+  #fotos {
+    width: 630px;
+    margin: 0 auto;
+  }
+  #fotos li {
+    float: left;
+    margin: 0 10px 10px 0;
+    background: #efefef;
+    padding-bottom: 25px;
+    position: relative;
+  }
+  #fotos a {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    display: block;
+  }
+  #fotos img {
+    border: none;
+  }
+  #fotos p {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+  }
+  </style>
+  <script type="text/javascript">
 
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;ul id="fotos">
-		&lt;li>&lt;a href="images/01.jpg">&lt;img src="images/thumbs/01.jpg" alt="Céu" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/02.jpg">&lt;img src="images/thumbs/02.jpg" alt="Queda de agua" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/03.jpg">&lt;img src="images/thumbs/03.jpg" alt="Universo" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/04.jpg">&lt;img src="images/thumbs/04.jpg" alt="Praia" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/05.jpg">&lt;img src="images/thumbs/05.jpg" alt="Montanhas" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/06.jpg">&lt;img src="images/thumbs/06.jpg" alt="Verde, agua" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-	&lt;/ul>&lt;!-- /foto -->
-&lt;/body>
-&lt;/html>
-</pre>
+  </script>
+</head>
+<body>
+  <ul id="fotos">
+    <li><a href="images/01.jpg"><img src="images/thumbs/01.jpg" alt="Céu" /></a><p></p></li>
+    <li><a href="images/02.jpg"><img src="images/thumbs/02.jpg" alt="Queda de agua" /></a><p></p></li>
+    <li><a href="images/03.jpg"><img src="images/thumbs/03.jpg" alt="Universo" /></a><p></p></li>
+    <li><a href="images/04.jpg"><img src="images/thumbs/04.jpg" alt="Praia" /></a><p></p></li>
+    <li><a href="images/05.jpg"><img src="images/thumbs/05.jpg" alt="Montanhas" /></a><p></p></li>
+    <li><a href="images/06.jpg"><img src="images/thumbs/06.jpg" alt="Verde, agua" /></a><p></p></li>
+  </ul><!-- /foto -->
+</body>
+</html>
+```
 
 Legal, o html está ali.
-  
+
 Todo preparado, só precisamos fazer a nossa rotina javascript que vai:
-  
-_</p> 
+
+_</p>
 
 > adicionasse automaticamente uma legenda
 
 </em>
-  
+
 Como sempre, para mantermos o nosso script de acordo com as boas normas de desenvolvimento javascript, não vamos misturar javascript com o html. Vai ficar tudo na seção HEAD do documento, e sem declarar eventos inline.
 
 Sabemos que o documento é carregado de cima para baixo pelo navegador.
-  
+
 Então, qndo o navegador chegar nas tags <script> dentro do <head>, ainda não temos nenhum html, e portanto, precisamos dizer que o nosso script precisa esperar o documento carregar, para só então começar a tentar ler o DOM.
 
 Fazemos isso, assim:
 
-<pre name="code" class="javascript">window.onload = function(){
+``` js
+window.onload = function(){
 
-	}
-</pre>
+  }
+```
 
 ou seja, esperando o evento **.onload** do objeto **window**.
-  
+
 Quando então esse evento for disparado(o documento, imagens, css, scripts terminarem de carregar), disparamos uma function.
 
 Olhando nosso HTML:
 
-<pre name="code" class="html">&lt;ul id="fotos">
-		&lt;li>&lt;a href="images/01.jpg">&lt;img src="images/thumbs/01.jpg" alt="Céu" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-		&lt;li>&lt;a href="images/02.jpg">&lt;img src="images/thumbs/02.jpg" alt="Queda de agua" />&lt;/a>&lt;p>&lt;/p>&lt;/li>
-</pre>
+``` html
+<ul id="fotos">
+    <li><a href="images/01.jpg"><img src="images/thumbs/01.jpg" alt="Céu" /></a><p></p></li>
+    <li><a href="images/02.jpg"><img src="images/thumbs/02.jpg" alt="Queda de agua" /></a><p></p></li>
+```
 
 Vemos que podemos limitar a ação do script, às imagens que estão dentro dos LIs, que estão dentro do UL#fotos:
 
-<pre name="code" class="javascript">var lis =  document.getElementById('fotos').getElementsByTagName('li');</pre>
+``` js
+var lis =  document.getElementById('fotos').getElementsByTagName('li');
+```
 
 com calma.
-  
+
 Criamos uma variavel **lis**, usando a palavra chave **var**.
-  
+
 Daí, atribuimos a essa variavel, o retorno do encadeamento.
 
-<pre name="code" class="javascript">document.getElementById('fotos').getElementsByTagName('li');</pre>
+``` js
+document.getElementById('fotos').getElementsByTagName('li');
+```
 
 Apartir do objeto document, buscamos um elemento com id=&#8221;fotos&#8221;, dai então <u>dentro</u>, desse objeto que tinha id=&#8221;fotos&#8221;, <u>buscamos todos os elementos</u>, que tenham como tag name a string **li**.
 
 Percorremos o DOM, e agora temos em **lis**, um array de objetos
 
-<pre name="code" class="javascript">alert( lis );//[object HTMLCollection]</pre>
+``` js
+alert( lis );//[object HTMLCollection]
+```
 
 , onde cada um é:
 
-<pre name="code" class="javascript">alert( lis[i] );//[object HTMLLIElement]</pre>
+``` js
+alert( lis[i] );//[object HTMLLIElement]
+```
 
 .
 
 Basta iterar sob esse array:
 
-<pre name="code" class="javascript">for( var i=0; i&lt;lis.length; i++ ){
+``` js
+for( var i=0; i<lis.length; i++ ){
 
-		}
-</pre>
+    }
+```
 
 Lembrando que arrays em php, javascript, java.. começam na posição 0.(só tem uma linguagem que esqueci o nome que não é assim, começa no 1).
-  
+
 **lis.length**, nos retorna o número de elementos do nosso conjunto.
-  
+
 Nosso loop, vai percorrer da primeira posição, até a última. Bem simples.
 
 Daí, só precisamos escrever no HTML.
-  
+
 Veja que tem um <p> ali estrategicamente posicionado para conter a legenda.
-  
+
 basta:
 
-<pre name="code" class="javascript">lis[i].getElementsByTagName( 'p' )[0].innerHTML</pre>
+``` js
+lis[i].getElementsByTagName( 'p' )[0].innerHTML
+```
 
 , atribuir à propriedade .innerHTML, do parágrafo, do nosso li corrente, oque queremos.
 
@@ -172,25 +186,28 @@ Veja que tem aquele [0], ali. Quer dizer que vamos trabalhar apenas com a primei
 
 De forma análoga, basta acessarmos o atributo .alt</strong>, das nossa imagem que está dentro do nosso li corrente:
 
-<pre name="code" class="javascript">lis[i].getElementsByTagName( 'img' )[0].alt</pre>
+``` js
+lis[i].getElementsByTagName( 'img' )[0].alt
+```
 
 E está feito:
 
-<pre name="code" class="javascript">window.onload = function(){
-		var lis =  document.getElementById('fotos').getElementsByTagName('li');
+``` js
+window.onload = function(){
+    var lis =  document.getElementById('fotos').getElementsByTagName('li');
 
-		for( var i=0; i&lt;lis.length; i++ ){
-			lis[i].getElementsByTagName( 'p' )[0].innerHTML = lis[i].getElementsByTagName( 'img' )[0].alt;
-		}
-	}
-</pre>
+    for( var i=0; i<lis.length; i++ ){
+      lis[i].getElementsByTagName( 'p' )[0].innerHTML = lis[i].getElementsByTagName( 'img' )[0].alt;
+    }
+  }
+```
 
 Opinem! mandem sugestões de tutoriais, scripts, críticas, ou algum ponto que não expliquei direito.
 
 **TestPlan**
-  
+
 Notar que enqnto as imagens estão carregando, não existe nenhum texto embaixo de cada uma delas.
-  
+
 E abrindo o código fonte html gerado (Ctrl + U), também não tem nada ali dentro da tag p.
 
 Assim que as imagens terminarem de carregar, vai aparecer a legenda.

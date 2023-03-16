@@ -21,55 +21,57 @@ Trabalhando com âncoras, resolvi a questão de termos links para &#8216;página
 
 &nbsp;
 
-<pre name="code" class="javascript">&lt;html&gt;
-&lt;head&gt;
-&lt;script type="text/javascript"&gt;
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
-        return document.getElementById( el );
+        return document.getElementById( el );
 }
 function pega_arq( url ){
-        var file = url.split('#');
-        return ( file[1] ) ? file[1]+'.html' : 'home.html';
+        var file = url.split('#');
+        return ( file[1] ) ? file[1]+'.html' : 'home.html';
 }
 function getHTTPObject(){
-        if(window.XMLHttpRequest){
-                return new XMLHttpRequest();
-        }else if(window.ActiveXObject){
-                var prefixes = ["MSXML2", "Microsoft", "MSXML", "MSXML3"];
-                for(var i = 0; i &lt; prefixes.length; i++){
-                        try     {
-                                return new ActiveXObject(prefixes[i] + ".XMLHTTP");
-                        } catch (e) {}
-                }
-        }
+        if(window.XMLHttpRequest){
+                return new XMLHttpRequest();
+        }else if(window.ActiveXObject){
+                var prefixes = ["MSXML2", "Microsoft", "MSXML", "MSXML3"];
+                for(var i = 0; i < prefixes.length; i++){
+                        try     {
+                                return new ActiveXObject(prefixes[i] + ".XMLHTTP");
+                        } catch (e) {}
+                }
+        }
 }
 var xmlHttp = getHTTPObject();
 function abre( arq ){
-        xmlHttp.open("GET", arq,true);
-        xmlHttp.onreadystatechange = function(){
-                if (xmlHttp.readyState == 4){
-                        id('content').innerHTML = xmlHttp.responseText;
-                }              
-        }
-        xmlHttp.send( null );
+        xmlHttp.open("GET", arq,true);
+        xmlHttp.onreadystatechange = function(){
+                if (xmlHttp.readyState == 4){
+                        id('content').innerHTML = xmlHttp.responseText;
+                }              
+        }
+        xmlHttp.send( null );
 }
 window.onload = function(){
-        var as = document.getElementsByTagName('a');
+        var as = document.getElementsByTagName('a');
 
-        for( var i=0; i&lt;as.length; i++ ){
-                as[i].onclick = function(){
-                        abre( pega_arq( this.href ) );
-                }
-        }
-        abre( pega_arq( document.location.href ) );
+        for( var i=0; i<as.length; i++ ){
+                as[i].onclick = function(){
+                        abre( pega_arq( this.href ) );
+                }
+        }
+        abre( pega_arq( document.location.href ) );
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-       
-        &lt;a href="#contato"&gt;Contato&lt;/a&gt;
-        &lt;a href="#missao-valores"&gt;Missão, Valores&lt;/a&gt;
-        &lt;div id="content"&gt;
-        &lt;/div&gt;&lt;!-- /content --&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+       
+        <a href="#contato">Contato</a>
+        <a href="#missao-valores">Missão, Valores</a>
+        <div id="content">
+        </div><!-- /content -->
+</body>
+</html>
+```

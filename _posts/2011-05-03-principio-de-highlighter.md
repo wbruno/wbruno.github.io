@@ -9,11 +9,12 @@ permalink: /expressao-regular/principio-de-highlighter/
 categories:
   - Expressão Regular
 ---
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
     $str = 'Lorem ipsum del boa pergunta, \blah/ blah blah... \SOU VERDE/... eu não sou, por que? ';
 
-    echo preg_replace( '/(\\\[a-z\s]+\/)/i', '&lt;span style="color: #0f0;">$1&lt;/span>', $str );
-</pre>
+    echo preg_replace( '/(\\\[a-z\s]+\/)/i', '<span style="color: #0f0;">$1</span>', $str );
+```
 
 segundo a minha expressão regular, vai ficar verde, as letras e espaços que estiverem entre \ e /
 

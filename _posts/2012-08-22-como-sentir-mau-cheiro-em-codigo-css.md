@@ -29,7 +29,9 @@ As vezes uma preguiça de colocar mais uma classe num elemento ou até mesmo um 
 
 Na maioria das vezes, é melhor declarar uma class extra, do que usar:
 
-<pre name="code" class="css">#content h3 {}</pre>
+``` css
+#content h3 {}
+```
 
 por exemplo.
 
@@ -83,19 +85,23 @@ Um seletor do tipo: <var>p{}</var>, é genérico por demais.
 
 Tome cuidado com declarações do tipo:
 
-<pre name="code" class="css">p {
+``` css
+p {
     line-height: 16px;
     font-size: 12px;
-}</pre>
+}
+```
 
 Ai se você tiver algum parágrafo com font-size maior ou menor que <var>12px</var>, logicamente esse valor de line-height não ficará bacana.
 
 Nessa situação em específico, eu indico usar na unidade <var>em</var>.
 
-<pre name="code" class="css">p {
+``` css
+p {
     line-height: 1.3em;
     font-size: 12px;
-}</pre>
+}
+```
 
 O mais problemático na verdade, são propriedades css declaradas em seletores genéricos(de baixa especificidade) que acabam engessando e travando a sua implementação.
 

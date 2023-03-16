@@ -42,7 +42,8 @@ Assim, para os robôs (google, yahoo, bing..) não teremos mais &#8216;conteúdo
 
 No arquivo **.htaccess**(só extensão, sem &#8216;nome&#8217; mesmo), adicione o seguinte conteúdo:
 
-<pre name="code" class="html">RewriteEngine On
+``` html
+RewriteEngine On
 
 RewriteCond %{HTTP_HOST} !^dominio\.com\.br\/index.php$
 RewriteRule index.php(.*) http://www.dominio.com.br/$1 [R=301,L]
@@ -51,6 +52,6 @@ RewriteRule index.php(.*) http://www.dominio.com.br/$1 [R=301]
 
 RewriteCond %{HTTP_HOST} !^www\.dominio\.com\.br$
 RewriteRule (.*) http://www.dominio.com.br/$1 [R=301,L]
-</pre>
+```
 
 Substitua **dominio** pelo teu site em questão, atentando para a extensão .COM, .COM.BR.. ou outra do teu domínio.

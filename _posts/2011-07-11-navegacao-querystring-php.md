@@ -15,7 +15,8 @@ Só passando para registar um código que deixei no fórum
   
 <!--more-->
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
                 function getGet( $key ){
                         return isset( $_GET[ $key ] ) ? $_GET[ $key ] : null;
                 }
@@ -25,7 +26,7 @@ Só passando para registar um código que deixei no fórum
                         else
                                 include 'view/home.php';
         ?>
-</pre>
+```
 
 tecnicamente, substituimos a tag <iframe> por esse código.
   
@@ -33,10 +34,11 @@ No meio do nosso arquivo **index.php**, fica esse controler, para ser uma espéc
 
 O menu então fica assim:
 
-<pre name="code" class="html">&lt;a href="?pg=home">Home&lt;/a>
-&lt;a href="?pg=contato">Contato&lt;/a>
-&lt;a href="?pg=gostei">Gostei&lt;/a>
-</pre>
+``` html
+<a href="?pg=home">Home</a>
+<a href="?pg=contato">Contato</a>
+<a href="?pg=gostei">Gostei</a>
+```
 
 sendo os arquivos <u>view/home.php</u>, <u>view/contato.php</u> e <u>view/gostei.php</u>. 
 

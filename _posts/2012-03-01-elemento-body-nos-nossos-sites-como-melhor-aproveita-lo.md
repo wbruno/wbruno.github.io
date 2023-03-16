@@ -13,9 +13,10 @@ categories:
 ---
 Lhes apresento o elemento **body**:
 
-<pre name="code" class="html">&lt;body>
-&lt;!-- todo o conteudo do site aqui dentro -->
-&lt;/body></pre>
+``` html
+<body>
+<!-- todo o conteudo do site aqui dentro -->
+</body>```
 
 Todos nós conhecemos. Mas será que estamos utilizando _de verdade_ ele ?
 
@@ -37,7 +38,8 @@ Pode parecer absurdo falar isso, mas convém lembrar: o body é uma tag html! E 
 
 Os mais interessantes, são o **id** e a **class**. Vocês já tinham colocado um desses no body de algum site ?
 
-<pre name="code" class="html">&lt;body id="home"></pre>
+``` html
+<body id="home">```
 
 ## Usar o body com um ID
 
@@ -49,8 +51,10 @@ Esse tipo de situação, podemos facilmente resolver usando o atributo ID no bod
   
 Sendo a home, estilizamos o topo diferente doque ele seria nas internas:
 
-<pre name="code" class="css">body#home #header { height: 200px; }
-#header { height: 100px; }</pre>
+``` css
+body#home #header { height: 200px; }
+#header { height: 100px; }
+```
 
 A marcação html fica intacta, evitamos, coisas como: **#header_home**..
   
@@ -60,29 +64,34 @@ E isso nos levará a escrever um css mais bonito também. Afinal, fizemos um con
 
 Hum.. na verdade eu comecei explicando o ID, porém hoje em dia, eu prefiro 
 
-<pre name="code" class="html">&lt;body class="home"></pre>
+``` html
+<body class="home">```
 
 do que com ID.
 
 Pelo simples motivo de poder usar mais de uma. Com classes, temos todos os benefícios que citei do ID:
 
-<pre name="code" class="css">body.home #header { height: 200px; }
-#header { height: 100px; }</pre>
+``` css
+body.home #header { height: 200px; }
+#header { height: 100px; }
+```
 
 E é possível colocar mais de uma, veja:
 
-<pre name="code" class="html">&lt;body class="cursos html"></pre>
+``` html
+<body class="cursos html">```
 
 A motivação disso, é imaginemos um menu dropdown.
 
-<pre name="code" class="html">&lt;li>Cursos
-      &lt;ul>
-         &lt;li>HTML&lt;/li>
-         &lt;li>CSS&lt;/li>
-         &lt;li>JavaScript&lt;/li>
-      &lt;/ul>
-    &lt;/li>
-</pre>
+``` html
+<li>Cursos
+      <ul>
+         <li>HTML</li>
+         <li>CSS</li>
+         <li>JavaScript</li>
+      </ul>
+    </li>
+```
 
 Assim cada página interna, teria uma combinação de class para o body diferente:
   
@@ -94,9 +103,11 @@ Mais uma vez, levamos o poder do css à outro nível!
 
 Tendo a class **html**, **css**.. e sabendo que cada página interna terá somente um título H1, podemos por exemplo, fazer o H1 ser azul na página de HTML, ser vermelho na página de css, e ser de qq outra cor por padrão, nas páginas em que não definirmos nada.
 
-<pre name="code" class="css">.html h1 { color: #00f; }
+``` css
+.html h1 { color: #00f; }
 .css h1 { color: #f00; }
-h1 { color: #000; }</pre>
+h1 { color: #000; }
+```
 
 A grande sacada disso é não precisarmos adicionar nada mais no html, além das respectivas classes no body.
 
@@ -104,7 +115,9 @@ A grande sacada disso é não precisarmos adicionar nada mais no html, além das
 
 Conhecendo o efeito cascata do css, e sabendo que tudo o que o visitante verá está dentro do body do documento, é melhor usar a herança do css para definir os padrões do site, como:
 
-<pre name="code" class="css">body { font-size: 12px; font-family: Tahoma, sans-serif; color: #333; }</pre>
+``` css
+body { font-size: 12px; font-family: Tahoma, sans-serif; color: #333; }
+```
 
 E porque o body ? pq afinal, todos os elementos posteriores herdarão dele, e isso tudo com uma especificidade bem baixa. Então não precisamos brigar para sobrescrever estilos.
 
@@ -112,9 +125,11 @@ Deve ter ficado implícito, mas quero ressaltar com uma ressalva: todos os eleme
   
 Por algum motivo que desconheço, input, select e textarea, não herdam &#8216;naturalmente&#8217; definições de fonte declaradas no body.
 
-<pre name="code" class="css">body, input, select, textarea { 
+``` css
+body, input, select, textarea { 
     font-size: 12px; font-family: Tahoma, sans-serif; color: #333; 
-}</pre>
+}
+```
 
 Com isso, cobrimos todas as tags, e não estragamos as definições padrões como, <small> terá uma fonte menor que o body, <h1> continua com uma fonte maior.. por esse motivo que não uso o seletor global * para esse trabalho.
   

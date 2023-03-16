@@ -11,11 +11,12 @@ categories:
 ---
 Bom, nunca se sabe se pode ser útil a alguém, portanto, não vou menosprezar esse post que fiz no iMasters, deixo aqui registrado como usar o modificador /g com o metodo replace
 
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
         var str = 'lucassssssssssssss';
 
         alert( 'string ANTES do replace: '+str );//lucassssssssssssss
         alert( 'strong DEPOIS do replace: '+str.replace( /s/g, 'o' ) );///lucaoo...
 
-&lt;/script>
-</pre>
+</script>
+```

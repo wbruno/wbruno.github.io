@@ -29,23 +29,25 @@ Olha que beleza, podemos ser preguiçosos e ruins, que o FF vai dar um jeito e c
 
 Balela, se toca! caia na real!
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-&lt;title>Box Model&lt;/title>
-&lt;style type="text/css">
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Box Model</title>
+<style type="text/css">
 * { margin: 0; padding: 0; }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;div id="main">
-		&lt;h1>Titulo
+</style>
+</head>
+<body>
+  <div id="main">
+    <h1>Titulo
 
-	&lt;/div>
-	&lt;p>continua normal&lt;/p>
-&lt;/body>
-&lt;/html></pre>
+  </div>
+  <p>continua normal</p>
+</body>
+</html>
+```
 
 Problema: não fechei a tag h1. O FF fechou pra mim. O IE não.
 
@@ -65,12 +67,13 @@ Eu pessoalmente acho isso ótimo. Aqui começamos a destinguir os bons dos ruins
 
 Erro tosco, absurdo de sintaxe HTML!
 
-<pre name="code" class="javascript:firstLine[11]">&lt;div id="main">
-		&lt;h1 id="titulo>Titulo&lt;/h1>
+``` js
+<div id="main">
+    <h1 id="titulo>Titulo</h1>
 
-	&lt;/div>
-	&lt;p>continua normal&lt;/p>
-</pre>
+  </div>
+  <p>continua normal</p>
+```
 
 Visualização:
 
@@ -86,31 +89,33 @@ Visualização:
 
 Cara, essa eu acho absurda. Exemplo rápido:
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-&lt;title>Box Model&lt;/title>
-&lt;style type="text/css">
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Box Model</title>
+<style type="text/css">
 * { margin: 0; padding: 0; }
 #main {
-	width: 400px;
-	height: 70px;
-	background: #ff0;
+  width: 400px;
+  height: 70px;
+  background: #ff0;
 }
 .content {
-	width: 200px;
-	height: 100px;
-	background: #f0f;
+  width: 200px;
+  height: 100px;
+  background: #f0f;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;div id="main">
-		&lt;div class="content">&lt;/div>
-	&lt;/div>&lt;!-- /main -->
-&lt;/body>
-&lt;/html></pre>
+</style>
+</head>
+<body>
+  <div id="main">
+    <div class="content"></div>
+  </div><!-- /main -->
+</body>
+</html>
+```
 
 Explicando o que eu fiz: **.content** é filha da **#main**
 
@@ -128,21 +133,23 @@ Aqui que o &#8216;bug do ie&#8217; é explicado: _o ie trata height como min-hei
 
 ## Value de input centralizado verticalmente
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-&lt;title>Box Model&lt;/title>
-&lt;style type="text/css">
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Box Model</title>
+<style type="text/css">
 input {
-	height: 40px;
+  height: 40px;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;input type="text" name="" />
-&lt;/body>
-&lt;/html></pre>
+</style>
+</head>
+<body>
+  <input type="text" name="" />
+</body>
+</html>
+```
 
 E ai ? pq o FF fez bonitinho e mandou pro centro ?
 

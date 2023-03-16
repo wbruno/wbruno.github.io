@@ -19,51 +19,52 @@ Para ler o conteudo dentro de CDATA(conteudo do post, categorias&#8230;), precis
 
 <!--more-->
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
-	$rss = 'http://www.wbruno.com.br/category/php/feed/';
+  $rss = 'http://www.wbruno.com.br/category/php/feed/';
 
-	$xml = simplexml_load_file( $rss, 'SimpleXMLElement', LIBXML_NOCDATA );
+  $xml = simplexml_load_file( $rss, 'SimpleXMLElement', LIBXML_NOCDATA );
 
-	$li = '&lt;ul>'.PHP_EOL;
-	$i = 0;
-	foreach( $xml->channel->item AS $item )
-	{
-		if( $i==7 ) break; //limitando a 7 posts
+  $li = '<ul>'.PHP_EOL;
+  $i = 0;
+  foreach( $xml->channel->item AS $item )
+  {
+    if( $i==7 ) break; //limitando a 7 posts
 
-		$li .= "\t".'&lt;li>&lt;h3>&lt;a href="'.$item->link.'">'.$item->title.'&lt;/a>&lt;/h3>
-			&lt;p>'.substr( strip_tags( $item->description ), 5, 100 ).'...&lt;/p>&lt;/li>'.PHP_EOL;
-		$i++;
-	}
-	/*
-		object(SimpleXMLElement)#3 (7) {
-		  ["title"]=>
-		  string(56) "Formulário de busca com filtro dinâmico em MySQL e php"
-		  ["link"]=>
-		  string(90) "http://www.wbruno.com.br/2011/05/28/formulario-de-busca-filtro-dinamico-em-mysql-php/"
-		  ["comments"]=>
-		  string(99) "http://www.wbruno.com.br/2011/05/28/formulario-de-busca-filtro-dinamico-em-mysql-php/#comments"
-		  ["pubDate"]=>
-		  string(31) "Sat, 28 May 2011 13:35:20 +0000"
-		  ["category"]=>
-		  array(3) {
-			[0]=>
-			object(SimpleXMLElement)#5 (0) {
-			}
-			[1]=>
-			object(SimpleXMLElement)#6 (0) {
-			}
-			[2]=>
-			object(SimpleXMLElement)#7 (0) {
-			}
-		  }
-		  ["guid"]=>
-		  string(37) "http://www.wbruno.com.br/?p=1058"
-		  ["description"]=>
-		  object(SimpleXMLElement)#8 (0) {
-		  }
-		}
-	*/
+    $li .= "\t".'<li><h3><a href="'.$item->link.'">'.$item->title.'</a></h3>
+      <p>'.substr( strip_tags( $item->description ), 5, 100 ).'...</p></li>'.PHP_EOL;
+    $i++;
+  }
+  /*
+    object(SimpleXMLElement)#3 (7) {
+      ["title"]=>
+      string(56) "Formulário de busca com filtro dinâmico em MySQL e php"
+      ["link"]=>
+      string(90) "http://www.wbruno.com.br/2011/05/28/formulario-de-busca-filtro-dinamico-em-mysql-php/"
+      ["comments"]=>
+      string(99) "http://www.wbruno.com.br/2011/05/28/formulario-de-busca-filtro-dinamico-em-mysql-php/#comments"
+      ["pubDate"]=>
+      string(31) "Sat, 28 May 2011 13:35:20 +0000"
+      ["category"]=>
+      array(3) {
+      [0]=>
+      object(SimpleXMLElement)#5 (0) {
+      }
+      [1]=>
+      object(SimpleXMLElement)#6 (0) {
+      }
+      [2]=>
+      object(SimpleXMLElement)#7 (0) {
+      }
+      }
+      ["guid"]=>
+      string(37) "http://www.wbruno.com.br/?p=1058"
+      ["description"]=>
+      object(SimpleXMLElement)#8 (0) {
+      }
+    }
+  */
 
-	echo $li,'&lt;/ul>';
-</pre>
+  echo $li,'</ul>';
+```

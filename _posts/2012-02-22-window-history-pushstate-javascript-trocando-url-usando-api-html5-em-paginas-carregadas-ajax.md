@@ -15,38 +15,41 @@ Bem simples, só editei o trecho que era necessário para enviar um **history.pu
 
 <a href="http://wbruno.com.br/2011/05/27/navegacao-sem-refresh-%E2%80%93-carregando-conteudo-ajax-em-div-2/" target="_blank">http://wbruno.com.br/2011/05/27/navegacao-sem-refresh-%E2%80%93-carregando-conteudo-ajax-em-div-2</a>
 
-<pre name="code" class="javascript:firstLine[18]">$.ajax({
-	url: href,
-	success: function( response ){
-		//forçando o parser
-		var response = $( '&lt;div>'+response+'&lt;/div>' );
-				
-		var data = response.find('#content').html();
+``` js
+$.ajax({
+  url: href,
+  success: function( response ){
+    //forçando o parser
+    var response = $( '<div>'+response+'</div>' );
 
-		//apenas atrasando a troca, para mostrarmos o loading
-		window.setTimeout( function(){
-			content.fadeOut('slow', function(){
-				content.html( data ).fadeIn();
-							
-				var title = response.find('title').text();
-				window.history.pushState( href, title, href );
-				document.title = title;
-			});
-		}, 500 );
-	}
+    var data = response.find('#content').html();
+
+    //apenas atrasando a troca, para mostrarmos o loading
+    window.setTimeout( function(){
+      content.fadeOut('slow', function(){
+        content.html( data ).fadeIn();
+
+        var title = response.find('title').text();
+        window.history.pushState( href, title, href );
+        document.title = title;
+      });
+    }, 500 );
+  }
 });
-</pre>
+```
 
 Notem a linha:
 
-<pre name="code" class="javascript:firstLine[31]">window.history.pushState( href, response.find('title'), href );</pre>
+``` js
+window.history.pushState( href, response.find('title'), href );
+```
 
 É essa nova função que veio junto com o HTML5, que faz toda a mágica.
-  
+
 Browsers antigos não implementam esse método.
 
 Agora podemos parar de forçar a barra usando o document.location.hash, como nessa implementação aqui:
-  
+
 <a href="http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/" target="_blank">http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/</a>
 
 ## <a href="http://wbruno.com.br/scripts/fotos2.html" target="_blank">Demonstração</a>

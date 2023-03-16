@@ -13,19 +13,21 @@ categories:
 ---
 Fiz uma ER rápida aqui. Procuro uma url dentro de um texto, e então substituo pelo HTML da âncora.
 
-<pre name="code" class="php">$description = preg_replace( '/(http:\/\/[\w\.\/-]+)/', '&lt;a href="$1" rel="external">$1&lt;/a>', $li->description );
-</pre>
+<pre name="code" class="php">$description = preg_replace( '/(http:\/\/[\w\.\/-]+)/', '<a href="$1" rel="external">$1</a>', $li->description );
+```
 
 <!--more-->
 
 ## Entrada
 
-<pre name="code" class="html">locaweb_intl: New blog post: How Cloud Computing Can Help Your Business - http://tinyurl.com/how-cloud-computing-can-help
-</pre>
+``` html
+locaweb_intl: New blog post: How Cloud Computing Can Help Your Business - http://tinyurl.com/how-cloud-computing-can-help
+```
 
 ## Saída
 
-<pre name="code" class="html">locaweb_intl: New blog post: How Cloud Computing Can Help Your Business - &lt;a rel="external" href="http://tinyurl.com/how-cloud-computing-can-help">http://tinyurl.com/how-cloud-computing-can-help&lt;/a>
-</pre>
+``` html
+locaweb_intl: New blog post: How Cloud Computing Can Help Your Business - <a rel="external" href="http://tinyurl.com/how-cloud-computing-can-help">http://tinyurl.com/how-cloud-computing-can-help</a>
+```
 
 =)

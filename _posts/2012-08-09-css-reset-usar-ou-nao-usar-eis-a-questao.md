@@ -27,7 +27,9 @@ Exagero, gordura, excesso&#8230; muitos deles &#8220;fazem coisas demais&#8221;.
 
 Eu uso isto aqui:
 
-<pre name="code" class="css">* { margin: 0; padding: 0; }</pre>
+``` css
+* { margin: 0; padding: 0; }
+```
 
 E só, praticamente.
 

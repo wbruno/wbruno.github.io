@@ -21,9 +21,10 @@ Um formulário, fazendo operações básicas de soma, e subtração com valores 
 
 O único ponto que &#8220;confunde&#8221; os iniciantes, é que o sistema decimal americano usa o ponto no lugar da nossa vírgula, e por isso, preciso &#8220;converter&#8221; os valores antes de somar.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
         return document.getElementById( el );
 }
@@ -36,20 +37,20 @@ function soma()
         var total = getMoney('campo1')+getMoney('campo2')+getMoney('campo3');
         id('campo4').value = 'R$ '+total/100;
 }
-&lt;/script>
-&lt;/head>
-&lt;body>
-        &lt;form action="" method="">
-                &lt;input name="campo1" id="campo1" value="25,60" />&lt;br />
-                &lt;input name="campo2" id="campo2" value="5,15" />&lt;br />
-                &lt;input name="campo3" id="campo3" value="2,63" />&lt;br />
-                &lt;input name="campo4" readonly="readonly" id="campo4" />&lt;br />
-                &lt;input type="button" onclick="soma()" value="Soma de Valores" />
-        &lt;/form>
-&lt;/body>
-&lt;/html>
+</script>
+</head>
+<body>
+        <form action="" method="">
+                <input name="campo1" id="campo1" value="25,60" /><br />
+                <input name="campo2" id="campo2" value="5,15" /><br />
+                <input name="campo3" id="campo3" value="2,63" /><br />
+                <input name="campo4" readonly="readonly" id="campo4" /><br />
+                <input type="button" onclick="soma()" value="Soma de Valores" />
+        </form>
+</body>
+</html>
 
-</pre>
+```
 
 Original:
   

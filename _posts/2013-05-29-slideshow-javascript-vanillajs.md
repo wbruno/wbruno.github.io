@@ -42,15 +42,15 @@ Como deixei toda transição de slides por conta do CSS, fazendo o fadeIn pela t
     opacity: 0;
 }
 #adcast .is-active { opacity: 1; }
-</pre>
+```
 
 Este slideshow é completamente extensível. E para transformá-lo em um carousel passando os slides horizontalmente, apenas adiciono as seguintes linhas css:
 
 <pre class="css">#adcast {
-	width: 3640px;
-	position: absolute;
-	top: 0; left: 0;
-	transition: 2s;
+  width: 3640px;
+  position: absolute;
+  top: 0; left: 0;
+  transition: 2s;
 }
 .adcast-item { float: left; position: static; margin: 0; }
 #adcast.adcast-item-0 { left: 0; }
@@ -58,7 +58,7 @@ Este slideshow é completamente extensível. E para transformá-lo em um carouse
 #adcast.adcast-item-2 { left: -1456px; }
 #adcast.adcast-item-3 { left: -2184px; }
 #adcast.adcast-item-4 { left: -2912px; }
-</pre>
+```
 
 ## Forma de uso
 
@@ -79,7 +79,7 @@ Basta chamar a função pública <var>adcast.init()</var>, passando como argumen
     });
 
 }());
-</pre>
+```
 
 Note que acima eu declaro a função <var>$()</var>, para evitar repetir o <var>document.querySelectorAll</var>. Porém, ainda assim é apenas javascript puro. **VanillaJS**.
 
@@ -94,7 +94,7 @@ Se você já estiver incorporando o jQuery no seu projeto, esse slideshow també
         adcasts: $adcasts,
         pagers: $pagers
     });
-</pre>
+```
 
 A forma de uso é a mesma, apenas invocando a função <var>adcast.init()</var>. Lá no <a href="https://github.com/wbruno/slideshow" rel="nofollow">github</a>, tem um html de exemplo usando jQuery.
 

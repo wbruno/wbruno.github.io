@@ -19,15 +19,16 @@ Só que o ponto no php é uma estrutura da linguagem. Variaveis com ponto no nom
   
 Isso me impossibilitou de receber o GET, da forma convencional:
 
-<pre name="code" class="php">echo $_GET['login.sys'];//</pre>
+<pre name="code" class="php">echo $_GET['login.sys'];//```
 
 Com um var_dump(), percebi que neste caso, o php faz a troca automaticamente, do ponto por um underline:
 
-<pre name="code" class="php">echo $_GET['login_sys'];//wbruno</pre>
+<pre name="code" class="php">echo $_GET['login_sys'];//wbruno```
 
 Rascunhei rapidamente o seguinte script para &#8220;desfazer&#8221; essa troca do php, e então usar no restante do projeto, o array $_GET, exatamente como está lá na URL.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
         //var_dump( $_GET, $_GET['login.sys'], $_GET['login_sys'] );//array(1) { ["login_sys"]=> string(6) "wbruno" } NULL string(6) "wbruno" 
 
 
@@ -43,9 +44,9 @@ Rascunhei rapidamente o seguinte script para &#8220;desfazer&#8221; essa troca d
 
         $_GET = $newGet;
 
-        echo '&lt;hr />';
+        echo '<hr />';
         var_dump( $_GET['login.sys'] );//string(6) "wbruno" 
-</pre>
+```
 
 E ai ? você já passou por isso ?
   
@@ -59,7 +60,7 @@ https://www.facebook.com/neto.joaobatista/posts/470926322933918
 
 RewriteCond %{QUERY_STRING} ^(.*)\.(.*)\=(.*)$
 RewriteRule .* index.php?%1[%2]=%3 [QSA]
-</pre>
+```
 
 Isso vai fazer:
 
@@ -69,5 +70,7 @@ Virar: index.php?user[name]=Teste
 
 E no PHP, acessamos:
 
-<pre name="code" class="php">&lt;?php
-echo $_GET['user']['name'];</pre>
+``` php
+<?php
+echo $_GET['user']['name'];
+```

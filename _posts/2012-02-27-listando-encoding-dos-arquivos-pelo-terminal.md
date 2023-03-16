@@ -27,7 +27,7 @@ page.php: text/x-php; charset=utf-8
 search.php: text/x-php; charset=utf-8
 searchform.php: text/plain; charset=us-ascii
 sidebar.php: text/plain; charset=us-ascii
-single.php: text/x-php; charset=utf-8</pre>
+single.php: text/x-php; charset=utf-8```
 
 É isso.
   

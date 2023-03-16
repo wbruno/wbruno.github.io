@@ -31,12 +31,12 @@ Outro argumento que não faz sentido é dizer que usar seletores IDs faz com que
 
 Eu não uso declarações do tipo <var>#menu li</var>, no meu css, mas sim: <var>.menu-item</var>, e ai fica:
 
-<pre>&lt;ul id="menu">
-    &lt;li class="menu-item">Item 1&lt;/li>
-    &lt;li class="menu-item">Item 2&lt;/li>
-    &lt;li class="menu-item">Item 3&lt;/li>
-&lt;/ul>&lt;!-- #menu -->
-</pre>
+```<ul id="menu">
+    <li class="menu-item">Item 1</li>
+    <li class="menu-item">Item 2</li>
+    <li class="menu-item">Item 3</li>
+</ul><!-- #menu -->
+```
 
 A especificidade que [uso nos meus arquivos css](http://www.maujor.com/tutorial/specificity_wars/specificitywars-05v2.jpg) não passa de 1,1,0 (<var>#id .class</var>). Sendo que a especificidade que mais uso é 0,1,0 (<var>.class</var>) e 0,2,0 (<var>.class .class</var>).
 

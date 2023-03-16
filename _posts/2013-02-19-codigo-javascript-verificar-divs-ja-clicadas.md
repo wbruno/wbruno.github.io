@@ -19,48 +19,49 @@ Ao selecionar todas as 3, aparece uma mensagem abaixo de todas.
 
 É possível fazer a volta, e fazer desselecionar, mas deixo para vcs comentarem aqui, caso alguém peça eu implemento também.
 
-<pre name="code" class="html">&lt;style>
-	.click-me { 
-		width: 100px; height: 100px; 
-		margin: 10px; 
-		border: 1px solid #000;
-		float: left;
-	}
-	.is-active { border: 1px solid #f00; }
-	#result {
-		border: 1px solid #000;
-		display: none;
-		clear: both;
-		padding: 40px;
-	}
-&lt;/style>
-&lt;script>
+``` html
+<style>
+  .click-me { 
+    width: 100px; height: 100px; 
+    margin: 10px; 
+    border: 1px solid #000;
+    float: left;
+  }
+  .is-active { border: 1px solid #f00; }
+  #result {
+    border: 1px solid #000;
+    display: none;
+    clear: both;
+    padding: 40px;
+  }
+</style>
+<script>
 (function(){
-	var count = 0;
+  var count = 0;
 
-	var clickMe = function(){
-		this.className = 'click-me is-active';
-		count += 1;
-		
-		verifyDivs();
-	}
-	var verifyDivs = function(){
-		if( count===3 ){
-			document.getElementById('result').style.display = 'block';
-		}		
-	}
-	window.onload = function(){
-		var divs = document.getElementsByClassName('click-me');
-		for( var i=0; i&lt;divs.length; i++ ){
-			divs[i].onclick = clickMe;
-		}
-	}	
+  var clickMe = function(){
+    this.className = 'click-me is-active';
+    count += 1;
+    
+    verifyDivs();
+  }
+  var verifyDivs = function(){
+    if( count===3 ){
+      document.getElementById('result').style.display = 'block';
+    }    
+  }
+  window.onload = function(){
+    var divs = document.getElementsByClassName('click-me');
+    for( var i=0; i<divs.length; i++ ){
+      divs[i].onclick = clickMe;
+    }
+  }  
 })();
-&lt;/script>
+</script>
 
-&lt;div class="click-me">&lt;/div>
-&lt;div class="click-me">&lt;/div>
-&lt;div class="click-me">&lt;/div>
+<div class="click-me"></div>
+<div class="click-me"></div>
+<div class="click-me"></div>
 
-&lt;div id="result">Resultado&lt;/div>
-</pre>
+<div id="result">Resultado</div>
+```

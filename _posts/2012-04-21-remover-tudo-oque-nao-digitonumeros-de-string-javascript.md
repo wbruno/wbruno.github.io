@@ -13,7 +13,8 @@ categories:
 ---
 Uma simples expressão regular, e o método .replace() do javascript.
 
-<pre name="code" class="javascript">&lt;script type="text/javascript"&gt;
+``` html
+<script type="text/javascript"> type="text/javascript">
 var str = 'capa1';
 alert( str.replace(/[^\d]+/g,'') )
-&lt;/script&gt;</pre>
+</script>```

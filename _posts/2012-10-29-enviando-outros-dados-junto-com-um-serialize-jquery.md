@@ -17,12 +17,15 @@ Note que o retorno do serialize() é apenas uma string. Uma simples string.
   
 Descobri isso assim:
 
-<pre name="code" class="html">typeof $form.serialize();</pre>
+``` html
+typeof $form.serialize();
+```
 
 Logo, se quero enviar outros dados junto com estes, então só preciso concatenar nessa string:
 
-<pre name="code" class="html">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
 jQuery(document).ready(function(){
     var $form = jQuery('#form'),
     data = $form.serialize();
@@ -32,13 +35,13 @@ jQuery(document).ready(function(){
     console.log( data+'&a5=v5&a6=v6' );
 
 });
-&lt;/script>
+</script>
 
-&lt;form action="" id="form">
-    &lt;input type="text" name="a1" value="v1" />
-    &lt;input type="text" name="a2" value="v2" />
-    &lt;input type="text" name="a3" value="v3" />
-    &lt;input type="text" name="a4" value="v4" />
-&lt;/form></pre>
+<form action="" id="form">
+    <input type="text" name="a1" value="v1" />
+    <input type="text" name="a2" value="v2" />
+    <input type="text" name="a3" value="v3" />
+    <input type="text" name="a4" value="v4" />
+</form>```
 
 Simples ne?! nada de desespero.. só entender oque temos em mãos e fazer.

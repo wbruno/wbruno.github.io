@@ -31,154 +31,157 @@ E além disso:
 
 Okay, conforme prometi, o HTML+CSS, é mínimo e simples:
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;style type="text/css">
+``` html
+<html>
+<head>
+<style type="text/css">
 * { margin: 0; padding: 0; list-style: none; }
 .stars {
-	width: 100px;
-	height: 20px;
-	margin: 5px auto 0 auto;
+  width: 100px;
+  height: 20px;
+  margin: 5px auto 0 auto;
 }
 #produtos .stars li {
-	background: url('star_groups.jpg') no-repeat;
-	display: block;
-	height: 20px;
-	width: 20px;
-	cursor: pointer;
-	float: left;
+  background: url('star_groups.jpg') no-repeat;
+  display: block;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  float: left;
 }
 #produtos .stars li.active {
-	background-position: left -45px;
+  background-position: left -45px;
 }
 #produtos {
-	width: 450px;
-	margin: 20px auto 0 auto;
+  width: 450px;
+  margin: 20px auto 0 auto;
 }
 #produtos li {
-	float: left;
-	width: 150px;
-	height: 200px;
-	color: #1B57A3;
-	text-align: center;
+  float: left;
+  width: 150px;
+  height: 200px;
+  color: #1B57A3;
+  text-align: center;
 }
 #produtos p {
-	text-decoration: underline;
-	font: 12px Arial, Verdana, sans-serif;
+  text-decoration: underline;
+  font: 12px Arial, Verdana, sans-serif;
 }
 #sql {
-	font: bold 20px Arial;
-	color: #f00;
-	text-align: center;
-	clear: both;
+  font: bold 20px Arial;
+  color: #f00;
+  text-align: center;
+  clear: both;
 }
-&lt;/style>
+</style>
 
-&lt;/head>
-&lt;body>
-	&lt;ul id="produtos">
-		&lt;li>
-			&lt;img src="MacBook.jpg" alt="" />
-			&lt;p>MacBook&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="15" />
-		&lt;/li>
-		&lt;li>
-			&lt;img src="iMac.jpg" alt="" />
-			&lt;p>iMac&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="12" />
-		&lt;/li>
-		&lt;li>
-			&lt;img src="iPhone.jpg" alt="" />
-			&lt;p>iPhone&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="5" />
-		&lt;/li>
+</head>
+<body>
+  <ul id="produtos">
+    <li>
+      <img src="MacBook.jpg" alt="" />
+      <p>MacBook</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="15" />
+    </li>
+    <li>
+      <img src="iMac.jpg" alt="" />
+      <p>iMac</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="12" />
+    </li>
+    <li>
+      <img src="iPhone.jpg" alt="" />
+      <p>iPhone</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="5" />
+    </li>
 
-		&lt;li>
-			&lt;img src="iPod_Nano.jpg" alt="" />
-			&lt;p>iPod Nano&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="7" />
-		&lt;/li>
-		&lt;li>
-			&lt;img src="iPod_Classic.jpg" alt="" />
-			&lt;p>iPod Classic&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="9" />
-		&lt;/li>
-		&lt;li>
-			&lt;img src="HP_LP3065.jpg" alt="" />
-			&lt;p>HP_LP3065&lt;/p>
-			&lt;ol class="stars">&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;/ol>
-			&lt;input type="hidden" name="id_produto[]" value="22" />
-		&lt;/li>
-	&lt;/ul>&lt;!-- /produtos -->
+    <li>
+      <img src="iPod_Nano.jpg" alt="" />
+      <p>iPod Nano</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="7" />
+    </li>
+    <li>
+      <img src="iPod_Classic.jpg" alt="" />
+      <p>iPod Classic</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="9" />
+    </li>
+    <li>
+      <img src="HP_LP3065.jpg" alt="" />
+      <p>HP_LP3065</p>
+      <ol class="stars"><li></li><li></li><li></li><li></li><li></li></ol>
+      <input type="hidden" name="id_produto[]" value="22" />
+    </li>
+  </ul><!-- /produtos -->
 
-	&lt;div id="sql">&lt;/div>
-&lt;/body>
-&lt;/html>
-</pre>
+  <div id="sql"></div>
+</body>
+</html>
+```
 
 Optei por deixar cada estrela como um LI, filho da Lista Ordenada **.stars**, pela simplicidade da marcação, e do javascript que vamos desenvolver.
 
 Além disso, usei um input hidden dentro do container de cada produto, para sabermos qual o ID daquele produto no nosso banco de dados.
 
-<pre name="code" class="javascript">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
 $(document).ready(function(){
-	$('.stars li').click(function(){
-		var $this = $( this );
-		var ol = $this.parent('ol');
-		var rating = $this.index()+1;
-		var id_produto = ol.parent('li').find("input[name='id_produto[]']").val();
+  $('.stars li').click(function(){
+    var $this = $( this );
+    var ol = $this.parent('ol');
+    var rating = $this.index()+1;
+    var id_produto = ol.parent('li').find("input[name='id_produto[]']").val();
 
 
-		if( $this.hasClass('active') && !$this.next('li').hasClass('active') ){
-			$( ol ).find('li').removeClass('active');
-			rating = 0;
-		}
-		else{
-			$( ol ).find('li').removeClass('active');
-			for( var i=0; i&lt;rating; i++ ){
-				$( ol ).find('li').eq( i ).addClass('active');
-			};
-		}
+    if( $this.hasClass('active') && !$this.next('li').hasClass('active') ){
+      $( ol ).find('li').removeClass('active');
+      rating = 0;
+    }
+    else{
+      $( ol ).find('li').removeClass('active');
+      for( var i=0; i<rating; i++ ){
+        $( ol ).find('li').eq( i ).addClass('active');
+      };
+    }
 
-		$.ajax({
-			type: "POST",
-			url: "retorno-votacao.php",
-			data: "id_produto="+id_produto+"&voto="+rating,
-			success: function( data ){
-				$('#sql').html( data );
-			}
-		});
-	});
+    $.ajax({
+      type: "POST",
+      url: "retorno-votacao.php",
+      data: "id_produto="+id_produto+"&voto="+rating,
+      success: function( data ){
+        $('#sql').html( data );
+      }
+    });
+  });
 });
-&lt;/script>
-</pre>
+</script>
+```
 
 O script server-side, é a parte mais simples:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 if( $_SERVER['REQUEST_METHOD']=='POST' ){
-	$id_produto = (int)getPost('id_produto');
-	$voto = (int)getPost('voto');
+  $id_produto = (int)getPost('id_produto');
+  $voto = (int)getPost('voto');
 
-	$sql = "INSERT INTO voto (`id_produto`, `voto`, `ip`, `data`) VALUES ( {$id_produto}, {$voto}, '{$_SERVER['REMOTE_ADDR']}', NOW() )";
-	echo $sql;
+  $sql = "INSERT INTO voto (`id_produto`, `voto`, `ip`, `data`) VALUES ( {$id_produto}, {$voto}, '{$_SERVER['REMOTE_ADDR']}', NOW() )";
+  echo $sql;
 }
 
 
 function getPost( $key ){
-	return isset( $_POST[ $key ] ) ? filter( $_POST[ $key ] ) : null;
+  return isset( $_POST[ $key ] ) ? filter( $_POST[ $key ] ) : null;
 }
 function filter( $str ){
-	return addslashes( $str );//a cargo do leitor
+  return addslashes( $str );//a cargo do leitor
 }
-</pre>
+```
 
 Veja que faço o INSERT na tabela \`voto\` a cada requisição que recebo.
 

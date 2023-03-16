@@ -11,12 +11,13 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-<pre>&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>Document&lt;/title>
-&lt;style>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
 .box {
     width: 200px;
     height: 200px;
@@ -29,39 +30,39 @@ categories:
 }
 .fleft { float: left; }
 .is-hidden { display: none; }
-&lt;/style>
-&lt;/head>
-&lt;body>
-    &lt;a href="#" class="lnk-show" data-div="1">mostrar&lt;/a>
-    &lt;a href="#" class="lnk-hide" data-div="1">esconder&lt;/a>
-    &lt;br />
+</style>
+</head>
+<body>
+    <a href="#" class="lnk-show" data-div="1">mostrar</a>
+    <a href="#" class="lnk-hide" data-div="1">esconder</a>
+    <br />
 
-    &lt;a href="#" class="lnk-show" data-div="2">mostrar&lt;/a>
-    &lt;a href="#" class="lnk-hide" data-div="2">esconder&lt;/a>
-    &lt;br />
+    <a href="#" class="lnk-show" data-div="2">mostrar</a>
+    <a href="#" class="lnk-hide" data-div="2">esconder</a>
+    <br />
 
-    &lt;a href="#" class="lnk-show" data-div="3">mostrar&lt;/a>
-    &lt;a href="#" class="lnk-hide" data-div="3">esconder&lt;/a>
-    &lt;br />
+    <a href="#" class="lnk-show" data-div="3">mostrar</a>
+    <a href="#" class="lnk-hide" data-div="3">esconder</a>
+    <br />
 
-    &lt;a href="#" class="lnk-show" data-div="4">mostrar&lt;/a>
-    &lt;a href="#" class="lnk-hide" data-div="4">esconder&lt;/a>
-    &lt;br />
+    <a href="#" class="lnk-show" data-div="4">mostrar</a>
+    <a href="#" class="lnk-hide" data-div="4">esconder</a>
+    <br />
 
-    &lt;a href="#" class="lnk-show" data-div="5">mostrar&lt;/a>
-    &lt;a href="#" class="lnk-hide" data-div="5">esconder&lt;/a>
-    &lt;br />
+    <a href="#" class="lnk-show" data-div="5">mostrar</a>
+    <a href="#" class="lnk-hide" data-div="5">esconder</a>
+    <br />
 
 
-    &lt;br />
+    <br />
 
-    &lt;div class="box fleft" data-me="1">1&lt;/div>
-    &lt;div class="box fleft" data-me="2">2&lt;/div>
-    &lt;div class="box fleft" data-me="3">3&lt;/div>
-    &lt;div class="box fleft" data-me="4">4&lt;/div>
-    &lt;div class="box fleft" data-me="5">5&lt;/div>
+    <div class="box fleft" data-me="1">1</div>
+    <div class="box fleft" data-me="2">2</div>
+    <div class="box fleft" data-me="3">3</div>
+    <div class="box fleft" data-me="4">4</div>
+    <div class="box fleft" data-me="5">5</div>
 
-&lt;script>
+<script>
 (function() {
     "use strict";
     /*jslint browser:true*/
@@ -109,7 +110,7 @@ categories:
 
 
 }());
-&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</body>
+</html>
+```

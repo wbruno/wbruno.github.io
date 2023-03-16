@@ -17,47 +17,47 @@ Mas se por um acaso não fizer ou vc precisar fazer manualmente, o script abaixo
 
 Chega de enrolação, e lá vai o código:
 
-<pre class="php">&lt;?php
+<pre class="php"><?php
 ini_set('display_errors', 1);
 
 $mysqli = new mysqli('localhost', 'usuario', 'senha', 'banco');
 
 $sql = "SELECT ID, post_name, DATE_FORMAT(post_date, '%Y/%m/%d') AS data FROM wp_posts 
-		WHERE
-			 post_type = 'post' AND 
-			 post_status = 'publish'
-		";
+    WHERE
+       post_type = 'post' AND 
+       post_status = 'publish'
+    ";
 
 $query = $mysqli->query($sql);
 
 
 while( $dados = $query->fetch_object() ) {
 
-	$sql = "SELECT * FROM `wp_term_taxonomy` 
-			JOIN wp_terms 
-				ON wp_terms.term_id = `wp_term_taxonomy`.term_taxonomy_id 
-			WHERE term_taxonomy_id 
-				IN (
-					SELECT term_taxonomy_id  
-					FROM  `wp_term_relationships` 
-					WHERE object_id = {$dados->ID}
-					) 
-				AND taxonomy = 'category'
-			ORDER BY name ASC
-			LIMIT 1";
+  $sql = "SELECT * FROM `wp_term_taxonomy` 
+      JOIN wp_terms 
+        ON wp_terms.term_id = `wp_term_taxonomy`.term_taxonomy_id 
+      WHERE term_taxonomy_id 
+        IN (
+          SELECT term_taxonomy_id  
+          FROM  `wp_term_relationships` 
+          WHERE object_id = {$dados->ID}
+          ) 
+        AND taxonomy = 'category'
+      ORDER BY name ASC
+      LIMIT 1";
 
-	$query_cat = $mysqli->query( $sql );
-	$dados_cat = $query_cat->fetch_object();
-
-
-	$url = $dados->data.'/'.$dados->post_name.'/';
-	$to = $dados_cat->slug.'/'.$dados->post_name.'/';
+  $query_cat = $mysqli->query( $sql );
+  $dados_cat = $query_cat->fetch_object();
 
 
-	echo 'RewriteRule ^'.$url.'$', ' ', $to ,' [NC,R=301,L]&lt;br />';
+  $url = $dados->data.'/'.$dados->post_name.'/';
+  $to = $dados_cat->slug.'/'.$dados->post_name.'/';
+
+
+  echo 'RewriteRule ^'.$url.'$', ' ', $to ,' [NC,R=301,L]<br />';
 }
-</pre>
+```
 
 A saída é neste formato:
 
-<pre>RewriteRule ^2009/08/14/verificar-se-usuario-ja-existe-no-banco/$ ajax/verificar-se-usuario-ja-existe-no-banco/ [NC,R=301,L]</pre>
+```RewriteRule ^2009/08/14/verificar-se-usuario-ja-existe-no-banco/$ ajax/verificar-se-usuario-ja-existe-no-banco/ [NC,R=301,L]```

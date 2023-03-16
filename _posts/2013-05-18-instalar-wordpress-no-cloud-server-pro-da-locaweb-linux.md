@@ -30,7 +30,7 @@ A senha padrão do usuário root ssh do teu servidor é a mesma do painel de con
 
 Abra o seu terminal e digite:
 
-<pre>$ ssh root@cpro9999.publiccloud.com.br</pre>
+```$ ssh root@cpro9999.publiccloud.com.br```
 
 Sendo o <var>9999</var>, o número da sua máquina que vc encontra no painel do seu cloud.
 
@@ -41,19 +41,19 @@ Coloque a senha e pronto, vc está logado na máquina.
     Alias de comando no terminal
   </h3>
 
-  <pre>vim ~/.bash_profile</pre>
+  ```vim ~/.bash_profile```
 
   <p>
     Eu uso sempre:
   </p>
 
-  <pre>alias la="ls -la"</pre>
+  ```alias la="ls -la"```
 
   <p>
     depois basta recarregar
   </p>
 
-  <pre>source ~/.bash_profile </pre>
+  ```source ~/.bash_profile ```
 </div>
 
 <!-- .tab-left -->
@@ -67,10 +67,10 @@ Coloque a senha e pronto, vc está logado na máquina.
     Essa parte é bem simples.
   </p>
 
-  <pre>$ apt-get update
+  ```$ apt-get update
 $ apt-get dist-upgrade
 $ apt-get install apache2 mysql-server mysql-client php5 php5-mysql php5-cli libapache2-mod-php5 vim
-</pre>
+```
 
   <div class="tab-left">
     <h4>
@@ -81,8 +81,8 @@ $ apt-get install apache2 mysql-server mysql-client php5 php5-mysql php5-cli lib
       Se por algum motivo o php não subir automaticamente após a instalação dos pacotes, entre no apache e ative:
     </p>
 
-    <pre>$ cd /etc/apache2/mods-enabled
-$ a2enmod php5</pre>
+    ```$ cd /etc/apache2/mods-enabled
+$ a2enmod php5```
   </div>
 
   <p>
@@ -104,31 +104,31 @@ $ a2enmod php5</pre>
       Direto na pasta <var>/usr/share</var> faça o download da última versão:
     </p>
 
-    <pre>$ wget http://wordpress.org/latest.zip</pre>
+    ```$ wget http://wordpress.org/latest.zip```
 
     <p>
       Se não tiver instalado, instale o <var>unzip</var>
     </p>
 
-    <pre>$ apt-get install unzip</pre>
+    ```$ apt-get install unzip```
 
     <p>
       E ai abra o zip:
     </p>
 
-    <pre>$ unzip latest.zip</pre>
+    ```$ unzip latest.zip```
 
     <p>
       Ao extrair, a pasta <var>wordpress/</var> será criada. Agora aponte o root do servidor para ela:
     </p>
 
-    <pre>$ vim /etc/apache2/sites-available/default</pre>
+    ```$ vim /etc/apache2/sites-available/default```
 
     <p>
       Edite o DocumentRoot para
     </p>
 
-    <pre>DocumentRoot /usr/share/wordpress</pre>
+    ```DocumentRoot /usr/share/wordpress```
 
     <h3>
       Criando o banco
@@ -138,14 +138,15 @@ $ a2enmod php5</pre>
       Crie o banco no terminal:
     </p>
 
-    <pre>$ mysql -u root -pSENHAROOT
-mysql> create database wordpress;</pre>
+    ```$ mysql -u root -pSENHAROOT
+mysql> create database wordpress;
+```
 
     <p>
       Acesse no seu browser o IP do seu servidor(vc encontra ele pelo painel do cloud).<br /> Basta rodar normalmente a instalação do wp. Caso o instalador automático não consiga criar o arquivo wp-config.php, volte lá via terminal e crie, dentro de <var>usr/share/wordpress</var>
     </p>
 
-    <pre>$ vim wp-config.php</pre>
+    ```$ vim wp-config.php```
 
     <p>
       Pronto, tudo instalado e rodando. Falta apenas fazer upload do seu tema.
@@ -160,7 +161,7 @@ mysql> create database wordpress;</pre>
         Este artigo é bastante bom:<br /> <a href="http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/" rel="nofollow">http://www.vivaolinux.com.br/artigo/Instalando-e-configurando-um-servidor-FTP/</a>
       </p>
 
-      <pre>$ apt-get install proftpd</pre>
+      ```$ apt-get install proftpd```
 
       <p>
         Eu confirei o name server do ftp como o endereço do cloud: <var>cpro9999.publiccloud.com.br</var>
@@ -170,7 +171,7 @@ mysql> create database wordpress;</pre>
         Assim que terminar de instalar, crie um usuário
       </p>
 
-      <pre>$ adduser wp</pre>
+      ```$ adduser wp```
 
       <p>
         Basta seguir as instruções.
@@ -180,7 +181,7 @@ mysql> create database wordpress;</pre>
         Altere o usuário da pasta themes, que fica dentro de wp-content/
       </p>
 
-      <pre>chown wp:wp themes</pre>
+      ```chown wp:wp themes```
     </div>
 
     <p>
@@ -199,9 +200,9 @@ mysql> create database wordpress;</pre>
       Localmente digite:
     </p>
 
-    <pre>$ ftp wp@cpro9999.publiccloud.com.br
+    ```$ ftp wp@cpro9999.publiccloud.com.br
 ftp> ls
-ftp> cd /usr/share/wordpress/wp-content/themes</pre>
+ftp> cd /usr/share/wordpress/wp-content/themes```
 
     <p>
       Assim que eu conecto em algum ftp via terminal, eu sempre mando um <var>ls</var>, apenas para o servidor aceitar minha conexão e ficar rápido.
@@ -215,14 +216,14 @@ ftp> cd /usr/share/wordpress/wp-content/themes</pre>
       Envie o tema:
     </p>
 
-    <pre>ftp> put seu_tema.zip seu_tema.zip</pre>
+    ```ftp> put seu_tema.zip seu_tema.zip```
 
     <p>
       Volte para a aba ssh, extraia o tema do zip e apague o zip
     </p>
 
-    <pre>$ unzip seu_tema.zip
-$ rm seu_tema.zip</pre>
+    ```$ unzip seu_tema.zip
+$ rm seu_tema.zip```
 
     <p>
       Ative seu tema no painel do WordPress, e parabéns!! está no ar.

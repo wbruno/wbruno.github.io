@@ -33,9 +33,11 @@ Voltando para a primeira aba:
 
 Vamos _forçar_ esse charset:
 
-<pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=iso-8859-1');
-	echo 'Beleza, chegou até aqui!';</pre>
+``` php
+<?php
+  header ('Content-type: text/html; charset=iso-8859-1');
+  echo 'Beleza, chegou até aqui!';
+```
 
 Okay, funciona.. basta mantermos o padrão. Se definirmos usar ISO, então usemos ISO em tudo.
 
@@ -49,33 +51,41 @@ Nesse momento é que a galera costuma se enrolar. E fica procurando fazer milagr
 
 Aqui, não era necessário:
 
-<pre name="code" class="php:firstLine[3]">$arr = Array('nome'=>utf8_encode('Jéssicão'), 'blog'=>'wbruno.com.br');</pre>
+``` php
+$arr = Array('nome'=>utf8_encode('Jéssicão'), 'blog'=>'wbruno.com.br');
+```
 
 Porém, aqui já é:
 
-<pre name="code" class="php:firstLine[1]">&lt;?php
-	header ('Content-type: text/html; charset=utf-8');
+``` php
+<?php
+  header ('Content-type: text/html; charset=utf-8');
 
-	$db = new mysqli('localhost','root','123','test');//o php não é o foco
-	$query = $db->query( 'SELECT id, nome FROM usuario WHERE id = 2' );
-	if( $query->num_rows )
-		echo $query->fetch_object()->nome;//echo utf8_encode( $query->fetch_object()->nome );</pre>
+  $db = new mysqli('localhost','root','123','test');//o php não é o foco
+  $query = $db->query( 'SELECT id, nome FROM usuario WHERE id = 2' );
+  if( $query->num_rows )
+    echo $query->fetch_object()->nome;//echo utf8_encode( $query->fetch_object()->nome );
+```
 
 Pois a nossa tabela:
 
-<pre name="code" class="sql">CREATE TABLE IF NOT EXISTS `usuario` (
+``` sql
+CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;</pre>
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+```
 
 Está em ISO.
 
 ## Assinatura BOM ï»¿ {#bom}
 
-<pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=iso-8859-1');
-	echo 'Beleza, chegou até aqui!';</pre>
+``` php
+<?php
+  header ('Content-type: text/html; charset=iso-8859-1');
+  echo 'Beleza, chegou até aqui!';
+```
 
 Se o arquivo estiver em UTF com assinatura BOM:
 
@@ -97,18 +107,22 @@ Se quisermos usar UTF8 mesmo, precisamos codificar os arquivos nesse content typ
 
 Vale lembrar disso. Então se vamos trabalhar todo o documento html em ISO, e precisamos de jSON, temos que corrigir em algum momento a codificação, para não termos problemas.
 
-<pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=iso-8859-1');
+``` php
+<?php
+  header ('Content-type: text/html; charset=iso-8859-1');
 
-	$arr = Array('nome'=>'Bruno','site'=>'wbruno.com.br');
-	echo json_encode( $arr );</pre>
+  $arr = Array('nome'=>'Bruno','site'=>'wbruno.com.br');
+  echo json_encode( $arr );
+```
 
 **index.html**
 
-<pre name="code" class="javascript:firsLine[24]">if (xmlHttp.readyState == 4){
-			var json = eval('(' + xmlHttp.responseText + ')');
-			id('response').innerHTML = json.nome;
-		}</pre>
+``` js
+if (xmlHttp.readyState == 4){
+      var json = eval('(' + xmlHttp.responseText + ')');
+      id('response').innerHTML = json.nome;
+    }
+```
 
 De novo, sem nenhum erro no console, tudo aparentemente correto no xhr, porém &#8216;não funciona&#8217;!!
 
@@ -118,13 +132,15 @@ O correto, é forçarmos a saída do json em utf. Note que estamos trabalhando a
 
 Ainda é possível fazer uma combinação com oque expus, do tipo header+utf8_encode()+bd.. Mas acho que já deu para <a href="http://elmicox.blogspot.com/2006/06/ajax-acentuao-soluo-final-1-linha-de.html" target="_blank">entender o conceito</a>. A única coisa que discordo do Micox, é que &#8216;não precisamos necessariamente&#8217;, forçar o cabeçalho ISO sempre. Dá para trabalhar bem com tudo em UTF8, sem quebras nos acentos.
 
-<pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=utf-8');
+``` php
+<?php
+  header ('Content-type: text/html; charset=utf-8');
 
-	$db = new mysqli('localhost','root','123','test');//o php não é o foco
-	$query = $db->query( 'SELECT id, nome FROM usuario WHERE id = 2' );
-	if( $query->num_rows )
-		echo utf8_encode( $query->fetch_object()->nome );</pre>
+  $db = new mysqli('localhost','root','123','test');//o php não é o foco
+  $query = $db->query( 'SELECT id, nome FROM usuario WHERE id = 2' );
+  if( $query->num_rows )
+    echo utf8_encode( $query->fetch_object()->nome );
+```
 
 Eu acho que:
 
@@ -136,7 +152,9 @@ Eu acho que:
 
 Deselegante, porém lógico que funciona!
 
-<pre name="code" class="php:firstLine[8]">echo htmlentities( $query->fetch_object()->nome );</pre>
+``` php
+echo htmlentities( $query->fetch_object()->nome );
+```
 
 Nesse caso, estamos transportanto apenas texto puro:
 
@@ -148,19 +166,22 @@ Consulta rápida:
 
 **ASP:**
 
-<pre name="code" class="php">&lt;% Response.Charset="ISO-8859-1" %></pre>
+<pre name="code" class="php"><% Response.Charset="ISO-8859-1" %>```
 
 **PHP:**
 
-<pre name="code" class="php">&lt;?php header("Content-Type: text/html; charset=ISO-8859-1",true); ?></pre>
+``` php
+<?php header("Content-Type: text/html; charset=ISO-8859-1",true); ?>
+```
 
 **JSP:**
 
-<pre name="code" class="php">&lt;%@ page contentType="text/html; charset=ISO-8859-1" %></pre>
+<pre name="code" class="php"><%@ page contentType="text/html; charset=ISO-8859-1" %>```
 
 **HTML**
 
-<pre name="code" class="html">&lt;meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /></pre>
+``` html
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />```
 
 Bom, acho que é isso. Quis escrever sobre, para dar embasamento para os meus demais posts, e porque eu já passei por essas situações, e já bati muito a cabeça para conseguir resolver.
 

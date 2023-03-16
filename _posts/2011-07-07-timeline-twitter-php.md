@@ -21,23 +21,25 @@ Opa! post rápido.. apenas para registrar por aqui, uma forma de recuperar a tim
 
 Logo, vamos usar cURL:
 
-<pre name="code" class="php">&lt;?php
-	function curl_file($url, $timeout=0){
-		$ch = curl_init();
-		curl_setopt( $ch, CURLOPT_URL, $url );
-		//curl_setopt ($ch, CURLOPT_HEADER, 1);
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
-		$content = curl_exec( $ch );
-		curl_close( $ch );
+``` php
+<?php
+  function curl_file($url, $timeout=0){
+    $ch = curl_init();
+    curl_setopt( $ch, CURLOPT_URL, $url );
+    //curl_setopt ($ch, CURLOPT_HEADER, 1);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
+    $content = curl_exec( $ch );
+    curl_close( $ch );
 
-		return $content;
-	}
-	$url = 'http://twitter.com/statuses/user_timeline/tiu_uiLL.rss?count=1';
-	$xml = new SimpleXMLElement( curl_file( $url ) );
-	
-	$item = $xml->channel->item;
-	var_dump( $item );
-?></pre>
+    return $content;
+  }
+  $url = 'http://twitter.com/statuses/user_timeline/tiu_uiLL.rss?count=1';
+  $xml = new SimpleXMLElement( curl_file( $url ) );
+  
+  $item = $xml->channel->item;
+  var_dump( $item );
+?>
+```
 
 =) é isso ai.

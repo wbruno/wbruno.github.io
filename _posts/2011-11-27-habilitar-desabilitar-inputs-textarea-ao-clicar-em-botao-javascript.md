@@ -15,39 +15,40 @@ Um botão habilita e outro desabilita, setando .disabled = true;
 
 <!--more-->
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function toogle_disabled( bool )
 {
-	var input = document.getElementsByTagName('input');
-	var textarea = document.getElementsByTagName('textarea');
+  var input = document.getElementsByTagName('input');
+  var textarea = document.getElementsByTagName('textarea');
 
-	for( var i=0; i&lt;=(input.length-1); i++ )
-	{
-		if( input[i].type!='button' ) 
-			input[i].disabled = bool;
-	}
-	for( var i=0; i&lt;=(textarea.length-1); i++ )
-	{
-		textareat[i].disabled = bool;
-	}
+  for( var i=0; i<=(input.length-1); i++ )
+  {
+    if( input[i].type!='button' ) 
+      input[i].disabled = bool;
+  }
+  for( var i=0; i<=(textarea.length-1); i++ )
+  {
+    textareat[i].disabled = bool;
+  }
 }
-&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;form>
-		&lt;input type="button" onclick="toogle_disabled( false )" value="Habilitar" />
-		&lt;input type="button" onclick="toogle_disabled( true )" value="Desabilitar" />
+</script>
+</head>
+<body>
+  <form>
+    <input type="button" onclick="toogle_disabled( false )" value="Habilitar" />
+    <input type="button" onclick="toogle_disabled( true )" value="Desabilitar" />
 
-		&lt;br />&lt;br />        
-		Nome: &lt;input type="text" name="nome" />
-		Local: &lt;input type="text" name="local" />
-		&lt;br>
-		Nome: &lt;input type="text" name="nome2" />
-		Local: &lt;input type="text" name="local2" />
+    <br /><br />        
+    Nome: <input type="text" name="nome" />
+    Local: <input type="text" name="local" />
+    <br>
+    Nome: <input type="text" name="nome2" />
+    Local: <input type="text" name="local2" />
 
-	&lt;/form>
-&lt;/body>
-&lt;/html>
-</pre>
+  </form>
+</body>
+</html>
+```

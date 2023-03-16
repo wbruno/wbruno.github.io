@@ -42,10 +42,11 @@ significa para o javascript: atribuir um VAZIO para o atributo .value do input.
 
 Logo, em código, isso é:
 
-<pre name="code" class="javascript">$("input[name='telefone']").focus(function(){
-		$( this ).val( '' );
-	});
-</pre>
+``` js
+$("input[name='telefone']").focus(function(){
+    $( this ).val( '' );
+  });
+```
 
 Não precisamos de muito, e já resolvemos a primeira parte. Bastou entender o que tínhamos que fazer, organizar de forma lógica, e ir fazendo.
 
@@ -63,31 +64,33 @@ Continuando:
 
 , significa, atribuirmos novamente aquela mensagem ao nosso value.
 
-<pre name="code" class="javascript">$("input[name='telefone']").blur(function(){
-		if( $( this ).val() == '' )
-			$( this ).val( 'Digite seu telefone' );
-	});
-</pre>
+``` js
+$("input[name='telefone']").blur(function(){
+    if( $( this ).val() == '' )
+      $( this ).val( 'Digite seu telefone' );
+  });
+```
 
 Hora de testar oque já fizemos (tudo junto):
 
-<pre name="code" class="html">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript">
 $(document).ready(function(){
-	/* para o input telefone */
-	$("input[name='telefone']").focus(function(){
-		$( this ).val( '' );
-	});
-	$("input[name='telefone']").blur(function(){
-		if( $( this ).val() == '' )
-			$( this ).val( 'Digite seu telefone' );
-	});
+  /* para o input telefone */
+  $("input[name='telefone']").focus(function(){
+    $( this ).val( '' );
+  });
+  $("input[name='telefone']").blur(function(){
+    if( $( this ).val() == '' )
+      $( this ).val( 'Digite seu telefone' );
+  });
 });
-&lt;/script>
+</script>
 
-	&lt;input type="text" name="telefone" value="Digite seu telefone" />
-	&lt;input type="text" name="email" value="Digite seu e-mail" />
-</pre>
+  <input type="text" name="telefone" value="Digite seu telefone" />
+  <input type="text" name="email" value="Digite seu e-mail" />
+```
 
 Bacana, aparentemente, estaria tudo pronto.
   
@@ -109,44 +112,46 @@ Esse bug nos revela, que estamos apagando o conteudo do input, sem nos importar 
 
 Outro simples IF, e resolvemos esse &#8216;bug&#8217;:
 
-<pre name="code" class="javascript">$("input[name='telefone']").focus(function(){
-		//só vai apagar se for igual a mensagem default
-		if( $( this ).val()=='Digite seu telefone' )
-			$( this ).val( '' );
-	});
-</pre>
+``` js
+$("input[name='telefone']").focus(function(){
+    //só vai apagar se for igual a mensagem default
+    if( $( this ).val()=='Digite seu telefone' )
+      $( this ).val( '' );
+  });
+```
 
 Parabéns, tecnicamente, resolvemos o problema. Do início ao fim.
   
 Só que se precisarmos aplicar essa mesma rotina em outro campo:
 
-<pre name="code" class="javascript">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">&lt;/script>
-&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript">
 $(document).ready(function(){
-	/* para o input telefone */
-	$("input[name='telefone']").focus(function(){
-		if( $( this ).val()=='Digite seu telefone' )
-		$( this ).val( '' );
-	});
-	$("input[name='telefone']").blur(function(){
-		if( $( this ).val() == '' )
-			$( this ).val( 'Digite seu telefone' );
-	});
-	/* para o input email */
-	$("input[name='email']").focus(function(){
-		if( $( this ).val()=='Digite seu e-mail' )
-		$( this ).val( '' );
-	});
-	$("input[name='email']").blur(function(){
-		if( $( this ).val() == '' )
-			$( this ).val( 'Digite seu e-mail' );
-	});
+  /* para o input telefone */
+  $("input[name='telefone']").focus(function(){
+    if( $( this ).val()=='Digite seu telefone' )
+    $( this ).val( '' );
+  });
+  $("input[name='telefone']").blur(function(){
+    if( $( this ).val() == '' )
+      $( this ).val( 'Digite seu telefone' );
+  });
+  /* para o input email */
+  $("input[name='email']").focus(function(){
+    if( $( this ).val()=='Digite seu e-mail' )
+    $( this ).val( '' );
+  });
+  $("input[name='email']").blur(function(){
+    if( $( this ).val() == '' )
+      $( this ).val( 'Digite seu e-mail' );
+  });
 });
-&lt;/script>
+</script>
 
-	&lt;input type="text" name="telefone" value="Digite seu telefone" />
-	&lt;input type="text" name="email" value="Digite seu e-mail" />
-</pre>
+  <input type="text" name="telefone" value="Digite seu telefone" />
+  <input type="text" name="email" value="Digite seu e-mail" />
+```
 
 Ou seja, tivemos que duplicar código !! O que é um absurdo, e devemos evitar fazer!
   

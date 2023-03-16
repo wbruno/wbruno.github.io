@@ -17,50 +17,52 @@ Alguns &#8216;cases&#8217; rápidos e simples, de como podemos usar javascript p
 
 ## confirm() indo para uma página
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 window.onload = function(){
-	id('link').onclick = function(){
-		return confirm( 'Deseja ir para '+this.href+' ?' );
-	}
+  id('link').onclick = function(){
+    return confirm( 'Deseja ir para '+this.href+' ?' );
+  }
 }
-&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;a href="http://wbruno.com.br" id="link">wbruno&lt;/a>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</head>
+<body>
+  <a href="http://wbruno.com.br" id="link">wbruno</a>
+</body>
+</html>
+```
 
 Veja que o código javascript é super simples. Não precisa de muito, e nem de nada complicado.
 
 ## confirm() em um formulário
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
-	return document.getElementById( el );
+  return document.getElementById( el );
 }
 window.onload = function(){
-	id('form').onsubmit = function(){
-		return confirm( 'Tem certeza que deseja enviar o formulário ?' );
-	}
+  id('form').onsubmit = function(){
+    return confirm( 'Tem certeza que deseja enviar o formulário ?' );
+  }
 }
-&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;form action="" method="post" id="form">
-		Email: &lt;input type="text" name="email" />
-		&lt;input type="submit" name="ok" value="ok" />	
-	&lt;/form>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</head>
+<body>
+  <form action="" method="post" id="form">
+    Email: <input type="text" name="email" />
+    <input type="submit" name="ok" value="ok" />  
+  </form>
+</body>
+</html>
+```
 
 Algumas aplicações que vejo são: &#8216;confirmar exclusão de registro&#8217; (tanto pelo link direto, qnto pelo formulário), confirmar abertura de link externo, onde o usuário &#8216;sai&#8217; do teu site&#8230;
 

@@ -59,7 +59,8 @@ E ainda faltam o Facebook, o Flickr, o Youtube&#8230;
 
 As repetições e inconsistências estão concentradas no loop que itera o objeto, e nas rotinas de testar se já existe ou criar um novo arquivo de cache.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 /**
  * @file View.class.php
@@ -70,30 +71,31 @@ class View
 {
 
 
-	public function draw( iSource $source, $limit=5 )
-	{
-		$data = $source->getData();
+  public function draw( iSource $source, $limit=5 )
+  {
+    $data = $source->getData();
 
-		$i = 0;
-		$html = '';
-		foreach( $data AS $item ){
-			if( $i==$limit ) break;
+    $i = 0;
+    $html = '';
+    foreach( $data AS $item ){
+      if( $i==$limit ) break;
 
 
-			if( $source->criteria( $item ) ){
-				$html .= $source->html( $item );
-				$i++;
-			}
-		}
-		return $html;
-	}
+      if( $source->criteria( $item ) ){
+        $html .= $source->html( $item );
+        $i++;
+      }
+    }
+    return $html;
+  }
 
 }//View
-</pre>
+```
 
 E o cache, que também não deveria ser responsabilidade de cada &#8220;método&#8221; twitter(), wordpress()..
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 /**
  * @file Cache.class.php
@@ -102,42 +104,43 @@ E o cache, que também não deveria ser responsabilidade de cada &#8220;método&
  */
 class Cache
 {
-	private $path = '../cache/';
-	private $view;
+  private $path = '../cache/';
+  private $view;
 
-	public function setPath( $path )
-	{
-		$this->path = $path;
-	}
+  public function setPath( $path )
+  {
+    $this->path = $path;
+  }
 
-	public function __construct( iSource $source, View $view )
-	{
-		$this->source = $source;
-		$this->view = $view;
-	}
+  public function __construct( iSource $source, View $view )
+  {
+    $this->source = $source;
+    $this->view = $view;
+  }
 
-	public function isCached( $url, $file, $limit=5 )
-	{
-		$this->source->setURL( $url );
-		$cached_file = $this->path.$file;
+  public function isCached( $url, $file, $limit=5 )
+  {
+    $this->source->setURL( $url );
+    $cached_file = $this->path.$file;
 
 
-		if( is_file( $cached_file ) )
-			return file_get_contents( $cached_file );
+    if( is_file( $cached_file ) )
+      return file_get_contents( $cached_file );
 
-		$contents = $this->view->draw( $this->source, $limit );
+    $contents = $this->view->draw( $this->source, $limit );
 
-		file_put_contents( $cached_file, trim( $contents ) );
-		return $contents;
-	}
+    file_put_contents( $cached_file, trim( $contents ) );
+    return $contents;
+  }
 
 
 }//Cache
-</pre>
+```
 
 Note que para &#8220;dar certo&#8221; e fazer sentido, eu criei um contrato: <a href="http://wbruno.com.br/2011/04/20/afinal-e-interface-oop/" target="_blank">A interface</a> iSource:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 /**
  * @file iSource.class.php
@@ -146,19 +149,20 @@ Note que para &#8220;dar certo&#8221; e fazer sentido, eu criei um contrato: <a 
  */
 interface iSource
 {
-	public function setURL( $url );
-	public function html( $data );
+  public function setURL( $url );
+  public function html( $data );
 
-	public function getData();
-	public function criteria( $item );
+  public function getData();
+  public function criteria( $item );
 }
-</pre>
+```
 
 E então agora, cada &#8220;objeto&#8221;, afinal Twitter é uma coisa, Facebook é uma outra, e Flickr é outra ainda completamente diferente. Logo, **objetos** diferentes, podem implementar esse contrato, e garantir compatibilidade com as classes Cache e View.
 
 ## Timeline do Twitter
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 include_once 'iSource.class.php';
 /**
@@ -167,84 +171,84 @@ include_once 'iSource.class.php';
  * @author William Moraes
  * @usage
 
-	$twitter = new Twitter( $reader );
-	$twitter->setURL( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=5' );
-	echo $view->draw( $twitter );
+  $twitter = new Twitter( $reader );
+  $twitter->setURL( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=5' );
+  echo $view->draw( $twitter );
 
  */
 class Twitter implements iSource
 {
 
-	private $reader;
-	private $url;
+  private $reader;
+  private $url;
 
-	public function __construct( Reader $reader )
-	{
-		$this->reader = $reader;
-	}
+  public function __construct( Reader $reader )
+  {
+    $this->reader = $reader;
+  }
 
-	public function setURL( $url )
-	{
-		$this->url = $url;
-	}
-
-
-	/**
-	 * @function html
-	 */
-	public function html( $item )
-	{
-		$html = "\t".'&lt;li>&lt;img src="'.$item->user->profile_image_url.'" alt="'.$item->user->screen_name.'" title="'.$item->user->screen_name.'" /> ';
-
-		$html .= $this->makeLinks( $item->text );
-		$html .= '&lt;/li>'.PHP_EOL;
+  public function setURL( $url )
+  {
+    $this->url = $url;
+  }
 
 
-		return $html;
-	}
+  /**
+   * @function html
+   */
+  public function html( $item )
+  {
+    $html = "\t".'<li><img src="'.$item->user->profile_image_url.'" alt="'.$item->user->screen_name.'" title="'.$item->user->screen_name.'" /> ';
+
+    $html .= $this->makeLinks( $item->text );
+    $html .= '</li>'.PHP_EOL;
 
 
-	/**
-	 * @function getData
-	 */
-	public function getData()
-	{
-		return $this->reader->getJSON( $this->url );
-	}
+    return $html;
+  }
 
 
-	/**
-	 * @function criteria
-	 */
-	public function criteria( $item )
-	{
-		return true;
-	}
+  /**
+   * @function getData
+   */
+  public function getData()
+  {
+    return $this->reader->getJSON( $this->url );
+  }
 
 
-	/**
-	 * @function makeLinks
-	 */
-	private function makeLinks( $text )
-	{
-		return preg_replace(
-			Array(
-				'/(http:\/\/[\w\.\/]+)/',
-				'/[^\w]@([\w]+)/',
-				'/(#[\w]+)/'
-			),
-			Array(
-				'&lt;a href="$1" title="$1" rel="external">$1&lt;/a>',
-				'&lt;a href="http://twitter.com/#!/$1" title="$1" rel="external">@$1&lt;/a>',
-				'&lt;a href="http://twitter.com/#!/search/$1" title="$1" rel="external">$1&lt;/a>'
-			),
-			$text
-		);
-	}
+  /**
+   * @function criteria
+   */
+  public function criteria( $item )
+  {
+    return true;
+  }
+
+
+  /**
+   * @function makeLinks
+   */
+  private function makeLinks( $text )
+  {
+    return preg_replace(
+      Array(
+        '/(http:\/\/[\w\.\/]+)/',
+        '/[^\w]@([\w]+)/',
+        '/(#[\w]+)/'
+      ),
+      Array(
+        '<a href="$1" title="$1" rel="external">$1</a>',
+        '<a href="http://twitter.com/#!/$1" title="$1" rel="external">@$1</a>',
+        '<a href="http://twitter.com/#!/search/$1" title="$1" rel="external">$1</a>'
+      ),
+      $text
+    );
+  }
 
 
 }//Twitter
-</pre>
+```
 
 Note a simplicidade do método Twitter:html();
 
@@ -254,7 +258,8 @@ Diferente do método LeitorRss:twitter(), agora só oque &#8220;realmente&#8221;
 
 É simples também agora, plugar a class Facebook para ler a timeline:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 include_once 'iSource.class.php';
 /**
@@ -263,108 +268,109 @@ include_once 'iSource.class.php';
  * @author William Moraes
  * @usage
 
- 	$facebook = new Facebook( $reader );
-	$facebook->setURL( 'https://graph.facebook.com/locaweb/posts&access_token=SEU_ACCESS_TOKEN&method=get' );
-	echo $view->draw( $facebook );
+   $facebook = new Facebook( $reader );
+  $facebook->setURL( 'https://graph.facebook.com/locaweb/posts&access_token=SEU_ACCESS_TOKEN&method=get' );
+  echo $view->draw( $facebook );
 
  */
 class Facebook implements iSource
 {
 
-	private $reader;
-	private $url;
+  private $reader;
+  private $url;
 
-	public function __construct( Reader $reader )
-	{
-		$this->reader = $reader;
-	}
+  public function __construct( Reader $reader )
+  {
+    $this->reader = $reader;
+  }
 
-	public function setURL( $url )
-	{
-		$this->url = $url;
-	}
-
-
-	/**
-	 * @function html
-	 */
-	public function html( $item )
-	{
-
-		$ts = strtotime( $item->created_time );
-		$date = date( 'd/m/Y à\s H:m', $ts );
-		$pieces = explode('_', $item->id );
+  public function setURL( $url )
+  {
+    $this->url = $url;
+  }
 
 
+  /**
+   * @function html
+   */
+  public function html( $item )
+  {
 
-		return '&lt;li>'.substr( $item->message, 0, 140 ).'..
-			postado dia &lt;a href="https://www.facebook.com/locaweb/posts/'.$pieces[1].'" rel="external">'.$date.'&lt;/a>&lt;/li>';
-	}
-
-
-	/**
-	 * @function getData
-	 */
-	public function getData()
-	{
-		$data = $this->reader->getJSON( $this->url );
-		return $data->data;
-	}
+    $ts = strtotime( $item->created_time );
+    $date = date( 'd/m/Y à\s H:m', $ts );
+    $pieces = explode('_', $item->id );
 
 
-	/**
-	 * @function criteria
-	 */
-	public function criteria( $item )
-	{
-		return isset( $item->message );
-	}
+
+    return '<li>'.substr( $item->message, 0, 140 ).'..
+      postado dia <a href="https://www.facebook.com/locaweb/posts/'.$pieces[1].'" rel="external">'.$date.'</a></li>';
+  }
+
+
+  /**
+   * @function getData
+   */
+  public function getData()
+  {
+    $data = $this->reader->getJSON( $this->url );
+    return $data->data;
+  }
+
+
+  /**
+   * @function criteria
+   */
+  public function criteria( $item )
+  {
+    return isset( $item->message );
+  }
 
 }//Facebook
-</pre>
+```
 
 Usando:
 
-<pre name="code" class="php">&lt;?php
-	header ('Content-type: text/html; charset=utf-8');
+``` php
+<?php
+  header ('Content-type: text/html; charset=utf-8');
 
-	date_default_timezone_set('America/Sao_Paulo');
+  date_default_timezone_set('America/Sao_Paulo');
 
-	include 'class/Reader.class.php';
+  include 'class/Reader.class.php';
 
-	include 'class/Twitter.class.php';
-	include 'class/Facebook.class.php';
-	include 'class/Wordpress.class.php';
-	include 'class/Statusblog.class.php';
-	include 'class/Flickr.class.php';
-	include 'class/View.class.php';
-	include 'class/Cache.class.php';
-
-
-	$reader = new Reader();
-	$view = new View();
+  include 'class/Twitter.class.php';
+  include 'class/Facebook.class.php';
+  include 'class/Wordpress.class.php';
+  include 'class/Statusblog.class.php';
+  include 'class/Flickr.class.php';
+  include 'class/View.class.php';
+  include 'class/Cache.class.php';
 
 
-	$twitter = new Twitter( $reader );
-	$cache = new Cache( $twitter, $view );
-	echo $cache->isCached( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=10', 'twitter-timeline.txt' );
+  $reader = new Reader();
+  $view = new View();
 
 
-	$facebook = new Facebook( $reader );
-	$cache = new Cache( $facebook, $view );
-	echo $cache->isCached( 'https://graph.facebook.com/locaweb/posts&access_token=XXX&method=get', 'facebook-timeline.txt' );
+  $twitter = new Twitter( $reader );
+  $cache = new Cache( $twitter, $view );
+  echo $cache->isCached( 'http://twitter.com/statuses/user_timeline/locaweb.json?count=10', 'twitter-timeline.txt' );
 
 
-	$wordpress = new WordPress( $reader );
-	$cache = new Cache( $wordpress, $view );
-	echo $cache->isCached( 'http://feeds.feedburner.com/bloglocaweb', 'rss_blog.txt' );
+  $facebook = new Facebook( $reader );
+  $cache = new Cache( $facebook, $view );
+  echo $cache->isCached( 'https://graph.facebook.com/locaweb/posts&access_token=XXX&method=get', 'facebook-timeline.txt' );
 
 
-	/* cache status blog */
-	$statusblog = new Statusblog( $reader );
-	$cache = new Cache( $statusblog, $view );
-	echo $cache->isCached( 'http://statusblog.locaweb.com.br/feed', 'rss_statusblog.txt', 7 );
-</pre>
+  $wordpress = new WordPress( $reader );
+  $cache = new Cache( $wordpress, $view );
+  echo $cache->isCached( 'http://feeds.feedburner.com/bloglocaweb', 'rss_blog.txt' );
+
+
+  /* cache status blog */
+  $statusblog = new Statusblog( $reader );
+  $cache = new Cache( $statusblog, $view );
+  echo $cache->isCached( 'http://statusblog.locaweb.com.br/feed', 'rss_statusblog.txt', 7 );
+```
 
 E enfim, o último participante:
 
@@ -374,7 +380,8 @@ Eu não vi sentido em colocar o cURL, o json\_decode(), o file\_get_contents()&#
 
 Por esse motivo, criei um outro objeto, especializado em &#8220;ler&#8221;, seja da forma que for, e retornar dados em forma de StandardClass.
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 /**
  * @file Reader.class.php
@@ -385,36 +392,36 @@ class Reader
 {
 
 
-	public function getXML( $url )
-	{
-		$file = $this->curlFile( $url );
-		return simplexml_load_string( $file, 'SimpleXMLElement', LIBXML_NOCDATA );
-	}
-	public function getJSON( $url )
-	{
-		$result = $this->curlFile( $url );
-		return json_decode( $result );
-	}
+  public function getXML( $url )
+  {
+    $file = $this->curlFile( $url );
+    return simplexml_load_string( $file, 'SimpleXMLElement', LIBXML_NOCDATA );
+  }
+  public function getJSON( $url )
+  {
+    $result = $this->curlFile( $url );
+    return json_decode( $result );
+  }
 
-	private function getContents( $url )
-	{
-		return file_get_contents( $url );
-	}
+  private function getContents( $url )
+  {
+    return file_get_contents( $url );
+  }
 
-	private function curlFile($url, $timeout=0)
-	{
-		$ch = curl_init();
-		curl_setopt( $ch, CURLOPT_URL, $url );
-		//curl_setopt ($ch, CURLOPT_HEADER, 1);
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
-		$content = curl_exec( $ch );
-		curl_close( $ch );
+  private function curlFile($url, $timeout=0)
+  {
+    $ch = curl_init();
+    curl_setopt( $ch, CURLOPT_URL, $url );
+    //curl_setopt ($ch, CURLOPT_HEADER, 1);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
+    $content = curl_exec( $ch );
+    curl_close( $ch );
 
-		return $content;
-	}
+    return $content;
+  }
 }//Reader
-</pre>
+```
 
 ### Eu disse não à herança
 
@@ -434,7 +441,8 @@ Uma vantagem, é que essa class Reader pode ser utilizada em outro projeto, sozi
 
 Dentro deste mesmo projeto, eu precisava retornar dados, de mais de um blog WordPress. E para cada blog, havia um html diferente. Digamos que uma &#8220;especialização&#8221; do que a class WordPress fazia. Logo, **aqui sim**, coube usar herança:
 
-<pre name="code" class="php">&lt;?php
+``` php
+<?php
 
 include_once 'iSource.class.php';
 /**
@@ -443,28 +451,28 @@ include_once 'iSource.class.php';
  * @author William Moraes
  * @usage
 
- 	$Statusblog = new Statusblog( $reader );
-	$Statusblog->setURL( 'http://feeds.feedburner.com/BlogLocaweb14elwSalvador' );
-	echo $view->draw( $Statusblog );
+   $Statusblog = new Statusblog( $reader );
+  $Statusblog->setURL( 'http://feeds.feedburner.com/BlogLocaweb14elwSalvador' );
+  echo $view->draw( $Statusblog );
 
 
  */
 class Statusblog extends WordPress
 {
 
-	/**
-	 * @overwrite parent::html()
-	 * @function html
-	 */
-	public function html( $item )
-	{
-		return '&lt;li>
-			&lt;a href="'.$item->link.'">'.$item->title.'&lt;/a>
-			&lt;div class="category">Categoria: '.$item->category.'&lt;/div>
-			&lt;/li>'.PHP_EOL;
-	}
+  /**
+   * @overwrite parent::html()
+   * @function html
+   */
+  public function html( $item )
+  {
+    return '<li>
+      <a href="'.$item->link.'">'.$item->title.'</a>
+      <div class="category">Categoria: '.$item->category.'</div>
+      </li>'.PHP_EOL;
+  }
 
-}//Facebook</pre>
+}//Facebook```
 
 ## Concluindo
 

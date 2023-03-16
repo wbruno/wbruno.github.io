@@ -15,19 +15,19 @@ Uma aplicação interessante de uma função anônima e auto executável
   
 <!--more-->
 
-<pre name="code" class="js">&lt;/head>
-&lt;body>
-&lt;script type="text/javascript">
-	function load_script( head, path ){
-		var script = document.createElement('script'); script.src = path;
-		head.appendChild( script );
-	}
-	(function( head ){
-		load_script( head, 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js' );
-		load_script( head, 'js/scripts.js' );
-	})( document.getElementsByTagName('head')[0] );
-&lt;/script>
-</pre>
+<pre name="code" class="js"></head>
+<body>
+<script type="text/javascript">
+  function load_script( head, path ){
+    var script = document.createElement('script'); script.src = path;
+    head.appendChild( script );
+  }
+  (function( head ){
+    load_script( head, 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js' );
+    load_script( head, 'js/scripts.js' );
+  })( document.getElementsByTagName('head')[0] );
+</script>
+```
 
 Note que faço 2 chamadas à função **load_script**, logo primeiro crio a tag script para o jQuery, e depois crio uma tag script para um arquivo scripts.js local.
 

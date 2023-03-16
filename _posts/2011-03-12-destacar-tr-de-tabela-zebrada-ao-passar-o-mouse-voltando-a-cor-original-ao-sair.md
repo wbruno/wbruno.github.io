@@ -11,67 +11,69 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-<pre name="code" class="html">&lt;html&gt;
-&lt;head&gt;
-&lt;script type="text/javascript"&gt;
+``` html
+<html>
+<head>
+<script type="text/javascript">
 function id( el ){
-        return document.getElementById( el );
+        return document.getElementById( el );
 }
 var cor_antiga;
 window.onload = function()
 {
-        var trs = id('lista').getElementsByTagName('tr');
-        for( var i=0; i&lt;trs.length; i++ )
-        {
-                trs[i].onmouseover = function()
-                {
-                        cor_antiga = this.style.backgroundColor;
-                        this.style.backgroundColor = '#ff0';
-                }
-                trs[i].onmouseout = function()
-                {
-                        this.style.backgroundColor = cor_antiga;
-                }
-        }
+        var trs = id('lista').getElementsByTagName('tr');
+        for( var i=0; i<trs.length; i++ )
+        {
+                trs[i].onmouseover = function()
+                {
+                        cor_antiga = this.style.backgroundColor;
+                        this.style.backgroundColor = '#ff0';
+                }
+                trs[i].onmouseout = function()
+                {
+                        this.style.backgroundColor = cor_antiga;
+                }
+        }
 }
 
-&lt;/script&gt;
-&lt;style type="text/css"&gt;
+</script>
+<style type="text/css">
 .dif {
-        background: #ccc;
+        background: #ccc;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-        &lt;table id="lista"&gt;
-                &lt;thead&gt;
-                        &lt;tr&gt;
-                                &lt;th&gt;ID&lt;/th&gt;
-                                &lt;th&gt;Nome&lt;/th&gt;
-                                &lt;th&gt;Editar&lt;/th&gt;
-                                &lt;th&gt;Excluir&lt;/th&gt;
-                        &lt;/tr&gt;
-                &lt;/thead&gt;
-                &lt;tbody&gt;
-                        &lt;tr class="dif"&gt;
-                                &lt;td&gt;1&lt;/td&gt;
-                                &lt;td&gt;Bruno&lt;/td&gt;
-                                &lt;td&gt;edit&lt;/td&gt;
-                                &lt;td&gt;del&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                                &lt;td&gt;7&lt;/td&gt;
-                                &lt;td&gt;Rocha&lt;/td&gt;
-                                &lt;td&gt;edit&lt;/td&gt;
-                                &lt;td&gt;del&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr class="dif"&gt;
-                                &lt;td&gt;15&lt;/td&gt;
-                                &lt;td&gt;Moraes&lt;/td&gt;
-                                &lt;td&gt;edit&lt;/td&gt;
-                                &lt;td&gt;del&lt;/td&gt;
-                        &lt;/tr&gt;
-                &lt;/tbody&gt;
-        &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</style>
+</head>
+<body>
+        <table id="lista">
+                <thead>
+                        <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Editar</th>
+                                <th>Excluir</th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr class="dif">
+                                <td>1</td>
+                                <td>Bruno</td>
+                                <td>edit</td>
+                                <td>del</td>
+                        </tr>
+                        <tr>
+                                <td>7</td>
+                                <td>Rocha</td>
+                                <td>edit</td>
+                                <td>del</td>
+                        </tr>
+                        <tr class="dif">
+                                <td>15</td>
+                                <td>Moraes</td>
+                                <td>edit</td>
+                                <td>del</td>
+                        </tr>
+                </tbody>
+        </table>
+</body>
+</html>
+```

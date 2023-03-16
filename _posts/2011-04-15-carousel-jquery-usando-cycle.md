@@ -33,23 +33,27 @@ Posso dividir em 4 partes, o HTML que precisamos:
 
 ## Container
 
-<pre name="code" class="html:firstLine[58]">&lt;div id="wrap_carousel"></pre>
+``` html
+<div id="wrap_carousel">```
 
 Engloba o resto, e dá o contexto de posicionamento, que precisamos.
 
 ## Setas
 
-<pre name="code" class="html:firstLine[59]">&lt;img src="left_arrow.jpg" alt="" id="prev" /></pre>
+``` html
+<img src="left_arrow.jpg" alt="" id="prev" />```
 
 e
 
-<pre name="code" class="html:firstLine[69]">&lt;img src="right_arrow.jpg" alt="" id="next" /></pre>
+``` html
+<img src="right_arrow.jpg" alt="" id="next" />```
 
 Voltar e Avançar no carousel. Controles manuais da exibição.
 
 ## Caixa para overflow
 
-<pre name="code" class="html:firstLine[60]">&lt;div id="carousel"></pre>
+``` html
+<div id="carousel">```
 
 Esta é a segunda parte mais importante do nosso html. Com ela, escondemos as próximas fotos(para conseguirmos o efeito de &#8216;rolar passando&#8217;).
 
@@ -57,14 +61,15 @@ Esta é a segunda parte mais importante do nosso html. Com ela, escondemos as pr
 
 É a parte mais importante do nosso HTML, para esse efeito.
 
-<pre name="code" class="html:firstLine[61]">&lt;ul>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_1.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_2.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_3.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_4.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_5.jpg" alt="" />&lt;/li>
-			&lt;/ul>
-</pre>
+``` html
+<ul>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_1.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_2.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_3.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_4.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_5.jpg" alt="" /></li>
+      </ul>
+```
 
 Como são exibidas de 5 em 5 imagens, cada bloco de conteudo nosso, possui exatamente essas 5 imagens.
 
@@ -74,106 +79,108 @@ Se quisessemos mostrar de 3 em 3 fotos, cada bloco nosso, deveria ter 3 <li>, co
 
 Assim como da outra vez, em que fizemos uma [galeria de fotos com jQuery](http://www.wbruno.com.br/2011/03/14/banner-galeria-slideshow-adcast-mostrando-um-pouco-poder-cycle-jquery/), o script é ridículo:
 
-<pre name="code" class="javascript:firstLine[61]">$(document).ready(function(){
-	$('#carousel').cycle({
-		fx:   		'scrollHorz',
-		prev: 		'#prev',
-		next: 		'#next'
-	});
+``` js
+$(document).ready(function(){
+  $('#carousel').cycle({
+    fx:       'scrollHorz',
+    prev:     '#prev',
+    next:     '#next'
+  });
 
 });
-</pre>
+```
 
 Código completo com o css:
 
-<pre name="code" class="html:firstLine[1]">&lt;html>
-&lt;head>
+``` html
+<html>
+<head>
 
-&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">&lt;/script>
-&lt;script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js">&lt;/script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(){
-	$('#carousel').cycle({
-		fx:   		'scrollHorz',
-		prev: 		'#prev',
-		next: 		'#next'
-	});
+  $('#carousel').cycle({
+    fx:       'scrollHorz',
+    prev:     '#prev',
+    next:     '#next'
+  });
 
 });
-&lt;/script>
-&lt;style type="text/css">
+</script>
+<style type="text/css">
 * { margin: 0; padding: 0; list-style: none; }
 body {
-	background-color: #2F2F2F;
-	padding: 40px;
+  background-color: #2F2F2F;
+  padding: 40px;
 }
 #wrap_carousel {
-	background-color: #121212;
-	border: 1px solid #7A7677;
-	width:700px;
-	height: 95px;
-	padding: 13px 30px;
-	position: relative;
+  background-color: #121212;
+  border: 1px solid #7A7677;
+  width:700px;
+  height: 95px;
+  padding: 13px 30px;
+  position: relative;
 }
 #carousel li img {
-	border: 1px solid #7A7677;
-	width: 100%;
+  border: 1px solid #7A7677;
+  width: 100%;
 }
 #carousel li {
-	float: left;
-	overflow: hidden;
-	width: 120px;
-	height: 95px;
-	margin: 0 10px;
-	display: inline;
+  float: left;
+  overflow: hidden;
+  width: 120px;
+  height: 95px;
+  margin: 0 10px;
+  display: inline;
 }
 #prev,
 #next {
-	position: absolute;
-	top: 10px;
-	cursor: pointer;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
 }
 #prev {
-	left: 10px;
+  left: 10px;
 }
 #next {
-	right: 10px;
+  right: 10px;
 }
-&lt;/style>
-&lt;/head>
-&lt;body>
-	&lt;div id="wrap_carousel">
-		&lt;img src="left_arrow.jpg" alt="" id="prev" />
-		&lt;div id="carousel">
-			&lt;ul>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_1.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_2.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_3.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_4.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_5.jpg" alt="" />&lt;/li>
-			&lt;/ul>
-			&lt;ul>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_6.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_7.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_8.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_9.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_10.jpg" alt="" />&lt;/li>
-			&lt;/ul>
-			&lt;ul>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_11.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_12.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_13.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_14.jpg" alt="" />&lt;/li>
-				&lt;li>&lt;img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_15.jpg" alt="" />&lt;/li>
-			&lt;/ul>
-		&lt;/div><!-- carousel -->
-		&lt;img src="right_arrow.jpg" alt="" id="next" />
-	&lt;/div>
+</style>
+</head>
+<body>
+  <div id="wrap_carousel">
+    <img src="left_arrow.jpg" alt="" id="prev" />
+    <div id="carousel">
+      <ul>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_1.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_2.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_3.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_4.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_5.jpg" alt="" /></li>
+      </ul>
+      <ul>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_6.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_7.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_8.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_9.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_10.jpg" alt="" /></li>
+      </ul>
+      <ul>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_11.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_12.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_13.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_14.jpg" alt="" /></li>
+        <li><img src="http://www.egrappler.com/contents/jscarouselv2/demo/images/img_15.jpg" alt="" /></li>
+      </ul>
+    </div><!-- carousel -->
+    <img src="right_arrow.jpg" alt="" id="next" />
+  </div>
 
 <!-- /wrap_carousel -->
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 ## <a href="http://www.wbruno.com.br/scripts/carousel.html" target="_blank">Demonstração online do Carousel</a>

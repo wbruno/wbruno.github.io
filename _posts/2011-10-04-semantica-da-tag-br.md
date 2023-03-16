@@ -1,6 +1,6 @@
 ---
 id: 1423
-title: 'A semântica da tag &lt;br /> &#8211; Simplesmente não use !'
+title: 'A semântica da tag <br /> &#8211; Simplesmente não use !'
 date: 2011-10-04T21:54:37+00:00
 author: William Bruno
 layout: post
@@ -55,7 +55,8 @@ Então vamos falar sobre quando **não usar**, e sobre quando **usar**:
 
 Sou capaz de apostar que nem 20% dos Desenvolvedores FrontEnd, conhecem o
 
-<pre name="code" class="html">&shy;&lt;br /></pre>
+``` html
+&shy;<br />```
 
 Muito bem apresentado pelo Evandro, <a href="http://forum.imasters.com.br/topic/406694-manual-do-html-tag-br/" target="_blank">aqui</a>.
 
@@ -85,8 +86,9 @@ Se um elemento inline como <img />, <strong>, precisa ser colocado sozinho em um
 
 Como já definido, é uma quebra de linha. Então não devemos usar como separador de 2 elementos distintos:
 
-<pre name="code" class="html:firstLine[13]">&lt;h1>Titulo&lt;/h1>&lt;br />&lt;br />
-&lt;p>Texto, texto mais texto.&lt;/p></pre>
+``` html
+<h1>Titulo</h1><br /><br />
+<p>Texto, texto mais texto.</p>```
 
 Bem absurdo, pois se quisermos espaço entre um h1 e um p, devemos fazê-lo com css.
 
@@ -98,30 +100,31 @@ Uma aplicabilidade muito conhecida e defendida é a transcrição de poemas.
 
 Realmente, temos um mesmo verso, que precisa ser escrito em diversas linhas, mas ainda estamos na mesma idéia, e só queremos representar uma pequena pausa, entre cada métrica.
 
-<pre name="code" class="html:firstLine[13]">&lt;p>Ninguém venha me dar vida,&lt;br />
-que estou morrendo de amor,&lt;br />
-que estou feliz de morrer,&lt;br />
-que não tenho mal nem dor,&lt;br />
-que estou de sonho ferido,&lt;br />
-que não me quero curar,&lt;br />
-que estou deixando de ser,&lt;br />
-e não quero me encontrar,&lt;br />
-que estou dentro de um navio,&lt;br />
-que sei que vai naufragar,&lt;/p>
+``` html
+<p>Ninguém venha me dar vida,<br />
+que estou morrendo de amor,<br />
+que estou feliz de morrer,<br />
+que não tenho mal nem dor,<br />
+que estou de sonho ferido,<br />
+que não me quero curar,<br />
+que estou deixando de ser,<br />
+e não quero me encontrar,<br />
+que estou dentro de um navio,<br />
+que sei que vai naufragar,</p>
 
-&lt;p>já não falo e ainda sorrio,&lt;br />
-porque está perto de mim&lt;br />
-o dono verde do mar&lt;br />
-que busquei desde o começo,&lt;br />
-e estava apenas no fim.&lt;/p>
+<p>já não falo e ainda sorrio,<br />
+porque está perto de mim<br />
+o dono verde do mar<br />
+que busquei desde o começo,<br />
+e estava apenas no fim.</p>
 
-&lt;p>Corações, por que chorais?&lt;br />
-Preparai meu arremesso&lt;br />
-para as algas e os corais.&lt;/p>
+<p>Corações, por que chorais?<br />
+Preparai meu arremesso<br />
+para as algas e os corais.</p>
 
-&lt;p>Fim ditoso, hora feliz:&lt;br />
-guardai meu amor sem preço,&lt;br />
-que só quis quem não me quis.&lt;/p></pre>
+<p>Fim ditoso, hora feliz:<br />
+guardai meu amor sem preço,<br />
+que só quis quem não me quis.</p>```
 
 Cecília Meireles
 
@@ -129,8 +132,9 @@ Cecília Meireles
 
 [<img src="/wp-content/uploads/2011/10/1.jpg" alt="" title="1" width="165" height="59" class="alignleft size-full wp-image-1426" />](/wp-content/uploads/2011/10/1.jpg)Muito comum no dia-a-dia, e a marcação que boa parte dos coders que já vi trabalhando, usariam é a seguinte:
 
-<pre name="code" class="html:firstLine[13]">&lt;p>&lt;strong>Um pequeno titulo&lt;/strong>&lt;br />&lt;br />
-	E aqui continua o texto&lt;/p></pre>
+``` html
+<p><strong>Um pequeno titulo</strong><br /><br />
+  E aqui continua o texto</p>```
 
 Sinceramente, isso fere meus princípios. Um parágrafo é um parágrafo.
 
@@ -138,15 +142,17 @@ Não faz nenhum sentido um parágrafo que dentro dele mesmo possui um &#8216;tí
 
 Mas de um leve título ali, isso deve nos levar a criar um elemento separado:
 
-<pre name="code" class="html:firstLine[13]">&lt;strong class="titulo">Um pequeno titulo&lt;/strong>
-	&lt;p>E aqui continua o texto&lt;/p></pre>
+``` html
+<strong class="titulo">Um pequeno titulo</strong>
+  <p>E aqui continua o texto</p>```
 
 E então por css, controlo o espaçamento, economizando 2 tags br que não deveriam ter sido utilizadas.
 
 <pre name="code" class="css:firstLine[7]">.titulo {
-	display: block;
-	margin-bottom: 17px;
-}</pre>
+  display: block;
+  margin-bottom: 17px;
+}
+```
 
 Bem melhor termos implementado assim. Se o espaçamento entre o título e o texto não casar exatamente com o line-height, definido para o nosso parágrafo, então não conseguiriamos nunca com a marcação anterior resolver o efeito de forma adequada.
 
@@ -154,11 +160,12 @@ Bem melhor termos implementado assim. Se o espaçamento entre o título e o text
 
 Tão comum vermos documentos lotados de brs seguidos um dos outros, para **espaçar**.
 
-<pre name="code" class="html:firstLine[13]">&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;br />&lt;br />
-	&lt;br />&lt;br />
-	&lt;br />&lt;br />
-	Pellentesque nulla tortor, lacinia eget ullamcorper id, aliquam vel metus. &lt;p>
-</pre>
+``` html
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+  <br /><br />
+  <br /><br />
+  Pellentesque nulla tortor, lacinia eget ullamcorper id, aliquam vel metus. <p>
+```
 
 Ughr ! Isso agride. Pense bem, HTML é uma linguagem de **marcação**, e depois de longos esforços, **toda e qualquer** estilização foi deixada para o CSS, certo?
 
@@ -172,8 +179,9 @@ Se tenho que aumentar o espaçamento entre uma oração e outra, aumento o margi
 
 Aqui a tag br faz todo sentido:
 
-<pre name="code" class="html:firstLine[13]">&lt;h2>Isso é:&lt;br />
-Semântica.&lt;/h2></pre>
+``` html
+<h2>Isso é:<br />
+Semântica.</h2>```
 
 Não estamos no contexto de subtítulo, mas sim do mesmo título, da mesma idéia que mereceu uma quebra ali.
 
@@ -181,9 +189,10 @@ Não estamos no contexto de subtítulo, mas sim do mesmo título, da mesma idéi
 
 Um endereço é renderizado e planejado para passar informações em várias linhas, sendo cada linha uma certa coisa.
 
-<pre name="code" class="html:firstLine[13]">&lt;address>Rua dos bobos, 0&lt;br />
+``` html
+<address>Rua dos bobos, 0<br />
 01234-567
-&lt;/address></pre>
+</address>```
 
 Cabe uma análise do seu contexto, lembrando que existem as listas de definição <dd> que também poderiam resolver muito bem a semântica que buscamos aqui.
 

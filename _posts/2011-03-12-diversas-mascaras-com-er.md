@@ -19,7 +19,8 @@ A referência do criador desse script está aqui:
 
 de minha autoria, é a máscara mvalor, e mais algumas simples como a mrg
 
-<pre name="code" class="javascript">/* Máscaras ER */
+``` js
+/* Máscaras ER */
 function mascara(o,f){
     v_obj=o
     v_fun=f
@@ -92,11 +93,12 @@ function mvalor(v){
     v=v.replace(/(\d)(\d{2})$/,"$1,$2");//coloca a virgula antes dos 2 últimos dígitos
     return v;
 }
-</pre>
+```
 
 ## Forma de uso
 
-<pre name="code" class="html">&lt;input type="text" onkeyup="mascara(this, mvalor);" />
-</pre>
+``` html
+<input type="text" onkeyup="mascara(this, mvalor);" />
+```
 
 Se você está precisando de uma máscara para telefone com o nono dígito, veja aqui: [mascara com expressão regular do nono dígito do estado de são paulo](http://wbruno.com.br/2012/08/02/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/).

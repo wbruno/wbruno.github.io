@@ -49,12 +49,13 @@ Vou listar os **erros mais comuns**, que vejo o pessoal cometendo, e mostrar com
 
 Feliz, feliz, alegre e pimpão, tentamos escrever nosso primeiro alert:
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;script type="text/javascript">
-	ae( oi );
-&lt;/script>
-</pre>
+``` html
+<html>
+<head>
+<script type="text/javascript">
+  ae( oi );
+</script>
+```
 
 Salva o código, abre no navegador, aperta F5 e **nada**. Frustante&#8230;
 
@@ -76,7 +77,9 @@ O interpretador, acusou que <u>oi</u> não foi definido, ou seja, ele procurou p
 
 Ora, se queríamos a _palavra_ <u>oi</u>, e isso deve nos remeter a **string**, deveriamos ter usado aspas.
 
-<pre name="code" class="javascript:firstLine[4]">ae( 'oi' );</pre>
+``` js
+ae( 'oi' );
+```
 
 Agora funciona.
 
@@ -84,7 +87,9 @@ Agora funciona.
   Erro: 1b &#8211; blablabla is not defined
 </h2>
 
-<pre name="code" class="javascript:firstLine[4]">alerts( 'oi' );</pre>
+``` js
+alerts( 'oi' );
+```
 
 [<img src="/wp-content/uploads/2011/03/firefox4.jpg" alt="" title="firefox4" width="624" height="45" class="aligncenter size-full wp-image-439" srcset="/wp-content/uploads/2011/03/firefox4.jpg 624w, /wp-content/uploads/2011/03/firefox4-300x21.jpg 300w" sizes="(max-width: 624px) 100vw, 624px" />](/wp-content/uploads/2011/03/firefox4.jpg)
 
@@ -96,7 +101,9 @@ Mesmo erro, idêntico. Agora, vendo o **blablabla is not defined**, sabemos que 
 
 Lembremos que **JaVaSCrIPt** é **CaSE SeNSiTiVe**, então não podemos fazer:
 
-<pre name="code" class="javascript:firstLine[4]">alerT( 'oi' );//com o T em maiúsculo.</pre>
+``` js
+alerT( 'oi' );//com o T em maiúsculo.
+```
 
 O erro vai ser o mesmo, existe a function nativa **alert()**, mas não a **Alert()**, nem a **ALERT()**&#8230;
 
@@ -118,31 +125,34 @@ Erros triviais, de sintaxe.
   Erro 2a: &#8211; missing } after function body
 </h2>
 
-<pre name="code" class="html:firstLine[5]">&lt;script type="text/javascript">
-	function w(){
-		//faz qq coisa
-	&lt;/script>
-</pre>
+``` html
+<script type="text/javascript">
+  function w(){
+    //faz qq coisa
+  </script>
+```
 
 Deveria ser evidente..
 
 Esquecemos de fechar a function, erro de sintaxe.
 
-<pre name="code" class="html:firstLine[5]">&lt;script type="text/javascript">
-	function w(){
-		//faz qq coisa
-	}
-	&lt;/script>
-</pre>
+``` html
+<script type="text/javascript">
+  function w(){
+    //faz qq coisa
+  }
+  </script>
+```
 
 <h2 style="margin-top: 30px">
   Erro 3a: &#8211; Valor do atributo type inválido
 </h2>
 
-<pre name="code" class="html:firstLine[5]">&lt;script type="Javascript">
-	alert( 'Oi' );
-	&lt;/script>
-</pre>
+``` html
+<script type="Javascript">
+  alert( 'Oi' );
+  </script>
+```
 
 Já vi isso acontecer. Não aparece nada no console, mas não funciona nenhuma rotina dentro dessas tags.
 
@@ -152,7 +162,9 @@ o valor do atributo type esté incorreto. Deve ser **text/javascript**, isso e s
   Erro 3b: &#8211; Declarar atributo language
 </h2>
 
-<pre name="code" class="html:firstLine[5]">&lt;script language="Javascript"></pre>
+``` html
+<script language="Javascript">
+```
 
 Simplesmente é desnecessário hoje em dia.
 
@@ -166,7 +178,9 @@ Apenas o **type**, é suficiente e obrigatório (ainda não levo em conta HTML5)
   Erro 4a: &#8211; missing ) after argument list
 </h2>
 
-<pre name="code" class="javascript:firstLine[6]">alert( 'Oi' ;</pre>
+``` js
+alert( 'Oi' ;
+```
 
 Aqui vemos o quão eficiente é o console do Firefox:
 
@@ -174,7 +188,9 @@ Aqui vemos o quão eficiente é o console do Firefox:
 
 Que mensagem linda! Fácil de entender, e aponta exatamente onde está o problema.
 
-<pre name="code" class="javascript:firstLine[6]">alert( 'Oi' );</pre>
+``` js
+alert( 'Oi' );
+```
 
 <h2 style="margin-top: 30px">
   Erro 5a: &#8211; missing ; before statement
@@ -186,7 +202,8 @@ Por isso, que sempre que termino um comando, coloco um ponto e vírgula.
 
 [<img src="/wp-content/uploads/2011/03/firefox13.jpg" alt="" title="firefox13" width="622" height="93" class="aligncenter size-full wp-image-448" srcset="/wp-content/uploads/2011/03/firefox13.jpg 622w, /wp-content/uploads/2011/03/firefox13-300x44.jpg 300w" sizes="(max-width: 622px) 100vw, 622px" />](/wp-content/uploads/2011/03/firefox13.jpg)
 
-<pre name="code" class="html:firstLine[6]">alert( 'Oi' )alert( 'Oi2' )</pre>
+``` html
+alert( 'Oi' )alert( 'Oi2' )```
 
 e não é nenhuma situação tão especial assim. Basta imaginar, que passamos o nosso script por um minify que removeu os espaços.
 
@@ -198,7 +215,9 @@ Se tivéssemos sidos rígidos com a sintaxe, mesmo não sendo obrigatório, não
 
 O console é muito bom, mas não é cigano.
 
-<pre name="code" class="javascript:firstLine[8]">for( var prop iN caixa )</pre>
+``` js
+for( var prop iN caixa )
+```
 
 o mesmo ocorre para **for( var prop i caixa )**
 
@@ -208,24 +227,27 @@ erramos a sintaxe, o console apontou, mas também ele não tem como <u>adivinhar
 
 Achou que estávamos tentando a sintaxe completa do for, por isso reclamou do ;
 
-<pre name="code" class="javascript:firstLine[8]">for( var prop in caixa )</pre>
+``` js
+for( var prop in caixa )
+```
 
 <h2 style="margin-top: 30px">
   Erro 6a: &#8211; Usando document.write em um lugar nada a ver
 </h2>
 
-<pre name="code" class="html:firstLine[4]">&lt;head>
-	&lt;script type="text/javascript">
-	function escreve()
-	{
-		document.write( 'Lugar nada a ver' );
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;input type="button" name="escreve" value="escreve" onclick="escreve();" />
-&lt;/body>
-</pre>
+``` html
+<head>
+  <script type="text/javascript">
+  function escreve()
+  {
+    document.write( 'Lugar nada a ver' );
+  }
+  </script>
+</head>
+<body>
+  <input type="button" name="escreve" value="escreve" onclick="escreve();" />
+</body>
+```
 
 Nada no console, mas gera um comportamento super esquisito. Escreve, mas some o botão, a página fica carregando infinitamente..
 
@@ -239,11 +261,12 @@ Use qualquer um dos outros métodos que &#8216;escrevem&#8217;, e direcione o ou
   Erro: 7a(Alerta) &#8211; elemento referenciado pelo ID/NAME
 </h2>
 
-<pre name="code" class="html:firstLine[4]">&lt;div id="teste">&lt;/div>
-	&lt;script type="text/javascript">
-		teste.innerHTML = 'wbruno';
-	&lt;/script>
-</pre>
+``` html
+<div id="teste"></div>
+  <script type="text/javascript">
+    teste.innerHTML = 'wbruno';
+  </script>
+```
 
 [<img src="/wp-content/uploads/2011/03/firefox5.jpg" alt="" title="firefox5" width="718" height="166" class="aligncenter size-full wp-image-440" srcset="/wp-content/uploads/2011/03/firefox5.jpg 718w, /wp-content/uploads/2011/03/firefox5-300x69.jpg 300w" sizes="(max-width: 718px) 100vw, 718px" />](/wp-content/uploads/2011/03/firefox5.jpg)
 
@@ -259,37 +282,40 @@ Se eu tivesse colocado elas **antes** de declará-lo, ai aconteceria o erro 1a, 
 
 Aparece frequentemente em rotinas envolvendo formulários.
 
-<pre name="code" class="html">&lt;form name="form1">
-		&lt;input type="text" name="nome" value="wBruno" />
-	&lt;/form>
-	&lt;script type="text/javascript">
-		alert( document.form1.nome.value );
-	&lt;/script>
-</pre>
+``` html
+<form name="form1">
+    <input type="text" name="nome" value="wBruno" />
+  </form>
+  <script type="text/javascript">
+    alert( document.form1.nome.value );
+  </script>
+```
 
 ..
 
 Vamos fazer melhor, declarar um atributo ID único pro elemento, e usar o standard **getElementById()**
 
-<pre name="code" class="html">&lt;form>
-		&lt;input type="text" name="nome" id="nome" value="wBruno" />
-	&lt;/form>
-	&lt;script type="text/javascript">
-		alert( document.getElementById('nome').value );
-	&lt;/script>
-</pre>
+``` html
+<form>
+    <input type="text" name="nome" id="nome" value="wBruno" />
+  </form>
+  <script type="text/javascript">
+    alert( document.getElementById('nome').value );
+  </script>
+```
 
 <h2 style="margin-top: 30px">
   Erro: 8a &#8211; blablabla is null
 </h2>
 
-<pre name="code" class="html:firstLine[4]">&lt;script type="text/javascript">
-		document.getElementById('pergunta1').innerHTML = 'wbrunO';
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="pergunta1">Pergunta1&lt;/div>
-</pre>
+``` html
+<script type="text/javascript">
+    document.getElementById('pergunta1').innerHTML = 'wbrunO';
+  </script>
+</head>
+<body>
+  <div id="pergunta1">Pergunta1</div>
+```
 
 Salvamos, Ctrl+Shift+J, clicamos no Limpar, F5, e:
 
@@ -305,9 +331,10 @@ Daí, o getElementById(), retornou um null, e esse null não possui nenhuma prop
   Erro 8b &#8211; blablabla is null
 </h2>
 
-<pre name="code" class="javascript:firstLine[4]">var pergunta1 = document.getElementById('pergunta1');
-	pergunta1.innerHTML = 'wbrunO';
-</pre>
+``` js
+var pergunta1 = document.getElementById('pergunta1');
+  pergunta1.innerHTML = 'wbrunO';
+```
 
 [<img src="/wp-content/uploads/2011/03/firefox7.jpg" alt="" title="firefox7" width="622" height="51" class="aligncenter size-full wp-image-442" srcset="/wp-content/uploads/2011/03/firefox7.jpg 622w, /wp-content/uploads/2011/03/firefox7-300x24.jpg 300w" sizes="(max-width: 622px) 100vw, 622px" />](/wp-content/uploads/2011/03/firefox7.jpg)
 
@@ -315,10 +342,11 @@ Mesmo erro, porém agora não está tão fácil de notar de onde vem, e precisam
 
 Para esperar o documento carregar, ou o elemento existir, podemos fazer:
 
-<pre name="code" class="javascript:firstLine[4]">window.onload = function(){
-		document.getElementById('pergunta1').innerHTML = 'wbrunO';
-	}
-</pre>
+``` js
+window.onload = function(){
+    document.getElementById('pergunta1').innerHTML = 'wbrunO';
+  }
+```
 
 , ou seja, esperar que o evento .onload do objeto window dispare a nossa function.
 
@@ -326,20 +354,21 @@ Para esperar o documento carregar, ou o elemento existir, podemos fazer:
   Erro 8c &#8211; blablabla is null
 </h2>
 
-<pre name="code" class="html:firstLine[3]">&lt;script type="text/javascript">
-	window.onload = function(){
-		for( var i=1; i&lt;=4; i++ ){
-			document.getElementById('pergunta'+i).innerHTML = 'wbrunO';
-		}
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="pergunta1">Pergunta1&lt;/div>
-	&lt;div id="pergunta2">Pergunta2&lt;/div>
-	&lt;div id="pergunta3">Pergunta3&lt;/div>
-&lt;/body>
-</pre>
+``` html
+<script type="text/javascript">
+  window.onload = function(){
+    for( var i=1; i<=4; i++ ){
+      document.getElementById('pergunta'+i).innerHTML = 'wbrunO';
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="pergunta1">Pergunta1</div>
+  <div id="pergunta2">Pergunta2</div>
+  <div id="pergunta3">Pergunta3</div>
+</body>
+```
 
 Executou sem problemas, fez o que deveria, mas é sempre bom olhar o console, mesmo que &#8216;esteja tudo aparentemente bem&#8217;.
 
@@ -351,17 +380,18 @@ Erro de lógica, tento chegar até um &#8216;pergunta4&#8217;, mas só existe at
   Erro 9a: &#8211; Não tem erro, apenas não funciona!
 </h2>
 
-<pre name="code" class="html:firstLine[3]">&lt;script type="text/javascript">
-	window.onload = function(){
-		document.getElementById('pergunta1').innerHTML = 'wbrunO';
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="pergunta1">Pergunta1&lt;/div>
-	&lt;div id="pergunta1">Pergunta2&lt;/div>
-	&lt;div id="pergunta1">Pergunta3&lt;/div>
-</pre>
+``` html
+<script type="text/javascript">
+  window.onload = function(){
+    document.getElementById('pergunta1').innerHTML = 'wbrunO';
+  }
+  </script>
+</head>
+<body>
+  <div id="pergunta1">Pergunta1</div>
+  <div id="pergunta1">Pergunta2</div>
+  <div id="pergunta1">Pergunta3</div>
+```
 
 Acreditando ter aprendido a lição, o [CQP](http://www.wbruno.com.br/2011/03/29/diferenca-entre-cara-programa-um-programador/) foi lá, e <u>duplicou o ID</u>.
 
@@ -377,22 +407,23 @@ Não mostrou erro no console, porém esse tipo de erros, podemos pegar no <a hre
 
 Fizemos algo errado. Esse erro é muito sutil, mas pode infernizar bastante. Por isso que sempre é bom, já começarmos nossos scripts com um DOCTYPE
 
-<pre name="code" class="html:firstLine[1]">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-&lt;html xmlns="http://www.w3.org/1999/xhtml">
-&lt;head>
-	&lt;script type="text/javascript">
-	window.onload = function(){
-		document.getElementById('caixa').style.backgroundColor = '#f0f';
-		document.getElementById('caixa').style.height = '140';
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="caixa">Texto&lt;/div>
-&lt;/body>
-&lt;/html>
-</pre>
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script type="text/javascript">
+  window.onload = function(){
+    document.getElementById('caixa').style.backgroundColor = '#f0f';
+    document.getElementById('caixa').style.height = '140';
+  }
+  </script>
+</head>
+<body>
+  <div id="caixa">Texto</div>
+</body>
+</html>
+```
 
 [<img src="/wp-content/uploads/2011/03/firefox9.jpg" alt="" title="firefox9" width="622" height="48" class="aligncenter size-full wp-image-444" srcset="/wp-content/uploads/2011/03/firefox9.jpg 622w, /wp-content/uploads/2011/03/firefox9-300x23.jpg 300w" sizes="(max-width: 622px) 100vw, 622px" />](/wp-content/uploads/2011/03/firefox9.jpg)
 
@@ -402,7 +433,9 @@ O erro não aparecia antes do DTD, mas o problema não é o DTD, foi termos esqu
 
 Correto:
 
-<pre name="code" class="javascript:firstLine[8]">document.getElementById('caixa').style.height = '140px';</pre>
+``` js
+document.getElementById('caixa').style.height = '140px';
+```
 
 <h2 style="margin-top: 30px">
   Erro 11a: &#8211; setting a property that has only a getter
@@ -410,7 +443,9 @@ Correto:
 
 Violando encapsulamento? oO Sim meus caros, javascript tem um &#8216;Q&#8217; de orientação a objetos.
 
-<pre name="code" class="html:firstLine[7]">document.getElementById('caixa').offsetTop = '40%';</pre>
+``` html
+document.getElementById('caixa').offsetTop = '40%';
+```
 
 [<img src="/wp-content/uploads/2011/03/firefox10.jpg" alt="" title="firefox10" width="622" height="48" class="aligncenter size-full wp-image-445" srcset="/wp-content/uploads/2011/03/firefox10.jpg 622w, /wp-content/uploads/2011/03/firefox10-300x23.jpg 300w" sizes="(max-width: 622px) 100vw, 622px" />](/wp-content/uploads/2011/03/firefox10.jpg)
 
@@ -422,15 +457,16 @@ Violando encapsulamento? oO Sim meus caros, javascript tem um &#8216;Q&#8217; de
 
 Não disparou nenhum erro pra mim, mas dá para usarmos coisas que não existem.
 
-<pre name="code" class="html:firstLine[4]">&lt;script type="text/javascript">
-	window.onload = function(){
-		document.getElementById('caixa').value = 'hein?!';
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="caixa">Texto&lt;/div>
-</pre>
+``` html
+<script type="text/javascript">
+  window.onload = function(){
+    document.getElementById('caixa').value = 'hein?!';
+  }
+  </script>
+</head>
+<body>
+  <div id="caixa">Texto</div>
+```
 
 O atributo .value, é próprio dos elementos de formulário do html, e não das DIVs.
 
@@ -438,17 +474,18 @@ Simplesmente não aconteceu nada.
 
 Para descobrirmos o que existe ou não naquele objeto, podemos fazer:
 
-<pre name="code" class="html:firstLine[4]">&lt;script type="text/javascript">
-	window.onload = function(){
-		var caixa = document.getElementById('caixa');
-		for( var prop in caixa )
-			document.getElementById('caixa').innerHTML += prop+'&lt;br />';
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="caixa">&lt;/div>
-</pre>
+``` html
+<script type="text/javascript">
+  window.onload = function(){
+    var caixa = document.getElementById('caixa');
+    for( var prop in caixa )
+      document.getElementById('caixa').innerHTML += prop+'<br />';
+  }
+  </script>
+</head>
+<body>
+  <div id="caixa"></div>
+```
 
 A saída é bem extensa e interessante.
 
@@ -458,30 +495,31 @@ A saída é bem extensa e interessante.
 
 Outro erro comportamental.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-	&lt;script type="text/javascript">
-	function id( el ){
-		return document.getElementById( el );
-	}
-	window.onload = function(){
-		id('calcular').onclick = function(){
-			id('resultado').value = id('valor').value + id('valor2').value;
-		}
-	}
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;form action="" method="post">
-		Valor: &lt;input type="text" name="valor" id="valor" value="55" />&lt;br />
-		Valor2: &lt;input type="text" name="valor2" id="valor2" value="11" />&lt;br />
-		Resultado: &lt;input type="text" name="resultado" id="resultado" />&lt;br />
+``` html
+<html>
+<head>
+  <script type="text/javascript">
+  function id( el ){
+    return document.getElementById( el );
+  }
+  window.onload = function(){
+    id('calcular').onclick = function(){
+      id('resultado').value = id('valor').value + id('valor2').value;
+    }
+  }
+  </script>
+</head>
+<body>
+  <form action="" method="post">
+    Valor: <input type="text" name="valor" id="valor" value="55" /><br />
+    Valor2: <input type="text" name="valor2" id="valor2" value="11" /><br />
+    Resultado: <input type="text" name="resultado" id="resultado" /><br />
 
-		&lt;input type="button" name="calcular" id="calcular" value="Calcular" />
-	&lt;/form>
-&lt;/body>
-&lt;/html>
-</pre>
+    <input type="button" name="calcular" id="calcular" value="Calcular" />
+  </form>
+</body>
+</html>
+```
 
 55 mais 11 igual 5511.
 
@@ -489,15 +527,18 @@ O navegador entendeu como string, e concatenou as duas strings. Esperávamos que
 
 as funções **parseInt()** e **parseFloat()**, estão ai para nos ajudar.
 
-<pre name="code" class="javascript:firstLine[9]">id('resultado').value = parseInt( id('valor').value) + parseInt( id('valor2').value );</pre>
+``` js
+id('resultado').value = parseInt( id('valor').value) + parseInt( id('valor2').value );
+```
 
 <h2 style="margin-top: 30px">
   Erro 14a: &#8211; blablabla is not a function
 </h2>
 
-<pre name="code" class="javascript">var t = 0;
+``` js
+var t = 0;
 t();
-</pre>
+```
 
 Um pouco complicado de reproduzir.. e existem várias situações onde podemos ver esse erro.
 
@@ -511,10 +552,12 @@ Ali no caso, eu tinha uma variavel, e tentei usar ela como se fosse uma função
 
 O código foi:
 
-<pre name="code" class="javascript:firstLine[3]">function atrasada(){
-	alert( 'Demorei 1 segundo para ser chamada' );
+``` js
+function atrasada(){
+  alert( 'Demorei 1 segundo para ser chamada' );
 }
-window.setTimeout( atrasada(), 1000 );</pre>
+window.setTimeout( atrasada(), 1000 );
+```
 
 Veja que deveriamos ter omitido os parênteses, ou então, ter colocado a função **atrasada()**, entre aspas. Pois dessas 2 formas, não estariamos &#8216;já disparando&#8217; a função.
 

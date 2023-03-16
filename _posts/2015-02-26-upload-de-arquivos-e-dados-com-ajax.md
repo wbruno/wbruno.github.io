@@ -28,23 +28,24 @@ Irei utilizar como base o código disponibilizado na MDN, no tutorial [FormData]
 
 **index.html**
 
-<pre>&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;meta charset="utf-8" />
-  &lt;title>Upload ajax&lt;/title>
-&lt;/head>
-&lt;body>
+``` html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Upload ajax</title>
+</head>
+<body>
 
-&lt;form action="upload.php" method="post" id="upload">
-  &lt;input type="file" name="file" id="file" accept="image/*" />
-  &lt;input type="text" name="name" value="wBruno" />
-  &lt;input type="submit" value="Send!" />
-&lt;/form>
+<form action="upload.php" method="post" id="upload">
+  <input type="file" name="file" id="file" accept="image/*" />
+  <input type="text" name="name" value="wBruno" />
+  <input type="submit" value="Send!" />
+</form>
 
-&lt;div id="preview">&lt;/div>
+<div id="preview"></div>
 
-&lt;script>
+<script>
 var $formUpload = document.getElementById('upload'),
     $preview = document.getElementById('preview'),
     i = 0;
@@ -65,7 +66,7 @@ $formUpload.addEventListener('submit', function(event){
       var json = JSON.parse(xhr.responseText);
 
       if (!json.error && json.status === 'ok') {
-        $preview.innerHTML += '&lt;br />Enviado!!';
+        $preview.innerHTML += '<br />Enviado!!';
       } else {
         $preview.innerHTML = 'Arquivo não enviado';
       }
@@ -86,8 +87,8 @@ $formUpload.addEventListener('submit', function(event){
 
 }, false);
 
-&lt;/script>
+</script>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```

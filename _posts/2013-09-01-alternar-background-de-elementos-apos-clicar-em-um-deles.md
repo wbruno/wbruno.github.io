@@ -17,26 +17,27 @@ categories:
 
 **Código:** criei uma função loop(), apenas para iterar sobre os elementos. O restante é bem básico. Uma variável para cachear todos os elementos com a class .box, e um addEventListener para colocar a função no onclick deles.
 
-<pre>&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>Document&lt;/title>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
 
-    &lt;script src="//polyfill.io/">&lt;/script>
-&lt;style>
+    <script src="//polyfill.io/"></script>
+<style>
 .is-active { background: #f00; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-    &lt;div id="box1" class="box">Clique aqui&lt;/div>
-    &lt;div id="box2" class="box">Clique aqui&lt;/div>
-    &lt;div id="box3" class="box">Clique aqui&lt;/div>
-    &lt;div id="box4" class="box">Clique aqui&lt;/div>
+    <div id="box1" class="box">Clique aqui</div>
+    <div id="box2" class="box">Clique aqui</div>
+    <div id="box3" class="box">Clique aqui</div>
+    <div id="box4" class="box">Clique aqui</div>
 
 
-&lt;script>
+<script>
 (function () {
     "use strict";
     /*jslint browser: true */
@@ -66,7 +67,7 @@ categories:
     });
 
 }());
-&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</body>
+</html>
+```

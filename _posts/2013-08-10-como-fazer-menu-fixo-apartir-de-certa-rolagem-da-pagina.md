@@ -27,23 +27,25 @@ Então escutamos no evento onscroll, a posição atual da página, e ai, se cheg
 
 Bem simples:
 
-<pre>window.onscroll = function(){
+```window.onscroll = function(){
    var top = window.pageYOffset || document.documentElement.scrollTop
    if( top > 300 ) {
        console.log('Maior que 300');
    }
-}</pre>
+}
+```
 
 ## Em jQuery
 
 Apenas caso vc já esteja com a lib incorporada, pois não vale nenhum pouco a pena coloca-la apenas por causa disso:
 
-<pre>var $w = $(window);
+```var $w = $(window);
 
 $w.on("scroll", function(){
    if( $w.scrollTop() > 300 ) {
        console.log('Maior que 300');
    }
-});</pre>
+});
+```
 
 É isso! comentem caso usem!

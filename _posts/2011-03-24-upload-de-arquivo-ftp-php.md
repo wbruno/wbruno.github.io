@@ -19,7 +19,8 @@ Apenas o mínimo necessário para fazer o upload.
 
 Outro script que estava <a href="http://forum.imasters.com.br/topic/391792-upload-de-um-dominio-para-outro-ftp/page__view__findpost__p__1528296" target="_blank">esquecido e perdido</a> pelo iMasters.
 
-<pre name="code" class="html">&lt;?php
+``` php
+<?php
 if( $_SERVER['REQUEST_METHOD']=='POST' )
 {
         var_dump( $_FILES );//apenas para debug
@@ -35,8 +36,8 @@ if( $_SERVER['REQUEST_METHOD']=='POST' )
         ftp_put( $con_id, $caminho_absoluto.$arquivo['name'], $arquivo['tmp_name'], FTP_BINARY );
 }
 ?>
-        &lt;form action="" method="post" enctype="multipart/form-data">
-                &lt;input type="file" name="arquivo" />
-                &lt;input type="submit" name="enviar" value="Enviar" />
-        &lt;/form>
-</pre>
+        <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="arquivo" />
+                <input type="submit" name="enviar" value="Enviar" />
+        </form>
+```

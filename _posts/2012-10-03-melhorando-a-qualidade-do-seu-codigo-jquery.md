@@ -45,18 +45,21 @@ Eu pessoalmente, considero mais legível. Mas além disso, também estamos evita
 
 Seria:
 
-<pre class="javascript">jQuery(document).ready(function() {});</pre>
+<pre class="javascript">jQuery(document).ready(function() {});
+```
 
 no lugar de
 
-<pre class="javascript">$(document).ready(function() {});</pre>
+<pre class="javascript">$(document).ready(function() {});
+```
 
 ## Não procure um mesmo elemento várias vezes no DOM
 
 Coisas como:
 
 <pre class="javascript">jQuery(this).parent('dl').find('dd').eq(0).addClass('active');
-jQuery(this).parent('dl').find('dt').text('Ativo');</pre>
+jQuery(this).parent('dl').find('dt').text('Ativo');
+```
 
 Poderiam ser simplificadas para:
 
@@ -64,7 +67,8 @@ Poderiam ser simplificadas para:
 $dl = $this.parent('dl');
 
 $dl.find('dd').eq(0).addClass('active');
-$dl.find('dt').text('Ativo');</pre>
+$dl.find('dt').text('Ativo');
+```
 
 Note que se formos usar o DD e esse DT outras vezes nesse escopo, então vale apena guardar uma variavel que aponte para eles também.
 
@@ -81,7 +85,8 @@ Dessa forma, qndo bato o olho no meu código jQuery, sei que todas as variaveis 
 <pre class="javascript">var $this = jQuery(this),
 $dl = $this.parent('dl'),
 i = 0,
-str = '';</pre>
+str = '';
+```
 
 ## Faça bom uso dos arrays e objetos
 
@@ -91,10 +96,11 @@ Como por exemplo essa lista de valores:
 
 <pre class="javascript">var values = [];
 
-	values[1] = { '1': '1,90', '6': '1,41', '12': '1,01' };
-	values[2] = { '1': '2,90', '6': '2,91', '12': '2,01' };
-	values[3] = { '1': '3,90', '6': '3,41', '12': '3,01' };
-	values[4] = { '1': '4,90', '6': '4,40', '12': '4,01' };</pre>
+  values[1] = { '1': '1,90', '6': '1,41', '12': '1,01' };
+  values[2] = { '1': '2,90', '6': '2,91', '12': '2,01' };
+  values[3] = { '1': '3,90', '6': '3,41', '12': '3,01' };
+  values[4] = { '1': '4,90', '6': '4,40', '12': '4,01' };
+```
 
 Tenho 4 &#8220;planos&#8221; cada um com 3 opções de valores: planos mensais, semestrais e anuais. Se eu fosse fazer isso com if ou switch, o código bem ruim.
 

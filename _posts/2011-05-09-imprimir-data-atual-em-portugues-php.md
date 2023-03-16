@@ -14,27 +14,30 @@ categories:
 É simples retornar a data atual em português, sem precisar usar malabarismos com arrays, ifs/elses, switch/case..
 
 O php tem muitas funções, mas nem sempre lembramos de dar uma olhada|pesquisada no manual, antes de tentarmos reinventar a roda.
-  
+
 <!--more-->
 
 
-  
+
 Em php:
 
-<pre name="code" class="php">&lt;?php
-	setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
-	date_default_timezone_set('America/Sao_Paulo');
+``` php
+<?php
+  setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
+  date_default_timezone_set('America/Sao_Paulo');
 
-	$date = '2011-05-08';
-	echo strftime("%A, %d de %B de %Y", strtotime( $date ));
-</pre>
+  $date = '2011-05-08';
+  echo strftime("%A, %d de %B de %Y", strtotime( $date ));
+```
 
 <a href="http://br2.php.net/manual/pt_BR/function.date-default-timezone-set.php" target="_blank">http://br2.php.net/manual/pt_BR/function.date-default-timezone-set.php</a>
 
 E no SQL: [bem lembrado pelo <a href="http://forum.imasters.com.br/topic/432495-transformar-data-do-banco-de-dados-para-outro-formato/page__view__findpost__p__1707238" target="_blank">@Victor Cometti </a> ]
 
-<pre name="code" class="sql">SET lc_time_names = 'pt_BR';
-SELECT DATE_FORMAT(CURDATE(), '%d %b %Y') AS data;</pre>
+``` sql
+SET lc_time_names = 'pt_BR';
+SELECT DATE_FORMAT(CURDATE(), '%d %b %Y') AS data;
+```
 
 <a href="http://dev.mysql.com/doc/refman/4.1/pt/date-and-time-functions.html" target="_blank">http://dev.mysql.com/doc/refman/4.1/pt/date-and-time-functions.html</a>
 

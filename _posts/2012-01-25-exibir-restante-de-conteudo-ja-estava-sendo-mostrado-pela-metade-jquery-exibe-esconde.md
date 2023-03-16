@@ -31,9 +31,10 @@ O primeiro passo é resolver o efeito no **css**. Todos os efeitos são apenas c
 
 Depois de conseguir resolver tanto o estado aberto, qnto o fechado, usando apenas css e html, sem nenhuma linha de js, fazer o comportamento fica super simples.
 
-<pre name="code" class="html">&lt;html>
-&lt;head>
-&lt;style type="text/css">
+``` html
+<html>
+<head>
+<style type="text/css">
 * { margin: 0; padding: 0; }
 p { margin-bottom: 10px; }
 .content { margin: 0 auto; width: 500px; }
@@ -41,37 +42,37 @@ p { margin-bottom: 10px; }
 #content { }
 .hidden { height: 100px; overflow: hidden; }
 #toggle { width: 488px; height: 20px; padding: 5px;
-	background: #fff; border: 1px solid #ccc; cursor: pointer;
-	text-align: center;
+  background: #fff; border: 1px solid #ccc; cursor: pointer;
+  text-align: center;
 }
-&lt;/style>
-&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">&lt;/script>
-&lt;script type="text/javascript">
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
 jQuery(document).ready(function(){
-	jQuery('#toggle').click(function(){
-		jQuery('#panel').toggleClass('hidden');
-	});
+  jQuery('#toggle').click(function(){
+    jQuery('#panel').toggleClass('hidden');
+  });
 });
-&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;div id="panel" class="hidden content">
-		&lt;div id="content">
-			&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet
+</script>
+</head>
+<body>
+  <div id="panel" class="hidden content">
+    <div id="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet
             luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt
-            eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.&lt;/p>
+            eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
 
-			&lt;p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu
+      <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu
             ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo.
             Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-             sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.&lt;/p>
+             sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
 
-			&lt;p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. &lt;/p>
-         &lt;/div>&lt;!-- /content -->
-	&lt;/div>&lt;!-- /panel -->
-	&lt;div id="toggle" class="content">toggle&lt;/div>
-&lt;/body>
-&lt;/html>
-</pre>
+      <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
+         </div><!-- /content -->
+  </div><!-- /panel -->
+  <div id="toggle" class="content">toggle</div>
+</body>
+</html>
+```
 
 ## [Demonstração](http://wbruno.com.br/scripts/mostra_metade.html)

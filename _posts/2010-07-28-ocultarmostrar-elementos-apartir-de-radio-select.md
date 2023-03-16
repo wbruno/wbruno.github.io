@@ -17,13 +17,14 @@ Então se o radio ou o select já tiver algum valor selecionado, o script lê es
 
 ## Select
 
-<pre name="code" class="html">&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8">
-  &lt;title>Document&lt;/title>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 function id(el) {
   return document.getElementById(el);
 }
@@ -54,33 +55,34 @@ window.addEventListener('load', function() {
     mostra(this);
   });
 });
-&lt;/script>
-&lt;/head>
-&lt;body>
-  &lt;select name="sel-sexo" id="sel-sexo">
-    &lt;option value="">--&lt;/option>
-    &lt;option value="Feminino">Feminino&lt;/option>
-    &lt;option value="Masculino">Masculino&lt;/option>
-  &lt;/select>
+</script>
+</head>
+<body>
+  <select name="sel-sexo" id="sel-sexo">
+    <option value="">--</option>
+    <option value="Feminino">Feminino</option>
+    <option value="Masculino">Masculino</option>
+  </select>
 
-  &lt;div id="palco">
-    &lt;div id="Masculino">Seu sexo é Masculino!&lt;/div>
-    &lt;div id="Feminino">Seu sexo é Feminino!&lt;/div>
-  &lt;/div>
+  <div id="palco">
+    <div id="Masculino">Seu sexo é Masculino!</div>
+    <div id="Feminino">Seu sexo é Feminino!</div>
+  </div>
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 ## Radio
 
-<pre>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8">
-  &lt;title>Document&lt;/title>
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 function id(el) {
   return document.getElementById(el);
 }
@@ -117,22 +119,22 @@ window.addEventListener('load', function() {
     });
   });
 });
-&lt;/script>
-&lt;/head>
-&lt;body>
-&lt;label>
-  &lt;label>&lt;input type="radio" name="rd-sexo" value="Feminino" />Feminino&lt;/label>
-  &lt;label>&lt;input type="radio" name="rd-sexo" value="Masculino" />Masculino&lt;/label>
+</script>
+</head>
+<body>
+<label>
+  <label><input type="radio" name="rd-sexo" value="Feminino" />Feminino</label>
+  <label><input type="radio" name="rd-sexo" value="Masculino" />Masculino</label>
 
-  &lt;div id="palco">
-    &lt;div id="Masculino">Seu sexo é Masculino!&lt;/div>
-    &lt;div id="Feminino">Seu sexo é Feminino!&lt;/div>
-  &lt;/div>
+  <div id="palco">
+    <div id="Masculino">Seu sexo é Masculino!</div>
+    <div id="Feminino">Seu sexo é Feminino!</div>
+  </div>
 
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```
 
 ### No github:
 

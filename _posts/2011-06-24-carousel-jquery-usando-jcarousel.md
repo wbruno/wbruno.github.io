@@ -24,36 +24,39 @@ Eu já havia mostrado como fazer um [Carousel usando o Cycle](http://wbruno.com.
 
 O HTML bem simples:
 
-<pre name="code" class="html">&lt;ul id="mycarousel" class="jcarousel-skin-tango"> 
-	&lt;li>&lt;img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-	&lt;li>&lt;img src="http://static.flickr.com/70/229228324_08223b70fa_s.jpg" width="75" height="75" alt="" />&lt;/li> 
-&lt;/ul></pre>
+``` html
+<ul id="mycarousel" class="jcarousel-skin-tango"> 
+  <li><img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="75" height="75" alt="" /></li> 
+  <li><img src="http://static.flickr.com/70/229228324_08223b70fa_s.jpg" width="75" height="75" alt="" /></li> 
+</ul>```
 
 e o js mais simples ainda:
 
-<pre name="code" class="javascript">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">&lt;/script> http://wbruno.com.br/scripts/jcarousel.html
-&lt;script type="text/javascript" src="http://sorgalla.com/projects/jcarousel/lib/jquery.jcarousel.min.js">&lt;/script> 
+``` html
+<script type="text/javascript"> type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> http://wbruno.com.br/scripts/jcarousel.html
+<script type="text/javascript" src="http://sorgalla.com/projects/jcarousel/lib/jquery.jcarousel.min.js"></script> 
 
-&lt;script type="text/javascript">
+<script type="text/javascript">
 jQuery(document).ready(function() {
     jQuery('#mycarousel').jcarousel();
 });
-&lt;/script> 
-</pre>
+</script> 
+```
 
 Veja que importamos a biblioteca jQuery, **antes** do plugin, e logo depois fizemos o instanciamento do nosso carousel, pelo ID que definimos.
 
 E lógico, o css:
 
-<pre name="code" class="html">&lt;link rel="stylesheet" type="text/css" href="http://sorgalla.com/projects/jcarousel/skins/tango/skin.css" /> </pre>
+``` html
+<link rel="stylesheet" type="text/css" href="http://sorgalla.com/projects/jcarousel/skins/tango/skin.css" /> ```
 
 CSS básico do skin, define posicionamento e mais algumas coisas.
 

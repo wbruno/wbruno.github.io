@@ -9,24 +9,25 @@ permalink: /javascript-puro/str_pad-com-javascript-de-forma-recursiva/
 categories:
   - Javascript
 ---
-<pre name="code" class="javascript">&lt;script type="text/javascript">
+``` html
+<script type="text/javascript"> type="text/javascript">
 function pad( a ){
-	var t, b = '';
+  var t, b = '';
 
-	a = ''+a;
+  a = ''+a;
 
-	if( a.length>=3 ) {
-		return a;
-	} else {
-		t = pad( '0' + a ); 
-	}
+  if( a.length>=3 ) {
+    return a;
+  } else {
+    t = pad( '0' + a ); 
+  }
 
-	return t;
+  return t;
 }
 
-document.writeln( pad( 1 ) + '&lt;br />' );
-document.writeln( pad( 2 ) + '&lt;br />' );
-document.writeln( pad( 10 ) + '&lt;br />' );
+document.writeln( pad( 1 ) + '<br />' );
+document.writeln( pad( 2 ) + '<br />' );
+document.writeln( pad( 10 ) + '<br />' );
 document.writeln( pad( 100 ) );
-&lt;/script>
-</pre>
+</script>
+```

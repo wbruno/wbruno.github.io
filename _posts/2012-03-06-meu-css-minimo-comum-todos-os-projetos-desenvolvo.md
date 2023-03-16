@@ -19,7 +19,8 @@ Tudo bem simples, a idéia é não encher a folha de coisas desnecessárias.
   
 <!--more-->
 
-<pre name="code" class="css">* { margin: 0; padding: 0; list-style: none; border: none; }
+``` css
+* { margin: 0; padding: 0; list-style: none; border: none; }
 
 html, body { height: 100%; }
 body,
@@ -39,8 +40,9 @@ p { margin-bottom: 15px; }
 .clear { clear: both; }
 
 @media only screen and (max-width: 800px){
-	.content { width: auto; }
-	img { max-width: 100% !important; height: auto !important; }
-}</pre>
+  .content { width: auto; }
+  img { max-width: 100% !important; height: auto !important; }
+}
+```
 
 Uso meu blog como repositório também, então tá aqui. =)

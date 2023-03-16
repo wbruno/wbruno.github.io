@@ -23,11 +23,13 @@ E agora, aplicando a técnica de faux-columns, mas sem imagens, sugerida no arti
 
 A grande &#8220;chave&#8221; para essa técnica, é atribuir &#8220;overflow: hidden&#8221; para o container, e colocar margins e paddings gigantes para as colunas:
 
-<pre name="code" class="css">#colunaUm {
-	background-color: #ff0;
-	padding-bottom: 1000em;
-	margin-bottom: -999.5em;
-}</pre>
+``` css
+#colunaUm {
+  background-color: #ff0;
+  padding-bottom: 1000em;
+  margin-bottom: -999.5em;
+}
+```
 
 você pode verificar o código completo nos links que postei para exemplo, e vizualização.
 
@@ -57,50 +59,52 @@ Postado originalmente <a href="http://forum.imasters.uol.com.br/index.php?/topic
 
 source:
 
-<pre name="code" class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br"&gt;
-&lt;head&gt;
-	&lt;style type="text/css"&gt;
-	* { margin: 0; padding: 0; }
-	#container { width: 600px; margin: 0 auto; overflow: hidden; }
-	#colunaUm,
-	#colunaDois,
-	#colunaTres {
-		width: 200px;
-		float: left;
-		padding-bottom: 1000em;
-		margin-bottom: -999.5em;
-	}
-	#colunaUm {
-		background: #ff0;
-	}
-	#colunaDois {
-		background: #f0f;
-	}
-	#colunaTres{
-		background: #0ff;
-	}
-	&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+  <style type="text/css">
+  * { margin: 0; padding: 0; }
+  #container { width: 600px; margin: 0 auto; overflow: hidden; }
+  #colunaUm,
+  #colunaDois,
+  #colunaTres {
+    width: 200px;
+    float: left;
+    padding-bottom: 1000em;
+    margin-bottom: -999.5em;
+  }
+  #colunaUm {
+    background: #ff0;
+  }
+  #colunaDois {
+    background: #f0f;
+  }
+  #colunaTres{
+    background: #0ff;
+  }
+  </style>
+</head>
+<body>
 
-	&lt;div id="container"&gt;
-		&lt;div id="colunaUm"&gt;
-			&lt;/p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi tortor, fringilla nec imperdiet id,
-			mollis vitae justo. Quisque in urna odio. Cras in dignissim orci. Quisque pellentesque &lt;/p&gt;
-		&lt;/div&gt;&lt;!-- /coluna1 --&gt;
+  <div id="container">
+    <div id="colunaUm">
+      </p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi tortor, fringilla nec imperdiet id,
+      mollis vitae justo. Quisque in urna odio. Cras in dignissim orci. Quisque pellentesque </p>
+    </div><!-- /coluna1 -->
 
-		&lt;div id="colunaDois"&gt;
-			&lt;/p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi tortor, fringilla nec imperdiet id,
-			mollis vitae justo. Quisque in urna odio. Cras in dignissim orci. Quisque pellentesque justo varius
-			quam rhoncus imperdiet. Sed eleifend molestie nisi, ultricies interdum turpis ultrices sit amet.
-			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla &lt;/p&gt;
-		&lt;/div&gt;&lt;!-- /coluna2 --&gt;
-		&lt;div id="colunaTres"&gt;
-			&lt;/p&gt;Lorem ipsum &lt;/p&gt;
-		&lt;/div&gt;&lt;!-- /coluna3 --&gt;
-	&lt;/div&gt;&lt;!-- /container --&gt;
+    <div id="colunaDois">
+      </p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi tortor, fringilla nec imperdiet id,
+      mollis vitae justo. Quisque in urna odio. Cras in dignissim orci. Quisque pellentesque justo varius
+      quam rhoncus imperdiet. Sed eleifend molestie nisi, ultricies interdum turpis ultrices sit amet.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla </p>
+    </div><!-- /coluna2 -->
+    <div id="colunaTres">
+      </p>Lorem ipsum </p>
+    </div><!-- /coluna3 -->
+  </div><!-- /container -->
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```

@@ -77,20 +77,20 @@ Desenvolver com NodeJS não é só legal, é extremamente prazeroso. Veja os scr
 
 **package.json**
 
-<pre>"scripts": {
+```"scripts": {
     "start": "node ./bin/www",
     "pretest": "./node_modules/jshint/bin/jshint *.js models/*.js controllers/*.js tests/*",
     "test": "...",
     "test-api": "...",
     "nodemon": "export DEBUG=dragons:* && nodemon ./bin/www"
-  },</pre>
+  },```
 
 Você executa eles com:
 
-<pre>$ npm start
+```$ npm start
 $ npm test # o pretest é executado antes do test. O npm sempre procura pelo sufixo pre antes de executar algum script.
 $ npm run test-api
-$ npm run nodemon</pre>
+$ npm run nodemon```
 
 A API tem:
 

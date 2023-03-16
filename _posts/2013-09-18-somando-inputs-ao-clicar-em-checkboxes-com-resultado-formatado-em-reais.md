@@ -25,31 +25,31 @@ Veja no meu github a demonstração do código abaixo: <http://wbruno.github.io/
 
 ## Código
 
-<pre class="javascript">&lt;!doctype html>
-&lt;html lang="en">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>Document&lt;/title>
-&lt;style>
+<pre class="javascript"><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
 label { display: block; }
-&lt;/style>
-&lt;/head>
-&lt;body>
+</style>
+</head>
+<body>
 
-    &lt;label>1,00 &lt;input type="checkbox" name="ch[]" value="1,00" />&lt;/label>
-    &lt;label>2,00 &lt;input type="checkbox" name="ch[]" value="2,00" />&lt;/label>
-    &lt;label>3,00 &lt;input type="checkbox" name="ch[]" value="3,00" />&lt;/label>
-    &lt;label>4,00 &lt;input type="checkbox" name="ch[]" value="4,00" />&lt;/label>
-    &lt;label>5,00 &lt;input type="checkbox" name="ch[]" value="5,00" />&lt;/label>
-    &lt;label>6,00 &lt;input type="checkbox" name="ch[]" value="6,00" />&lt;/label>
-    &lt;label>7,00 &lt;input type="checkbox" name="ch[]" value="7,00" />&lt;/label>
-    &lt;label>8,00 &lt;input type="checkbox" name="ch[]" value="8,00" />&lt;/label>
-    &lt;label>9,00 &lt;input type="checkbox" name="ch[]" value="9,00" />&lt;/label>
-    &lt;label>10,00 &lt;input type="checkbox" name="ch[]" value="10,00" />&lt;/label>
+    <label>1,00 <input type="checkbox" name="ch[]" value="1,00" /></label>
+    <label>2,00 <input type="checkbox" name="ch[]" value="2,00" /></label>
+    <label>3,00 <input type="checkbox" name="ch[]" value="3,00" /></label>
+    <label>4,00 <input type="checkbox" name="ch[]" value="4,00" /></label>
+    <label>5,00 <input type="checkbox" name="ch[]" value="5,00" /></label>
+    <label>6,00 <input type="checkbox" name="ch[]" value="6,00" /></label>
+    <label>7,00 <input type="checkbox" name="ch[]" value="7,00" /></label>
+    <label>8,00 <input type="checkbox" name="ch[]" value="8,00" /></label>
+    <label>9,00 <input type="checkbox" name="ch[]" value="9,00" /></label>
+    <label>10,00 <input type="checkbox" name="ch[]" value="10,00" /></label>
 
-    &lt;label>Resultado &lt;input type="text" name="result" id="result" value="R$ 0,00" />&lt;/label>
+    <label>Resultado <input type="text" name="result" id="result" value="R$ 0,00" /></label>
 
-&lt;script>
+<script>
 String.prototype.formatMoney = function() {
     var v = this;
 
@@ -94,7 +94,7 @@ String.prototype.toFloat = function() {
 
 
 }());
-&lt;/script>
-&lt;/body>
-&lt;/html>
-</pre>
+</script>
+</body>
+</html>
+```

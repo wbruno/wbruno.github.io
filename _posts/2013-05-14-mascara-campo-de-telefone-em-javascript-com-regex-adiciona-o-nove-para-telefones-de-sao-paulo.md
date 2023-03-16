@@ -19,10 +19,11 @@ Completo do post [Mascara campo de telefone em javascript com regex – Nono dí
   
 <!--more-->
 
-<pre class="javascript">&lt;html>
-&lt;head>
-    &lt;title>Mascara Telefone&lt;/title>
-&lt;script type="text/javascript">
+``` html
+<html>
+<head>
+    <title>Mascara Telefone</title>
+<script type="text/javascript">
 /* Máscaras ER */
 function mascara(o, f) {
     v_obj = o;
@@ -39,27 +40,27 @@ function mtel(v) {
     return v;
 }
 function id(el) {
-	return document.getElementById(el);
+  return document.getElementById(el);
 }
 window.onload = function() {
-	var $telefone = id('telefone');
-	$telefone.onkeyup = function() {
-		mascara( this, mtel );
-	}
-	$telefone.onblur = function() {
-		var v = this.value;
-		if( v.indexOf('(11)') !== -1 && v.length === 14) {
-			this.value = v.replace(/\((\d{2})\) (\d{4})-(\d{4})/g,'($1) 9$2-$3');
-		}
-	}
+  var $telefone = id('telefone');
+  $telefone.onkeyup = function() {
+    mascara( this, mtel );
+  }
+  $telefone.onblur = function() {
+    var v = this.value;
+    if( v.indexOf('(11)') !== -1 && v.length === 14) {
+      this.value = v.replace(/\((\d{2})\) (\d{4})-(\d{4})/g,'($1) 9$2-$3');
+    }
+  }
 }
-&lt;/script>
+</script>
 
-&lt;/head>
-&lt;body>
+</head>
+<body>
 
-    &lt;input type="text" name="telefone" id="telefone" maxlength="15" />
+    <input type="text" name="telefone" id="telefone" maxlength="15" />
 
-&lt;/body>
-&lt;/html>
-</pre>
+</body>
+</html>
+```

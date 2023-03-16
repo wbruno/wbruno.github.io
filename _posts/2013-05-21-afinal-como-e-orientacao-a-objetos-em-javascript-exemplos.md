@@ -41,7 +41,7 @@ Um objeto literal em javascript é denotado por chaves <var>var tweet = {};</var
     'date': '2013-05-17'
 };
 console.log( tweet.user );//tiu_uiLL
-console.log( tweet.message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos</pre>
+console.log( tweet.message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos```
 
 A variavel <var>tweet</var> é um objeto javascript. Possui 3 atributos: user, message e date.
 
@@ -64,7 +64,7 @@ Arrays em javascript são denotados por colchetes <var>var tweets = [];</var>.
     }
 ];
 console.log( tweets[0].message );//Afinal, como é Orientação a Objetos em JavaScript ? – Exemplos
-console.log( tweets[1].message );//Plugin jQuery em elemento criado dinamicamente com javascript – append jQuery</pre>
+console.log( tweets[1].message );//Plugin jQuery em elemento criado dinamicamente com javascript – append jQuery```
 
 Arrays em javascript também começam no índice zero. Veja que bastou indicar dentro dos colchetes a posição, e depois acessei normalmente a propriedade message apenas colocando o ponto.
 
@@ -81,37 +81,38 @@ Um objeto é algo que possui propriedades e faz coisas. E as boas práticas que 
 Criei para ilustrar um simples tooltip. Toda a base desse tooltip é feita com css, pois ele trabalha diretamente com o pseudo seletor <var>:hover</var>. O único papel do javascript é varrer todos os elementos para qual o plugin tenha sido chamado, e então criar um wrap e inserir o conteúdo do tooltip nessa tag.
 
 <pre class="javascript">;(function(){
-	"use strict";
-	var tt = {};
-	tt.init = function(objs) {
-		var i = objs.length;
-		while(i--) {
-			var obj = objs[i],
-				wrap = tt.createWrap(obj),
-				ttContent = tt.getContent(obj);
+  "use strict";
+  var tt = {};
+  tt.init = function(objs) {
+    var i = objs.length;
+    while(i--) {
+      var obj = objs[i],
+        wrap = tt.createWrap(obj),
+        ttContent = tt.getContent(obj);
 
-			wrap.appendChild(ttContent);
-		}
-	};
-	tt.createWrap = function(obj) {
-		var wrap = document.createElement('span');
-		wrap.className = 'tt-wrap';
-		obj.parentNode.replaceChild(wrap, obj);
-		wrap.appendChild(obj);
-		return wrap;
-	};
-	tt.getContent = function(obj) {
-		var rel = obj.getAttribute('data-rel');
-		return document.querySelector(rel);
-	};
-	window.addEventListener("load", function() {
-		tt.init($('.tt'));
-		tt.init($('#another'));
-	});
-	var $ = function(selector) {
-		return document.querySelectorAll(selector);
-	}
-}());</pre>
+      wrap.appendChild(ttContent);
+    }
+  };
+  tt.createWrap = function(obj) {
+    var wrap = document.createElement('span');
+    wrap.className = 'tt-wrap';
+    obj.parentNode.replaceChild(wrap, obj);
+    wrap.appendChild(obj);
+    return wrap;
+  };
+  tt.getContent = function(obj) {
+    var rel = obj.getAttribute('data-rel');
+    return document.querySelector(rel);
+  };
+  window.addEventListener("load", function() {
+    tt.init($('.tt'));
+    tt.init($('#another'));
+  });
+  var $ = function(selector) {
+    return document.querySelectorAll(selector);
+  }
+}());
+```
 
 Fork lá no github <https://github.com/wbruno/examples/tree/gh-pages/tt>.
 
@@ -119,7 +120,8 @@ Fork lá no github <https://github.com/wbruno/examples/tree/gh-pages/tt>.
 
 Um dos maiores motivos para usarmos orientação a objetos e clousures no javascript, é não sujar o namespace global. Note que poderíamos chegar ao mesmo resultado se as funções fossem criadas diretamente:
 
-<pre>var init = function(objs) {</pre>
+```var init = function(objs) {
+```
 
 Mas assim estaríamos colocando todos esses métodos direto no objeto window, o que poderia causar sobrescritas de comportamentos de scripts isolados dentro da nossa aplicação.
 
@@ -135,16 +137,17 @@ Por isso que isolamos os comportamentos em objetos diferentes, e cada método po
 
 Uma clousure define um escopo de execução. Veja por exemplo:
 
-<pre>function init(){
-	console.log('window scope');
+```function init(){
+  console.log('window scope');
 }
 (function(){
-	function init(){
-		console.log('local scope');
-	}
-	init();//local scope
-	window.init();//window scope
-}());</pre>
+  function init(){
+    console.log('local scope');
+  }
+  init();//local scope
+  window.init();//window scope
+}());
+```
 
 Declarei 2 funções com o mesmo nome: <var>init</var>. Porém cada uma em um escopo. Uma está lá no escopo global window, e outra é local dessa clousure. Por existirem em escopos diferentes uma função não interfere na outra e pode coexistir em um código.
 
@@ -153,14 +156,14 @@ Tudo o que for declarado no escopo window é acessível de qualquer escopo, pois
 Mas o que for declarado dentro da clousure só é acessível de dentro dela, se não for usado nenhum padrão de revelação.
 
 <pre class="javascript">(function(){
-	var tt = {
-		init : function() {
-			console.log('namespace tt');
-		}
-	};
-	tt.init();//namespace tt
+  var tt = {
+    init : function() {
+      console.log('namespace tt');
+    }
+  };
+  tt.init();//namespace tt
 }());
-tt.init();//ReferenceError: tt is not defined</pre>
+tt.init();//ReferenceError: tt is not defined```
 
 Isso é importante para entendermos como podemos criar módulos independentes e com visibilidades privadas para usarmos em nossos sistemas.
 
@@ -171,33 +174,34 @@ O problema da minha primeira implementação é que a invocação tem que ficar 
 A implementação ficaria assim:
 
 <pre class="javascript">var tt = (function(){
-	"use strict";
-	var tt = {};
+  "use strict";
+  var tt = {};
 
-	tt.createWrap = function(obj) {
-		//..
-	};
-	tt.init = function(objs) {
-		//..
-	};
-	tt.getContent = function(obj) {
-		//..
-	};
+  tt.createWrap = function(obj) {
+    //..
+  };
+  tt.init = function(objs) {
+    //..
+  };
+  tt.getContent = function(obj) {
+    //..
+  };
 
-	return {
-		init : tt.init
-	};
+  return {
+    init : tt.init
+  };
 }());
 
 var $ = function(selector) {
-	return document.querySelectorAll(selector);
+  return document.querySelectorAll(selector);
 };
 window.addEventListener("load", function() {
-	console.log(tt);//Object { init=function()}
-	console.log(tt.createWrap);//undefined
-	tt.init($('.tt'));
-	tt.init($('#another'));
-});</pre>
+  console.log(tt);//Object { init=function()}
+  console.log(tt.createWrap);//undefined
+  tt.init($('.tt'));
+  tt.init($('#another'));
+});
+```
 
 Agora posso usar o módulo tt(tooltip) de qualquer lugar da minha aplicação, sabendo que o único método visível é o <var>.init()</var>.
 

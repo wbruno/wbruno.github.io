@@ -16,3 +16,8 @@ Quando começou ainda não existia diferença entre backend e frontend, então s
 Sempre gostou de ensinar, por isso já respondeu milhares de tópicos no fórum imasters, escreve artigos para o seu blog (http://wbruno.com.br) e mais alguns outros canais. Já teve a oportunidade de dar aulas de FrontEnd, NodeJS e MongoDB para turmas de cursos livres, além de ter feito algumas palestras em eventos presenciais e workshops online.
 
 Com o convite para escrever este livro viu a oportunidade perfeita para divulgar a experiência que teve ao trabalhar com NodeJS e o porquê gosta tanto da linguagem JavaScript.
+
+Sou William, Principal Enginner da Plataforma de Ecommerce e Marketplace.
+Sou homem, moreno, tenho cabelos grisálhos, uso cavanhaque e óculos
+Estou com uma camiseta preta
+E no fundo da minha tela tem uma tv desligada

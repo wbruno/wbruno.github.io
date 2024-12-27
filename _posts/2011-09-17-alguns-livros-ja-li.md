@@ -19,7 +19,7 @@ Depois eu quero fazer um post para cada um desses livros, indicando(ou não) ele
 
 Só está faltando 2 nessa foto, o de CSS do Maujor, e o de Ajax com jQuery(do Maujor também).
 
-Ahh, também já li [O Design do Dia-a-Dia](http://wbruno.com.br/2011/07/25/sobre-livro-o-design-dia-a-dia/), que peguei emprestado do Designer da empresa.
+Ahh, também já li [O Design do Dia-a-Dia](https://wbruno.com.br/livro/sobre-livro-o-design-dia-a-dia/), que peguei emprestado do Designer da empresa.
 
 E um de javascript OO, que achei ótimo.(a empresa comprou pra mim). <del datetime="2011-09-27T12:21:03+00:00">[depois vejo o nome dele]</del>
 

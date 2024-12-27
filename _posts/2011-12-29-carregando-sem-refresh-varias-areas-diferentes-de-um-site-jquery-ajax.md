@@ -11,7 +11,7 @@ dsq_thread_id:
 categories:
   - AJAX
 ---
-Eu já postei aqui no meu blog, como <a href="http://wbruno.com.br/2011/03/30/navegacao-sem-refresh-carregando-conteudo-ajax-em-div/" target="_blank">carregar conteudo com ajax em div</a>, daí, aprimorei aquele código, e mostrei como <a href="http://wbruno.com.br/2011/05/27/navegacao-sem-refresh-%E2%80%93-carregando-conteudo-ajax-em-div-2/" target="_blank">carregar conteudo com ajax, colocando também um gif de loading</a>.. e também como fazer tudo isso de cima, ainda <a href="http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/" target="_blank">trocando a URL, e usando um plugin na página interna</a>.
+Eu já postei aqui no meu blog, como <a href="https://wbruno.com.br/ajax/navegacao-sem-refresh-carregando-conteudo-ajax-em-div/" target="_blank">carregar conteudo com ajax em div</a>, daí, aprimorei aquele código, e mostrei como <a href="https://wbruno.com.br/ajax/navegacao-sem-refresh-carregando-conteudo-ajax-em-div/" target="_blank">carregar conteudo com ajax, colocando também um gif de loading</a>.. e também como fazer tudo isso de cima, ainda <a href="https://wbruno.com.br/ajax/carregando-conteudo-ajax-trocando-url-jquery/" target="_blank">trocando a URL, e usando um plugin na página interna</a>.
 
 Hoje é dia de carregar várias divs &#8216;separadas&#8217;, várias áreas diferentes com ajax.
 

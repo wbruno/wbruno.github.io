@@ -112,10 +112,10 @@ Apenas lembrando que as páginas internas, devem continuar com o código HTML co
 
 E **teve problemas** com os outros scripts do seu site, veja estes links:
 
-[Usando lightbox em página carregada com ajax](http://wbruno.com.br/2011/08/22/usando-lightbox-em-pagina-carregada-ajax/)
+[Usando lightbox em página carregada com ajax](https://wbruno.com.br/ajax/usando-lightbox-em-pagina-carregada-ajax/)
 
-[Carregando conteudo com ajax, trocando a URL com jQuery](http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/)
+[Carregando conteudo com ajax, trocando a URL com jQuery](https://wbruno.com.br/ajax/carregando-conteudo-ajax-trocando-url-jquery/)
 
-[O método .live() do jQuery](http://wbruno.com.br/2011/03/18/metodo-live-jquery/)
+[O método .live() do jQuery](https://wbruno.com.br/jquery/metodo-live-jquery/)
 
-[Como debugar JavaScript com o Firefox ? – erros comuns](http://wbruno.com.br/2011/03/31/como-debugar-javascript-firefox-erros-comuns/)
+[Como debugar JavaScript com o Firefox ? – erros comuns](https://wbruno.com.br/javascript-puro/como-debugar-javascript-firefox-erros-comuns/)

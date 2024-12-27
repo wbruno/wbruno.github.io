@@ -116,7 +116,7 @@ Essa é uma coisa básica de programação. Divida um procedimento em várias ro
 
 ## Leia este post:
 
-[Aprendi jQuery e agora?](http://wbruno.com.br/2011/07/18/vixi-aprendi-jquery-mas-agora/)
+[Aprendi jQuery e agora?](https://wbruno.com.br/jquery/vixi-aprendi-jquery-mas-agora/)
 
 E para terminar:
 

@@ -393,7 +393,7 @@ Erro de lógica, tento chegar até um &#8216;pergunta4&#8217;, mas só existe at
   <div id="pergunta1">Pergunta3</div>
 ```
 
-Acreditando ter aprendido a lição, o [CQP](http://www.wbruno.com.br/2011/03/29/diferenca-entre-cara-programa-um-programador/) foi lá, e <u>duplicou o ID</u>.
+Acreditando ter aprendido a lição, o [CQP](https://wbruno.com.br/opiniao/diferenca-entre-cara-programa-um-programador/) foi lá, e <u>duplicou o ID</u>.
 
 Rodando o script cima, vemos que o texto da primeira DIV foi substituido, mas das outras não. [comportamento inesperado]
 

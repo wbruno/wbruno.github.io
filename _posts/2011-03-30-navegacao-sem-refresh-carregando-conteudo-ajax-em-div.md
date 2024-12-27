@@ -161,7 +161,7 @@ Dessa forma, se desativar o suporte a javascript do navegador, o site funciona. 
 
 Devido ao grande número de comentários, e pessoas relatando problemas com códigos javascript, que não funcionam, depois que a página interna foi carregada com ajax, usando o código acima. Eu fiz o seguinte post:
 
-[Usando lightbox em página carregada com ajax](http://wbruno.com.br/2011/08/22/usando-lightbox-em-pagina-carregada-ajax/).
+[Usando lightbox em página carregada com ajax](https://wbruno.com.br/ajax/usando-lightbox-em-pagina-carregada-ajax/).
 
 Fiz com lightbox no exemplo, porém a dica se aplica a qualquer plugin que vc precisar.
 

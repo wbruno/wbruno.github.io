@@ -13,7 +13,7 @@ categories:
 ---
 Bem simples, só editei o trecho que era necessário para enviar um **history.pushState**, no final da requisição ajax, que carrega a página em uma div, sem dar refresh no restante do site.
 
-<a href="http://wbruno.com.br/2011/05/27/navegacao-sem-refresh-%E2%80%93-carregando-conteudo-ajax-em-div-2/" target="_blank">http://wbruno.com.br/2011/05/27/navegacao-sem-refresh-%E2%80%93-carregando-conteudo-ajax-em-div-2</a>
+<a href="https://wbruno.com.br/ajax/navegacao-sem-refresh-–-carregando-conteudo-ajax-em-div-2/" target="_blank">https://wbruno.com.br/ajax/navegacao-sem-refresh-–-carregando-conteudo-ajax-em-div-2/</a>
 
 ``` js
 $.ajax({
@@ -50,7 +50,7 @@ Browsers antigos não implementam esse método.
 
 Agora podemos parar de forçar a barra usando o document.location.hash, como nessa implementação aqui:
 
-<a href="http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/" target="_blank">http://wbruno.com.br/2011/11/25/carregando-conteudo-ajax-trocando-url-jquery/</a>
+<a href="https://wbruno.com.br/ajax/carregando-conteudo-ajax-trocando-url-jquery/" target="_blank">https://wbruno.com.br/ajax/carregando-conteudo-ajax-trocando-url-jquery/</a>
 
 ## <a href="http://wbruno.com.br/scripts/fotos2.html" target="_blank">Demonstração</a>
 

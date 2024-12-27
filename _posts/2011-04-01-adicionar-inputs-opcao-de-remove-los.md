@@ -14,10 +14,10 @@ tags:
   - framework
 ---
 Post rápido hoje.
-  
+
 Script melhorado de uma dúvida que surgiu no iMasters.
-  
-Sobre esse mesmo assunto, eu já tinha feito [esse post aqui meu](http://www.wbruno.com.br/2011/02/04/criar-input-no-onblur-e-receber-dados-array-php/), porém como o fluxo de interação do usuário é diferente, valeu a pena postar &#8216;de novo&#8217;.
+
+Sobre esse mesmo assunto, eu já tinha feito [esse post aqui meu](https://wbruno.com.br/jquery/criar-input-no-onblur-e-receber-dados-array-php/), porém como o fluxo de interação do usuário é diferente, valeu a pena postar &#8216;de novo&#8217;.
 
 <!--more-->
 
@@ -61,15 +61,15 @@ label { display: block; }
 ```
 
 Alguns pontos importantes
-  
--> Uso o .delegate() no lugar do [.live()](http://www.wbruno.com.br/2011/03/18/metodo-live-jquery/)
-  
+
+-> Uso o .delegate() no lugar do [.live()](https://wbruno.com.br/jquery/metodo-live-jquery/)
+
 -> indentei corretamente o script
-  
+
 -> sempre uso aspas duplas para delimitar os valores dos atributos HTML
-  
+
 -> não desperdiço IDs, e uso bem os seletores da lib
-  
+
 -> semântica na marcação do formulário
 
 É isso ai. Se tiverem alguma sugestão de script, podem me encaminhar.

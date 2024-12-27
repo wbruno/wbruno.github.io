@@ -25,9 +25,9 @@ Estamos bem acostumados a ler o **feeds do wordpress**(o famoso RSS), para reapr
 
 Eu mesmo, aqui neste blog, já coloquei algumas formas de fazer isso:
 
--> [Ler rss do WordPress com php](http://wbruno.com.br/2011/06/01/ler-rss-wordpress-php/ "Ler rss do WordPress com php")
+-> [Ler rss do WordPress com php](https://wbruno.com.br/wordpress/ler-rss-wordpress-php/ "Ler rss do WordPress com php")
 
--> [Exemplo prático de Orientação a Objetos (php), diferenças e vantagens em relação à um código Estruturado](http://wbruno.com.br/2012/05/08/exemplo-pratico-de-orientacao-objetos-php-diferencas-vantagens-em-relacao-a-um-codigo-estruturado/ "Exemplo prático de Orientação a Objetos (php), diferenças e vantagens em relação à um código Estruturado")
+-> [Exemplo prático de Orientação a Objetos (php), diferenças e vantagens em relação à um código Estruturado](https://wbruno.com.br/php/exemplo-pratico-de-orientacao-objetos-php-diferencas-vantagens-em-relacao-a-um-codigo-estruturado/ "Exemplo prático de Orientação a Objetos (php), diferenças e vantagens em relação à um código Estruturado")
 
 ## Entender namespace xml php
 

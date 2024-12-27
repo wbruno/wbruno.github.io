@@ -13,7 +13,7 @@ categories:
 ---
 Refiz recentemente o novo tema do blog da Locaweb:
 
-<http://wbruno.com.br/2012/02/24/novo-tema-wordpress-em-html5-blog-da-locaweb/>
+<https://wbruno.com.br/wordpress/novo-tema-wordpress-em-html5-blog-da-locaweb/>
 
 Acabei deixando passar em branco, a funcionalidade dos comentários Reply, aparecerem logo abaixo do comentário pai deles. Em cadeia mesmo.
 

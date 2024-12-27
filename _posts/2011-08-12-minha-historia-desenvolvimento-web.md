@@ -11,7 +11,7 @@ categories:
 ---
 Esse post é uma espécie de linha cronológica. Destinado a quem possa interessar.
 
-O Miguel, pediu <a href="http://wbruno.com.br/2011/06/27/sobre-vc-quer-ler-qual-sua-duvida-js-php-oo-sql-css/" target="_blank">para que eu contasse como &#8216;comecei&#8217;</a>.
+O Miguel, pediu <a href="https://wbruno.com.br/html/sobre-vc-quer-ler-qual-sua-duvida-js-php-oo-sql-css/" target="_blank">para que eu contasse como &#8216;comecei&#8217;</a>.
 
 <!--more-->
 

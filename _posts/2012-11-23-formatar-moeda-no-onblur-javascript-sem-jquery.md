@@ -13,7 +13,7 @@ categories:
 tags:
   - máscara
 ---
-Diferente das demais máscaras de moeda em javascript, assim como essa minha que [formata usando Expressão Regular no onkeyUp do campo](http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/), a máscara que apresento agora, formata no evento onblur.
+Diferente das demais máscaras de moeda em javascript, assim como essa minha que [formata usando Expressão Regular no onkeyUp do campo](https://wbruno.com.br/expressao-regular/diversas-mascaras-com-er/), a máscara que apresento agora, formata no evento onblur.
 
 Aceita as entradas:
 

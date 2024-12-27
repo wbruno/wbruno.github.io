@@ -61,7 +61,7 @@ Importante isso. Começamos do início. Do HTML.
 
 ## A parte JavaScript
 
-Agora, segundo nosso briefing, o formulário deve ir adicionando os itens nessa tabela. Aqui que entra, a responsabilidade client-side, afinal, precisamos adicionar os itens nessa tabela temporariamente, sem refresh [ e atenção, pois isso **não significa, e nem quer dizer** ajax. &#8216;Sem refresh&#8217;, [quer dizer client-side, mas não necessariamente precisamos de ajax](http://www.wbruno.com.br/2011/04/08/o-que-e-ajax-e-o-que-nao-e/).
+Agora, segundo nosso briefing, o formulário deve ir adicionando os itens nessa tabela. Aqui que entra, a responsabilidade client-side, afinal, precisamos adicionar os itens nessa tabela temporariamente, sem refresh [ e atenção, pois isso **não significa, e nem quer dizer** ajax. &#8216;Sem refresh&#8217;, [quer dizer client-side, mas não necessariamente precisamos de ajax](https://wbruno.com.br/ajax/o-que-e-ajax-e-o-que-nao-e/).
 
 ``` html
 <script type="text/javascript"> type="text/javascript">

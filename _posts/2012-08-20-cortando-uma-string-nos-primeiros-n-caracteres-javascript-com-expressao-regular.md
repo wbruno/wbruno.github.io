@@ -79,7 +79,7 @@ Dessa forma consigo o &#8220;efeito&#8221; de cortar depois dos &#8220;N&#8221; 
 
 Caso tudo e coloco de novo os &#8220;N&#8221; primeiros.
 
-Este post, é o primeiro exemplo prático do [Expressões Regulares – REGEX para iniciantes](http://wbruno.com.br/2012/08/15/expressoes-regulares-regex-para-iniciantes/).
+Este post, é o primeiro exemplo prático do [Expressões Regulares – REGEX para iniciantes](https://wbruno.com.br/expressao-regular/expressoes-regulares-regex-para-iniciantes/).
 
 ## O método substr()
 

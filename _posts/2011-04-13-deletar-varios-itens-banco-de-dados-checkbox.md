@@ -14,11 +14,11 @@ categories:
 Dúvida recorrente no fórum.
 
 Funcionamento parecido com os webmails.
-  
+
 Você possui uma lista de registros. Em cada um desses registros, há um checkbox.
 
-Deseja-se, [selecionar vários checkboxs](http://www.wbruno.com.br/2011/03/20/selecionar-todos-checkb-ao-clicar-em-um-selecionar-check-ao-clicar-em-linha/), e então com um só botão, proceder com a exclusão de todos os itens selecionados.
-  
+Deseja-se, [selecionar vários checkboxs](https://wbruno.com.br/jquery/selecionar-todos-checkb-ao-clicar-em-um-selecionar-check-ao-clicar-em-linha/), e então com um só botão, proceder com a exclusão de todos os itens selecionados.
+
 <!--more-->
 
 ``` php

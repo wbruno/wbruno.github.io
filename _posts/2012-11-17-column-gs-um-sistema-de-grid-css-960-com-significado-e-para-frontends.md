@@ -11,7 +11,7 @@ dsq_thread_id:
 categories:
   - CSS
 ---
-Criei esse [sistema de GRID css de 12 colunas](http://wbruno.com.br/2012/08/23/sistema-de-grid-css-column-grid-css/), para atender uma necessidade que tive durante o recorte de páginas de um site.
+Criei esse [sistema de GRID css de 12 colunas](https://wbruno.com.br/css/column-gs-um-sistema-de-grid-css-960-com-significado-e-para-frontends/), para atender uma necessidade que tive durante o recorte de páginas de um site.
 
 <!--more-->
 

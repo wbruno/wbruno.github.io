@@ -13,7 +13,7 @@ tags:
 ---
 É.. o título ficou bem extenso..
 
-mas não tinha como resumir. Somente isso, eu já tinha mostrado <a href="http://wbruno.com.br/2011/05/29/buscando-uma-hash-tag-search-twitter/" target="_blank">como buscar uma hashtag no twitter usando php</a>, agora, apenas para ficar registrado, 2 ERs aqui, para colocar link nos usuários e nas hashtags retornadas.
+mas não tinha como resumir. Somente isso, eu já tinha mostrado <a href="https://wbruno.com.br/php/buscando-uma-hash-tag-search-twitter/" target="_blank">como buscar uma hashtag no twitter usando php</a>, agora, apenas para ficar registrado, 2 ERs aqui, para colocar link nos usuários e nas hashtags retornadas.
 
 <!--more-->
 

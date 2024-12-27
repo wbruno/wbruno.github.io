@@ -16,8 +16,8 @@ tags:
 Boas!
 
 Fiz uma rápida adaptação da **expressão regular**, usada na função **mtel()**. Que eu já havia postado aqui:
-  
-[http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/](http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/ "Mascaras em javascript com regex")
+
+[https://wbruno.com.br/expressao-regular/diversas-mascaras-com-er/](https://wbruno.com.br/expressao-regular/diversas-mascaras-com-er/ "Mascaras em javascript com regex")
 
 Aumentei o maxlenght de 14 para 15.
 
@@ -57,17 +57,17 @@ function mtel(v){
 ```
 
 Alterei a segunda expressão regular, para funcionar de forma invertida. De trás para frente.
-  
+
 Contar os 4 últimos dígitos finais, e colocar o hífen antes deles. Deixando assim, o DD quatro ou cinco dígitos, depois o hífen, e os próximos quatro dígitos.
 
 Usou ? gostou ?
-  
-Comente!! 
+
+Comente!!
 
 ## &#8212; update &#8212;
 
 Apenas para alertar que a forma acima, não é a melhor maneira de implementar.
-  
+
 Devemos separar as camadas, e deixar a chamada do script do lado do js. Dessa forma aqui:
 
 ``` html

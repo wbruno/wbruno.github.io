@@ -65,6 +65,6 @@ Porém graças ao **notEquals**:
 
 [<img class="aligncenter size-full wp-image-297" title="Screen shot 2011-03-22 at 9.41.30 AM" src="/wp-content/uploads/2011/03/Screen-shot-2011-03-22-at-9.41.30-AM.png" alt="" width="337" height="65" srcset="/wp-content/uploads/2011/03/Screen-shot-2011-03-22-at-9.41.30-AM.png 337w, /wp-content/uploads/2011/03/Screen-shot-2011-03-22-at-9.41.30-AM-300x57.png 300w" sizes="(max-width: 337px) 100vw, 337px" />](/wp-content/uploads/2011/03/Screen-shot-2011-03-22-at-9.41.30-AM.png)
 
-Vale lembrar que para tal, eu precisei criar também uma [funçãozinha rápida para apagar o campo no evento onfocus](http://www.wbruno.com.br/2011/03/24/criando-um-plugin-jquery-parte-1-comecando/).
+Vale lembrar que para tal, eu precisei criar também uma [funçãozinha rápida para apagar o campo no evento onfocus](https://wbruno.com.br/jquery/criando-um-plugin-jquery-parte-1-comecando/).
 
 É isso galera, comentem qualquer dúvida.

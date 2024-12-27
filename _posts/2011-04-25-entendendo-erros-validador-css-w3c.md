@@ -14,7 +14,7 @@ tags:
   - validador
   - w3c
 ---
-Já escrevi sobre os [erros do validador w3c](http://www.wbruno.com.br/2011/04/05/entendendo-erros-validador-html-w3c/), e expliquei como [entender e resolver para validar](http://www.wbruno.com.br/2011/04/07/entendendo-erros-validador-html-w3c-parte-2/), o que ele retorna. Para terminarmos o assunto da validação, vamos para o <a href="http://jigsaw.w3.org/css-validator/" target="_blank">validador de css</a>.
+Já escrevi sobre os [erros do validador w3c](https://wbruno.com.br/html/entendendo-erros-validador-html-w3c/), e expliquei como [entender e resolver para validar](https://wbruno.com.br/html/entendendo-erros-validador-html-w3c-parte-2/), o que ele retorna. Para terminarmos o assunto da validação, vamos para o <a href="http://jigsaw.w3.org/css-validator/" target="_blank">validador de css</a>.
 
 <!--more-->
 
@@ -44,13 +44,13 @@ text-shadow:#fff 0 1px 0;
 ## Erro 1d: A propriedade _blablabla não existe : valor
 
 Famigerados hacks para ie. Adição do underline na frente da propriedade.
-  
+
 Não use esse tipo de hack! Antes de pensar em fazer regras especificas para &#8216;tal navegador&#8217;, veja se não é o teu código que está confuso, ou gerando essa diferença.
 
 ``` css
 _background: ...```
 
-## Erro 2a: Pseudo-elemento ou pseudo classe :blablabla desconhecido 
+## Erro 2a: Pseudo-elemento ou pseudo classe :blablabla desconhecido
 
 **css3** novamente.. seletores poderosos.. mas ainda não podemos usá-los de forma simples e crossbrowser.
 
@@ -113,7 +113,7 @@ Eu sei que eu poderia usar a sintaxe de comentário do css, para anular dada reg
 
 Ainda assim, fica a dica de algo que pode ser digitado &#8216;errado&#8217;, e cause esse erro visto aqui.
 
-## Erro 6a: Erro de valor : blablabla tentativa de encontrar um ponto-e-vírgula antes da propriedade. Coloque o ponto-e-vírgula 
+## Erro 6a: Erro de valor : blablabla tentativa de encontrar um ponto-e-vírgula antes da propriedade. Coloque o ponto-e-vírgula
 
 Se estivermos na ultima regra de um dado seletor, o ponto e vírgula é optativo, porém não vejo o menor sentido em escolher não declará-lo. A &#8216;economia&#8217; de digitação, é tão ínfima, que na minha opinião, vale mais apena, sermos rígidos com a sintaxe, e depois não precisarmos quebrar a cabeça, caso tenhamos que adicionar novas regras embaixo, e alguma delas não funcionar.
 
@@ -132,7 +132,7 @@ input {
 
 os valores dos atributos HTML, como class e IDs, não devem começar com números por exemplo, ou outro caracter inválido.
 
-## Erro 7b: Em CSS1, um nome de classe pode começar com um dígito (&#8220;.55ft&#8221;), a menos que seja uma dimensão (&#8220;.55in&#8221;). Em CSS2, tais ids são parseadas como dimensões desconhecidas (com a finalidade de permitir adições futuras de novas unidades). Para que &#8220;.blablabla&#8221; seja uma classe válida, CSS2 requer que o primeiro dígito seja escapado &#8220;blablabla&#8221; [blablabla] 
+## Erro 7b: Em CSS1, um nome de classe pode começar com um dígito (&#8220;.55ft&#8221;), a menos que seja uma dimensão (&#8220;.55in&#8221;). Em CSS2, tais ids são parseadas como dimensões desconhecidas (com a finalidade de permitir adições futuras de novas unidades). Para que &#8220;.blablabla&#8221; seja uma classe válida, CSS2 requer que o primeiro dígito seja escapado &#8220;blablabla&#8221; [blablabla]
 
 ``` css
 .12class {}
@@ -149,7 +149,7 @@ color : #000;
 } ```
 
 Mesma cor para fonte, e para fundo, ou seja invisível e ilegível. Gera um alert do validador.
-  
+
 Devemos lembrar que nosso documento precisa ser acessível, mesmo que as imagens não carreguem.
 
 Conforme eu lembrar de mais algum, adiciono aqui.

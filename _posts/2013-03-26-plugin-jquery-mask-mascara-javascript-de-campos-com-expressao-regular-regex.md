@@ -21,7 +21,7 @@ Esse post é para divulgar um novo repositório que criei no github.
 
 <a href="https://github.com/wbruno/jquery.mask" rel="external nofollow" target="_blank">https://github.com/wbruno/jquery.mask</a>.
 
-É um plugin jQuery que escrevi com base nestas [máscaras com expressão regular](http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/), e esse plugin já inclui a função de [máscara javascript de cartões de crédito](http://wbruno.com.br/2013/03/25/mascara-cartao-de-credito-com-javascript-e-expressao-regular-regex/).
+É um plugin jQuery que escrevi com base nestas [máscaras com expressão regular](https://wbruno.com.br/expressao-regular/diversas-mascaras-com-er/), e esse plugin já inclui a função de [máscara javascript de cartões de crédito](https://wbruno.com.br/expressao-regular/mascara-cartao-de-credito-com-javascript-e-expressao-regular-regex/).
 
 ## Exemplo de uso
 

@@ -33,7 +33,7 @@ Eu uso isto aqui:
 
 E só, praticamente.
 
-Fiz um post com &#8220;o meu css mínimo&#8221;: [Meu CSS mínimo comum a todos os projetos que desenvolvo](http://wbruno.com.br/2012/03/06/meu-css-minimo-comum-todos-os-projetos-desenvolvo/ "Meu CSS mínimo comum a todos os projetos que desenvolvo").
+Fiz um post com &#8220;o meu css mínimo&#8221;: [Meu CSS mínimo comum a todos os projetos que desenvolvo](https://wbruno.com.br/css/meu-css-minimo-comum-todos-os-projetos-desenvolvo/ "Meu CSS mínimo comum a todos os projetos que desenvolvo").
 
 ## A mágica
 

@@ -11,7 +11,7 @@ categories:
 tags:
   - boas práticas
 ---
-Eu já havia dado algumas dicas de [como sentir mau cheiro em código css](http://wbruno.com.br/2012/03/16/mau-cheiro-em-codigo-css-como-sentir/ "Mau cheiro em código css - Como sentir"). Veja mais alguns outros pontos importantes em que vc deve ficar de olho.
+Eu já havia dado algumas dicas de [como sentir mau cheiro em código css](https://wbruno.com.br/css/mau-cheiro-em-codigo-css-como-sentir/ "Mau cheiro em código css - Como sentir"). Veja mais alguns outros pontos importantes em que vc deve ficar de olho.
 
 [<img src="/wp-content/uploads/2012/08/css.jpg" alt="Linguagem CSS" title="css" width="600" height="346" class="aligncenter size-full wp-image-2638" srcset="/wp-content/uploads/2012/08/css.jpg 600w, /wp-content/uploads/2012/08/css-300x173.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" />](/wp-content/uploads/2012/08/css.jpg)
 

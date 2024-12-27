@@ -29,7 +29,7 @@ var er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
 
 Porém, não é legal usarmos essas letrinhas mágicas sem realmente entender o que são.
 
-Esta regex acima, por exemplo, eu uso para [verificar se o usuário digitou um endereço de email](http://wbruno.com.br/2011/07/20/verificar-email-expressao-regular-javascript/ "Validar endereço de Email com regex em javascript") corretamente.
+Esta regex acima, por exemplo, eu uso para [verificar se o usuário digitou um endereço de email](https://wbruno.com.br/javascript-puro/verificar-email-expressao-regular-javascript/ "Validar endereço de Email com regex em javascript") corretamente.
 
 ## Escrevendo a sua primeira regex
 

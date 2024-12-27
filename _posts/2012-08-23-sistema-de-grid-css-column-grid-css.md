@@ -91,7 +91,7 @@ E pronto! resolvido!
 
 ## .fleft e .fright
 
-Estas classes foram declaradas no meu [css reset](http://wbruno.com.br/2012/03/06/meu-css-minimo-comum-todos-os-projetos-desenvolvo/).
+Estas classes foram declaradas no meu [css reset](https://wbruno.com.br/css/meu-css-minimo-comum-todos-os-projetos-desenvolvo/).
 
 ## Porque &#8220;mais um&#8221; grid css?
 

@@ -15,7 +15,7 @@ tags:
 ---
 Salve salve galera !!
 
-Bom, eu já havia postado como carregar [conteudo com ajax, apenas com javascript puro](http://www.wbruno.com.br/2011/03/11/carregando-conteudo-com-ajax-trocando-url/).
+Bom, eu já havia postado como carregar [conteudo com ajax, apenas com javascript puro](https://wbruno.com.br/ajax/carregando-conteudo-ajax-trocando-url-jquery/).
 
 Porém, se junto com o **xmlHttp.responseText**, vierem alguns links, eles não terão o evento onclick, atrelados. Pois nós fizemos o &#8216;bind&#8217; da function no window.onload, e nossos novos elementos foram trazidos muito depois desse instante.
 

@@ -15,8 +15,8 @@ tags:
 ---
 Esse código abaixo, possui uma função que no evento onblur do campo, adiciona o dígito nove para telefones com ddd 11, caso o usuário tenha informado um telefone de dígito 11 e não tenha informado o nove.
 
-Completo do post [Mascara campo de telefone em javascript com regex – Nono dígito – Telefones São Paulo](http://wbruno.com.br/2012/08/02/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/)
-  
+Completo do post [Mascara campo de telefone em javascript com regex – Nono dígito – Telefones São Paulo](https://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/)
+
 <!--more-->
 
 ``` html

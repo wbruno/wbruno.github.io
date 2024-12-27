@@ -15,7 +15,7 @@ tags:
   - w3c
   - xhtml
 ---
-Continuando o [artigo anterior](http://www.wbruno.com.br/2011/04/05/entendendo-erros-validador-html-w3c/), primeiro antes de entendermos os **erros do validador**, precisamos entender a forma com que ele nos apresenta eles.
+Continuando o [artigo anterior](https://wbruno.com.br/html/entendendo-erros-validador-html-w3c/), primeiro antes de entendermos os **erros do validador**, precisamos entender a forma com que ele nos apresenta eles.
 
 Nossos documentos são processados da mesma forma que idealmente|naturalmente escrevemos eles: De cima para baixo, da esquerda para a direita. O validador percorre todo nosso documento procurando por <u>defeitos na sintaxe</u>. Importante ressaltarmos isso. Erros na sintaxe</u>, e nada mais.
 

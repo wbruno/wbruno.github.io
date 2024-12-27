@@ -11,7 +11,7 @@ categories:
 tags:
   - boas práticas
 ---
-Bom, hora de começar. A minha proposta foi <a href="http://wbruno.com.br/2011/06/27/sobre-vc-quer-ler-qual-sua-duvida-js-php-oo-sql-css/" target="_blank">escrever sobre oque vc quer ler</a>.
+Bom, hora de começar. A minha proposta foi <a href="https://wbruno.com.br/html/sobre-vc-quer-ler-qual-sua-duvida-js-php-oo-sql-css/" target="_blank">escrever sobre oque vc quer ler</a>.
 
 Este então, é o primeiro post em resposta aos comentários.
 

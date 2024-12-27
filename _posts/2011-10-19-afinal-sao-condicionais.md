@@ -54,7 +54,7 @@ Mas não é tão simples assim.. por mais que estejamos acostumados a programar,
 
 ## DRY! DIE!
 
-A primeira forma incorreta de usar condicionais, na verdade não é ditada apenas no uso dessas estruturas, mas sim <a href="http://wbruno.com.br/2011/08/18/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">como um todo nessa ciência</a>.
+A primeira forma incorreta de usar condicionais, na verdade não é ditada apenas no uso dessas estruturas, mas sim <a href="https://wbruno.com.br/php/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">como um todo nessa ciência</a>.
 
 Não se repita!
 

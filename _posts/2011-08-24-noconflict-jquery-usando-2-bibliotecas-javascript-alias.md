@@ -98,7 +98,7 @@ ready: function( fn ) {
 
 Esse é o trecho de código da lib, responsável pelo método .ready() que usamos, para aguardar o DOM carregar.
 
-Note que o parâmetro do método é a nossa function anônima, que expliquei no post &#8216;<a href="http://wbruno.com.br/2011/07/18/vixi-aprendi-jquery-mas-agora/" target="_blank">Aprendi jQuery, e agora?</a>&#8216;.
+Note que o parâmetro do método é a nossa function anônima, que expliquei no post &#8216;<a href="https://wbruno.com.br/jquery/vixi-aprendi-jquery-mas-agora/" target="_blank">Aprendi jQuery, e agora?</a>&#8216;.
 
 Oque posso fazer, é forçar um argumento $, e então me aproveitar da clousure, limitando o escopo do nosso alias:
 

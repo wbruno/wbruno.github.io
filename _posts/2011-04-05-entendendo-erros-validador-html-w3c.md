@@ -91,4 +91,4 @@ Passando no validador: [<img src="/wp-content/uploads/2011/04/Screen-shot-2011-0
 
 Para não ficar muito extenso, vou dividir em mais uma parte esse post.
 
-[Continua&#8230;.](http://www.wbruno.com.br/2011/04/07/entendendo-erros-validador-html-w3c-parte-2/)
+[Continua&#8230;.](https://wbruno.com.br/html/entendendo-erros-validador-html-w3c-parte-2/)

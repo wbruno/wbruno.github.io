@@ -11,7 +11,7 @@ categories:
 tags:
   - review
 ---
-Bom, eu já tinha lido <a href="http://wbruno.com.br/2011/07/25/sobre-livro-o-design-dia-a-dia/" target="_blank">O Design do Dia a Dia</a>, e quase sem querer acabei tendo em mãos pedindo uma indicação sobre oque ler, o &#8220;próximo&#8221; livro do Donald A. Norman.
+Bom, eu já tinha lido <a href="https://wbruno.com.br/livro/sobre-livro-o-design-dia-a-dia/" target="_blank">O Design do Dia a Dia</a>, e quase sem querer acabei tendo em mãos pedindo uma indicação sobre oque ler, o &#8220;próximo&#8221; livro do Donald A. Norman.
 
 Muito bom esse livro também. Podemos lê-lo como um complemento do outro.
 

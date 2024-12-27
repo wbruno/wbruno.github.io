@@ -13,7 +13,7 @@ categories:
 tags:
   - formulário
 ---
-Eu havia postado, como enviar um formulário com ajax, aproveitando o callback <a href="http://wbruno.com.br/2011/03/21/validar-enviar-formulario-ajax-usando-jquery-validate/" target="_blank">submitHandler do jQuery.validate</a>.
+Eu havia postado, como enviar um formulário com ajax, aproveitando o callback <a href="https://wbruno.com.br/jquery/validar-enviar-formulario-ajax-usando-jquery-validate/" target="_blank">submitHandler do jQuery.validate</a>.
 
 Porém, se vc não estiver usando esse plugin, e quiser apenas usar o ajax do jQuery, o seguinte basta:
 

@@ -13,7 +13,7 @@ categories:
 tags:
   - firefox
 ---
-Depois do [primeiro post](http://www.wbruno.com.br/2011/04/14/como-debugar-ajax-firebug/), agora, nosso retorno é:
+Depois do [primeiro post](https://wbruno.com.br/ajax/como-debugar-ajax-firebug/), agora, nosso retorno é:
 
 [<img src="/wp-content/uploads/2011/04/req.jpg" alt="" title="req" width="692" height="267" class="aligncenter size-full wp-image-788" srcset="/wp-content/uploads/2011/04/req.jpg 692w, /wp-content/uploads/2011/04/req-300x115.jpg 300w" sizes="(max-width: 692px) 100vw, 692px" />](/wp-content/uploads/2011/04/req.jpg)
 

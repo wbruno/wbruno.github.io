@@ -4,7 +4,7 @@ title: 'Tableless: Como posicionar elementos de um layout &#8211; Recorte CSS'
 date: 2013-05-10T11:42:41+00:00
 author: William Bruno
 layout: post
-guid: http://wbruno.com.br/?p=2950
+guid: https://wbruno.com.br/?p=2950
 permalink: /css/tableless-como-posicionar-elementos-de-um-layout-recorte-css/
 dsq_thread_id:
   - "2116233132"
@@ -63,18 +63,18 @@ Sei que nem sempre sabemos como chegar a tal feito, mas não fique chutando regr
 
 ## Leia estes posts
 
-  1. [Nem só de <div> vive um desenvolvedor FrontEnd](http://wbruno.com.br/2011/05/17/nem-so-de-div-vive-um-desenvolvedor-frontend/)
-  2. [Como iniciar um recorte Tableless – comece !](http://wbruno.com.br/2011/10/10/como-iniciar-um-recorte-tableless-comece/)
-  3. [Como iniciar um recorte tableless – ensinando a pensar](http://wbruno.com.br/2011/10/18/como-iniciar-um-recorte-tableless-ensinando-pensar/)
-  4. [O elemento HTML body nos nossos sites, como melhor aproveitá-lo.](http://wbruno.com.br/2012/03/01/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/)
-  5. [Mau cheiro em código css – Como sentir](http://wbruno.com.br/2012/03/16/mau-cheiro-em-codigo-css-como-sentir/)
-  6. [Outros maus cheiros em código css – Como sentir](http://wbruno.com.br/2012/08/22/como-sentir-mau-cheiro-em-codigo-css/)
-  7. [Separação de camadas no FrontEnd](http://wbruno.com.br/2013/05/09/separacao-de-camadas-no-frontend/)
-  8. [Otimizações para websites não óbvias](http://wbruno.com.br/2013/03/08/otimizacoes-para-websites-nao-obvias/)
-  9. [Meu boilerplate de projetos de sites html5 e mobile](http://wbruno.com.br/2013/02/18/meu-boilerplate-de-projetos-de-sites-html5-e-mobile/)
- 10. [Semântica html5 – Comece agora mesmo! Use!](http://wbruno.com.br/2012/08/14/semantica-html5/)
- 11. [A semântica da tag <br /> – Simplesmente não use !](http://wbruno.com.br/2011/10/04/semantica-da-tag-br/)
- 12. [Devemos saber desenvolver para internet explorer [ie]!](http://wbruno.com.br/2011/08/05/devemos-saber-desenvolver-para-internet-explorer-ie/)
+  1. [Nem só de <div> vive um desenvolvedor FrontEnd](https://wbruno.com.br/opiniao/nem-so-de-div-vive-um-desenvolvedor-frontend/)
+  2. [Como iniciar um recorte Tableless – comece !](https://wbruno.com.br/css/como-iniciar-um-recorte-tableless-comece/)
+  3. [Como iniciar um recorte tableless – ensinando a pensar](https://wbruno.com.br/css/como-iniciar-um-recorte-tableless-ensinando-pensar/)
+  4. [O elemento HTML body nos nossos sites, como melhor aproveitá-lo.](https://wbruno.com.br/html/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/)
+  5. [Mau cheiro em código css – Como sentir](https://wbruno.com.br/css/mau-cheiro-em-codigo-css-como-sentir/)
+  6. [Outros maus cheiros em código css – Como sentir](https://wbruno.com.br/css/como-sentir-mau-cheiro-em-codigo-css/)
+  7. [Separação de camadas no FrontEnd](https://wbruno.com.br/css/separacao-de-camadas-no-frontend/)
+  8. [Otimizações para websites não óbvias](https://wbruno.com.br/css/otimizacoes-para-websites-nao-obvias/)
+  9. [Meu boilerplate de projetos de sites html5 e mobile](https://wbruno.com.br/html/meu-boilerplate-de-projetos-de-sites-html5-e-mobile/)
+ 10. [Semântica html5 – Comece agora mesmo! Use!](https://wbruno.com.br/html/semantica-html5/)
+ 11. [A semântica da tag <br /> – Simplesmente não use !](https://wbruno.com.br/html/semantica-da-tag-br/)
+ 12. [Devemos saber desenvolver para internet explorer [ie]!](https://wbruno.com.br/css/devemos-saber-desenvolver-para-internet-explorer-ie/)
 
 Depois de ler esse arsenal de posts, espero ter aberto a sua mente para que você comece a criticar a forma com que vc vinha fazendo sites até hoje, e passe para o próximo nível, desenvolvendo em menos tempo, e com muito mais qualidade.
 

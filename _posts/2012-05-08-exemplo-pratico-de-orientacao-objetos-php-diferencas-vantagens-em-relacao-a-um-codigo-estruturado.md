@@ -19,7 +19,7 @@ Já trabalhei com backend também, desde a modelagem das Entidades, até as inte
 
 Uma das minhas maiores dificuldades enquanto estava estudando sobre **Orientação a Objetos**, era entender de fato o que é _um objeto_.
 
-E o que a palavra _orientação_ tem a ver com eles. [Afinal, o que é Orientação a Objetos?](http://wbruno.com.br/2011/04/29/afinal-e-orientacao-objetos/ "Afinal, o que é Orientação a Objetos?")
+E o que a palavra _orientação_ tem a ver com eles. [Afinal, o que é Orientação a Objetos?](https://wbruno.com.br/opiniao/afinal-e-orientacao-objetos/ "Afinal, o que é Orientação a Objetos?")
 
 <!--more-->
 
@@ -29,7 +29,7 @@ Não basta sair criando classes, instanciando coisas, ou colocando todo o nosso 
 
 Isso não é Orientação a Objetos.
 
-Precisamos ter em mente <a href="http://wbruno.com.br/2011/08/18/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">diversos conceitos de programação</a>, e entender que a granulidade de nossos objetos(SRP), nos guiará a um código melhor, enxuto e menos custoso.
+Precisamos ter em mente <a href="https://wbruno.com.br/php/boas-praticas-de-programacao-filosofias-de-desenvolvimento/" target="_blank">diversos conceitos de programação</a>, e entender que a granulidade de nossos objetos(SRP), nos guiará a um código melhor, enxuto e menos custoso.
 
 ## Exemplo Prático
 
@@ -37,9 +37,9 @@ Precisei recentemente, ler diversos feeds de redes sociais, e mostrar os 4~5~7 �
 
 Eu já tinha cada código isolado mais ou menos pronto:
 
--> <a href="http://wbruno.com.br/2011/06/01/ler-rss-wordpress-php/" target="_blank">Ler rss do WordPress com php</a>
+-> <a href="https://wbruno.com.br/wordpress/ler-rss-wordpress-php/" target="_blank">Ler rss do WordPress com php</a>
 
--> <a href="http://wbruno.com.br/2011/07/07/timeline-twitter-php/" target="_blank">Timeline Twitter com php</a>
+-> <a href="https://wbruno.com.br/php/timeline-twitter-php/" target="_blank">Timeline Twitter com php</a>
 
 ..
 
@@ -137,7 +137,7 @@ class Cache
 }//Cache
 ```
 
-Note que para &#8220;dar certo&#8221; e fazer sentido, eu criei um contrato: <a href="http://wbruno.com.br/2011/04/20/afinal-e-interface-oop/" target="_blank">A interface</a> iSource:
+Note que para &#8220;dar certo&#8221; e fazer sentido, eu criei um contrato: <a href="https://wbruno.com.br/php/afinal-e-interface-oop/" target="_blank">A interface</a> iSource:
 
 ``` php
 <?php

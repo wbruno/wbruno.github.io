@@ -13,14 +13,14 @@ categories:
 ---
 boas pessoal!
 
-Eu já tinha colocado aqui, um <a href="http://wbruno.com.br/2010/01/08/suggest-ajax-jquery-phpmysql/" target="_blank">suggest jQuery com ajax</a>. Pensando como eu poderia deixar o usuário se movimentar pela lista de suggest, usando as setas do teclado, me dei conta que era desnecessário, tentar ficar trocando o .focus() dos elementos.
+Eu já tinha colocado aqui, um <a href="https://wbruno.com.br/ajax/suggest-ajax-jquery-phpmysql/" target="_blank">suggest jQuery com ajax</a>. Pensando como eu poderia deixar o usuário se movimentar pela lista de suggest, usando as setas do teclado, me dei conta que era desnecessário, tentar ficar trocando o .focus() dos elementos.
 
 <!--more-->
 
 
-  
+
 Na verdade, eu só preciso &#8216;fingir&#8217; isso. Mostrar no input, o .text(), do item do suggest, e mostrar com um background em qual está.
-  
+
 Foi oq eu fiz. Bem simples.
 
 ``` html
@@ -30,18 +30,18 @@ Foi oq eu fiz. Bem simples.
 <script type="text/javascript">
 jQuery(document).ready(function(){
   var active = -1;
-  jQuery("input[name='autocomplete']").keypress(function( event ){    
+  jQuery("input[name='autocomplete']").keypress(function( event ){
     var suggest_a = jQuery('#suggest a');
     var qnts_a = suggest_a.length;
-      
+
     if( 40==event.keyCode )//seta baixo
       active = active>=(qnts_a-1) ? 0 : active+1;
     else if( 38==event.keyCode )//seta cima
       active = ( active<=0 ) ? qnts_a-1 : active-1;
-    
-    
-    
-    var a = suggest_a.removeClass('active').eq( active ).addClass('active');  
+
+
+
+    var a = suggest_a.removeClass('active').eq( active ).addClass('active');
     jQuery( this ).val( a.text() );
   });
 });
@@ -73,7 +73,7 @@ label { position: relative; }
 ```
 
 </html>
-  
+
 e vc? faria de outro jeito ?
 
 ainda vou pesquisar para ver como &#8216;costumam fazer por ai&#8217;. Essa foi a forma que eu pensei para resolver.

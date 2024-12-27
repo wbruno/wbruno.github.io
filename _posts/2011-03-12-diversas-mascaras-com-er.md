@@ -14,7 +14,7 @@ tags:
   - máscara
 ---
 A referência do criador desse script está aqui:
-  
+
 <a href="http://elcio.com.br/ajax/mascara/" target="_blank">http://elcio.com.br/ajax/mascara/</a>
 
 de minha autoria, é a máscara mvalor, e mais algumas simples como a mrg
@@ -101,4 +101,4 @@ function mvalor(v){
 <input type="text" onkeyup="mascara(this, mvalor);" />
 ```
 
-Se você está precisando de uma máscara para telefone com o nono dígito, veja aqui: [mascara com expressão regular do nono dígito do estado de são paulo](http://wbruno.com.br/2012/08/02/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/).
+Se você está precisando de uma máscara para telefone com o nono dígito, veja aqui: [mascara com expressão regular do nono dígito do estado de são paulo](https://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/).

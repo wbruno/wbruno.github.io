@@ -51,10 +51,10 @@ Já fiz freela presencial para uma agência, onde o único editor que eles tinha
 
 No caso dessa agência em particular, usavam o DW em modo código, mas quando algum projeto estava &#8216;muito apertado&#8217;, eles tinham a coragem de mudar para o Visual, fazer e entregar, tudo de &#8216;forma rápida&#8217;, visando a &#8216;produtividade&#8217;.
 
-Neste instante, eles adotaram a metodologia dos CQPs [[Caras que Programam](http://www.wbruno.com.br/2011/03/29/diferenca-entre-cara-programa-um-programador/)]. Só que de uma forma ainda pior: era o editor que estava programando por eles !
+Neste instante, eles adotaram a metodologia dos CQPs [[Caras que Programam](https://wbruno.com.br/opiniao/diferenca-entre-cara-programa-um-programador/)]. Só que de uma forma ainda pior: era o editor que estava programando por eles !
 
 Não existe só o DreamWeaver de Editor &#8220;Oque vc vê, é oque vc tem&#8221;. FrontPage, e até o Word, te possibilitam &#8216;criar sites&#8217;. Porém não usamos isso mais hoje em dia, pois não vale a pena &#8216;entregar logo&#8217;, se num futuro não distante, teremos que dar manutenção no monstro que o &#8216;WYS'(Visual) criou pra gente.
 
-É a mesma questão do [uso de frameworks](http://www.wbruno.com.br/2011/04/04/nao-jquery-nao-aprenda-qualquer-framework-antes-de/). Depende do teu nível de conhecimento.
+É a mesma questão do [uso de frameworks](https://wbruno.com.br/opiniao/nao-jquery-nao-aprenda-qualquer-framework-antes-de/). Depende do teu nível de conhecimento.
 
 Aprenda bem e entenda antes de usar. Não seja dominado, nem dependente, e nem escravo.

@@ -15,7 +15,7 @@ tags:
 ---
 Boas galera!
 
-Este aqui, é complementar do <a href="http://www.wbruno.com.br/2009/08/26/combobox-preenche-input-ajax/" target="_blank">Combobox preenche input ajax</a>.
+Este aqui, é complementar do <a href="https://wbruno.com.br/ajax/combobox-preenche-input-ajax" target="_blank">Combobox preenche input ajax</a>.
 
 Muita gente já perguntou, e já vi muitos outros usando esse meu script por ai. Para facilitar, fica aqui o script modificado, para que no lugar do <var><select></var>, seja um <var><input></var>, que no evento **onblur**, vai preencher o restante do formulário.
 

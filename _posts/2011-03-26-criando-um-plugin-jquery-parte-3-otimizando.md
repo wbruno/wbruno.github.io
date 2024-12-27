@@ -154,6 +154,6 @@ Obrigado por ter acompanhando esses 3 posts. Espero que eles sejam úteis, para 
 
 ## <a href="http://www.wbruno.com.br/placeholder/" target="_blank">Demonstração</a>
 
-[Parte 1](http://www.wbruno.com.br/2011/03/24/criando-um-plugin-jquery-parte-1-comecando/)
+[Parte 1](https://wbruno.com.br/jquery/criando-um-plugin-jquery-parte-1-comecando/)
 
-[Parte 2](http://www.wbruno.com.br/2011/03/25/criando-um-plugin-jquery-parte-2-codificando/)
+[Parte 2](https://wbruno.com.br/jquery/criando-um-plugin-jquery-parte-2-codificando/)

@@ -11,22 +11,22 @@ dsq_thread_id:
 categories:
   - jQuery
 ---
-Hum.. eu já havia dito que na minha opinião, o fluxo correto, é <a href="http://wbruno.com.br/2011/04/04/nao-jquery-nao-aprenda-qualquer-framework-antes-de/" target="_blank">primeiro aprender javascript, para só depois estudar a biblioteca</a>.
+Hum.. eu já havia dito que na minha opinião, o fluxo correto, é <a href="https://wbruno.com.br/opiniao/nao-jquery-nao-aprenda-qualquer-framework-antes-de/" target="_blank">primeiro aprender javascript, para só depois estudar a biblioteca</a>.
 
 Mas e se você já está no meio do caminho ?
-  
+
 Achava javaScript &#8216;muito dificil&#8217;, chato, não via nem utilidade.. e então foi para o mundo do &#8220;Write Less, Do More&#8221;, sem ter uma boa base em js..
-  
+
 <!--more-->
 
 Bom, ai dependendo do tempo e experiência que vc tem em programação, vc pode saber oque está fazendo, ou não.
-  
+
 Enfim, gostaria de listar algumas coisas interessantes sobre a biblioteca, mas que pelo menos eu, nunca vi sendo discutido por ai.
 
 ## jQuery é apenas javascript
 
 Isso e nada mais. Se fizeram com a lib, dá para fazer sem. E o mesmo se aplica, qndo precisamos pensar, que a estrutura da sintaxe do jQuery, é apenas javascript.
-  
+
 Vamos olhar por partes:
 
 ``` js
@@ -50,7 +50,7 @@ function(){
 ```
 
 Poxa! e oque é isso ? é apenas uma function, só que _sem nome_ certo ?
-  
+
 estamos acostumados com funções assim:
 
 ``` js
@@ -60,7 +60,7 @@ function a(){}
 , sendo então **a**, o _nome_ da nossa função.
 
 Blz, então passamos uma **função anônima**, para o callback do método .ready()!
-  
+
 caramba! qnta coisa que fazíamos sem notar, ne?!
 
 Hum.. e qual o ponto interessante disso ? é que devemos poder fazer:
@@ -99,7 +99,7 @@ também continuaria funcionando. Tudo normal.
 ## jSON
 
 Mas olha que interessante agora, o plugin recebe como parâmetro um objeto javascript.
-  
+
 Só que estamos jogando esse objeto diretamente ali. Se por algum motivo tivermos que instanciar novamente o mesmo plugin, já vi códigos assim:
 
 ``` js
@@ -114,11 +114,11 @@ $('a[rel*=facebox]').facebox({
 ```
 
 hum&#8230; deve ser evidente a duplicação de instruções.
-  
+
 E oque devemos fazer com isso ?
-  
+
 Juntar em uma só!
-  
+
 se não pudermos fazer:
 
 ``` js
@@ -170,9 +170,9 @@ Hum&#8230; essa é interessante:
 ```
 
 E ai? que diabos é isso ?
-  
+
 é uma função anônima autoexecutável, que recebe o objeto **jQuery** como parâmetro.
-  
+
 Veja que o argumento é $, então podemos usar esse símbolo normalmente dentro dessa function, sem nos preocupar com conflito, pois externamente a essa function, passamos um **jQuery**, e o $, ficou restrito ao escopo dessa anônima.
 
 **clousures** é um conceito muito interessante. Vale a pena pesquisar e entender a beleza.

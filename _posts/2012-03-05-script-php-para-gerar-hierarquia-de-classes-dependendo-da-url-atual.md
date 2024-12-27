@@ -13,7 +13,7 @@ categories:
 ---
 Fiz um post semana passada, sobre como podemos melhor aproveitar o elemento **body** dos nossos sites:
 
-<a href="http://wbruno.com.br/2012/03/01/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/" target="_blank">http://wbruno.com.br/2012/03/01/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/</a>
+<a href="https://wbruno.com.br/css/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/" target="_blank">https://wbruno.com.br/css/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/</a>
 
 E nele eu cito, que o _&#8220;trabalho&#8221;_ do server-side, seria gerar essas classes no body, ou então nós mesmos fazer isso &#8220;na mão&#8221;, página por página.
 

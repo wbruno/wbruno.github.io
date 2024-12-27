@@ -13,18 +13,18 @@ categories:
 ---
 Hehe, salve salve!!
 
-Acabei de fazer um post: [Div centralizada vertical/horizontal, e fixa com resize da janela](http://www.wbruno.com.br/2011/03/23/div-centralizada-verticalhorizontal-fixa-resize-janela/), mas ai vi que faltava uma coisa nele:
+Acabei de fazer um post: [Div centralizada vertical/horizontal, e fixa com resize da janela](https://wbruno.com.br/javascript-puro/div-centralizada-verticalhorizontal-fixa-resize-janela/), mas ai vi que faltava uma coisa nele:
 
 A div se movimentar junto com a rolagem da janela(tecnicamente), ou seja, a DIV ficar fixa(aparentemente pro usuario).
-  
+
 Aquela coisa chata de propagandas, em que vc vai rolando o site, e tem um treco na frente.. que não sai do meio da tela.
-  
+
 <!--more-->
 
 
-  
+
 Apesar de chato pro usuário, ajuda bastante os desenvolvedores a divulgar informações.
-  
+
 Pequena alteração no outro script:
 
 Onde era somente:

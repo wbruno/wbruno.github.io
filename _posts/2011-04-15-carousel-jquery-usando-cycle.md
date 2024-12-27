@@ -77,7 +77,7 @@ Quando o **cycle**, fizer a transição, ele irá rolar esse bloco para escondê
 
 Se quisessemos mostrar de 3 em 3 fotos, cada bloco nosso, deveria ter 3 <li>, com as respectivas imagens. E assim por diante.
 
-Assim como da outra vez, em que fizemos uma [galeria de fotos com jQuery](http://www.wbruno.com.br/2011/03/14/banner-galeria-slideshow-adcast-mostrando-um-pouco-poder-cycle-jquery/), o script é ridículo:
+Assim como da outra vez, em que fizemos uma [galeria de fotos com jQuery](https://wbruno.com.br/jquery/banner-galeria-slideshow-adcast-mostrando-um-pouco-poder-cycle-jquery/), o script é ridículo:
 
 ``` js
 $(document).ready(function(){

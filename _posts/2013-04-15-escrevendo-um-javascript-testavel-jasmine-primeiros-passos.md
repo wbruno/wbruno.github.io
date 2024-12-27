@@ -25,7 +25,7 @@ Estamos acostumados a programar assim:
 
 [<img src="/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png" alt="Código javascript não testável" width="288" height="300" class="aligncenter size-medium wp-image-2941" srcset="/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-288x300.png 288w, /wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44-984x1024.png 984w, /wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png 990w" sizes="(max-width: 288px) 100vw, 288px" />](/wp-content/uploads/2013/04/Captura-de-Tela-2013-04-11-às-10.47.44.png)
 
-Esse código acima, [formata um input em javascript com uma máscara assim: 000,0000](http://wbruno.com.br/2013/04/11/mascara-javascript-para-peso-com-preenchimento-ao-contrario/).
+Esse código acima, [formata um input em javascript com uma máscara assim: 000,0000](https://wbruno.com.br/javascript-puro/mascara-javascript-para-peso-com-preenchimento-ao-contrario/).
 
 Ao preencher o primeiro número, o script formata para <var>0,0001</var>, e assim por diante, apagando os demais zeros.
 

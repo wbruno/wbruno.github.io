@@ -13,9 +13,9 @@ categories:
 tags:
   - firefox
 ---
-[<img src="/wp-content/uploads/2011/04/firebug-large.png" alt="" title="firebug-large" width="264" height="211" class="alignleft size-full wp-image-485" />](/wp-content/uploads/2011/04/firebug-large.png)Esse post, é complemento do [Como debugar JavaScript com o Firefox?](http://www.wbruno.com.br/2011/03/31/como-debugar-javascript-firefox-erros-comuns/).
+[<img src="/wp-content/uploads/2011/04/firebug-large.png" alt="" title="firebug-large" width="264" height="211" class="alignleft size-full wp-image-485" />](/wp-content/uploads/2011/04/firebug-large.png)Esse post, é complemento do [Como debugar JavaScript com o Firefox?](https://wbruno.com.br/javascript-puro/como-debugar-javascript-firefox-erros-comuns/).
 
-A maioria das dúvidas que vejo _&#8216;[sobre AJAX](http://www.wbruno.com.br/2011/04/08/o-que-e-ajax-e-o-que-nao-e/)&#8216;_, na verdade são **sobre Javascript**. Então se você se deparar com **qualquer erro** no console, vá para o outro post, e depois volte.
+A maioria das dúvidas que vejo _&#8216;[sobre AJAX](https://wbruno.com.br/ajax/o-que-e-ajax-e-o-que-nao-e/)&#8216;_, na verdade são **sobre Javascript**. Então se você se deparar com **qualquer erro** no console, vá para o outro post, e depois volte.
 
 Vou usar o <a href="http://getfirebug.com/" target="_blank">Firebug</a>, para rastrear nossas requisições AJAX, e então explicar como pode ser simples o desenvolvimento dessa metodologia.
 

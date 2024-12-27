@@ -76,6 +76,6 @@ Não resolvi o problema ainda, mas já dei um belo passo para chegar lá.
 
 Para não ficar muito extenso o texto, vou dividir esse meu pensamento em uma série pequena de posts.
 
-[Parte 2](http://www.wbruno.com.br/2011/03/25/criando-um-plugin-jquery-parte-2-codificando/)
+[Parte 2](https://wbruno.com.br/jquery/criando-um-plugin-jquery-parte-2-codificando/)
 
-[Parte 3](http://www.wbruno.com.br/2011/03/26/criando-um-plugin-jquery-parte-3-otimizando/)
+[Parte 3](https://wbruno.com.br/jquery/criando-um-plugin-jquery-parte-3-otimizando/)

@@ -20,7 +20,7 @@ Portanto, vou deixar um exemplo de uso do plugin **jCarousel** aqui nesse post.
 
 <!--more-->
 
-Eu já havia mostrado como fazer um [Carousel usando o Cycle](http://wbruno.com.br/2011/04/15/carousel-jquery-usando-cycle/), então fica tb a dica de como usar o plugin jCarousel.
+Eu já havia mostrado como fazer um [Carousel usando o Cycle](https://wbruno.com.br/jquery/carousel-jquery-usando-cycle/), então fica tb a dica de como usar o plugin jCarousel.
 
 O HTML bem simples:
 

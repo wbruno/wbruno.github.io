@@ -9,7 +9,7 @@ permalink: /jquery/evitando-duplicacao-de-script-jquery/
 categories:
   - jQuery
 ---
-Este post, é uma aplicação direta, dos conceitos que expliquei aqui: <a href="http://wbruno.com.br/2011/07/18/vixi-aprendi-jquery-mas-agora/" target="_blank">Aprendi jQuery, e agora ?</a>
+Este post, é uma aplicação direta, dos conceitos que expliquei aqui: <a href="https://wbruno.com.br/jquery/vixi-aprendi-jquery-mas-agora/" target="_blank">Aprendi jQuery, e agora ?</a>
 
 Acabei de ver um user no fórum que precisava disparar uma mesma rotina, para campos input e select.
 

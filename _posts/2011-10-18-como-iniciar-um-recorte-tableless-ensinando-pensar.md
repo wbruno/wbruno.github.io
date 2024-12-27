@@ -13,7 +13,7 @@ categories:
 tags:
   - tableless
 ---
-Depois do post motivacional para [iniciar o recorte Tableless](http://wbruno.com.br/2011/10/10/como-iniciar-um-recorte-tableless-comece/), vamos agora entender como pensar.
+Depois do post motivacional para [iniciar o recorte Tableless](https://wbruno.com.br/css/como-iniciar-um-recorte-tableless-comece/), vamos agora entender como pensar.
 
 <!--more-->
 

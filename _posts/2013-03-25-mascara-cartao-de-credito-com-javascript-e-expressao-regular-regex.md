@@ -13,10 +13,10 @@ categories:
 tags:
   - máscara
 ---
-EU já havia postado [diversas máscaras com javascript e regex](http://wbruno.com.br/2011/03/12/diversas-mascaras-com-er/), e hoje um cara no fórum pediu uma máscara para **cartão de crédito**.
+EU já havia postado [diversas máscaras com javascript e regex](https://wbruno.com.br/expressao-regular/diversas-mascaras-com-er/), e hoje um cara no fórum pediu uma máscara para **cartão de crédito**.
 
 É bem simples, 4 grupos de números separados por espaços.&#8221;9999 9999 9999 9999&#8243;.
-  
+
 Eu odeio os plugins de máscaras, pois eles sempre dão algum tipo de problema, como impedir usar backspace, o backspace funcionar até se tiver readonly, comer números, ser impossível editar corretamente, jogar o cursor no lugar errado..
 
 Então eu sempre uso essas máscaras com expressões regulares. Funcionam muito bem, são super crossbrowsers, e tem ótima performance.

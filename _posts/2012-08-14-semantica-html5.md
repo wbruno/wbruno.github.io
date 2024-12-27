@@ -134,4 +134,4 @@ Devemos sempre nos lembrar que a disposição é responsabilidade exclusiva do *
 
 A semântica nos diz apenas o que cada elemento representa, qual é a informação que aquele conteúdo possui.
 
-[Olhe para o teu conteúdo, e deixe que ele te responda o que ele é.](http://wbruno.com.br/2011/05/17/nem-so-de-div-vive-um-desenvolvedor-frontend/ "HTML Semântico")
+[Olhe para o teu conteúdo, e deixe que ele te responda o que ele é.](https://wbruno.com.br/opiniao/nem-so-de-div-vive-um-desenvolvedor-frontend/ "HTML Semântico")

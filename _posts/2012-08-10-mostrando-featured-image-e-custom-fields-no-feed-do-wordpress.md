@@ -13,7 +13,7 @@ categories:
 ---
 Sabendo ler o namespace **<content:encoded>**, do feed do wordpress, conforme eu postei aqui:
 
-[Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress](http://wbruno.com.br/2012/08/08/ler-namespace-xml-php-usando-a-simplexml/ "Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress")
+[Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress](https://wbruno.com.br/wordpress/ler-namespace-xml-php-usando-a-simplexml/ "Ler namespace xml php, usando a simplexml – content:encoded – feed WordPress")
 
 Podemos adicionar mais coisas interessantes nesse nosso feed, como os **Custom Fields**.
 

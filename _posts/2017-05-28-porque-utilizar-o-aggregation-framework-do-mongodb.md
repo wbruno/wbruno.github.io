@@ -2,7 +2,7 @@
 id: 3565
 title: Porque utilizar o aggregation framework do MongoDB ?
 date: 2017-05-28T12:26:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3565
 permalink: /mongodb/porque-utilizar-o-aggregation-framework-do-mongodb/

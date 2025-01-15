@@ -2,7 +2,7 @@
 id: 1728
 title: 'Setar combo pelo .text() do option - jQuery'
 date: 2012-01-19T10:58:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1728
 permalink: /jquery/setar-combo-pelo-text-option-jquery/

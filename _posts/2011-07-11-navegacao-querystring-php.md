@@ -2,7 +2,7 @@
 id: 1167
 title: 'Navegação com QueryString - php'
 date: 2011-07-11T20:31:38+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1167
 permalink: /php/navegacao-querystring-php/

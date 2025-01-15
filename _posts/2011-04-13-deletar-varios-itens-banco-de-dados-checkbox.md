@@ -2,7 +2,7 @@
 id: 742
 title: Deletar vários itens do banco de dados, com checkbox
 date: 2011-04-13T13:00:25+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=742
 permalink: /php/deletar-varios-itens-banco-de-dados-checkbox/

@@ -2,7 +2,7 @@
 id: 770
 title: Carousel jQuery usando o Cycle
 date: 2011-04-15T15:20:48+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=770
 permalink: /jquery/carousel-jquery-usando-cycle/

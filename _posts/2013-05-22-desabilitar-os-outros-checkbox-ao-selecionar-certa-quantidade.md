@@ -2,7 +2,7 @@
 id: 2990
 title: Desabilitar os outros checkboxes ao selecionar certa quantidade
 date: 2013-05-22T16:45:28+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2990
 permalink: /javascript-puro/desabilitar-os-outros-checkbox-ao-selecionar-certa-quantidade/

@@ -2,7 +2,7 @@
 id: 846
 title: Afinal o que é Orientação a Objetos ?
 date: 2011-04-29T00:07:01+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=846
 permalink: /opiniao/afinal-e-orientacao-objetos/

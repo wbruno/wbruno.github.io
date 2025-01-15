@@ -2,7 +2,7 @@
 id: 1375
 title: 'Simulando um mousestop() com jQuery - javascript'
 date: 2011-09-03T10:14:51+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1375
 permalink: /jquery/simulando-um-mousestop-jquery-javascript/

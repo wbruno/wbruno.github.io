@@ -2,7 +2,7 @@
 id: 1171
 title: 'Traduzir URLs - inglês/português/espanhol'
 date: 2011-07-12T00:23:17+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1171
 permalink: /php/traduzir-urls-inglesportuguesespanhol/

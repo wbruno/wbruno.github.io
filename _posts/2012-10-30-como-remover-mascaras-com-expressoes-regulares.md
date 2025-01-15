@@ -2,7 +2,7 @@
 id: 2763
 title: Como remover máscaras com Expressões Regulares
 date: 2012-10-30T07:00:15+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2763
 permalink: /expressao-regular/como-remover-mascaras-com-expressoes-regulares/
@@ -18,7 +18,7 @@ Para entender Expressões Regulares, é preciso conseguir enxergar os padrões d
 Um telefone possui o seguinte padrão:
 
 <var>(xx) xxxx-xxxx</var> ou no caso de São Paulo(neste momento): <var>(xx) 9xxxx-xxxx</var>
-  
+
 Sendo cada x, um número 1,2,3,4,5,6,7,8 ou 9.
 
 Eu posso escrever uma ER que case com os telefones assim:

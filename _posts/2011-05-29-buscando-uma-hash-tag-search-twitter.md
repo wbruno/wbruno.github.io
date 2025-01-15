@@ -2,7 +2,7 @@
 id: 1060
 title: Buscando uma hash tag no search do Twitter
 date: 2011-05-29T07:00:56+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1060
 permalink: /php/buscando-uma-hash-tag-search-twitter/

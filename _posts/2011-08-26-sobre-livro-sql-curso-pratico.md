@@ -2,7 +2,7 @@
 id: 1364
 title: 'Sobre o livro &#8220;SQL Curso Prático&#8221;'
 date: 2011-08-26T12:00:47+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1364
 permalink: /livro/sobre-livro-sql-curso-pratico/

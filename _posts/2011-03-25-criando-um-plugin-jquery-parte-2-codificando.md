@@ -2,7 +2,7 @@
 id: 337
 title: 'Criando um plugin jQuery - parte 2 - Codificando'
 date: 2011-03-25T07:00:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=337
 permalink: /jquery/criando-um-plugin-jquery-parte-2-codificando/

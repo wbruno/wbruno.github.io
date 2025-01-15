@@ -2,7 +2,7 @@
 id: 3047
 title: Afinal, usar ou não seletores IDs no css ?
 date: 2014-02-12T08:00:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3047
 permalink: /css/afinal-usar-ou-nao-seletores-ids-no-css/

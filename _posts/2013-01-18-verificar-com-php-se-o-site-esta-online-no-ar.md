@@ -2,7 +2,7 @@
 id: 2893
 title: Verificar com php se o site está online (no ar)
 date: 2013-01-18T11:59:14+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2893
 permalink: /php/verificar-com-php-se-o-site-esta-online-no-ar/
@@ -25,7 +25,7 @@ Um simples código com a lib cURL do php, para verificar se um site está ou nã
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
     curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
     curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
-        
+
     $content = curl_exec( $ch );
     $info = curl_getinfo( $ch );
 
@@ -52,13 +52,13 @@ Um simples código com a lib cURL do php, para verificar se um site está ou nã
 ```
 
 Capturo os cabeçalhos da requisição e verifico se o http_status é igual a 200.
-  
+
 Caso seja, significa que o site está sim no ar.
 
 Note que deixei a entrada:
-  
+
 `curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );`
-  
+
 para caso o site possua algum redirecionamento, como é o caso da locaweb, que redireciona a home para o /default.html
 
 É isso galera, comentem caso usem. =)

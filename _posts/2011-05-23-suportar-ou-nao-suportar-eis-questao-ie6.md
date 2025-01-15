@@ -2,7 +2,7 @@
 id: 985
 title: 'Suportar ou não suportar ? Eis a questão [ ie6- ]'
 date: 2011-05-23T07:00:51+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=985
 permalink: /opiniao/suportar-ou-nao-suportar-eis-questao-ie6/

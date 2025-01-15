@@ -2,7 +2,7 @@
 id: 2791
 title: Melhorando a qualidade do seu código jQuery
 date: 2012-10-03T11:12:42+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2791
 permalink: /jquery/melhorando-a-qualidade-do-seu-codigo-jquery/

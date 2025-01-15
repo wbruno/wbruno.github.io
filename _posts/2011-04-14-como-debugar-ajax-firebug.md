@@ -2,7 +2,7 @@
 id: 484
 title: Como debugar AJAX com o FireBug ?
 date: 2011-04-14T06:55:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=484
 permalink: /ajax/como-debugar-ajax-firebug/

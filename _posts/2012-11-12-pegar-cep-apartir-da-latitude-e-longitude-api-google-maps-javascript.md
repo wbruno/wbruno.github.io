@@ -2,7 +2,7 @@
 id: 2832
 title: 'Pegar CEP apartir da latitude e longitude - API google maps javascript'
 date: 2012-11-12T12:48:08+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2832
 permalink: /javascript-puro/pegar-cep-apartir-da-latitude-e-longitude-api-google-maps-javascript/

@@ -2,7 +2,7 @@
 id: 3567
 title: Como fazer uma boa entrevista técnica?
 date: 2021-04-29T16:00:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3567
 permalink: /opiniao/como-fazer-uma-boa-entrevista-tecnica/

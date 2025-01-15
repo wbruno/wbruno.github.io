@@ -2,7 +2,7 @@
 id: 1084
 title: 'Listar categorias e subcategorias - php e mysql'
 date: 2011-06-16T07:00:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1084
 permalink: /sql/listar-categorias-subcategorias-php-mysql/

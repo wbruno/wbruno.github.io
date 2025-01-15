@@ -2,7 +2,7 @@
 id: 1062
 title: Ler rss do WordPress com php
 date: 2011-06-01T07:00:23+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1062
 permalink: /wordpress/ler-rss-wordpress-php/
@@ -14,7 +14,7 @@ tags:
 Vou usar a lib **simplexml\_load\_file()**, para resgatar o RSS da categoria php do meu blog WordPress.
 
 Para ler o conteudo dentro de CDATA(conteudo do post, categorias&#8230;), preciso passar um parâmetro adicional para a classe **LIBXML_NOCDATA**
-  
+
 <a href="http://br.php.net/manual/en/libxml.constants.php" target="_blank">http://br.php.net/manual/en/libxml.constants.php</a>
 
 <!--more-->

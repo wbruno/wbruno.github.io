@@ -2,7 +2,7 @@
 id: 2916
 title: 'Desligar responsivo - botão versão desktop'
 date: 2013-02-24T14:22:20+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2916
 permalink: /javascript-puro/desligar-responsivo-botao-versao-desktop/

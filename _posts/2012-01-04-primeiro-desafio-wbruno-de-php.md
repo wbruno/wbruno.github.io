@@ -2,7 +2,7 @@
 id: 1700
 title: Primeiro Desafio wbruno de PHP
 date: 2012-01-04T16:33:58+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1700
 permalink: /php/primeiro-desafio-wbruno-de-php/

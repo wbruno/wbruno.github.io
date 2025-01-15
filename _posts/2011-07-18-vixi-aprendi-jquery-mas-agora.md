@@ -2,7 +2,7 @@
 id: 1117
 title: 'Vixi! &#8216;aprendi&#8217; jQuery mas e agora ?'
 date: 2011-07-18T07:00:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1117
 permalink: /jquery/vixi-aprendi-jquery-mas-agora/

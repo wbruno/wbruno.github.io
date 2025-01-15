@@ -2,7 +2,7 @@
 id: 475
 title: Adicionar inputs, com opção de removê-los
 date: 2011-04-01T07:00:13+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=475
 permalink: /jquery/adicionar-inputs-opcao-de-remove-los/

@@ -2,7 +2,7 @@
 id: 1038
 title: Navegação sem refresh – carregando conteúdo com ajax em div 2
 date: 2011-05-27T07:00:13+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1038
 permalink: '/ajax/navegacao-sem-refresh-%e2%80%93-carregando-conteudo-ajax-em-div-2/'

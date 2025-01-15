@@ -2,7 +2,7 @@
 id: 2173
 title: 'Semântica html5 - Comece agora mesmo! Use!'
 date: 2012-08-14T07:00:52+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2173
 permalink: /html/semantica-html5/

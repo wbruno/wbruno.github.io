@@ -2,7 +2,7 @@
 id: 73
 title: 2 submits valores diferentes
 date: 2010-09-22T21:41:09+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=73
 permalink: /javascript-puro/2-submits-valores-diferentes/

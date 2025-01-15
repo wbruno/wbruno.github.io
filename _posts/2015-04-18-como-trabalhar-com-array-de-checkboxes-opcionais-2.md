@@ -2,7 +2,7 @@
 id: 3344
 title: Como trabalhar com array de checkboxes opcionais 2
 date: 2015-04-18T20:19:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3344
 permalink: /php/como-trabalhar-com-array-de-checkboxes-opcionais-2/

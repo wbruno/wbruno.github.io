@@ -2,7 +2,7 @@
 id: 1199
 title: 'Fazendo um &#8216;gif animado&#8217; com javascript e um sprite .jpg'
 date: 2011-07-19T07:00:31+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1199
 permalink: /javascript-puro/fazendo-um-gif-animado-javascript-um-sprite-jpg/

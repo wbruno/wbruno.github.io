@@ -2,7 +2,7 @@
 id: 2929
 title: 'Afinal, como é Orientação a Objetos em JavaScript ? - Exemplos'
 date: 2013-05-21T07:00:06+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2929
 permalink: /javascript-puro/afinal-como-e-orientacao-a-objetos-em-javascript-exemplos/

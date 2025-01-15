@@ -2,7 +2,7 @@
 id: 63
 title: Somar inputs dentro de fieldset javascript
 date: 2010-07-23T23:54:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=63
 permalink: /javascript-puro/somar-inputs-dentro-de-fieldset-javascript/

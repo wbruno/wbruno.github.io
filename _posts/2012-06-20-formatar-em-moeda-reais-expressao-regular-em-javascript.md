@@ -2,7 +2,7 @@
 id: 2058
 title: Formatar em moeda reais com expressão regular em javascript
 date: 2012-06-20T14:02:30+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2058
 permalink: /expressao-regular/formatar-em-moeda-reais-expressao-regular-em-javascript/
@@ -14,9 +14,9 @@ tags:
   - máscara
 ---
 Boas!
-  
+
 Fiz aqui rapidinho uma função <var>getMoney()</var> que recebe uma string no formato: **R$ 1.000,00** e retorna um inteiro, para podermos fazer contas em javascript.
-  
+
 Depois uma outra função <var>formatReal()</var> que recebe um inteiro e devolve o número formatado segundo a nossa moeda: Real.
 
 Entrada:
@@ -42,7 +42,7 @@ Saida:
 ```
 
 Utilizei a função str.replace() nativa da linguagem javascript, e algumas expressões regulares.
-  
+
 Atualmente só formata até 999mil reais, não fiz a ER para colocar o ponto dos milhões.
 
 ``` html

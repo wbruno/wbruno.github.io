@@ -2,7 +2,7 @@
 id: 1725
 title: Galerias de imagens com jQuery.lightBox do Leandro Vieira
 date: 2012-01-19T02:14:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1725
 permalink: /jquery/galerias-de-imagens-jquery-lightbox-leandro-vieira/

@@ -2,7 +2,7 @@
 id: 328
 title: Upload de arquivo via FTP com php
 date: 2011-03-24T16:00:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=328
 permalink: /php/upload-de-arquivo-ftp-php/
@@ -12,7 +12,7 @@ categories:
   - PHP
 ---
 Formulário HTML, enviando arquivo via FTP com php.
-  
+
 Apenas o mínimo necessário para fazer o upload.
 
 <!--more-->

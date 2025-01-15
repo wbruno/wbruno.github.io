@@ -2,7 +2,7 @@
 id: 3569
 title: '2012 re:Invent Day 2 Keynote: Werner Vogels?'
 date: 2025-01-15T13:00:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3569
 permalink: /opiniao/reinvent-2012-werner-vogels/
@@ -26,7 +26,7 @@ O Dr Werner abre a apresentação citando outra que ele fez em 2007, onde os mai
 - Removes the "Heavy Lifiting"
 - Foudation for 21th Century Architectures
 
-No "Old World", existiam diversas restrições, como hardware.
+No "Old World", existiam diversas restrições, como hardware. No novo mundo, podemos construir arquiteturas que não estão mais restringidas, a não ser pela velocidade da luz.
 Se provisionarmos para picos, sem elasticidade (servidores físicos), a amazon teria ociosidade em ~39 a 76% do tempo.
 
 21st Century Architectures, são:

@@ -2,7 +2,7 @@
 id: 1050
 title: Não tenha medo do código
 date: 2011-05-30T07:00:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1050
 permalink: /opiniao/nao-tenha-medo-codigo/

@@ -2,7 +2,7 @@
 id: 3304
 title: Quem é você ?
 date: 2015-04-03T10:09:14+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3304
 permalink: /opiniao/quem-e-voce/

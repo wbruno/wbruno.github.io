@@ -2,7 +2,7 @@
 id: 2931
 title: 'Máscara cartão de crédito com javascript e expressão regular - regex'
 date: 2013-03-25T10:35:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2931
 permalink: /expressao-regular/mascara-cartao-de-credito-com-javascript-e-expressao-regular-regex/

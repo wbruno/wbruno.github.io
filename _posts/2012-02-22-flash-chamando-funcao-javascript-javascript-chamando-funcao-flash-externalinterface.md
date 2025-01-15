@@ -2,7 +2,7 @@
 id: 1788
 title: 'Flash chamando função javascript, e javascript chamando função do flash - ExternalInterface'
 date: 2012-02-22T13:37:05+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1788
 permalink: /javascript-puro/flash-chamando-funcao-javascript-javascript-chamando-funcao-flash-externalinterface/

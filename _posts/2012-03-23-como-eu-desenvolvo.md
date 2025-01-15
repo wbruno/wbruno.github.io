@@ -2,7 +2,7 @@
 id: 1934
 title: Como eu desenvolvo ?
 date: 2012-03-23T07:00:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1934
 permalink: /opiniao/como-eu-desenvolvo/

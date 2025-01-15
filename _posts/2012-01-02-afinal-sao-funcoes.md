@@ -2,7 +2,7 @@
 id: 1595
 title: Afinal, o que são funções ?
 date: 2012-01-02T12:18:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1595
 permalink: /php/afinal-sao-funcoes/

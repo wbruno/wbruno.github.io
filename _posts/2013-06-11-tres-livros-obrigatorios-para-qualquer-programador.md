@@ -2,7 +2,7 @@
 id: 3016
 title: Três livros obrigatórios para qualquer programador
 date: 2013-06-11T07:00:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3016
 permalink: /livro/tres-livros-obrigatorios-para-qualquer-programador/

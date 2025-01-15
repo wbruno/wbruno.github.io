@@ -2,7 +2,7 @@
 id: 3457
 title: 'Como viver com pouco HD - Macbook 128GB SSD'
 date: 2015-10-10T00:31:09+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3457
 permalink: /mac/como-viver-com-pouco-hd-macbook-128gb-ssd/

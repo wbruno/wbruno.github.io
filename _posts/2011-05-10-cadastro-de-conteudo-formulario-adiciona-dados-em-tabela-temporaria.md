@@ -2,7 +2,7 @@
 id: 908
 title: Cadastro de conteudo, formulário adiciona dados em tabela temporária
 date: 2011-05-10T07:00:02+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=908
 permalink: /javascript-puro/cadastro-de-conteudo-formulario-adiciona-dados-em-tabela-temporaria/

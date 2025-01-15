@@ -2,7 +2,7 @@
 id: 817
 title: Input preenche formulário com ajax
 date: 2011-04-18T23:59:45+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=817
 permalink: /ajax/input-preenche-formulario-ajax/

@@ -2,7 +2,7 @@
 id: 824
 title: 'Afinal o que é Interface ? [oop]'
 date: 2011-04-20T06:55:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=824
 permalink: /php/afinal-e-interface-oop/

@@ -2,7 +2,7 @@
 id: 212
 title: Teclado Virtual Javascript
 date: 2011-03-12T00:34:17+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=212
 permalink: /javascript-puro/teclado-virtual-javascript/
@@ -23,8 +23,8 @@ function val( destino, valor ){
 }
 var focus = false;
 window.onload = function(){
-       
-       
+
+
         var botoes = id('teclado').getElementsByTagName('input');
         for( var i=0; i<botoes.length; i++ ){
                 botoes[i].onclick = function(){
@@ -34,7 +34,7 @@ window.onload = function(){
                         id( focus ).focus();
                 }
         }
-       
+
         var inputs = id('area').getElementsByTagName('input');
         for( var i=0; i<inputs.length; i++ ){
                 inputs[i].onfocus = function(){
@@ -65,15 +65,15 @@ fieldset { margin: 5px; }
                                 <input type="button" name="7" value="7" />
                                 <input type="button" name="8" value="8" />
                                 <input type="button" name="9" value="9" />
-                               
+
                                 <input type="button" name="4" value="4" />
                                 <input type="button" name="5" value="5" />
                                 <input type="button" name="6" value="6" />
-                               
+
                                 <input type="button" name="1" value="1" />
                                 <input type="button" name="2" value="2" />
                                 <input type="button" name="3" value="3" />
-                               
+
                                 <input type="button" name="0" value="0" />
                         </fieldset>
                         <fieldset>
@@ -100,11 +100,11 @@ fieldset { margin: 5px; }
                                 <input type="button" name="l" value="l" />
                                 <input type="button" name="ç" value="ç" />
                         </fieldset>
-                        <fieldset>                      
+                        <fieldset>
                                 <input type="button" name="z" value="z" />
                                 <input type="button" name="x" value="x" />
                                 <input type="button" name="c" value="c" />
-                                <input type="button" name="v" value="v" />                      
+                                <input type="button" name="v" value="v" />
                                 <input type="button" name="b" value="b" />
                                 <input type="button" name="n" value="n" />
                                 <input type="button" name="m" value="m" />

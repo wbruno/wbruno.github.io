@@ -2,7 +2,7 @@
 id: 2988
 title: 'Como criar um tema WordPress - Tutorial Básico'
 date: 2013-06-04T07:00:44+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2988
 permalink: /wordpress/como-criar-um-tema-wordpress-tutorial-basico/
@@ -117,7 +117,7 @@ Você sempre vai precisar ter esses, na raiz do seu tema:
   Theme Name: wbruno
   Theme URI: http://wbruno.com.br
   Description: Tema do blog wbruno
-  Author: William Bruno
+  author: wbruno
   Author URI: http://wbruno.com.br
   Version: 0.0.3
   Tags: light, two-columns, fixed-width, left-sidebar, flexible-width, sticky-post

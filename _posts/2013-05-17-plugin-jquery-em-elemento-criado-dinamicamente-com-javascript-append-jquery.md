@@ -2,7 +2,7 @@
 id: 2973
 title: 'Plugin jQuery em elemento criado dinamicamente com javascript - append jQuery'
 date: 2013-05-17T10:51:44+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2973
 permalink: /jquery/plugin-jquery-em-elemento-criado-dinamicamente-com-javascript-append-jquery/

@@ -2,7 +2,7 @@
 id: 214
 title: Destacar Tr De Tabela Zebrada, Ao Passar O Mouse. Voltando A Cor Original Ao Sair
 date: 2011-03-12T00:35:08+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=214
 permalink: /javascript-puro/destacar-tr-de-tabela-zebrada-ao-passar-o-mouse-voltando-a-cor-original-ao-sair/

@@ -2,7 +2,7 @@
 id: 2615
 title: 'Sistema de GRID CSS 960 - Classes CSS com mais significado'
 date: 2012-08-23T07:00:57+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2615
 permalink: /css/sistema-de-grid-css-column-grid-css/

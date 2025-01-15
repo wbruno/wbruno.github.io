@@ -2,7 +2,7 @@
 id: 280
 title: Validar e enviar formulário com ajax, usando jquery.validate
 date: 2011-03-21T15:35:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=280
 permalink: /jquery/validar-enviar-formulario-ajax-usando-jquery-validate/

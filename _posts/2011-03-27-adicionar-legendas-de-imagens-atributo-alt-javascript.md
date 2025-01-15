@@ -2,7 +2,7 @@
 id: 374
 title: Adicionar legendas de imagens, atributo alt com javascript
 date: 2011-03-27T14:57:19+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=374
 permalink: /javascript-puro/adicionar-legendas-de-imagens-atributo-alt-javascript/

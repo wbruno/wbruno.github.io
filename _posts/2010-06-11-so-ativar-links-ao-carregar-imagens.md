@@ -2,7 +2,7 @@
 id: 47
 title: só ativar links ao carregar imagens
 date: 2010-06-11T17:54:28+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=47
 permalink: /javascript-puro/so-ativar-links-ao-carregar-imagens/

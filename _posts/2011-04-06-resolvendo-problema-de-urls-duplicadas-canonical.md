@@ -2,7 +2,7 @@
 id: 623
 title: 'Resolvendo problema de URLs duplicadas - canonical'
 date: 2011-04-06T06:00:15+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=623
 permalink: /seo/resolvendo-problema-de-urls-duplicadas-canonical/

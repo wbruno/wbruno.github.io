@@ -2,7 +2,7 @@
 id: 1837
 title: Meu CSS mínimo comum a todos os projetos que desenvolvo
 date: 2012-03-06T07:00:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1837
 permalink: /css/meu-css-minimo-comum-todos-os-projetos-desenvolvo/
@@ -16,7 +16,7 @@ Gostaria de compartilhar, o meu reset.css, e as demais classes utilitárias e es
 Não uso nenhum dos &#8220;consagrados reset.css&#8221;, porque considero gordura ao meu estilo de desenvolver. Apenas zerar margin e padding, e me deixar livre para definir as regras das minhas tags é o suficiente, e tenho trabalhado bem assim.
 
 Tudo bem simples, a idéia é não encher a folha de coisas desnecessárias.
-  
+
 <!--more-->
 
 ``` css

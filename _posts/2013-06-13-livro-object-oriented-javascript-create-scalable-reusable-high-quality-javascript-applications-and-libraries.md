@@ -2,7 +2,7 @@
 id: 3021
 title: 'Review Livro: Object-Oriented JavaScript. Create scalable, reusable high-quality JavaScript applications, and libraries'
 date: 2013-06-13T07:00:11+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3021
 permalink: /livro/livro-object-oriented-javascript-create-scalable-reusable-high-quality-javascript-applications-and-libraries/

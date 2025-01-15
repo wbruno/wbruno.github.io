@@ -2,7 +2,7 @@
 id: 3014
 title: To Hell with Coffee Script !
 date: 2013-06-10T07:00:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3014
 permalink: /opiniao/to-hell-with-coffee-script/

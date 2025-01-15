@@ -2,7 +2,7 @@
 id: 1645
 title: Afinal, oque é Crescer Profissionalmente ?
 date: 2011-12-14T11:00:13+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1645
 permalink: /opiniao/afinal-oque-e-crescer-profissionalmente/

@@ -2,7 +2,7 @@
 id: 3509
 title: package.json entendendo os scripts
 date: 2015-11-16T11:43:51+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3509
 permalink: /nodejs/package-json-entendendo-os-scripts/

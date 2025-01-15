@@ -2,7 +2,7 @@
 id: 8
 title: Classe php, retorna dia, mês e ano por extenso
 date: 2009-08-16T23:47:15+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=8
 permalink: /php/classe-php-retorna-dia-mes-e-ano-por-extenso/

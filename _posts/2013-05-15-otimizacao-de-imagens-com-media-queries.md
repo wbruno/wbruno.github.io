@@ -2,7 +2,7 @@
 id: 2957
 title: Otimização de imagens com media queries
 date: 2013-05-15T08:58:04+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2957
 permalink: /css/otimizacao-de-imagens-com-media-queries/

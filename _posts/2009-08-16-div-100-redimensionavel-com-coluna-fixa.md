@@ -2,7 +2,7 @@
 id: 6
 title: 'Div 100% redimensionável, com coluna fixa!'
 date: 2009-08-16T02:38:21+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=6
 permalink: /css/div-100-redimensionavel-com-coluna-fixa/
@@ -14,7 +14,7 @@ categories:
 Boa galeraa!!!
 
 Vendo mais uma dúvida no fórum iMasters, resolvi criar uma solução simples e crossbrowser aqui.
-  
+
 Totalmente em CSS, e com uma marcação xHTML simples.
 
 Vamos lá!
@@ -88,7 +88,7 @@ p {
 ```
 
 Bom, não sei se tem muito oque explicar.. o código é este.
-  
+
 Qualquer coisa postem, que explico.
 
 ## Demonstração
@@ -98,5 +98,5 @@ Qualquer coisa postem, que explico.
 ## Código no github
 
 <a href="https://github.com/wbruno/examples/blob/gh-pages/100-with-fixed-width-column/index.html" target="_blank">100% com coluna</a>
-  
+
 !

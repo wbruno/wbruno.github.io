@@ -2,7 +2,7 @@
 id: 1044
 title: Acessar função de um iframe, apatir do documento pai
 date: 2011-05-27T15:00:45+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1044
 permalink: /javascript-puro/acessar-funcao-de-um-iframe-apatir-documento-pai/
@@ -18,11 +18,11 @@ Operação inversa dessa vez..
 para acessarmos uma função do documento pai, de dentro do iframe, o objeto **parent**, nos ajuda.
 
 Porém e ao contrário ?
-  
+
 <!--more-->
 
 
-  
+
 Do documento pai, acessar uma function no iframe.
 
 **index.html**

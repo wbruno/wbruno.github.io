@@ -2,7 +2,7 @@
 id: 2030
 title: 'Ponto no nome da variável da querystring - O php não aceita'
 date: 2012-06-01T13:29:09+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2030
 permalink: /php/ponto-nome-da-variavel-da-querystring-php-nao-aceita/

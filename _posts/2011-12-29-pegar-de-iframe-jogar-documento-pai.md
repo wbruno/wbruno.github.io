@@ -2,7 +2,7 @@
 id: 1672
 title: 'Pegar <title> de iframe, e jogar no documento pai'
 date: 2011-12-29T11:33:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1672
 permalink: /javascript-puro/pegar-de-iframe-jogar-documento-pai/

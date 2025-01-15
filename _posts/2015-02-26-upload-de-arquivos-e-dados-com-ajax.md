@@ -2,7 +2,7 @@
 id: 3290
 title: Upload de arquivos e dados com ajax
 date: 2015-02-26T13:44:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3290
 permalink: /ajax/upload-de-arquivos-e-dados-com-ajax/
@@ -13,11 +13,11 @@ tags:
   - php
 ---
 Ajax não envia arquivos.
-  
+
 Ajax não envia arquivos.
 
 Isso sempre foi verdade até a chegada de algumas APIs JavaScript junto com o html5.
-  
+
 <!--more-->
 
 Ajax nada mais é do que uma requisição http feita pelo objeto XMLHttpRequest, e o retorno é devolvido diretamente ao javascript, assim não tendo o famoso e as vezes indesejado &#8220;refresh&#8221;.

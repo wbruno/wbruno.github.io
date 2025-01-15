@@ -2,7 +2,7 @@
 id: 2938
 title: 'Não mostrar site até ter terminado de carregar - JavaScript (loading)'
 date: 2013-04-03T14:43:42+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2938
 permalink: /html/nao-mostrar-site-ate-ter-terminado-de-carregar-javascript-loading/

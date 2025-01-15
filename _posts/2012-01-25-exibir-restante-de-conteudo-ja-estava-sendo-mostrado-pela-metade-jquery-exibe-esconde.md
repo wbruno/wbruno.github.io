@@ -2,7 +2,7 @@
 id: 1754
 title: 'Exibir restante de conteúdo, que já estava sendo mostrado pela &#8220;metade&#8221;- jQuery exibe-esconde'
 date: 2012-01-25T07:00:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1754
 permalink: /jquery/exibir-restante-de-conteudo-ja-estava-sendo-mostrado-pela-metade-jquery-exibe-esconde/

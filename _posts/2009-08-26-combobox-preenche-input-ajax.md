@@ -2,7 +2,7 @@
 id: 12
 title: Combobox preenche input AJAX
 date: 2009-08-26T19:45:40+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=12
 permalink: /ajax/combobox-preenche-input-ajax/
@@ -14,7 +14,7 @@ tags:
   - formulário
 ---
 Eu tô estudando AJAX com jQuery.. dá uma olhada.. você vai precisar do jQuery:
-  
+
 script corrijido para versões jquery 1.4.2
 
 index.php

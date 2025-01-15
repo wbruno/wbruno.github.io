@@ -2,7 +2,7 @@
 id: 10
 title: Script simples de formulário de contato
 date: 2009-08-19T19:34:45+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=10
 permalink: /php/script-simples-de-formulario-de-contato/
@@ -14,7 +14,7 @@ tags:
   - formulário
 ---
 Script pra formulário de contato, enviando email com php.
-  
+
 Compatível com as novas diretrizes da Locaweb.
 
 ``` php

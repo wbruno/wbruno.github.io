@@ -2,7 +2,7 @@
 id: 1974
 title: Exemplo prático de Orientação a Objetos (php), diferenças e vantagens em relação à um código Estruturado
 date: 2012-05-08T11:25:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1974
 permalink: /php/exemplo-pratico-de-orientacao-objetos-php-diferencas-vantagens-em-relacao-a-um-codigo-estruturado/

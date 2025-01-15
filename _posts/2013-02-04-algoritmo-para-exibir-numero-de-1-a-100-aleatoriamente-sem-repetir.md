@@ -2,7 +2,7 @@
 id: 2899
 title: Algoritmo para exibir número de 1 a 100 aleatoriamente, sem repetir
 date: 2013-02-04T02:40:14+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2899
 permalink: /php/algoritmo-para-exibir-numero-de-1-a-100-aleatoriamente-sem-repetir/

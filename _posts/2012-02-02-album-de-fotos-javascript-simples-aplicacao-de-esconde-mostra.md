@@ -2,7 +2,7 @@
 id: 1767
 title: 'Album de fotos com javascript - simples aplicação de esconde mostra'
 date: 2012-02-02T17:50:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1767
 permalink: /javascript-puro/album-de-fotos-javascript-simples-aplicacao-de-esconde-mostra/

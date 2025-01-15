@@ -2,7 +2,7 @@
 id: 2998
 title: 'SlideShow JavaScript - VanillaJS'
 date: 2013-05-29T07:00:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2998
 permalink: /javascript-puro/slideshow-javascript-vanillajs/

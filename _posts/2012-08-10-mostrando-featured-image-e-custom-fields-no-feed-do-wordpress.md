@@ -2,7 +2,7 @@
 id: 2291
 title: Mostrando featured image e custom fields no feed do WordPress
 date: 2012-08-10T18:57:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2291
 permalink: /wordpress/mostrando-featured-image-e-custom-fields-no-feed-do-wordpress/

@@ -2,7 +2,7 @@
 id: 1231
 title: Ética de código
 date: 2011-07-31T16:12:56+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1231
 permalink: /php/etica-de-codigo/

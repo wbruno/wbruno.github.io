@@ -2,7 +2,7 @@
 id: 1343
 title: Usando lightbox em página carregada com ajax
 date: 2011-08-22T20:39:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1343
 permalink: /ajax/usando-lightbox-em-pagina-carregada-ajax/

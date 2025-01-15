@@ -2,7 +2,7 @@
 id: 3061
 title: Como fazer menu fixo apartir de certa rolagem da página
 date: 2013-08-10T08:58:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3061
 permalink: /javascript-puro/como-fazer-menu-fixo-apartir-de-certa-rolagem-da-pagina/

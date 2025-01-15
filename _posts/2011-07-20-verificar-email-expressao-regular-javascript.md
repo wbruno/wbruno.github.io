@@ -2,7 +2,7 @@
 id: 1212
 title: 'Verificar email com expressão regular - javascript'
 date: 2011-07-20T15:29:18+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1212
 permalink: /javascript-puro/verificar-email-expressao-regular-javascript/

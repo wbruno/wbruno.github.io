@@ -2,7 +2,7 @@
 id: 1466
 title: Sugerindo uma página interna com base na consulta do google que levou o visitante até o seu site
 date: 2011-10-07T07:00:43+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1466
 permalink: /php/sugerindo-uma-pagina-interna-base-na-consulta-google-levou-visitante-ate-seu-site/

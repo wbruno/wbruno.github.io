@@ -2,7 +2,7 @@
 id: 2841
 title: 'Column.GS - Um sistema de grid css 960 com significado e para FrontEnds'
 date: 2012-11-17T12:56:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2841
 permalink: /css/column-gs-um-sistema-de-grid-css-960-com-significado-e-para-frontends/

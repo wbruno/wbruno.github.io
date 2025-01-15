@@ -2,7 +2,7 @@
 id: 194
 title: 'Rotina semelhante ao str_pad do php ao &#8216;sair do campo&#8217;'
 date: 2011-03-12T00:12:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=194
 permalink: /expressao-regular/rotina-semelhante-ao-str_pad-do-php-ao-sair-do-campo/
@@ -12,7 +12,7 @@ tags:
   - máscara
 ---
 Referência do autor da base deste script:
-  
+
 <a href="http://elcio.com.br/ajax/mascara/" target="_blank">http://elcio.com.br/ajax/mascara/</a>
 
 ``` html

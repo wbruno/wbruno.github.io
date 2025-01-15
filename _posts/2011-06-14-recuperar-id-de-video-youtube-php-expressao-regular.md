@@ -2,7 +2,7 @@
 id: 1086
 title: 'Recuperar ID de vídeo do Youtube - php Expressão Regular'
 date: 2011-06-14T03:00:26+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1086
 permalink: /php/recuperar-id-de-video-youtube-php-expressao-regular/

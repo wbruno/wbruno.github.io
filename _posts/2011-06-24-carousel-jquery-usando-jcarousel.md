@@ -2,7 +2,7 @@
 id: 1139
 title: Carousel jQuery usando jCarousel
 date: 2011-06-24T23:08:05+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1139
 permalink: /jquery/carousel-jquery-usando-jcarousel/

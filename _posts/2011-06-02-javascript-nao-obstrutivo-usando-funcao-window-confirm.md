@@ -2,7 +2,7 @@
 id: 1025
 title: 'JavaScript não obstrutivo - usando a função window.confirm()'
 date: 2011-06-02T07:00:19+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1025
 permalink: /javascript-puro/javascript-nao-obstrutivo-usando-funcao-window-confirm/

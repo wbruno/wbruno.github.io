@@ -2,7 +2,7 @@
 id: 3398
 title: Entendendo o cURL
 date: 2015-06-02T07:00:21+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3398
 permalink: /php/entendendo-o-curl/

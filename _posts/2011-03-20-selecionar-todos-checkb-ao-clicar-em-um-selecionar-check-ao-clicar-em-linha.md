@@ -2,7 +2,7 @@
 id: 265
 title: Selecionar todos checkbox ao clicar em um, e selecionar check ao clicar em linha
 date: 2011-03-20T12:45:14+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=265
 permalink: /jquery/selecionar-todos-checkb-ao-clicar-em-um-selecionar-check-ao-clicar-em-linha/
@@ -20,7 +20,7 @@ script bem batido e massacrado já, mas com uns adicionais, que nunca vi por ai.
 <!--more-->
 
 
-  
+
 <a href="http://www.wbruno.com.br/scripts/seleciona-todos-checkbox.html" target="_blank">Demostração</a>
 
 ``` html

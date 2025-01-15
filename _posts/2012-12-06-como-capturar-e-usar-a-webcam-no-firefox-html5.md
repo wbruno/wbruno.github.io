@@ -2,7 +2,7 @@
 id: 2882
 title: 'Como capturar e usar a webcam no Firefox - html5'
 date: 2012-12-06T11:01:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2882
 permalink: /javascript-puro/como-capturar-e-usar-a-webcam-no-firefox-html5/

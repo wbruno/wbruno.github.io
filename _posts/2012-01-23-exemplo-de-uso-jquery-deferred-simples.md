@@ -2,7 +2,7 @@
 id: 1739
 title: 'Exemplo de uso jQuery.Deferred - simples'
 date: 2012-01-23T07:00:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1739
 permalink: /jquery/exemplo-de-uso-jquery-deferred-simples/

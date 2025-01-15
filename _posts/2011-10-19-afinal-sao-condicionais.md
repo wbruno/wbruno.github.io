@@ -2,7 +2,7 @@
 id: 1515
 title: Afinal, o que são condicionais ?
 date: 2011-10-19T17:35:00+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1515
 permalink: /php/afinal-sao-condicionais/

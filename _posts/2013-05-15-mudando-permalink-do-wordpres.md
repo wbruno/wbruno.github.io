@@ -2,7 +2,7 @@
 id: 2964
 title: Mudando permalink do wordpress
 date: 2013-05-15T17:39:52+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2964
 permalink: /wordpress/mudando-permalink-do-wordpres/

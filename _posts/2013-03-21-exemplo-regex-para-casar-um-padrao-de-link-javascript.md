@@ -2,7 +2,7 @@
 id: 2930
 title: 'Exemplo regex para casar um padrão de link - javascript'
 date: 2013-03-21T11:52:49+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2930
 permalink: /expressao-regular/exemplo-regex-para-casar-um-padrao-de-link-javascript/

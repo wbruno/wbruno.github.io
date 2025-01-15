@@ -2,7 +2,7 @@
 id: 3384
 title: 'Dragons API - Uma API para todos os dragões cadastrar'
 date: 2015-05-23T21:49:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3384
 permalink: /nodejs/dragons-api-uma-api-para-todos-os-dragoes-cadastrar/

@@ -2,7 +2,7 @@
 id: 3446
 title: Construindo aplicações com NodeJS
 date: 2015-09-29T09:19:17+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3446
 permalink: /livro/construindo-aplicacoes-com-nodejs/

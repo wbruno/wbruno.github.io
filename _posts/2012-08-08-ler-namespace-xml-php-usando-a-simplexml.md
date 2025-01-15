@@ -2,7 +2,7 @@
 id: 2210
 title: 'Ler namespace xml php, usando a simplexml - content:encoded - feed WordPress'
 date: 2012-08-08T07:00:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2210
 permalink: /wordpress/ler-namespace-xml-php-usando-a-simplexml/

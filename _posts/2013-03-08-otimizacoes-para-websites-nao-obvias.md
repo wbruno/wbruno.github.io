@@ -2,7 +2,7 @@
 id: 2919
 title: Otimizações para websites não óbvias
 date: 2013-03-08T16:54:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2919
 permalink: /css/otimizacoes-para-websites-nao-obvias/

@@ -2,7 +2,7 @@
 id: 226
 title: Banner, Galeria, Slideshow, AdCast mostrando um pouco do poder do Cycle jQuery
 date: 2011-03-14T10:26:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=226
 permalink: /jquery/banner-galeria-slideshow-adcast-mostrando-um-pouco-poder-cycle-jquery/

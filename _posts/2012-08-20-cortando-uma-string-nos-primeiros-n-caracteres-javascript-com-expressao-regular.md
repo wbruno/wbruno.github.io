@@ -2,7 +2,7 @@
 id: 2589
 title: 'Cortando uma string nos primeiros &#8220;N&#8221; caracteres - JavaScript com Expressão Regular'
 date: 2012-08-20T17:56:52+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2589
 permalink: /expressao-regular/cortando-uma-string-nos-primeiros-n-caracteres-javascript-com-expressao-regular/

@@ -2,7 +2,7 @@
 id: 2815
 title: 'Enviando outros dados junto com um .serialize() - jQuery'
 date: 2012-10-29T18:34:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2815
 permalink: /jquery/enviando-outros-dados-junto-com-um-serialize-jquery/

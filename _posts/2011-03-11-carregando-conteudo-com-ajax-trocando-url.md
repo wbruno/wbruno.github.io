@@ -2,7 +2,7 @@
 id: 183
 title: Carregando conteudo com ajax, trocando URL
 date: 2011-03-11T23:07:15+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=183
 permalink: /ajax/carregando-conteudo-com-ajax-trocando-url/
@@ -50,7 +50,7 @@ function abre( arq ){
         xmlHttp.onreadystatechange = function(){
                 if (xmlHttp.readyState == 4){
                         id('content').innerHTML = xmlHttp.responseText;
-                }              
+                }
         }
         xmlHttp.send( null );
 }
@@ -67,7 +67,7 @@ window.onload = function(){
 </script>
 </head>
 <body>
-       
+
         <a href="#contato">Contato</a>
         <a href="#missao-valores">Missão, Valores</a>
         <div id="content">

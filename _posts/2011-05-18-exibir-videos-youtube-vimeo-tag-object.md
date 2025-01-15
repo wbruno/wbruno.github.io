@@ -2,7 +2,7 @@
 id: 956
 title: 'Exibir videos Youtube e Vimeo com a tag <object>'
 date: 2011-05-18T07:00:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=956
 permalink: /html/exibir-videos-youtube-vimeo-tag-object/

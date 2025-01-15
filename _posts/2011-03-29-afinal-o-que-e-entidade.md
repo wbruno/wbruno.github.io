@@ -2,7 +2,7 @@
 id: 392
 title: Afinal, o que é uma Entidade ?
 date: 2011-03-29T07:15:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=392
 permalink: /sql/afinal-o-que-e-entidade/

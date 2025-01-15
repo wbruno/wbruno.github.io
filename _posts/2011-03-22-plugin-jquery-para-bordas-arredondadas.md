@@ -2,7 +2,7 @@
 id: 305
 title: Plugin jQuery para bordas arredondadas
 date: 2011-03-22T10:24:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=305
 permalink: /jquery/plugin-jquery-para-bordas-arredondadas/

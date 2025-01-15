@@ -2,7 +2,7 @@
 id: 24
 title: 'Suggest AJAX - jQuery - php/Mysql'
 date: 2010-01-08T23:32:31+00:00
-author: William Bruno
+author: wbruno
 excerpt: Resolvi brincar um pouquinho aqui..
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=24

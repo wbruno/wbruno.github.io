@@ -2,7 +2,7 @@
 id: 1058
 title: Formulário de busca com filtro dinâmico em MySQL e php
 date: 2011-05-28T10:35:20+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1058
 permalink: /php/formulario-de-busca-filtro-dinamico-em-mysql-php/
@@ -14,15 +14,15 @@ categories:
 Boas galerinha ^^
 
 Post rápido pra ajudar um amigo aqui no msn.
-  
+
 A proposta é fazer aqueles formulários em que temos 2~3 ou mais inputs, que servirão de filtro para a consulta que faremos na base de dados.
 
 Porém, o usuário pode querer preencher apenas um desses campos, 2 deles, ou todos.. e a nossa query, deve se adequar a esta realidade, mandando pro servidor apenas a consulta correta.
-  
+
 <!--more-->
 
 Abaixo está a &#8216;minha solução&#8217; para o problema.
-  
+
 Usando 1 array, e alguns ifs, fica tudo bem prático.
 
 ``` php

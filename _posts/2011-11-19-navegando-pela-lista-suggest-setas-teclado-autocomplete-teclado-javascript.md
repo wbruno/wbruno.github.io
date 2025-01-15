@@ -2,7 +2,7 @@
 id: 1598
 title: 'Navegando pela lista do suggest com as setas do teclado - autocomplete teclado javascript'
 date: 2011-11-19T01:15:30+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1598
 permalink: /jquery/navegando-pela-lista-suggest-setas-teclado-autocomplete-teclado-javascript/

@@ -2,7 +2,7 @@
 id: 1829
 title: Script php para gerar hierarquia de classes dependendo da URL atual
 date: 2012-03-05T07:00:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1829
 permalink: /php/script-php-para-gerar-hierarquia-de-classes-dependendo-da-url-atual/

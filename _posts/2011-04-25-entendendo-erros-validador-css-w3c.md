@@ -2,7 +2,7 @@
 id: 582
 title: Entendendo erros do validador CSS do w3c
 date: 2011-04-25T07:00:53+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=582
 permalink: /css/entendendo-erros-validador-css-w3c/

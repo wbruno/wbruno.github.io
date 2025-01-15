@@ -2,7 +2,7 @@
 id: 1398
 title: Alguns livros que já li
 date: 2011-09-17T14:23:52+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1398
 permalink: /livro/alguns-livros-ja-li/

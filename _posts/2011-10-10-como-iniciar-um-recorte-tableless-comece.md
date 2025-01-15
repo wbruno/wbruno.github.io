@@ -2,7 +2,7 @@
 id: 1459
 title: 'Como iniciar um recorte Tableless - comece !'
 date: 2011-10-10T07:00:31+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1459
 permalink: /css/como-iniciar-um-recorte-tableless-comece/

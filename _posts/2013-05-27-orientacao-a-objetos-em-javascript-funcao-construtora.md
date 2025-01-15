@@ -2,7 +2,7 @@
 id: 2993
 title: 'Orientação a Objetos em Javascript - Função Construtora'
 date: 2013-05-27T07:00:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2993
 permalink: /javascript-puro/orientacao-a-objetos-em-javascript-funcao-construtora/

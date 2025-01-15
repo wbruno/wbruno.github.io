@@ -2,7 +2,7 @@
 id: 1152
 title: Timeline Twitter com php
 date: 2011-07-07T23:25:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1152
 permalink: /php/timeline-twitter-php/
@@ -36,7 +36,7 @@ Logo, vamos usar cURL:
   }
   $url = 'http://twitter.com/statuses/user_timeline/tiu_uiLL.rss?count=1';
   $xml = new SimpleXMLElement( curl_file( $url ) );
-  
+
   $item = $xml->channel->item;
   var_dump( $item );
 ?>

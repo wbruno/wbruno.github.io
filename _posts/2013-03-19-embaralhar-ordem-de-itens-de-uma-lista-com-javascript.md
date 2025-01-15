@@ -2,7 +2,7 @@
 id: 2926
 title: Embaralhar ordem de itens de uma lista com javascript
 date: 2013-03-19T21:18:55+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2926
 permalink: /javascript-puro/embaralhar-ordem-de-itens-de-uma-lista-com-javascript/
@@ -12,7 +12,7 @@ categories:
   - Javascript
 ---
 Hoje no iMasters um cara pediu para desordenar itens de uma lista html.
-  
+
 Bom, desordenar um array é simples, e array em javascript é um objeto, logo desordenar um objeto é simples também.
 
 Basta pegarmos os itens da lista, desordena-los, remove-los do DOM, e então inseri-los novamente.

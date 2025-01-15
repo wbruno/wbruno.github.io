@@ -2,7 +2,7 @@
 id: 1215
 title: Aprenda o básico!
 date: 2011-07-22T04:00:48+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1215
 permalink: /opiniao/aprenda-basico/

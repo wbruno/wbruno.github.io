@@ -2,7 +2,7 @@
 id: 1720
 title: Capturar lista de email dos comentários do seu WordPress e outras queries úteis
 date: 2012-01-11T07:00:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1720
 permalink: /wordpress/capturar-lista-de-email-dos-comentarios-seu-wordpress-outras-queries-uteis/

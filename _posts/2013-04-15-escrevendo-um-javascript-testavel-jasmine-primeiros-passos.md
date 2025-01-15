@@ -2,7 +2,7 @@
 id: 2940
 title: 'Escrevendo um javascript testável - Jasmine primeiros passos'
 date: 2013-04-15T07:00:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2940
 permalink: /javascript-puro/escrevendo-um-javascript-testavel-jasmine-primeiros-passos/

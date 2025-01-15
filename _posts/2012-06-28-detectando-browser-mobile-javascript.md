@@ -2,7 +2,7 @@
 id: 2071
 title: Detectando browser mobile com javascript
 date: 2012-06-28T15:04:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2071
 permalink: /expressao-regular/detectando-browser-mobile-javascript/

@@ -2,7 +2,7 @@
 id: 1782
 title: Adicionando widget de Últimos Posts com data no WordPress
 date: 2012-02-14T21:02:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1782
 permalink: /wordpress/adicionando-widget-de-ultimos-posts-data-wordpress/

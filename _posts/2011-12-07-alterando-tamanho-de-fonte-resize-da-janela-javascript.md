@@ -2,7 +2,7 @@
 id: 1634
 title: 'Alterando tamanho de fonte no resize da janela - javascript'
 date: 2011-12-07T20:24:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1634
 permalink: /javascript-puro/alterando-tamanho-de-fonte-resize-da-janela-javascript/

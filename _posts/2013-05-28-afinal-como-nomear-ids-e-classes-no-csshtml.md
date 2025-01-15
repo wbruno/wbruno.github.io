@@ -2,7 +2,7 @@
 id: 2994
 title: Afinal, como nomear IDs e CLASSes no CSS/HTML ?
 date: 2013-05-28T07:00:45+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2994
 permalink: /css/afinal-como-nomear-ids-e-classes-no-csshtml/

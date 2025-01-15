@@ -2,7 +2,7 @@
 id: 3161
 title: 'Review Livro: JavaScript de Alto Desempenho'
 date: 2014-02-09T09:26:47+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3161
 permalink: /livro/review-livro-javascript-de-alto-desempenho/

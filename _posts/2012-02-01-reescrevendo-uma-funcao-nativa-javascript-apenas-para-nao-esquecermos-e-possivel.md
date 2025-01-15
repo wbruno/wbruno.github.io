@@ -2,7 +2,7 @@
 id: 1765
 title: 'Reescrevendo uma função nativa do javascript - apenas para não esquecermos que é possível.'
 date: 2012-02-01T19:21:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1765
 permalink: /javascript-puro/reescrevendo-uma-funcao-nativa-javascript-apenas-para-nao-esquecermos-e-possivel/

@@ -2,7 +2,7 @@
 id: 2630
 title: 'Outros maus cheiros em código css - Como sentir'
 date: 2012-08-22T07:00:43+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2630
 permalink: /css/como-sentir-mau-cheiro-em-codigo-css/

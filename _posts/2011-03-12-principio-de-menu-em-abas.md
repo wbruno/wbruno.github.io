@@ -2,7 +2,7 @@
 id: 216
 title: Princípio de Menu em Abas
 date: 2011-03-12T00:36:05+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=216
 permalink: /javascript-puro/principio-de-menu-em-abas/
@@ -43,8 +43,8 @@ window.onload = function(){
                 as[i].onclick = function( e ){
                         hide_all();
                         var id_el = this.href.split('#')
-                       
-                        id( id_el[1] ).style.display = 'block';                
+
+                        id( id_el[1] ).style.display = 'block';
                         return disablelink( e );
                 }
         }
@@ -55,10 +55,10 @@ window.onload = function(){
         <div id="content">
                 <a href="#historia">História</a><br />
                 <div id="historia">Conteudo da História</div>
-               
+
                 <a href="#geografia">Geografia</a><br />
                 <div id="geografia">Conteudo da Geografia</div>
-               
+
                 <a href="#matematica">Matemática</a><br />
                 <div id="matematica">Conteudo da Matemática</div>
 

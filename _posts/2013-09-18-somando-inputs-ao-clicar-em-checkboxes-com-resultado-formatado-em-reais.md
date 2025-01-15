@@ -2,7 +2,7 @@
 id: 3083
 title: Somando inputs ao clicar em checkboxes, com resultado formatado em reais
 date: 2013-09-18T14:29:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3083
 permalink: /javascript-puro/somando-inputs-ao-clicar-em-checkboxes-com-resultado-formatado-em-reais/

@@ -2,7 +2,7 @@
 id: 720
 title: Não use editores WYSIWYG em desenvolvimento web !
 date: 2011-04-13T07:00:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=720
 permalink: /opiniao/nao-editores-wysiwyg-em-desenvolvimento-web/

@@ -2,7 +2,7 @@
 id: 830
 title: Verificar se usuário já existe no banco
 date: 2009-08-14T01:32:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3
 permalink: /ajax/verificar-se-usuario-ja-existe-no-banco/
@@ -97,7 +97,7 @@ $(function(){ // declaro o início do jquery
 
 Basta fazer download do <a title="Link externo" rel="nofollow external" href="http://jquery.com/download/">jQuery</a>.
 
-Criar a base com a tabela que postei a estrutura, e rodar os códigos. 
+Criar a base com a tabela que postei a estrutura, e rodar os códigos.
 
 <h2>
   Validando usuário ao sair do input, sem clicar no botão

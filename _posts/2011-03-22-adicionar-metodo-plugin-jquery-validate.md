@@ -2,7 +2,7 @@
 id: 295
 title: Adicionar método no plugin jQuery.validate
 date: 2011-03-22T09:46:24+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=295
 permalink: /jquery/adicionar-metodo-plugin-jquery-validate/

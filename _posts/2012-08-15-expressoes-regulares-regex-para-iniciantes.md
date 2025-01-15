@@ -2,7 +2,7 @@
 id: 2403
 title: 'Expressões Regulares - REGEX para iniciantes'
 date: 2012-08-15T07:10:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2403
 permalink: /expressao-regular/expressoes-regulares-regex-para-iniciantes/

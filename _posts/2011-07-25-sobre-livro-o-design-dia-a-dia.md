@@ -2,7 +2,7 @@
 id: 1221
 title: 'Sobre o livro &#8220;O Design do dia-a-dia&#8221;'
 date: 2011-07-25T07:00:00+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1221
 permalink: /livro/sobre-livro-o-design-dia-a-dia/

@@ -2,7 +2,7 @@
 id: 1628
 title: Trocando o title da página em navegação por query string php
 date: 2011-11-25T17:48:47+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1628
 permalink: /php/trocando-title-da-pagina-em-navegacao-por-query-string-php/

@@ -2,7 +2,7 @@
 id: 2928
 title: Separação de camadas no FrontEnd
 date: 2013-05-09T09:57:53+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2928
 permalink: /css/separacao-de-camadas-no-frontend/
@@ -17,16 +17,16 @@ tags:
 Separar a VIEW do MODEL e não misturar as regras de negócio com os CONTROLERs há muito tempo já fazem parte das preocupações e boas práticas adotadas pelos programadores back end, mas e dos desenvolvedores frontend ?
 
 A separação de camadas onde cada componente possui uma responsabilidade bem definida, também deve ser preocupação dos desenvolvedores frontend. As vezes as coisas ficam um pouco confusas, e então frequentemente vemos projetos em que está tudo misturado, trocado e até mal aplicado.
-  
+
 <!--more-->
 
 
-  
+
 A princípio precisamos definir a responsabilidade de cada uma das camadas principais, e depois detalhar cada uma delas.
 
 ## Conteúdo
 
-A camada responsável pela apresentação do conteúdo é representada pelo HTML. Esta é a linguagem criada para tal, possui tags semânticas, e aquelas velhas coisas como: <var>blink</var>, <var>marquee</var>, ou até mesmo <var>font</var> foram depreciadas, para que parássemos de <cite>formatar</cide> diretamente no html.</p> 
+A camada responsável pela apresentação do conteúdo é representada pelo HTML. Esta é a linguagem criada para tal, possui tags semânticas, e aquelas velhas coisas como: <var>blink</var>, <var>marquee</var>, ou até mesmo <var>font</var> foram depreciadas, para que parássemos de <cite>formatar</cide> diretamente no html.</p>
 
 <h3>
   Imagem ou background

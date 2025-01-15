@@ -2,7 +2,7 @@
 id: 2484
 title: Dicas iniciais para um blog de conteúdo em WordPress
 date: 2012-08-16T07:00:28+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2484
 permalink: /wordpress/dicas-para-um-blog-de-conteudo-wordpress/

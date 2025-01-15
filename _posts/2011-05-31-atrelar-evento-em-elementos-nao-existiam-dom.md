@@ -2,7 +2,7 @@
 id: 1070
 title: Atrelar evento em elementos que não existiam no DOM
 date: 2011-05-31T01:18:51+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1070
 permalink: /ajax/atrelar-evento-em-elementos-nao-existiam-dom/

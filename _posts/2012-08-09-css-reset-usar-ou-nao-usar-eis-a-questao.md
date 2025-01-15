@@ -2,7 +2,7 @@
 id: 1853
 title: CSS reset, usar ou não usar ? Eis a questão !
 date: 2012-08-09T07:00:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1853
 permalink: /opiniao/css-reset-usar-ou-nao-usar-eis-a-questao/

@@ -2,7 +2,7 @@
 id: 2175
 title: 'Usando apt-get instal - remove no MAC OSx Mountain Lion'
 date: 2012-07-29T03:25:23+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2175
 permalink: /mac/usando-apt-get-instal-remove-no-mac-osx-mountain-lion/

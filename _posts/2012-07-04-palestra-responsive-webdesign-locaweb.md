@@ -2,7 +2,7 @@
 id: 2081
 title: 'Palestra Responsive WebDesign - Locaweb'
 date: 2012-07-04T08:55:43+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2081
 permalink: /css/palestra-responsive-webdesign-locaweb/

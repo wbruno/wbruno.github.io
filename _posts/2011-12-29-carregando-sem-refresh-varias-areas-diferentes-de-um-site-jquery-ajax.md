@@ -2,7 +2,7 @@
 id: 1663
 title: 'Carregando sem refresh, várias áreas diferentes de um site - jQuery.ajax'
 date: 2011-12-29T10:55:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1663
 permalink: /ajax/carregando-sem-refresh-varias-areas-diferentes-de-um-site-jquery-ajax/

@@ -2,7 +2,7 @@
 id: 2198
 title: 'Mostrar option de select escolhido pelo usuário - php &#038; mysql'
 date: 2012-08-07T10:51:48+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2198
 permalink: /php/mostrar-option-de-select-escolhido-pelo-usuario-php-mysql/

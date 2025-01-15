@@ -2,7 +2,7 @@
 id: 210
 title: Selecionar grupo de inputs pelo name
 date: 2011-03-12T00:33:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=210
 permalink: /javascript-puro/selecionar-grupo-de-inputs-pelo-name/
@@ -32,14 +32,14 @@ window.onload = function()
 <body>
         <form action="" method="post" id="f-teste">
                 <input type="hidden" name="id_cod[]" value="1" />
-               
+
                 <input type="text" name="produto[]" value="Um" />
-               
+
                 <input type="hidden" name="id_cod[]" value="5" />
                 <input type="text" name="produto[]" value="Dois" />
                 <input type="hidden" name="id_cod[]" value="15" />
                 <input type="hidden" name="id_cod[]" value="7" />
-               
+
                 <input type="submit" name="ok" value="ok" />
         </form>
         <div id="result"></div>

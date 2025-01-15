@@ -2,7 +2,7 @@
 id: 3001
 title: Delegate Events no JavaScript
 date: 2014-02-11T08:00:14+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3001
 permalink: /javascript-puro/delegate-events-no-javascript/

@@ -2,7 +2,7 @@
 id: 1128
 title: Fórum de Tecnologia não é HelpDesk
 date: 2011-07-04T00:00:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1128
 permalink: /opiniao/forum-de-tecnologia-nao-e-helpdesk/

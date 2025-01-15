@@ -2,7 +2,7 @@
 id: 2554
 title: Como fazer Tabela Zebrada CSS 3, javascript e php
 date: 2012-08-17T07:00:20+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2554
 permalink: /css/tabela-zebrada-css-3/

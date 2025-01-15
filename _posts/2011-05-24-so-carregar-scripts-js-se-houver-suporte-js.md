@@ -2,7 +2,7 @@
 id: 1031
 title: Só carregar scripts js, se houver suporte a js
 date: 2011-05-24T22:30:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1031
 permalink: /javascript-puro/so-carregar-scripts-js-se-houver-suporte-js/

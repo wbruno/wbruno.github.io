@@ -2,7 +2,7 @@
 id: 493
 title: Não use jQuery ! Não aprenda qualquer FrameWork antes de..
 date: 2011-04-04T08:24:00+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=493
 permalink: /opiniao/nao-jquery-nao-aprenda-qualquer-framework-antes-de/

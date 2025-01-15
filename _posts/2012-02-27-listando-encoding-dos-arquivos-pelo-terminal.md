@@ -2,7 +2,7 @@
 id: 1800
 title: Listando encoding dos arquivos pelo terminal
 date: 2012-02-27T12:49:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1800
 permalink: /mac/listando-encoding-dos-arquivos-pelo-terminal/

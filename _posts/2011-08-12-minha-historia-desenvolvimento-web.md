@@ -2,7 +2,7 @@
 id: 1255
 title: Minha história no Desenvolvimento Web
 date: 2011-08-12T01:14:44+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1255
 permalink: /opiniao/minha-historia-desenvolvimento-web/

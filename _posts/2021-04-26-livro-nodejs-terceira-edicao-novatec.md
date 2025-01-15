@@ -2,7 +2,7 @@
 id: 3566
 title: Livro NodeJS - Terceira Edição - Novatec
 date: 2021-04-26T09:00:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3566
 permalink: /livro/livro-nodejs-terceira-edicao-novatec/

@@ -2,7 +2,7 @@
 id: 924
 title: 'Visualizações únicas e de página, com php - google analytics'
 date: 2011-05-11T06:55:54+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=924
 permalink: /php/visualizacoes-unicas-de-pagina-php-google-analytics/

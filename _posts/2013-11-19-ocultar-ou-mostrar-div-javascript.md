@@ -2,7 +2,7 @@
 id: 3141
 title: 'Ocultar ou Mostrar DIV - JavaScript'
 date: 2013-11-19T08:00:37+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3141
 permalink: /javascript-puro/ocultar-ou-mostrar-div-javascript/

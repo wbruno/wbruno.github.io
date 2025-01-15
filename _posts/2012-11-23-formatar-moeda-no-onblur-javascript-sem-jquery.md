@@ -2,7 +2,7 @@
 id: 2859
 title: 'Formatar moeda no onblur - javascript sem jQuery'
 date: 2012-11-23T07:00:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2859
 permalink: /expressao-regular/formatar-moeda-no-onblur-javascript-sem-jquery/

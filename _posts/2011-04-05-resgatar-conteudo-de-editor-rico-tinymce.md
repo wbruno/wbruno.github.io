@@ -2,7 +2,7 @@
 id: 620
 title: Resgatar conteúdo de editor rico TinyMCE
 date: 2011-04-05T17:18:58+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=620
 permalink: /javascript-puro/resgatar-conteudo-de-editor-rico-tinymce/

@@ -2,7 +2,7 @@
 id: 968
 title: 'Input de destinatários[para] do hotmail'
 date: 2011-05-19T07:00:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=968
 permalink: /css/input-de-destinatariospara-hotmail/

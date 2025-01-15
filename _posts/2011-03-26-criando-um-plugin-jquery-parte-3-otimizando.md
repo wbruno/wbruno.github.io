@@ -2,7 +2,7 @@
 id: 343
 title: 'Criando um plugin jQuery - parte 3 - Otimizando'
 date: 2011-03-26T07:00:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=343
 permalink: /jquery/criando-um-plugin-jquery-parte-3-otimizando/

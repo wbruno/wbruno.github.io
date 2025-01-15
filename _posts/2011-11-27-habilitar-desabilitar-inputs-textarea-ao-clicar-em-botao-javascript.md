@@ -2,7 +2,7 @@
 id: 1630
 title: 'Habilitar e Desabilitar inputs e textarea ao clicar em botão - JavaScript'
 date: 2011-11-27T17:09:51+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1630
 permalink: /javascript-puro/habilitar-desabilitar-inputs-textarea-ao-clicar-em-botao-javascript/

@@ -2,7 +2,7 @@
 id: 334
 title: 'Criando um plugin jQuery - parte 1 - Começando'
 date: 2011-03-24T07:20:43+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=334
 permalink: /jquery/criando-um-plugin-jquery-parte-1-comecando/

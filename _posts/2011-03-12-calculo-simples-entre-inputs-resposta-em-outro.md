@@ -2,7 +2,7 @@
 id: 206
 title: Cálculo simples entre inputs, resposta em outro
 date: 2011-03-12T00:28:56+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=206
 permalink: /javascript-puro/calculo-simples-entre-inputs-resposta-em-outro/
@@ -72,7 +72,7 @@ String.prototype.formatMoney = function() {
 <http://wbruno.github.io/examples/calc-simples/>
 
 **update**
-  
+
 2015-05-12 => Formatar em moeda o total. Utilizar addEventListener
-  
+
 2015-05-13 => .toFixed(2) para evitar dízimas

@@ -2,7 +2,7 @@
 id: 2067
 title: 'Google - Rich Snippets Testing Tool - Dados estruturados na busca do Google'
 date: 2012-06-27T10:41:44+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2067
 permalink: /wordpress/google-rich-snippets-testing-tool-dados-estruturados-na-busca-google/

@@ -2,7 +2,7 @@
 id: 1901
 title: 'Sobre o livro: &#8220;html5 e css3 com farinha e pimenta&#8221; - review'
 date: 2012-03-21T16:40:01+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1901
 permalink: /livro/sobre-livro-html5-css3-farinha-pimenta/

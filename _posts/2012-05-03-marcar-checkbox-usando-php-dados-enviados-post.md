@@ -2,7 +2,7 @@
 id: 1971
 title: Marcar checkbox usando PHP, com dados enviados via POST
 date: 2012-05-03T11:13:06+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1971
 permalink: /php/marcar-checkbox-usando-php-dados-enviados-post/
@@ -14,7 +14,7 @@ categories:
 Para deixar registrado por aqui.
 
 Colocando o atributo checked=&#8221;checked&#8221; em uma lista de checkboxs, dependendo do que foi marcado e enviado via POST.
-  
+
 Para usar algum outro array, como um vindo do banco, basta trocar o getPost(&#8216;arr&#8217;), pelo teu array.
 
 ``` php

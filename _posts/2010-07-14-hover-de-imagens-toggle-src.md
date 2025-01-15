@@ -2,7 +2,7 @@
 id: 61
 title: hover de imagens toggle src
 date: 2010-07-14T12:01:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=61
 permalink: /javascript-puro/hover-de-imagens-toggle-src/

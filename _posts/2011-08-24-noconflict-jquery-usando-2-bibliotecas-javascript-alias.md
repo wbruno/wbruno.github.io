@@ -2,7 +2,7 @@
 id: 1352
 title: 'noConflict jQuery - Usando 2 bibliotecas javascript [ alias $ ]'
 date: 2011-08-24T07:00:45+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1352
 permalink: /jquery/noconflict-jquery-usando-2-bibliotecas-javascript-alias/

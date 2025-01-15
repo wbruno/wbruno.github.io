@@ -2,7 +2,7 @@
 id: 59
 title: onkeyup com delay..
 date: 2010-07-14T12:00:04+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=59
 permalink: /jquery/onkeyup-com-delay/

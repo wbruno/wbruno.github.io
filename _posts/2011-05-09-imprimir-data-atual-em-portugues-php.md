@@ -2,7 +2,7 @@
 id: 906
 title: Imprimir data atual em português com php
 date: 2011-05-09T18:58:21+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=906
 permalink: /php/imprimir-data-atual-em-portugues-php/

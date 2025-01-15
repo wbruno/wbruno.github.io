@@ -2,7 +2,7 @@
 id: 3170
 title: 'Produtividade: Faça uma coisa por dia, apenas uma, todo dia'
 date: 2014-02-10T08:00:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3170
 permalink: /opiniao/produtividade-faca-uma-coisa-por-dia-apenas-uma-todo-dia/

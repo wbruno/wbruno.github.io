@@ -2,7 +2,7 @@
 id: 111
 title: Criar input no onblur, e receber dados array php
 date: 2011-02-04T23:28:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=111
 permalink: /jquery/criar-input-no-onblur-e-receber-dados-array-php/

@@ -2,7 +2,7 @@
 id: 2939
 title: Máscara javascript para peso com preenchimento ao contrário
 date: 2013-04-11T10:36:31+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2939
 permalink: /javascript-puro/mascara-javascript-para-peso-com-preenchimento-ao-contrario/

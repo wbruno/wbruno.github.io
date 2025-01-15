@@ -2,7 +2,7 @@
 id: 1856
 title: 'Comentários do WordPress em cadeia - Respeitando hierarquia do comentário pai'
 date: 2012-03-12T07:00:56+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1856
 permalink: /wordpress/comentarios-wordpress-em-cadeia-respeitando-hierarquia-comentario-pai/

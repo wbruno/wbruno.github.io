@@ -2,7 +2,7 @@
 id: 2950
 title: 'Tableless: Como posicionar elementos de um layout - Recorte CSS'
 date: 2013-05-10T11:42:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: https://wbruno.com.br/?p=2950
 permalink: /css/tableless-como-posicionar-elementos-de-um-layout-recorte-css/

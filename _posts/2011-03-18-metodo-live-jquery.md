@@ -2,7 +2,7 @@
 id: 251
 title: O método .live() do jQuery
 date: 2011-03-18T16:54:11+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=251
 permalink: /jquery/metodo-live-jquery/

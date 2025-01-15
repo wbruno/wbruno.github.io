@@ -2,7 +2,7 @@
 id: 3230
 title: 'Atualizando o kernel e sua distro - Cloud Locaweb'
 date: 2014-02-19T08:00:11+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3230
 permalink: /linux/atualizando-o-kernel-e-sua-distro-cloud-locaweb/

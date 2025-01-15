@@ -2,7 +2,7 @@
 id: 3110
 title: 'Efeito mostrar - Botão show/hide área spoiler'
 date: 2013-10-16T09:33:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3110
 permalink: /javascript-puro/efeito-mostrar-botao-showhide-area-spoiler/

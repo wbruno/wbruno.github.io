@@ -2,7 +2,7 @@
 id: 324
 title: Div centralizada vertical/horizontal, e fixa com rolagem da janela
 date: 2011-03-23T09:01:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=324
 permalink: /javascript-puro/div-centralizada-verticalhorizontal-fixa-rolagem-da-janela/

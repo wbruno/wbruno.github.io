@@ -2,7 +2,7 @@
 id: 3024
 title: Dicas de uso Macbook
 date: 2013-06-17T07:00:55+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3024
 permalink: /mac/dicas-de-uso-macbook/

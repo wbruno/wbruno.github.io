@@ -2,7 +2,7 @@
 id: 1606
 title: Descobrir se foi aberto como popup, ou se abriram diretamente.
 date: 2011-11-22T19:06:42+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1606
 permalink: /javascript-puro/descobrir-se-foi-aberto-como-popup-ou-se-abriram-diretamente/

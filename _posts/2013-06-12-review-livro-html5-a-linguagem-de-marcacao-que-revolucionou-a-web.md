@@ -2,7 +2,7 @@
 id: 3018
 title: 'Review Livro: HTML5 A linguagem de marcação que revolucionou a web'
 date: 2013-06-12T07:00:04+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3018
 permalink: /livro/review-livro-html5-a-linguagem-de-marcacao-que-revolucionou-a-web/

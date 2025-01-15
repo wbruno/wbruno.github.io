@@ -2,7 +2,7 @@
 id: 1332
 title: 'Boas práticas de programação - filosofias de desenvolvimento'
 date: 2011-08-18T01:45:21+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1332
 permalink: /php/boas-praticas-de-programacao-filosofias-de-desenvolvimento/

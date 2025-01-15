@@ -2,7 +2,7 @@
 id: 432
 title: 'Como debugar JavaScript com o Firefox ? - erros comuns'
 date: 2011-03-31T09:11:00+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=432
 permalink: /javascript-puro/como-debugar-javascript-firefox-erros-comuns/

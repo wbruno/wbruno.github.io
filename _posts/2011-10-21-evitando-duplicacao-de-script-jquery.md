@@ -2,7 +2,7 @@
 id: 1557
 title: 'Evitando duplicação de script - jQuery'
 date: 2011-10-21T12:42:01+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1557
 permalink: /jquery/evitando-duplicacao-de-script-jquery/

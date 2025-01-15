@@ -2,7 +2,7 @@
 id: 1618
 title: 'Codificar em entities apenas &#8220;letras&#8221; - php'
 date: 2011-11-24T14:49:38+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1618
 permalink: /php/codificar-em-entities-apenas-letras-php/

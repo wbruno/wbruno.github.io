@@ -2,7 +2,7 @@
 id: 3212
 title: 'Review Livro: Padrões JavaScript'
 date: 2014-02-17T08:00:04+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3212
 permalink: /livro/review-livro-padroes-javascript/

@@ -2,7 +2,7 @@
 id: 1088
 title: Diferenciar refresh (f5) de post(submit)
 date: 2011-06-15T05:38:05+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1088
 permalink: /php/diferenciar-refresh-f5-de-postsubmit/

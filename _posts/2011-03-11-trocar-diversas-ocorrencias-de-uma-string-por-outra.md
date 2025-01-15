@@ -2,7 +2,7 @@
 id: 175
 title: Trocar diversas ocorrências de uma string por outra
 date: 2011-03-11T21:44:01+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=175
 permalink: /javascript-puro/trocar-diversas-ocorrencias-de-uma-string-por-outra/

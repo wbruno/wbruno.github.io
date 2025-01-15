@@ -2,7 +2,7 @@
 id: 1846
 title: 'Post Colaborativo - Como você nomeia seus IDs e CLASSes no HTML/CSS ?'
 date: 2012-03-08T10:24:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1846
 permalink: /css/post-colaborativo-como-voce-nomeia-seus-ids-classes-htmlcss/

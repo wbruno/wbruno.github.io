@@ -2,7 +2,7 @@
 id: 1579
 title: Menu DropDown abrindo com click, e fechando ao clicar fora
 date: 2011-10-26T22:55:29+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1579
 permalink: /jquery/menu-dropdown-abrindo-click-fechando-ao-clicar-fora/
@@ -12,13 +12,13 @@ categories:
   - jQuery
 ---
 O nosso conhecido DropDown, porém abrindo com um click na LI, e fechando com um click &#8216;fora&#8217;.
-  
+
 <!--more-->
 
 Note que esse clique fora, quer dizer clicar em tudo oque não seja o menu. Logo, o elemento que temos de cara para isso, é o **body**. Convém lembrar, que os eventos em javascript propagam de filho para pai.
 
 Sendo assim, um click no menu, dispara também um click no body.
-  
+
 Por isso, que uso ali, o método **.stopPropagation()**, pois qndo eu clicar no #menu li(para abrir o sub especifico), não quero que seja disparado o click do body(que fecha os subs).
 
 Bom, é isso, o código está simples e é auto explicativo.
@@ -89,7 +89,7 @@ body { font: 12px/12px Tahoma, sans-serif; color: #666; }
         <li>Item 2</li>
         <li>Item 3</li>
       </ul>
-    </li>  
+    </li>
   </ul><!-- /menu -->
 </div><!-- /main -->
 </body>

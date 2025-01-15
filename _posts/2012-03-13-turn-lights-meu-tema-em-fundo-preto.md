@@ -2,7 +2,7 @@
 id: 1870
 title: 'Turn lights Off - Meu tema em fundo preto'
 date: 2012-03-13T15:56:10+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1870
 permalink: /css/turn-lights-meu-tema-em-fundo-preto/

@@ -2,7 +2,7 @@
 id: 2948
 title: Exemplo ajax lendo arquivo xml
 date: 2013-04-25T11:54:50+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2948
 permalink: /ajax/exemplo-ajax-lendo-arquivo-xml/

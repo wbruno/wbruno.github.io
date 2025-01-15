@@ -2,7 +2,7 @@
 id: 35
 title: Combobox dinâmico com cadastro AJAX
 date: 2010-04-07T07:54:58+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=35
 permalink: /ajax/combobox-dinamico-com-cadastro-ajax/
@@ -10,9 +10,9 @@ categories:
   - AJAX
 ---
 Cara, não é &#8216;algo comum&#8217;, mas achei interessante essa dúvida, e resolvi montar.
-  
+
 Em funcionamento:
-  
+
 <http://www.wbruno.com.br/scripts/form-cidade.php>
 
 **config.inc.php**
@@ -309,13 +309,13 @@ Em funcionamento:
 ```
 
 **ico-loading.gif**
-  
+
 ![Imagem Loading](http://www.wbruno.com.br/scripts/ico-loading.gif)
-  
+
 <a title="Link externo" rel="nofollow external" href="http://www.wbruno.com.br/scripts/ico-loading.gif">http://www.wbruno.com.br/scripts/ico-loading.gif</a>
 
 **jquery-1.4.2.min.js**
-  
+
 <a title="Link externo" rel="nofollow external" href="http://code.jquery.com/jquery-1.4.2.min.js">http://code.jquery.c&#8230;ry-1.4.2.min.js</a>
 
 Os códigos estão ai e funcionam.

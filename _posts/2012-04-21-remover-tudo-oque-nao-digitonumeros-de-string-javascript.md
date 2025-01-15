@@ -2,7 +2,7 @@
 id: 1968
 title: Remover tudo oque não for dígito(numeros) de string com javascript
 date: 2012-04-21T10:52:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1968
 permalink: /expressao-regular/remover-tudo-oque-nao-digitonumeros-de-string-javascript/

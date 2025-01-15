@@ -2,7 +2,7 @@
 id: 1792
 title: 'window.history.pushState javascript - trocando a URL usando api html5 em páginas carregadas com ajax'
 date: 2012-02-22T21:29:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1792
 permalink: /ajax/window-history-pushstate-javascript-trocando-url-usando-api-html5-em-paginas-carregadas-ajax/

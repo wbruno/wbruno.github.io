@@ -2,7 +2,7 @@
 id: 2552
 title: 'Vida de Freelancer - Quanto cobrar? Quanto custa? Quem é o mercado?'
 date: 2013-06-03T07:00:40+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2552
 permalink: /opiniao/vida-de-freelancer-quanto-cobrar-quanto-custa-quem-e-o-mercado/

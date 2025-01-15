@@ -2,7 +2,7 @@
 id: 3147
 title: Capturar o que as letras que o usuário digitar numa página
 date: 2013-12-11T13:58:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3147
 permalink: /javascript-puro/capturar-o-que-as-letras-que-o-usuario-digitar-numa-pagina/

@@ -2,7 +2,7 @@
 id: 3297
 title: 'Construindo uma API Rest com ExpressJS - NodeJS'
 date: 2015-03-31T00:23:58+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3297
 permalink: /nodejs/construindo-uma-api-rest-com-expressjs-nodejs/

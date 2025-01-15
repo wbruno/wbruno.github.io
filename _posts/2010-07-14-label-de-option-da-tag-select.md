@@ -2,7 +2,7 @@
 id: 50
 title: Label de Option da tag select
 date: 2010-07-14T11:45:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=50
 permalink: /javascript-puro/label-de-option-da-tag-select/
@@ -43,5 +43,5 @@ window.onload = function()
 ```
 
 referência:
-  
+
 <a title="Link externo" rel="nofollow external" href="http://www.mredkj.com/tutorials/tutorial002.html">http://www.mredkj.co&#8230;utorial002.html</a>

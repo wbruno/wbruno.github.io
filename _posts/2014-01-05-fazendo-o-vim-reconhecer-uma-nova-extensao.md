@@ -2,7 +2,7 @@
 id: 3152
 title: Fazendo o vim reconhecer uma nova extensão
 date: 2014-01-05T22:26:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3152
 permalink: /html/fazendo-o-vim-reconhecer-uma-nova-extensao/

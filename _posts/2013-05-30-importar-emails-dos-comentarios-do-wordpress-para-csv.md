@@ -2,7 +2,7 @@
 id: 3002
 title: Importar emails dos comentários do WordPress para CSV
 date: 2013-05-30T07:00:37+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3002
 permalink: /wordpress/importar-emails-dos-comentarios-do-wordpress-para-csv/

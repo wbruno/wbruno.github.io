@@ -2,7 +2,7 @@
 id: 3564
 title: Entenda porque o Certificado SSL é Importante
 date: 2016-11-10T22:47:30+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3564
 permalink: /seguranca/entenda-o-certificado-ssl/

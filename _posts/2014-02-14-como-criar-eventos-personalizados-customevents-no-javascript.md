@@ -2,7 +2,7 @@
 id: 3060
 title: Como criar eventos personalizados (CustomEvents) no JavaScript
 date: 2014-02-14T08:00:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3060
 permalink: /javascript-puro/como-criar-eventos-personalizados-customevents-no-javascript/

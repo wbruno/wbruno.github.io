@@ -2,7 +2,7 @@
 id: 1145
 title: 'CallBack facebox - chamando o modal de dentro do modal'
 date: 2011-07-15T07:00:17+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1145
 permalink: /jquery/callback-facebox-chamando-modal-de-dentro-modal/

@@ -2,7 +2,7 @@
 id: 3057
 title: Adicionando usuário ftp no pure-ftp Linux
 date: 2013-08-06T07:00:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3057
 permalink: /wordpress/adicionando-usuario-ftp-no-pure-ftp-linux/

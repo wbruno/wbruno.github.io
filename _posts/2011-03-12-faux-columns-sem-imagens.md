@@ -2,7 +2,7 @@
 id: 186
 title: Faux Columns sem imagens
 date: 2011-03-12T00:01:07+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=186
 permalink: /css/faux-columns-sem-imagens/
@@ -12,13 +12,13 @@ categories:
   - CSS
 ---
 Achei <a href="http://www.positioniseverything.net/articles/onetruelayout/equalheight" target="_blank">este artigo</a>, que resolve o problema de **ter que se ter** colunas com mesma altura, **mas sem usar imagens**, como na [solução tradicional](http://forum.imasters.uol.com.br/index.php?showtopic=225319).
-  
+
 A renderização sem nenhuma técnica, para 3 colunas com diferentes alturas, é esta:
-  
+
 <a href="http://wbruno.com.br/scripts/semFauxColumns.html" target="_blank">http://wbruno.com.br/scripts/semFauxColumns.html</a>
 
 E agora, aplicando a técnica de faux-columns, mas sem imagens, sugerida no artigo acima:
-  
+
 <a href="http://wbruno.com.br/scripts/comFauxColumns.html" target="_blank">http://wbruno.com.br/scripts/comFauxColumns.html</a>
 
 A grande &#8220;chave&#8221; para essa técnica, é atribuir &#8220;overflow: hidden&#8221; para o container, e colocar margins e paddings gigantes para as colunas:
@@ -36,23 +36,23 @@ você pode verificar o código completo nos links que postei para exemplo, e viz
 Usei para esse exemplo, um [gerador de Lorem Ipsum](http://lipsum.com)
 
 Testado:
-  
+
 Opera 9.5 Beta
-  
+
 FireFox 3
-  
+
 Internet Explorer 7
-  
+
 Internet Explorer 6
-  
+
 Internet Explorer 8 (Beta)
-  
+
 Google Chrome Beta
-  
+
 Safari 3.1.2 (Windows)
-  
+
 Iceweasel 3.0.6 (Linux)
-  
+
 Web Epiphany 2.22.3 (Linux)
 
 Postado originalmente <a href="http://forum.imasters.uol.com.br/index.php?/topic/309442-solucao-para-faux-columns-sem-usar-imagens/" target="_blank">aqui</a>

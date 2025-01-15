@@ -2,7 +2,7 @@
 id: 2862
 title: 'Remover o termo &#8220;Comentário por&#8221; de cada comentário no seu blog WordPress'
 date: 2012-11-26T07:00:06+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2862
 permalink: /wordpress/remover-o-termo-comentario-por-de-cada-comentario-no-seu-blog-wordpress/

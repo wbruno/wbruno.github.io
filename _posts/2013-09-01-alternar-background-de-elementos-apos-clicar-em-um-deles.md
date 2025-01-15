@@ -2,7 +2,7 @@
 id: 3072
 title: Alternar background de elementos após clicar em um deles
 date: 2013-09-01T11:41:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3072
 permalink: /javascript-puro/alternar-background-de-elementos-apos-clicar-em-um-deles/

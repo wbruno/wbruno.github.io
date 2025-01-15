@@ -2,7 +2,7 @@
 id: 2962
 title: 'Navegando no DOM - jQuery'
 date: 2013-05-20T08:00:57+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2962
 permalink: /jquery/navegando-no-dom-jquery/

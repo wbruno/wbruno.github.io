@@ -2,7 +2,7 @@
 id: 3218
 title: Validando formulários apenas com html5
 date: 2014-02-18T08:00:55+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3218
 permalink: /html/validando-formularios-apenas-com-html5/

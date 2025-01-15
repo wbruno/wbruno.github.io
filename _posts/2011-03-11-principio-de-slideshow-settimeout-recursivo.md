@@ -2,7 +2,7 @@
 id: 167
 title: 'Principio de slideshow - setTimeout recursivo'
 date: 2011-03-11T21:11:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=167
 permalink: /javascript-puro/principio-de-slideshow-settimeout-recursivo/

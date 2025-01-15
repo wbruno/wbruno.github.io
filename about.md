@@ -2,7 +2,7 @@
 id: 829
 title: Sobre
 date: 2009-08-11T09:39:42+00:00
-author: William Bruno
+author: wbruno
 layout: page
 permalink: /sobre
 guid: http://www.wbruno.com.br/blog/?page_id=2

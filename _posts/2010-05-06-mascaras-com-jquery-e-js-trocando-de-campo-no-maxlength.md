@@ -2,7 +2,7 @@
 id: 42
 title: Mascaras com jQuery e JS, trocando de campo no maxLength
 date: 2010-05-06T21:47:17+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=42
 permalink: /expressao-regular/mascaras-com-jquery-e-js-trocando-de-campo-no-maxlength/
@@ -14,11 +14,11 @@ tags:
   - máscara
 ---
 Se você tiver disposto à trocar de máscara, essas com ER são muito boas, e não te darão esse tipo de problema:
-  
+
 <a title="Link externo" rel="nofollow external" href="http://forum.imasters.uol.com.br/index.php?/topic/392937-evitar-letras-no-lugar-de-digitos/page__view__findpost__p__1532871">http://forum.imaster&#8230;ost__p__1532871</a>
 
 Referência do autor da base deste script:
-  
+
 <a href="http://elcio.com.br/ajax/mascara/" target="_blank">http://elcio.com.br/ajax/mascara/</a>
 
 ``` html
@@ -41,8 +41,8 @@ function mcep(v){
 }
 function mdata(v){
     v=v.replace(/\D/g,"");                    //Remove tudo o que não é dígito
-    v=v.replace(/(\d{2})(\d)/,"$1/$2");      
-    v=v.replace(/(\d{2})(\d)/,"$1/$2");      
+    v=v.replace(/(\d{2})(\d)/,"$1/$2");
+    v=v.replace(/(\d{2})(\d)/,"$1/$2");
 
     v=v.replace(/(\d{2})(\d{2})$/,"$1$2");
     return v;
@@ -112,7 +112,7 @@ function next( el, next )
 {
         var val = $( el ).val();
         var filtrado = val.replace(/[^a-zA-Z0-9]/g, '');
-        // ER para remover tudo oque não for nem letra e nem número    
+        // ER para remover tudo oque não for nem letra e nem número
         var mask = val.match(/[-.]/g);
         // ER para saber quantos caracteres da máscara fazem parte da string final
 

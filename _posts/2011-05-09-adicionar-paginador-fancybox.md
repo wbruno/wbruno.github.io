@@ -2,7 +2,7 @@
 id: 899
 title: Adicionar paginador no Modal jQuery.FancyBox
 date: 2011-05-09T09:49:18+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=899
 permalink: /jquery/adicionar-paginador-fancybox/
@@ -16,15 +16,15 @@ tags:
 Salve galera !!
 
 &#8216;De bobeira&#8217; por aqui, aproveitei o tempo para estudar um pouco do fancybox.
-  
+
 É uma ótima opção de modal, e possui uma <a href="http://fancybox.net/api" target="_blank">API bem clara</a>, e de fácil utilização.
 
 O callback, nos possibilita fazer mágica. Desenvolvi um script rápido, aproveitando o método publico **jQuery.fancybox.pos()**, para criar um paginador entre as fotos da galeria.
-  
+
 <!--more-->
 
 
-  
+
 Usei o **titleFormat**: <a href="http://fancybox.net/blog" target="_blank">http://fancybox.net/blog</a>.
 
 ``` js

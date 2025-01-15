@@ -2,7 +2,7 @@
 id: 1404
 title: Como recortar Email Marketing
 date: 2011-09-22T23:32:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1404
 permalink: /html/como-recortar-email-marketing/

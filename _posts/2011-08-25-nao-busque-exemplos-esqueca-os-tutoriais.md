@@ -2,7 +2,7 @@
 id: 1359
 title: Não busque exemplos. Esqueça os tutoriais
 date: 2011-08-25T07:00:43+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1359
 permalink: /opiniao/nao-busque-exemplos-esqueca-os-tutoriais/

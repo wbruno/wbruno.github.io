@@ -2,7 +2,7 @@
 id: 1803
 title: 'Controlando show/hide com css - Deixando para o javascript apenas a troca de uma classe pai'
 date: 2012-02-28T14:43:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1803
 permalink: /javascript-puro/controlando-showhide-css-deixando-para-javascript-apenas-troca-de-uma-classe-pai/

@@ -2,7 +2,7 @@
 id: 635
 title: 'Entendendo erros do validador HTML w3c - Parte 2'
 date: 2011-04-07T06:50:44+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=635
 permalink: /html/entendendo-erros-validador-html-w3c-parte-2/

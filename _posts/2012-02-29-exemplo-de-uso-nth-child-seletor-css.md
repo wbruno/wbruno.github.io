@@ -2,7 +2,7 @@
 id: 1808
 title: Exemplo de uso do nth-child seletor css
 date: 2012-02-29T15:19:00+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1808
 permalink: /jquery/exemplo-de-uso-nth-child-seletor-css/

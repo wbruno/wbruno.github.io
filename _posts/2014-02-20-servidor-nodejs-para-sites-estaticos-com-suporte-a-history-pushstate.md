@@ -2,7 +2,7 @@
 id: 3265
 title: Servidor NodeJS para sites estáticos, com suporte a history.pushState
 date: 2014-02-20T23:00:59+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3265
 permalink: /nodejs/servidor-nodejs-para-sites-estaticos-com-suporte-a-history-pushstate/

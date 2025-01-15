@@ -2,7 +2,7 @@
 id: 1714
 title: Acessando o mysql apartir do terminal no MAC
 date: 2012-01-10T10:34:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1714
 permalink: /mac/acessando-mysql-apartir-terminal-mac/

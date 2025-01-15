@@ -2,7 +2,7 @@
 id: 1234
 title: 'Devemos saber desenvolver para internet explorer [ie]!'
 date: 2011-08-05T03:29:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1234
 permalink: /css/devemos-saber-desenvolver-para-internet-explorer-ie/

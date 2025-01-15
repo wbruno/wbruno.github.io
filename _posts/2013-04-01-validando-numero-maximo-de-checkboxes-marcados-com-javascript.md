@@ -2,7 +2,7 @@
 id: 2937
 title: Validando número máximo de checkboxes marcados com javascript
 date: 2013-04-01T15:35:53+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2937
 permalink: /javascript-puro/validando-numero-maximo-de-checkboxes-marcados-com-javascript/

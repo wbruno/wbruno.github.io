@@ -2,7 +2,7 @@
 id: 417
 title: O que é ajax, e o que não é?
 date: 2011-04-08T07:01:42+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=417
 permalink: /ajax/o-que-e-ajax-e-o-que-nao-e/

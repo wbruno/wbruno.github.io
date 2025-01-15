@@ -2,7 +2,7 @@
 id: 891
 title: Princípio de highlighter
 date: 2011-05-03T22:26:08+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=891
 permalink: /expressao-regular/principio-de-highlighter/

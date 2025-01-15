@@ -2,7 +2,7 @@
 id: 1748
 title: 'Princípio de carousel de imagens com jQuery - Criando um plugin simples'
 date: 2012-01-26T07:00:06+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1748
 permalink: /jquery/principio-de-carousel-de-imagens-jquery-criando-um-plugin-simples/

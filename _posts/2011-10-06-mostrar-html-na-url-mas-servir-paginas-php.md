@@ -2,7 +2,7 @@
 id: 1451
 title: Mostrar .html na URL mas, servir páginas .php
 date: 2011-10-06T07:00:52+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1451
 permalink: /php/mostrar-html-na-url-mas-servir-paginas-php/
@@ -36,17 +36,17 @@ RewriteRule ^([a-z]+)\.html$ $1.php [L]
 ## Note:
 
 Acessando a URL: <u>http://localhost/index.html</u>, o arquivo que a ser chamado será o **index.php**.
-  
+
 E assim por diante, pois o nosso grupo ali, casa tudo o que for letras de a até z, em qualquer quantidade.
 
 O que as RewriteRules fazem na verdade, é &#8216;traduzirem&#8217; para o servidor as requisições enviadas.
-  
+
 Na regra acima, pedi o arquivo: **index.html** e a regra no htacces traduziu para **index.php**.
 
 ## Um problema
 
 Se realmente tivermos um arquivo: **teste.html**, com apenas a regra acima, o servidor vai ignorar a existência desse arquivo, e irá redirecionar a requisição para um **teste.php**.
-  
+
 Para corrigir isso, precisamos dizer para ele, que se existir o tal arquivo, deixa o mesmo responder oque foi pedido.
 
 ``` html

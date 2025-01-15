@@ -2,7 +2,7 @@
 id: 241
 title: Atualizar SQL através de ação em checkbox
 date: 2011-03-16T00:12:46+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=241
 permalink: /jquery/atualizar-sql-atraves-de-acao-em-checkbox/

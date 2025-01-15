@@ -2,7 +2,7 @@
 id: 1034
 title: Validando inputs com Expressão Regular com jQuery
 date: 2011-05-26T17:19:41+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=1034
 permalink: /expressao-regular/validando-inputs-expressao-regular-jquery/

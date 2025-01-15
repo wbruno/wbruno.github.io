@@ -2,7 +2,7 @@
 id: 1588
 title: Expressão Regular, trocando nome de usuário e hash tag de retorno do Twitter, por link
 date: 2011-10-28T19:45:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1588
 permalink: /php/expressao-regular-trocando-nome-de-usuario-hash-tag-de-retorno-twitter-por-link/

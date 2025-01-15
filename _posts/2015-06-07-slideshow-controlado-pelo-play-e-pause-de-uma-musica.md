@@ -2,7 +2,7 @@
 id: 3422
 title: Slideshow controlado pelo play e pause de uma música
 date: 2015-06-07T14:58:03+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3422
 permalink: /javascript-puro/slideshow-controlado-pelo-play-e-pause-de-uma-musica/

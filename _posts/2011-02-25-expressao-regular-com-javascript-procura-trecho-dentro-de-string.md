@@ -2,7 +2,7 @@
 id: 118
 title: Expressao Regular com javascript, procura trecho dentro de string
 date: 2011-02-25T20:00:35+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=118
 permalink: /expressao-regular/expressao-regular-com-javascript-procura-trecho-dentro-de-string/

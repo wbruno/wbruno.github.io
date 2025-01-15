@@ -2,7 +2,7 @@
 id: 2849
 title: Parem de usar ajax! Eu imploro!
 date: 2012-11-22T10:44:25+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2849
 permalink: /opiniao/parem-de-usar-ajax-eu-imploro/

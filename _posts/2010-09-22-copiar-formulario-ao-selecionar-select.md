@@ -2,7 +2,7 @@
 id: 71
 title: Copiar formulario, ao selecionar select
 date: 2010-09-22T21:40:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=71
 permalink: /javascript-puro/copiar-formulario-ao-selecionar-select/
@@ -58,7 +58,7 @@ label { display: block; }
 </head>
 <body>
         <form action="" method="post">
-                                       
+
                 <fieldset>
                         <legend>Proprietário</legend>
                         <label>Nome: <input type="text" name="nome_proprietario" id="nome_proprietario" value="Bruno" /></label>
@@ -69,14 +69,14 @@ label { display: block; }
                                 <option value="Masculino" selected="selected">Masculino</option>
                         </select></label>
                 </fieldset>
-               
+
                 <label>Vínculo: <select name="vinculo" id="vinculo">
                         <option value="">--</option>
                         <option value="O Próprio">O Próprio</option>
                         <option value="Irmão">Irmão</option>
                         <option value="Desconhecido">Desconhecido</option>
                 </select></label>
-               
+
                 <fieldset>
                         <legend>Motorista</legend>
                         <label>Nome: <input type="text" name="nome_motorista" id="nome_motorista" value="" /></label>

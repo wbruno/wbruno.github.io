@@ -2,7 +2,7 @@
 id: 1423
 title: 'A semântica da tag <br /> - Simplesmente não use !'
 date: 2011-10-04T21:54:37+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1423
 permalink: /html/semantica-da-tag-br/

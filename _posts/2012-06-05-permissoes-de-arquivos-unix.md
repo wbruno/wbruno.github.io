@@ -2,7 +2,7 @@
 id: 2035
 title: Permissões de arquivos unix
 date: 2012-06-05T14:38:31+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2035
 permalink: /mac/permissoes-de-arquivos-unix/

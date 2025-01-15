@@ -2,7 +2,7 @@
 id: 66
 title: Alterando src dentro de textarea com ER
 date: 2010-07-28T01:04:34+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=66
 permalink: /javascript-puro/alterando-src-dentro-de-textarea-com-er/
@@ -22,7 +22,7 @@ window.onload = function(){
         var imgs = document.getElementsByTagName('img');
         for( var i=0; i<imgs.length; i++ ){
                 imgs[i].onclick = function(){
-                        var area = id('area').value;                    
+                        var area = id('area').value;
                         id('area').value = area.replace(/src="[-a-zA-Z0-9:_\/.]+"/, 'src="'+this.src+'"' );
                 }
         }
@@ -35,7 +35,7 @@ window.onload = function(){
                 <label><textarea cols="30" rows="7" id="area"><a href="http://www.site.com.br/index.php?user=2"><img src="../imagens/imagem.png" alt="" /></a></textarea></label>
                 </fieldset>
         </form>
-       
+
         <img src="http://100grana.files.wordpress.com/2008/11/mickey-mouse-c.jpg" alt="" />
         <img src="http://pcmeira.blog.uol.com.br/images/PatoDonald_pcmeira.jpg" alt="" />
 </body>

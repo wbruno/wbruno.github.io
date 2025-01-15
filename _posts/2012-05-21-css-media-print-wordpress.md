@@ -2,7 +2,7 @@
 id: 2026
 title: 'CSS media print - WordPress'
 date: 2012-05-21T18:10:23+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2026
 permalink: /css/css-media-print-wordpress/

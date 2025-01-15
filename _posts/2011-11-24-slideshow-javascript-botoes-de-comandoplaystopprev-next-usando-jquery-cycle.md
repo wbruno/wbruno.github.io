@@ -2,7 +2,7 @@
 id: 1613
 title: Slideshow JavaScript com botões de comando(play,stop,prev e next) usando o jQuery.Cycle
 date: 2011-11-24T00:47:12+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1613
 permalink: /jquery/slideshow-javascript-botoes-de-comandoplaystopprev-next-usando-jquery-cycle/
@@ -15,7 +15,7 @@ tags:
   - slideshow
 ---
 Coisa rápida&#8230; nosso velho e conhecido slideshow.
-  
+
 Porém, denovo, apenas para deixar registrado aqui, a flexibilidade de uso do plugin jQuery.Cycle, e a facilidade de implementação.
 
 <!--more-->
@@ -52,7 +52,7 @@ body { font: 12px Arial; }
   overflow: hidden;
 }
 #slideshow2 li {
-  height: 100%;  
+  height: 100%;
 }
 #slideshow2 p {
   font-weight: bold;
@@ -80,9 +80,9 @@ body { font: 12px Arial; }
         <img src="uploads/20111122-230224.jpg" alt="Metalurgia e Distribuição" />
       </a>
       <p>Engenheiro norte-americano cria moto elétrica com uma roda só</p>
-    </li>  
+    </li>
   </ul><!-- /slideshow2 -->
-  
+
   <div id="ctrls">
     <img src="img/slide_anterior.gif" width="76px" height="20px" alt="anterior" id="anterior" />
     <img src="img/slide_play.gif" width="23px" height="20px" alt="play" id="play" />
@@ -93,6 +93,6 @@ body { font: 12px Arial; }
 </html>
 ```
 
-É isso ai. Comentem! 
+É isso ai. Comentem!
 
 ## [Demonstração](/scripts/slide-ctrls.html)

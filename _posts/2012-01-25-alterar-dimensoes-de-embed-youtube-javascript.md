@@ -2,7 +2,7 @@
 id: 1760
 title: Alterar dimensões de embed do youtube com javascript
 date: 2012-01-25T13:23:24+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1760
 permalink: /javascript-puro/alterar-dimensoes-de-embed-youtube-javascript/
@@ -13,7 +13,7 @@ tags:
   - youtube
 ---
 Repositório, para deixar arquivado aqui.
-  
+
 Veja que ao clicar em cada botão, o tamanho do vídeo se altera.
 
 ``` html
@@ -36,7 +36,7 @@ window.onload = function(){
 </head>
 <body>
   <iframe width="420" height="315" src="http://www.youtube.com/embed/tvaPMNq4Ey0" frameborder="0" allowfullscreen id="yt"></iframe>
-  
+
   <input type="button" name="mudar" value="600x480" onclick="sizeIframe( 600, 480 )" />
   <input type="button" name="mudar" value="600x480" onclick="sizeIframe( 420, 315 )" />
   <input type="button" name="mudar" value="300x240" onclick="sizeIframe( 300, 240 )" />

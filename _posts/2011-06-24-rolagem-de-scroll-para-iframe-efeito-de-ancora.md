@@ -2,7 +2,7 @@
 id: 1121
 title: 'Rolagem de scroll indo para um iframe - efeito de âncora'
 date: 2011-06-24T07:00:27+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1121
 permalink: /javascript-puro/rolagem-de-scroll-para-iframe-efeito-de-ancora/

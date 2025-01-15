@@ -2,7 +2,7 @@
 id: 1694
 title: 'Sobre o livro &#8220;Design Emocional&#8221;'
 date: 2012-01-24T07:00:16+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/blog/?p=1694
 permalink: /livro/sobre-livro-design-emocional/

@@ -2,7 +2,7 @@
 id: 2827
 title: Desmistificando URLs amigáveis com php e htaccess (apache)
 date: 2014-02-13T08:00:09+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2827
 permalink: /php/desmistificando-urls-amigaveis-com-php-e-htaccessapache/

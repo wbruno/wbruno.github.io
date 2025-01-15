@@ -2,7 +2,7 @@
 id: 68
 title: Ocultar/Mostrar elementos apartir de radio select
 date: 2010-07-28T01:05:36+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=68
 permalink: /javascript-puro/ocultarmostrar-elementos-apartir-de-radio-select/

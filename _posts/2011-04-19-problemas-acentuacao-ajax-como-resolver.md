@@ -2,7 +2,7 @@
 id: 786
 title: Problemas com acentuação no AJAX, como resolver
 date: 2011-04-19T06:20:39+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=786
 permalink: /ajax/problemas-acentuacao-ajax-como-resolver/

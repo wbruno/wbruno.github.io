@@ -2,7 +2,7 @@
 id: 196
 title: Diversas máscaras com ER
 date: 2011-03-12T00:20:32+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=196
 permalink: /expressao-regular/diversas-mascaras-com-er/

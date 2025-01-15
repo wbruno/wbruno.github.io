@@ -2,7 +2,7 @@
 id: 2954
 title: 'Verificar se um arquivo de imagem existe - JavaScript'
 date: 2013-05-08T10:10:01+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2954
 permalink: /ajax/verificar-um-arquivo-de-imagem-existe-javascript/

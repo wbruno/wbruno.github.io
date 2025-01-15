@@ -2,7 +2,7 @@
 id: 3073
 title: 'Programando Orientado a Eventos - Quiz em multipassos'
 date: 2013-09-19T14:42:55+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=3073
 permalink: /javascript-puro/programando-orientado-eventos-quiz-em-multipassos/

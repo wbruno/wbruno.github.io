@@ -2,7 +2,7 @@
 id: 204
 title: Validação de formulário client side
 date: 2011-03-12T00:27:19+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=204
 permalink: /javascript-puro/validacao-de-formulario-client-side/

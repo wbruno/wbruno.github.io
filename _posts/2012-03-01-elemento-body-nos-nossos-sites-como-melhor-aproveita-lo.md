@@ -2,7 +2,7 @@
 id: 1811
 title: O elemento HTML body nos nossos sites, como melhor aproveitá-lo.
 date: 2012-03-01T12:00:23+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=1811
 permalink: /css/elemento-body-nos-nossos-sites-como-melhor-aproveita-lo/

@@ -2,7 +2,7 @@
 id: 2895
 title: 'Exemplo de Drag and Drop com javascript - Arrastando um elemento na tela'
 date: 2013-01-22T16:17:11+00:00
-author: William Bruno
+author: wbruno
 layout: post
 guid: http://wbruno.com.br/?p=2895
 permalink: /javascript-puro/exemplo-de-drag-and-drop-com-javascript-arrastando-um-elemento-na-tela/

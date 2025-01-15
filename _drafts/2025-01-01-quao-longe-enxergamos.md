@@ -6,6 +6,7 @@ author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3568
 permalink: /opiniao/quao-longe-enxergamos/
+history: false
 
 categories:
   - Opinião

@@ -1,11 +1,12 @@
 ---
 id: 3569
 title: '2012 re:Invent Day 2 Keynote: Werner Vogels?'
-date: 2025-01-15T13:00:41+00:00
+date: 2025-01-15T11:00:41+00:00
 author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3569
 permalink: /opiniao/reinvent-2012-werner-vogels/
+history: false
 
 categories:
   - Opinião
@@ -39,3 +40,22 @@ Se provisionarmos para picos, sem elasticidade (servidores físicos), a amazon t
 > "Acredite em mim, eu abracei um monte de servidores na minha vida, e eles não te abraçam de volta"
 
 Em 2010 e 2011, eles desligaram os últimos servidores físicos e o gráfico de provisionamento agora acompanha o uso real, com muito menos desperdício.
+
+Agora, construimos arquiteturas focando no negócio e não mais em recursos.
+Os requisitos mudam e isso nos aborrece, porém esse é o mundo real, devemos projetar sabendo que vai mudar, e ao não precisar mais nos preocupar com os recursos, usamos a cloud para atender o negócio.
+
+## Commandments of 21st Century Architectures
+- Controllable
+  - Decomposable into small, loosely couple, stateless building blocks
+  - Automate your application and processes
+  - Let business levers control the system
+  - Pequenas unidades de escala, unidades com tolerância a falha
+- Resilient
+- Adaptative
+- Data Driven
+
+Devemos abandonar arquiteturas centradas em data centers, focada em recursos.
+
+> "ec2 instances are not servers"
+
+

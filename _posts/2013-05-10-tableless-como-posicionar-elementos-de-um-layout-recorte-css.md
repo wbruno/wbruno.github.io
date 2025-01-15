@@ -1,6 +1,6 @@
 ---
 id: 2950
-title: 'Tableless: Como posicionar elementos de um layout &#8211; Recorte CSS'
+title: 'Tableless: Como posicionar elementos de um layout - Recorte CSS'
 date: 2013-05-10T11:42:41+00:00
 author: William Bruno
 layout: post

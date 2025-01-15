@@ -1,6 +1,6 @@
 ---
 id: 2081
-title: 'Palestra Responsive WebDesign &#8211; Locaweb'
+title: 'Palestra Responsive WebDesign - Locaweb'
 date: 2012-07-04T08:55:43+00:00
 author: William Bruno
 layout: post
@@ -10,7 +10,7 @@ categories:
   - CSS
 ---
 Estou colocando para visualização, o slide usado na palestra sobre **Responsive WebDesign**.
-  
+
 Que estou fazendo, junto com o Marco Silva no #14elw.
 
 ## Palestra no SlideShare

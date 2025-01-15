@@ -1,6 +1,6 @@
 ---
 id: 2630
-title: 'Outros maus cheiros em código css &#8211; Como sentir'
+title: 'Outros maus cheiros em código css - Como sentir'
 date: 2012-08-22T07:00:43+00:00
 author: William Bruno
 layout: post

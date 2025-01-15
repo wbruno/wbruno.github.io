@@ -1,6 +1,6 @@
 ---
 id: 2988
-title: 'Como criar um tema WordPress &#8211; Tutorial Básico'
+title: 'Como criar um tema WordPress - Tutorial Básico'
 date: 2013-06-04T07:00:44+00:00
 author: William Bruno
 layout: post
@@ -111,8 +111,8 @@ Mas ele não é obrigatório, e vc pode ter um functions.php em branco e mesmo a
 
 Você sempre vai precisar ter esses, na raiz do seu tema:
 
-  * **screenshot.png** &#8211; screenshot em 600&#215;450 de como o tema ficará, para vc visualizar no painel de escolha de temas um &#8220;preview&#8221;
-  * **style.css** &#8211; independente se vc usará outros arquivos .css externos, o css base do tema, deve ser esse arquivo na raiz do tema. Os comentários iniciais dele, é que informarão ao painel do wp o que o seu tema é.
+  * **screenshot.png** - screenshot em 600&#215;450 de como o tema ficará, para vc visualizar no painel de escolha de temas um &#8220;preview&#8221;
+  * **style.css** - independente se vc usará outros arquivos .css externos, o css base do tema, deve ser esse arquivo na raiz do tema. Os comentários iniciais dele, é que informarão ao painel do wp o que o seu tema é.
     ```/*
   Theme Name: wbruno
   Theme URI: http://wbruno.com.br
@@ -126,9 +126,9 @@ Você sempre vai precisar ter esses, na raiz do seu tema:
 */
 ```
 
-  * **editor-style.css** &#8211; é um arquivos .css opcional que vc pode criar, que se existir será usado para formatar o editor dentro do painel do wordpress.
-  * **single.php** &#8211; Quando vc estiver visualizando um post aberto, é esse arquivo que está sendo mostrado.
-  * **page.php** &#8211; Este aqui é para uma página.
+  * **editor-style.css** - é um arquivos .css opcional que vc pode criar, que se existir será usado para formatar o editor dentro do painel do wordpress.
+  * **single.php** - Quando vc estiver visualizando um post aberto, é esse arquivo que está sendo mostrado.
+  * **page.php** - Este aqui é para uma página.
 
 Algumas coisa obrigatórias do <var>style.css</var> e do <var>functions.php</var> o plugin Theme Check que eu indiquei, lhe dirá para fazer.
 

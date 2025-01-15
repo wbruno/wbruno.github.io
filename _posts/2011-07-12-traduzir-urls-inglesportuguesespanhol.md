@@ -1,6 +1,6 @@
 ---
 id: 1171
-title: 'Traduzir URLs &#8211; inglês/português/espanhol'
+title: 'Traduzir URLs - inglês/português/espanhol'
 date: 2011-07-12T00:23:17+00:00
 author: William Bruno
 layout: post

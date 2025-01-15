@@ -1,6 +1,6 @@
 ---
 id: 3073
-title: 'Programando Orientado a Eventos &#8211; Quiz em multipassos'
+title: 'Programando Orientado a Eventos - Quiz em multipassos'
 date: 2013-09-19T14:42:55+00:00
 author: William Bruno
 layout: post
@@ -29,7 +29,7 @@ Montei um quiz com multipassos para mostrar como podemos **organizar nosso códi
 
 A minha proposta é em vez de adicionarmos **absolutamente** tudo o que queremos diretamente nos eventos _.onsubmit_, _.onclick_, _.onkeyup_ &#8230; ou tratarmos cada objeto independente, que trabalhemos numa organização por comportamentos.
 
-Se você ainda não respondeu, vai lá no [Quiz &#8211; Qual meu perfil como FrontEnd ?](http://wbruno.com.br/scripts/quiz/) que eu te espero aqui, para continuar falando mais sobre como organizar pensando em &#8220;comportamentos&#8221;.
+Se você ainda não respondeu, vai lá no [Quiz - Qual meu perfil como FrontEnd ?](http://wbruno.com.br/scripts/quiz/) que eu te espero aqui, para continuar falando mais sobre como organizar pensando em &#8220;comportamentos&#8221;.
 
 ## Abstraia
 

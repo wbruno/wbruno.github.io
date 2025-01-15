@@ -1,6 +1,6 @@
 ---
 id: 2938
-title: 'Não mostrar site até ter terminado de carregar &#8211; JavaScript (loading)'
+title: 'Não mostrar site até ter terminado de carregar - JavaScript (loading)'
 date: 2013-04-03T14:43:42+00:00
 author: William Bruno
 layout: post
@@ -16,7 +16,7 @@ Com js eu escondo o elemento de id=&#8221;all&#8221;, para depois no evento onlo
 Código bem simples, não, não me orgulho dele. Apenas fiz pq tem outros muito piores por ai, e um cara no iMasters perguntou.
 
 Note que usei 5 wallpapers grandes, para demorar um pouco para carregar, e o efeito ser visto.
-  
+
 Não é obstrutivo, pois escondo com js.
 
 ``` html
@@ -39,7 +39,7 @@ window.onload = function() {
 }
 </script>
 <style>
-#loading { 
+#loading {
   display: block;
   width: 200px;
 }

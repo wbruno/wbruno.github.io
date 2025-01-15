@@ -1,6 +1,6 @@
 ---
 id: 1557
-title: 'Evitando duplicação de script &#8211; jQuery'
+title: 'Evitando duplicação de script - jQuery'
 date: 2011-10-21T12:42:01+00:00
 author: William Bruno
 layout: post

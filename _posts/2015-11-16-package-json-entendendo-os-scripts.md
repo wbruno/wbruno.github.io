@@ -21,7 +21,7 @@ Uma seção interessante do **package.json**, é a **scripts**. Que será o foco
 
 A seção scripts possui algumas tarefas padrões como: **start, test, install..**. ([documentação](https://docs.npmjs.com/misc/scripts)).
 
-Após criar um package.json com ajuda do <var>$ npm init &#8211;yes</var>, a forma de uso é a seguinte:
+Após criar um package.json com ajuda do <var>$ npm init -yes</var>, a forma de uso é a seguinte:
 
 ``` shell
 $ npm test

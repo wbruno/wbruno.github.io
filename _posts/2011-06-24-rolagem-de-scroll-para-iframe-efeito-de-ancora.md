@@ -1,6 +1,6 @@
 ---
 id: 1121
-title: 'Rolagem de scroll indo para um iframe &#8211; efeito de âncora'
+title: 'Rolagem de scroll indo para um iframe - efeito de âncora'
 date: 2011-06-24T07:00:27+00:00
 author: William Bruno
 layout: post

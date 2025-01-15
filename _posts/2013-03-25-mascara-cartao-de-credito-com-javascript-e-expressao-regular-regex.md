@@ -1,6 +1,6 @@
 ---
 id: 2931
-title: 'Máscara cartão de crédito com javascript e expressão regular &#8211; regex'
+title: 'Máscara cartão de crédito com javascript e expressão regular - regex'
 date: 2013-03-25T10:35:32+00:00
 author: William Bruno
 layout: post

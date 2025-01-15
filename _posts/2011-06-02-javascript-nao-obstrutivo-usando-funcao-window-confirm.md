@@ -1,6 +1,6 @@
 ---
 id: 1025
-title: 'JavaScript não obstrutivo &#8211; usando a função window.confirm()'
+title: 'JavaScript não obstrutivo - usando a função window.confirm()'
 date: 2011-06-02T07:00:19+00:00
 author: William Bruno
 layout: post
@@ -12,7 +12,7 @@ categories:
   - Javascript
 ---
 Alguns &#8216;cases&#8217; rápidos e simples, de como podemos usar javascript para melhorar a vida do usuário, sem estragar a navegação dele, e ainda deixar tudo funcionando, caso não haja suporte a js, ou o script simplesmente pare de funcionar.
-  
+
 <!--more-->
 
 ## confirm() indo para uma página
@@ -58,7 +58,7 @@ window.onload = function(){
 <body>
   <form action="" method="post" id="form">
     Email: <input type="text" name="email" />
-    <input type="submit" name="ok" value="ok" />  
+    <input type="submit" name="ok" value="ok" />
   </form>
 </body>
 </html>
@@ -67,5 +67,5 @@ window.onload = function(){
 Algumas aplicações que vejo são: &#8216;confirmar exclusão de registro&#8217; (tanto pelo link direto, qnto pelo formulário), confirmar abertura de link externo, onde o usuário &#8216;sai&#8217; do teu site&#8230;
 
 A metodologia é simples: &#8216;Faça funcionar mesmo sem suporte a javascript&#8217;.
-  
+
 O difícil é a maioria dos programadores de hoje em dia, levarem em consideração ela.

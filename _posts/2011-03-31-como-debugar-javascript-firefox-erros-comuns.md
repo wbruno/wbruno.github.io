@@ -1,6 +1,6 @@
 ---
 id: 432
-title: 'Como debugar JavaScript com o Firefox ? &#8211; erros comuns'
+title: 'Como debugar JavaScript com o Firefox ? - erros comuns'
 date: 2011-03-31T09:11:00+00:00
 author: William Bruno
 layout: post
@@ -60,7 +60,7 @@ Feliz, feliz, alegre e pimpão, tentamos escrever nosso primeiro alert:
 Salva o código, abre no navegador, aperta F5 e **nada**. Frustante&#8230;
 
 <h2 style="margin-top: 30px">
-  Erro: 1a &#8211; blablabla is not defined
+  Erro: 1a - blablabla is not defined
 </h2>
 
 Vamos lá, <u>não funcionou</u>. Os mais experientes já devem ter notado o motivo, mas grande parte dos iniciantes, e até nós mesmos, num momento de correria, podemos deixar passar esse tipo de erro.
@@ -84,7 +84,7 @@ ae( 'oi' );
 Agora funciona.
 
 <h2 style="margin-top: 30px">
-  Erro: 1b &#8211; blablabla is not defined
+  Erro: 1b - blablabla is not defined
 </h2>
 
 ``` js
@@ -96,7 +96,7 @@ alerts( 'oi' );
 Mesmo erro, idêntico. Agora, vendo o **blablabla is not defined**, sabemos que o **blablabla**, foi uma function que tentamos usar, mas que não existe.
 
 <h2 style="margin-top: 30px">
-  Erro: 1c &#8211; escrito de forma incorreta
+  Erro: 1c - escrito de forma incorreta
 </h2>
 
 Lembremos que **JaVaSCrIPt** é **CaSE SeNSiTiVe**, então não podemos fazer:
@@ -110,7 +110,7 @@ O erro vai ser o mesmo, existe a function nativa **alert()**, mas não a **Alert
 Essa mesma regra se aplica a variaveis, objetos..
 
 <h2 style="margin-top: 30px">
-  Erro: 1d &#8211; $ is not defined
+  Erro: 1d - $ is not defined
 </h2>
 
 Esse acontece muito, pois a lib precisa ser incorporada ao documento, antes de qualquer código que seja escrito com a sintaxe do jQuery.
@@ -122,7 +122,7 @@ $() é a função chave e básica da lib. Com outros FWs, acontecem erros semelh
 Erros triviais, de sintaxe.
 
 <h2 style="margin-top: 30px">
-  Erro 2a: &#8211; missing } after function body
+  Erro 2a: - missing } after function body
 </h2>
 
 ``` html
@@ -145,7 +145,7 @@ Esquecemos de fechar a function, erro de sintaxe.
 ```
 
 <h2 style="margin-top: 30px">
-  Erro 3a: &#8211; Valor do atributo type inválido
+  Erro 3a: - Valor do atributo type inválido
 </h2>
 
 ``` html
@@ -159,7 +159,7 @@ Já vi isso acontecer. Não aparece nada no console, mas não funciona nenhuma r
 o valor do atributo type esté incorreto. Deve ser **text/javascript**, isso e somente isso.
 
 <h2 style="margin-top: 30px">
-  Erro 3b: &#8211; Declarar atributo language
+  Erro 3b: - Declarar atributo language
 </h2>
 
 ``` html
@@ -175,7 +175,7 @@ Então o **language** é completamente desnecessário. Existem documentos da w3c
 Apenas o **type**, é suficiente e obrigatório (ainda não levo em conta HTML5)
 
 <h2 style="margin-top: 30px">
-  Erro 4a: &#8211; missing ) after argument list
+  Erro 4a: - missing ) after argument list
 </h2>
 
 ``` js
@@ -193,7 +193,7 @@ alert( 'Oi' );
 ```
 
 <h2 style="margin-top: 30px">
-  Erro 5a: &#8211; missing ; before statement
+  Erro 5a: - missing ; before statement
 </h2>
 
 Pois é, apesar de não ser obrigatório na sintaxe, esquecer de &#8216;_terminar os comandos_&#8216;, pode gerar falhas.
@@ -210,7 +210,7 @@ e não é nenhuma situação tão especial assim. Basta imaginar, que passamos o
 Se tivéssemos sidos rígidos com a sintaxe, mesmo não sendo obrigatório, não teríamos esse problema.
 
 <h2 style="margin-top: 30px">
-  Erro 5b: &#8211; missing ; after for-loop initializer
+  Erro 5b: - missing ; after for-loop initializer
 </h2>
 
 O console é muito bom, mas não é cigano.
@@ -232,7 +232,7 @@ for( var prop in caixa )
 ```
 
 <h2 style="margin-top: 30px">
-  Erro 6a: &#8211; Usando document.write em um lugar nada a ver
+  Erro 6a: - Usando document.write em um lugar nada a ver
 </h2>
 
 ``` html
@@ -258,7 +258,7 @@ Chamei uma função no evento do botão, e ai o .write, tentou escrever &#8216;n
 Use qualquer um dos outros métodos que &#8216;escrevem&#8217;, e direcione o output para outro lugar.
 
 <h2 style="margin-top: 30px">
-  Erro: 7a(Alerta) &#8211; elemento referenciado pelo ID/NAME
+  Erro: 7a(Alerta) - elemento referenciado pelo ID/NAME
 </h2>
 
 ``` html
@@ -277,7 +277,7 @@ Note que coloquei as tags <script>, após o elemento.
 Se eu tivesse colocado elas **antes** de declará-lo, ai aconteceria o erro 1a, pois navegador não acharia nada chamado <u>teste</u>
 
 <h2 style="margin-top: 30px">
-  Erro: 7b &#8211; elemento referenciado pelo ID/NAME
+  Erro: 7b - elemento referenciado pelo ID/NAME
 </h2>
 
 Aparece frequentemente em rotinas envolvendo formulários.
@@ -305,7 +305,7 @@ Vamos fazer melhor, declarar um atributo ID único pro elemento, e usar o standa
 ```
 
 <h2 style="margin-top: 30px">
-  Erro: 8a &#8211; blablabla is null
+  Erro: 8a - blablabla is null
 </h2>
 
 ``` html
@@ -328,7 +328,7 @@ O problema, foi que **não esperamos**, o elemento existir, ou seja, o DOM carre
 Daí, o getElementById(), retornou um null, e esse null não possui nenhuma propriedade, por isso o erro.
 
 <h2 style="margin-top: 30px">
-  Erro 8b &#8211; blablabla is null
+  Erro 8b - blablabla is null
 </h2>
 
 ``` js
@@ -351,7 +351,7 @@ window.onload = function(){
 , ou seja, esperar que o evento .onload do objeto window dispare a nossa function.
 
 <h2 style="margin-top: 30px">
-  Erro 8c &#8211; blablabla is null
+  Erro 8c - blablabla is null
 </h2>
 
 ``` html
@@ -377,7 +377,7 @@ Executou sem problemas, fez o que deveria, mas é sempre bom olhar o console, me
 Erro de lógica, tento chegar até um &#8216;pergunta4&#8217;, mas só existe até o pergunta3. Precisa corrigir a condição de parada do loop.
 
 <h2 style="margin-top: 30px">
-  Erro 9a: &#8211; Não tem erro, apenas não funciona!
+  Erro 9a: - Não tem erro, apenas não funciona!
 </h2>
 
 ``` html
@@ -402,7 +402,7 @@ Pois é, não pode. Em um documento, cada ID deve ser um identificador único.
 Não mostrou erro no console, porém esse tipo de erros, podemos pegar no <a href="http://validator.w3.org/" target="_blank">validador w3c</a>.
 
 <h2 style="margin-top: 30px">
-  Erro 10a:(Alerta) &#8211; Declaração ignorada
+  Erro 10a:(Alerta) - Declaração ignorada
 </h2>
 
 Fizemos algo errado. Esse erro é muito sutil, mas pode infernizar bastante. Por isso que sempre é bom, já começarmos nossos scripts com um DOCTYPE
@@ -438,7 +438,7 @@ document.getElementById('caixa').style.height = '140px';
 ```
 
 <h2 style="margin-top: 30px">
-  Erro 11a: &#8211; setting a property that has only a getter
+  Erro 11a: - setting a property that has only a getter
 </h2>
 
 Violando encapsulamento? oO Sim meus caros, javascript tem um &#8216;Q&#8217; de orientação a objetos.
@@ -452,7 +452,7 @@ document.getElementById('caixa').offsetTop = '40%';
 … exatamente oque está dizendo, **.offsetTop**, é apenas um getter, logo não podemos atribuir nada a essa propriedade.
 
 <h2 style="margin-top: 30px">
-  Erro 12a: &#8211; Usando atributos que o objeto não possui
+  Erro 12a: - Usando atributos que o objeto não possui
 </h2>
 
 Não disparou nenhum erro pra mim, mas dá para usarmos coisas que não existem.
@@ -490,7 +490,7 @@ Para descobrirmos o que existe ou não naquele objeto, podemos fazer:
 A saída é bem extensa e interessante.
 
 <h2 style="margin-top: 30px">
-  Erro 13a: &#8211; queríamos somar, mas juntou
+  Erro 13a: - queríamos somar, mas juntou
 </h2>
 
 Outro erro comportamental.
@@ -532,7 +532,7 @@ id('resultado').value = parseInt( id('valor').value) + parseInt( id('valor2').va
 ```
 
 <h2 style="margin-top: 30px">
-  Erro 14a: &#8211; blablabla is not a function
+  Erro 14a: - blablabla is not a function
 </h2>
 
 ``` js
@@ -545,7 +545,7 @@ Um pouco complicado de reproduzir.. e existem várias situações onde podemos v
 Ali no caso, eu tinha uma variavel, e tentei usar ela como se fosse uma função.
 
 <h2 style="margin-top: 30px">
-  Erro 15a: &#8211; useless set(Timeout|Interval) call ( missing quotes around argument?)
+  Erro 15a: - useless set(Timeout|Interval) call ( missing quotes around argument?)
 </h2>
 
 [<img src="/wp-content/uploads/2011/03/a.jpg" alt="" title="a" width="562" height="46" class="aligncenter size-full wp-image-822" srcset="/wp-content/uploads/2011/03/a.jpg 562w, /wp-content/uploads/2011/03/a-300x24.jpg 300w" sizes="(max-width: 562px) 100vw, 562px" />](/wp-content/uploads/2011/03/a.jpg)

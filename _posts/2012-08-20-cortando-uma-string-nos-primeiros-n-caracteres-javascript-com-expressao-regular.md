@@ -1,6 +1,6 @@
 ---
 id: 2589
-title: 'Cortando uma string nos primeiros &#8220;N&#8221; caracteres &#8211; JavaScript com Expressão Regular'
+title: 'Cortando uma string nos primeiros &#8220;N&#8221; caracteres - JavaScript com Expressão Regular'
 date: 2012-08-20T17:56:52+00:00
 author: William Bruno
 layout: post

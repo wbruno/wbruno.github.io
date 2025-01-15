@@ -1,6 +1,6 @@
 ---
 id: 3297
-title: 'Construindo uma API Rest com ExpressJS &#8211; NodeJS'
+title: 'Construindo uma API Rest com ExpressJS - NodeJS'
 date: 2015-03-31T00:23:58+00:00
 author: William Bruno
 layout: post

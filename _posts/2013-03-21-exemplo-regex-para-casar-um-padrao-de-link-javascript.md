@@ -1,6 +1,6 @@
 ---
 id: 2930
-title: 'Exemplo regex para casar um padrão de link &#8211; javascript'
+title: 'Exemplo regex para casar um padrão de link - javascript'
 date: 2013-03-21T11:52:49+00:00
 author: William Bruno
 layout: post

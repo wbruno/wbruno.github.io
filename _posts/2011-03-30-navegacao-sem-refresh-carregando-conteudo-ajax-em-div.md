@@ -1,6 +1,6 @@
 ---
 id: 416
-title: 'Navegação sem refresh &#8211; carregando conteúdo com ajax em div'
+title: 'Navegação sem refresh - carregando conteúdo com ajax em div'
 date: 2011-03-30T06:45:28+00:00
 author: William Bruno
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 1728
-title: 'Setar combo pelo .text() do option &#8211; jQuery'
+title: 'Setar combo pelo .text() do option - jQuery'
 date: 2012-01-19T10:58:27+00:00
 author: William Bruno
 layout: post
@@ -12,7 +12,7 @@ categories:
   - jQuery
 ---
 Apenas repositório mesmo:
-  
+
 <!--more-->
 
 ``` html
@@ -20,17 +20,17 @@ Apenas repositório mesmo:
 <script type="text/javascript">
 jQuery(document).ready(function(){
   var combo = jQuery("select[name='combo']");
-  
-  
+
+
   jQuery("input[name='selecionar']").click(function(){
     var button = jQuery( this );
     combo.find("option").each(function(){
       if( jQuery( this ).text()==button.val() )
       {
-        combo.val( jQuery( this ).val() );    
+        combo.val( jQuery( this ).val() );
       }
-    });  
-  });  
+    });
+  });
 
 });
 </script>

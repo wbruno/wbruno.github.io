@@ -46,7 +46,7 @@ Você aprenderá a construir uma API RESTful funcional, com testes unitários e 
 
 =)
 
-## Introdução &#8211; 21 páginas
+## Introdução - 21 páginas
 
 Instalação e configuração
 
@@ -106,7 +106,7 @@ Promise
 
 Template strings
 
-## Ferramenta de linha de comando &#8211; 14 páginas
+## Ferramenta de linha de comando - 14 páginas
 
 Executando programas NodeJS
 
@@ -140,7 +140,7 @@ Criando um servidor HTTP
 
 Criando novos endereços
 
-## O que é REST (Representational State Transfer) &#8211; 5 páginas
+## O que é REST (Representational State Transfer) - 5 páginas
 
 Exemplos de APIs
 
@@ -154,7 +154,7 @@ Testando a requisição com curl
 
 Testando a requisição com Postman
 
-## Bancos de dados &#8211; 7 páginas
+## Bancos de dados - 7 páginas
 
 MySQL
 
@@ -174,7 +174,7 @@ Atualizando informações
 
 Excluindo registros
 
-## Construindo uma API RESTful com Express &#8211; 30 páginas
+## Construindo uma API RESTful com Express - 30 páginas
 
 ExpressJS
 
@@ -222,7 +222,7 @@ Módulo passport
 
 JSON Web Token
 
-## Template engine &#8211; 10 páginas
+## Template engine - 10 páginas
 
 Servindo arquivos estáticos
 
@@ -234,7 +234,7 @@ Handlebars
 
 Jade
 
-## Testes automáticos &#8211; 20 páginas
+## Testes automáticos - 20 páginas
 
 Mocha
 
@@ -250,7 +250,7 @@ Istanbul
 
 Mantendo as dependências atualizadas
 
-## Deploy em produção &#8211; 10 páginas
+## Deploy em produção - 10 páginas
 
 Healthcheck
 

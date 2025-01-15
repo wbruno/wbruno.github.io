@@ -1,6 +1,6 @@
 ---
 id: 2615
-title: 'Sistema de GRID CSS 960 &#8211; Classes CSS com mais significado'
+title: 'Sistema de GRID CSS 960 - Classes CSS com mais significado'
 date: 2012-08-23T07:00:57+00:00
 author: William Bruno
 layout: post

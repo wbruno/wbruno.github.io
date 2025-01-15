@@ -38,7 +38,7 @@ O meu crime foi não ter fechado a tag <img />.
 ``` html
 <img src="images/wbruno-logo.png" alt="" id="logo">
 ```
-Antecessora mais próxima do do <u></div><!&#8211; /main &#8211;></u>, daí o erro foi disparado nele. Para mim:
+Antecessora mais próxima do do <u></div><!- /main -></u>, daí o erro foi disparado nele. Para mim:
 
 > _Conhecer bem xHTML, te faz ser melhor em HTML_
 

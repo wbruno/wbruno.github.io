@@ -15,7 +15,7 @@ Sim, hoje é meu aniversário. Exatamente as 11 horas da manhã de hoje, complet
 
 Se for contar _&#8220;apartir de quando eu me lembro&#8221;_, teria que adiar a contagem, para depois dos 12 anos.. pois realmente antes disso, é tudo muito vago nas minhas memórias.
 
-Comecei a trabalhar com 16 anos. Estagiário Técnico na Porto Seguro &#8211; Proteção Patrimonial.
+Comecei a trabalhar com 16 anos. Estagiário Técnico na Porto Seguro - Proteção Patrimonial.
 
 Então, se fosse contar apartir daí, a minha _&#8220;vida profissional&#8221;_, seria de apenas 7 anos. Não trabalhei direto, desde então.. logo podemos contar algumas &#8220;férias&#8221;(entre um lugar e outro). Somando, seriam oficialmente:
 

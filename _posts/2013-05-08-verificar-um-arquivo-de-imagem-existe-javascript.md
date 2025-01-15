@@ -1,6 +1,6 @@
 ---
 id: 2954
-title: 'Verificar se um arquivo de imagem existe &#8211; JavaScript'
+title: 'Verificar se um arquivo de imagem existe - JavaScript'
 date: 2013-05-08T10:10:01+00:00
 author: William Bruno
 layout: post

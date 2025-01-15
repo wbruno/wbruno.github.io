@@ -1,6 +1,6 @@
 ---
 id: 167
-title: 'Principio de slideshow &#8211; setTimeout recursivo'
+title: 'Principio de slideshow - setTimeout recursivo'
 date: 2011-03-11T21:11:32+00:00
 author: William Bruno
 layout: post

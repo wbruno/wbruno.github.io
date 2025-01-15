@@ -1,6 +1,6 @@
 ---
 id: 623
-title: 'Resolvendo problema de URLs duplicadas &#8211; canonical'
+title: 'Resolvendo problema de URLs duplicadas - canonical'
 date: 2011-04-06T06:00:15+00:00
 author: William Bruno
 layout: post

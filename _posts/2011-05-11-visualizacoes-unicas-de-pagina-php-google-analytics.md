@@ -1,6 +1,6 @@
 ---
 id: 924
-title: 'Visualizações únicas e de página, com php &#8211; google analytics'
+title: 'Visualizações únicas e de página, com php - google analytics'
 date: 2011-05-11T06:55:54+00:00
 author: William Bruno
 layout: post
@@ -16,13 +16,13 @@ tags:
 =)
 
 Foi um script que desenvolvi um tempo atrás.
-  
+
 Eu precisava resgatar a quantidade de **visitas únicas**, e de **visualizações**, das páginas de um site.
-  
+
 <!--more-->
 
 Existe uma <a href="http://code.google.com/p/gapi-google-analytics-php-interface/" target="_blank">class oficial, a GAPI</a>.
-  
+
 Se você dedicar um tempinho para ler a <a href="http://code.google.com/intl/pt-BR/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html" target="_blank">API do Google Analytics</a>, dá para customizar bem os relatórios..
 
 ``` php
@@ -53,13 +53,13 @@ A saída é algo do tipo:
 ```
 
 No caso, abrindo o teu google analytics, você notará, que a resposta se refere aos dados dos últimos 30 dias.
-  
+
 O **ga\_profile\_id**, vc recupera assim que logar no GA.
 
 Note a URL, depois de ter entrado no teu perfil:
-  
+
 <u>https://www.google.com/analytics/reporting/?reset=1&id=**123456789**pdr=20110409-20110509</u>
 
 Só informar na constante ali do php, o valor da chave ID dessa query string.
-  
+
 Bom divertimento.

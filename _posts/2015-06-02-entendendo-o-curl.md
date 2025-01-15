@@ -216,10 +216,10 @@ Beleza?
 
 Algumas outra opções que podemos usar ainda com GET no cURL são:
 
-**CURLOPT_CONNECTTIMEOUT** &#8211; segundos tentando conectar, falha caso não volte antes.
+**CURLOPT_CONNECTTIMEOUT** - segundos tentando conectar, falha caso não volte antes.
 
-**CURLOPT_TIMEOUT** &#8211; segundos até &#8220;falhar&#8221; caso não volte antes do definido.
+**CURLOPT_TIMEOUT** - segundos até &#8220;falhar&#8221; caso não volte antes do definido.
 
-**CURLOPT_USERAGENT** &#8211; você pode &#8220;fingir&#8221; que é um navegador, por exemplo.
+**CURLOPT_USERAGENT** - você pode &#8220;fingir&#8221; que é um navegador, por exemplo.
 
 Ainda não falei dos outros métodos POST, PUT e DELETE, mas fica para o próximo post, okay ?

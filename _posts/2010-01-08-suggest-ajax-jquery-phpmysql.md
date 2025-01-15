@@ -1,6 +1,6 @@
 ---
 id: 24
-title: 'Suggest AJAX &#8211; jQuery &#8211; php/Mysql'
+title: 'Suggest AJAX - jQuery - php/Mysql'
 date: 2010-01-08T23:32:31+00:00
 author: William Bruno
 excerpt: Resolvi brincar um pouquinho aqui..
@@ -155,7 +155,7 @@ INSERT INTO `cliente` (`id`, `nome`) VALUES
 
 <strong style="font-style: normal; font-weight: bold !important;">function.php</strong>
 
-``` php 
+``` php
 <?php
         header("Content-Type: text/html; charset=ISO-8859-1");
 

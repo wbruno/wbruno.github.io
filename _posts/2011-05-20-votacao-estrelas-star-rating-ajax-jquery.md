@@ -1,6 +1,6 @@
 ---
 id: 974
-title: 'Votação com estrelas [ star rating ] &#8211; Ajax jQuery'
+title: 'Votação com estrelas [ star rating ] - Ajax jQuery'
 date: 2011-05-20T07:00:13+00:00
 author: William Bruno
 layout: post

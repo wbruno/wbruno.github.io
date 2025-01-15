@@ -1,6 +1,6 @@
 ---
 id: 2173
-title: 'Semântica html5 &#8211; Comece agora mesmo! Use!'
+title: 'Semântica html5 - Comece agora mesmo! Use!'
 date: 2012-08-14T07:00:52+00:00
 author: William Bruno
 layout: post

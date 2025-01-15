@@ -1,6 +1,6 @@
 ---
 id: 2962
-title: 'Navegando no DOM &#8211; jQuery'
+title: 'Navegando no DOM - jQuery'
 date: 2013-05-20T08:00:57+00:00
 author: William Bruno
 layout: post

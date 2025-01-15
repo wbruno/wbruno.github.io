@@ -1,6 +1,6 @@
 ---
 id: 1870
-title: 'Turn lights Off &#8211; Meu tema em fundo preto'
+title: 'Turn lights Off - Meu tema em fundo preto'
 date: 2012-03-13T15:56:10+00:00
 author: William Bruno
 layout: post

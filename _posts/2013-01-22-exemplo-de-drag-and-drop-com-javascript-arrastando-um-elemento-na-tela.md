@@ -1,6 +1,6 @@
 ---
 id: 2895
-title: 'Exemplo de Drag and Drop com javascript &#8211; Arrastando um elemento na tela'
+title: 'Exemplo de Drag and Drop com javascript - Arrastando um elemento na tela'
 date: 2013-01-22T16:17:11+00:00
 author: William Bruno
 layout: post
@@ -23,7 +23,7 @@ Arrastando um elemento atraves de um palco, no eixo x
 
 <div id="stage">
   <div id="obj" class="fright">
-    
+
   </div><!-- #obj -->
 </div><!-- #stage -->
 <style type="text/css">

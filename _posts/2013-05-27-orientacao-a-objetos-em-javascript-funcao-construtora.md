@@ -1,6 +1,6 @@
 ---
 id: 2993
-title: 'Orientação a Objetos em Javascript &#8211; Função Construtora'
+title: 'Orientação a Objetos em Javascript - Função Construtora'
 date: 2013-05-27T07:00:35+00:00
 author: William Bruno
 layout: post

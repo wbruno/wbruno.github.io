@@ -1,6 +1,6 @@
 ---
 id: 2859
-title: 'Formatar moeda no onblur &#8211; javascript sem jQuery'
+title: 'Formatar moeda no onblur - javascript sem jQuery'
 date: 2012-11-23T07:00:03+00:00
 author: William Bruno
 layout: post

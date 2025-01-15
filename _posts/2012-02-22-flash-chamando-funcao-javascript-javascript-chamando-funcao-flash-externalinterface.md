@@ -1,6 +1,6 @@
 ---
 id: 1788
-title: 'Flash chamando função javascript, e javascript chamando função do flash &#8211; ExternalInterface'
+title: 'Flash chamando função javascript, e javascript chamando função do flash - ExternalInterface'
 date: 2012-02-22T13:37:05+00:00
 author: William Bruno
 layout: post
@@ -14,11 +14,11 @@ Boas galera!
 Precisei disso recentemente, e como não trabalho muito com flash, e nunca programei nada de verdade em ActionScript, pedi socorro ao mestre do flash: **Thiago Cruz**.
 
 No blog dele, ele já postou ótimos exemplos, de <a href="http://berseck.wordpress.com/2009/03/25/utilizando-classe-externalinterface-as2/" target="_blank" title="Utilizando classe externalInterface() AS2">utilizar a class externalinterface</a>, então deixo por aqui também, o exemplo do código fonte que ele fez para mim.
-  
+
 <!--more-->
 
 
-  
+
 O **javascript** fica assim:
 
 ``` js

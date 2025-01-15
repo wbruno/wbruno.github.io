@@ -1,6 +1,6 @@
 ---
 id: 3156
-title: 'Enviando arquivos via rsync &#8211; MAC'
+title: 'Enviando arquivos via rsync - MAC'
 date: 2014-01-17T16:08:00+00:00
 author: William Bruno
 layout: post

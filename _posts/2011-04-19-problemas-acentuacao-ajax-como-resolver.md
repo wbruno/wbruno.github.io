@@ -43,7 +43,7 @@ Okay, funciona.. basta mantermos o padrão. Se definirmos usar ISO, então usemo
 
 Na codificação do arquivo, nos headers que vamos enviar ao navegador, na tabela do banco de dados, na meta tag do documento html..
 
-## Problemas com acentos [ 2 ] &#8211; Ã Ã£..
+## Problemas com acentos [ 2 ] - Ã Ã£..
 
 [<img src="/wp-content/uploads/2011/04/erro23.jpg" alt="" title="erro2" width="546" height="242" class="aligncenter size-full wp-image-807" srcset="/wp-content/uploads/2011/04/erro23.jpg 546w, /wp-content/uploads/2011/04/erro23-300x132.jpg 300w" sizes="(max-width: 546px) 100vw, 546px" />](/wp-content/uploads/2011/04/erro23.jpg)
 
@@ -148,7 +148,7 @@ Eu acho que:
 
 (Não existem)|(Não deveriam existir) fórmulas mágicas, nem &#8216;soluções definitivas&#8217;&#8230; procure <a href="http://www.w3.org/International/O-HTTP-charset" target="_blank">entender os motivos, pesquise pelas causas</a>.
 
-## Acentos em entities &#8211; &eacute; &atilde; &#8230;
+## Acentos em entities - &eacute; &atilde; &#8230;
 
 Deselegante, porém lógico que funciona!
 

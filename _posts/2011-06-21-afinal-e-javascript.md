@@ -1,6 +1,6 @@
 ---
 id: 1095
-title: 'Afinal, o que é o this ? &#8211; javascript'
+title: 'Afinal, o que é o this ? - javascript'
 date: 2011-06-21T07:00:56+00:00
 author: William Bruno
 layout: post

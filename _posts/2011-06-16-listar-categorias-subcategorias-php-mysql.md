@@ -1,6 +1,6 @@
 ---
 id: 1084
-title: 'Listar categorias e subcategorias &#8211; php e mysql'
+title: 'Listar categorias e subcategorias - php e mysql'
 date: 2011-06-16T07:00:39+00:00
 author: William Bruno
 layout: post
@@ -14,32 +14,32 @@ categories:
 Não raramente fazemos sites com categorias e subcategorias.
 
 Onde a relação é de 1:N, ou seja, uma subcategoria, tem apenas uma categoria &#8216;mãe&#8217;, por assim dizer, mas várias subcategorias, podem ter a mesma mãe.
-  
+
 <!--more-->
 
 
-  
+
 Nesse caso, qndo estamos começando a programar, a resposta direta que implementamos, é algo parecido com isso:
 
 ``` php
 <?php
   $mysqli = new mysqli('localhost','root','123', 'netropole');
-  
-  $sql = "SELECT categoria.id AS id_categoria, categoria.nome AS nome_categoria 
-      FROM categoria 
+
+  $sql = "SELECT categoria.id AS id_categoria, categoria.nome AS nome_categoria
+      FROM categoria
       ORDER BY nome_categoria";
-      
+
   $query = $mysqli->query( $sql )or die( $mysqli->error );
-  
+
   echo '<ul>'.PHP_EOL;
-  
+
   $prev_cat = '';
   while( $dados = $query->fetch_object() )
   {
     echo '<li><strong>'.$dados->nome_categoria.'</strong>'.PHP_EOL."\t".'<ul>'.PHP_EOL;
-    
-    $sql2 = "SELECT subcategoria.id AS id_subcategoria, subcategoria.nome AS nome_subcategoria 
-      FROM subcategoria WHERE subcategoria.id_categoria = {$dados->id_categoria} 
+
+    $sql2 = "SELECT subcategoria.id AS id_subcategoria, subcategoria.nome AS nome_subcategoria
+      FROM subcategoria WHERE subcategoria.id_categoria = {$dados->id_categoria}
       ORDER BY nome_subcategoria";
     $query2 = $mysqli->query( $sql2 )or die( $mysqli->error );
     while( $dados2 = $query2->fetch_object() )
@@ -52,7 +52,7 @@ Nesse caso, qndo estamos começando a programar, a resposta direta que implement
 ```
 
 Fazemos uma query interna, para cada categoria, buscando uma sub daquela categoria.
-  
+
 Com isso, tivemos que usar um loop encaixado. (Hurgh!!)
 
 Porém, fazendo um JOIN na query, e usando simples condicionais, podemos fazer o mesmo com apenas uma consulta ao banco, e apenas um loop:

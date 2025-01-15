@@ -1,6 +1,6 @@
 ---
 id: 2998
-title: 'SlideShow JavaScript &#8211; VanillaJS'
+title: 'SlideShow JavaScript - VanillaJS'
 date: 2013-05-29T07:00:50+00:00
 author: William Bruno
 layout: post
@@ -20,7 +20,7 @@ tags:
 
 Estou escrevendo alguns posts sobre Orientação a Objetos em JavaScript:
 
-  1. [Orientação a Objetos em JavaScript &#8211; Objeto Literal](http://wbruno.com.br/javascript-puro/afinal-como-e-orientacao-a-objetos-em-javascript-exemplos/)
+  1. [Orientação a Objetos em JavaScript - Objeto Literal](http://wbruno.com.br/javascript-puro/afinal-como-e-orientacao-a-objetos-em-javascript-exemplos/)
   2. [Orientação a Objetos em Javascript – Função Construtora](http://wbruno.com.br/javascript-puro/orientacao-a-objetos-em-javascript-funcao-construtora/)
 
 

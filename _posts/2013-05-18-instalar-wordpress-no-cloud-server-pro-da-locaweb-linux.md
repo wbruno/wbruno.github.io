@@ -1,6 +1,6 @@
 ---
 id: 2979
-title: 'Instalar WordPress no Cloud Server Pro da Locaweb &#8211; Linux'
+title: 'Instalar WordPress no Cloud Server Pro da Locaweb - Linux'
 date: 2013-05-18T14:57:54+00:00
 author: William Bruno
 layout: post

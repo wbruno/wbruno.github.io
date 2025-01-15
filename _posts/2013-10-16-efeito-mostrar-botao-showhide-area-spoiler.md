@@ -1,6 +1,6 @@
 ---
 id: 3110
-title: 'Efeito mostrar &#8211; Botão show/hide área spoiler'
+title: 'Efeito mostrar - Botão show/hide área spoiler'
 date: 2013-10-16T09:33:35+00:00
 author: William Bruno
 layout: post

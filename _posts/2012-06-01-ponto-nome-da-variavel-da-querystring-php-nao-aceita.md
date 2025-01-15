@@ -1,6 +1,6 @@
 ---
 id: 2030
-title: 'Ponto no nome da variável da querystring &#8211; O php não aceita'
+title: 'Ponto no nome da variável da querystring - O php não aceita'
 date: 2012-06-01T13:29:09+00:00
 author: William Bruno
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 334
-title: 'Criando um plugin jQuery &#8211; parte 1 &#8211; Começando'
+title: 'Criando um plugin jQuery - parte 1 - Começando'
 date: 2011-03-24T07:20:43+00:00
 author: William Bruno
 layout: post

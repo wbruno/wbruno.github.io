@@ -99,7 +99,7 @@ Tive que aprender javascript. Não tinha para onde fugir. Tudo precisava. Eu tin
 
 Implementei Tableless nessa agência, elevei o nível dos sistemas de lá. Finalmente entreguei as primeiras lojas virtuais, utilizando OpenCart(antes disso, a agência só tinha tido frustações). Não era o suficiente, eu queria mais.
 
-## Um freela grande &#8211; Santa Efigenia
+## Um freela grande - Santa Efigenia
 
 Peguei finalmente, um freela de respeito. Um site sobre a <a href="http://www.ofertasdasantaefigenia.com.br/" target="_blank">Santa Efigenia</a>. Eu estava melhorando, estudando MVC, e Orientação a Objetos.
 

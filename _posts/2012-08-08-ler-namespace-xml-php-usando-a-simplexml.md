@@ -1,6 +1,6 @@
 ---
 id: 2210
-title: 'Ler namespace xml php, usando a simplexml &#8211; content:encoded &#8211; feed WordPress'
+title: 'Ler namespace xml php, usando a simplexml - content:encoded - feed WordPress'
 date: 2012-08-08T07:00:39+00:00
 author: William Bruno
 layout: post

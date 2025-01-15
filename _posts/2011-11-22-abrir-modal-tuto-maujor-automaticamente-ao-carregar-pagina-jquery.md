@@ -1,6 +1,6 @@
 ---
 id: 1602
-title: 'Abrir modal do tuto do maujor, automaticamente ao carregar a página &#8211; jQuery'
+title: 'Abrir modal do tuto do maujor, automaticamente ao carregar a página - jQuery'
 date: 2011-11-22T13:59:30+00:00
 author: William Bruno
 layout: post

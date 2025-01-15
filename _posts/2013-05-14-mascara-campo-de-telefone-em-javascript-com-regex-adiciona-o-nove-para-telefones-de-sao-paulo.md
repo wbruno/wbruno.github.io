@@ -1,6 +1,6 @@
 ---
 id: 2956
-title: 'Mascara campo de telefone em javascript com regex &#8211; Adiciona o nove para telefones de são paulo'
+title: 'Mascara campo de telefone em javascript com regex - Adiciona o nove para telefones de são paulo'
 date: 2013-05-14T17:10:03+00:00
 author: William Bruno
 layout: post

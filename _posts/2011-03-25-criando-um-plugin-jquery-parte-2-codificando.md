@@ -1,6 +1,6 @@
 ---
 id: 337
-title: 'Criando um plugin jQuery &#8211; parte 2 &#8211; Codificando'
+title: 'Criando um plugin jQuery - parte 2 - Codificando'
 date: 2011-03-25T07:00:10+00:00
 author: William Bruno
 layout: post

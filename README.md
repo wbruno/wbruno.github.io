@@ -4,7 +4,9 @@
 ``` bash
 sudo gem update --system -n /usr/local/bin/gem
 gem install bundler jekyll
-bundle exec jekyll serve --incremental
+bundle install
+bundle exec jekyll build
+bundle exec jekyll serve --incremental --drafts
 ```
 
 go to:

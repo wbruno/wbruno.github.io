@@ -1,6 +1,6 @@
 ---
 id: 2815
-title: 'Enviando outros dados junto com um .serialize() &#8211; jQuery'
+title: 'Enviando outros dados junto com um .serialize() - jQuery'
 date: 2012-10-29T18:34:41+00:00
 author: William Bruno
 layout: post

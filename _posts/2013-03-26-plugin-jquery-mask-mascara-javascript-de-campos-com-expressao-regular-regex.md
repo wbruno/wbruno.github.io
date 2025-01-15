@@ -1,6 +1,6 @@
 ---
 id: 2932
-title: 'Plugin jQuery.maskx &#8211; Mascara javascript de campos com expressão regular &#8211; regex'
+title: 'Plugin jQuery.maskx - Mascara javascript de campos com expressão regular - regex'
 date: 2013-03-26T08:00:06+00:00
 author: William Bruno
 layout: post

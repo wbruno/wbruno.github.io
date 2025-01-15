@@ -67,6 +67,6 @@ Hospedei no meu cloud, para vocês poderem verificar as requisições e o pushSt
 
 ## Palestra de graça na Eventials
 
-Apesar do foco não ser NodeJS, vou utilizar esse &#8220;servidorzinho&#8221;, durante a palestra [JavaScript &#8211; Boas práticas e otimizações](https://www.eventials.com/pinceladasdaweb/javascript-boas-praticas-e-otimizacoes/), onde a idéia principal é mostrar maneiras diferentes de programar em javascript client-side, entendendo o que elas fazem, e quais devemos preferir.
+Apesar do foco não ser NodeJS, vou utilizar esse &#8220;servidorzinho&#8221;, durante a palestra [JavaScript - Boas práticas e otimizações](https://www.eventials.com/pinceladasdaweb/javascript-boas-praticas-e-otimizacoes/), onde a idéia principal é mostrar maneiras diferentes de programar em javascript client-side, entendendo o que elas fazem, e quais devemos preferir.
 
 É a minha primeira palestra online, então o conteúdo começará do básico, mas não será nada raso. =)

@@ -1,6 +1,6 @@
 ---
 id: 635
-title: 'Entendendo erros do validador HTML w3c &#8211; Parte 2'
+title: 'Entendendo erros do validador HTML w3c - Parte 2'
 date: 2011-04-07T06:50:44+00:00
 author: William Bruno
 layout: post

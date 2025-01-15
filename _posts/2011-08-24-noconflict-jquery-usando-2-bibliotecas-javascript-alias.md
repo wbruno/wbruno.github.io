@@ -1,6 +1,6 @@
 ---
 id: 1352
-title: 'noConflict jQuery &#8211; Usando 2 bibliotecas javascript [ alias $ ]'
+title: 'noConflict jQuery - Usando 2 bibliotecas javascript [ alias $ ]'
 date: 2011-08-24T07:00:45+00:00
 author: William Bruno
 layout: post

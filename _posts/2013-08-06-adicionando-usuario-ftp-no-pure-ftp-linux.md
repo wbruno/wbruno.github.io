@@ -31,7 +31,7 @@ Então, vou deixar aqui como fiz:
 # adduser wp --home /usr/share/wordpress/
 ```
 
-A sintaxe desse comando é **adduser** <seu_usuario> **&#8211;home** <path\_desse\_usuario>
+A sintaxe desse comando é **adduser** <seu_usuario> **-home** <path\_desse\_usuario>
 
 ### Depois: Recupere o uid e gid desse usuário
 

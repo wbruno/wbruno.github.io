@@ -34,7 +34,7 @@ Somos incentivados a usar <var>UpperCamelCase</var> para nomear classes em OOP, 
 
 Mas o problema começa não só quando vc está nomeando uma variavel, objeto, id ou class. O problema existe quando um mesmo projeto possui estilos diferentes de codificação nele mesmo, portanto, padronize. Entre em um acordo com a sua equipe.
 
-## SMACSS &#8211; Scalable and Modular Arquiteture fore CSS
+## SMACSS - Scalable and Modular Arquiteture fore CSS
 
 [<img src="/wp-content/uploads/2013/05/book-covers.png" alt="book-covers" width="247" height="328" class="alignleft size-full wp-image-2996" srcset="/wp-content/uploads/2013/05/book-covers.png 247w, /wp-content/uploads/2013/05/book-covers-225x300.png 225w" sizes="(max-width: 247px) 100vw, 247px" />](/wp-content/uploads/2013/05/book-covers.png) O <a href="http://smacss.com/" rel="nofollow">http://smacss.com/</a> não é um framework css, é um guia de estilo.
 

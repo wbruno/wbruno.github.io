@@ -1,6 +1,6 @@
 ---
 id: 3005
-title: 'Object Oriented CSS &#8211; A teoria das classes reutilizáveis &#8211; OOCSS'
+title: 'Object Oriented CSS - A teoria das classes reutilizáveis - OOCSS'
 date: 2013-05-31T07:00:30+00:00
 author: William Bruno
 layout: post

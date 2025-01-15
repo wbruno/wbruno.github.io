@@ -1,6 +1,6 @@
 ---
 id: 1086
-title: 'Recuperar ID de vídeo do Youtube &#8211; php Expressão Regular'
+title: 'Recuperar ID de vídeo do Youtube - php Expressão Regular'
 date: 2011-06-14T03:00:26+00:00
 author: William Bruno
 layout: post
@@ -14,7 +14,7 @@ tags:
   - youtube
 ---
 Não raramente fazemos sistemas em que precisamos embedar vídeos do youtube no site de nossos clientes.
-  
+
 <!--more-->
 
 Até para deixar registrado aqui, nesse meu repositório, esta foi a ER que utilizei recentemente:
@@ -22,8 +22,8 @@ Até para deixar registrado aqui, nesse meu repositório, esta foi a ER que util
 ``` php
 <?php
 
-    preg_match( '/(v=)([^&]+)/', 'http://www.youtube.com/watch?v=K0e1DbvE0bg&feature=topvideos_music', $matches ); 
-    
+    preg_match( '/(v=)([^&]+)/', 'http://www.youtube.com/watch?v=K0e1DbvE0bg&feature=topvideos_music', $matches );
+
     var_dump( $matches[2] );
     return $matches;
 ```

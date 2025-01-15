@@ -11,8 +11,8 @@ dsq_thread_id:
 categories:
   - Javascript
 ---
-**16/04/2015** &#8211; Atualizei o código em JavaScript puro e jQuery para mostrar assim que carregar a página.
-  
+**16/04/2015** - Atualizei o código em JavaScript puro e jQuery para mostrar assim que carregar a página.
+
 Então se o radio ou o select já tiver algum valor selecionado, o script lê esse valor e já mostra o elemento correspondente ao carregar a página.
 
 ## Select
@@ -143,5 +143,5 @@ window.addEventListener('load', function() {
 ## Com jquery
 
 <http://wbruno.github.io/examples/select-radio/radio-jquery.html>
-  
+
 <http://wbruno.github.io/examples/select-radio/select-jquery.html>

@@ -1,6 +1,6 @@
 ---
 id: 1732
-title: 'Enviar formulário para o php sem refresh &#8211; jQuery.ajax'
+title: 'Enviar formulário para o php sem refresh - jQuery.ajax'
 date: 2012-01-20T07:00:31+00:00
 author: William Bruno
 layout: post

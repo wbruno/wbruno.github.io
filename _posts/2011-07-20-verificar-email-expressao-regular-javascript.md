@@ -1,6 +1,6 @@
 ---
 id: 1212
-title: 'Verificar email com expressão regular &#8211; javascript'
+title: 'Verificar email com expressão regular - javascript'
 date: 2011-07-20T15:29:18+00:00
 author: William Bruno
 layout: post
@@ -15,7 +15,7 @@ categories:
 
 ``` js
 function is_email(email){
-  er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}/; 
+  er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}/;
   if( !er.exec(email) )
   {
     jQuery('#retorno_capta').html('Email inválido!');

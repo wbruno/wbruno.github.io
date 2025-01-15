@@ -1,6 +1,6 @@
 ---
 id: 2916
-title: 'Desligar responsivo &#8211; botão versão desktop'
+title: 'Desligar responsivo - botão versão desktop'
 date: 2013-02-24T14:22:20+00:00
 author: William Bruno
 layout: post

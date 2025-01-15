@@ -1,6 +1,6 @@
 ---
 id: 3230
-title: 'Atualizando o kernel e sua distro &#8211; Cloud Locaweb'
+title: 'Atualizando o kernel e sua distro - Cloud Locaweb'
 date: 2014-02-19T08:00:11+00:00
 author: William Bruno
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 1459
-title: 'Como iniciar um recorte Tableless &#8211; comece !'
+title: 'Como iniciar um recorte Tableless - comece !'
 date: 2011-10-10T07:00:31+00:00
 author: William Bruno
 layout: post

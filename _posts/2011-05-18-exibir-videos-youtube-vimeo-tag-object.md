@@ -21,16 +21,16 @@ Apesar do Youtube hoje em dia, só fornecer o embed com iframe, antigamente o c�
 
 ``` html
 <object height="196" width="305" data="http://www.youtube.com/v/HiaOFOMPOBc" type="application/x-shockwave-flash">
-                <param name="wmode" value="transparent" />
-                <param name="quality" value="hight" />
-                <param name="src" value="http://www.youtube.com/v/HiaOFOMPOBc" />
-        </object>
+  <param name="wmode" value="transparent" />
+  <param name="quality" value="hight" />
+  <param name="src" value="http://www.youtube.com/v/HiaOFOMPOBc" />
+</object>
 ```
 
 No embed do YT, convém notar o formato com que o atributo **data**, e o **value** do param src, devem ser passados.
-  
+
 O link no youtube para o vídeo é do tipo: <u>http://www.youtube.com/watch?v=</u>**HiaOFOMPOBc**
-  
+
 Sendo o valor que destaque ali em negrito o ID dele.
 
 Para fazer o embed corretamente, vc deve extrair esse ID, e jogar no novo formato da URL: <u>http://www.youtube.com/v/</u>ID\_DO\_VIDEO_AQUI

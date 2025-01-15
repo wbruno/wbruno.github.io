@@ -1,6 +1,6 @@
 ---
 id: 1477
-title: 'Como iniciar um recorte tableless &#8211; ensinando a pensar'
+title: 'Como iniciar um recorte tableless - ensinando a pensar'
 date: 2011-10-18T16:30:21+00:00
 author: William Bruno
 layout: post

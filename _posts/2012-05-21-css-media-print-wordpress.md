@@ -1,6 +1,6 @@
 ---
 id: 2026
-title: 'CSS media print &#8211; WordPress'
+title: 'CSS media print - WordPress'
 date: 2012-05-21T18:10:23+00:00
 author: William Bruno
 layout: post
@@ -14,8 +14,8 @@ categories:
 =)
 
 Acabei de implementar um css específico para impressão no tema do meu blog.
-  
-Usando media type=&#8221;print&#8221;. 
+
+Usando media type=&#8221;print&#8221;.
 
 ``` css
 .really_simple_share,

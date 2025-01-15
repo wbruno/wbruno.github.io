@@ -1,6 +1,6 @@
 ---
 id: 2403
-title: 'Expressões Regulares &#8211; REGEX para iniciantes'
+title: 'Expressões Regulares - REGEX para iniciantes'
 date: 2012-08-15T07:10:39+00:00
 author: William Bruno
 layout: post

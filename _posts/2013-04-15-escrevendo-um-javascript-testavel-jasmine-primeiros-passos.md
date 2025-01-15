@@ -1,6 +1,6 @@
 ---
 id: 2940
-title: 'Escrevendo um javascript testável &#8211; Jasmine primeiros passos'
+title: 'Escrevendo um javascript testável - Jasmine primeiros passos'
 date: 2013-04-15T07:00:16+00:00
 author: William Bruno
 layout: post

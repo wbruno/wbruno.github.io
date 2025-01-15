@@ -1,6 +1,6 @@
 ---
 id: 1663
-title: 'Carregando sem refresh, várias áreas diferentes de um site &#8211; jQuery.ajax'
+title: 'Carregando sem refresh, várias áreas diferentes de um site - jQuery.ajax'
 date: 2011-12-29T10:55:46+00:00
 author: William Bruno
 layout: post

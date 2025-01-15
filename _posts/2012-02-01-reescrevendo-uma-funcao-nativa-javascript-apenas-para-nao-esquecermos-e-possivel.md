@@ -1,6 +1,6 @@
 ---
 id: 1765
-title: 'Reescrevendo uma função nativa do javascript &#8211; apenas para não esquecermos que é possível.'
+title: 'Reescrevendo uma função nativa do javascript - apenas para não esquecermos que é possível.'
 date: 2012-02-01T19:21:54+00:00
 author: William Bruno
 layout: post

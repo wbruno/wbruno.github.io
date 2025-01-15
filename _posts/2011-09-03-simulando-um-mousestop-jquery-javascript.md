@@ -1,6 +1,6 @@
 ---
 id: 1375
-title: 'Simulando um mousestop() com jQuery &#8211; javascript'
+title: 'Simulando um mousestop() com jQuery - javascript'
 date: 2011-09-03T10:14:51+00:00
 author: William Bruno
 layout: post
@@ -10,7 +10,7 @@ categories:
   - jQuery
 ---
 Post rápido, para deixar registrado o código
-  
+
 <!--more-->
 
 &nbsp;
@@ -24,7 +24,7 @@ var move = false;
 var $box = null;
 jQuery(document).ready(function(){
   $box = jQuery('.box').not('.active');
-  
+
   $box.mousemove(function( e ){
     e.stopPropagation();
   });
@@ -39,10 +39,10 @@ jQuery(document).ready(function(){
 
   jQuery(document).mousemove(function(){
     $box = jQuery('.box').not('.active');
-  
+
     window.clearTimeout( stop );
     $box.stop(true, true).fadeIn( 700 );
-    
+
     stop = window.setTimeout(function(){
       mousestop();
     }, 500 );
@@ -66,7 +66,7 @@ function mousestop(){
   text-align: center;
   color: #fff;
   font: 14px/65px Tahoma, sans-serif;
-  
+
   position: absolute;
 }
 #box1 { top: 30px; left: 0px; }
@@ -98,7 +98,7 @@ function mousestop(){
 ```
 
 Dica: mecha o mouse, e deixe o mouse parado por um tempo.
-  
+
 Depois fique com o mouse sobre algum box, movimente dentro do box, e fique parado dentro dele.
 
 ## <a href="http://wbruno.com.br/scripts/mousestop.html" target="_blank">Demonstração</a>

@@ -1,6 +1,6 @@
 ---
 id: 2973
-title: 'Plugin jQuery em elemento criado dinamicamente com javascript &#8211; append jQuery'
+title: 'Plugin jQuery em elemento criado dinamicamente com javascript - append jQuery'
 date: 2013-05-17T10:51:44+00:00
 author: William Bruno
 layout: post
@@ -20,7 +20,7 @@ Mas e como podemos fazer para chamar/ativar um plugin, em elementos criados dina
 
 <!--more-->
 
-## O problema &#8211; não funciona em elementos criados com append
+## O problema - não funciona em elementos criados com append
 
 ``` html
 <!doctype html>
@@ -59,7 +59,7 @@ O motivo do colorbox só funcionar na tag <var><a></var> que já existe no docum
 
 Logo, só funciona nos elementos **que já existiam** no instante em que a página terminou de carregar(evento disparado pelo dom.ready).
 
-## A solução &#8211; instanciar o plugin novamente cada vez que inserir um elemento
+## A solução - instanciar o plugin novamente cada vez que inserir um elemento
 
 Então, para que o colorbox funcione nos demais elementos, precisamos atrelar o plugin nestes elementos, assim que eles forem inseridos na página, ou seja, após o append.
 

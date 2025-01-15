@@ -1,6 +1,6 @@
 ---
 id: 1145
-title: 'CallBack facebox &#8211; chamando o modal de dentro do modal'
+title: 'CallBack facebox - chamando o modal de dentro do modal'
 date: 2011-07-15T07:00:17+00:00
 author: William Bruno
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 1739
-title: 'Exemplo de uso jQuery.Deferred &#8211; simples'
+title: 'Exemplo de uso jQuery.Deferred - simples'
 date: 2012-01-23T07:00:54+00:00
 author: William Bruno
 layout: post
@@ -12,15 +12,15 @@ categories:
   - jQuery
 ---
 Talvez esteja faltando algo &#8220;simples&#8221;, situações &#8220;cotidianas&#8221;, ou sei lá oque.
-  
+
 <!--more-->
 
 
-  
+
 Estou vendo muitas pessoas no fórum com a mesma dúvida: &#8220;usar o objeto Deferred do jQuery&#8221;, &#8220;pegar o retorno de uma requisição ajax&#8221;, e coisas relacionadas.
 
 Eu sempre indico o ótimo tutorial do Maujor:
-  
+
 [http://www.maujor.com/blog/2011/02/01/o-objeto-deferred-da-jquery-1-5](http://www.maujor.com/blog/2011/02/01/o-objeto-deferred-da-jquery-1-5 "O Objeto Deferred da jQuery 1.5"), porém talvez por ser tão completo, e ter tantas informações, alguns iniciantes podem não estar &#8220;entendendo&#8221;.
 
 Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas formas de usar o Deferred:
@@ -38,7 +38,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       alert( ret );
       return false;
     });
-    
+
     /* enviando ajax_form com done */
     jQuery('#ajax_form').submit(function(){
 
@@ -46,10 +46,10 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       ret.done(function( dados ){
         alert( dados );
       });
-      
+
       return false;
     });
-    
+
     /* enviando ajax_form2 com then */
     jQuery('#ajax_form2').submit(function(){
 
@@ -57,10 +57,10 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       ret.then(function( dados ){
         alert( dados );
       });
-      
+
       return false;
     });
-    
+
     /* enviando ajax_form3 com success */
     jQuery('#ajax_form3').submit(function(){
 
@@ -68,7 +68,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       ret.success(function( dados ){
         alert( dados );
       });
-      
+
       return false;
     });
   });
@@ -79,9 +79,9 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       url: form.attr('action'),
       data: form.serialize(),
       success: function( dados ){
-        return dados 
+        return dados
       }
-    });    
+    });
   }
   function envia_form( form )
   {
@@ -89,7 +89,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
       type: form.attr('method'),
       url: form.attr('action'),
       data: form.serialize()
-    });    
+    });
   }
   </script>
 </head>
@@ -102,7 +102,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
 
     <label><input type="submit" name="enviar" value="Enviar" /></label>
   </form>
-  
+
   <h2>Recebendo com done</h2>
   <form method="post" action="processa.php" id="ajax_form">
     <label><input type="hidden" name="id" value="" /></label>
@@ -111,7 +111,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
 
     <label><input type="submit" name="enviar" value="Enviar" /></label>
   </form>
-  
+
   <h2>Recebendo com then</h2>
   <form method="post" action="processa.php" id="ajax_form2">
     <label><input type="hidden" name="id" value="" /></label>
@@ -121,7 +121,7 @@ Vou deixar alguns exemplos práticos(todos com o mesmo resultado), de algumas fo
     <label><input type="submit" name="enviar" value="Enviar" /></label>
   </form>
 
-  <h2>Recebendo com success</h2>  
+  <h2>Recebendo com success</h2>
   <form method="post" action="processa.php" id="ajax_form3">
     <label><input type="hidden" name="id" value="" /></label>
     <label>Nome: <input type="text" name="nome" value="nome4" /></label>
@@ -167,7 +167,7 @@ jQuery(document).ready(function(){
 ```
 
 E ai ? qual dos dois usar ? sincrono ? ou assincrono com o deffered ?
-  
+
 Não sei, isso depende da sua aplicação, e é assunto para um próximo post talvez.
 
 Usou ? comente.. este é o &#8220;meu pagamento&#8221; pelo que escrevo: o teu comentário.

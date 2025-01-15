@@ -1,6 +1,6 @@
 ---
 id: 1423
-title: 'A semântica da tag <br /> &#8211; Simplesmente não use !'
+title: 'A semântica da tag <br /> - Simplesmente não use !'
 date: 2011-10-04T21:54:37+00:00
 author: William Bruno
 layout: post

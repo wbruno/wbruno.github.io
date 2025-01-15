@@ -1,6 +1,6 @@
 ---
 id: 3384
-title: 'Dragons API &#8211; Uma API para todos os dragões cadastrar'
+title: 'Dragons API - Uma API para todos os dragões cadastrar'
 date: 2015-05-23T21:49:07+00:00
 author: William Bruno
 layout: post

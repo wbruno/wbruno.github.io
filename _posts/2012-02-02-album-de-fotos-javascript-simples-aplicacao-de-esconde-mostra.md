@@ -1,6 +1,6 @@
 ---
 id: 1767
-title: 'Album de fotos com javascript &#8211; simples aplicação de esconde mostra'
+title: 'Album de fotos com javascript - simples aplicação de esconde mostra'
 date: 2012-02-02T17:50:50+00:00
 author: William Bruno
 layout: post
@@ -12,13 +12,13 @@ categories:
   - Javascript
 ---
 Boas!!
-  
+
 apenas para deixar registrado mesmo..
-  
+
 <!--more-->
 
 Album de fotos, baseado em um escode/mostra, com a propriedade display.
-  
+
 Fiz em javascript puro, em poucos minutos. Foi mais dificil achar as imagens, e mais trabalhoso redimensionar elas, do que fazer o código js.. hehe
 
 Enfim, online:
@@ -34,9 +34,9 @@ function id( el ){
 }
 function hide_all(){
   var els = id('content').getElementsByTagName('ul');
-  
+
   for( var i=0; i<els.length; i++ )
-  {    
+  {
     els[i].style.display = 'none';
   }
 }
@@ -59,8 +59,8 @@ window.onload = function(){
     as[i].onclick = function( e ){
       hide_all();
       var id_el = this.href.split('#')
-           
-      id( id_el[1] ).style.display = 'block';    
+
+      id( id_el[1] ).style.display = 'block';
       return disablelink( e );
     }
   }
@@ -68,7 +68,7 @@ window.onload = function(){
   for( var i=0; i<as.length; i++ )
   {
     as[i].onclick = function( e ){
-      palco( this.href )  
+      palco( this.href )
       return disablelink( e );
     }
   }

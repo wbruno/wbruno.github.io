@@ -1,6 +1,6 @@
 ---
 id: 343
-title: 'Criando um plugin jQuery &#8211; parte 3 &#8211; Otimizando'
+title: 'Criando um plugin jQuery - parte 3 - Otimizando'
 date: 2011-03-26T07:00:50+00:00
 author: William Bruno
 layout: post

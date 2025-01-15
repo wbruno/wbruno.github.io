@@ -1,6 +1,6 @@
 ---
 id: 2178
-title: 'Mascara campo de telefone em javascript com regex &#8211; Nono dígito &#8211; Telefones São Paulo'
+title: 'Mascara campo de telefone em javascript com regex - Nono dígito - Telefones São Paulo'
 date: 2012-08-02T22:25:03+00:00
 author: William Bruno
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 2067
-title: 'Google | Rich Snippets Testing Tool &#8211; Dados estruturados na busca do Google'
+title: 'Google - Rich Snippets Testing Tool - Dados estruturados na busca do Google'
 date: 2012-06-27T10:41:44+00:00
 author: William Bruno
 layout: post

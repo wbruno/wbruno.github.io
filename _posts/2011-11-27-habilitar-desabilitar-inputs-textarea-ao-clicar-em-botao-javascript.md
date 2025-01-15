@@ -1,6 +1,6 @@
 ---
 id: 1630
-title: 'Habilitar e Desabilitar inputs e textarea ao clicar em botão &#8211; JavaScript'
+title: 'Habilitar e Desabilitar inputs e textarea ao clicar em botão - JavaScript'
 date: 2011-11-27T17:09:51+00:00
 author: William Bruno
 layout: post
@@ -26,7 +26,7 @@ function toogle_disabled( bool )
 
   for( var i=0; i<=(input.length-1); i++ )
   {
-    if( input[i].type!='button' ) 
+    if( input[i].type!='button' )
       input[i].disabled = bool;
   }
   for( var i=0; i<=(textarea.length-1); i++ )
@@ -41,7 +41,7 @@ function toogle_disabled( bool )
     <input type="button" onclick="toogle_disabled( false )" value="Habilitar" />
     <input type="button" onclick="toogle_disabled( true )" value="Desabilitar" />
 
-    <br /><br />        
+    <br /><br />
     Nome: <input type="text" name="nome" />
     Local: <input type="text" name="local" />
     <br>

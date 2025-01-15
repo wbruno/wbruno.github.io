@@ -1,6 +1,6 @@
 ---
 id: 2882
-title: 'Como capturar e usar a webcam no Firefox &#8211; html5'
+title: 'Como capturar e usar a webcam no Firefox - html5'
 date: 2012-12-06T11:01:07+00:00
 author: William Bruno
 layout: post

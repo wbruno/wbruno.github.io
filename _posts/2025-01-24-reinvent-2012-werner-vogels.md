@@ -1,7 +1,7 @@
 ---
 id: 3569
-title: '2012 re:Invent Day 2 Keynote: Werner Vogels?'
-date: 2025-01-15T11:00:41+00:00
+title: '2012 re:Invent Day 2 Keynote: Werner Vogels'
+date: 2025-01-24T11:00:41+00:00
 author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3569
@@ -11,8 +11,6 @@ history: false
 categories:
   - Opinião
 ---
-
-# 2012 re:Invent Day 2 Keynote: Werner Vogels?
 
 <img src="/wp-content/uploads/2025/01/reinvent-2012.png" style="vertical-align: middle; border: 0px initial initial;" />
 
@@ -43,19 +41,33 @@ Em 2010 e 2011, eles desligaram os últimos servidores físicos e o gráfico de 
 
 Agora, construimos arquiteturas focando no negócio e não mais em recursos.
 Os requisitos mudam e isso nos aborrece, porém esse é o mundo real, devemos projetar sabendo que vai mudar, e ao não precisar mais nos preocupar com os recursos, usamos a cloud para atender o negócio.
+Devemos abandonar arquiteturas centradas em data centers, focada em recursos. E fazer arquiteturas focadas no negócio.
+Onde antes tinhamos tinhamos restrições de recursos, agora com cloud temos recursos programáveis, usando capacidade ilimitada na aws.
 
 ## Commandments of 21st Century Architectures
 - Controllable
   - Decomposable into small, loosely couple, stateless building blocks
   - Automate your application and processes
   - Let business levers control the system
+  - Architect with cost in mind
   - Pequenas unidades de escala, unidades com tolerância a falha
 - Resilient
+  - Protecting your customers is the first priority
+  - In production, deploy at least two availability zones
+  - Integrate security into your application from the ground up
+  - Build, test, integrate and deploy continuously
+  - Don't think in single failures
+  - Don't thread failure as an exception
 - Adaptative
+  - Assume nothing
+  - Use late biding
 - Data Driven
+  - Instrument everything, all the time
+  - Inspect the whole distribution
+  - Put everything in logs
+  - Thou shalt turn off the lights
 
-Devemos abandonar arquiteturas centradas em data centers, focada em recursos.
+- > "ec2 instances are not servers"
+- > "everything fails all the time"
 
-> "ec2 instances are not servers"
-
-
+Houve o lançamento do AWS Data Pipeline, que posteriormente foi descontinuado e já está em modo manutenção nos dias de hoje (2025).

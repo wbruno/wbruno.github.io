@@ -35,14 +35,18 @@ Só construa as funcionalidades que você precisa.
 Todos esses passos são feitos antes mesmo de começar a escrever a primeira linha de código do produto em si.
 
 ## Small, "two pizza" Teams
-O objetivo é ter times pequenos o suficiente em que não precisa de reuniões para alinhamentos. É importante entregar a funcionalidade nas mãos do cliente o mais rápido possível, assim já começam a melhorar, lançando primeiro em algumas regiões e posteriormente no resto do mundo.
+O objetivo é ter times pequenos o suficiente para não precisar de reuniões para alinhamentos. É importante entregar a funcionalidade nas mãos do cliente o mais rápido possível, assim já começam a melhorar, lançando primeiro em algumas regiões e posteriormente no resto do mundo.
 
 > "Iterate Based on Customer Feedback"
 
 A aws acredita fortemente na metodologia LEAN, e por isso devemos eliminar desperdícios, que são tudo o que não importa para o consumidor final.
 
 > "The Power of Invention"
+
 Inovação não é somente sobre fazer grandes coisas que ninguém nunca pensou antes, mas também fazer coisas que são realmente importantes ao seu consumidor. Entregando mais ferramentas para que nós os clientes usemos melhor a aws, com:
+
+
+<img src="/wp-content/uploads/2025/01/reinvent-2013-2.png" style="vertical-align: middle; border: 0px initial initial;" />
 
 - Performance
   - Holistic
@@ -69,15 +73,15 @@ Inovação não é somente sobre fazer grandes coisas que ninguém nunca pensou 
   - Bid Based on the Cost of Interruption (spot)
   - What's next for Computation?
 - Scale
-  -
-
+  - Challenges of Billing
+  - Respond Quickly and Adapt to Your Data
 
 ## Convidados
-- Netflix - Entre a aplicação netflix e a aws, construiram o Netflix platform. Hoje em dia creio que seja o https://github.com/Netflix/mantis, um pouco equivalente ao https://backstage.io
+- Netflix - Entre a aplicação netflix e a aws, construiram o Netflix platform. Hoje em dia creio que seja o [https://github.com/Netflix/mantis](https://github.com/Netflix/mantis), um pouco equivalente ao [https://backstage.io](https://backstage.io)
 - Instagram - Conseguiram mover dados 20 vezes mais rápido com novos tipos de instâncias.
 - Parse - performance consistente com ebs
-- airbnb -
-
+- airbnb - quando pudermos resolver um problema com aws, iremos, para não termos que resolver nós mesmos
+- dropcam - muitos data points por dia
 
 ## Lançamentos
 - Lançou o RDS para bancos postgres
@@ -87,5 +91,6 @@ Inovação não é somente sobre fazer grandes coisas que ninguém nunca pensou 
 - Redshift Snapshot Copy (multi region)
 - Amazon RDS: Cross-Region Read Replicas
 - Amazon new C3 Instance Type
+- Amazon Kinesis
 
-
+> Ki.ne.sis - means: Movement or Activity in Response of a Stimulus

@@ -14,7 +14,7 @@ categories:
 
 <img src="/wp-content/uploads/2025/01/reinvent-2012.png" style="vertical-align: middle; border: 0px initial initial;" />
 
-Assisti o keynote de 2012, do Dr Werner Vogels, disponível no youtube:
+Assisti o keynote de 2012, do Dr Werner Vogels, disponível no 
 <a href="https://www.youtube.com/watch?v=PW1lhU8n5So&list=PLtH_rofKo_CNoGdvdnxzQk6ubYhRw6qRA&index=13">Youtube</a>.
 
 E estas são as minhas anotações:

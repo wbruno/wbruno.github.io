@@ -14,7 +14,7 @@ categories:
 
 <img src="/wp-content/uploads/2025/01/reinvent-2013.png" style="vertical-align: middle; border: 0px initial initial;" />
 
-Assisti o keynote de 2013, do Dr Werner Vogels, disponível no youtube:
+Assisti o keynote de 2013, do Dr Werner Vogels, disponível no 
 <a href="https://www.youtube.com/watch?v=Waq8Y6s1Cjs&list=PLtH_rofKo_CNoGdvdnxzQk6ubYhRw6qRA&index=12">Youtube</a>.
 
 E estas são as minhas anotações:
@@ -52,7 +52,7 @@ Inovação não é somente sobre fazer grandes coisas que ninguém nunca pensou 
   - Holistic
   - Measure Everything - é importante medir p90 e p99, a única coisa que a média te diz, é que metade dos clientes estão tendo uma performance ok.
   - Measure and Optimize the Full Stack
-  - Performance an IO - se você se importa com performance, ter uma performance consistente de IO é muito importante
+  - Performance and IO - se você se importa com performance, ter uma performance consistente de IO é muito importante
   - Magnetic Disk is Becoming the New Type
   - Memory is the New Disk
   - Providing Consistent Performance

@@ -42,7 +42,7 @@ Em 2010 e 2011, eles desligaram os últimos servidores físicos e o gráfico de 
 Agora, construimos arquiteturas focando no negócio e não mais em recursos.
 Os requisitos mudam e isso nos aborrece, porém esse é o mundo real, devemos projetar sabendo que vai mudar, e ao não precisar mais nos preocupar com os recursos, usamos a cloud para atender o negócio.
 Devemos abandonar arquiteturas centradas em data centers, focada em recursos. E fazer arquiteturas focadas no negócio.
-Onde antes tinhamos tinhamos restrições de recursos, agora com cloud temos recursos programáveis, usando capacidade ilimitada na aws.
+Onde antes tinhamos restrições de recursos, agora com cloud temos recursos programáveis, usando capacidade ilimitada na aws.
 
 ## Commandments of 21st Century Architectures
 - Controllable

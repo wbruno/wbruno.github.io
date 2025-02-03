@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 4.4.1"
 gem "sass-embedded", "~> 1.78.0"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.

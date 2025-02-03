@@ -1,7 +1,7 @@
 ---
 id: 3568
 title: Quão longe enxergamos?
-date: 2025-02-01T13:00:41+00:00
+date: 2025-01-30T13:00:41+00:00
 author: wbruno
 layout: post
 guid: http://www.wbruno.com.br/blog/?p=3568

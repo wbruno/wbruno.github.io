@@ -23,6 +23,10 @@ Os serviços aws utilizam os mesmos serviços que estão disponíveis para nós 
 
 Também citou que após o anúncio do Kinesis em 2013, os clientes já começaram a construir coisas incriveis com ele.
 
+Os serviços aws são construídos usando as mesmas peças que temos a nossa disposição: ec2, iam, etc.
+Apresentado o caso de uso de um restaurante japonês, utilizando o kinesis stream que foi lançado no ano anterior.
+
+
 > "There Has Never Been a Better Time to Build"
 
 É importante entregar funcionalidades mais rápido.
